@@ -14,7 +14,7 @@ date: June 21, 2017
 # Foo
 ````python
 print("I love to code")
-​````
+````
 
 # Bar
 * test
@@ -27,4 +27,4 @@ print("I love to code")
 - Follow what is written [here](https://medium.com/@marcus_baw/using-reveal-js-a74b30e4065b), push to GitHub
 - Wait for a moment and visit the presentation hosted by GitHub
 - Notice a problem?
-  Please file an [issue]()
+  Please file an [issue](https://github.com/habi/lecture_microtomography/issues)
