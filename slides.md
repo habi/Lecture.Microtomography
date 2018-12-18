@@ -1,7 +1,7 @@
 ---
 author: David Haberthür
 title: (micro)-Tomography
-date: June 21, 2017
+date: \todayJune 21, 2017
 ---
 
 # Introduction
@@ -20,11 +20,19 @@ print("I love to code")
 * test
 * test
 
-# Howto
-- Write in [Markdown](https://daringfireball.net/projects/markdown/)
-- Use [pandoc](https://pandoc.org/)
-- Use git
-- Follow what is written [here](https://medium.com/@marcus_baw/using-reveal-js-a74b30e4065b), push to GitHub
-- Wait for a moment and visit the presentation hosted by GitHub
+# Testing stuff
+
+- Adding formulas
+`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
+
+# Images
+
+
+# [Colophon](https://en.wikipedia.org/wiki/Colophon_(publishing))
+- Written in [Markdown](https://daringfireball.net/projects/markdown/)
+- Versioned with [git](https://git-scm.com/), public copy hosted by [GitHub](https://github.com/habi/lecture_microtomography/)
+- Converted to a [reveal.js](https://revealjs.com/) presentation with [pandoc](https://pandoc.org/) (see snippet in [README.md]().
+- [Public presentation](http://habi.github.io/lecture_microtomography) hosted by [GitHub Pages](https://pages.github.com/)
+
 - Notice a problem?
-  Please file an [issue](https://github.com/habi/lecture_microtomography/issues)
+  Please file an [issue](https://github.com/habi/lecture_microtomography/issues) or (even better) submit a [pull request](https://github.com/habi/lecture_microtomography/pulls).
