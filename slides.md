@@ -4,6 +4,9 @@ title: (micro)-Tomography
 date: \todayJune 21, 2017
 ---
 
+<!-- Logo: https://github.com/hakimel/reveal.js/issues/1122#issuecomment-77696397 -->
+<link rel="stylesheet" href="css/reveal-override.css"/>
+
 # Introduction
 - Dr. David Haberthür
 - PostDoc at the Institute of Anatomy, University of Bern

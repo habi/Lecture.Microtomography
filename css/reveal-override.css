@@ -1,0 +1,6 @@
+body:after {
+	content: url(../images/Unibe_Logo_16pt_RGB_201807.png);
+	position: fixed;
+	top: 0em;
+	right: 0em;
+	}
