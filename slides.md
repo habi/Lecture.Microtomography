@@ -1,52 +1,109 @@
-<!-- Logo: https://github.com/hakimel/reveal.js/issues/1122#issuecomment-77696397 -->
-<link rel="stylesheet" href="css/reveal-override.css"/>
-
 ---
 author: David Haberthür
 title: (micro)-Tomography
 date: December 2018
 ---
+<!-- Logo: https://github.com/hakimel/reveal.js/issues/1122#issuecomment-77696397 -->
+<link rel="stylesheet" href="css/reveal-override.css"/>
 
-# Introduction
+<!-- Banner image -->
+![Long-horned beetle](images/Long-horned_Beetle.png)
+
+#  Introduction {data-background-image="images/avatar2017.jpg"}
+
+## Who?
 - Dr. David Haberthür
-	- [haberthuer@ana.unibe.ch](mailto:haberthuer@ana.unibe.ch?subject=Feedback from the (micro)-tomography lecture)
-	- Office [B311](http://osm.org/go/0CZwlGp3A?m)
+    - [haberthuer@ana.unibe.ch](mailto:haberthuer@ana.unibe.ch?subject=Feedback from the (micro)-tomography lecture)
+    - Office [B311](http://osm.org/go/0CZwlGp3A?m)
 - Master in Physics
-- PhD in high resolution imaging of the lung
+- [PhD in high resolution imaging of the lung](https://boris.unibe.ch/2619/)
 - PostDoc at the TOMCAT beamline of the Swiss Light Source at the Paul Scherrer Institute
 - Tomography is what I do day-in, day-out
 
+## Here is a substuff
+With some text
+
+## Here is some more stuff
+With even more text
+
+- Eat spaghetti
+- Drink wine
+- Have some more
+ 
+
 # Imaging
+There's a lot of stuff to it...
+
 ## Why
 - Non-destructive insight
 - Biological samples
 
-# CT technique
+# CT? {data-background-image="images/Ct-internals.jpg"}
+ 
+
+![A CT scanner without its cover](images/Ct-internals.jpg)
+T: X-ray tube, D: X-ray detectors, X: X-ray beam, R: Gantry rotation
+
+(CC BY-SA, [Wikipedia](https://commons.wikimedia.org/wiki/File:Ct-internals.jpg))
+
+## Video
+
+<div align="center">
+    <iframe>
+        src="https://www.youtube.com/embed/2CWpZKuy-NE">
+    </iframe>
+</div>
+
+[![CT at max speed](https://img.youtube.com/vi/2CWpZKuy-NE/0.jpg)](https://www.youtube.com/watch?v=2CWpZKuy-NE)
+
 ## X-ray generation
+- How are x-rays generated
+- Why do we need them
 
 ## Detection
+- What happens after penetration of the sample?
+- Attenuation
+- Conversion to visible light by Scintillator
+- Detection, recording
+
+## Reconstruction
+- Radon Transformation
+- Filtered backprojection
+- Corrections
+- Writing to stack
 
 ## Machinery
 - Hospital CT
 - Lab CT
 - Synchrotron
+- Desktop microCT
 
-# Formulas 
+![Zeiss](images/9459311320_516179207a_o.jpg) (Zeiss, [CC BY-SA](https://flic.kr/p/fpTrGu))
 
-````python
-print("I love to code")
-````
 
+# Image processing
+- ImageJ
+- Python
+
+## Big data
+- TOMCAT 2560x2160 @ 1500 fps > 8 GB/s
+- llll
+
+
+# Research
+- Reproducibility?
+- 
 
 # Images
 
 Can we just add images like so?
 
-![beetle](images/Long-horned_Beetle.png)
+![Long-horned beetle](images/Long-horned_Beetle.png)
 
 # Videos
-- add a video file instead of just a gif
-- ![rat](images/rat_eye.gif)
+TODO: add a video file instead of just a gif
+
+![Rat eye, perfused with micro-Angiofil](images/rat_eye.gif)
 
 
 # [Colophon](https://en.wikipedia.org/wiki/Colophon_(publishing))
