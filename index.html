@@ -15,69 +15,6 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -98,75 +35,126 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="title-slide">
   <h1 class="title">(micro)-Tomography</h1>
   <p class="author">David Haberthür</p>
-  <p class="date">21, 2017</p>
+  <p class="date">08. Jan 2019</p>
 </section>
 
-<section class="slide level1">
+<section class="slide level2">
 
 <!-- Logo: https://github.com/hakimel/reveal.js/issues/1122#issuecomment-77696397 -->
 <p><link rel="stylesheet" href="css/reveal-override.css"/></p>
+<!-- Banner image -->
+<figure>
+<img data-src="images/Long-horned_Beetle.png" alt="Long-horned beetle" /><figcaption>Long-horned beetle</figcaption>
+</figure>
 </section>
-<section id="introduction" class="slide level1">
-<h1>Introduction</h1>
-<ul>
-<li>Dr. David Haberthür
+<section><section id="who" class="title-slide slide level1" data-background-image="images/avatar2017.jpg"><h1><font color="white">Who?</font></h1></section><section id="dr.david-haberthür" class="slide level2">
+<h2>Dr. David Haberthür</h2>
 <ul>
 <li><a href="mailto:haberthuer@ana.unibe.ch?subject=Feedback%20from%20the%20(micro)-tomography%20lecture">haberthuer@ana.unibe.ch</a></li>
 <li>Office <a href="http://osm.org/go/0CZwlGp3A?m">B311</a></li>
-</ul></li>
 <li>Master in Physics</li>
-<li>PhD in high resolution imaging of the lung</li>
-<li>PostDoc at the TOMCAT beamline of the Swiss Light Source at the Paul Scherrer Institute</li>
+<li><a href="https://boris.unibe.ch/2619/">PhD in high resolution imaging of the lung</a></li>
+<li>Postdoctoral researcher at the TOMCAT beamline of the Swiss Light Source at the Paul Scherrer Institute</li>
 <li>Tomography is what I do day-in, day-out</li>
 </ul>
-</section>
-<section id="imaging" class="slide level1">
-<h1>Imaging</h1>
-<h2 id="why">Why</h2>
+</section></section>
+<section><section id="biomedical-imaging" class="title-slide slide level1" data-background-image="images/Sagittal_brain_MRI.jpg"><h1><font color="white">Biomedical imaging</font></h1></section><section id="why" class="slide level2">
+<h2>Why</h2>
 <ul>
 <li>Non-destructive insight</li>
 <li>Biological samples</li>
 </ul>
-</section>
-<section id="ct-technique" class="slide level1">
-<h1>CT technique</h1>
-<h2 id="x-ray-generation">X-ray generation</h2>
-<h2 id="detection">Detection</h2>
-<h2 id="machinery">Machinery</h2>
+</section><section id="wavelength-scale" class="slide level2">
+<h2>Wavelength &amp; Scale</h2>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/1/10/EM_Spectrum_Properties_edit_de.svg" title="From Wikipedia, CC BY-SA, https://en.wikipedia.org/wiki/File:EM_Spectrum_Properties_edit.svg" /></p>
+</section><section id="imaging-methods" class="slide level2">
+<h2>Imaging methods</h2>
+<ul>
+<li>Light microscopy</li>
+<li>X-ray imaging</li>
+<li>Electron microscopy</li>
+</ul>
+</section></section>
+<section><section id="tomography" class="title-slide slide level1" data-background-image="images/Ct-internals.jpg"><h1><font color="white">Tomography</font></h1></section><section id="scanner" class="slide level2">
+<h2>Scanner</h2>
+<div data-align="center">
+<iframe title="CT at max speed" width="480" height="360" src="https://www.youtube.com/embed/2CWpZKuy-NE" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</section><section id="x-ray-generation" class="slide level2">
+<h2>X-ray generation</h2>
+<ul>
+<li>How are x-rays generated</li>
+<li>Why do we need them</li>
+</ul>
+</section><section id="projections" class="slide level2">
+<h2>Projections</h2>
+<div data-align="center">
+<iframe title="Projections of a lung sample scan" width="800" height="600" src="movies/KP-TNIKWT02_240_projections.mp4" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</section><section id="projections-how" class="slide level2">
+<h2>Projections, how?</h2>
+<ul>
+<li>What happens after penetration of the sample?</li>
+<li>Attenuation</li>
+<li>Conversion to visible light by Scintillator</li>
+<li>Detection, recording</li>
+</ul>
+</section><section id="reconstructions" class="slide level2">
+<h2>Reconstructions</h2>
+<div data-align="center">
+<iframe title="Reconstructions of a lung sample scan" width="800" height="600" src="movies/KP-TNIKWT02_240_reconstructions.mp4" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</section><section id="reconstruction-how" class="slide level2">
+<h2>Reconstruction, how?</h2>
+<ul>
+<li>Radon Transformation</li>
+<li>Filtered back projection</li>
+<li>Corrections</li>
+<li>Writing to stack</li>
+</ul>
+</section><section id="machinery" class="slide level2">
+<h2>Machinery</h2>
 <ul>
 <li>Hospital CT</li>
 <li>Lab CT</li>
 <li>Synchrotron</li>
+<li>Desktop microCT</li>
 </ul>
-</section>
-<section id="formulas" class="slide level1">
-<h1>Formulas</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">print</span>(<span class="st">&quot;I love to code&quot;</span>)</a></code></pre></div>
-</section>
-<section id="images" class="slide level1">
-<h1>Images</h1>
-<p>Can we just add images like so?</p>
 <figure>
-<img data-src="images/Long-horned_Beetle.png" alt="beetle" /><figcaption>beetle</figcaption>
+<img data-src="images/9459311320_516179207a_o.jpg" title="From Zeiss; CC BY-SA, https://flic.kr/p/fpTrGu" alt="Zeiss" /><figcaption>Zeiss</figcaption>
 </figure>
-</section>
-<section id="videos" class="slide level1">
-<h1>Videos</h1>
+</section></section>
+<section><section id="image-processing" class="title-slide slide level1"><h1>Image processing</h1></section><section id="what-to-use" class="slide level2">
+<h2>What to use?</h2>
 <ul>
-<li>add a video file instead of just a gif</li>
-<li><img data-src="images/rat_eye.gif" title="fig:" alt="rat" /></li>
+<li>ImageJ</li>
+<li>Python</li>
 </ul>
-</section>
-<section id="colophon" class="slide level1">
-<h1><a href="https://en.wikipedia.org/wiki/Colophon_(publishing)">Colophon</a></h1>
+</section><section id="big-data" class="slide level2">
+<h2>Big data</h2>
+<ul>
+<li>TOMCAT 2560x2160 @ 1500 fps &gt; 8 GB/s</li>
+<li>Desktop uCT &gt; 100s of GBs in a day</li>
+</ul>
+</section><section id="reproducible-research" class="slide level2">
+<h2>Reproducible research</h2>
+<ul>
+<li>Reproducibility?</li>
+</ul>
+</section></section>
+<section><section id="thank-you-questions" class="title-slide slide level1"><h1>Thank you! Questions?</h1></section><section id="colophon" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Colophon_(publishing)">Colophon</a></h2>
 <ul>
 <li>Written in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>.</li>
 <li>Versioned with <a href="https://git-scm.com/">git</a>, public copy hosted by <a href="https://github.com/habi/lecture_microtomography/">GitHub</a>.</li>
-<li>Converted to a <a href="https://revealjs.com/">reveal.js</a> presentation with <a href="https://pandoc.org/">pandoc</a> (see snippet in <a href="https://github.com/habi/lecture_microtomography/blob/master/README.md">README.md</a>.</li>
+<li>Converted to a <a href="https://revealjs.com/">reveal.js</a> presentation with <a href="https://pandoc.org/">pandoc</a> (see code snippet in <a href="https://github.com/habi/lecture_microtomography/blob/master/README.md">README.md</a>).</li>
 <li><a href="http://habi.github.io/lecture_microtomography">Public presentation</a> hosted by <a href="https://pages.github.com/">GitHub Pages</a>.</li>
-<li>Notice a problem? Please file an <a href="https://github.com/habi/lecture_microtomography/issues">issue</a> or (even better) submit a <a href="https://github.com/habi/lecture_microtomography/pulls">pull request</a>.</li>
+<li>Spotted an error? Please file an <a href="https://github.com/habi/lecture_microtomography/issues">issue</a> or (even better) submit a <a href="https://github.com/habi/lecture_microtomography/pulls">pull request</a>.</li>
 </ul>
-</section>
+</section></section>
     </div>
   </div>
 
