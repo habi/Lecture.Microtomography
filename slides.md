@@ -50,7 +50,7 @@ title: (micro)-Tomography
 <div align="center">
 <iframe title="Projections of a lung sample scan"
 	width="800" height="600"
-	src="movies/KP-TNIKWT02_240_projections.mp4"
+	src="movies/KP-TNIKWT02_projections.mp4"
 	frameborder="0"
 	allowfullscreen>
 </iframe>
@@ -66,7 +66,7 @@ title: (micro)-Tomography
 <div align="center">
 <iframe title="Reconstructions of a lung sample scan"
 	width="800" height="600"
-	src="movies/KP-TNIKWT02_240_reconstructions.mp4"
+	src="movies/KP-TNIKWT02_reconstructions.mp4"
 	frameborder="0"
 	allowfullscreen>
 </iframe>
