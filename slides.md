@@ -15,7 +15,7 @@ title: (micro)-Tomography
 - Office [B311](http://osm.org/go/0CZwlGp3A?m)
 - Master in Physics
 - [PhD in high resolution imaging of the lung](https://boris.unibe.ch/2619/)
-- Postdoctoral researcher at the TOMCAT beamline of the Swiss Light Source at the Paul Scherrer Institute
+- Postdoctoral researcher at the [TOMCAT beamline](https://www.psi.ch/sls/tomcat/) of the [Swiss Light Source](https://www.psi.ch/sls/) at the [Paul Scherrer Institute](https://www.psi.ch/)
 - Tomography is what I do day-in, day-out
 
 # <font color="white">Biomedical imaging</font> {data-background-image="images/Sagittal_brain_MRI.jpg"}
@@ -24,7 +24,7 @@ title: (micro)-Tomography
 - Biological samples
 
 ## Wavelength & Scale
-![](https://upload.wikimedia.org/wikipedia/commons/1/10/EM_Spectrum_Properties_edit_de.svg "From Wikipedia, CC BY-SA, https://en.wikipedia.org/wiki/File:EM_Spectrum_Properties_edit.svg")
+![Wavelength and resolution scale](https://upload.wikimedia.org/wikipedia/commons/c/cc/Electromagnetic_spectrum_with_sources.svg "File:Electromagnetic spectrum with sources.svg. (2019, January 3). *Wikimedia Commons, the free media repository*. Retrieved 15:26, February 22, 2019 from <https://commons.wikimedia.org/w/index.php?title=File:Electromagnetic_spectrum_with_sources.svg&oldid=333330293>.")
 
 ## Imaging methods
 - Light microscopy
@@ -41,6 +41,12 @@ title: (micro)-Tomography
 	allowfullscreen>
 </iframe>
 </div>
+## What is going on here?
+
+![3D_Computed_Tomography](https://upload.wikimedia.org/wikipedia/commons/1/10/3D_Computed_Tomography.png "File:3D Computed Tomography.png. (2018, October 10). *Wikimedia Commons, the free media repository*. Retrieved 15:06, February 22, 2019 from <https://commons.wikimedia.org/w/index.php?title=File:3D_Computed_Tomography.png&oldid=323504200>.")
+
+
+
 
 ## X-ray generation
 - How are x-rays generated
@@ -94,6 +100,10 @@ title: (micro)-Tomography
 ## Big data
 - TOMCAT 2560x2160 @ 1500 fps > 8 GB/s
 - Desktop uCT > 100s of GBs in a day
+
+## Image processing
+
+- See lecture of Guillaume Witz
 
 ## Reproducible research
 - Reproducibility?
