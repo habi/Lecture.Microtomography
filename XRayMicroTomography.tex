@@ -1,0 +1,415 @@
+% Compile with:
+% latexmk -pdf -pvc -interaction=nonstopmode
+%\documentclass[aspectratio=169,10pt,draft]{beamer}
+%\documentclass[aspectratio=169,10pt]{beamer}
+\documentclass[handout,aspectratio=169,10pt]{beamer}
+%\documentclass[notes=only,aspectratio=169,10pt]{beamer} % print out the notes
+\usetheme{UniBern}
+\title{X-ray microtomography}
+\author{David Haberthür}
+\institute{Institute of Anatomy\\University of Bern\\Switzerland}
+\date{December 20, 2019 | \href{https://ilias.unibe.ch/ilias.php?ref_id=1555744&cmd=infoScreen&cmdClass=ilrepositorygui&cmdNode=y2&baseClass=ilrepositorygui}{9256-HS2019-0: Advanced Microscopy}}
+
+%\includeonlyframes{current}
+%then....
+%\begin{frame}[label=current]
+%\end{frame}
+
+\usepackage{microtype}
+\usepackage[backend=biber,
+	style=numeric,
+	url=false,
+	isbn=true,
+	maxbibnames=1,
+	maxcitenames=1,
+	sorting=none]{biblatex}
+	\addbibresource{../../../Documents/library.bib}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+	\pgfplotsset{compat=newest}
+\usepackage[detect-all=true,
+	range-phrase=--,
+	range-units=single,
+	binary-units=true,
+	per-mode=symbol,
+	per-symbol=/]{siunitx}
+\usepackage[absolute,
+	overlay]{textpos} %for the \source{} command
+\usepackage{gitinfo2}
+\usepackage[version=4]{mhchem}
+\usepackage{xspace}
+\usepackage{ccicons}
+\usepackage{animate}
+\usepackage{listings}
+	\lstset{%
+		frame=single,
+		%backgroundcolor = \color{lightgray},
+		basicstyle=\tiny\ttfamily
+		}
+\usepackage{multicol}
+\usepackage{fontawesome5}
+\usepackage{csquotes}
+
+% change tikz font to slide font
+% https://tex.stackexchange.com/a/33329/828
+\usepackage[eulergreek]{sansmath}
+	\pgfplotsset{tick label style = {font=\sansmath\sffamily},
+		every axis label = {font=\sansmath\sffamily},
+		legend style = {font=\sansmath\sffamily},
+		label style = {font=\sansmath\sffamily}
+		}
+
+% Globally thicker lines in with tikz
+% https://tex.stackexchange.com/a/206769/828
+\tikzset{every picture/.style={semithick}}
+
+% And thicker plots by default
+% https://tex.stackexchange.com/a/235439/828
+% https://tex.stackexchange.com/q/262486/828
+\pgfplotsset{
+	every axis plot/.append style={semithick},
+	every axis/.append style={semithick}
+	every axis plot post/.append style={every mark/.append style={semithick}}
+}
+
+% stripped-down plot styling
+% Based on https://tex.stackexchange.com/a/155210/828
+% And then start each plot with `\begin{axis}[tuftelike,'
+\pgfkeys{%
+	/pgfplots/simplified/.style={%
+		tick style={major tick length=0pt},
+%		separate axis lines,
+%		axis x line*=bottom,
+%		axis x line shift=10pt,
+%		xlabel shift=1pt,
+%		axis y line*=left,
+%		axis y line shift=10pt,
+		ymajorgrids=true,
+		axis line style={draw=none},
+%		ylabel shift=1pt
+		}
+	}
+
+% Some often used abbreviations
+\newcommand{\imsize}{0.618\linewidth} % set global image width
+\newcommand{\everyframe}{1} % use only every nth frame for the movies
+\newlength\imagewidth % needed for scalebars
+\newlength\imagescale % needed for scalebars
+\newcommand{\uct}{\si{\micro}CT\xspace} % make our life easier
+
+% Acknowledge images just below them
+% Based on https://tex.stackexchange.com/a/282637
+\newcommand{\source}[2]{%
+	\raisebox{-1.618ex}{\makebox[0pt][r]{\scriptsize\href{http://#1}{#1} #2}}
+}
+
+% Define us our custom footer
+\defbeamertemplate{footline}{unibe}{%
+	\hspace*{\fill}%
+	v. \href{https://github.com/habi/20190605_BrukerUserMeeting/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
+	p.\xspace\insertframenumber/\inserttotalframenumber%
+	\hspace*{4ex}%
+	\vskip2pt%
+}
+\setbeamertemplate{footline}[unibe]
+
+% Format bibliography for beamer
+% http://tex.stackexchange.com/a/10686/828
+\renewbibmacro{in:}{}
+% http://tex.stackexchange.com/a/13076/828
+\AtEveryBibitem{%
+	\clearfield{journaltitle}
+	\clearfield{pages}
+	\clearfield{volume}
+	\clearfield{number}
+	\clearname{editor}
+	\clearfield{issn}
+	\clearfield{year}
+}
+% No parentheses around the (now empty) year: https://tex.stackexchange.com/a/147537
+\renewcommand{\bibopenparen}{\addcomma\addspace}
+\renewcommand{\bibcloseparen}{\addcomma\addspace}
+
+% Redefine \footcite based on https://tex.stackexchange.com/a/453528/828
+\DeclareCiteCommand{\footcite}[\mkbibfootnote]
+	{\usebibmacro{prenote}}
+	  {\printnames[family-given]{labelname}%
+	  \newunit
+	  \printfield{doi}%
+	  \newunit
+	  \printlabeldateextra}
+	  {\addsemicolon\space}
+	  {\usebibmacro{postnote}}
+
+% Show current section at begin of sections
+%\AtBeginSection[]{
+%	\begin{frame}{Outline}
+%	\small \tableofcontents[currentsection, hideothersubsections]
+%	\end{frame} 
+%}
+
+% Slide transiton
+%\addtobeamertemplate{background canvas}{\transfade[duration=0.5]}{}
+
+% open in fullscreen
+%\hypersetup{pdfpagemode=FullScreen}
+
+% Move the text down a bit
+% THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
+\addtobeamertemplate{frametitle}{}{\vspace*{1.5ex}}
+
+% References as footnotes at the bottom of the slides
+% https://tex.stackexchange.com/a/368760/828
+\makeatletter
+\renewcommand\@makefnmark{\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
+\renewcommand\@makefntext[1]{\tiny{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
+\makeatother
+
+\begin{document}
+% No footline on the title page
+% http://tex.stackexchange.com/a/18829/828 helps us to achieve that
+{%
+	\setbeamertemplate{footline}{}%
+	\begin{frame}%
+		\maketitle
+	\end{frame}%
+}
+
+% Alignment frame to test the ugly text-block-movement hack above
+%\begin{frame}
+%	\frametitle{Alignment frame}
+%	\begin{tikzpicture}
+%		\def\cut{3}
+%		\draw [|-|,ultra thick] (0,\cut) -- (0,\textheight-\cut);
+%		\draw [|-|,ultra thick] (0.5\textwidth,\cut) -- (0.5\textwidth,\textheight-\cut);
+%		\draw [|-|,ultra thick] (\textwidth,\cut) -- (\textwidth,\textheight-\cut);
+%	\end{tikzpicture}
+%\end{frame}
+
+\begin{frame}
+	\frametitle{Hello!}
+	\begin{itemize}
+		\item<1-> University of Bern, Switzerland
+		\item<1-> Institute of Anatomy
+		\item<1-> \uct-group: Ruslan Hlushchuk, David Haberthür, Oleksiy-Zakhar Khoma, Fluri Wieland, Carlos Correa Shokiche
+		\item<1-> Biomedical research
+		\begin{itemize}
+			\item microangioCT~\footcite{Hlushchuk2018}: Tumor vasculature, angiogenesis in the heart, musculature and bones
+			\item Cancer research: Melanoma
+			\item Lung imaging: Tumor detection and classification
+			\item Physiology: Zebrafish musculature and gills
+		\end{itemize}
+		\item<1-> SkyScan 1172 \& 1272
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Hello!}
+\begin{itemize}
+\item
+  \href{mailto:haberthuer@ana.unibe.ch?subject=Feedback\%20from\%20the\%20(micro)-tomography\%20lecture}{haberthuer@ana.unibe.ch}
+\item
+  Office \href{http://osm.org/go/0CZwlGp3A?m}{B311}
+\item
+  Master in Physics
+\item
+  \href{https://boris.unibe.ch/2619/}{PhD in high resolution imaging of
+  the lung}
+\item
+  Postdoctoral researcher at the
+  \href{https://www.psi.ch/sls/tomcat/}{TOMCAT beamline} of the
+  \href{https://www.psi.ch/sls/}{Swiss Light Source} at the
+  \href{https://www.psi.ch/}{Paul Scherrer Institute}
+\item
+  Tomography is what I do day-in, day-out
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Contents}
+    \begin{multicols}{2}
+	\tableofcontents
+    \end{multicols}
+\end{frame}
+
+\section{Biomedical imaging}
+\begin{frame}
+	\frametitle{Biomedical imaging}
+	\centering
+	\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
+	\source{w.wiki/7g4}{\ccbysa}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why}
+    \begin{itemize}
+	\item Non-destructive insight
+	\item Biological samples
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Wavelength \& Scale}
+    \begin{figure}
+	\centering
+	\includegraphics[height=0.618\textheight]{/home/habi/P/Talks/Lectures/MicroTomography/images/{{2000px-Electromagnetic_spectrum_with_sources.svg}}}
+	\source{w.wiki/7fz}{\ccbysa}
+    \end{figure}
+\end{frame}
+	
+\begin{frame}
+	\frametitle{Imaging methods}
+	\begin{itemize}
+		\item Light microscopy
+		\item X-ray imaging
+		\item Electron microscopy
+	\end{itemize}
+\end{frame}
+
+\section{Tomography}
+\begin{frame}
+	\frametitle{Tomography}
+	\centering
+	\includegraphics[height=0.618\textheight]{/home/habi/P/Talks/Lectures/MicroTomography/images/Ct-internals.jpg}
+	\source{w.wiki/7g6}{\ccbysa}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Scanner}
+	\url{https://www.youtube.com/watch?v=2CWpZKuy-NE}
+\end{frame}
+
+\begin{frame}
+	\frametitle{What is going on here?}
+	\centering
+	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
+	\source{w.wiki/7g3}{\ccbysa}
+\end{frame}
+
+\begin{frame}
+	\frametitle{X-ray generation}
+	\begin{itemize}
+		\item How are x-rays generated
+		\item  Why do we need them
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\hypertarget{projections}{\subsection{Projections}\label{projections}}
+%movies/KP-TNIKWT02_projections.mp4
+\end{frame}
+
+\begin{frame}
+\hypertarget{projections-how}{\subsection{Projections, how?}\label{projections-how}}
+
+\begin{itemize}
+	\item What happens after penetration of the sample?
+	\item Attenuation
+	\item Conversion to visible light by Scintillator
+	\item Detection, recording
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\hypertarget{reconstructions}{\subsection{Reconstructions}\label{reconstructions}}
+%movies/KP-TNIKWT02_reconstructions.mp4
+\end{frame}
+
+\begin{frame}
+\hypertarget{reconstruction-how}{\subsection{Reconstruction, how?}\label{reconstruction-how}}
+
+\begin{itemize}
+	\item Radon Transformation
+	\item Filtered back projection
+	\item Corrections
+	\item Writing to stack
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\hypertarget{machinery}{\subsection{Machinery}\label{machinery}}
+
+\begin{itemize}
+	\item Hospital CT
+	\item Lab CT
+	\item Synchrotron
+	\item Desktop microCT
+\end{itemize}
+
+	\includegraphics{./images/9459311320_516179207a_o}
+	\source{flic.kr/p/fpTrGu}{\ccbysa}
+\end{frame}
+
+\section{Image processing}
+
+\subsection{What to use?}
+
+\begin{frame}
+	\begin{itemize}
+		\item ImageJ
+		\item Python
+	\end{itemize}
+\end{frame}
+
+\hypertarget{big-data}{\subsection{Big data}\label{big-data}}
+
+\begin{frame}
+
+\begin{itemize}
+	\item TOMCAT 2560\(\times\)2160 @ 1500 fps \textgreater{} 8 GB/s
+	\item Desktop uCT \textgreater{} 100s of GBs in a day
+\end{itemize}
+\end{frame}
+
+\hypertarget{image-processing-1}{\subsection{Image processing}\label{image-processing-1}}
+
+\begin{frame}
+
+\begin{itemize}
+	\item See lecture of Guillaume Witz
+\end{itemize}
+\end{frame}
+
+\hypertarget{reproducible-research}{\subsection{Reproducible research}\label{reproducible-research}}
+\begin{frame}
+
+\begin{itemize}
+	\item  Reproducibility?
+\end{itemize}
+\end{frame}
+
+
+\hypertarget{thank-you-questions}{\section{Thank you! Questions?}\label{thank-you-questions}}
+
+\hypertarget{colophon}{\subsection{\texorpdfstring{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}{Colophon}}\label{colophon}}
+
+\begin{frame}
+
+\begin{itemize}
+	\item Written in \href{https://daringfireball.net/projects/markdown/}{Markdown}.
+	\item Versioned with \href{https://git-scm.com/}{git}, public copy hosted by
+  \href{https://github.com/habi/lecture_microtomography/}{GitHub}.
+	\item Converted to a \href{https://revealjs.com/}{reveal.js} presentation with \href{https://pandoc.org/}{pandoc} (see code snippet in \href{https://github.com/habi/lecture_microtomography/blob/master/README.md}{README.md}).
+	\item \href{http://habi.github.io/lecture_microtomography}{Public presentation} hosted by \href{https://pages.github.com/}{GitHub Pages}.
+	\item Spotted an error? Please file an \href{https://github.com/habi/lecture_microtomography/issues}{issue} or (even better) submit a \href{https://github.com/habi/lecture_microtomography/pulls}{pull request}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{References}
+	\renewcommand*{\bibfont}{\scriptsize}
+	\setbeamertemplate{bibliography item}{\insertbiblabel}
+	\printbibliography
+\end{frame}
+
+\begin{frame}
+	\frametitle{Colophon}
+	\begin{itemize}
+		\item \href{https://github.com/habi/20190605_BrukerUserMeeting}{The presentation (\LaTeX/\textsc{beamer}) is available on GitHub}: git.io/fjuo5
+		\item \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{The presentation template is (slightly adapted) from \emph{Corporate Design und Vorlagen, University of Bern}}
+	\end{itemize}
+\end{frame}
+
+\end{document}
