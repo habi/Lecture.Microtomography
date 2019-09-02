@@ -1,8 +1,8 @@
 % Compile with:
 % latexmk -pdf -pvc -interaction=nonstopmode
-%\documentclass[aspectratio=169,10pt,draft]{beamer}
+\documentclass[aspectratio=169,10pt,draft]{beamer}
 %\documentclass[aspectratio=169,10pt]{beamer}
-\documentclass[handout,aspectratio=169,10pt]{beamer}
+%\documentclass[handout,aspectratio=169,10pt]{beamer}
 %\documentclass[notes=only,aspectratio=169,10pt]{beamer} % print out the notes
 \usetheme{UniBern}
 \title{X-ray microtomography}
@@ -49,7 +49,6 @@
 		}
 \usepackage{multicol}
 \usepackage{fontawesome5}
-\usepackage{csquotes}
 
 % change tikz font to slide font
 % https://tex.stackexchange.com/a/33329/828
@@ -162,7 +161,7 @@
 % References as footnotes at the bottom of the slides
 % https://tex.stackexchange.com/a/368760/828
 \makeatletter
-\renewcommand\@makefnmark{\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
+\renewcommand\@makefnmark{\xspace\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
 \renewcommand\@makefntext[1]{\tiny{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
 \makeatother
 
@@ -190,41 +189,25 @@
 \begin{frame}
 	\frametitle{Hello!}
 	\begin{itemize}
-		\item<1-> University of Bern, Switzerland
-		\item<1-> Institute of Anatomy
-		\item<1-> \uct-group: Ruslan Hlushchuk, David Haberthür, Oleksiy-Zakhar Khoma, Fluri Wieland, Carlos Correa Shokiche
-		\item<1-> Biomedical research
+		\item Office \href{http://osm.org/go/0CZwlGp3A?m}{B311} | \href{mailto:haberthuer@ana.unibe.ch?subject=Feedback\%20from\%20the\%20(micro)-tomography\%20lecture}{haberthuer@ana.unibe.ch}
+		\item Master in Physics, then \href{https://boris.unibe.ch/2619/}{PhD in high resolution imaging of  the lung} at the Institute of Anatomy
+		\item Post-Doc at the \href{https://www.psi.ch/sls/tomcat/}{TOMCAT beamline} of the \href{https://www.psi.ch/sls/}{Swiss Light Source} at the \href{https://www.psi.ch/}{Paul Scherrer Institute}
+		\item Post-Doc at the \href{https://aan.unibe.ch}{Institute of Anatomy} in the \uct-group
+		\begin{itemize}
+			\item Ruslan Hlushchuk, David Haberthür, Oleksiy-Zakhar Khoma, Fluri Wieland, Carlos Correa Shokiche
+		\end{itemize}			
+		\item Biomedical research
 		\begin{itemize}
 			\item microangioCT~\footcite{Hlushchuk2018}: Tumor vasculature, angiogenesis in the heart, musculature and bones
 			\item Cancer research: Melanoma
 			\item Lung imaging: Tumor detection and classification
-			\item Physiology: Zebrafish musculature and gills
+			\item Physiology: Zebrafish musculature and gills~\footcite{Messerli2019}
+			\item SkyScan 1172 \& 1272
 		\end{itemize}
-		\item<1-> SkyScan 1172 \& 1272
-	\end{itemize}
+	\end{itemize}		
 \end{frame}
 
-\begin{frame}
-	\frametitle{Hello!}
-\begin{itemize}
-\item
-  \href{mailto:haberthuer@ana.unibe.ch?subject=Feedback\%20from\%20the\%20(micro)-tomography\%20lecture}{haberthuer@ana.unibe.ch}
-\item
-  Office \href{http://osm.org/go/0CZwlGp3A?m}{B311}
-\item
-  Master in Physics
-\item
-  \href{https://boris.unibe.ch/2619/}{PhD in high resolution imaging of
-  the lung}
-\item
-  Postdoctoral researcher at the
-  \href{https://www.psi.ch/sls/tomcat/}{TOMCAT beamline} of the
-  \href{https://www.psi.ch/sls/}{Swiss Light Source} at the
-  \href{https://www.psi.ch/}{Paul Scherrer Institute}
-\item
-  Tomography is what I do day-in, day-out
-\end{itemize}
-\end{frame}
+
 
 \begin{frame}{Contents}
     \begin{multicols}{2}
@@ -295,12 +278,12 @@
 \end{frame}
 
 \begin{frame}
-\hypertarget{projections}{\subsection{Projections}\label{projections}}
+\subsection{Projections}
 %movies/KP-TNIKWT02_projections.mp4
 \end{frame}
 
 \begin{frame}
-\hypertarget{projections-how}{\subsection{Projections, how?}\label{projections-how}}
+\subsection{Projections, how?}
 
 \begin{itemize}
 	\item What happens after penetration of the sample?
@@ -312,12 +295,12 @@
 \end{frame}
 
 \begin{frame}
-\hypertarget{reconstructions}{\subsection{Reconstructions}\label{reconstructions}}
+\subsection{Reconstructions}
 %movies/KP-TNIKWT02_reconstructions.mp4
 \end{frame}
 
 \begin{frame}
-\hypertarget{reconstruction-how}{\subsection{Reconstruction, how?}\label{reconstruction-how}}
+\subsection{Reconstruction, how?}
 
 \begin{itemize}
 	\item Radon Transformation
@@ -329,7 +312,7 @@
 
 
 \begin{frame}
-\hypertarget{machinery}{\subsection{Machinery}\label{machinery}}
+\subsection{Machinery}
 
 \begin{itemize}
 	\item Hospital CT
@@ -337,8 +320,7 @@
 	\item Synchrotron
 	\item Desktop microCT
 \end{itemize}
-
-	\includegraphics{./images/9459311320_516179207a_o}
+	\includegraphics[height=0.618\textheight]{./images/9459311320_516179207a_o}
 	\source{flic.kr/p/fpTrGu}{\ccbysa}
 \end{frame}
 
@@ -349,11 +331,11 @@
 \begin{frame}
 	\begin{itemize}
 		\item ImageJ
-		\item Python
+		\item \faPython
 	\end{itemize}
 \end{frame}
 
-\hypertarget{big-data}{\subsection{Big data}\label{big-data}}
+\subsection{Big data}
 
 \begin{frame}
 
@@ -363,7 +345,7 @@
 \end{itemize}
 \end{frame}
 
-\hypertarget{image-processing-1}{\subsection{Image processing}\label{image-processing-1}}
+{\subsection{Image processing}
 
 \begin{frame}
 
@@ -372,29 +354,27 @@
 \end{itemize}
 \end{frame}
 
-\hypertarget{reproducible-research}{\subsection{Reproducible research}\label{reproducible-research}}
+\subsection{Reproducible research}
 \begin{frame}
-
-\begin{itemize}
-	\item  Reproducibility?
-\end{itemize}
+	\frametitle{Reproducible research}
+	\begin{itemize}
+		\item Git
+		\item Jupyter
+		\item Data repositories \(\rightarrow\) Sharing is caring!
+	\end{itemize}
 \end{frame}
 
-
-\hypertarget{thank-you-questions}{\section{Thank you! Questions?}\label{thank-you-questions}}
-
-\hypertarget{colophon}{\subsection{\texorpdfstring{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}{Colophon}}\label{colophon}}
-
+\section{Done!}
+\subsection{Colophon}
 \begin{frame}
-
-\begin{itemize}
-	\item Written in \href{https://daringfireball.net/projects/markdown/}{Markdown}.
-	\item Versioned with \href{https://git-scm.com/}{git}, public copy hosted by
-  \href{https://github.com/habi/lecture_microtomography/}{GitHub}.
-	\item Converted to a \href{https://revealjs.com/}{reveal.js} presentation with \href{https://pandoc.org/}{pandoc} (see code snippet in \href{https://github.com/habi/lecture_microtomography/blob/master/README.md}{README.md}).
-	\item \href{http://habi.github.io/lecture_microtomography}{Public presentation} hosted by \href{https://pages.github.com/}{GitHub Pages}.
-	\item Spotted an error? Please file an \href{https://github.com/habi/lecture_microtomography/issues}{issue} or (even better) submit a \href{https://github.com/habi/lecture_microtomography/pulls}{pull request}.
-\end{itemize}
+	\frametitle{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
+	\begin{itemize} 
+		\item \textsc{beamer} presentation crafted in \LaTeX with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from from \emph{Corporate Design und Vorlagen} of the University of Bern}.
+		\begin{itemize}
+			\item Full source available on \href{https://github.com/habi/lecture_microtomography/}{GitHub}: git.io/fjpP7
+			\item Spotted an error? Please file an \href{https://github.com/habi/lecture_microtomography/issues}{issue} (git.io/fjpPb) or (even better) submit a \href{https://github.com/habi/lecture_microtomography/pulls}{pull request} (git.io/fjpPN).
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -402,14 +382,6 @@
 	\renewcommand*{\bibfont}{\scriptsize}
 	\setbeamertemplate{bibliography item}{\insertbiblabel}
 	\printbibliography
-\end{frame}
-
-\begin{frame}
-	\frametitle{Colophon}
-	\begin{itemize}
-		\item \href{https://github.com/habi/20190605_BrukerUserMeeting}{The presentation (\LaTeX/\textsc{beamer}) is available on GitHub}: git.io/fjuo5
-		\item \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{The presentation template is (slightly adapted) from \emph{Corporate Design und Vorlagen, University of Bern}}
-	\end{itemize}
 \end{frame}
 
 \end{document}
