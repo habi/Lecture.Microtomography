@@ -10,3 +10,5 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: XRayMicroTomography.tex
+          working_directory: 
+          extra_packages: "ocgx2 fontawesome5 courier helvetica"
