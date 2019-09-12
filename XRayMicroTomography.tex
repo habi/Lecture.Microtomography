@@ -49,6 +49,7 @@
 		}
 \usepackage{multicol}
 \usepackage{fontawesome5}
+\usepackage{multimedia}
 
 % change tikz font to slide font
 % https://tex.stackexchange.com/a/33329/828
@@ -91,11 +92,11 @@
 	}
 
 % Some often used abbreviations
-\newcommand{\imsize}{0.618\linewidth} % set global image width
-\newcommand{\everyframe}{1} % use only every nth frame for the movies
-\newlength\imagewidth % needed for scalebars
-\newlength\imagescale % needed for scalebars
-\newcommand{\uct}{\si{\micro}CT\xspace} % make our life easier
+\newcommand{\imsize}{0.618\linewidth}% set global image width
+\newcommand{\everyframe}{1}% use only every nth frame for the movies
+\newlength\imagewidth% needed for scalebars
+\newlength\imagescale% needed for scalebars
+\newcommand{\uct}{\si{\micro}CT\xspace}% make our life easier
 
 % Acknowledge images just below them
 % Based on https://tex.stackexchange.com/a/282637
@@ -134,9 +135,9 @@
 \DeclareCiteCommand{\footcite}[\mkbibfootnote]
 	{\usebibmacro{prenote}}
 	  {\printnames[family-given]{labelname}%
-	  \newunit
+	  \newunit%
 	  \printfield{doi}%
-	  \newunit
+	  \newunit%
 	  \printlabeldateextra}
 	  {\addsemicolon\space}
 	  {\usebibmacro{postnote}}
@@ -217,7 +218,7 @@
 	\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
 	\source{w.wiki/7g4}{\ccbysa}
 	% ADD IMAGE OF MOUSE SKULL	
-	\framebreak
+	\framebreak%
 	\begin{itemize}
 		\item Non-destructive insight
 		\item Biological samples
@@ -242,18 +243,20 @@
 	\end{itemize}
 \end{frame}
 
-\section{Tomography}
-\begin{frame}{Tomography}
+\subsection{Tomography}
+\begin{frame}{CT-Scanner}
 	\centering
-	\includegraphics[height=0.618\textheight]{./images/Ct-internals.jpg}
-	\source{w.wiki/7g6}{\ccbysa}
+	\movie[height=0.618\textheight]{\includegraphics[height=0.618\textheight]{./images/Ct-internals.jpg}}{2CWpZKuy-NE.mp4}
+	\only<1>{\source{w.wiki/7g6}{\ccbysa}}
+	\only<2>{\source{youtu.be/2CWpZKuy-NE}{}}
+	\note{From \url{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}: 
+		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
+		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
+		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!
+		}
 \end{frame}
 
-\begin{frame}{Scanner}
-	\url{https://www.youtube.com/watch?v=2CWpZKuy-NE}
-\end{frame}
-
-\begin{frame}{What is going on here?}
+\begin{frame}{Graphical overview}
 	\centering
 	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
 	\source{w.wiki/7g3}{\ccbysa}
@@ -270,11 +273,9 @@
 \subsection{Interaction of x-rays with matter}
 
 \subsection{History}
-\cite{Cormack1963a}
+Some history is found in \cite{Cormack1963a}
 % FIRST, SECOND AND THIRD GENERATION CT SCANNERS
-
 % HOW DO WE GET FROM XRAY TO DATA?
-
 
 \subsection{A scan, from start to finish}
 \begin{frame}[allowframebreaks]{Projections}
@@ -285,8 +286,13 @@
 \begin{frame}[allowframebreaks]{Projections}
 	% Overview
 	movies/KP-TNIKWT02\_projections.mp4
+	\framebreak%
+	% What is going on?	
+	\begin{itemize}
+		\item A micro-focus x-ray source illuminates the object
+		\item A planar x-ray detector collects magnified projection images.		
+	\end{itemize}
 	\framebreak
-	% What is going on?
 	\begin{itemize}
 		\item What happens after penetration of the sample?
 		\item Attenuation
@@ -298,6 +304,10 @@
 \begin{frame}[allowframebreaks]{Reconstructions}
 	%Overview
 	movies/KP-TNIKWT02\_reconstructions.mp4
+	\framebreak%
+	\begin{itemize}
+		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
+	\end{itemize}
 	\framebreak
 	\begin{itemize}
 		\item Radon Transformation
@@ -327,18 +337,10 @@
 			\includegraphics<3>[width=\imsize]{./images/1272}%
 			\only<3>{\source{bruker.com/skyscan1272}{}}%
 			\includegraphics<4>[width=\imsize]{./images/4563733710_f632792416_b}%
-			\only<4>{\source{https://flic.kr/p/7Xhk2Y}{\ccbync}}%
+			\only<4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}%
 		\end{column}
 	\end{columns}
 \end{frame}
-
-\note{From \url{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}: 
-Micro computed tomography or "micro-CT" is x-ray imaging in 3D, by the same method used in hospital CT (or "CAT") scans, but on a small scale with massively increased resolution. It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively. No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!
-
-How does micro-CT work? A micro-focus x-ray source illuminates the object and a planar x-ray detector collects magnified projection images. Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object. You can then scroll through the cross sections, interpolating sections along different planes, to inspect the internal structure. Selecting simple or complex volumes of interest, you can measure 3D morphometric parameters and create realistic visual models for virtual travel within the object.
-Methods1
-
-Bruker microCT can genuinely claim to be at the fore-front of the development of high performance micro-CT technology. Our research and development of 3D x-ray microscopy started in the early 1980s. This led to the first micro-CT imaging results being obtained in 1983-1987 and published in scientific journals and international conferences proceedings. Building on this early work, Bruker-microCT was founded in 1996, and within a year we were manufacturing a commercially available micro-CT scanner with spatial resolution in the micron range. In 2001 we produced the first high-resolution in vivo micro-CT scanner for small animal imaging. And in 2005 Bruker-microCTbecame the world's only supplier of a laboratory nano-CT scanner with submicron spatial resolution. Responding to demand from the growing community of micro-CT users, we are continually active in research and development into new methods for non-destructive 3D microscopy.}
 
 % FAN BEAM -> BRUKER
 % PARALLEL BEAM -> TOMCAT
@@ -352,7 +354,6 @@ Bruker microCT can genuinely claim to be at the fore-front of the development of
 % NOISE
 % TEMPORAL RESOLUTION (ONLY FOR HUMAN MEDICAL CT)
 
-
 \section{Image processing}
 \subsection{Image display}
 % MIP
@@ -360,30 +361,39 @@ Bruker microCT can genuinely claim to be at the fore-front of the development of
 
 \begin{frame}{What to use?}
 	\begin{itemize}
-		\item ImageJ
-		\item \faPython
-		\item See lecture of Guillaume Witz
+		\item ImageJ~\footcite{Schindelin2012}
+		\item \faPython%
+		\item See \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1561468.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Quantitative data}
+	\begin{itemize}
+		\item Raw numbers instead of just pretty imagescale
+		\item Segmentation
+		\item Characterization
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Big data}
 	\begin{itemize}
-		\item TOMCAT 2560\(\times\)2160 @ 1500 fps \textgreater{} 8 GB/s
-		\item Desktop uCT \textgreater{} 100s of GBs in a day
+		\item TOMCAT 2560\(\times\)2160 @ 1500 fps \textgreater{} \SI{8}{\giga\byte\per\second}
+		\item Desktop uCT can easily produce \SI{100}{\giga\byte} in a day
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Reproducible research}
 	\begin{itemize}
-		\item Git
+		\item \faGit
 		\item Jupyter
+		\item Script all your things!
 		\item Data repositories \(\rightarrow\) Sharing is caring!
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
 	\begin{itemize} 
-		\item \textsc{beamer} presentation crafted in \LaTeX with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from from \emph{Corporate Design und Vorlagen} of the University of Bern}.
+		\item \textsc{beamer} presentation crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
 			\item Full source available on \href{https://github.com/habi/lecture_microtomography/}{GitHub}: git.io/fjpP7
 			\item Spotted an error? Please file an \href{https://github.com/habi/lecture_microtomography/issues}{issue} (git.io/fjpPb) or (even better) submit a \href{https://github.com/habi/lecture_microtomography/pulls}{pull request} (git.io/fjpPN).
@@ -394,7 +404,7 @@ Bruker microCT can genuinely claim to be at the fore-front of the development of
 \begin{frame}{References}
 	\renewcommand*{\bibfont}{\scriptsize}
 	\setbeamertemplate{bibliography item}{\insertbiblabel}
-	\printbibliography
+	\printbibliography%
 \end{frame}
 
 \end{document}
