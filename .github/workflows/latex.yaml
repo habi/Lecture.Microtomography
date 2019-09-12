@@ -10,5 +10,3 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: XRayMicroTomography.tex
-          extra_system_packages: texlive-fonts-recommended
-          extra_packages: "ocgx2 fontawesome5"
