@@ -1,12 +1,41 @@
-name: Build LaTeX document
-on: push
+name: Build LaTeX document, check and commit to gh-pages branch
+on:
+  push:
+    branches:
+      - master
 jobs:
-  build_latex:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Github Actions for LaTeX
-        uses: actions/checkout@v1
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@master
-        with:
-          root_file: test.tex
+    - name: Set up Git repository
+      uses: actions/checkout@v1
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: test.tex
+    - name: Check pdf file
+      run: |
+        file test.pdf | grep -q ' PDF '
+    - name: Upload
+      run: |
+        set -e
+
+        # configure git
+        git config --global user.name "David Haberthür"
+        git config --global user.email "email@davidhaberthuer.ch"
+
+        # setup ssh (Don't forget to generate and upload the key first, see https://www.reddit.com/r/LaTeX/comments/cudaqz/github_actions_to_compile_latex_documents/f0hz61t/ for details)
+        mkdir ~/.ssh
+        chmod 700 ~/.ssh
+        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+        
+        # Copy and commit the PDF file to the gh-pages branch
+        git clone --depth=1 --branch gh-pages git@github.com:habi/lecture_microtomography.git pages
+        cp -f main.pdf pages/main.pdf
+        git add pages/main.pdf
+        git commit -m "Deploy new version of PDF"
+        git push        
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
