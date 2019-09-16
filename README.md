@@ -1,7 +1,6 @@
 # Talk on (micro)-tomography
 
-Slides are written in [Markdown](https://daringfireball.net/projects/markdown/) and converted to a [reveal.js](https://revealjs.com/) presentation ([hosted by GitHub pages](http://habi.github.io/lecture_microtomography)) via [pandoc](https://github.com/jgm/pandoc/wiki/Using-pandoc-to-produce-reveal.js-slides) with the command below.
+My talk for the [lecture series 9256-HS2019-0: Advanced Microscopy](https://ilias.unibe.ch/ilias.php?cal_agenda_per=4&backpd=1&ref_id=1478602&cmdClass=ilcalendarpresentationgui&cmdNode=y2:n0:72&baseClass=ilrepositorygui).
 
-````
-pandoc --from markdown --to revealjs --standalone --slide-level 2 --variable theme=white --variable date="$(date +%d.\ %b\ %Y)" --output index.html slides.md
-````
+The slides are generated in [LaTeX](https://www.latex-project.org/)/[beamer](https://bitbucket.org/rivanvx/beamer/wiki/Home) and are autmatically compiled to an online PDF with [GitHub actions](https://github.com/actions/).
+If all goes well, you should be able to access the PDF I presented here: https://habi.github.io/Lecture.Microtomography/test.pdf
