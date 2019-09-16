@@ -22,7 +22,7 @@ jobs:
 
         # configure git
         git config --global user.name "David Haberthür"
-        git config --global user.email "email@davidhaberthuer.ch"
+        git config --global user.email "haberthuer@ana.unibe.ch"
 
         # setup ssh (Don't forget to generate and upload the key first, see https://www.reddit.com/r/LaTeX/comments/cudaqz/github_actions_to_compile_latex_documents/f0hz61t/ for details)
         mkdir ~/.ssh
@@ -34,8 +34,9 @@ jobs:
         # Copy and commit the PDF file to the gh-pages branch
         git clone --depth=1 --branch gh-pages git@github.com:habi/lecture_microtomography.git pages
         cp -f test.pdf pages/test.pdf
-        git add pages/test.pdf
-        git commit -m "Deploy new version of (test) PDF"
+        cd pages
+        git add test.pdf
+        git commit -m "Deploy new version of (test) PDF to gh-pages branch"
         git push        
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
