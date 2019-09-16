@@ -33,9 +33,9 @@ jobs:
         
         # Copy and commit the PDF file to the gh-pages branch
         git clone --depth=1 --branch gh-pages git@github.com:habi/lecture_microtomography.git pages
-        cp -f main.pdf pages/main.pdf
-        git add pages/main.pdf
-        git commit -m "Deploy new version of PDF"
+        cp -f test.pdf pages/test.pdf
+        git add pages/test.pdf
+        git commit -m "Deploy new version of (test) PDF"
         git push        
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
