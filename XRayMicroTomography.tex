@@ -4,7 +4,9 @@
 \documentclass[aspectratio=169,10pt]{beamer}
 %\documentclass[handout,aspectratio=169,10pt]{beamer}
 %\documentclass[notes=only,aspectratio=169,10pt]{beamer} % print out the notes
+
 \usetheme{UniBern}
+
 \title{X-ray microtomography}
 \author{David Haberthür}
 \institute{Institute of Anatomy\\University of Bern\\Switzerland}
@@ -93,7 +95,7 @@
 
 % Some often used abbreviations
 \newcommand{\imsize}{0.618\linewidth}% set global image width
-\newcommand{\everyframe}{1}% use only every nth frame for the movies
+\newcommand{\everyframe}{25}% use only every nth frame for the movies
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{\si{\micro}CT\xspace}% make our life easier
@@ -107,7 +109,7 @@
 % Define us our custom footer
 \defbeamertemplate{footline}{unibe}{%
 	\hspace*{\fill}%
-	v. \href{https://github.com/habi/20190605_BrukerUserMeeting/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
+	v. \href{https://github.com/habi/lecture.microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
 	p.\xspace\insertframenumber/\inserttotalframenumber%
 	\hspace*{4ex}%
 	\vskip2pt%
@@ -207,26 +209,36 @@
 \end{frame}
 
 \begin{frame}{Contents}
-%    \begin{multicols}{2}
+%	\begin{multicols}{2}
 	\tableofcontents
-%    \end{multicols}
+%	\end{multicols}
 \end{frame}
 
 \section{Biomedical imaging}
-\begin{frame}[allowframebreaks]{Biomedical imaging}
+\begin{frame}{Biomedical imaging}
 	\centering
-	\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
-	\source{w.wiki/7g4}{\ccbysa}
-	% ADD IMAGE OF MOUSE SKULL	
-	\framebreak%
+	\only<1>{%
+		\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
+		\source{w.wiki/7g4}{\ccbysa}
+		}
+	\only<2>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center){%
+				\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{001}{081}%
+				};%
+		\end{tikzpicture}%
+		}%
+\end{frame}
+
+\begin{frame}{Biomedical imaging}
 	\begin{itemize}
-		\item Non-destructive insight
-		\item Biological samples
+		\item (Small) Biological samples
+		\item Non-destructive insights into the samples
+		\item Medical research
 	    \end{itemize}
 \end{frame}
 
 \section{Imaging}
-
 \begin{frame}{Wavelength \& Scale}
     \begin{figure}
 	\centering
@@ -237,18 +249,26 @@
 	
 \begin{frame}{Imaging methods}
 	\begin{itemize}
-		\item Light microscopy
+		\item Light microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555739.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
-		\item Electron microscopy
+		\item Electron microscopy: see lectures on
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555738.html}{Transmission Electron Microscopy by Dimitri Vanhecke},
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555742.html}{Scanning Electron Microscopy by Michael Stoffel} and
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555743.html}{Cryoelectron Microscopy \& Serial Block Face SEM by Ioan Iacovache}.
 	\end{itemize}
 \end{frame}
 
 \subsection{Tomography}
 \begin{frame}{CT-Scanner}
 	\centering
-	\movie[height=0.618\textheight]{\includegraphics[height=0.618\textheight]{./images/Ct-internals.jpg}}{2CWpZKuy-NE.mp4}
-	\only<1>{\source{w.wiki/7g6}{\ccbysa}}
-	\only<2>{\source{youtu.be/2CWpZKuy-NE}{}}
+	\only<1>{%
+		\movie[height=0.618\textheight]{\includegraphics[height=0.618\textheight]{./images/Ct-internals.jpg}}{2CWpZKuy-NE.mp4}%
+		\source{w.wiki/7g6}{\ccbysa}%
+		}%
+	\only<2>{%
+		\animategraphics[palindrome,autoplay,height=0.618\textheight,every=\everyframe]{25}{./movies/ct-scanner/ct-scanner}{1200}{1480}%
+		\source{youtu.be/2CWpZKuy-NE}{}%
+		}%
 	\note{From \url{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}: 
 		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
 		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
@@ -273,9 +293,23 @@
 \subsection{Interaction of x-rays with matter}
 
 \subsection{History}
-Some history is found in \cite{Cormack1963a}
-% FIRST, SECOND AND THIRD GENERATION CT SCANNERS
-% HOW DO WE GET FROM XRAY TO DATA?
+\begin{frame}{History}
+	\begin{columns}
+		\begin{column}{0.5\linewidth}
+			\begin{itemize}
+				\item<1> Some history is found in \cite{Cormack1963a}
+				\item<2-4> First, second and third generation of scanners
+				\item<5> HOW DO WE GET FROM XRAY TO DATA?
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\linewidth}
+			\begin{itemize}
+				\item<2> First generation image
+				\item<3> Second generation image
+				\item<4> Third generation image
+			\end{itemize}
+		\end{column}		
+\end{frame}
 
 \subsection{A scan, from start to finish}
 \begin{frame}[allowframebreaks]{Projections}
@@ -396,6 +430,8 @@ Some history is found in \cite{Cormack1963a}
 		\item \textsc{beamer} presentation crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
 			\item Full source available on \href{https://github.com/habi/lecture_microtomography/}{GitHub}: git.io/fjpP7
+			\item The \Latex\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a PDF which you can access here: XXXX
+				Details on the way this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository at GitHub}: git.io/JeOOj
 			\item Spotted an error? Please file an \href{https://github.com/habi/lecture_microtomography/issues}{issue} (git.io/fjpPb) or (even better) submit a \href{https://github.com/habi/lecture_microtomography/pulls}{pull request} (git.io/fjpPN).
 		\end{itemize}
 	\end{itemize}
