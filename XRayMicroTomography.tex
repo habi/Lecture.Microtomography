@@ -1,7 +1,7 @@
 % Compile with:
 % latexmk -pdf -pvc -interaction=nonstopmode
-%\documentclass[aspectratio=169,10pt,draft]{beamer}
-\documentclass[aspectratio=169,10pt]{beamer}
+\documentclass[aspectratio=169,10pt,draft]{beamer}
+%\documentclass[aspectratio=169,10pt]{beamer}
 %\documentclass[handout,aspectratio=169,10pt]{beamer}
 %\documentclass[notes=only,aspectratio=169,10pt]{beamer} % print out the notes
 
@@ -9,7 +9,6 @@
 
 \title{X-ray microtomography}
 \author{David Haberthür}
-\institute{Institute of Anatomy\\University of Bern\\Switzerland}
 \date{December 20, 2019 | \href{https://ilias.unibe.ch/ilias.php?ref_id=1555744&cmd=infoScreen&cmdClass=ilrepositorygui&cmdNode=y2&baseClass=ilrepositorygui}{9256-HS2019-0: Advanced Microscopy}}
 
 %\includeonlyframes{current}
@@ -98,6 +97,8 @@
 \newcommand{\everyframe}{25}% use only every nth frame for the movies
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
+\newcommand{\eg}{e.\,g.\xspace}
+\newcommand{\ie}{i.\,e.\xspace}
 \newcommand{\uct}{\si{\micro}CT\xspace}% make our life easier
 
 % Acknowledge images just below them
@@ -147,9 +148,8 @@
 % Show current section at begin of sections
 \AtBeginSection[]{
 	\begin{frame}{Outline}
-	\small \tableofcontents[currentsection,currentsubsection, 
-    hideothersubsections]
-	\end{frame} 
+		\small \tableofcontents[currentsection,currentsubsection,hideothersubsections]
+	\end{frame}
 }
 
 % Slide transiton
@@ -261,14 +261,8 @@
 \subsection{Tomography}
 \begin{frame}{CT-Scanner}
 	\centering
-	\only<1>{%
-		\movie[height=0.618\textheight]{\includegraphics[height=0.618\textheight]{./images/Ct-internals.jpg}}{2CWpZKuy-NE.mp4}%
-		\source{w.wiki/7g6}{\ccbysa}%
-		}%
-	\only<2>{%
-		\animategraphics[palindrome,autoplay,height=0.618\textheight,every=\everyframe]{25}{./movies/ct-scanner/ct-scanner}{1200}{1480}%
-		\source{youtu.be/2CWpZKuy-NE}{}%
-		}%
+	\animategraphics[palindrome,autoplay,height=0.618\textheight,every=\everyframe]{25}{./movies/ct-scanner/ct-scanner}{1200}{1480}%
+	\source{youtu.be/2CWpZKuy-NE}{}%
 	\note{From \url{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}: 
 		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
 		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
@@ -276,7 +270,7 @@
 		}
 \end{frame}
 
-\begin{frame}{Graphical overview}
+\begin{frame}{What is happening?}
 	\centering
 	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
 	\source{w.wiki/7g3}{\ccbysa}
@@ -290,6 +284,7 @@
 	\end{itemize}
 \end{frame}
 
+
 \subsection{Interaction of x-rays with matter}
 
 \subsection{History}
@@ -297,8 +292,8 @@
 	\begin{columns}
 		\begin{column}{0.5\linewidth}
 			\begin{itemize}
-				\item<1> Some history is found in \cite{Cormack1963a}
-				\item<2-4> First, second and third generation of scanners
+				\item<1-> Some history is found in \cite{Cormack1963a}
+				\item<2-> First, second and third generation of scanners
 				\item<5> HOW DO WE GET FROM XRAY TO DATA?
 			\end{itemize}
 		\end{column}
@@ -308,13 +303,16 @@
 				\item<3> Second generation image
 				\item<4> Third generation image
 			\end{itemize}
-		\end{column}		
+		\end{column}
+	\end{columns}		
 \end{frame}
 
 \subsection{A scan, from start to finish}
 \begin{frame}[allowframebreaks]{Projections}
-	sample preparation
-	study design
+	\begin{itemize}
+		\item sample preparation
+		\item study design
+	\end{itemize}
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Projections}
@@ -403,7 +401,7 @@
 
 \begin{frame}{Quantitative data}
 	\begin{itemize}
-		\item Raw numbers instead of just pretty imagescale
+		\item Raw numbers instead of just pretty images
 		\item Segmentation
 		\item Characterization
 	\end{itemize}
@@ -411,8 +409,8 @@
 
 \begin{frame}{Big data}
 	\begin{itemize}
-		\item TOMCAT 2560\(\times\)2160 @ 1500 fps \textgreater{} \SI{8}{\giga\byte\per\second}
-		\item Desktop uCT can easily produce \SI{100}{\giga\byte} in a day
+		\item TOMCAT \SI{2560x2160}{px} @ \SI{1500}{f\per\second}, \eg more than \SI{8}{\giga\byte\per\second}
+		\item Desktop \uct can easily produce more than \SI{100}{\giga\byte} in a day
 	\end{itemize}
 \end{frame}
 
@@ -427,18 +425,24 @@
 
 \begin{frame}{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
 	\begin{itemize} 
-		\item \textsc{beamer} presentation crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from from \emph{Corporate Design und Vorlagen} of the University of Bern}.
+		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
-			\item Full source available on \href{https://github.com/habi/lecture_microtomography/}{GitHub}: git.io/fjpP7
-			\item The \Latex\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a PDF which you can access here: XXXX
-				Details on the way this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository at GitHub}: git.io/JeOOj
-			\item Spotted an error? Please file an \href{https://github.com/habi/lecture_microtomography/issues}{issue} (git.io/fjpPb) or (even better) submit a \href{https://github.com/habi/lecture_microtomography/pulls}{pull request} (git.io/fjpPN).
+			\item \href{https://github.com/habi/lecture.microtomography/}{Full source code}: git.io/fjpP7
+			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action}%
+				\footnote{Details on how this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository here}: git.io/JeOOj} %
+				to a PDF which you can access here: XXXX
+			\item Spotted an error?\\%
+				Then please file an \href{https://github.com/habi/lecture.microtomography/issues}{issue} (git.io/fjpPb) or (even better) submit a \href{https://github.com/habi/lecture.microtomography/pulls}{pull request} (git.io/fjpPN).
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{References}
-	\renewcommand*{\bibfont}{\scriptsize}
+	% Make the references continuously smaller :)
+	%\renewcommand*{\bibfont}{\small}
+	%\renewcommand*{\bibfont}{\footnotesize}
+	%\renewcommand*{\bibfont}{\scriptsize}
+	%\renewcommand*{\bibfont}{\tiny}	
 	\setbeamertemplate{bibliography item}{\insertbiblabel}
 	\printbibliography%
 \end{frame}
