@@ -42,3 +42,8 @@ jobs:
         git push        
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+    - name: Send push notification
+      uses: cstuder/apprise-ga@master
+      with:
+        secrets: "$APPRISE_URL"
+        args: ["Notification title", "Notification message"]
