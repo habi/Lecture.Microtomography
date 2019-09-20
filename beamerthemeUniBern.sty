@@ -58,43 +58,43 @@
 \beamertemplatenavigationsymbolsempty
 
 \defbeamertemplate*{title page}{uni bern}{%
-  % list trick from http://www.tex.ac.uk/cgi-bin/texfaq2html?label=chngmargonfly
-  \begin{list}{}{
-	  \setlength{\listparindent}{\parindent}%
-	  \setlength{\itemindent}{\parindent}%
-	  \setlength{\parsep}{\parskip}%
-	  \setlength{\leftmargin}{0pt}%
-	  \setlength{\rightmargin}{0pt}}
-	  \item[]
-	  \vspace*{\stretch{2}}
-	  {\usebeamerfont*{title}\color{ubRed}\inserttitle\par} % no idea why usebeamercolor{title} does not work here
-	  {\usebeamerfont*{subtitle}\insertsubtitle\par}
-	  \vspace{\stretch{1}}
-	  {\usebeamerfont{author}\insertauthor\par}
-	  {\usebeamerfont{date}\insertdate\par}
-	  \vspace*{\stretch{2}}
-  \end{list}
+	% list trick from http://www.tex.ac.uk/cgi-bin/texfaq2html?label=chngmargonfly
+	\begin{list}{}{%
+		\setlength{\listparindent}{\parindent}%
+		\setlength{\itemindent}{\parindent}%
+		\setlength{\parsep}{\parskip}%
+		\setlength{\leftmargin}{0pt}%
+		\setlength{\rightmargin}{0pt}}%
+		\item[]%
+		\vspace*{\stretch{2}}%
+		{\usebeamerfont*{title}\color{ubRed}\inserttitle\par}% no idea why usebeamercolor{title} does not work here
+		{\usebeamerfont*{subtitle}\insertsubtitle\par}%
+		\vspace{\stretch{1}}%
+		{\usebeamerfont{author}\insertauthor\par}%
+		{\usebeamerfont{date}\insertdate\par}%
+		\vspace*{\stretch{2}}%
+	\end{list}%
 }
 
 \defbeamertemplate*{background canvas}{uni bern}{%
-\begin{minipage}[t]{\paperwidth+10pt}
-   \setlength{\baselineskip}{0pt}
-   \setlength{\lineskip}{-\beamer@ubOverlap}
-   \setlength{\parskip}{0pt}
-   \ifnumgreater{\c@framenumber}{0}{
-    \raisebox{-\height-2\beamer@ubBorderHeight}[0pt][0pt]{\hspace*{0.86\paperwidth}\includegraphics[width=0.125\paperwidth]{ublogo.pdf}}
-   }{}%
-   \\% empty line for logo alignment
-   \ifnumgreater{\c@framenumber}{1}{%
-   	\ifdefempty{\insertframesubtitle}{%
-   		\rule{0pt}{6ex+\beamer@ubTitleHeight}\\%
-   		\color{ubGrey}\rule{\paperwidth}{\paperheight-\beamer@ubTitleHeight-\beamer@ubFooterHeight-6ex}%
-   		}{%
-   		\rule{0pt}{6ex+2\beamer@ubTitleHeight}\\%
-   		\color{ubGrey}\rule{\paperwidth}{\paperheight-2\beamer@ubTitleHeight-\beamer@ubFooterHeight-6ex}%
-   		}%
-   }{}%
-  \end{minipage}
+	\begin{minipage}[t]{\paperwidth+10pt}%
+		\setlength{\baselineskip}{0pt}%
+		\setlength{\lineskip}{-\beamer@ubOverlap}%
+		\setlength{\parskip}{0pt}%
+		\ifnumgreater{\c@framenumber}{0}{%
+			\raisebox{-\height-2\beamer@ubBorderHeight}[0pt][0pt]{\hspace*{0.86\paperwidth}\includegraphics[width=0.125\paperwidth]{ublogo.pdf}}%
+			}{}%
+		\\% empty line for logo alignment
+		\ifnumgreater{\c@framenumber}{1}{%
+			\ifdefempty{\insertframesubtitle}{%
+				\rule{0pt}{6ex+\beamer@ubTitleHeight}\\%
+				\color{ubGrey}\rule{\paperwidth}{\paperheight-\beamer@ubTitleHeight-\beamer@ubFooterHeight-6ex}%
+			}{%
+				\rule{0pt}{6ex+2\beamer@ubTitleHeight}\\%
+				\color{ubGrey}\rule{\paperwidth}{\paperheight-2\beamer@ubTitleHeight-\beamer@ubFooterHeight-6ex}%
+			}%
+		}{}%
+	\end{minipage}%
 }
 
 \defbeamertemplate*{headline}{uni bern}{%
@@ -102,7 +102,7 @@
 		\vspace{3.5ex}%
 		\hspace{4.5ex}%
 		\inserttitle%
-		}{}%
+	}{}%
 }
 
 \defbeamertemplate*{frametitle}{uni bern}{%
@@ -116,10 +116,10 @@
 }
 
 % set bullets
-\defbeamertemplate*{itemize item}{uni bern}{$\bullet$}
-\defbeamertemplate*{itemize subitem}{uni bern}{$\bullet$}
-\setbeamersize{text margin left=4ex}
-\setbeamersize{text margin right=4ex}
+\defbeamertemplate*{itemize item}{uni bern}{$\bullet$}%
+\defbeamertemplate*{itemize subitem}{uni bern}{$\bullet$}%
+\setbeamersize{text margin left=4ex}%
+\setbeamersize{text margin right=4ex}%
 
 %\AtBeginDocument{
 %  \begin{frame}
@@ -127,7 +127,6 @@
 %    \begin{center}
 %    \hspace*{30pt}\includegraphics[height=0.6\paperheight]{ublogo.pdf}
 %    \end{center}
-%
 %    \vspace*{\stretch{1}}
 %  \end{frame}
 %}
