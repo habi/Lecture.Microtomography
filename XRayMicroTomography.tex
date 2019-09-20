@@ -95,7 +95,7 @@
 % Some often used abbreviations
 \newcommand{\imwidth}{0.618\linewidth}% set global image width
 \newcommand{\imheight}{0.7\paperheight}% set global image height
-\newcommand{\everyframe}{5}% use only every nth frame for the movies
+\newcommand{\everyframe}{25}% use only every nth frame for the movies
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
 \newcommand{\eg}{e.\,g.\xspace}
@@ -246,12 +246,10 @@
 \section{Imaging}
 \begin{frame}{Wavelength \& Scale}
 	\centering
-	\begin{figure}
-		\includegraphics[height=0.618\textheight]{./images/{{2000px-Electromagnetic_spectrum_with_sources.svg}}}
-		\source{w.wiki/7fz}{\ccbysa}
-	\end{figure}
+	\includegraphics[height=0.618\textheight]{./images/{{2000px-Electromagnetic_spectrum_with_sources.svg}}}
+	\source{w.wiki/7fz}{\ccbysa}
 \end{frame}
-	
+
 \begin{frame}{Imaging methods}
 	\begin{itemize}
 		\item Light microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555739.html}{lecture of Nadia Mercader Huber}
@@ -288,7 +286,6 @@
 	\end{itemize}
 \end{frame}
 
-
 \subsection{Interaction of x-rays with matter}
 
 \subsection{History}
@@ -308,7 +305,7 @@
 				\item<4> Third generation image
 			\end{itemize}
 		\end{column}
-	\end{columns}		
+	\end{columns}
 \end{frame}
 
 \subsection{A scan, from start to finish}
@@ -343,11 +340,6 @@
 \begin{frame}[label=asdfcurrent]{Reconstructions}
 	\begin{itemize}
 		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
-==== BASE ====
-	\end{itemize}
-	\framebreak
-	\begin{itemize}
-==== BASE ====
 		\item Radon Transformation
 		\item Filtered back projection
 		\item Fan beam reconstruction
