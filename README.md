@@ -6,4 +6,4 @@ The slides are generated in [LaTeX](https://www.latex-project.org/)/[beamer](htt
 
 If all goes well, you should be able to access the resulting PDF here: https://habi.github.io/Lecture.Microtomography/test.pdf
 This PDF is the last commited version (and thus should be the same one that I presented).
-It is missing the short git hash in the footer, due to how [`gitinfo2`](https://www.ctan.org/pkg/gitinfo2) works), though.
+It is missing the short git hash in the footer (due to how [`gitinfo2`](https://www.ctan.org/pkg/gitinfo2) needs to be set up), though.
