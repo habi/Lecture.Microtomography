@@ -38,7 +38,10 @@
 	per-symbol=/]{siunitx}
 \usepackage[absolute,
 	overlay]{textpos} %for the \source{} command
-\usepackage[missing={Online backup copy, no git hash, just a link}]{gitinfo2}
+% GitHub Actions would need quite a bit of configuration top pull the short ghit has with `gitinfo2'
+% If we replace the missing information with `master', the footer of the online copy links to the latest commit
+% In the local version, this will point to the current commit and show the short git hash.
+\usepackage[missing=master]{gitinfo2}
 \usepackage[version=4]{mhchem}
 \usepackage{xspace}
 \usepackage{ccicons}
