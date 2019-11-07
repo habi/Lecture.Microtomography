@@ -93,7 +93,7 @@
 	}
 
 % Some often used abbreviations
-\newcommand{\imwidth}{0.618\linewidth}% set global image width
+\newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newcommand{\everyframe}{25}% use only every nth frame for the movies
 \newlength\imagewidth% needed for scalebars
@@ -104,7 +104,27 @@
 
 % Acknowledge images just below them
 % Based on https://tex.stackexchange.com/a/282637/828
-\newcommand{\source}[2]{\raisebox{-1.618ex}{\makebox[0pt][r]{\scriptsize\href{http://#1}{#1} #2}}}
+\newcommand{\source}[2]{%
+	\raisebox{-1.618ex}{%
+		\makebox[0pt][r]{%
+			\scriptsize\href{http://#1}{#1} #2%
+			}%
+		}%
+	}%
+\newcommand{\sourcecite}[2]{%
+	\raisebox{-1.618ex}{%
+		\makebox[0pt][r]{%
+			\scriptsize From \cite{#1}, #2%
+			}%
+		}%
+	}%
+\newcommand{\sourcelink}[3]{%
+	\raisebox{-1.618ex}{%
+		\makebox[0pt][r]{%
+			\scriptsize\href{http://#1}{#2}, #3%
+			}%
+		}%
+	}%	
 
 %% Define us our custom footer
 \defbeamertemplate{footline}{unibe}{%
@@ -289,37 +309,46 @@
 \subsection{Interaction of x-rays with matter}
 
 \subsection{History}
-\begin{frame}{History}
+\begin{frame}[label=current]{History}
 	\begin{columns}
-		\begin{column}{0.5\linewidth}
+		\begin{column}{0.48\linewidth}
 			\begin{itemize}
-				\item<1-> Some history is found in~\cite{Cormack1963a}
+				\item Some history is found in~\cite{Cormack1963,Hsieh2003}
 				\item<2-> First, second and third generation of scanners
-				\item<5> HOW DO WE GET FROM XRAY TO DATA?
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.5\linewidth}
-			\begin{itemize}
-				\item<2> First generation image
-				\item<3> Second generation image
-				\item<4> Third generation image
-			\end{itemize}
+		\begin{column}{0.48\linewidth}
+			\centering
+			\includegraphics<2>[width=\imwidth]{./images/{{History.1Generation}}}%
+			\only<2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+			\includegraphics<3>[width=\imwidth]{./images/{{History.2Generation}}}%
+			\only<3>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+			\includegraphics<4>[width=\imwidth]{./images/{{History.3Generation}}}%
+			\only<4>{\sourcecite{Hsieh2003}{Figure 1.14}}%
 		\end{column}
 	\end{columns}
 \end{frame}
 
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}[label=current]{Machinery}
+\begin{frame}{Machinery}
 	\begin{columns}
-		\begin{column}{0.3\linewidth}
+		\begin{column}{0.4\linewidth}
 			\begin{itemize}
 				\item<1-> Hospital CT
-				\item<2-> Lab CT
-				\item<3-> Desktop CT
+				\begin{itemize}
+					\item Voxel size around \SI{0.5}{\milli\meter}
+				\end{itemize}
+				\item<2-> Lab/Desktop CT
+				\begin{itemize}
+					\item Voxel size around \SI{7}{\micro\meter} (\emph{in vivo}) or \SI{0.5}{\micro\meter} (\emph{ex vivo})
+				\end{itemize}
 				\item<4-> Synchrotron CT
+				\begin{itemize}
+					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\SI{160}{\nano\meter}}
+				\end{itemize}
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.7\linewidth}
+		\begin{column}{0.6\linewidth}
 			\centering
 			\includegraphics<1>[height=\imheight]{./images/24324062640_751e011e1a_o}%
 			\only<1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}
@@ -333,8 +362,8 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame}[label=current]{Machinery}
-Technically all the same
+\begin{frame}{Machinery}
+Independent on the machine, technically they are all a simple combination of
 \begin{itemize}
 	\item an x-ray source
 	\item a sample
@@ -342,14 +371,30 @@ Technically all the same
 \end{itemize}
 \end{frame}
 
-
 \subsection{A scan, from start to finish}
-\begin{frame}{Projections}
+\begin{frame}[label=current]{Preparation}
+	\begin{itemize}
+		\item Study design
+		\item Sample preparation
+	\end{itemize}
+\end{frame}
+
+\renewcommand{\imwidth}{0.5\linewidth}
+
+\begin{frame}[label=current]{Projections}
+	\includegraphics[width=\imwidth]{./images/14_Physics_updated}%
+	\sourcelink{ilias.unibe.ch/goto\_ilias3\_unibe\_sess\_1555733.html}{Laws of Physics for Microscopists by Michael Jaeger}{Slide 14}%
+	\includegraphics[width=\imwidth]{./images/15_Physics_updated}%
+	\source{ilias.unibe.ch/goto\_ilias3\_unibe\_sess\_1555733.html}{Slide 15}%
+\end{frame}
+
+\begin{frame}[label=current]{Projections}
 	\begin{itemize}
 		\item sample preparation
 		\item study design
 	\end{itemize}
 \end{frame}
+
 
 \begin{frame}{Projections}
 	\centering

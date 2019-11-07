@@ -187,6 +187,82 @@
       \verb https://www.biorxiv.org/content/10.1101/744300v3
       \endverb
     \endentry
+    \entry{Cormack1963}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ed7cf735165a23ae53379b52a3248bf0}{%
+           family={Cormack},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Institute of Physics}%
+      }
+      \strng{namehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{fullhash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{bibnamehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{authorbibnamehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{authornamehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{authorfullhash}{ed7cf735165a23ae53379b52a3248bf0}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A method is given of finding a real function in a finite region of a plane given its line integrals along all straight lines intersecting the region. The solution found is applicable to three probl...}
+      \field{annotation}{From Duplicate 1 (Representation of a Function by Its Line Integrals, with Some Radiological Applications - Cormack, A. M.) http://is.gd/b0Bnr}
+      \field{issn}{00218979}
+      \field{journaltitle}{Journal of Applied Physics}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{{Representation of a Function by Its Line Integrals, with Some Radiological Applications}}
+      \field{volume}{34}
+      \field{year}{1963}
+      \field{pages}{2722}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/1.1729798
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Cormack/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.org/10.1063/1.1729798 http://aip.scitation.org/doi/10.1063/1.1729798
+      \endverb
+      \verb{url}
+      \verb http://doi.org/10.1063/1.1729798%20http://aip.scitation.org/doi/10.1063/1.1729798
+      \endverb
+    \endentry
+    \entry{Hsieh2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=04723f860550f84b6efa7cbd0264669a}{%
+           family={Hsieh},
+           familyi={H\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society of Photo Optical}%
+      }
+      \strng{namehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{fullhash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{bibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorbibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authornamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorfullhash}{04723f860550f84b6efa7cbd0264669a}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Computed tomography: principles, design, artifacts, and recent advances}}
+      \field{volume}{114}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://books.google.com/books?id=JX{\_}{\_}lLLXFHkC http://books.google.com/books?hl=en{\&}lr={\&}id=JX{\_}{\_}lLLXFHkC{\&}oi=fnd{\&}pg=PR9{\&}dq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances{\&}ots=RiM0{\_}rS-Rq{\&}sig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
+      \endverb
+      \verb{url}
+      \verb http://books.google.com/books?id=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%20http://books.google.com/books?hl=en%7B%5C&%7Dlr=%7B%5C&%7Did=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%7B%5C&%7Doi=fnd%7B%5C&%7Dpg=PR9%7B%5C&%7Ddq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances%7B%5C&%7Dots=RiM0%7B%5C_%7DrS-Rq%7B%5C&%7Dsig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
+      \endverb
+    \endentry
     \entry{Schindelin2012}{article}{}
       \name{author}{16}{}{%
         {{hash=ac82c7686cb5af1a978185f449f30702}{%
@@ -279,8 +355,8 @@
       \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
@@ -309,7 +385,6 @@
       \keyw{Algorithms,Animals,Brain,Brain: ultrastructure,Computational Biology,Computational Biology: methods,Computer-Assisted,Computer-Assisted: methods,Drosophila melanogaster,Drosophila melanogaster: ultrastructure,Image Enhancement,Image Enhancement: methods,Image Processing,Imaging,Information Dissemination,Software,Software Design,Three-Dimensional,Three-Dimensional: methods}
     \endentry
   \enddatalist
-  \missing{Cormack1963a}
 \endrefsection
 \endinput
 
