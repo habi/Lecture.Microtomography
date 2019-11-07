@@ -23,7 +23,9 @@ jobs:
         # Configure git
         git config --global user.name "David Haberthür"
         git config --global user.email "email@davidhaberthuer.ch"
-
+        # https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-494158599
+        git config --local lfs.https://github.com/.locksverify false
+        
         # Setup SSH
         # Don't forget to generate and upload the key first!
         # See https://www.reddit.com/r/LaTeX/comments/cudaqz/github_actions_to_compile_latex_documents/f0hz61t/ for details
