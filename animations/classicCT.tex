@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{animate}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{animateinline}[autoplay,loop]{10}
+    \multiframe{36}{n=1+1}{
+        \begin{tikzpicture}[scale=2]
+            % Coordinate network
+%           \draw[help lines,step=0.5cm,ultra thin] (-1.45,-1.45) grid (1.45,1.45);
+            \draw[->] (-1.75,0) -- (1.75,0);
+            \draw[->] (0,-1.75) -- (0,1.75);
+            % Rotation arc
+            \draw[->, ultra thick,rotate around={\n*10:(0,0)}] (1,0) arc [start angle=0, end angle=180, radius=1];
+            \draw[->, ultra thick,rotate around={\n*10:(0,0)}] (-1,0) arc [start angle=-180, end angle=0, radius=1];
+            % Stuff
+            \fill[red,rotate around={\n*10:(0,0)}] (-0.25,1) rectangle node (source) [black,fill=white, semitransparent, text opacity=1] {X-ray} +(0.5,0.5);
+            \fill[green] (-0.25,-0.25) rectangle node [black,fill=white, semitransparent, text opacity=1] {Sample} +(0.5,0.5) ;
+            \fill[blue,fill,rotate around={\n*10:(0,0)}] (-0.5,-1.25) rectangle node (detector) [black,fill=white, semitransparent, text opacity=1] {Detector} +(1,0.25);
+            \draw[rotate around={\n*10:(0,0)}] (-0.5,-1) node (edgeleft) {L};
+            \draw[rotate around={\n*10:(0,0)}] (0.5,-1) node (edgeright) {R};           
+            % Cone, based on section 4.1.5 in pgfmanual.pdf
+            \pgfdeclarelayer{background}
+            \pgfsetlayers{background,main}
+            \coordinate (A) at (-0,1);
+            \coordinate (B) at (-0.25,-1);
+            \coordinate (C) at (0.25,-1);       
+            \begin{pgfonlayer}{background}
+                \fill[blue,semitransparent] (A) -- (B) -- (C) -- cycle;
+                \fill[gray,semitransparent] (source) -- (B) -- (C) -- cycle;
+                \fill[green, ultra thick] (source) -- (edgeleft) -- (edgeright) -- cycle;
+                \draw [red] (source) -- (detector);
+            \end{pgfonlayer}
+        \end{tikzpicture}
+    }
+\end{animateinline}
+
+\end{document}
