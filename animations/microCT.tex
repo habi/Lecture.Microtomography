@@ -3,14 +3,17 @@
 % Essentially just a copy of classicCT in the same folder
 \usepackage{animate}
 \usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
+\tikzsetnextfilename{microCT-animation}
 \usepackage{ifthen}
-\ifthenelse{\isundefined{\everyframe}}{
+\ifthenelse{\isundefined{\everyframe}}{%
 	% If we're running this file via \input, then \everyframe is already defined
 	\newcommand{\everyframe}{1}
 	}{}
 \begin{document}
 \begin{animateinline}[autoplay,every=\everyframe,loop]{25}
-	\multiframe{180}{n=1+2}{
+	\multiframe{180}{n=1+2}{%
 		\begin{tikzpicture}[scale=2]
 			\pgfdeclarelayer{background}
 			\pgfsetlayers{background,main}
@@ -35,7 +38,7 @@
 				\draw[->, thick,line cap=rect] (0.618*0.618,0) arc [start angle=0, end angle=180, radius=0.618*.618];
 				\draw[->, thick,line cap=rect] (-0.618*0.618,0) arc [start angle=-180, end angle=0, radius=0.618*.618];
 				% Sample
-				\fill[green] (0,0) ellipse (0.618/2 and 0.618/3) node (sample) [black,opacity=0,text opacity=1] {Sample} ;
+				\fill[green] (0,0) ellipse (0.618/2 and 0.618/3) node (sample) [black,opacity=0,text opacity=1] {Sample};
 			\end{scope}
 		\end{tikzpicture}
 	}

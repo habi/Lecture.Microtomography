@@ -3,15 +3,18 @@
 % With help from https://tex.stackexchange.com/q/515519/828\usepackage{animate}
 \usepackage{animate}
 \usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
+\tikzsetnextfilename{classicCT-animation}
 \usepackage{ifthen}
-\ifthenelse{\isundefined{\everyframe}}{
+\ifthenelse{\isundefined{\everyframe}}{%
 	% If we're running this file via \input, then \everyframe is already defined
 	\newcommand{\everyframe}{1}
 	}{}
 \begin{document}
 \begin{animateinline}[autoplay,every=\everyframe,loop]{25}
-	\multiframe{180}{n=1+2}{
-		\begin{tikzpicture}[scale=2]		
+	\multiframe{180}{n=1+2}{%
+		\begin{tikzpicture}[scale=2]
 			\pgfdeclarelayer{background}
 			\pgfsetlayers{background,main}
 			%Help lines
@@ -19,7 +22,7 @@
 			\draw[<->] (0,-1.6) -- (0,1.6);
 			\draw[help lines,step=0.5cm,ultra thin] (-1.45,-1.45) grid (1.45,1.45);
 			% Stuff that stays put
-			\fill[green] (0,0) ellipse (0.618/2 and 0.618/3) node (sample) [black,opacity=0,text opacity=1] {Sample} ;
+			\fill[green] (0,0) ellipse (0.618/2 and 0.618/3) node (sample) [black,opacity=0,text opacity=1] {Sample};
 			% Stuff that moves
 			\begin{scope}[rotate around={\n:(sample)}]
 				% Rotation arc

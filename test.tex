@@ -72,7 +72,7 @@
 % And thicker plots by default
 % https://tex.stackexchange.com/a/235439/828
 % https://tex.stackexchange.com/q/262486/828
-\pgfplotsset{
+\pgfplotsset{%
 	every axis plot/.append style={semithick},
 	every axis/.append style={semithick}
 	every axis plot post/.append style={every mark/.append style={semithick}}
@@ -115,7 +115,7 @@
 	v. \href{https://github.com/habi/lecture.microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
 	p.\xspace\insertframenumber/\inserttotalframenumber%
 	\hspace*{4ex}%
-	\vskip2pt%
+	\vspace{2pt}%
 }
 \setbeamertemplate{footline}[unibe]
 
@@ -148,10 +148,10 @@
 	  {\usebibmacro{postnote}}
 
 % Show current section at begin of sections
-\AtBeginSection[]{
+\AtBeginSection[]{%
 	\begin{frame}{Outline}
-	\small \tableofcontents[currentsection,currentsubsection, 
-    hideothersubsections]
+	\small
+	\tableofcontents[currentsection,currentsubsection,hideothersubsections]
 	\end{frame} 
 }
 
