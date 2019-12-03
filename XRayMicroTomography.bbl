@@ -263,6 +263,104 @@
       \verb http://books.google.com/books?id=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%20http://books.google.com/books?hl=en%7B%5C&%7Dlr=%7B%5C&%7Did=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%7B%5C&%7Doi=fnd%7B%5C&%7Dpg=PR9%7B%5C&%7Ddq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances%7B%5C&%7Dots=RiM0%7B%5C_%7DrS-Rq%7B%5C&%7Dsig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
       \endverb
     \endentry
+    \entry{Clark2013}{article}{}
+      \name{author}{12}{}{%
+        {{hash=fbbb974571847006fdd8ef15bd129e7d}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+        {{hash=35eb06af1a233f93dd4f54bde7025041}{%
+           family={Vendt},
+           familyi={V\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a3120d45eb0db75e7e62f245ac9bf11f}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Kirk},
+           giveni={K\bibinitperiod}}}%
+        {{hash=768032703bf13ee65a42f635e6ed63eb}{%
+           family={Freymann},
+           familyi={F\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=93d1bacd02ff5b479a51ed532bec1dc8}{%
+           family={Kirby},
+           familyi={K\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=38f97a89b35932e1c44923c7c44d3fb1}{%
+           family={Koppel},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b498bac98a3cc23502501af828a26577}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a3dcd1cd778a2e3a2331246feb19299e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47c9cb9722ec3b1b7aca24972103ba81}{%
+           family={Maffitt},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8320aec28286702f6073b037b9e39fb9}{%
+           family={Pringle},
+           familyi={P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=95f19d89fe3faaf38b505568ee46d0a8}{%
+           family={Tarbox},
+           familyi={T\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c6702fd6761bc177cf5c4641f7a93fba}{%
+           family={Prior},
+           familyi={P\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{fullhash}{2dc5a31c0ea0e0786861de75f6908266}
+      \strng{bibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authorbibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authornamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authorfullhash}{2dc5a31c0ea0e0786861de75f6908266}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0897-1889}
+      \field{journaltitle}{Journal of Digital Imaging}
+      \field{month}{12}
+      \field{number}{6}
+      \field{title}{{The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository}}
+      \field{volume}{26}
+      \field{year}{2013}
+      \field{pages}{1045\bibrangedash 1057}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/s10278-013-9622-7
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Clark et al/Clark et al. - 2013 - The Cancer Imaging Archive (TCIA) Maintaining and Operating a Public Information Repository.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10278-013-9622-7
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10278-013-9622-7
+      \endverb
+    \endentry
     \entry{Schindelin2012}{article}{}
       \name{author}{16}{}{%
         {{hash=ac82c7686cb5af1a978185f449f30702}{%
@@ -355,8 +453,8 @@
       \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
