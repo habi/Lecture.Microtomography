@@ -335,8 +335,8 @@
       \strng{authorbibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
       \strng{authornamehash}{2ed2e64f00c4ed1070c31996864f39da}
       \strng{authorfullhash}{2dc5a31c0ea0e0786861de75f6908266}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0897-1889}
@@ -453,8 +453,8 @@
       \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
