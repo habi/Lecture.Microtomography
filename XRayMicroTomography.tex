@@ -11,7 +11,7 @@
 \author{David Haberthür}
 \date{December 20, 2019 | \href{https://ilias.unibe.ch/ilias.php?ref_id=1555744&cmd=infoScreen&cmdClass=ilrepositorygui&cmdNode=y2&baseClass=ilrepositorygui}{9256-HS2019-0: Advanced Microscopy}}
 
-\includeonlyframes{current}
+%\includeonlyframes{current}
 %then....
 %\begin{frame}[label=current]
 %\end{frame}
@@ -26,8 +26,9 @@
 	\addbibresource{../../../Documents/library.bib}
 \usepackage{standalone}
 \usepackage{tikz}
-%	\usetikzlibrary{external}
-%	\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
+	\usetikzlibrary{spy}
+	\usetikzlibrary{external}
+	\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
 	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed, thick}}}
 \usepackage{shadowtext}  % for the shadowed scalebar
 	\shadowoffset{1pt}
@@ -240,45 +241,37 @@
 
 \section{Biomedical imaging}
 \begin{frame}[c]{Biomedical imaging}
-	\centering
-	\only<1>{%
-		\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
-		\source{w.wiki/7g4}{\ccbysa}
-		\par%
-		}
-	\only<2>{%
-		{%
-		% Do not externalize bitmap animations
-		% https://tex.stackexchange.com/a/516425/828
-		\tikzset{external/export=false}%
-		\begin{tikzpicture}[remember picture,overlay]%
-			\node at (current page.center){%
-				\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
-				};%
-		\end{tikzpicture}%
-		}
-	}
-\end{frame}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item<1-> Medical research
+				\item<2->(Small) Biological samples
+				\item<3-> Non-destructive insights into the samples
 
-\section{Biomedical imaging}
-\begin{frame}[c]{Biomedical imaging}
-	\centering
-	\only<1>{%
-		\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
-		\source{w.wiki/7g4}{\ccbysa}
-		}
-	\only<2>{%
-		\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
-		\par%
-		}
-\end{frame}
-
-\begin{frame}{Biomedical imaging}
-	\begin{itemize}
-		\item (Small) Biological samples
-		\item Non-destructive insights into the samples
-		\item Medical research
-	\end{itemize}
+			\end{itemize}
+		\end{column}	
+		\begin{column}{0.6\linewidth}
+			\centering
+			\only<1>{%
+				\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
+				\source{w.wiki/7g4}{\ccbysa}
+			}
+			\only<3>{%
+				%\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
+				%\par%
+				{%
+				% Do not externalize bitmap animations
+				% https://tex.stackexchange.com/a/516425/828
+				\tikzset{external/export=false}%
+				\begin{tikzpicture}[remember picture,overlay]%
+					\node at (current page.center){%
+						\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
+					};%
+				\end{tikzpicture}%
+				}				
+			}
+		\end{column}
+	\end{columns}				
 \end{frame}
 
 \section{Imaging}
@@ -423,32 +416,109 @@ Independent on the machine, technically they are all a simple combination of
 		\hfill
 		\begin{column}{0.48\linewidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509 
-			\pgfmathsetlength{\imagewidth}{\imwidth}%
-			\pgfmathsetlength{\imagescale}{\imagewidth/512}%
-			\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
-			\def\y{361}% scalebar-y at 90% of image height of 401px = 361
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_human}}}};
-				% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-				\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{250.0096}{\milli\meter} (512px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
-			\end{tikzpicture}%
+			\only<1-4>{%
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
+				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
+				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_human}}}};
+					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					%\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{250.0096}{\milli\meter} (512px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+				\end{tikzpicture}%
+			}%
+			\only<5>{%
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
+				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
+				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
+				\def\mag{4}% magnification of inset
+				\def\size{75}% size of inset
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_human}}}};
+					\spy [red] on (102,342) in node at (256,201) [anchor=center];
+					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+				\end{tikzpicture}%
+			}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}
 		\hfill		
 		\begin{column}{0.48\linewidth}
-			\pgfmathsetlength{\imagewidth}{\imwidth}%
-			\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-			\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-			\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-			\def\mag{4}% magnification of inset
-			\def\size{75}% size of inset
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_mouse}}}};
-				% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-				\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-			\end{tikzpicture}%
+			\only<1>{%
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_mouse}}}};
+					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+					%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+				}
+			\renewcommand{\imwidth}{0.1\columnwidth}%
+			\only<2>{%
+				\centering
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
+				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
+				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
+				\def\mag{4}% magnification of inset
+				\def\size{75}% size of inset
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{/media/habi/Fast_SSD/Talks/Lectures/MicroTomography/images/comparison/{{MAX_mouse_488umppx}}}};
+					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
+\end{tikzpicture}%				
+					}
+			\renewcommand{\imwidth}{\columnwidth}
+			\only<3>{%
+				\centering
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
+				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
+				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
+				\def\mag{4}% magnification of inset
+				\def\size{75}% size of inset
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{/media/habi/Fast_SSD/Talks/Lectures/MicroTomography/images/comparison/{{MAX_mouse_488umppx}}}};
+					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
+\end{tikzpicture}%				
+					}%
+			\only<4>{%
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+				\def\mag{4}% magnification of inset
+				\def\size{75}% size of inset
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_mouse}}}};
+					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}%					
+			\only<5>{%
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+				\def\mag{4}% magnification of inset
+				\def\size{75}% size of inset
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_mouse}}}};
+					\spy [red] on (352,1116) in node at (1648,746) [anchor=center];
+					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}%
 		\end{column}
 		\hfill
 	\end{columns}
@@ -559,7 +629,7 @@ Independent on the machine, technically they are all a simple combination of
 		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
 			\item \href{https://github.com/habi/lecture.microtomography/}{Full source code}: git.io/fjpP7
-			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action}\footnote{Details on how this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository here}: git.io/JeOOj} to a PDF which you can access here: XXXX
+			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action}\footnote{Details on how this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository here}: git.io/JeOOj} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.pdf}{PDF} which you can access here: git.io/JeMjP
 			\item Spotted an error?\\%
 				Then please file an \href{https://github.com/habi/lecture.microtomography/issues}{issue} (git.io/fjpPb) or (even better) submit a \href{https://github.com/habi/lecture.microtomography/pulls}{pull request} (git.io/fjpPN).
 		\end{itemize}
