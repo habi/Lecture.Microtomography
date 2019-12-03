@@ -10,5 +10,5 @@ A citation to https://doi.org/10.1007/s10278-013-9622-7 needs to be included (e.
 
 # Mouse head
 The mouse head is the same as shown in the early animation.
-The [(cropped) images](/movies/mouse_skull/rawdata/cropped) were loaded in ImageJ, resliced to show the head from the side and then used to generate an MIP.
-The voxel size 7.96 um.
+The files from the early animation are resized 0.25 times, so we used the original dataset (Mouse1265_Skull_Gaby_TKI_7_96um_Al05_2K) for a reslice and the generation of the MIP.
+The voxel size of the original data is 7.96 um.
