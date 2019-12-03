@@ -1,7 +1,7 @@
 % Compile with:
 % latexmk -pdf -pvc -interaction=nonstopmode
-\documentclass[aspectratio=169,10pt,draft]{beamer}
-%\documentclass[aspectratio=169,10pt]{beamer}
+%\documentclass[aspectratio=169,10pt,draft]{beamer}
+\documentclass[aspectratio=169,10pt]{beamer}
 %\documentclass[handout,aspectratio=169,10pt]{beamer}
 %\documentclass[notes=only,aspectratio=169,10pt]{beamer} % print out the notes
 
@@ -26,8 +26,12 @@
 	\addbibresource{../../../Documents/library.bib}
 \usepackage{standalone}
 \usepackage{tikz}
-	\usetikzlibrary{external}
-	\tikzexternalize[prefix=animations/] % externalize tikz figures into pdf frames, speeds up compilation
+%	\usetikzlibrary{external}
+%	\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
+	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed, thick}}}
+\usepackage{shadowtext}  % for the shadowed scalebar
+	\shadowoffset{1pt}
+	\shadowcolor{ubRed}
 \usepackage{pgfplots}
 	\pgfplotsset{compat=newest}
 \usepackage[detect-all=true,
@@ -45,7 +49,7 @@
 \usepackage{fontawesome5}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{5}% use only every nth frame for the movies
+\newcommand{\everyframe}{75}% use only every nth frame for the movies
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -256,7 +260,6 @@
 	}
 \end{frame}
 
-
 \section{Biomedical imaging}
 \begin{frame}[c]{Biomedical imaging}
 	\centering
@@ -421,66 +424,31 @@ Independent on the machine, technically they are all a simple combination of
 		\begin{column}{0.48\linewidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509 
 			\pgfmathsetlength{\imagewidth}{\imwidth}%
-\pgfmathsetlength{\imagescale}{\imagewidth/512}%
-\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
-\def\y{361}% scalebar-y at 90% of image height of 401px = 361
-\def\mag{4}% magnification of inset
-\def\size{75}% size of inset
-\def\shadow{4}% shadow parameter for scalebar
-\begin{tikzpicture}[x=\imagescale,y=-\imagescale, spy using outlines={rectangle, magnification=\mag, size=\size, connect spies}]
-	\begin{scope}
-		\clip (0,0) rectangle (512,401);
-		%\clip (256.0,200.5) circle (200.5);
-		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_human}}}};
-	\end{scope}
-	%\spy [red] on (212,101) in node at (0,0) [anchor=north west];
-	% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-	\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{250.0096}{\milli\meter} (512px) TEMPORARY!};
-	\draw[|-|,thick] (\x+\shadow,\y+\shadow) -- (\x+102.4+\shadow,\y+\shadow) node [midway, above] {\SI{5}{\centi\meter}};
-	\draw[|-|,white,thick] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\SI{5}{\centi\meter}};
-	\draw[color=red, anchor=south west] (0,401) node [fill=white, semitransparent] {Legend} node {Legend};
-\end{tikzpicture}%
+			\pgfmathsetlength{\imagescale}{\imagewidth/512}%
+			\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
+			\def\y{361}% scalebar-y at 90% of image height of 401px = 361
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_human}}}};
+				% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+				\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{250.0096}{\milli\meter} (512px) TEMPORARY!};
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+			\end{tikzpicture}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}
 		\hfill		
 		\begin{column}{0.48\linewidth}
-%			\only<1>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
-\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-\def\mag{4}% magnification of inset
-\def\size{75}% size of inset
-\def\shadow{4}% shadow parameter for scalebar
-\begin{tikzpicture}[x=\imagescale,y=-\imagescale, spy using outlines={rectangle, magnification=\mag, size=\size, connect spies}]
-	\begin{scope}
-		\clip (0,0) rectangle (3295,1492);
-		%\clip (1647.5,746.0) circle (746.0);
-		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_mouse}}}};
-	\end{scope}
-	%\spy [red] on (2995,1192) in node at (0,0) [anchor=north west];
-	% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-	\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) asdfasdfasdfasdfasdf!};
-	\draw[|-|,thick] (\x+\shadow,\y+\shadow) -- (\x+62.814+\shadow,\y+\shadow) node [midway, above] {\SI{500}{\micro\meter}};
-	\draw[|-|,white,thick] (\x,\y) -- (\x+62.814,\y) node [midway,above] {\SI{500}{\micro\meter}};
-	\draw[color=red, anchor=south west] (0,1492) node [fill=white, semitransparent] {Legend} node {Legend};
-\end{tikzpicture}%
-%			}
-%			\only<2<{%
-%				\pgfmathsetlength{\imagewidth}{0.0163\imwidth}% 7.96 um / 488um
-%				\pgfmathsetlength{\imagescale}{\imagewidth/765}%
-%				\def\x{473}% scalebar-x starting at golden ratio of image width of 765px = 473
-%				\def\y{356}% scalebar-y at 90% of image height of 396px = 356
-%				\def\shadow{4}% shadow parameter for scalebar
-%				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_mouse}}}};
-%					% 765px = 6.0893999999999995mm > 100px = 796um > 63px = 500um, 13px = 100um
-%					%\draw[|-|,blue,thick] (0,198) -- (765,198) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{6.0893999999999995}{\milli\meter} (765px) TEMPORARY!};
-%					\draw[|-|,thick] (\x+\shadow,\y+\shadow) -- (\x+63+\shadow,\y+\shadow) node [midway, above] {\SI{500}{\micro\meter}};
-%					\draw[|-|,white,thick] (\x,\y) -- (\x+63,\y) node [midway,above] {\SI{500}{\micro\meter}};
-%					%\draw[color=red, anchor=south west] (0,396) node [fill=white, semitransparent] {Legend} node {Legend};
-%			\end{tikzpicture}%
-%			}
+			\pgfmathsetlength{\imagewidth}{\imwidth}%
+			\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+			\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+			\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+			\def\mag{4}% magnification of inset
+			\def\size{75}% size of inset
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/{{MAX_mouse}}}};
+				% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+				\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+			\end{tikzpicture}%
 		\end{column}
 		\hfill
 	\end{columns}
