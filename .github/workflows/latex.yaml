@@ -12,10 +12,10 @@ jobs:
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@master
       with:
-        root_file: test.tex
+        root_file: XRayMicroTomography.tex
     - name: Check pdf file
       run: |
-        file test.pdf | grep -q ' PDF '
+        file XRayMicroTomography.pdf | grep -q ' PDF '
     - name: Upload
       run: |
         set -e
@@ -37,15 +37,10 @@ jobs:
         
         # Copy and commit the PDF file to the gh-pages branch
         git clone --depth=1 --branch gh-pages git@github.com:habi/lecture.microtomography.git pages
-        cp -f test.pdf pages/test.pdf
+        cp -f XRayMicroTomography.pdf pages/XRayMicroTomography.pdf
         cd pages
-        git add test.pdf
-        git commit -m "Deploy new version of (test) PDF to gh-pages branch"
+        git add XRayMicroTomography.pdf
+        git commit -m "Deploy new version of presentation PDF to gh-pages branch"
         git push        
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-#    - name: Send push notification
-#      uses: cstuder/apprise-ga@master
-#      with:
-#        secrets: "$APPRISE_URL"
-#        args: ["Generic title", "Here comes the message"]
