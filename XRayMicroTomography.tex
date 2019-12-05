@@ -27,8 +27,8 @@
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{spy}
-	%\usetikzlibrary{external}
-	%\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
+	\usetikzlibrary{external}
+	\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
 	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed, thick}}}
 \usepackage{shadowtext}  % for the shadowed scalebar
 	\shadowoffset{1pt}
