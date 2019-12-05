@@ -43,7 +43,7 @@
 	per-symbol=/]{siunitx}
 \usepackage{microtype}	
 \usepackage[absolute,overlay]{textpos} %for the \source{} command
-\usepackage{gitinfo2}
+\usepackage[missing=master]{gitinfo2} % GitHub Actions don't pull in the commit has, so we just show `Master'
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage{animate}
@@ -146,7 +146,6 @@
 \newdimen\progressbar@rcircle % radius for the circle
 \newdimen\progressbar@tmpdim % auxiliary dimension
 \progressbar@pbwd=\linewidth
-\progressbar@pbht=1pt
 \progressbar@rcircle=1.5pt
 \def\progressbar@progressbar{%
 	\progressbar@tmpcounta=\insertframenumber
@@ -154,12 +153,16 @@
 	\progressbar@tmpdim=\progressbar@pbwd
 	\multiply\progressbar@tmpdim by \progressbar@tmpcounta
 	\divide\progressbar@tmpdim by \progressbar@tmpcountb
-	\begin{tikzpicture}
-		%\draw[ubGrey,line width=\progressbar@pbht] (0, 0) -- ++ (\progressbar@pbwd,0);
-		\filldraw[ubRed] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax, .5\progressbar@pbht) circle (\progressbar@rcircle);
-		\node[align=center,anchor=west] at (\progressbar@pbwd,0) {v. \href{https://github.com/habi/lecture.microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
-	p.\xspace\insertframenumber/\inserttotalframenumber};
+	\par%
+	\begin{tikzpicture}%
+		\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);
+		\filldraw[ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);
 	\end{tikzpicture}%
+	v. \href{https://github.com/habi/lecture.microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
+	p.\xspace\insertframenumber/\inserttotalframenumber%
+%	\hspace*{4ex}%
+	\vspace{0.7ex}
+	\par%
 }
 \addtobeamertemplate{footline}{}
 {%
@@ -351,6 +354,19 @@
 \end{frame}
 
 \subsection{Interaction of x-rays with matter}
+\begin{frame}[label=current]{X-ray generation}
+	\begin{itemize}
+		\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material (
+	\(\tau\propto\frac{Z^4}{E^{3.5}}\)
+	\end{itemize}
+\end{frame}
+\note{From \emph{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if Z doubles, PEA will increase by a factor of 16 (2^4 = 8), and if E doubles PEA will reduce by a factor of 16.
+Small changes in Z and E can therefore significantly affect PEA.
+This has practical implications in the field of radiation protection and is the reason why materials with a high Z such as lead (Z = 82) are useful shielding materials.
+The dependence of PEA on Z and E means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (Z = 7.4) are irradiated.
+At beam energies above this, the Compton effect predominates.}
+
+% TODO: Insert table from Joliens presentation -> let the students see why the bone is so white in x-ray images
 
 \subsection{History}
 \begin{frame}{History}
@@ -614,6 +630,14 @@ Independent on the machine, technically they are all a simple combination of
 	\end{itemize}
 \end{frame}
 
+\subsection{Examples}
+
+% TODO: Zebrafish
+% TODO: Bone/teeth with screw -> Fluri
+% TODO: Osteocytes in bone
+% TODO: Toothpick
+
+
 \subsection{Imaging performance}
 % RESOLUTION/PIXEL SIZE -> PHANTOM?
 % POINT SPREAD FUNCTION
@@ -638,13 +662,6 @@ Independent on the machine, technically they are all a simple combination of
 		\item Raw numbers instead of just pretty images
 		\item Segmentation
 		\item Characterization
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Big data}
-	\begin{itemize}
-		\item TOMCAT \SI{2560x2160}{px} @ \SI{1500}{f\per\second}, \eg{} more than \SI{8}{\giga\byte\per\second}
-		\item Desktop \uct{} can easily produce more than \SI{100}{\giga\byte} in a day
 	\end{itemize}
 \end{frame}
 
