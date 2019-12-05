@@ -7,4 +7,5 @@ youtube-dl https://peertube.video/videos/watch/e431bbb0-9594-41c4-9154-10ceef8b5
 ffmpeg -i ct-scanner-stabilized.mp4 -r 24 -ss 4 -t 20 ct-scanner%04d.jpg
 ```
 
-I should have called /u/stabbot_crop, but I removed the black border in ImageJ...
+I should have called /u/stabbot_crop to remove the black border.
+Instead I just removed it in Fiji...
