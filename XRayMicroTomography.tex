@@ -27,8 +27,8 @@
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{spy}
-	\usetikzlibrary{external}
-	\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
+	%\usetikzlibrary{external}
+	%\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
 	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed, thick}}}
 \usepackage{shadowtext}  % for the shadowed scalebar
 	\shadowoffset{1pt}
@@ -127,14 +127,47 @@
 	}%	
 
 % Define us our custom footer
-\defbeamertemplate{footline}{unibe}{%
-	\hspace*{\fill}%
-	v. \href{https://github.com/habi/lecture.microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
-	p.\xspace\insertframenumber/\inserttotalframenumber%
-	\hspace*{4ex}%
-	\vspace{2pt}%
+%\defbeamertemplate{footline}{unibe}{%
+%	\hspace*{\fill}%
+%	v. \href{https://github.com/habi/lecture.microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
+%	p.\xspace\insertframenumber/\inserttotalframenumber%
+%	\hspace*{4ex}%
+%	\vspace{2pt}%
+%}
+%\setbeamertemplate{footline}[unibe]
+
+% Define us a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
+\makeatletter
+\def\progressbar@progressbar{} % the progress bar
+\newcount\progressbar@tmpcounta% auxiliary counter
+\newcount\progressbar@tmpcountb% auxiliary counter
+\newdimen\progressbar@pbht %progressbar height
+\newdimen\progressbar@pbwd %progressbar width
+\newdimen\progressbar@rcircle % radius for the circle
+\newdimen\progressbar@tmpdim % auxiliary dimension
+\progressbar@pbwd=\linewidth
+\progressbar@pbht=1pt
+\progressbar@rcircle=1.5pt
+\def\progressbar@progressbar{%
+	\progressbar@tmpcounta=\insertframenumber
+	\progressbar@tmpcountb=\inserttotalframenumber
+	\progressbar@tmpdim=\progressbar@pbwd
+	\multiply\progressbar@tmpdim by \progressbar@tmpcounta
+	\divide\progressbar@tmpdim by \progressbar@tmpcountb
+	\begin{tikzpicture}
+		%\draw[ubGrey,line width=\progressbar@pbht] (0, 0) -- ++ (\progressbar@pbwd,0);
+		\filldraw[ubRed] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax, .5\progressbar@pbht) circle (\progressbar@rcircle);
+		\node[align=center,anchor=west] at (\progressbar@pbwd,0) {v. \href{https://github.com/habi/lecture.microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
+	p.\xspace\insertframenumber/\inserttotalframenumber};
+	\end{tikzpicture}%
 }
-\setbeamertemplate{footline}[unibe]
+\addtobeamertemplate{footline}{}
+{%
+	\begin{beamercolorbox}[wd=\paperwidth,center]{white}%
+		\progressbar@progressbar%
+	\end{beamercolorbox}%
+}
+\makeatother
 
 % Format bibliography for beamer
 % http://tex.stackexchange.com/a/10686/828
@@ -262,7 +295,7 @@
 				{%
 				% Do not externalize bitmap animations
 				% https://tex.stackexchange.com/a/516425/828
-				\tikzset{external/export=false}%
+				%\tikzset{external/export=false}%
 				\begin{tikzpicture}[remember picture,overlay]%
 					\node at (current page.center){%
 						\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
