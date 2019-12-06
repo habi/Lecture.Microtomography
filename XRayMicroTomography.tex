@@ -46,11 +46,18 @@
 \usepackage[missing=master]{gitinfo2} % GitHub Actions don't pull in the commit has, so we just show `Master'
 \usepackage{xspace}
 \usepackage{ccicons}
+\usepackage[version=4]{mhchem}
 \usepackage{animate}
 \usepackage{fontawesome5}
+\usepackage{csquotes}
+\usepackage{listings}
+	\lstset{frame=single,
+		%backgroundcolor = \color{lightgray},
+		basicstyle=\tiny\ttfamily
+		}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{75}% use only every nth frame for the movies
+\newcommand{\everyframe}{5}% use only every nth frame for the movies
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -59,45 +66,49 @@
 \newcommand{\eg}{e.\,g.\xspace}%
 \newcommand{\ie}{i.\,e.\xspace}%
 
+% Define complementary colors to ubRed
+\definecolor{ubRedComplementary1}{HTML}{00a1e6}
+\definecolor{ubRedComplementary2}{HTML}{00e645}
+
 % change tikz font to slide font
 % https://tex.stackexchange.com/a/33329/828
-%\usepackage[eulergreek]{sansmath}
-%	\pgfplotsset{tick label style = {font=\sansmath\sffamily},
-%		every axis label = {font=\sansmath\sffamily},
-%		legend style = {font=\sansmath\sffamily},
-%		label style = {font=\sansmath\sffamily}
-%		}
+\usepackage[eulergreek]{sansmath}
+	\pgfplotsset{tick label style = {font=\sansmath\sffamily},
+		every axis label = {font=\sansmath\sffamily},
+		legend style = {font=\sansmath\sffamily},
+		label style = {font=\sansmath\sffamily}
+		}
 
 % Globally thicker lines in with tikz
 % https://tex.stackexchange.com/a/206769/828
-%\tikzset{every picture/.style={semithick}}
+\tikzset{every picture/.style={semithick}}
 
 % And thicker plots by default
 % https://tex.stackexchange.com/a/235439/828
 % https://tex.stackexchange.com/q/262486/828
-%\pgfplotsset{
-%	every axis plot/.append style={semithick},
-%	every axis/.append style={semithick}
-%	every axis plot post/.append style={every mark/.append style={semithick}}
-%}
+\pgfplotsset{%
+	every axis plot/.append style={semithick},
+	every axis/.append style={semithick}
+	every axis plot post/.append style={every mark/.append style={semithick}}
+	}
 
 % stripped-down plot styling
 % Based on https://tex.stackexchange.com/a/155210/828
 % And then start each plot with `\begin{axis}[tuftelike,'
-%\pgfkeys{%
-%	/pgfplots/simplified/.style={%
-%		tick style={major tick length=0pt},
-%%		separate axis lines,
-%%		axis x line*=bottom,
-%%		axis x line shift=10pt,
-%%		xlabel shift=1pt,
-%%		axis y line*=left,
-%%		axis y line shift=10pt,
-%		ymajorgrids=true,
-%		axis line style={draw=none},
-%%		ylabel shift=1pt
-%		}
-%	}
+\pgfkeys{%
+	/pgfplots/simplified/.style={%
+		tick style={major tick length=0pt},
+%		separate axis lines,
+%		axis x line*=bottom,
+%		axis x line shift=10pt,
+%		xlabel shift=1pt,
+%		axis y line*=left,
+%		axis y line shift=10pt,
+		ymajorgrids=true,
+		axis line style={draw=none},
+%		ylabel shift=1pt
+		}
+	}
 
 % Acknowledge images just below them
 % Based on https://tex.stackexchange.com/a/282637/828
@@ -313,18 +324,24 @@
 \section{Imaging}
 \begin{frame}{Wavelength \& Scale}
 	\centering
-	\includegraphics[height=0.618\textheight]{./images/2000px-Electromagnetic_spectrum_with_sources}
-	\source{w.wiki/7fz}{\ccbysa}
+	\only<1>{%
+		\includegraphics[height=\imheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
+		\source{w.wiki/7fz}{\ccbysa}%
+		}%
+	\only<2>{%
+		\includegraphics[height=\imheight]{./images/AnatomySeminarYuryBelyaev-cropped}%
+		\sourcelink{www.mic.unibe.ch/organisation.php}{Yury Belyaev, MIC}{slide from internal seminar presentation}%
+		}%		
 \end{frame}
 
 \begin{frame}{Imaging methods}
 	\begin{itemize}
 		\item Light microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555739.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
-		\item Electron microscopy: see lectures on
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555738.html}{Transmission Electron Microscopy by Dimitri Vanhecke},
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555742.html}{Scanning Electron Microscopy by Michael Stoffel} and
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555743.html}{Cryoelectron Microscopy \& Serial Block Face SEM by Ioan Iacovache}.
+		\item Electron microscopy: see lectures 
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555738.html}{\emph{Transmission Electron Microscopy} by Dimitri Vanhecke},
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555742.html}{\emph{Scanning Electron Microscopy} by Michael Stoffel} and
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555743.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan Iacovache}.
 	\end{itemize}
 \end{frame}
 
@@ -354,10 +371,26 @@
 \end{frame}
 
 \subsection{Interaction of x-rays with matter}
-\begin{frame}[label=current]{X-ray generation}
+\begin{frame}{X-ray interaction}
 	\begin{itemize}
-		\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material (
+		\item \textquote[\cite{xrayphysics}]{X-rays interact with tissue in 2 main ways: photoelectric effect and Compton scatter.
+				To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
+				Both contribute to dose.}
+		\begin{itemize}
+			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: 
 	\(\tau\propto\frac{Z^4}{E^{3.5}}\)
+		\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
+			It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
+%:where
+%:<math>\lambda</math> is the initial wavelength,
+%:<math>\lambda'</math> is the wavelength after scattering,
+%:<math>h</math> is the [[Planck constant]],
+%:<math>m_e</math> is the [[electron rest mass]],
+%:<math>c</math> is the [[speed of light]], and
+%:<math>\theta</math> is the scattering angle.
+		\end{itemize}
+		\item Lowering x-ray energy increases contrast
+		\item X-ray penetration decreases exponentially with sample thickness (\cite[\ie Beer-Lamberts law]{wiki:beer-lambert} \(I(t) = I_0 \, e^{-\alpha z}\)
 	\end{itemize}
 \end{frame}
 \note{From \emph{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if Z doubles, PEA will increase by a factor of 16 (2^4 = 8), and if E doubles PEA will reduce by a factor of 16.
@@ -365,6 +398,13 @@ Small changes in Z and E can therefore significantly affect PEA.
 This has practical implications in the field of radiation protection and is the reason why materials with a high Z such as lead (Z = 82) are useful shielding materials.
 The dependence of PEA on Z and E means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (Z = 7.4) are irradiated.
 At beam energies above this, the Compton effect predominates.}
+
+\begin{frame}{Composition of biological tissues}
+	\begin{itemize}
+		\item table with read csv
+		\item booktabs
+	\end{itemize}
+\end{frame}
 
 % TODO: Insert table from Joliens presentation -> let the students see why the bone is so white in x-ray images
 
@@ -431,7 +471,7 @@ Independent on the machine, technically they are all a simple combination of
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Machinery II}
+\begin{frame}[label=current]{Machinery II}
 	\begin{columns}
 		\hfill
 		\begin{column}{0.4\linewidth}
@@ -460,9 +500,9 @@ Independent on the machine, technically they are all a simple combination of
 \end{frame}
 
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}[label=current]{Why \uct?}
+\begin{frame}{Why \uct?}
 	\begin{columns}
-		\hfill
+		\hfill%
 		\begin{column}{0.48\linewidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509 
 			\only<1-4>{%
@@ -493,7 +533,7 @@ Independent on the machine, technically they are all a simple combination of
 			}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}
-		\hfill		
+		\hfill%
 		\begin{column}{0.48\linewidth}
 			\only<1>{%
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
@@ -569,7 +609,7 @@ Independent on the machine, technically they are all a simple combination of
 				\end{tikzpicture}%
 			}%
 		\end{column}
-		\hfill
+		\hfill%
 	\end{columns}
 \end{frame}
 
@@ -630,7 +670,215 @@ Independent on the machine, technically they are all a simple combination of
 	\end{itemize}
 \end{frame}
 
-\subsection{Examples}
+\subsection{Example}
+\begin{frame}
+	\frametitle{Gill anatomy}
+	\centering
+	% Image adapted from https://teacheratsea.files.wordpress.com/2011/07/gills-an-o2.jpg
+	\includegraphics[width=0.618\linewidth]{./images/gills-and-o2}%
+	\source{Campbell Biology}{\cite{Taylor2017}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gill anatomy}
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node at (current page.center){%
+			\animategraphics[autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/fishhead/head-without-gills0}{001}{160}%
+			};%
+	\end{tikzpicture}%
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gill anatomy}
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node at (current page.center){%
+			\animategraphics[autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/fishhead/head-without-gills0}{161}{481}%
+			};%
+	\end{tikzpicture}%
+\end{frame}
+
+\begin{frame}[label=current]{How?}
+	\begin{columns}
+	\begin{column}{0.5\linewidth}
+		\begin{itemize}
+			\item<1-> Training for \SI{5}{w}, \SI{5}{\day\per w}, \SI{6}{\hour\per\day}, at \SI{66}{\percent} of critical speed~\cite{Palstra2010}
+			\begin{itemize}
+				\item<1-> Endurance
+			\end{itemize}
+			\item<3-> Morphology \& Physiology
+			\begin{itemize}
+				\item<3-> Body size \& weight
+				\item<3-> \ce{O2} consumption
+			\end{itemize}			
+			\item<4-> Scanning electron microscopy
+			\begin{itemize}
+				\item<4-> Gill structure
+			\end{itemize}
+			\item<5-> Critical point drying\onslide<6->{, \uct imaging}\onslide<7->{, delineation in CTAn}\onslide<8->{ and analysis}
+			\begin{itemize}
+				\item<8-> Gill volume, structure and complexity
+			\end{itemize}
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.5\linewidth}
+		\only<1>{%
+			\pgfmathsetlength{\imagewidth}{\imwidth}%
+			\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
+			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
+			\def\y{547}% scalebar-y at 90% of image height of 608px = 547
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/{{fishvideo_0001}}}};%
+				% 69px = 30mm > 100px = 44mm > 1142px = 500mm, 228px = 100mm
+				%\draw[|-|,blue] (410,188) -- (478,182) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{30}{\milli\meter} (TEMPORARY)};
+				\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
+			\end{tikzpicture}%
+			}%
+		\only<2>{%
+			\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{25}{./movies/training/fishvideo_0}{001}{250}%
+			}%
+		\only<3>{\centering\Huge\faFish:\xspace\faRuler\xspace\&\xspace\faWeight}
+		\only<4>{%
+			\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
+			\pgfmathsetlength{\imagescale}{\imagewidth/794}%
+			\def\x{491}% scalebar-x starting at golden ratio of image width of 794px = 491
+			\def\y{458}% scalebar-y at 90% of image height of 509px = 458
+			\def\shadow{4}% shadow parameter for scalebar
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_c5_3}};%
+				% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
+				%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
+				\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+165+\shadow,\y+\shadow) node [midway, above] {\SI{500}{\micro\meter}};%
+				\draw[|-|,white] (\x,\y) -- (\x+165,\y) node [midway,above] {\SI{500}{\micro\meter}};%
+			\end{tikzpicture}%
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_s5_3}};%
+				% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
+				%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
+				\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+165+\shadow,\y+\shadow) node [midway, above] {\SI{500}{\micro\meter}};%
+				\draw[|-|,white] (\x,\y) -- (\x+165,\y) node [midway,above] {\SI{500}{\micro\meter}};%
+			\end{tikzpicture}%
+			}
+		\renewcommand{\imwidth}{0.75\linewidth}
+		\only<5>{%
+			\pgfmathsetlength{\imagewidth}{\imwidth}%
+			\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
+			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
+			\def\y{673}% scalebar-y at 90% of image height of 748px = 673
+			\def\shadow{4}% shadow parameter for scalebar
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/IMG_20190603_174659}};
+				% 294px = 12.5mm > 100px = 4250um > 118px = 5mm
+				%\draw[|-|,blue,thick] (494,218) -- (624,481) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{12.5}{\milli\meter} (294px) TEMPORARY!};
+				\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+118+\shadow,\y+\shadow) node [midway, above] {\SI{5}{\milli\meter}};
+				\draw[|-|,white] (\x,\y) -- (\x+118,\y) node [midway,above] {\SI{5}{\milli\meter}};
+			\end{tikzpicture}%
+			}
+		\only<6>{%
+			\lstinputlisting[linerange={2-5,17-17,19-23,29-31,34-34,38-40,51-51,58-59}]{./logfiles/Control05/proj/Control05.log}%
+			}
+		\includegraphics<7>[width=\imwidth]{./images/CTAn}%
+		\only<8>{%
+			\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{25}{./movies/coder/coder-}{0}{133}%
+			\source{gph.is/2nqkple}{}%
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+\note{Comparable with the weekly training routine of Michael Phelps.
+	The fish trained only for ca. \SI{7}{\percent} of their lifetime and started as adults.
+	The Olympic winner trained for half of his lifetime and started as child.}
+
+\begin{frame}
+	\frametitle{Gill volume}
+	\centering
+	\only<1>{%
+		\pgfmathsetlength{\imagewidth}{0.4\linewidth}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/2524}%
+		\def\x{1560}% scalebar-x starting at golden ratio of image width of 2524px = 1560
+		\def\y{2272}% scalebar-y at 90% of image height of 2524px = 2272
+		\def\shadow{4}% shadow parameter for scalebar
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865}};
+			% 2524px = 4.1874422mm > 100px = 166um > 301px = 500um, 60px = 100um
+			%\draw[|-|,blue] (0,1262) -- (2524,1262) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{4.18}{\milli\meter} (2524px) TEMPORARY!};
+			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+	}%
+	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
+	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
+	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
+	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
+	\def\shadow{4}% shadow parameter for scalebar
+	\only<2>{%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865_crop}};
+			% 2163px = 3.5885251499999997mm > 100px = 166um > 301px = 500um, 60px = 100um
+			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+		}%
+	\only<3>{%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec0000_voi_1865_crop}};
+			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+		}%
+	\only<4>{%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
+			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+		}%
+	\only<5>{\include{./plots/Gillvolume}}
+	\only<6>{\include{./plots/Gillvolume_scaled}}
+\end{frame}
+\note{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
+	This means we analyzed 129.40 GigaPixels.
+	This means we analyzed \num{129395.29} MegaPixels.
+	In total \num{46014} slices.}
+
+\begin{frame}
+	\frametitle{Gill complexity}
+	\centering
+	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
+	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
+	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
+	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
+	\def\shadow{4}% shadow parameter for scalebar
+	\only<1>{%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
+			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+		}%
+	\only<2>{%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_edit}};
+			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+		}%
+	\only<3>{%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_combination}};
+			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+		}%
+	\only<4>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center){%
+				\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/complexity/control03_thresholded_0}{001}{256}%
+				};%
+		\end{tikzpicture}%
+		}%
+	\only<5>{\include{./plots/Gills_per_organ}}
+	\only<6>{\include{./plots/Gills_per_organ_scaled}}
+\end{frame}
 
 % TODO: Zebrafish
 % TODO: Bone/teeth with screw -> Fluri
