@@ -727,7 +727,7 @@ Independent on the machine, technically they are all a simple combination of
 			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
 			\def\y{547}% scalebar-y at 90% of image height of 608px = 547
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/{{fishvideo_0001}}}};%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/fishvideo_0001}};%
 				% 69px = 30mm > 100px = 44mm > 1142px = 500mm, 228px = 100mm
 				%\draw[|-|,blue] (410,188) -- (478,182) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{30}{\milli\meter} (TEMPORARY)};
 				\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
