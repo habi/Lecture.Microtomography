@@ -1,17 +1,11 @@
-% Compile with:
-% latexmk -pdf -pvc -interaction=nonstopmode
-%\documentclass[aspectratio=169,10pt,draft]{beamer}
-\documentclass[aspectratio=169,10pt]{beamer}
-%\documentclass[handout,aspectratio=169,10pt]{beamer}
-%\documentclass[notes=only,aspectratio=169,10pt]{beamer} % print out the notes
-
+% !TEX root = XRayMicroTomography.Presentation.tex
 \usetheme{UniBern}
 
 \title{X-ray microtomography}
 \author{David Haberthür}
 \date{December 20, 2019 | \href{https://ilias.unibe.ch/ilias.php?ref_id=1555744&cmd=infoScreen&cmdClass=ilrepositorygui&cmdNode=y2&baseClass=ilrepositorygui}{9256-HS2019-0: Advanced Microscopy}}
 
-%\includeonlyframes{current}
+\includeonlyframes{current}
 %then....
 %\begin{frame}[label=current]
 %\end{frame}
@@ -57,7 +51,8 @@
 		}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{5}% use only every nth frame for the movies
+\mode<beamer>{\newcommand{\everyframe}{75}} % use only every nth frame for the animations
+\mode<handout>{\newcommand{\everyframe}{75}} %kill animations for `handout'
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -81,7 +76,7 @@
 
 % Globally thicker lines in with tikz
 % https://tex.stackexchange.com/a/206769/828
-\tikzset{every picture/.style={semithick}}
+\tikzset{every picture/.style={thick}}
 
 % And thicker plots by default
 % https://tex.stackexchange.com/a/235439/828
@@ -322,16 +317,16 @@
 \end{frame}
 
 \section{Imaging}
-\begin{frame}{Wavelength \& Scale}
+\begin{frame}[label=current]{Wavelength \& Scale}
 	\centering
-	\only<1>{%
+	\only<1|handout:1>{%
 		\includegraphics[height=\imheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
 		\source{w.wiki/7fz}{\ccbysa}%
 		}%
-	\only<2>{%
+	\only<2|handout:2>{%
 		\includegraphics[height=\imheight]{./images/AnatomySeminarYuryBelyaev-cropped}%
 		\sourcelink{www.mic.unibe.ch/organisation.php}{Yury Belyaev, MIC}{slide from internal seminar presentation}%
-		}%
+		}
 \end{frame}
 
 \begin{frame}{Imaging methods}
@@ -393,10 +388,10 @@
 		\item X-ray penetration decreases exponentially with sample thickness (\cite[\ie Beer-Lamberts law]{wiki:beer-lambert} \(I(t) = I_0 \, e^{-\alpha z}\)
 	\end{itemize}
 \end{frame}
-\note{From \emph{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if Z doubles, PEA will increase by a factor of 16 (2^4 = 8), and if E doubles PEA will reduce by a factor of 16.
-Small changes in Z and E can therefore significantly affect PEA.
-This has practical implications in the field of radiation protection and is the reason why materials with a high Z such as lead (Z = 82) are useful shielding materials.
-The dependence of PEA on Z and E means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (Z = 7.4) are irradiated.
+\note{From \emph{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=8\)), and if \(E\) doubles PEA will reduce by a factor of 16.
+Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
+This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
+The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (\(Z=7.4\)) are irradiated.
 At beam energies above this, the Compton effect predominates.}
 
 \begin{frame}{Composition of biological tissues}
@@ -409,7 +404,7 @@ At beam energies above this, the Compton effect predominates.}
 % TODO: Insert table from Joliens presentation -> let the students see why the bone is so white in x-ray images
 
 \subsection{History}
-\begin{frame}{History}
+\begin{frame}[label=current]{History}
 	\begin{columns}
 		\begin{column}{0.48\linewidth}
 			\begin{itemize}
@@ -419,12 +414,12 @@ At beam energies above this, the Compton effect predominates.}
 		\end{column}
 		\begin{column}{0.48\linewidth}
 			\centering
-			\includegraphics<2>[width=\imwidth]{./images/History_Generation1}%
-			\only<2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-			\includegraphics<3>[width=\imwidth]{./images/History_Generation2}%
-			\only<3>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-			\includegraphics<4>[width=\imwidth]{./images/History_Generation3}%
-			\only<4>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation1}%
+			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation2}%
+			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+			\includegraphics<4|handout:3>[width=\imwidth]{./images/History_Generation3}%
+			\only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.14}}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -514,7 +509,7 @@ Independent on the machine, technically they are all a simple combination of
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					%\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{250.0096}{\milli\meter} (512px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
 			\only<5>{%
@@ -528,7 +523,7 @@ Independent on the machine, technically they are all a simple combination of
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
 					\spy [red] on (102,342) in node at (256,201) [anchor=center];
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
@@ -544,7 +539,7 @@ Independent on the machine, technically they are all a simple combination of
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
 					%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 				}
 			\renewcommand{\imwidth}{0.1\columnwidth}%
@@ -675,7 +670,7 @@ Independent on the machine, technically they are all a simple combination of
 	\frametitle{Gill anatomy}
 	\centering
 	% Image adapted from https://teacheratsea.files.wordpress.com/2011/07/gills-an-o2.jpg
-	\includegraphics[width=0.618\linewidth]{./images/gills-and-o2}%
+	\includegraphics[height=\imheight]{./images/gills-and-o2}%
 	\source{Campbell Biology}{\cite{Taylor2017}}
 \end{frame}
 
@@ -697,9 +692,10 @@ Independent on the machine, technically they are all a simple combination of
 	\end{tikzpicture}%
 \end{frame}
 
+\renewcommand{\imwidth}{\columnwidth}
 \begin{frame}[label=current]{How?}
 	\begin{columns}
-	\begin{column}{0.5\linewidth}
+	\begin{column}{0.49\linewidth}
 		\begin{itemize}
 			\item<1-> Training for \SI{5}{w}, \SI{5}{\day\per w}, \SI{6}{\hour\per\day}, at \SI{66}{\percent} of critical speed~\cite{Palstra2010}
 			\begin{itemize}
@@ -720,9 +716,9 @@ Independent on the machine, technically they are all a simple combination of
 			\end{itemize}
 		\end{itemize}
 	\end{column}
-	\begin{column}{0.5\linewidth}
-		\only<1>{%
-			\pgfmathsetlength{\imagewidth}{\linewidth}%
+	\begin{column}{0.49\linewidth}
+		\only<1|handout:1>{%
+			\pgfmathsetlength{\imagewidth}{\imwidth}%
 			\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
 			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
 			\def\y{547}% scalebar-y at 90% of image height of 608px = 547
@@ -733,47 +729,44 @@ Independent on the machine, technically they are all a simple combination of
 				\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
 			\end{tikzpicture}%
 			}%
-		\only<2>{%
+		\only<2|handout:2>{%
 			\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{25}{./movies/training/fishvideo_0}{001}{250}%
 			}%
-		\only<3>{\centering\Huge\faFish:\xspace\faRuler\xspace\&\xspace\faWeight}
-		\only<4>{%
-			\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
+		\only<3|handout:3>{\centering\Huge\faFish:\xspace\faRuler\xspace\&\xspace\faWeight}
+		\renewcommand{\imwidth}{0.5\columnwidth}%
+		\only<4|handout:4>{%
+			\pgfmathsetlength{\imagewidth}{\imwidth}%
 			\pgfmathsetlength{\imagescale}{\imagewidth/794}%
 			\def\x{491}% scalebar-x starting at golden ratio of image width of 794px = 491
 			\def\y{458}% scalebar-y at 90% of image height of 509px = 458
-			\def\shadow{4}% shadow parameter for scalebar
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_c5_3}};%
 				% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
 				%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
-				\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+165+\shadow,\y+\shadow) node [midway, above] {\SI{500}{\micro\meter}};%
-				\draw[|-|,white] (\x,\y) -- (\x+165,\y) node [midway,above] {\SI{500}{\micro\meter}};%
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
 			\end{tikzpicture}%
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_s5_3}};%
 				% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
 				%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
-				\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+165+\shadow,\y+\shadow) node [midway, above] {\SI{500}{\micro\meter}};%
-				\draw[|-|,white] (\x,\y) -- (\x+165,\y) node [midway,above] {\SI{500}{\micro\meter}};%
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
 			\end{tikzpicture}%
 			}
-		\renewcommand{\imwidth}{0.75\linewidth}
-		\only<5>{%
+		\renewcommand{\imwidth}{\columnwidth}
+		\only<5|handout:5>{%
+			\centering
 			\pgfmathsetlength{\imagewidth}{\imwidth}%
 			\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
 			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
 			\def\y{673}% scalebar-y at 90% of image height of 748px = 673
-			\def\shadow{4}% shadow parameter for scalebar
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/IMG_20190603_174659}};
 				% 294px = 12.5mm > 100px = 4250um > 118px = 5mm
 				%\draw[|-|,blue,thick] (494,218) -- (624,481) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{12.5}{\milli\meter} (294px) TEMPORARY!};
-				\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+118+\shadow,\y+\shadow) node [midway, above] {\SI{5}{\milli\meter}};
-				\draw[|-|,white] (\x,\y) -- (\x+118,\y) node [midway,above] {\SI{5}{\milli\meter}};
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+118,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 			\end{tikzpicture}%
 			}
-		\only<6>{%
+		\only<6|handout:6>{%
 			\lstinputlisting[linerange={2-5,17-17,19-23,29-31,34-34,38-40,51-51,58-59}]{./logfiles/Control05/proj/Control05.log}%
 			}
 		\includegraphics<7>[width=\imwidth]{./images/CTAn}%
@@ -796,40 +789,34 @@ Independent on the machine, technically they are all a simple combination of
 		\pgfmathsetlength{\imagescale}{\imagewidth/2524}%
 		\def\x{1560}% scalebar-x starting at golden ratio of image width of 2524px = 1560
 		\def\y{2272}% scalebar-y at 90% of image height of 2524px = 2272
-		\def\shadow{4}% shadow parameter for scalebar
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865}};
 			% 2524px = 4.1874422mm > 100px = 166um > 301px = 500um, 60px = 100um
 			%\draw[|-|,blue] (0,1262) -- (2524,1262) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{4.18}{\milli\meter} (2524px) TEMPORARY!};
-			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
-			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 	}%
 	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
 	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
 	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
 	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
-	\def\shadow{4}% shadow parameter for scalebar
 	\only<2>{%
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865_crop}};
 			% 2163px = 3.5885251499999997mm > 100px = 166um > 301px = 500um, 60px = 100um
-			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
-			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		}%
 	\only<3>{%
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec0000_voi_1865_crop}};
-			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
-			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		}%
 	\only<4>{%
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
-			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
-			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		}%
 	\only<5>{\include{./plots/Gillvolume}}
@@ -840,33 +827,28 @@ Independent on the machine, technically they are all a simple combination of
 	This means we analyzed \num{129395.29} MegaPixels.
 	In total \num{46014} slices.}
 
-\begin{frame}
-	\frametitle{Gill complexity}
+\begin{frame}[label=current]{Gill complexity}
 	\centering
 	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
 	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
 	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
 	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
-	\def\shadow{4}% shadow parameter for scalebar
 	\only<1>{%
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
-			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
-			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		}%
 	\only<2>{%
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_edit}};
-			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
-			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		}%
 	\only<3>{%
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_combination}};
-			\draw[|-|] (\x+\shadow,\y+\shadow) -- (\x+301+\shadow,\y+\shadow) node [midway,above] {\SI{500}{\micro\meter}};
-			\draw[|-|,white] (\x,\y) -- (\x+301,\y) node [midway,above] {\SI{500}{\micro\meter}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		}%
 	\only<4>{%

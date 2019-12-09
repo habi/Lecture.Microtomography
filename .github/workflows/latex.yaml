@@ -13,10 +13,10 @@ jobs:
       uses: xu-cheng/latex-action@master
       with:
         args: -pdf -interaction=nonstopmode -shell-escape
-        root_file: XRayMicroTomography.tex
+        root_file: XRayMicroTomography.Handout.tex
     - name: Check pdf file
       run: |
-        file XRayMicroTomography.pdf | grep -q ' PDF '
+        file *Handout.pdf | grep -q ' PDF '
     - name: Upload
       run: |
         set -e
@@ -38,10 +38,10 @@ jobs:
         
         # Copy and commit the PDF file to the gh-pages branch
         git clone --depth=1 --branch gh-pages git@github.com:habi/lecture.microtomography.git pages
-        cp -f XRayMicroTomography.pdf pages/XRayMicroTomography.pdf
+        cp -f XRayMicroTomography.Handout.pdf pages/XRayMicroTomography.Handout.pdf
         cd pages
-        git add XRayMicroTomography.pdf
-        git commit -m "Deploy new version of presentation PDF to gh-pages branch"
+        git add XRayMicroTomography.Handout.pdf
+        git commit -m "Deploy new version of presentation handout to gh-pages branch"
         git push        
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
