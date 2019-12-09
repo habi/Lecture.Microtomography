@@ -41,7 +41,7 @@
 	binary-units=true,
 	per-mode=symbol,
 	per-symbol=/]{siunitx}
-\usepackage{microtype}	
+\usepackage{microtype}
 \usepackage[absolute,overlay]{textpos} %for the \source{} command
 \usepackage[missing=master]{gitinfo2} % GitHub Actions don't pull in the commit has, so we just show `Master'
 \usepackage{xspace}
@@ -135,7 +135,7 @@
 			\scriptsize\href{http://#1}{#2}, #3%
 			}%
 		}%
-	}%	
+	}%
 
 % Define us our custom footer
 %\defbeamertemplate{footline}{unibe}{%
@@ -268,7 +268,7 @@
 		\item Post-Doc at the \href{https://ana.unibe.ch}{Institute of Anatomy} in the \uct-group
 		\begin{itemize}
 			\item Ruslan Hlushchuk, David Haberthür, Oleksiy-Zakhar Khoma, Fluri Wieland, Carlos Correa Shokiche
-		\end{itemize}			
+		\end{itemize}
 		\item Biomedical research
 		\begin{itemize}
 			\item microangioCT~\footcite{Hlushchuk2018}: Tumor vasculature, angiogenesis in the heart, musculature and bones
@@ -277,7 +277,7 @@
 			\item Physiology: Zebrafish musculature and gills~\footcite{Messerli2019}
 			\item SkyScan 1172 \& 1272
 		\end{itemize}
-	\end{itemize}		
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Contents}
@@ -296,7 +296,7 @@
 				\item<3-> Non-destructive insights into the samples
 
 			\end{itemize}
-		\end{column}	
+		\end{column}
 		\begin{column}{0.6\linewidth}
 			\centering
 			\only<1>{%
@@ -331,7 +331,7 @@
 	\only<2>{%
 		\includegraphics[height=\imheight]{./images/AnatomySeminarYuryBelyaev-cropped}%
 		\sourcelink{www.mic.unibe.ch/organisation.php}{Yury Belyaev, MIC}{slide from internal seminar presentation}%
-		}%		
+		}%
 \end{frame}
 
 \begin{frame}{Imaging methods}
@@ -477,7 +477,7 @@ Independent on the machine, technically they are all a simple combination of
 		\begin{column}{0.4\linewidth}
 			\input{animations/classicCT}
 		\end{column}
-		\hfill		
+		\hfill
 		\begin{column}{0.4\linewidth}
 			\input{animations/microCT}
 		\end{column}
@@ -562,7 +562,7 @@ Independent on the machine, technically they are all a simple combination of
 					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
-\end{tikzpicture}%				
+\end{tikzpicture}%
 					}
 			\renewcommand{\imwidth}{\columnwidth}
 			\only<3>{%
@@ -579,7 +579,7 @@ Independent on the machine, technically they are all a simple combination of
 					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
-\end{tikzpicture}%				
+\end{tikzpicture}%
 					}%
 			\only<4>{%
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
@@ -593,7 +593,7 @@ Independent on the machine, technically they are all a simple combination of
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
-			}%					
+			}%
 			\only<5>{%
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
@@ -644,7 +644,7 @@ Independent on the machine, technically they are all a simple combination of
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
 	\animategraphics[autoplay,palindrome,height=\imheight,every=\everyframe]{25}{./movies/scan/reconstructions/KP-TNIKWT02_240_reconstructions_of_556_800_px_}{000}{277}
 \end{frame}
-	
+
 \begin{frame}{Reconstructions}
 	\begin{itemize}
 		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
@@ -709,7 +709,7 @@ Independent on the machine, technically they are all a simple combination of
 			\begin{itemize}
 				\item<3-> Body size \& weight
 				\item<3-> \ce{O2} consumption
-			\end{itemize}			
+			\end{itemize}
 			\item<4-> Scanning electron microscopy
 			\begin{itemize}
 				\item<4-> Gill structure
@@ -722,12 +722,12 @@ Independent on the machine, technically they are all a simple combination of
 	\end{column}
 	\begin{column}{0.5\linewidth}
 		\only<1>{%
-			\pgfmathsetlength{\imagewidth}{\imwidth}%
+			\pgfmathsetlength{\imagewidth}{\linewidth}%
 			\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
 			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
 			\def\y{547}% scalebar-y at 90% of image height of 608px = 547
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/{{fishvideo_0001}}}};%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/fishvideo_0001}};%
 				% 69px = 30mm > 100px = 44mm > 1142px = 500mm, 228px = 100mm
 				%\draw[|-|,blue] (410,188) -- (478,182) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{30}{\milli\meter} (TEMPORARY)};
 				\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
