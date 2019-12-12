@@ -49,6 +49,9 @@
 		%backgroundcolor = \color{lightgray},
 		basicstyle=\tiny\ttfamily
 		}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{colortbl}
 
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{75} % use only every nth frame for the animations
@@ -393,14 +396,38 @@ This has practical implications in the field of radiation protection and is the 
 The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (\(Z=7.4\)) are irradiated.
 At beam energies above this, the Compton effect predominates.}
 
-\begin{frame}{Composition of biological tissues}
-	\begin{itemize}
-		\item table with read csv
-		\item booktabs
-	\end{itemize}
+\begin{frame}[label=current]{Composition of biological tissues}
+	\centering
+	\only<1>{%
+		\begin{table}
+			\pgfplotstabletypeset[%
+		      col sep=comma, % the seperator in our .csv file
+				display columns/0/.style={string type,column name={Element}},
+				% section 3.2 in pgfplotstable manual
+				every head row/.style={before row={\toprule}},
+				every row no 0/.style={after row=\midrule},
+				every last row/.style={after row=\bottomrule},
+				]{./tables/tissue-composition.csv}
+		\end{table}
+		}
+	\only<2|handout:0>{%
+		\begin{table}
+			\pgfplotstabletypeset[%
+		      col sep=comma, % the seperator in our .csv file
+				display columns/0/.style={string type,column name={Element}},
+				every head row/.style={before row={\toprule}},
+				every row no 0/.style={after row=\midrule},
+				every last row/.style={after row=\bottomrule},
+				% make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
+				every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
+				every row 1 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
+				every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
+				every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}
+				]{./tables/tissue-composition.csv}
+		\end{table}
+	}
 \end{frame}
-
-% TODO: Insert table from Joliens presentation -> let the students see why the bone is so white in x-ray images
+\note{Bone, lean tissue, fat and air can be distinguished quite easily}
 
 \subsection{History}
 \renewcommand{\imwidth}{\columnwidth}
