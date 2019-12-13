@@ -54,7 +54,7 @@
 \usepackage{colortbl}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{75} % use only every nth frame for the animations
+\newcommand{\everyframe}{1} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -329,7 +329,7 @@
 	\begin{itemize}
 		\item Light microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555739.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
-		\item Electron microscopy: see lectures 
+		\item Electron microscopy: see lectures
 			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555738.html}{\emph{Transmission Electron Microscopy} by Dimitri Vanhecke},
 			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555742.html}{\emph{Scanning Electron Microscopy} by Michael Stoffel} and
 			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555743.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan Iacovache}.
@@ -347,8 +347,8 @@
 		\includegraphics[height=0.618\textheight]{./movies/ct-scanner/ct-scanner0001}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
-	\note{From \url{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}: 
-		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
+	\note{From \url{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}:
+			Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
 		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
 		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
@@ -374,8 +374,7 @@
 				To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
 				Both contribute to dose.}
 		\begin{itemize}
-			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: 
-	\(\tau\propto\frac{Z^4}{E^{3.5}}\)
+			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
 		\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
 			It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
 %:where
@@ -455,7 +454,7 @@ At beam energies above this, the Compton effect predominates.}
 \begin{frame}{Why \uct?}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
-			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509 
+			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4>{%
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
@@ -912,7 +911,7 @@ Independent on the machine, technically they are all a simple combination of
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center){%
 				\mode<beamer>{\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/complexity/control03_thresholded_0}{001}{256}}%
-				\mode<handout>{\includegraphics[width=\paperwidth]{./movies/complexity/control03_thresholded_0068}}%				
+				\mode<handout>{\includegraphics[width=\paperwidth]{./movies/complexity/control03_thresholded_0068}}%
 				};%
 		\end{tikzpicture}%
 		}%
@@ -937,7 +936,7 @@ Independent on the machine, technically they are all a simple combination of
 % SURFACE RENDERING
 
 \begin{frame}{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
-	\begin{itemize} 
+	\begin{itemize}
 		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
 			\item \href{https://github.com/habi/lecture.microtomography/}{Full source code}: git.io/fjpP7
