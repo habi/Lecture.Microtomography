@@ -1,0 +1,53 @@
+\documentclass[a4paper]{exam}
+%\documentclass[paper=a4,twoside=true,DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[scaled=.92]{helvet}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage[obeyall=true,detect-weight=true, binary-units=true]{siunitx}
+\usepackage{gitinfo2}
+\usepackage{graphicx}
+\usepackage[margin=15pt]{subcaption}
+\usepackage[colorlinks=true]{hyperref}
+
+\title{Selftest questions for the \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1555744.html}{Lecture on X-ray microtomography}}
+\author{David Haberthür}
+\date{\today}
+
+% Helvetica all over 
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+
+\question Fully describe the path of the X-rays once they are emitted from the source until they are converted to an image. Can you describe all interactions with the sample and what needs to happen that we get a projection image on disk?
+
+\question How does one change the voxel size in a micro-CT?
+
+\question Why can't you see the blood vessels in \autoref{fig:1265}, but see them in \autoref{fig:5158}? Hint: It's not because they have been scanned on different machines or at different voxel sizes\ldots
+
+\begin{figure}[htb]
+	\centering
+	\begin{subfigure}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{S:/TKI_Skulls/Mouse5158/overview/rec/Mouse5158_rec00000079.png}
+		\caption{Mouse 1265 (which you might remember from the visualization on slide 4), scanned on a SkyScan1172 at an isotropic voxel size of \SI{7.96}{\micro\meter}}
+		\label{fig:1265}
+	\end{subfigure}%
+	\hfill%
+	\begin{subfigure}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{S:/TKI_Skulls/Mouse5158/overview/rec/Mouse5158_rec00000079.png}
+		\caption{Mouse 5158, scanned on a SkyScan1272 at an isotropic voxel size of \SI{10.5}{\micro\meter}}
+		\label{fig:5158}
+	\end{subfigure}	
+	\caption{Reconstruction images from two different mouse heads}
+\end{figure}
+
+\end{questions}
+
+
+\end{document}
