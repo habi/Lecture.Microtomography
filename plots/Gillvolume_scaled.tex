@@ -1,15 +1,12 @@
-% !TEX root = ..\20190605_BrukerUserMeeting.tex
 % This file was created by matplotlib2tikz v0.7.4.
 % And edited a bit by hand...
 \begin{tikzpicture}
 
-%\definecolor{color0}{rgb}{0.83921568627451,0,0.168627450980392}
-
 \begin{axis}[
 simplified,
-scale only axis,
+%scale only axis,
 width=0.75\textwidth,
-height=.618\textheight,
+height=.618\paperheight,
 %axis line style={white!80.0!black},
 %tick align=outside,
 %x grid style={white!80.0!black},
@@ -20,6 +17,7 @@ xtick={0,1},
 xticklabels={Control,Swimmer},
 %y grid style={white!80.0!black},
 ylabel={Gill volume [\si{\micro\litre}]},
+ymax=0.799,
 %ymajorgrids,
 %ymajorticks=false,
 %ymin=0, %ymax=0.770697055458566,
@@ -123,7 +121,7 @@ x                      y
 1.12159157456604 0.749298475419024
 1.01159718977894 0.427215702498488
 };
-\draw[|-|, thin, gray] (axis cs:1,0.756791460173214) -- (axis cs:0,0.756791460173214) node [midway,above] {\scriptsize * | p=\num{0.048}};
+\draw[|-|, thin, gray] (axis cs:1,0.7) -- (axis cs:0,0.7) node [midway,above] {* | p=\num{0.048}};
 %\draw[] (axis cs:0.5,0.756791460173214) -- (axis cs:0.5,0.756791460173214);
 %\node at (axis cs:0.5,0.756791460173214)[
 %  scale=0.9,

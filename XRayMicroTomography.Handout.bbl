@@ -1,0 +1,794 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Hlushchuk2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=19d1c5f909bbd72b20042740109f3be6}{%
+           family={Hlushchuk},
+           familyi={H\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberth{ü}r},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=28c44c7c3e11860ed7bc799a90c1e7c5}{%
+           family={Djonov},
+           familyi={D\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Inc}%
+      }
+      \strng{namehash}{ba011f50a3ab4c0821ded918983ebaa9}
+      \strng{fullhash}{1a650331d5536d9c4d40da0c95cdc803}
+      \strng{bibnamehash}{ba011f50a3ab4c0821ded918983ebaa9}
+      \strng{authorbibnamehash}{ba011f50a3ab4c0821ded918983ebaa9}
+      \strng{authornamehash}{ba011f50a3ab4c0821ded918983ebaa9}
+      \strng{authorfullhash}{1a650331d5536d9c4d40da0c95cdc803}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Therapeutic modulation of angiogenesis is believed to be a prospective powerful treatment strategy to modulate the microcirculation and therefore help millions of patients with cardiovascular and cancer diseases. The often-frustrating results from late-stage clinical studies indicate an urgent need for improved assessment of the pro- and anti-angiogenic compounds in preclinical stage of investigation. For such a proper assessment, detailed vascular visualization and adequate quantification are essential. Nowadays, there are few imaging modalities available, but none of them provides non-destructive 3D-visualization of the vasculature down to the capillary level. In many instances, the approaches cannot be combined with the subsequent histological or ultrastructural analysis. In this review, we address the latest developments in the microvascular imaging, namely, the microangioCT approach with a polymer-based contrast agent ($\mu$Angiofil). This approach allows time-efficient non-destructive 3D-imaging of the organ and its vasculature including the finest capillaries. Besides the superior visualization, the obtained detailed 3D information on the organ vasculature enables its 3D-skeletonization and further quantitative analysis. Probably the only significant limitation of the described approach is that it can be used only ex vivo, i.e., no longitudinal studies. In spite of this drawback, microangioCT with $\mu$Angiofil is a relatively simple and straightforward tool with a broad application range for studying physiological and pathological alterations in the microvasculature of any organ. It provides microvascular imaging at unprecedented level and enables correlative microscopy.}
+      \field{issn}{15371891}
+      \field{journaltitle}{Vascular Pharmacology}
+      \field{month}{1}
+      \field{number}{June}
+      \field{title}{{Ex vivo microangioCT: Advances in microvascular imaging}}
+      \field{volume}{112}
+      \field{year}{2019}
+      \field{pages}{2\bibrangedash 7}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.vph.2018.09.003
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Hlushchuk, Haberth{\"{u}}r, Djonov/Hlushchuk, Haberth{\"{u}}r, Djonov - 2019 - Ex vivo microangioCT Advances in microvascular imaging.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.vph.2018.09.003 https://linkinghub.elsevier.com/retrieve/pii/S1537189118302301
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.vph.2018.09.003%20https://linkinghub.elsevier.com/retrieve/pii/S1537189118302301
+      \endverb
+    \endentry
+    \entry{Messerli2019}{article}{}
+      \name{author}{16}{}{%
+        {{hash=999bbf4601a73a482c2144ebb607f9a0}{%
+           family={Messerli},
+           familyi={M\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d9b8997f148f3eab30d6054b88843b19}{%
+           family={Aaldijk},
+           familyi={A\bibinitperiod},
+           given={Dea},
+           giveni={D\bibinitperiod}}}%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberth{ü}r},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f5a3439d22f64482841f2a12134a4ad8}{%
+           family={R{ö}ss},
+           familyi={R\bibinitperiod},
+           given={Helena},
+           giveni={H\bibinitperiod}}}%
+        {{hash=340429185d1fcbd01e77d34f81059a69}{%
+           family={Garcia},
+           familyi={G\bibinitperiod},
+           given={Carolina},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ebf0d1a2cb0367877025107c32d8ef8f}{%
+           family={Sande},
+           familyi={S\bibinitperiod},
+           given={Marcos},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bebf43f0239ede97718fcc66e3a01528}{%
+           family={Khoma},
+           familyi={K\bibinitperiod},
+           given={Oleksiy-Zakhar},
+           giveni={O\bibinithyphendelim Z\bibinitperiod}}}%
+        {{hash=81e6f68175133a5dcac0e91b298eea54}{%
+           family={Wieland},
+           familyi={W\bibinitperiod},
+           given={Fluri\bibnamedelima A.M.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=182568114f7e49c7b682be228c381a70}{%
+           family={Fark},
+           familyi={F\bibinitperiod},
+           given={Sarya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=28c44c7c3e11860ed7bc799a90c1e7c5}{%
+           family={Djonov},
+           familyi={D\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=06ef4f3c16c5a6594a77a10f4bf91e27}{%
+           family={Sande-Mel{ó}n},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={Marcos},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e022f8a1ba915a820d7c2fc18dd61c11}{%
+           family={Garc{í}a-Poyatos},
+           familyi={G\bibinithyphendelim P\bibinitperiod},
+           given={Carolina},
+           giveni={C\bibinitperiod}}}%
+        {{hash=bebf43f0239ede97718fcc66e3a01528}{%
+           family={Khoma},
+           familyi={K\bibinitperiod},
+           given={Oleksiy-Zakhar},
+           giveni={O\bibinithyphendelim Z\bibinitperiod}}}%
+        {{hash=81e6f68175133a5dcac0e91b298eea54}{%
+           family={Wieland},
+           familyi={W\bibinitperiod},
+           given={Fluri\bibnamedelima A.M.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=182568114f7e49c7b682be228c381a70}{%
+           family={Fark},
+           familyi={F\bibinitperiod},
+           given={Sarya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=28c44c7c3e11860ed7bc799a90c1e7c5}{%
+           family={Djonov},
+           familyi={D\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Laboratory}%
+      }
+      \strng{namehash}{b5d39536ff21f9f8a3df67677d00614d}
+      \strng{fullhash}{7cb2c323b357ddafe79214ea3de2ce29}
+      \strng{bibnamehash}{b5d39536ff21f9f8a3df67677d00614d}
+      \strng{authorbibnamehash}{b5d39536ff21f9f8a3df67677d00614d}
+      \strng{authornamehash}{b5d39536ff21f9f8a3df67677d00614d}
+      \strng{authorfullhash}{7cb2c323b357ddafe79214ea3de2ce29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{bioRxiv}
+      \field{title}{{Adaptation mechanism of the adult zebrafish respiratory organ to endurance training}}
+      \field{year}{2019}
+      \field{pages}{744300}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1101/744300
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Messerli et al/Messerli et al. - 2019 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.biorxiv.org/content/10.1101/744300v3
+      \endverb
+      \verb{url}
+      \verb https://www.biorxiv.org/content/10.1101/744300v3
+      \endverb
+    \endentry
+    \entry{xrayphysics}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a01d42e39c3e0003eeafdabee986f41f}{%
+           family={Hammer},
+           familyi={H\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a01d42e39c3e0003eeafdabee986f41f}
+      \strng{fullhash}{a01d42e39c3e0003eeafdabee986f41f}
+      \strng{bibnamehash}{a01d42e39c3e0003eeafdabee986f41f}
+      \strng{authorbibnamehash}{a01d42e39c3e0003eeafdabee986f41f}
+      \strng{authornamehash}{a01d42e39c3e0003eeafdabee986f41f}
+      \strng{authorfullhash}{a01d42e39c3e0003eeafdabee986f41f}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{X-Ray Physics: X-Ray Interaction with Matter, X-Ray Contrast, and Dose}}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://xrayphysics.com/attenuation.html
+      \endverb
+      \verb{url}
+      \verb http://xrayphysics.com/attenuation.html
+      \endverb
+    \endentry
+    \entry{wiki:beer-lambert}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e2ceeea38f8620383cfbd3e99c5c0cd8}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{bibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{[Online; accessed 6-December-2019]}
+      \field{title}{{Beer–Lambert law --- {\{}Wikipedia{\}}{\{},{\}} The Free Encyclopedia}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Beer–Lambert{\_}law{\&}oldid=925859144
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Beer%E2%80%93Lambert%7B%5C_%7Dlaw%7B%5C&%7Doldid=925859144
+      \endverb
+    \endentry
+    \entry{Cormack1963}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ed7cf735165a23ae53379b52a3248bf0}{%
+           family={Cormack},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Institute of Physics}%
+      }
+      \strng{namehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{fullhash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{bibnamehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{authorbibnamehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{authornamehash}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{authorfullhash}{ed7cf735165a23ae53379b52a3248bf0}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A method is given of finding a real function in a finite region of a plane given its line integrals along all straight lines intersecting the region. The solution found is applicable to three probl...}
+      \field{annotation}{From Duplicate 1 (Representation of a Function by Its Line Integrals, with Some Radiological Applications - Cormack, A. M.) http://is.gd/b0Bnr}
+      \field{issn}{00218979}
+      \field{journaltitle}{Journal of Applied Physics}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{{Representation of a Function by Its Line Integrals, with Some Radiological Applications}}
+      \field{volume}{34}
+      \field{year}{1963}
+      \field{pages}{2722}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/1.1729798
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Cormack/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.org/10.1063/1.1729798 http://aip.scitation.org/doi/10.1063/1.1729798
+      \endverb
+      \verb{url}
+      \verb http://doi.org/10.1063/1.1729798%20http://aip.scitation.org/doi/10.1063/1.1729798
+      \endverb
+    \endentry
+    \entry{Hsieh2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=04723f860550f84b6efa7cbd0264669a}{%
+           family={Hsieh},
+           familyi={H\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society of Photo Optical}%
+      }
+      \strng{namehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{fullhash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{bibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorbibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authornamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorfullhash}{04723f860550f84b6efa7cbd0264669a}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Computed tomography: principles, design, artifacts, and recent advances}}
+      \field{volume}{114}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://books.google.com/books?id=JX{\_}{\_}lLLXFHkC http://books.google.com/books?hl=en{\&}lr={\&}id=JX{\_}{\_}lLLXFHkC{\&}oi=fnd{\&}pg=PR9{\&}dq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances{\&}ots=RiM0{\_}rS-Rq{\&}sig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
+      \endverb
+      \verb{url}
+      \verb http://books.google.com/books?id=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%20http://books.google.com/books?hl=en%7B%5C&%7Dlr=%7B%5C&%7Did=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%7B%5C&%7Doi=fnd%7B%5C&%7Dpg=PR9%7B%5C&%7Ddq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances%7B%5C&%7Dots=RiM0%7B%5C_%7DrS-Rq%7B%5C&%7Dsig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
+      \endverb
+    \endentry
+    \entry{Clark2013}{article}{}
+      \name{author}{12}{}{%
+        {{hash=fbbb974571847006fdd8ef15bd129e7d}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+        {{hash=35eb06af1a233f93dd4f54bde7025041}{%
+           family={Vendt},
+           familyi={V\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a3120d45eb0db75e7e62f245ac9bf11f}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Kirk},
+           giveni={K\bibinitperiod}}}%
+        {{hash=768032703bf13ee65a42f635e6ed63eb}{%
+           family={Freymann},
+           familyi={F\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=93d1bacd02ff5b479a51ed532bec1dc8}{%
+           family={Kirby},
+           familyi={K\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=38f97a89b35932e1c44923c7c44d3fb1}{%
+           family={Koppel},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b498bac98a3cc23502501af828a26577}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a3dcd1cd778a2e3a2331246feb19299e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47c9cb9722ec3b1b7aca24972103ba81}{%
+           family={Maffitt},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8320aec28286702f6073b037b9e39fb9}{%
+           family={Pringle},
+           familyi={P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=95f19d89fe3faaf38b505568ee46d0a8}{%
+           family={Tarbox},
+           familyi={T\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c6702fd6761bc177cf5c4641f7a93fba}{%
+           family={Prior},
+           familyi={P\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{fullhash}{2dc5a31c0ea0e0786861de75f6908266}
+      \strng{bibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authorbibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authornamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authorfullhash}{2dc5a31c0ea0e0786861de75f6908266}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0897-1889}
+      \field{journaltitle}{Journal of Digital Imaging}
+      \field{month}{12}
+      \field{number}{6}
+      \field{title}{{The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository}}
+      \field{volume}{26}
+      \field{year}{2013}
+      \field{pages}{1045\bibrangedash 1057}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/s10278-013-9622-7
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Clark et al/Clark et al. - 2013 - The Cancer Imaging Archive (TCIA) Maintaining and Operating a Public Information Repository.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10278-013-9622-7
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10278-013-9622-7
+      \endverb
+    \endentry
+    \entry{Schindelin2012}{article}{}
+      \name{author}{16}{}{%
+        {{hash=ac82c7686cb5af1a978185f449f30702}{%
+           family={Schindelin},
+           familyi={S\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fb4a9b4f8cb47f8bee748d32779b7d01}{%
+           family={Arganda-Carreras},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Ignacio},
+           giveni={I\bibinitperiod}}}%
+        {{hash=0a776e2acaca3da7f09464eed966703a}{%
+           family={Frise},
+           familyi={F\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cf3458a8158dd8bcbccb1d9f3bae1444}{%
+           family={Kaynig},
+           familyi={K\bibinitperiod},
+           given={Verena},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f8d350e633e669ecce76f53a255ca7e6}{%
+           family={Longair},
+           familyi={L\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=74624b572b3fd665ada5f45e837b3fad}{%
+           family={Pietzsch},
+           familyi={P\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=52ebeccf5706d204d6ea2f00afdc0a82}{%
+           family={Preibisch},
+           familyi={P\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1278dc454496030a575c2364261b643e}{%
+           family={Rueden},
+           familyi={R\bibinitperiod},
+           given={Curtis},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e3100f88cc060bd3d2cc5fc5d24ea490}{%
+           family={Saalfeld},
+           familyi={S\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=21b481f5dff243098574c2319c707eef}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=51fcbf8611c8067bed3b33bf0f587c8e}{%
+           family={Tinevez},
+           familyi={T\bibinitperiod},
+           given={Jean-Yves},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=2cbf1102bb63abcf1e7de9007399d6cb}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Daniel\bibnamedelima James},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=6469e23f6e55008a8f1d6ad677777332}{%
+           family={Hartenstein},
+           familyi={H\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ab16022f9fa944777da25790f7620b79}{%
+           family={Eliceiri},
+           familyi={E\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6166a3f540ffe514a2b0a8932f8fca1c}{%
+           family={Tomancak},
+           familyi={T\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+        {{hash=704fa1d6130928d88680f2323fd9ff84}{%
+           family={Cardona},
+           familyi={C\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.}%
+      }
+      \strng{namehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{fullhash}{15eb877bfd5e9b93ab284d7309220074}
+      \strng{bibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
+      \field{issn}{1548-7091}
+      \field{journaltitle}{Nature Methods}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shorttitle}{Nat Meth}
+      \field{title}{{Fiji: an open-source platform for biological-image analysis}}
+      \field{volume}{9}
+      \field{year}{2012}
+      \field{pages}{676\bibrangedash 682}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nmeth.2019
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Schindelin et al/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/nmeth.2019 https://doi.org/10.1038{\%}2Fnmeth.2019 http://www.nature.com/articles/nmeth.2019
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/nmeth.2019%20https://doi.org/10.1038%7B%5C%%7D2Fnmeth.2019%20http://www.nature.com/articles/nmeth.2019
+      \endverb
+      \keyw{Algorithms,Animals,Brain,Brain: ultrastructure,Computational Biology,Computational Biology: methods,Computer-Assisted,Computer-Assisted: methods,Drosophila melanogaster,Drosophila melanogaster: ultrastructure,Image Enhancement,Image Enhancement: methods,Image Processing,Imaging,Information Dissemination,Software,Software Design,Three-Dimensional,Three-Dimensional: methods}
+    \endentry
+    \entry{Kluyver2016}{article}{}
+      \name{author}{15}{}{%
+        {{hash=051c3ba73820f7358c2a2ee93c73cf33}{%
+           family={{Kluyver Thomas Ragan-Kelley}},
+           familyi={K\bibinitperiod},
+           given={Benjamin\bibnamedelimb P{é}rez\bibnamedelimb Fernando\bibnamedelimb Granger\bibnamedelimb Brian\bibnamedelimb Bussonnier\bibnamedelimb Matthias\bibnamedelimb Frederic\bibnamedelimb Jonathan\bibnamedelimb Kelley\bibnamedelimb Kyle\bibnamedelimb Hamrick\bibnamedelimb Jessica\bibnamedelimb Grout\bibnamedelimb Jason\bibnamedelimb Corlay\bibnamedelimb Sylvain\bibnamedelimb Ivanov\bibnamedelimb Paul\bibnamedelimb Avila\bibnamedelimb Dami{á}n\bibnamedelimb Abdalla\bibnamedelimb Safia\bibnamedelimb Willing\bibnamedelima Carol},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=282b5d6fe909cc357c8dd473058b8fdc}{%
+           family={Kluyver},
+           familyi={K\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=bf54c6dcf9d9a7e4407531fa9b9d3109}{%
+           family={Ragan-Kelley},
+           familyi={R\bibinithyphendelim K\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5de35d0202422daf0351f0bb10387179}{%
+           family={P{é}rez},
+           familyi={P\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+        {{hash=da7210cb80d97a3a426f16a9d4f40d24}{%
+           family={Granger},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7f34166865a83ff30f9d4413ef06b9c4}{%
+           family={Bussonnier},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0f7d9893defe60d76157e1cadb5400c0}{%
+           family={Frederic},
+           familyi={F\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=deedcc61b45535cf6338ad78ce8f8232}{%
+           family={Kelley},
+           familyi={K\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+        {{hash=05461f0d944dc591c3ec713dc214129b}{%
+           family={Hamrick},
+           familyi={H\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fd289a69d047befbdbf4cdb8c13e5114}{%
+           family={Grout},
+           familyi={G\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=983b7e23a76250681fa9f1b243743ee6}{%
+           family={Corlay},
+           familyi={C\bibinitperiod},
+           given={Sylvain},
+           giveni={S\bibinitperiod}}}%
+        {{hash=df5e4f7bc60c539377e4eb9dcfb21183}{%
+           family={Ivanov},
+           familyi={I\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2657875abf2d343b08f60de47a3fd224}{%
+           family={Avila},
+           familyi={A\bibinitperiod},
+           given={Dami{á}n},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e9ee2512e4cee488a23dc45742e57bca}{%
+           family={Abdalla},
+           familyi={A\bibinitperiod},
+           given={Safia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e154bce99b3c9f96d7d2a6f1b1965fb6}{%
+           family={Willing},
+           familyi={W\bibinitperiod},
+           given={Carol},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8211da8d9384cdd4a84a4ceffb40586}
+      \strng{fullhash}{aaf465203514c0c000abc1e4d625efb0}
+      \strng{bibnamehash}{a8211da8d9384cdd4a84a4ceffb40586}
+      \strng{authorbibnamehash}{a8211da8d9384cdd4a84a4ceffb40586}
+      \strng{authornamehash}{a8211da8d9384cdd4a84a4ceffb40586}
+      \strng{authorfullhash}{aaf465203514c0c000abc1e4d625efb0}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is increasingly necessary for researchers in all fields to write computer code, and in order to reproduce research results, it is important that this code is published. We present Jupyter notebooks, a document format for publishing code, results and explanations in a form that is both readable and executable. We discuss various tools and use cases for notebook documents.}
+      \field{isbn}{9781614996491}
+      \field{issn}{0031899X}
+      \field{journaltitle}{Physical Review}
+      \field{number}{4}
+      \field{title}{{Jupyter Notebooks—a publishing format for reproducible computational workflows}}
+      \field{volume}{16}
+      \field{year}{2016}
+      \field{pages}{87\bibrangedash 90}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.3233/978-1-61499-649-1-87
+      \endverb
+      \verb{file}
+      \verb :home/habi/P/Mendeley/Kluyver Thomas Ragan-Kelley et al/Kluyver Thomas Ragan-Kelley et al. - 2016 - Jupyter Notebooks—a publishing format for reproducible computational workflows.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ebooks.iospress.nl/publication/42900
+      \endverb
+      \verb{url}
+      \verb http://ebooks.iospress.nl/publication/42900
+      \endverb
+      \keyw{A. Ferroelectrics,BATIO3,D. Phase transitions,E. Inelastic light scattering,EXAFS,FERROELECTRICITY,HIGH TEMPERATURE,Lead-free,PEROVSKITE,RAY DIFFRACTION,X,ceramics,crystal-structure,dielectricity,electrical-properties,ferroelectrics,knbo3,morphotropic phase boundary,nanbo3,neutron powder diffraction,notebook,perovskite,phase transitions,phase-transitions,piezoelectric,refinement,reproducibility,research code,room-temperature,strain performance}
+    \endentry
+    \entry{Taylor2017}{book}{}
+      \name{author}{5}{}{%
+        {{hash=98c07851aa05ef190276e04e3e860638}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Martha\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=e1bb7ff0e6aa2df2bb815577971948d1}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelimb J.\bibnamedelimi (Eric\bibnamedelima Jeffrey)},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1701de466d890e474446d39f1e873ebd}{%
+           family={Dickey},
+           familyi={D\bibinitperiod},
+           given={Jean},
+           giveni={J\bibinitperiod}}}%
+        {{hash=50b8e832feed92b79c8b2fbc04b1f429}{%
+           family={Hogan},
+           familyi={H\bibinitperiod},
+           given={Kelly\bibnamedelimb A.\bibnamedelimi (Senior\bibnamedelima STEM},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={lecturer\bibnamedelimb in\bibnamedelima biology)},
+           prefixi={l\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim b\bibinitperiod}}}%
+        {{hash=5fce46115b4a1c258d0017f44feb2394}{%
+           family={Reece},
+           familyi={R\bibinitperiod},
+           given={Jane\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{715792dcd408b2767f5c41dbf5ff4da3}
+      \strng{fullhash}{4dbf6c8dc2d8af165790c60630aa753a}
+      \strng{bibnamehash}{715792dcd408b2767f5c41dbf5ff4da3}
+      \strng{authorbibnamehash}{715792dcd408b2767f5c41dbf5ff4da3}
+      \strng{authornamehash}{715792dcd408b2767f5c41dbf5ff4da3}
+      \strng{authorfullhash}{4dbf6c8dc2d8af165790c60630aa753a}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ninth edition. Includes index. 1. Biology : exploring life -- Unit I. The life of the cell. 2. The chemical basis of life ; 3. The molecules of cells ; 4. A tour of the cell ; 5. The working cell ; 6. How cells harvest chemical energy ; 7. Photosynthesis : using light to make food -- Unit II. Cellular reproduction and genetics. 8. The cellular basis of reproduction and inheritance ; 9. Patterns of inheritance ; 10. Molecular biology of the gene ; 11. How genes are controlled ; 12. DNA technology and genomics -- Unit III. Concepts of evolution. 13. How populations evolve ; 14. The origin of species ; 15. Tracing evolutionary history -- Unit IV. The evolution of biological diversity. 16. Microbial life : prokaryotes and protists ; 17. The evolution of plant and fungal diversity ; 18. The evolution of invertebrate diversity ; 19. The evolution of vertebrate diversity -- Unit V. Animals : form and function. 20. Unifying concepts of animal structure and function ; 21. Nutrition and digestion ; 22. Gas exchange ; 23. Circulation ; 24. The immune system ; 25. Control of body temperature and water balance ; 26. Hormones and the endocrine system ; 27. Reproduction and embryonic development ; 28. Nervous systems ; 29. The senses ; 30. How animals move -- Unit VI. Plants : form and function. 31. Plant structure, growth, and reproduction ; 32. Plant nutrition and transport ; 33. Control systems in plants -- Unit VII. Ecology. 34. The biosphere : an introduction to earth's diverse environments ; 35. Behavioral adaptations to the environment ; 36. Population ecology ; 37. Communities and ecosystems ; 38. Conservation biology -- Appendix 1. Metric conversion table -- Appendix 2. The periodic table -- Appendix 3. The amino acids of proteins -- Appendix 4. Chapter review answers -- Appendix 5. Credits -- Glossary.}
+      \field{isbn}{9780134296012}
+      \field{title}{{Campbell Biology: Concepts and Connections (9th Edition)}}
+      \field{pages}{783}
+      \range{pages}{1}
+    \endentry
+    \entry{Palstra2010}{article}{}
+      \name{author}{8}{}{%
+        {{hash=118d4673b68bb60b53cfbf58b4f5aa18}{%
+           family={Palstra},
+           familyi={P\bibinitperiod},
+           given={Arjan\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=1eebcc90c006e8349b963c8f619648a3}{%
+           family={Tudorache},
+           familyi={T\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=def6031fddcd1ce30c577796e274c5fa}{%
+           family={Rovira},
+           familyi={R\bibinitperiod},
+           given={Mireia},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fd6ee998cc7001cc5a516790665e3c88}{%
+           family={Brittijn},
+           familyi={B\bibinitperiod},
+           given={Sebastiaan\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a08cc4331f488b46a756c972a464b04c}{%
+           family={Burgerhout},
+           familyi={B\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=278eb22749c4287f25e814af9a8fb7a3}{%
+           family={Thillart},
+           familyi={T\bibinitperiod},
+           given={Guido\bibnamedelimb E.\bibnamedelimi E.\bibnamedelimi J.\bibnamedelimi M.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={van\bibnamedelima den},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=3c7c375e6825c881a7c637d96d1ef34a}{%
+           family={Spaink},
+           familyi={S\bibinitperiod},
+           given={Herman\bibnamedelima P.},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=e9a551e92891d5af1c8d634d4e15f0ee}{%
+           family={Planas},
+           familyi={P\bibinitperiod},
+           given={Josep\bibnamedelima V.},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=0e4eb6f61a175727fa22d624e8b1c220}{%
+           family={Calbet},
+           familyi={C\bibinitperiod},
+           given={Jose\bibnamedelimb A.\bibnamedelimi L.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{f7908fc57d13add2c15048735a9d6386}
+      \strng{fullhash}{933993a2ed5f201714edcf65d97ca40e}
+      \strng{bibnamehash}{f7908fc57d13add2c15048735a9d6386}
+      \strng{authorbibnamehash}{f7908fc57d13add2c15048735a9d6386}
+      \strng{authornamehash}{f7908fc57d13add2c15048735a9d6386}
+      \strng{authorfullhash}{933993a2ed5f201714edcf65d97ca40e}
+      \strng{editorbibnamehash}{0e4eb6f61a175727fa22d624e8b1c220}
+      \strng{editornamehash}{0e4eb6f61a175727fa22d624e8b1c220}
+      \strng{editorfullhash}{0e4eb6f61a175727fa22d624e8b1c220}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{PLoS ONE}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{{Establishing Zebrafish as a Novel Exercise Model: Swimming Economy, Swimming-Enhanced Growth and Muscle Growth Marker Gene Expression}}
+      \field{volume}{5}
+      \field{year}{2010}
+      \field{pages}{e14483}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0014483
+      \endverb
+      \verb{file}
+      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Palstra et al. - 2010 - Establishing Zebrafish as a Novel Exercise Model Swimming Economy, Swimming-Enhanced Growth and Muscle Growth Ma.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.plos.org/10.1371/journal.pone.0014483 https://doi.org/10.1371{\%}2Fjournal.pone.0014483
+      \endverb
+      \verb{url}
+      \verb http://dx.plos.org/10.1371/journal.pone.0014483%20https://doi.org/10.1371%7B%5C%%7D2Fjournal.pone.0014483
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

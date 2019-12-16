@@ -1,0 +1,12 @@
+- Mouse1265_Skull_Gaby_TKI_7_96um_Al05_2K
+	- `Scanner=Skyscan1172`
+	- `Image Pixel Size (um)=    7.96`
+	- Resliced to show sagittal view with Fiji
+	- MIP from about 500 um (63 slices): 1492 slices -> 746-32:746+31 -> 714:777
+
+- Mouse5158
+	- `Scanner=SkyScan1272`
+	- `Scaled Image Pixel Size (um)=10.500003`
+	- Rotated a bit, so head is aligned vertically
+	- Resliced to show sagittal view with Fiji
+	- MIP from about 500 um (48 slices): 1706 slices -> 853-24:853+24 -> 829:877
