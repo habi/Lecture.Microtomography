@@ -54,7 +54,7 @@
 \usepackage{colortbl}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{1} % use only every nth frame for the animations
+\newcommand{\everyframe}{100} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -467,13 +467,13 @@ At beam energies above this, the Compton effect predominates.}
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
-			\only<5|handout:5>{%
+			\only<5|handout:0>{%
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
-				\def\mag{4}% magnification of inset
-				\def\size{75}% size of inset
+				\def\mag{5}% magnification of inset
+				\def\size{100}% size of inset
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
 					\spy [red] on (102,342) in node at (256,201) [anchor=center];
@@ -503,8 +503,6 @@ At beam energies above this, the Compton effect predominates.}
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
-				\def\mag{4}% magnification of inset
-				\def\size{75}% size of inset
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
 					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
@@ -520,8 +518,6 @@ At beam energies above this, the Compton effect predominates.}
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
-				\def\mag{4}% magnification of inset
-				\def\size{75}% size of inset
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
 					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
@@ -535,21 +531,19 @@ At beam energies above this, the Compton effect predominates.}
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-				\def\mag{4}% magnification of inset
-				\def\size{75}% size of inset
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 			}%
-			\only<5|handout:5>{%
+			\only<5|handout:0>{%
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-				\def\mag{4}% magnification of inset
-				\def\size{75}% size of inset
+				\def\mag{5}% magnification of inset
+				\def\size{100}% size of inset
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
 					\spy [red] on (352,1116) in node at (1648,746) [anchor=center];
@@ -935,15 +929,26 @@ Independent on the machine, technically they are all a simple combination of
 % MIP
 % SURFACE RENDERING
 
+\begin{frame}{Thanks!}
+	\begin{itemize}
+		\item Thanks for listening to me!
+		\item<2> \href{https://twitter.com/jackiantonovich/status/1195699076056178691}{What questions do you have for me?}
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
 	\begin{itemize}
 		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
-			\item \href{https://github.com/habi/lecture.microtomography/}{Full source code}: git.io/fjpP7
-			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action}\footnote{Details on how this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository here}: git.io/JeOOj} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.pdf}{PDF} which you can access here: git.io/JeMjP
-			\item Spotted an error?\\%
-				Then please file an \href{https://github.com/habi/lecture.microtomography/issues}{issue} (git.io/fjpPb) or (even better) submit a \href{https://github.com/habi/lecture.microtomography/pulls}{pull request} (git.io/fjpPN).
-		\end{itemize}
+			\item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
+			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action}\footnote{Details on how this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository here: git.io/JeOOj}} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
+		\end{itemize}			
+		\item Spotted an error?
+		\begin{itemize}
+			\item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
+			\item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
+			\item \href{mailto:haberthuer@ana.unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: haberthuer@ana.unibe.ch}
+		\end{itemize}			
 	\end{itemize}
 \end{frame}
 
