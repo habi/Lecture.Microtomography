@@ -64,7 +64,7 @@
       \verb 10.1016/j.vph.2018.09.003
       \endverb
       \verb{file}
-      \verb :home/habi/P/Mendeley/Hlushchuk, Haberth{\"{u}}r, Djonov/Hlushchuk, Haberth{\"{u}}r, Djonov - 2019 - Ex vivo microangioCT Advances in microvascular imaging.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Hlushchuk, Haberth{\"{u}}r, Djonov/2019/Hlushchuk, Haberth{\"{u}}r, Djonov - 2019 - Ex vivo microangioCT Advances in microvascular imaging.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1016/j.vph.2018.09.003 https://linkinghub.elsevier.com/retrieve/pii/S1537189118302301
@@ -178,7 +178,7 @@
       \verb 10.1101/744300
       \endverb
       \verb{file}
-      \verb :home/habi/P/Mendeley/Messerli et al/Messerli et al. - 2019 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Messerli et al/2019/Messerli et al. - 2019 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb https://www.biorxiv.org/content/10.1101/744300v3
@@ -236,7 +236,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{[Online; accessed 6-December-2019]}
-      \field{title}{{Beer–Lambert law --- {\{}Wikipedia{\}}{\{},{\}} The Free Encyclopedia}}
+      \field{title}{{Beer–Lambert law --- Wikipedia, The Free Encyclopedia}}
       \field{year}{2019}
       \verb{urlraw}
       \verb https://en.wikipedia.org/w/index.php?title=Beer–Lambert{\_}law{\&}oldid=925859144
@@ -281,7 +281,7 @@
       \verb 10.1063/1.1729798
       \endverb
       \verb{file}
-      \verb :home/habi/P/Mendeley/Cormack/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Cormack/1963/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://doi.org/10.1063/1.1729798 http://aip.scitation.org/doi/10.1063/1.1729798
@@ -410,7 +410,7 @@
       \verb 10.1007/s10278-013-9622-7
       \endverb
       \verb{file}
-      \verb :home/habi/P/Mendeley/Clark et al/Clark et al. - 2013 - The Cancer Imaging Archive (TCIA) Maintaining and Operating a Public Information Repository.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Clark et al/2013/Clark et al. - 2013 - The Cancer Imaging Archive (TCIA) Maintaining and Operating a Public Information Repository.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://link.springer.com/10.1007/s10278-013-9622-7
@@ -530,7 +530,7 @@
       \verb 10.1038/nmeth.2019
       \endverb
       \verb{file}
-      \verb :home/habi/P/Mendeley/Schindelin et al/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Schindelin et al/2012/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://dx.doi.org/10.1038/nmeth.2019 https://doi.org/10.1038{\%}2Fnmeth.2019 http://www.nature.com/articles/nmeth.2019
@@ -542,11 +542,6 @@
     \endentry
     \entry{Kluyver2016}{article}{}
       \name{author}{15}{}{%
-        {{hash=051c3ba73820f7358c2a2ee93c73cf33}{%
-           family={{Kluyver Thomas Ragan-Kelley}},
-           familyi={K\bibinitperiod},
-           given={Benjamin\bibnamedelimb P{é}rez\bibnamedelimb Fernando\bibnamedelimb Granger\bibnamedelimb Brian\bibnamedelimb Bussonnier\bibnamedelimb Matthias\bibnamedelimb Frederic\bibnamedelimb Jonathan\bibnamedelimb Kelley\bibnamedelimb Kyle\bibnamedelimb Hamrick\bibnamedelimb Jessica\bibnamedelimb Grout\bibnamedelimb Jason\bibnamedelimb Corlay\bibnamedelimb Sylvain\bibnamedelimb Ivanov\bibnamedelimb Paul\bibnamedelimb Avila\bibnamedelimb Dami{á}n\bibnamedelimb Abdalla\bibnamedelimb Safia\bibnamedelimb Willing\bibnamedelima Carol},
-           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
         {{hash=282b5d6fe909cc357c8dd473058b8fdc}{%
            family={Kluyver},
            familyi={K\bibinitperiod},
@@ -617,13 +612,18 @@
            familyi={W\bibinitperiod},
            given={Carol},
            giveni={C\bibinitperiod}}}%
+        {{hash=0ff370d541c7e1b1b5f2f3fec7c1fe30}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Jupyter\bibnamedelima Development},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{a8211da8d9384cdd4a84a4ceffb40586}
-      \strng{fullhash}{aaf465203514c0c000abc1e4d625efb0}
-      \strng{bibnamehash}{a8211da8d9384cdd4a84a4ceffb40586}
-      \strng{authorbibnamehash}{a8211da8d9384cdd4a84a4ceffb40586}
-      \strng{authornamehash}{a8211da8d9384cdd4a84a4ceffb40586}
-      \strng{authorfullhash}{aaf465203514c0c000abc1e4d625efb0}
+      \strng{namehash}{48035973e2ebb91d3445f30ca56d312f}
+      \strng{fullhash}{7a4dda73a40af76722b5462a850eacf7}
+      \strng{bibnamehash}{48035973e2ebb91d3445f30ca56d312f}
+      \strng{authorbibnamehash}{48035973e2ebb91d3445f30ca56d312f}
+      \strng{authornamehash}{48035973e2ebb91d3445f30ca56d312f}
+      \strng{authorfullhash}{7a4dda73a40af76722b5462a850eacf7}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
@@ -642,7 +642,7 @@
       \verb 10.3233/978-1-61499-649-1-87
       \endverb
       \verb{file}
-      \verb :home/habi/P/Mendeley/Kluyver Thomas Ragan-Kelley et al/Kluyver Thomas Ragan-Kelley et al. - 2016 - Jupyter Notebooks—a publishing format for reproducible computational workflows.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Kluyver et al/2016/Kluyver et al. - 2016 - Jupyter Notebooks—a publishing format for reproducible computational workflows.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://ebooks.iospress.nl/publication/42900
@@ -779,7 +779,7 @@
       \verb 10.1371/journal.pone.0014483
       \endverb
       \verb{file}
-      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Palstra et al. - 2010 - Establishing Zebrafish as a Novel Exercise Model Swimming Economy, Swimming-Enhanced Growth and Muscle Growth Ma.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Palstra et al/2010/Palstra et al. - 2010 - Establishing Zebrafish as a Novel Exercise Model Swimming Economy, Swimming-Enhanced Growth and Muscle Growth Ma.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://dx.plos.org/10.1371/journal.pone.0014483 https://doi.org/10.1371{\%}2Fjournal.pone.0014483

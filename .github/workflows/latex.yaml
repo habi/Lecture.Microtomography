@@ -12,7 +12,7 @@ jobs:
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@master
       with:
-        args: -pdf -interaction=nonstopmode -shell-escape
+        args: -pdf -bibtex- -file-line-error -interaction=nonstopmode
         root_file: XRayMicroTomography.Handout.tex
     - name: Check pdf file
       run: |
