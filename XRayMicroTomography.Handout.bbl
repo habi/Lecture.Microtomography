@@ -232,6 +232,32 @@
       \verb http://doi.org/10.1063/1.1729798%20http://aip.scitation.org/doi/10.1063/1.1729798
       \endverb
     \endentry
+    \entry{Hounsfield1976a}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5b87eb90495f912086684cbb9a03b999}{%
+           family={Hounsfield},
+           familyi={H\bibinitperiod},
+           given={Godfrey\bibnamedelima Newbold},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b87eb90495f912086684cbb9a03b999}
+      \strng{fullhash}{5b87eb90495f912086684cbb9a03b999}
+      \strng{bibnamehash}{5b87eb90495f912086684cbb9a03b999}
+      \strng{authorbibnamehash}{5b87eb90495f912086684cbb9a03b999}
+      \strng{authornamehash}{5b87eb90495f912086684cbb9a03b999}
+      \strng{authorfullhash}{5b87eb90495f912086684cbb9a03b999}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Canadian Association of Radiologists}
+      \field{number}{3}
+      \field{title}{{Historical notes on computerized axial tomography.}}
+      \field{volume}{27}
+      \field{year}{1976}
+      \field{pages}{135}
+      \range{pages}{1}
+    \endentry
     \entry{Hsieh2003}{book}{}
       \name{author}{1}{}{%
         {{hash=04723f860550f84b6efa7cbd0264669a}{%
@@ -249,8 +275,8 @@
       \strng{authorbibnamehash}{04723f860550f84b6efa7cbd0264669a}
       \strng{authornamehash}{04723f860550f84b6efa7cbd0264669a}
       \strng{authorfullhash}{04723f860550f84b6efa7cbd0264669a}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Computed tomography: principles, design, artifacts, and recent advances}}
@@ -277,8 +303,8 @@
       \strng{authorbibnamehash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authornamehash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authorfullhash}{a01d42e39c3e0003eeafdabee986f41f}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{X-Ray Physics: X-Ray Interaction with Matter, X-Ray Contrast, and Dose}}
@@ -307,8 +333,8 @@
       \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
       \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
       \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{[Online; accessed 6-December-2019]}
@@ -393,8 +419,8 @@
       \strng{authorbibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
       \strng{authornamehash}{2ed2e64f00c4ed1070c31996864f39da}
       \strng{authorfullhash}{2dc5a31c0ea0e0786861de75f6908266}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0897-1889}
@@ -511,8 +537,8 @@
       \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
@@ -624,8 +650,8 @@
       \strng{authorbibnamehash}{a8211da8d9384cdd4a84a4ceffb40586}
       \strng{authornamehash}{a8211da8d9384cdd4a84a4ceffb40586}
       \strng{authorfullhash}{aaf465203514c0c000abc1e4d625efb0}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{It is increasingly necessary for researchers in all fields to write computer code, and in order to reproduce research results, it is important that this code is published. We present Jupyter notebooks, a document format for publishing code, results and explanations in a form that is both readable and executable. We discuss various tools and use cases for notebook documents.}
@@ -688,8 +714,8 @@
       \strng{authorbibnamehash}{715792dcd408b2767f5c41dbf5ff4da3}
       \strng{authornamehash}{715792dcd408b2767f5c41dbf5ff4da3}
       \strng{authorfullhash}{4dbf6c8dc2d8af165790c60630aa753a}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Ninth edition. Includes index. 1. Biology : exploring life -- Unit I. The life of the cell. 2. The chemical basis of life ; 3. The molecules of cells ; 4. A tour of the cell ; 5. The working cell ; 6. How cells harvest chemical energy ; 7. Photosynthesis : using light to make food -- Unit II. Cellular reproduction and genetics. 8. The cellular basis of reproduction and inheritance ; 9. Patterns of inheritance ; 10. Molecular biology of the gene ; 11. How genes are controlled ; 12. DNA technology and genomics -- Unit III. Concepts of evolution. 13. How populations evolve ; 14. The origin of species ; 15. Tracing evolutionary history -- Unit IV. The evolution of biological diversity. 16. Microbial life : prokaryotes and protists ; 17. The evolution of plant and fungal diversity ; 18. The evolution of invertebrate diversity ; 19. The evolution of vertebrate diversity -- Unit V. Animals : form and function. 20. Unifying concepts of animal structure and function ; 21. Nutrition and digestion ; 22. Gas exchange ; 23. Circulation ; 24. The immune system ; 25. Control of body temperature and water balance ; 26. Hormones and the endocrine system ; 27. Reproduction and embryonic development ; 28. Nervous systems ; 29. The senses ; 30. How animals move -- Unit VI. Plants : form and function. 31. Plant structure, growth, and reproduction ; 32. Plant nutrition and transport ; 33. Control systems in plants -- Unit VII. Ecology. 34. The biosphere : an introduction to earth's diverse environments ; 35. Behavioral adaptations to the environment ; 36. Population ecology ; 37. Communities and ecosystems ; 38. Conservation biology -- Appendix 1. Metric conversion table -- Appendix 2. The periodic table -- Appendix 3. The amino acids of proteins -- Appendix 4. Chapter review answers -- Appendix 5. Credits -- Glossary.}
@@ -762,8 +788,8 @@
       \strng{editorbibnamehash}{0e4eb6f61a175727fa22d624e8b1c220}
       \strng{editornamehash}{0e4eb6f61a175727fa22d624e8b1c220}
       \strng{editorfullhash}{0e4eb6f61a175727fa22d624e8b1c220}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1932-6203}

@@ -40,7 +40,6 @@
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
-\usepackage{isotope}
 \usepackage{animate}
 \usepackage{fontawesome5}
 \usepackage{csquotes}
@@ -340,13 +339,13 @@
 \section{Tomography}
 \subsection{History}
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}[label=current]{History}
+\begin{frame}{History}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
 				\item<1-|handout:1-> Long history 
 				\begin{itemize}
-					\item<1-|handout:1-> \citeyear{Cormack1963}: \citeauthor{Cormack1963} used a collimated \isotope[60]{Co} source and a Geiger counter as a detector~\cite{Cormack1963}
+					\item<1-|handout:1-> \citeyear{Cormack1963}: \citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}
 					\item<1-|handout:1-> \citeyear{Hounsfield1976a}: \citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}
 					\item<1-|handout:1-> Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}
 				\end{itemize}				
@@ -435,44 +434,6 @@
 	\end{table}
 \end{frame}
 \note{Bone, lean tissue, fat and air can be distinguished quite easily}
-
-\begin{frame}{Machinery}
-	\begin{columns}
-		\begin{column}{0.4\linewidth}
-			\begin{itemize}
-				\item<1-> Hospital CT
-				\begin{itemize}
-					\item Voxel size around \SI{0.5}{\milli\meter}
-				\end{itemize}
-				\item<2-> Lab/Desktop CT
-				\begin{itemize}
-					\item Voxel size around \SI{7}{\micro\meter} (\emph{in vivo}) or \SI{0.5}{\micro\meter} (\emph{ex vivo})
-				\end{itemize}
-				\item<4-> Synchrotron CT
-				\begin{itemize}
-					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\SI{160}{\nano\meter}}
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.6\linewidth}
-			\centering
-			\includegraphics<1|handout:1>[height=\imheight]{./images/24324062640_751e011e1a_o}%
-			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}
-			\includegraphics<2|handout:2>[width=\imheight]{./images/9459311320_516179207a_o}%
-			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}
-			\includegraphics<3|handout:3>[width=\imwidth]{./images/1272}%
-			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}
-			\includegraphics<4|handout:4>[width=\imwidth]{./images/4563733710_f632792416_b}%
-			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}
-		\end{column}
-	\end{columns}
-\end{frame}
-\note{FAN BEAM -> BRUKER\newline
-	PARALLEL BEAM -> TOMCAT\newline
-	HELICAL/SPIRAL CT\newline
-	MULTISLICE CT -> HOSPITAL\newline
-	SCREENING/IN VIVO/DENSITOMETRY/ETC.\newline
-}
 
 \renewcommand{\imwidth}{\columnwidth}
 \begin{frame}{Why \uct?}
@@ -580,6 +541,44 @@
 \end{frame}
 
 \begin{frame}{Machinery}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item<1-> Hospital CT
+				\begin{itemize}
+					\item Voxel size around \SI{0.5}{\milli\meter}
+				\end{itemize}
+				\item<2-> Lab/Desktop CT
+				\begin{itemize}
+					\item Voxel size around \SI{7}{\micro\meter} (\emph{in vivo}) or \SI{0.5}{\micro\meter} (\emph{ex vivo})
+				\end{itemize}
+				\item<4-> Synchrotron CT
+				\begin{itemize}
+					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\SI{160}{\nano\meter}}
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.6\linewidth}
+			\centering
+			\includegraphics<1|handout:1>[height=\imheight]{./images/24324062640_751e011e1a_o}%
+			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}
+			\includegraphics<2|handout:2>[width=\imheight]{./images/9459311320_516179207a_o}%
+			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}
+			\includegraphics<3|handout:3>[width=\imwidth]{./images/1272}%
+			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}
+			\includegraphics<4|handout:4>[width=\imwidth]{./images/4563733710_f632792416_b}%
+			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}
+		\end{column}
+	\end{columns}
+\end{frame}
+\note{FAN BEAM -> BRUKER\newline
+	PARALLEL BEAM -> TOMCAT\newline
+	HELICAL/SPIRAL CT\newline
+	MULTISLICE CT -> HOSPITAL\newline
+	SCREENING/IN VIVO/DENSITOMETRY/ETC.\newline
+}
+
+\begin{frame}{Machinery}
 	No matter what kind of machine, the basic principle is always the same
 	\begin{itemize}
 		\item an x-ray source
@@ -654,7 +653,7 @@
 		\animategraphics[autoplay,loop,width=0.618\linewidth,every=\everyframe]{25}{./movies/shell/Muschel_klein}{0000}{431}
 	}
 	\only<6|handout:4>{%
-		\pgfmathsetlength{\imagewidth}{0.45\linewidth}%
+		\pgfmathsetlength{\imagewidth}{0.42\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
 		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
 		\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
@@ -668,7 +667,7 @@
 	\only<7|handout:5>{%
 		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
-		\def\x{438+200}% scalebar-x starting at golden ratio of image width of 708px = 438
+		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
 		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
@@ -749,13 +748,13 @@
 \begin{frame}{What to use?}
 	\begin{itemize}
 		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
-		\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
 		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1561468.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
 		\item Reproducible research
 		\begin{itemize}
+			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
 			\item \href{https://git-scm.com/}{\faGit}
 			\item Script all your things!
-			\item Data repositories
+			\item Data repositories; sharing is caring!
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -805,12 +804,12 @@
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
 				\item<1-> Training for \SI{5}{w}, \SI{5}{\day\per w}, \SI{6}{\hour\per\day}, at \SI{66}{\percent} of critical speed~\cite{Palstra2010}
-				\note{Comparable with the weekly training routine of Michael Phelps.
-					The fish trained only for ca. \SI{7}{\percent} of their lifetime and started as adults.
-					The Olympic winner trained for half of his lifetime and started as child.
-				}
 				\begin{itemize}
 					\item<1-> Endurance
+					\note[item]<1>{Comparable with the weekly training routine of Michael Phelps.
+						The fish trained only for ca. \SI{7}{\percent} of their lifetime and started as adults.
+						The Olympic winner trained for half of his lifetime and started as child.
+					}%
 				\end{itemize}
 				\item<3-|handout:2-> Morphology \& Physiology
 				\begin{itemize}
@@ -891,7 +890,7 @@
 					\source{gph.is/2nqkple}{}%
 					}%
 				}
-			\note{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
+			\note[item]<8>{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
 				This means we analyzed 129.40 GigaPixels.
 				This means we analyzed \num{129395.29} MegaPixels.
 				In total \num{46014} slices.
@@ -1009,7 +1008,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[label=current]{References}
+\begin{frame}{References}
 	% Make the references continuously smaller :)
 	%\renewcommand*{\bibfont}{\small}
 	%\renewcommand*{\bibfont}{\footnotesize}
