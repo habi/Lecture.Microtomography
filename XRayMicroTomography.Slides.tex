@@ -54,7 +54,7 @@
 \usepackage{lipsum} %for alignment testing
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{111} % use only every nth frame for the animations
+\newcommand{\everyframe}{1} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -643,14 +643,14 @@
 		\def\x{426}% scalebar-x starting at golden ratio of image width of 690px = 426
 		\def\y{421}% scalebar-y at 90% of image height of 468px = 421
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/shell/Muschel_klein0216}};
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/shell/Muschel_klein0150}};
 			% 690.000px = 7.452000000000001mm -> 100px = 1080.000um -> 46.296px = 500um, 9.259px = 100um
 			%\draw[|-|,blue,thick] (0,234) -- (690,234) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{7.452000000000001}{\milli\meter} (690px) TEMPORARY!};
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+92.59,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
 		\end{tikzpicture}%
 	}
 	\only<5|handout:0>{%
-		\animategraphics[autoplay,loop,width=0.618\linewidth,every=\everyframe]{25}{./movies/shell/Muschel_klein}{0000}{431}
+		\animategraphics[autoplay,loop,width=0.618\linewidth,every=\everyframe]{25}{./movies/shell/Muschel_klein}{0150}{431}
 	}
 	\only<6|handout:4>{%
 		\pgfmathsetlength{\imagewidth}{0.42\linewidth}%
