@@ -5,7 +5,7 @@
 \author{David Haberthür}
 \date{December 20, 2019 | \href{https://ilias.unibe.ch/ilias.php?ref_id=1555744&cmd=infoScreen&cmdClass=ilrepositorygui&cmdNode=y2&baseClass=ilrepositorygui}{9256-HS2019-0: Advanced Microscopy}}
 
-\includeonlyframes{current}
+%\includeonlyframes{current}
 %then....
 %\begin{frame}[label=current]
 %\end{frame}
@@ -37,7 +37,7 @@
 	per-symbol=/]{siunitx}
 \usepackage{microtype}
 \usepackage[absolute,overlay]{textpos} %for the \source{} command
-\usepackage[missing=master]{gitinfo2} % GitHub Actions don't pull in the commit has, so we just show `Master'
+\usepackage[missing=master]{gitinfo2} % GitHub Actions don't pull in the commit hash, so we just show `Master'
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
@@ -52,7 +52,7 @@
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 \usepackage{colortbl}
-\usepackage{lipsum}
+\usepackage{lipsum} %for alignment testing
 
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{100} % use only every nth frame for the animations
@@ -285,7 +285,7 @@
 %	\end{multicols}
 \end{frame}
 
-\section{Biomedical imaging}
+\section{Overview}
 \begin{frame}{Biomedical imaging}
 	\begin{columns}
 		\begin{column}{0.4\linewidth}
@@ -337,11 +337,34 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Tomography}
+\section{Tomography}
+\subsection{History}
+\renewcommand{\imwidth}{\columnwidth}
+\begin{frame}[label=current]{History}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\begin{itemize}
+				\item<1-|handout:1-> Extensive history is found in~\cite{Cormack1963,Hsieh2003}
+				\item<1-|handout:1-> First, second and third generation of scanners
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\includegraphics<1|handout:1>[width=\imwidth]{./images/History_Generation1}%
+			\only<1|handout:1>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation2}%
+			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation3}%
+			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Tomography today}
 \begin{frame}{CT-Scanner}
 	\centering
 	\mode<beamer>{%
-		\animategraphics[palindrome,autoplay,height=0.618\textheight,every=\everyframe]{25}{./movies/ct-scanner/ct-scanner0}{001}{480}%
+		\animategraphics[loop,autoplay,height=0.618\textheight,every=\everyframe]{25}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\mode<handout>{%
@@ -349,7 +372,7 @@
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\note{From \url{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}:
-			Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
+		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
 		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
 		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
@@ -376,25 +399,19 @@
 				Both contribute to dose.}
 		\begin{itemize}
 			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
-		\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
-			It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
-%:where
-%:<math>\lambda</math> is the initial wavelength,
-%:<math>\lambda'</math> is the wavelength after scattering,
-%:<math>h</math> is the [[Planck constant]],
-%:<math>m_e</math> is the [[electron rest mass]],
-%:<math>c</math> is the [[speed of light]], and
-%:<math>\theta</math> is the scattering angle.
+			\note{From \emph{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=8\)), and if \(E\) doubles PEA will reduce by a factor of 16.
+				Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
+				This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
+				The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (\(Z=7.4\)) are irradiated.
+				At beam energies above this, the Compton effect predominates.}
+			\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
+				It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
+			\note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_e\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
 		\end{itemize}
 		\item Lowering x-ray energy increases contrast
 		\item X-ray penetration decreases exponentially with sample thickness (\cite[\ie Beer-Lamberts law]{wiki:beer-lambert} \(I(t) = I_0 \, e^{-\alpha z}\)
 	\end{itemize}
 \end{frame}
-\note{From \emph{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=8\)), and if \(E\) doubles PEA will reduce by a factor of 16.
-Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
-This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
-The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (\(Z=7.4\)) are irradiated.
-At beam energies above this, the Compton effect predominates.}
 
 \begin{frame}[label=current]{Composition of biological tissues}
 	\centering
@@ -431,7 +448,7 @@ At beam energies above this, the Compton effect predominates.}
 
 \begin{frame}[label=current]{Examples}
 	\centering
-	\only<1>{%
+	\only<1|handout:1>{%
 		\pgfmathsetlength{\imagewidth}{0.9\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
@@ -441,14 +458,14 @@ At beam energies above this, the Compton effect predominates.}
 			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
 			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
 			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-		\end{tikzpicture}%	
+		\end{tikzpicture}%
 	}%
 	\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
 	\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
 	\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
 	\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		\only<2>{%
+		\only<2|handout:2>{%
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
 		}%
 		\only<3|handout:0>{%
@@ -456,12 +473,12 @@ At beam energies above this, the Compton effect predominates.}
 		}%
 		% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
 		%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{11.505}{\milli\meter} (2301px) TEMPORARY!};
-		\only<2-3>{%
+		\only<2-3|handout:2>{%
 			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
 		}
 	\end{tikzpicture}%
-	\only<4>{%
-		\pgfmathsetlength{\imagewidth}{\imwidth}%
+	\only<4|handout:3>{%
+		\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/690}%
 		\def\x{426}% scalebar-x starting at golden ratio of image width of 690px = 426
 		\def\y{421}% scalebar-y at 90% of image height of 468px = 421
@@ -469,13 +486,13 @@ At beam energies above this, the Compton effect predominates.}
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/shell/Muschel_klein0216}};
 			% 690.000px = 7.452000000000001mm -> 100px = 1080.000um -> 46.296px = 500um, 9.259px = 100um
 			%\draw[|-|,blue,thick] (0,234) -- (690,234) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{7.452000000000001}{\milli\meter} (690px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+46.296,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%	
-	}		
-	\only<5|handout:0>{%		
-		\animategraphics[autoplay,loop,height=\imheight,every=\everyframe]{25}{./movies/shell/Muschel_klein}{0000}{431}
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+92.59,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+		\end{tikzpicture}%
 	}
-	\only<6>{%
+	\only<5|handout:0>{%
+		\animategraphics[autoplay,loop,width=0.618\linewidth,every=\everyframe]{25}{./movies/shell/Muschel_klein}{0000}{431}
+	}
+	\only<6|handout:4>{%
 		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
 		\def\x{438+200}% scalebar-x starting at golden ratio of image width of 708px = 438
@@ -485,30 +502,8 @@ At beam energies above this, the Compton effect predominates.}
 			% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
 			%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
 			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
-		\end{tikzpicture}%	
+		\end{tikzpicture}%
 	}
-\end{frame}
-
-\subsection{History}
-\renewcommand{\imwidth}{\columnwidth}
-\begin{frame}{History}
-	\begin{columns}
-		\begin{column}{0.49\linewidth}
-			\begin{itemize}
-				\item<1-|handout:1-> Extensive history is found in~\cite{Cormack1963,Hsieh2003}
-				\item<1-|handout:1-> First, second and third generation of scanners
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\includegraphics<1|handout:1>[width=\imwidth]{./images/History_Generation1}%
-			\only<1|handout:1>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation2}%
-			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation3}%
-			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.14}}%
-		\end{column}
-	\end{columns}
 \end{frame}
 
 \renewcommand{\imwidth}{\columnwidth}
@@ -648,8 +643,8 @@ At beam energies above this, the Compton effect predominates.}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Machinery I}
-Independent on the machine, technically they are all a simple combination of
+\begin{frame}[label=current]{Machinery}
+No matter what kind of machine, the basic principle is always the same
 \begin{itemize}
 	\item an x-ray source
 	\item a sample
@@ -657,7 +652,7 @@ Independent on the machine, technically they are all a simple combination of
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=current]{Machinery II}
+\begin{frame}[label=current]{Machinery}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\centering
@@ -676,7 +671,7 @@ Independent on the machine, technically they are all a simple combination of
 % MULTISLICE CT -> HOSPITAL
 % SCREENING/IN VIVO/DENSITOMETRY/ETC.
 
-\subsection{A scan, from start to finish}
+\section{A scan, from \emph{getting started} to \emph{nice image}}
 \begin{frame}{Preparation}
 	\begin{itemize}
 		\item Study design
@@ -768,7 +763,7 @@ Independent on the machine, technically they are all a simple combination of
 	\end{itemize}
 \end{frame}
 
-\subsection{Example}
+\subsection{Example of a full study}
 \begin{frame}
 	\frametitle{An example: Do gills change with training?}
 	\centering
@@ -800,98 +795,105 @@ Independent on the machine, technically they are all a simple combination of
 \renewcommand{\imwidth}{\columnwidth}
 \begin{frame}{How?}
 	\begin{columns}
-	\begin{column}{0.49\linewidth}
-		\begin{itemize}
-			\item<1-> Training for \SI{5}{w}, \SI{5}{\day\per w}, \SI{6}{\hour\per\day}, at \SI{66}{\percent} of critical speed~\cite{Palstra2010}
+		\begin{column}{0.49\linewidth}
 			\begin{itemize}
-				\item<1-> Endurance
+				\item<1-> Training for \SI{5}{w}, \SI{5}{\day\per w}, \SI{6}{\hour\per\day}, at \SI{66}{\percent} of critical speed~\cite{Palstra2010}
+				\note{Comparable with the weekly training routine of Michael Phelps.
+					The fish trained only for ca. \SI{7}{\percent} of their lifetime and started as adults.
+					The Olympic winner trained for half of his lifetime and started as child.
+				}
+				\begin{itemize}
+					\item<1-> Endurance
+				\end{itemize}
+				\item<3-|handout:2-> Morphology \& Physiology
+				\begin{itemize}
+					\item<3-|handout:2-> Body size \& weight
+					\item<3-|handout:2-> \ce{O2} consumption
+				\end{itemize}
+				\item<4-|handout:3-> Scanning electron microscopy
+				\begin{itemize}
+					\item<4-|handout:3-> Gill structure
+				\end{itemize}
+				\item<5-|handout:4-> Critical point drying\onslide<6-|handout:5->{, \uct imaging}\onslide<7-|handout:6->{, delineation in CTAn }\onslide<8-|handout:7->{and analysis}
+				\begin{itemize}
+					\item<8-|handout:7-> Gill volume, structure and complexity
+				\end{itemize}
 			\end{itemize}
-			\item<3-|handout:2-> Morphology \& Physiology
-			\begin{itemize}
-				\item<3-|handout:2-> Body size \& weight
-				\item<3-|handout:2-> \ce{O2} consumption
-			\end{itemize}
-			\item<4-|handout:3-> Scanning electron microscopy
-			\begin{itemize}
-				\item<4-|handout:3-> Gill structure
-			\end{itemize}
-			\item<5-|handout:4-> Critical point drying\onslide<6-|handout:5->{, \uct imaging}\onslide<7-|handout:6->{, delineation in CTAn}\onslide<8-|handout:7->{ and analysis}
-			\begin{itemize}
-				\item<8-|handout:7-> Gill volume, structure and complexity
-			\end{itemize}
-		\end{itemize}
-	\end{column}
-	\begin{column}{0.49\linewidth}
-		\only<1|handout:1>{%
-			\pgfmathsetlength{\imagewidth}{\imwidth}%
-			\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
-			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
-			\def\y{547}% scalebar-y at 90% of image height of 608px = 547
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/fishvideo_0001}};%
-				% 69px = 30mm > 100px = 44mm > 1142px = 500mm, 228px = 100mm
-				%\draw[|-|,blue] (410,188) -- (478,182) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{30}{\milli\meter} (TEMPORARY)};
-				\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
-			\end{tikzpicture}%
-			}%
-		\only<2|handout:0>{%
-			\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{25}{./movies/training/fishvideo_0}{001}{250}%
-			}%
-		\only<3|handout:2>{\centering\Huge\faFish:\xspace\faRuler\xspace\&\xspace\faWeight}
-		\renewcommand{\imwidth}{0.49\columnwidth}%
-		\only<4|handout:3>{%
-			\pgfmathsetlength{\imagewidth}{\imwidth}%
-			\pgfmathsetlength{\imagescale}{\imagewidth/794}%
-			\def\x{491}% scalebar-x starting at golden ratio of image width of 794px = 491
-			\def\y{458}% scalebar-y at 90% of image height of 509px = 458
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_c5_3}};%
-				% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
-				%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
-				\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
-			\end{tikzpicture}%
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_s5_3}};%
-				% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
-				%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
-				\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
-			\end{tikzpicture}%
-			}
-		\renewcommand{\imwidth}{\columnwidth}
-		\only<5|handout:4>{%
-			\centering
-			\pgfmathsetlength{\imagewidth}{\imwidth}%
-			\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
-			\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
-			\def\y{673}% scalebar-y at 90% of image height of 748px = 673
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/IMG_20190603_174659}};
-				% 294px = 12.5mm > 100px = 4250um > 118px = 5mm
-				%\draw[|-|,blue,thick] (494,218) -- (624,481) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{12.5}{\milli\meter} (294px) TEMPORARY!};
-				\draw[|-|,white,shadowed] (\x,\y) -- (\x+118,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-			\end{tikzpicture}%
-			}
-		\only<6|handout:5>{%
-			\lstinputlisting[linerange={2-5,17-17,19-23,29-31,34-34,38-40,51-51,58-59}]{./logfiles/Control05/proj/Control05.log}%
-			}
-		\includegraphics<7|handout:6>[height=\imheight]{./images/CTAn}%
-		\only<8|handout:7>{%
-			\mode<beamer>{%
-				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{25}{./movies/coder/coder-}{0}{133}%
-				\source{gph.is/2nqkple}{}%
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\only<1|handout:1>{%
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
+				\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
+				\def\y{547}% scalebar-y at 90% of image height of 608px = 547
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/fishvideo_0001}};%
+					% 69px = 30mm > 100px = 44mm > 1142px = 500mm, 228px = 100mm
+					%\draw[|-|,blue] (410,188) -- (478,182) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{30}{\milli\meter} (TEMPORARY)};
+					\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
+				\end{tikzpicture}%
 				}%
-			\mode<handout>{%
-				\includegraphics[width=\linewidth]{./movies/coder/coder-0}
-				\source{gph.is/2nqkple}{}%
+			\only<2|handout:0>{%
+				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{25}{./movies/training/fishvideo_0}{001}{250}%
 				}%
+			\only<3|handout:2>{\centering\Huge\faFish:\xspace\faRuler\xspace\&\xspace\faWeight}
+			\renewcommand{\imwidth}{0.49\columnwidth}%
+			\only<4|handout:3>{%
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/794}%
+				\def\x{491}% scalebar-x starting at golden ratio of image width of 794px = 491
+				\def\y{458}% scalebar-y at 90% of image height of 509px = 458
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_c5_3}};%
+					% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
+					%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
+				\end{tikzpicture}%
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_s5_3}};%
+					% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
+					%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
+				\end{tikzpicture}%
+				}
+			\renewcommand{\imwidth}{\columnwidth}
+			\only<5|handout:4>{%
+				\centering
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
+				\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
+				\def\y{673}% scalebar-y at 90% of image height of 748px = 673
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/IMG_20190603_174659}};
+					% 294px = 12.5mm > 100px = 4250um > 118px = 5mm
+					%\draw[|-|,blue,thick] (494,218) -- (624,481) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{12.5}{\milli\meter} (294px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+118,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+				}
+			\only<6|handout:5>{%
+				\lstinputlisting[linerange={2-5,17-17,19-23,29-31,34-34,38-40,51-51,58-59}]{./logfiles/Control05/proj/Control05.log}%
+				}
+			\includegraphics<7|handout:6>[height=\imheight]{./images/CTAn}%
+			\only<8|handout:7>{%
+				\mode<beamer>{%
+					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{25}{./movies/coder/coder-}{0}{133}%
+					\source{gph.is/2nqkple}{}%
+					}%
+				\mode<handout>{%
+					\includegraphics[width=\linewidth]{./movies/coder/coder-0}
+					\source{gph.is/2nqkple}{}%
+					}%
+				}
+			\note{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
+				This means we analyzed 129.40 GigaPixels.
+				This means we analyzed \num{129395.29} MegaPixels.
+				In total \num{46014} slices.
 			}
 		\end{column}
 	\end{columns}
 \end{frame}
-\note{Comparable with the weekly training routine of Michael Phelps.
-	The fish trained only for ca. \SI{7}{\percent} of their lifetime and started as adults.
-	The Olympic winner trained for half of his lifetime and started as child.}
 
+\section{Image processing}
 \begin{frame}
 	\frametitle{Gill volume}
 	\centering
@@ -933,10 +935,6 @@ Independent on the machine, technically they are all a simple combination of
 	\only<5|handout:5>{\include{./plots/Gillvolume}}
 	\only<6|handout:0>{\include{./plots/Gillvolume_scaled}}
 \end{frame}
-\note{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
-	This means we analyzed 129.40 GigaPixels.
-	This means we analyzed \num{129395.29} MegaPixels.
-	In total \num{46014} slices.}
 
 \begin{frame}{Gill complexity}
 	\centering
@@ -974,22 +972,6 @@ Independent on the machine, technically they are all a simple combination of
 	\only<6|handout:0>{\include{./plots/Gills_per_organ_scaled}}
 \end{frame}
 
-% TODO: Zebrafish
-% TODO: Bone/teeth with screw -> Fluri
-% TODO: Osteocytes in bone
-% TODO: Toothpick
-
-\subsection{Imaging performance}
-% RESOLUTION/PIXEL SIZE -> PHANTOM?
-% POINT SPREAD FUNCTION
-% NOISE
-% TEMPORAL RESOLUTION (ONLY FOR HUMAN MEDICAL CT)
-
-\section{Image processing}
-\subsection{Image display}
-% MIP
-% SURFACE RENDERING
-
 \begin{frame}{Thanks!}
 	\begin{itemize}
 		\item Thanks for listening to me!
@@ -1003,13 +985,13 @@ Independent on the machine, technically they are all a simple combination of
 		\begin{itemize}
 			\item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
 			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action}\footnote{Details on how this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository here: git.io/JeOOj}} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
-		\end{itemize}			
-		\item Spotted an error?
+		\end{itemize}
+		\item Did you spot an error?
 		\begin{itemize}
 			\item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
 			\item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
 			\item \href{mailto:haberthuer@ana.unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: haberthuer@ana.unibe.ch}
-		\end{itemize}			
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
