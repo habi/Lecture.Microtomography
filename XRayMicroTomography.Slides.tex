@@ -14,8 +14,7 @@
 	style=numeric,
 	url=false,
 	isbn=true,
-	maxbibnames=1,
-	maxcitenames=1,
+	maxnames=1,
 	sorting=none]{biblatex}
 	\addbibresource{../../../Documents/library.bib}
 \usepackage{standalone}
@@ -23,7 +22,7 @@
 	\usetikzlibrary{spy}
 	%\usetikzlibrary{external}
 	%\tikzexternalize[prefix=tikz-externals/] % externalize tikz figures into pdf frames, speeds up compilation
-	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed, thick}}}
+	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
 \usepackage{shadowtext}  % for the shadowed scalebar
 	\shadowoffset{1pt}
 	\shadowcolor{ubRed}
@@ -41,6 +40,7 @@
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
+\usepackage{isotope}
 \usepackage{animate}
 \usepackage{fontawesome5}
 \usepackage{csquotes}
@@ -55,7 +55,7 @@
 \usepackage{lipsum} %for alignment testing
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{100} % use only every nth frame for the animations
+\newcommand{\everyframe}{111} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -85,9 +85,9 @@
 % https://tex.stackexchange.com/a/235439/828
 % https://tex.stackexchange.com/q/262486/828
 \pgfplotsset{%
-	every axis plot/.append style={semithick},
-	every axis/.append style={semithick}
-	every axis plot post/.append style={every mark/.append style={semithick}}
+	every axis plot/.append style={thick},
+	every axis/.append style={thick}
+	every axis plot post/.append style={every mark/.append style={thick}}
 	}
 
 % stripped-down plot styling
@@ -228,7 +228,7 @@
 %\addtobeamertemplate{background canvas}{\transfade[duration=0.5]}{}
 
 % open in fullscreen
-%\hypersetup{pdfpagemode=FullScreen}
+\hypersetup{pdfpagemode=FullScreen}
 
 % Move the text down a bit
 % THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
@@ -271,8 +271,8 @@
 		\item Biomedical research
 		\begin{itemize}
 			\item microangioCT~\cite{Hlushchuk2018}: Tumor vasculature, angiogenesis in the heart, musculature and bones
-			\item Cancer research: Melanoma
 			\item Lung imaging: Tumor detection and classification
+			\item Cancer research: Melanomam			
 			\item Physiology: Zebrafish musculature and gills~\cite{Messerli2019}
 			\item SkyScan 1172 \& 1272
 		\end{itemize}
@@ -340,11 +340,16 @@
 \section{Tomography}
 \subsection{History}
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}{History}
+\begin{frame}[label=current]{History}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
-				\item<1-|handout:1-> Extensive history is found in~\cite{Cormack1963,Hsieh2003}
+				\item<1-|handout:1-> Long history 
+				\begin{itemize}
+					\item<1-|handout:1-> \citeyear{Cormack1963}: \citeauthor{Cormack1963} used a collimated \isotope[60]{Co} source and a Geiger counter as a detector~\cite{Cormack1963}
+					\item<1-|handout:1-> \citeyear{Hounsfield1976a}: \citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}
+					\item<1-|handout:1-> Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}
+				\end{itemize}				
 				\item<1-|handout:1-> First, second and third generation of scanners
 			\end{itemize}
 		\end{column}
@@ -377,14 +382,6 @@
 		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
 
-\subsection{X-ray production}
-\begin{frame}{X-ray generation}
-	\begin{itemize}
-		\item How are x-rays generated
-		\item Why do we need them
-	\end{itemize}
-\end{frame}
-
 \subsection{Interaction of x-rays with matter}
 \begin{frame}{X-ray interaction}
 	\begin{itemize}
@@ -409,22 +406,21 @@
 
 \begin{frame}{Composition of biological tissues}
 	\centering
-	\only<1>{%
-		\begin{table}
+	\begin{table}
+		\caption{Tissue: content by mass percentage}
+		\only<1>{%
 			\pgfplotstabletypeset[%
-		      col sep=comma, % the seperator in our .csv file
+				col sep=comma, % the seperator in our .csv file
 				display columns/0/.style={string type,column name={Element}},
 				% section 3.2 in pgfplotstable manual
 				every head row/.style={before row={\toprule}},
 				every row no 0/.style={after row=\midrule},
 				every last row/.style={after row=\bottomrule},
-				]{./tables/tissue-composition.csv}
-		\end{table}
+			]{./tables/tissue-composition.csv}
 		}
-	\only<2|handout:0>{%
-		\begin{table}
+		\only<2|handout:0>{%
 			\pgfplotstabletypeset[%
-		      col sep=comma, % the seperator in our .csv file
+				col sep=comma, % the seperator in our .csv file
 				display columns/0/.style={string type,column name={Element}},
 				every head row/.style={before row={\toprule}},
 				every row no 0/.style={after row=\midrule},
@@ -434,9 +430,9 @@
 				every row 1 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
 				every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
 				every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}
-				]{./tables/tissue-composition.csv}
-		\end{table}
-	}
+			]{./tables/tissue-composition.csv}
+		}
+	\end{table}
 \end{frame}
 \note{Bone, lean tissue, fat and air can be distinguished quite easily}
 
@@ -471,6 +467,12 @@
 		\end{column}
 	\end{columns}
 \end{frame}
+\note{FAN BEAM -> BRUKER\newline
+	PARALLEL BEAM -> TOMCAT\newline
+	HELICAL/SPIRAL CT\newline
+	MULTISLICE CT -> HOSPITAL\newline
+	SCREENING/IN VIVO/DENSITOMETRY/ETC.\newline
+}
 
 \renewcommand{\imwidth}{\columnwidth}
 \begin{frame}{Why \uct?}
@@ -529,7 +531,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
 					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
 \end{tikzpicture}%
 					}
@@ -544,7 +546,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
 					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
 \end{tikzpicture}%
 					}%
@@ -556,7 +558,7 @@
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 			}%
 			\only<5|handout:0>{%
@@ -570,26 +572,20 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
 					\spy [red] on (352,1116) in node at (1648,746) [anchor=center];
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 			}%
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{What is happening?}
-	\centering
-	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
-	\source{w.wiki/7g3}{\ccbysa}
-\end{frame}
-
 \begin{frame}{Machinery}
-No matter what kind of machine, the basic principle is always the same
-\begin{itemize}
-	\item an x-ray source
-	\item a sample
-	\item a detector
-\end{itemize}
+	No matter what kind of machine, the basic principle is always the same
+	\begin{itemize}
+		\item an x-ray source
+		\item a sample
+		\item a detector
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Machinery}
@@ -605,11 +601,11 @@ No matter what kind of machine, the basic principle is always the same
 	\end{columns}
 \end{frame}
 
-% FAN BEAM -> BRUKER
-% PARALLEL BEAM -> TOMCAT
-% HELICAL/SPIRAL CT
-% MULTISLICE CT -> HOSPITAL
-% SCREENING/IN VIVO/DENSITOMETRY/ETC.
+\begin{frame}{What is happening?}
+	\centering
+	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
+	\source{w.wiki/7g3}{\ccbysa}
+\end{frame}
 
 \begin{frame}{Examples}
 	\centering
@@ -622,7 +618,7 @@ No matter what kind of machine, the basic principle is always the same
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
 			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
 			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 		\end{tikzpicture}%
 	}%
 	\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
@@ -639,7 +635,7 @@ No matter what kind of machine, the basic principle is always the same
 		% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
 		%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{11.505}{\milli\meter} (2301px) TEMPORARY!};
 		\only<2-3|handout:2>{%
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
 		}
 	\end{tikzpicture}%
 	\only<4|handout:3>{%
@@ -651,7 +647,7 @@ No matter what kind of machine, the basic principle is always the same
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/shell/Muschel_klein0216}};
 			% 690.000px = 7.452000000000001mm -> 100px = 1080.000um -> 46.296px = 500um, 9.259px = 100um
 			%\draw[|-|,blue,thick] (0,234) -- (690,234) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{7.452000000000001}{\milli\meter} (690px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+92.59,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+92.59,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
 		\end{tikzpicture}%
 	}
 	\only<5|handout:0>{%
@@ -666,7 +662,7 @@ No matter what kind of machine, the basic principle is always the same
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
 			% 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
 			%\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.754}{\milli\meter} (1224px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 	}
 	\only<7|handout:5>{%
@@ -678,7 +674,7 @@ No matter what kind of machine, the basic principle is always the same
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
 			% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
 			%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
 		\end{tikzpicture}%
 	}
 \end{frame}
@@ -764,7 +760,7 @@ No matter what kind of machine, the basic principle is always the same
 	\end{itemize}
 \end{frame}
 
-\subsection{Example of a full study}
+\section{Example of a full study}
 \begin{frame}{Quantitative data}
 	\begin{itemize}
 		\item Raw numbers instead of just pretty images
@@ -773,6 +769,7 @@ No matter what kind of machine, the basic principle is always the same
 	\end{itemize}
 \end{frame}
 
+\subsection{Overview}
 \begin{frame}
 	\frametitle{An example: Do gills change with training?}
 	\centering
@@ -801,6 +798,7 @@ No matter what kind of machine, the basic principle is always the same
 	\end{tikzpicture}%
 \end{frame}
 
+\subsection{Setup}
 \renewcommand{\imwidth}{\columnwidth}
 \begin{frame}{How?}
 	\begin{columns}
@@ -902,7 +900,7 @@ No matter what kind of machine, the basic principle is always the same
 	\end{columns}
 \end{frame}
 
-\section{Image processing}
+\subsection{Image processing}
 \begin{frame}
 	\frametitle{Gill volume}
 	\centering
@@ -984,8 +982,15 @@ No matter what kind of machine, the basic principle is always the same
 \begin{frame}{Thanks!}
 	\begin{itemize}
 		\item Thanks for listening to me!
-		\item<2> \href{https://twitter.com/jackiantonovich/status/1195699076056178691}{What questions do you have for me?}
+		\item<2-> \href{https://twitter.com/jackiantonovich/status/1195699076056178691}{What questions do you have for me?}		
 	\end{itemize}
+	\only<3|handout:0>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center){%
+				\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
+				};%
+		\end{tikzpicture}%
+	}%
 \end{frame}
 
 \begin{frame}{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
@@ -1004,7 +1009,7 @@ No matter what kind of machine, the basic principle is always the same
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{References}
+\begin{frame}[label=current]{References}
 	% Make the references continuously smaller :)
 	%\renewcommand*{\bibfont}{\small}
 	%\renewcommand*{\bibfont}{\footnotesize}
