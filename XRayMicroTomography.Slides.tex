@@ -340,7 +340,7 @@
 \section{Tomography}
 \subsection{History}
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}[label=current]{History}
+\begin{frame}{History}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
@@ -377,12 +377,6 @@
 		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
 
-\begin{frame}{What is happening?}
-	\centering
-	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
-	\source{w.wiki/7g3}{\ccbysa}
-\end{frame}
-
 \subsection{X-ray production}
 \begin{frame}{X-ray generation}
 	\begin{itemize}
@@ -413,7 +407,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[label=current]{Composition of biological tissues}
+\begin{frame}{Composition of biological tissues}
 	\centering
 	\only<1>{%
 		\begin{table}
@@ -446,64 +440,36 @@
 \end{frame}
 \note{Bone, lean tissue, fat and air can be distinguished quite easily}
 
-\begin{frame}[label=current]{Examples}
-	\centering
-	\only<1|handout:1>{%
-		\pgfmathsetlength{\imagewidth}{0.9\linewidth}%
-		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
-			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-		\end{tikzpicture}%
-	}%
-	\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
-	\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
-	\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
-	\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
-	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		\only<2|handout:2>{%
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
-		}%
-		\only<3|handout:0>{%
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
-		}%
-		% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
-		%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{11.505}{\milli\meter} (2301px) TEMPORARY!};
-		\only<2-3|handout:2>{%
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
-		}
-	\end{tikzpicture}%
-	\only<4|handout:3>{%
-		\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
-		\pgfmathsetlength{\imagescale}{\imagewidth/690}%
-		\def\x{426}% scalebar-x starting at golden ratio of image width of 690px = 426
-		\def\y{421}% scalebar-y at 90% of image height of 468px = 421
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/shell/Muschel_klein0216}};
-			% 690.000px = 7.452000000000001mm -> 100px = 1080.000um -> 46.296px = 500um, 9.259px = 100um
-			%\draw[|-|,blue,thick] (0,234) -- (690,234) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{7.452000000000001}{\milli\meter} (690px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+92.59,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
-		\end{tikzpicture}%
-	}
-	\only<5|handout:0>{%
-		\animategraphics[autoplay,loop,width=0.618\linewidth,every=\everyframe]{25}{./movies/shell/Muschel_klein}{0000}{431}
-	}
-	\only<6|handout:4>{%
-		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
-		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
-		\def\x{438+200}% scalebar-x starting at golden ratio of image width of 708px = 438
-		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
-			% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
-			%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
-		\end{tikzpicture}%
-	}
+\begin{frame}{Machinery}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item<1-> Hospital CT
+				\begin{itemize}
+					\item Voxel size around \SI{0.5}{\milli\meter}
+				\end{itemize}
+				\item<2-> Lab/Desktop CT
+				\begin{itemize}
+					\item Voxel size around \SI{7}{\micro\meter} (\emph{in vivo}) or \SI{0.5}{\micro\meter} (\emph{ex vivo})
+				\end{itemize}
+				\item<4-> Synchrotron CT
+				\begin{itemize}
+					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\SI{160}{\nano\meter}}
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.6\linewidth}
+			\centering
+			\includegraphics<1|handout:1>[height=\imheight]{./images/24324062640_751e011e1a_o}%
+			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}
+			\includegraphics<2|handout:2>[width=\imheight]{./images/9459311320_516179207a_o}%
+			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}
+			\includegraphics<3|handout:3>[width=\imwidth]{./images/1272}%
+			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}
+			\includegraphics<4|handout:4>[width=\imwidth]{./images/4563733710_f632792416_b}%
+			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \renewcommand{\imwidth}{\columnwidth}
@@ -611,39 +577,13 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Machinery}
-	\begin{columns}
-		\begin{column}{0.4\linewidth}
-			\begin{itemize}
-				\item<1-> Hospital CT
-				\begin{itemize}
-					\item Voxel size around \SI{0.5}{\milli\meter}
-				\end{itemize}
-				\item<2-> Lab/Desktop CT
-				\begin{itemize}
-					\item Voxel size around \SI{7}{\micro\meter} (\emph{in vivo}) or \SI{0.5}{\micro\meter} (\emph{ex vivo})
-				\end{itemize}
-				\item<4-> Synchrotron CT
-				\begin{itemize}
-					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\SI{160}{\nano\meter}}
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.6\linewidth}
-			\centering
-			\includegraphics<1|handout:1>[height=\imheight]{./images/24324062640_751e011e1a_o}%
-			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}
-			\includegraphics<2|handout:2>[width=\imheight]{./images/9459311320_516179207a_o}%
-			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}
-			\includegraphics<3|handout:3>[width=\imwidth]{./images/1272}%
-			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}
-			\includegraphics<4|handout:4>[width=\imwidth]{./images/4563733710_f632792416_b}%
-			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}
-		\end{column}
-	\end{columns}
+\begin{frame}{What is happening?}
+	\centering
+	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
+	\source{w.wiki/7g3}{\ccbysa}
 \end{frame}
 
-\begin{frame}[label=current]{Machinery}
+\begin{frame}{Machinery}
 No matter what kind of machine, the basic principle is always the same
 \begin{itemize}
 	\item an x-ray source
@@ -652,7 +592,7 @@ No matter what kind of machine, the basic principle is always the same
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=current]{Machinery}
+\begin{frame}{Machinery}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\centering
@@ -670,6 +610,78 @@ No matter what kind of machine, the basic principle is always the same
 % HELICAL/SPIRAL CT
 % MULTISLICE CT -> HOSPITAL
 % SCREENING/IN VIVO/DENSITOMETRY/ETC.
+
+\begin{frame}{Examples}
+	\centering
+	\only<1|handout:1>{%
+		\pgfmathsetlength{\imagewidth}{0.9\linewidth}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
+			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+		\end{tikzpicture}%
+	}%
+	\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
+	\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
+	\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
+	\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
+	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+		\only<2|handout:2>{%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
+		}%
+		\only<3|handout:0>{%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
+		}%
+		% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
+		%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{11.505}{\milli\meter} (2301px) TEMPORARY!};
+		\only<2-3|handout:2>{%
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+		}
+	\end{tikzpicture}%
+	\only<4|handout:3>{%
+		\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/690}%
+		\def\x{426}% scalebar-x starting at golden ratio of image width of 690px = 426
+		\def\y{421}% scalebar-y at 90% of image height of 468px = 421
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/shell/Muschel_klein0216}};
+			% 690.000px = 7.452000000000001mm -> 100px = 1080.000um -> 46.296px = 500um, 9.259px = 100um
+			%\draw[|-|,blue,thick] (0,234) -- (690,234) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{7.452000000000001}{\milli\meter} (690px) TEMPORARY!};
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+92.59,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+		\end{tikzpicture}%
+	}
+	\only<5|handout:0>{%
+		\animategraphics[autoplay,loop,width=0.618\linewidth,every=\everyframe]{25}{./movies/shell/Muschel_klein}{0000}{431}
+	}
+	\only<6|handout:4>{%
+		\pgfmathsetlength{\imagewidth}{0.45\linewidth}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
+		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
+		\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
+			% 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
+			%\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.754}{\milli\meter} (1224px) TEMPORARY!};
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+		\end{tikzpicture}%
+	}
+	\only<7|handout:5>{%
+		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
+		\def\x{438+200}% scalebar-x starting at golden ratio of image width of 708px = 438
+		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
+			% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
+			%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+		\end{tikzpicture}%
+	}
+\end{frame}
 
 \section{A scan, from \emph{getting started} to \emph{nice image}}
 \begin{frame}{Preparation}
@@ -740,12 +752,19 @@ No matter what kind of machine, the basic principle is always the same
 
 \begin{frame}{What to use?}
 	\begin{itemize}
-		\item ImageJ~\footcite{Schindelin2012}
-		\item \faPython in Jupyter~\cite{Kluyver2016}
+		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
+		\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
 		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1561468.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
+		\item Reproducible research
+		\begin{itemize}
+			\item \href{https://git-scm.com/}{\faGit}
+			\item Script all your things!
+			\item Data repositories
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
+\subsection{Example of a full study}
 \begin{frame}{Quantitative data}
 	\begin{itemize}
 		\item Raw numbers instead of just pretty images
@@ -754,16 +773,6 @@ No matter what kind of machine, the basic principle is always the same
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Reproducible research}
-	\begin{itemize}
-		\item \faGit%
-		\item Jupyter
-		\item Script all your things!
-		\item Data repositories \(\rightarrow\) Sharing is caring!
-	\end{itemize}
-\end{frame}
-
-\subsection{Example of a full study}
 \begin{frame}
 	\frametitle{An example: Do gills change with training?}
 	\centering
