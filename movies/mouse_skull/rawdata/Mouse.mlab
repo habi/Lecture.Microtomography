@@ -11,11 +11,7 @@ module Compose3DFrom2DFiles {
       window _default {
         geometry = "1070 365 424 534"
         sizeHint = "424 534"
-<<<<<<< HEAD
         wasOpen = no
-=======
-        wasOpen = yes
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
       }
     }
   }
@@ -113,13 +109,8 @@ module MLImageFormatLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-<<<<<<< HEAD
         geometry = "1173 453 450 440"
         sizeHint = "450 440"
-=======
-        geometry = "738 430 450 450"
-        sizeHint = "450 450"
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
         wasOpen = yes
       }
     }
@@ -274,11 +265,7 @@ module SoPathTracer {
     blendMode = Replace
     backgroundTopColor = "1 1 1"
     backgroundBottomColor = "1 1 1"
-<<<<<<< HEAD
     interactiveFrameRate = 30
-=======
-    interactiveFrameRate = 10.71
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     pickingAlphaThreshold = 0.1
     sharpenStart = 100
     sharpenBlend = 100
@@ -310,11 +297,7 @@ module SoExaminerViewer {
     moduleGroupName = ""
     windows  {
       window _viewer {
-<<<<<<< HEAD
         geometry = "2397 357 1080 592"
-=======
-        geometry = "2831 381 1080 592"
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
         sizeHint = "400 400"
         wasOpen = yes
       }
@@ -324,13 +307,8 @@ module SoExaminerViewer {
         wasOpen = no
       }
       window _default {
-<<<<<<< HEAD
-        geometry = "1221 795 573 359"
-        sizeHint = "573 359"
-=======
         geometry = "954 807 594 374"
         sizeHint = "594 374"
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
         wasOpen = yes
       }
     }
@@ -351,11 +329,7 @@ module SoExaminerViewer {
     grabKeyFocus = TRUE
     enableKeyCommands = TRUE
     snapshotFormat = SNAPSHOT_RGB
-<<<<<<< HEAD
     outputAviFile = P:/Talks/Lectures/MicroTomography/movies/mouse_skull/mouse_skull
-=======
-    outputAviFile = /media/habi/Fast_SSD/Mouse1265/mov/asdf
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     autoRedrawWhenRecording = TRUE
     frameRate = 7
     frameRateAvi = 15
@@ -387,17 +361,10 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-<<<<<<< HEAD
     position = "415.534240722656 -366.557891845703 1032.73937988281"
     orientation = "0.216525763273239 0.472613275051117 -0.8542560338974 1.70840585231781"
     nearDistance = 436.15668
     farDistance = 1348.4037
-=======
-    position = "361.182250976562 -643.106262207031 474.842132568359"
-    orientation = "-0.437047511339188 -0.642324149608612 0.629610300064087 4.16081428527832"
-    nearDistance = 606.8606
-    farDistance = 1127.9481
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     focalDistance = 868.98126
     forceRedrawOnInteraction = TRUE
     button1events = TO_VIEWER
@@ -410,11 +377,7 @@ module SoExaminerViewer {
     mouseInteraction = ""
     rotationAxis = "0 1 0"
     rotationAngle = 360
-<<<<<<< HEAD
     rotationSteps = 240
-=======
-    rotationSteps = 80
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     recordRotation = TRUE
     wheelZoomEnabled = TRUE
     wheelRotationEnabled = TRUE
@@ -428,11 +391,7 @@ module SoPathTracerVolume {
       window _default {
         geometry = "177 341 333 579"
         sizeHint = "333 579"
-<<<<<<< HEAD
         wasOpen = no
-=======
-        wasOpen = yes
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
       }
     }
   }
@@ -534,11 +493,7 @@ module SoPathTracerMaterial {
       window _default {
         geometry = "206 377 389 554"
         sizeHint = "339 281"
-<<<<<<< HEAD
         wasOpen = no
-=======
-        wasOpen = yes
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
       }
     }
   }
@@ -579,15 +534,9 @@ module SoPathTracerAreaLight {
     showNetworkPanel = true
     windows  {
       window _default {
-<<<<<<< HEAD
         geometry = "128 512 414 518"
         sizeHint = "414 483"
         wasOpen = yes
-=======
-        geometry = "116 670 418 528"
-        sizeHint = "418 493"
-        wasOpen = no
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
       }
     }
   }
@@ -595,24 +544,15 @@ module SoPathTracerAreaLight {
     instanceName = SoPathTracerAreaLight1
     enabled = TRUE
     renderSource = FALSE
-<<<<<<< HEAD
     color = "0.901960790157318 0 0.180392161011696"
     intensity = 3
     width = 1
-=======
-    color = "1 1 1"
-    intensity = 2
-    width = 5
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     height = 1.601
     theta = 0
     phi = -53.96175
     distance = 4.1999998
-<<<<<<< HEAD
     attachToCamera = TRUE
-=======
     attachToCamera = FALSE
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     position = "0 0 0"
     orientation = "0 0 1 0"
     type = AreaLight_Disc
@@ -627,13 +567,10 @@ module SoPathTracerAreaLight {
     showNetworkPanel = true
     windows  {
       window _default {
-<<<<<<< HEAD
         geometry = "1021 542 414 518"
         sizeHint = "414 483"
-=======
         geometry = "247 670 418 528"
         sizeHint = "418 493"
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
         wasOpen = yes
       }
     }
@@ -649,11 +586,7 @@ module SoPathTracerAreaLight {
     theta = 49.877041
     phi = -228.22404
     distance = 0
-<<<<<<< HEAD
     attachToCamera = TRUE
-=======
-    attachToCamera = FALSE
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     position = "0 0 0"
     orientation = "0 0 1 0"
     type = AreaLight_Disc
@@ -668,15 +601,9 @@ module SoPathTracerAreaLight {
     showNetworkPanel = true
     windows  {
       window _default {
-<<<<<<< HEAD
         geometry = "558 507 414 548"
         sizeHint = "414 513"
         wasOpen = yes
-=======
-        geometry = "116 642 418 558"
-        sizeHint = "418 523"
-        wasOpen = no
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
       }
     }
   }
@@ -686,153 +613,19 @@ module SoPathTracerAreaLight {
     renderSource = FALSE
     color = "1 1 1"
     intensity = 3
-<<<<<<< HEAD
     width = 1
-=======
-    width = 0.5
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     height = 0.5
     theta = 271.87158
     phi = 177.17213
     distance = 0.27000001
-<<<<<<< HEAD
     attachToCamera = TRUE
     position = "0 0 0"
     orientation = "0 0 1 0"
     type = AreaLight_Disc
-=======
-    attachToCamera = FALSE
-    position = "0 0 0"
-    orientation = "0 0 1 0"
-    type = AreaLight_Rectangle
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
     mode = DistanceAndAngles
     scaleMode = ScaleToBoundingSphere
   }
 }
-<<<<<<< HEAD
-=======
-module SoMovieScripter {
-  internal  {
-    frame = "669 -171 120 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2618 336 523 583"
-        sizeHint = "523 583"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoMovieScripter
-    renderCaching = AUTO
-    boundingBoxCaching = AUTO
-    renderCulling = AUTO
-    pickCulling = AUTO
-    int0 = 0
-    int1 = 0
-    int2 = 0
-    int3 = 0
-    int4 = 0
-    int5 = 0
-    int6 = 0
-    int7 = 0
-    flt0 = 0
-    flt1 = 0
-    flt2 = 0
-    flt3 = 0
-    flt4 = 0
-    flt5 = 0
-    flt6 = 0
-    flt7 = 0
-    vec0 = "0 0 0"
-    vec1 = "0 0 0"
-    vec2 = "0 0 0"
-    vec3 = "0 0 0"
-    vec4 = "0 0 0"
-    vec5 = "0 0 0"
-    vec6 = "0 0 0"
-    vec7 = "0 0 0"
-    rot0 = "0 1 0 3.14159274101257"
-    rot1 = "0 1 0 3.14159274101257"
-    rot2 = "0 1 0 3.14159274101257"
-    rot3 = "0 1 0 3.14159274101257"
-    rot4 = "0 1 0 3.14159274101257"
-    rot5 = "0 1 0 3.14159274101257"
-    rot6 = "0 1 0 3.14159274101257"
-    rot7 = "0 1 0 3.14159274101257"
-    pla0 = "0 1 0 0"
-    pla1 = "0 1 0 0"
-    pla2 = "0 1 0 0"
-    pla3 = "0 1 0 0"
-    pla4 = "0 1 0 0"
-    pla5 = "0 1 0 0"
-    pla6 = "0 1 0 0"
-    pla7 = "0 1 0 0"
-    snapInt0 = FALSE
-    snapInt1 = FALSE
-    snapInt2 = FALSE
-    snapInt3 = FALSE
-    snapInt4 = FALSE
-    snapInt5 = FALSE
-    snapInt6 = FALSE
-    snapInt7 = FALSE
-    snapFlt0 = FALSE
-    snapFlt1 = FALSE
-    snapFlt2 = FALSE
-    snapFlt3 = FALSE
-    snapFlt4 = FALSE
-    snapFlt5 = FALSE
-    snapFlt6 = FALSE
-    snapFlt7 = FALSE
-    snapVec0 = FALSE
-    snapVec1 = FALSE
-    snapVec2 = FALSE
-    snapVec3 = FALSE
-    snapVec4 = FALSE
-    snapVec5 = FALSE
-    snapVec6 = FALSE
-    snapVec7 = FALSE
-    snapRot0 = FALSE
-    snapRot1 = FALSE
-    snapRot2 = FALSE
-    snapRot3 = FALSE
-    snapRot4 = FALSE
-    snapRot5 = FALSE
-    snapRot6 = FALSE
-    snapRot7 = FALSE
-    snapPla0 = FALSE
-    snapPla1 = FALSE
-    snapPla2 = FALSE
-    snapPla3 = FALSE
-    snapPla4 = FALSE
-    snapPla5 = FALSE
-    snapPla6 = FALSE
-    snapPla7 = FALSE
-    camPos = "0 0 -1"
-    camOrient = "0 0 1 0"
-    focalDistance = 0
-    frustumHeight = 0
-    camLookat = "0 0 0"
-    camUp = "0 1 0"
-    inverseRotation = FALSE
-    userDefAxis = "0 1 0"
-    userDefAngle = 1
-    userDefStartFrame = 0
-    userDefEndFrame = 79
-    scriptString = ""
-    numFrames = 80
-    numFramesPerSecond = 8
-    numSeconds = 10
-    currentFrame = 0
-    appendNumFrames = 0
-    truncateNumFrames = 0
-    previewOn = TRUE
-    loopPlayback = TRUE
-  }
-}
->>>>>>> 3f5cf20b3a80708a21ce652c47129fe661ce93c7
 connections  {
   MLImageFormatSave.input0 = Compose3DFrom2DFiles.output0
   View3D.inImage = MLImageFormatLoad.output0
