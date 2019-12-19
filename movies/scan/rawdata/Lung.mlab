@@ -1,5 +1,5 @@
 // MDL v1 utf8
-mevislabVersion = 3.1
+mevislabVersion = 3.1.1
 network  {
   watchlist = ""
 }
@@ -538,7 +538,7 @@ module SoPathTracer {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "503 596 564 444"
+        geometry = "1199 162 564 444"
         sizeHint = "564 444"
         wasOpen = yes
       }
@@ -576,8 +576,8 @@ module SoPathTracer {
     denoiseFinal_weightThreshold = 0.02
     denoiseFinal_lerpThreshold = 0.79000002
     numBounces = 2
-    maxIterations = 1000
-    forceFullQuality = FALSE
+    maxIterations = 500
+    forceFullQuality = TRUE
     enableDepthBuffer = FALSE
   }
 }
@@ -587,7 +587,7 @@ module SoExaminerViewer {
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "2397 357 1080 592"
+        geometry = "-897 387 400 400"
         sizeHint = "400 400"
         wasOpen = yes
       }
@@ -619,9 +619,9 @@ module SoExaminerViewer {
     grabKeyFocus = TRUE
     enableKeyCommands = TRUE
     snapshotFormat = SNAPSHOT_RGB
-    outputAviFile = P:/Talks/Lectures/MicroTomography/movies/scan/visualization/lung
+    outputAviFile = F:/lung/lung
     autoRedrawWhenRecording = TRUE
-    frameRate = 7
+    frameRate = 15
     frameRateAvi = 15
     outputSnapshotFile = F:/Mouse1265/Mouse1265.png
     outputSnapshotFileWritten = F:/Zebra-Fish_Matthias/Control06/Visualization/control06.fullhead3.tif
@@ -651,10 +651,10 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "26.9480266571045 7.38240242004395 16.6824531555176"
-    orientation = "0.451318562030792 0.387886524200439 0.803651452064514 1.8187655210495"
+    position = "26.9480133056641 7.38241863250732 16.682466506958"
+    orientation = "-0.451318114995956 -0.387886345386505 -0.803651750087738 4.46441984176636"
     nearDistance = 10.890954
-    farDistance = 31.95842
+    farDistance = 31.95841
     focalDistance = 22.041658
     forceRedrawOnInteraction = TRUE
     button1events = TO_VIEWER

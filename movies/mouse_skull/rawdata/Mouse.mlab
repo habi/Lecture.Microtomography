@@ -1,5 +1,5 @@
 // MDL v1 utf8
-mevislabVersion = 3.1
+mevislabVersion = 3.1.1
 network  {
   watchlist = ""
 }
@@ -111,7 +111,7 @@ module MLImageFormatLoad {
       window _default {
         geometry = "1173 453 450 440"
         sizeHint = "450 440"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -248,8 +248,8 @@ module SoPathTracer {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "376 464 570 472"
-        sizeHint = "570 472"
+        geometry = "96 572 564 444"
+        sizeHint = "564 444"
         wasOpen = yes
       }
     }
@@ -286,8 +286,8 @@ module SoPathTracer {
     denoiseFinal_weightThreshold = 0.02
     denoiseFinal_lerpThreshold = 0.79000002
     numBounces = 2
-    maxIterations = 1000
-    forceFullQuality = FALSE
+    maxIterations = 500
+    forceFullQuality = TRUE
     enableDepthBuffer = FALSE
   }
 }
@@ -297,7 +297,7 @@ module SoExaminerViewer {
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "2397 357 1080 592"
+        geometry = "-1368 391 400 400"
         sizeHint = "400 400"
         wasOpen = yes
       }
@@ -307,9 +307,9 @@ module SoExaminerViewer {
         wasOpen = no
       }
       window _default {
-        geometry = "954 807 594 374"
-        sizeHint = "594 374"
-        wasOpen = yes
+        geometry = "886 678 574 359"
+        sizeHint = "574 359"
+        wasOpen = no
       }
     }
   }
@@ -331,7 +331,7 @@ module SoExaminerViewer {
     snapshotFormat = SNAPSHOT_RGB
     outputAviFile = P:/Talks/Lectures/MicroTomography/movies/mouse_skull/mouse_skull
     autoRedrawWhenRecording = TRUE
-    frameRate = 7
+    frameRate = 15
     frameRateAvi = 15
     outputSnapshotFile = F:/Mouse1265/Mouse1265.png
     outputSnapshotFileWritten = F:/Zebra-Fish_Matthias/Control06/Visualization/control06.fullhead3.tif
@@ -361,10 +361,10 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "415.534240722656 -366.557891845703 1032.73937988281"
-    orientation = "0.216525763273239 0.472613275051117 -0.8542560338974 1.70840585231781"
-    nearDistance = 436.15668
-    farDistance = 1348.4037
+    position = "445.347076416016 264.637054443359 1192.248046875"
+    orientation = "-0.161136090755463 0.140555009245872 -0.976872265338898 1.59473919868469"
+    nearDistance = 418.07761
+    farDistance = 1278.1299
     focalDistance = 868.98126
     forceRedrawOnInteraction = TRUE
     button1events = TO_VIEWER
@@ -444,7 +444,7 @@ module SoLUTEditor {
       window _default {
         geometry = "150 739 517 454"
         sizeHint = "517 454"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -536,7 +536,7 @@ module SoPathTracerAreaLight {
       window _default {
         geometry = "128 512 414 518"
         sizeHint = "414 483"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -552,7 +552,6 @@ module SoPathTracerAreaLight {
     phi = -53.96175
     distance = 4.1999998
     attachToCamera = TRUE
-    attachToCamera = FALSE
     position = "0 0 0"
     orientation = "0 0 1 0"
     type = AreaLight_Disc
@@ -569,9 +568,7 @@ module SoPathTracerAreaLight {
       window _default {
         geometry = "1021 542 414 518"
         sizeHint = "414 483"
-        geometry = "247 670 418 528"
-        sizeHint = "418 493"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -603,7 +600,7 @@ module SoPathTracerAreaLight {
       window _default {
         geometry = "558 507 414 548"
         sizeHint = "414 513"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
