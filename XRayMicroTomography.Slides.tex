@@ -271,7 +271,7 @@
 		\begin{itemize}
 			\item microangioCT~\cite{Hlushchuk2018}: Tumor vasculature, angiogenesis in the heart, musculature and bones
 			\item Lung imaging: Tumor detection and classification
-			\item Cancer research: Melanomam			
+			\item Cancer research: Melanoma
 			\item Physiology: Zebrafish musculature and gills~\cite{Messerli2019}
 			\item SkyScan 1172 \& 1272
 		\end{itemize}
@@ -303,7 +303,7 @@
 			\only<3|handout:2>{%
 				\begin{tikzpicture}[remember picture,overlay]%
 					\node at (current page.center){%
-						\mode<beamer>{\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}}
+						\mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{12}{./movies/mouse_skull/mouse_skull}{000}{470}}
 						\mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull000}}
 					};%
 				\end{tikzpicture}%
@@ -348,7 +348,7 @@
 					\item<1-|handout:1-> \citeyear{Cormack1963}: \citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}
 					\item<1-|handout:1-> \citeyear{Hounsfield1976a}: \citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}
 					\item<1-|handout:1-> Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}
-				\end{itemize}				
+				\end{itemize}
 				\item<1-|handout:1-> First, second and third generation of scanners
 			\end{itemize}
 		\end{column}
@@ -733,7 +733,7 @@
 \begin{frame}{Visualization}
 	\begin{tikzpicture}[remember picture,overlay]%
 	\node at (current page.center){%
-		\mode<beamer>{\animategraphics[autoplay,palindrome,width=\paperwidth,every=\everyframe]{25}{./movies/scan/visualization/lung}{000}{473}}%
+		\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{25}{./movies/scan/visualization/lung}{000}{473}}%
 		\mode<handout>{\includegraphics[width=\paperwidth]{./movies/scan/visualization/lung000}}%
 		};%
 	\end{tikzpicture}%
@@ -891,8 +891,8 @@
 					}%
 				}
 			\note[item]<8>{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
-				This means we analyzed 129.40 GigaPixels.
-				This means we analyzed \num{129395.29} MegaPixels.
+				This means we analyzed 129.40 Gigapixels.
+				This means we analyzed \num{129395.29} Megapixels.
 				In total \num{46014} slices.
 			}
 		\end{column}
@@ -981,12 +981,12 @@
 \begin{frame}{Thanks!}
 	\begin{itemize}
 		\item Thanks for listening to me!
-		\item<2-> \href{https://twitter.com/jackiantonovich/status/1195699076056178691}{What questions do you have for me?}		
+		\item<2-> \href{https://twitter.com/jackiantonovich/status/1195699076056178691}{What questions do you have for me?}
 	\end{itemize}
 	\only<3|handout:0>{%
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center){%
-				\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
+				\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{25}{./movies/mouse_skull/mouse_skull}{000}{470}%
 				};%
 		\end{tikzpicture}%
 	}%
