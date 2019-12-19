@@ -1,0 +1,58 @@
+\documentclass{standalone}
+% Draw the setup where the only the sample moves, e.g. microCT
+% Essentially just a copy of classicCT in the same folder
+\usepackage{animate}
+\usepackage{tikz}
+%	\usetikzlibrary{external}
+%	\tikzexternalize
+%	\tikzsetnextfilename{microCT}
+\usepackage{fontawesome5}	
+\usepackage{ifthen}
+\ifthenelse{\isundefined{\everyframe}}{%
+	% If we're compiling this file via \input, then these variables are already defined.
+	% In the other case, we need to define them
+	\newcommand{\everyframe}{5}
+	\definecolor{ubRed}{HTML}{E6002E}
+	% split complementary images from https://www.sessions.edu/color-calculator/
+	\definecolor{ubRedComplementary1}{HTML}{00a1e6}
+	\definecolor{ubRedComplementary2}{HTML}{00e645}
+	\definecolor{ubGrey}{RGB}{217,217,217}
+	}{}
+\begin{document}
+\begin{animateinline}[every=\everyframe,loop]{25}
+	\multiframe{180}{n=1+2}{%
+%	\tikzifexternalizing{Work-around to make animate happy	}{}%https://tex.stackexchange.com/a/39026/828
+		\begin{tikzpicture}
+			\pgfdeclarelayer{background}
+			\pgfsetlayers{background,main}
+			%Help lines
+			\draw[<->] (-2.25,0) -- (2.25,0);
+			\draw[<->] (0,-2.25) -- (0,2.25);
+			\draw[help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);
+			% Stuff that stays put
+			% Source
+			\fill[ubRed] (-0.25,1) rectangle node (source) [black,opacity=0, text opacity=1] {X-ray} +(0.5,0.5);
+			% Detector and detector edges
+			\fill[ubRedComplementary2,fill] (-0.5,-1.25) rectangle node (detector) [black] {Detector} +(1,0.25);
+			\coordinate (dl) at (-0.45,-1);
+			\coordinate (dr) at (0.45,-1);
+			% X-ray cone
+			\begin{pgfonlayer}{background}
+				\fill[gray,semitransparent] (source.center) -- (dl) -- (dr) -- cycle;
+			\end{pgfonlayer}
+			% Stuff that moves
+			\mode<beamer>{%
+				\begin{scope}[rotate around={\n:(0,0)}]
+				}
+				% Rotation arc
+				\draw[->, thick,line cap=rect] (0.618,-0.5) arc [start angle=0, end angle=180, radius=0.618];
+				\draw[->, thick,line cap=rect] (-0.618,-0.5) arc [start angle=-180, end angle=0, radius=0.618];
+				% Sample
+				\node[ubRedComplementary1] at (0,-0.5) (sample) {\rotatebox{\n}{\Huge\faFish}};
+			\mode<beamer>{%
+				\end{scope}
+				}
+		\end{tikzpicture}
+	}
+\end{animateinline}
+\end{document}
