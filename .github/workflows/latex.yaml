@@ -1,4 +1,4 @@
-name: Build LaTeX document, check and commit to gh-pages branch
+name: Build LaTeX & upload handout
 on:
   push:
     branches:
