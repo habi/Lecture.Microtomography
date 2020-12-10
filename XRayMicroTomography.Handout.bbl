@@ -64,7 +64,7 @@
       \verb 10.1016/j.vph.2018.09.003
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Hlushchuk, Haberth{\"{u}}r, Djonov/2019/Hlushchuk, Haberth{\"{u}}r, Djonov - 2019 - Ex vivo microangioCT Advances in microvascular imaging.pdf:pdf
+      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Hlushchuk, Haberth{\"{u}}r, Djonov - 2019 - Ex vivo microangioCT Advances in microvascular imaging.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1016/j.vph.2018.09.003 https://linkinghub.elsevier.com/retrieve/pii/S1537189118302301
@@ -73,8 +73,8 @@
       \verb https://doi.org/10.1016/j.vph.2018.09.003%20https://linkinghub.elsevier.com/retrieve/pii/S1537189118302301
       \endverb
     \endentry
-    \entry{Messerli2019}{article}{}
-      \name{author}{16}{}{%
+    \entry{MesserliAaldijk2020}{article}{}
+      \name{author}{10}{}{%
         {{hash=999bbf4601a73a482c2144ebb607f9a0}{%
            family={Messerli},
            familyi={M\bibinitperiod},
@@ -95,46 +95,16 @@
            familyi={R\bibinitperiod},
            given={Helena},
            giveni={H\bibinitperiod}}}%
-        {{hash=340429185d1fcbd01e77d34f81059a69}{%
-           family={Garcia},
-           familyi={G\bibinitperiod},
-           given={Carolina},
-           giveni={C\bibinitperiod}}}%
-        {{hash=ebf0d1a2cb0367877025107c32d8ef8f}{%
-           family={Sande},
-           familyi={S\bibinitperiod},
-           given={Marcos},
-           giveni={M\bibinitperiod}}}%
-        {{hash=bebf43f0239ede97718fcc66e3a01528}{%
-           family={Khoma},
-           familyi={K\bibinitperiod},
-           given={Oleksiy-Zakhar},
-           giveni={O\bibinithyphendelim Z\bibinitperiod}}}%
-        {{hash=81e6f68175133a5dcac0e91b298eea54}{%
-           family={Wieland},
-           familyi={W\bibinitperiod},
-           given={Fluri\bibnamedelima A.M.},
-           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=182568114f7e49c7b682be228c381a70}{%
-           family={Fark},
-           familyi={F\bibinitperiod},
-           given={Sarya},
-           giveni={S\bibinitperiod}}}%
-        {{hash=28c44c7c3e11860ed7bc799a90c1e7c5}{%
-           family={Djonov},
-           familyi={D\bibinitperiod},
-           given={Valentin},
-           giveni={V\bibinitperiod}}}%
-        {{hash=06ef4f3c16c5a6594a77a10f4bf91e27}{%
-           family={Sande-Mel{ó}n},
-           familyi={S\bibinithyphendelim M\bibinitperiod},
-           given={Marcos},
-           giveni={M\bibinitperiod}}}%
         {{hash=e022f8a1ba915a820d7c2fc18dd61c11}{%
            family={Garc{í}a-Poyatos},
            familyi={G\bibinithyphendelim P\bibinitperiod},
            given={Carolina},
            giveni={C\bibinitperiod}}}%
+        {{hash=06ef4f3c16c5a6594a77a10f4bf91e27}{%
+           family={Sande-Mel{ó}n},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={Marcos},
+           giveni={M\bibinitperiod}}}%
         {{hash=bebf43f0239ede97718fcc66e3a01528}{%
            family={Khoma},
            familyi={K\bibinitperiod},
@@ -143,8 +113,8 @@
         {{hash=81e6f68175133a5dcac0e91b298eea54}{%
            family={Wieland},
            familyi={W\bibinitperiod},
-           given={Fluri\bibnamedelima A.M.},
-           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+           given={Fluri\bibnamedelimb A.\bibnamedelimi M.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=182568114f7e49c7b682be228c381a70}{%
            family={Fark},
            familyi={F\bibinitperiod},
@@ -156,35 +126,50 @@
            given={Valentin},
            giveni={V\bibinitperiod}}}%
       }
+      \name{editor}{1}{}{%
+        {{hash=343fd248514357de25ca50c776ad0e99}{%
+           family={Shelden},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima A},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
       \list{publisher}{1}{%
-        {Cold Spring Harbor Laboratory}%
+        {Public Library of Science}%
       }
       \strng{namehash}{b5d39536ff21f9f8a3df67677d00614d}
-      \strng{fullhash}{7cb2c323b357ddafe79214ea3de2ce29}
+      \strng{fullhash}{54eb8171df18aa5ff409e125aaa76b1f}
       \strng{bibnamehash}{b5d39536ff21f9f8a3df67677d00614d}
       \strng{authorbibnamehash}{b5d39536ff21f9f8a3df67677d00614d}
       \strng{authornamehash}{b5d39536ff21f9f8a3df67677d00614d}
-      \strng{authorfullhash}{7cb2c323b357ddafe79214ea3de2ce29}
+      \strng{authorfullhash}{54eb8171df18aa5ff409e125aaa76b1f}
+      \strng{editorbibnamehash}{343fd248514357de25ca50c776ad0e99}
+      \strng{editornamehash}{343fd248514357de25ca50c776ad0e99}
+      \strng{editorfullhash}{343fd248514357de25ca50c776ad0e99}
       \field{sortinit}{2}
       \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{bioRxiv}
+      \field{abstract}{In order to study the adaptation scope of the fish respiratory organ and the O2 metabolism due to endurance training, we subjected adult zebrafish (Danio rerio) to endurance exercise for 5 weeks. After the training period, the swimmer group showed a significant increase in swimming performance, body weight and length. In scanning electron microscopy of the gills, the average length of centrally located primary filaments appeared significantly longer in the swimmer than in the non-trained control group (+6.1{\%}, 1639 $\mu$m vs. 1545 $\mu$m, p = 0.00043) and the average number of secondary filaments increased significantly (+7.7{\%}, 49.27 vs. 45.73, p = 9e-09). Micro-computed tomography indicated a significant increase in the gill volume (p = 0.048) by 11.8{\%} from 0.490 mm3 to 0.549 mm3. The space-filling complexity dropped significantly (p = 0.0088) by 8.2{\%} from 38.8{\%} to 35.9{\%}., i.e. making the gills of the swimmers less compact. Respirometry after 5 weeks showed a significantly higher oxygen consumption (+30.4{\%}, p = 0.0081) of trained fish during exercise compared to controls. Scanning electron microscopy revealed different stages of new secondary filament budding, which happened at the tip of the primary lamellae. Using BrdU we could confirm that the growth of the secondary filaments took place mainly in the distal half and the tip and for primary filaments mainly at the tip. We conclude that the zebrafish respiratory organ-unlike the mammalian lung-has a high plasticity, and after endurance training increases its volume and changes its structure in order to facilitate O2 uptake.}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{PLOS ONE}
+      \field{month}{2}
+      \field{number}{2}
       \field{title}{{Adaptation mechanism of the adult zebrafish respiratory organ to endurance training}}
-      \field{year}{2019}
-      \field{pages}{744300}
-      \range{pages}{1}
+      \field{volume}{15}
+      \field{year}{2020}
+      \field{pages}{e0228333}
+      \range{pages}{-1}
       \verb{doi}
-      \verb 10.1101/744300
+      \verb 10.1371/journal.pone.0228333
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Messerli et al/2019/Messerli et al. - 2019 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training.pdf:pdf
+      \verb :home/habi/P/Mendeley/Messerli et al/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf:pdf
       \endverb
       \verb{urlraw}
-      \verb https://www.biorxiv.org/content/10.1101/744300v3
+      \verb https://doi.org/10.1371/journal.pone.0228333
       \endverb
       \verb{url}
-      \verb https://www.biorxiv.org/content/10.1101/744300v3
+      \verb https://doi.org/10.1371/journal.pone.0228333
       \endverb
     \endentry
     \entry{Cormack1963}{article}{}
@@ -223,7 +208,7 @@
       \verb 10.1063/1.1729798
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Cormack/1963/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf:pdf
+      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://doi.org/10.1063/1.1729798 http://aip.scitation.org/doi/10.1063/1.1729798
@@ -436,7 +421,7 @@
       \verb 10.1007/s10278-013-9622-7
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Clark et al/2013/Clark et al. - 2013 - The Cancer Imaging Archive (TCIA) Maintaining and Operating a Public Information Repository.pdf:pdf
+      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Clark et al. - 2013 - The Cancer Imaging Archive (TCIA) Maintaining and Operating a Public Information Repository.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://link.springer.com/10.1007/s10278-013-9622-7
@@ -556,17 +541,17 @@
       \verb 10.1038/nmeth.2019
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Schindelin et al/2012/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf:pdf
+      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf:pdf
       \endverb
       \verb{urlraw}
-      \verb http://dx.doi.org/10.1038/nmeth.2019 https://doi.org/10.1038{\%}2Fnmeth.2019 http://www.nature.com/articles/nmeth.2019
+      \verb http://www.nature.com/articles/nmeth.2019
       \endverb
       \verb{url}
-      \verb http://dx.doi.org/10.1038/nmeth.2019%20https://doi.org/10.1038%7B%5C%%7D2Fnmeth.2019%20http://www.nature.com/articles/nmeth.2019
+      \verb http://www.nature.com/articles/nmeth.2019
       \endverb
       \keyw{Algorithms,Animals,Brain,Brain: ultrastructure,Computational Biology,Computational Biology: methods,Computer-Assisted,Computer-Assisted: methods,Drosophila melanogaster,Drosophila melanogaster: ultrastructure,Image Enhancement,Image Enhancement: methods,Image Processing,Imaging,Information Dissemination,Software,Software Design,Three-Dimensional,Three-Dimensional: methods}
     \endentry
-    \entry{Kluyver2016}{article}{}
+    \entry{Kluyver2016}{inproceedings}{}
       \name{author}{14}{}{%
         {{hash=282b5d6fe909cc357c8dd473058b8fdc}{%
            family={Kluyver},
@@ -651,7 +636,7 @@
            given={B},
            giveni={B\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
+      \list{organization}{1}{%
         {IOS Press}%
       }
       \strng{namehash}{48035973e2ebb91d3445f30ca56d312f}
@@ -667,7 +652,7 @@
       \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Positioning and Power in Academic Publishing: Players, Agents and Agendas}
+      \field{booktitle}{Positioning and Power in Academic Publishing: Players, Agents and Agendas}
       \field{title}{{Jupyter Notebooks -- a publishing format for reproducible computational workflows}}
       \field{year}{2016}
       \field{pages}{87\bibrangedash 90}
@@ -676,7 +661,7 @@
       \verb 10.3233/978-1-61499-649-1-87
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Kluyver et al/2016/Kluyver et al. - 2016 - Jupyter Notebooks -- a publishing format for reproducible computational workflows.pdf:pdf
+      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kluyver et al. - 2016 - Jupyter Notebooks—a publishing format for reproducible computational workflows.pdf:pdf
       \endverb
     \endentry
     \entry{Taylor2017}{book}{}
@@ -806,7 +791,7 @@
       \verb 10.1371/journal.pone.0014483
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Palstra et al/2010/Palstra et al. - 2010 - Establishing Zebrafish as a Novel Exercise Model Swimming Economy, Swimming-Enhanced Growth and Muscle Growth Ma.pdf:pdf
+      \verb :home/habi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Palstra et al. - 2010 - Establishing Zebrafish as a Novel Exercise Model Swimming Economy, Swimming-Enhanced Growth and Muscle Growth Ma.pdf:pdf
       \endverb
       \verb{urlraw}
       \verb http://dx.plos.org/10.1371/journal.pone.0014483 https://doi.org/10.1371{\%}2Fjournal.pone.0014483
