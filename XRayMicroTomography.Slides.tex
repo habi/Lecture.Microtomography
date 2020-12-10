@@ -55,7 +55,7 @@
 \usepackage{mathastext}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{1} % use only every nth frame for the animations
+\newcommand{\everyframe}{100} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -722,11 +722,10 @@
 
 \renewcommand{\imwidth}{0.49\linewidth}
 \begin{frame}{Projections}
-	\includegraphics[width=\imwidth]{./images/14_Physics_updated}%
-	\sourcelink{ilias.unibe.ch/goto\_ilias3\_unibe\_sess\_1555733.html}{\emph{Laws of Physics for Microscopists} by Michael Jaeger}{Slide 14}%
-	\hfill%
-	\includegraphics[width=\imwidth]{./images/15_Physics_updated}%
-	\sourcelink{ilias.unibe.ch/goto\_ilias3\_unibe\_sess\_1555733.html}{\emph{Laws of Physics for Microscopists} by Michael Jaeger}{Slide 15}%
+	\centering
+	% pdftoppm physical\ basics_2020.pdf -png physical_basics_2020
+	\includegraphics[width=\imwidth]{./images/physical_basics_2020-15}%
+	\sourcelink{ilias.unibe.ch/goto\_ilias3\_unibe\_sess\_1815148.html}{\emph{Laws of Physics for Microscopists} by Martin Frenz}{Slide 15}%
 \end{frame}
 
 \begin{frame}{Projections}
