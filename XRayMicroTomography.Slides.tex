@@ -298,6 +298,7 @@
 	\tableofcontents
 \end{frame}
 
+\renewcommand{\imheight}{0.618\textheight}
 \section{Overview}
 \begin{frame}{Biomedical imaging}
 	\begin{columns}
@@ -311,7 +312,7 @@
 		\begin{column}{0.6\linewidth}
 			\centering
 			\only<1-2|handout:1>{%
-				\includegraphics[height=0.618\textheight]{./images/Sagittal_brain_MRI}
+				\includegraphics[height=\imheight]{./images/Sagittal_brain_MRI}
 				\source{w.wiki/7g4}{\ccbysa}
 			}
 			\only<3|handout:2>{%
@@ -341,12 +342,12 @@
 
 \begin{frame}{Imaging methods}
 	\begin{itemize}
-		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1815157.html}{lecture of Nadia Mercader Huber}
+		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
 		\item Electron microscopy: see lectures
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1815162.html}{\emph{Transmission Electron Microscopy} by Dimitri Vanhecke},
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1815166.html}{\emph{Scanning Electron Microscopy} by Michael Stoffel} and
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1815168.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan Iacovache}.
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177950.html}{\emph{Transmission Electron Microscopy} by Dimitri Vanhecke},
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177954.html}{\emph{Scanning Electron Microscopy} by Michael Stoffel} and
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177956.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan Iacovache}.
 	\end{itemize}
 \end{frame}
 
@@ -358,7 +359,7 @@
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\mode<handout>{%
-		\includegraphics[height=0.618\textheight]{./movies/ct-scanner/ct-scanner0001}%
+		\includegraphics[height=\imheight]{./movies/ct-scanner/ct-scanner0001}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}:
@@ -587,11 +588,10 @@
 	
 \begin{frame}{MIP}
 	\centering
-	% pdftoppm physical\ basics_2020.pdf -png physical_basics_2020
-	\includegraphics[height=\imheight]{./images/Fundamentals_image_processing_2020-21}%
-	\sourcelink{ilias.unibe.ch/goto\_ilias3\_unibe\_sess\_1815145.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 21}%
+	% pdftoppm -png -r 300 2021_MIC_lecture_Advanced_Microscopy_v04.pdf 2021_MIC_lecture_Advanced_Microscopy_v04
+	\includegraphics[height=\imheight]{./images/2021_MIC_lecture_Advanced_Microscopy_v04-20}%
+	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2177933.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 20}%
 \end{frame}
-
 
 \subsection{Tomography today}
 \begin{frame}{Machinery}
@@ -744,8 +744,8 @@
 \begin{frame}{Projections}
 	\centering
 	% pdftoppm physical\ basics_2020.pdf -png physical_basics_2020
-	\includegraphics[height=\imheight]{./images/physical_basics_2020-15}%
-	\sourcelink{ilias.unibe.ch/goto\_ilias3\_unibe\_sess\_1815148.html}{\emph{Laws of Physics for Microscopists} by Martin Frenz}{Slide 15}%
+	\includegraphics[height=\imheight]{./images/physical_basics_2021-21}%
+	\sourcelink{ilias.unibe.ch/goto_ilias3\_unibe\_sess\_2177936.html}{\emph{Contrast, Magnification and Resolution - Laws of Physics for Microscopists} by Martin Frenz}{Slide 21}%
 \end{frame}
 
 \begin{frame}{Projections}
@@ -801,7 +801,7 @@
 \begin{frame}{What to use?}
 	\begin{itemize}
 		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
-		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_1815145.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
+		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177933.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
 		\item Reproducible research
 		\begin{itemize}
 			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
