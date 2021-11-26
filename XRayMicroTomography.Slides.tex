@@ -17,8 +17,11 @@
 	isbn=true,
 	maxnames=1,
 	sorting=none]{biblatex}
-%\addbibresource{../../../Documents/library.bib}
-\addbibresource{~/P/Documents/library.bib}
+% Load "several" bibliographies (no matter where we run this thing)
+% https://tex.stackexchange.com/a/295142/828
+\addbibresource{~/Documents/library.bib} % anomalocaris
+\addbibresource{../../../Documents/library.bib} % FastSSD or Windows
+\addbibresource{~/P/Documents/library.bib} % anaklin25
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{spy}
@@ -1059,7 +1062,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{References}
+\begin{frame}{References} 
 	% Make the references continuously smaller :)
 	%\renewcommand*{\bibfont}{\small}
 	%\renewcommand*{\bibfont}{\footnotesize}
