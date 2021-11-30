@@ -52,6 +52,7 @@
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 \usepackage{colortbl}
+\usepackage{multirow}
 \usepackage{lipsum} %for alignment testing
 \usepackage{mathastext}
 
@@ -61,7 +62,7 @@
 \newcommand{\imheight}{0.8\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
-\newcommand{\uct}{\si{\micro}CT\xspace}% make our life easier
+\newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
 \newcommand{\ie}{i.\,e.\xspace}%
 
@@ -260,7 +261,7 @@
 			\item Physicist by trade
 			\item \href{https://boris.unibe.ch/2619/}{PhD in high resolution imaging of the lung}, Institute of Anatomy, University of Bern, Switzerland
 			\item Post-Doc I: \href{https://www.psi.ch/sls/tomcat/}{TOMCAT}, \href{https://www.psi.ch/sls/}{Swiss Light Source}, \href{https://www.psi.ch/}{Paul Scherrer Institute}, Switzerland
-			\item Post-Doc II: \uct-group, Institute of Anatomy, University of Bern, Switzerland.\newline
+			\item Post-Doc II: \uct group, Institute of Anatomy, University of Bern, Switzerland.\newline
 				Together with Ruslan Hlushchuk, Oleksiy-Zakhar Khoma and Tim Hoessly.
 		\end{itemize}
 	\end{itemize}
@@ -432,7 +433,7 @@
 		\only<1>{%
 			\pgfplotstabletypeset[%
 				col sep=comma,% the seperator in our .csv file
-				display columns/0/.style={string type,column name={Element}},%
+				display columns/0/.style={string type},%
 				% section 3.2 in pgfplotstable manual
 				every head row/.style={before row={\toprule}},%
 				every row no 0/.style={after row=\midrule},%
@@ -442,7 +443,7 @@
 		\only<2|handout:0>{%
 			\pgfplotstabletypeset[%
 				col sep=comma,% the seperator in our .csv file
-				display columns/0/.style={string type,column name={Element}},%
+				display columns/0/.style={string type},%
 				every head row/.style={before row={\toprule}},%
 				every row no 0/.style={after row=\midrule},%
 				every last row/.style={after row=\bottomrule},%
@@ -712,7 +713,7 @@
 		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
 		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/{{Diancta_rec00000666}}}};
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
 			% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
 			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.9025}{\milli\meter} (387px) TEMPORARY!};
 			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
@@ -849,213 +850,478 @@
 
 \subsection{Overview}
 \begin{frame}
-	\frametitle{An example: Do gills change with training?}
-	\centering
-	% Image adapted from https://teacheratsea.files.wordpress.com/2011/07/gills-an-o2.jpg
-	\includegraphics[height=\imheight]{./images/gills-and-o2}%
-	\source{Campbell Biology}{\cite{Taylor2017}}
+	\frametitle{Internal morphology of human teeth}
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node at (current page.center) [shift={(0,-25pt)}]{%
+		\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}%
+			};%
+	\end{tikzpicture}%
+	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}
+	\begin{itemize}
+		\item Numbers instead of just pretty images
+		\item Segmentation of teeth and root canal
+		\item (Unbiased) Characterization
+		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
+		\item Two publications:
+		\begin{itemize}
+			\item ~\cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}
+			\item ~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Gill anatomy}
-	\begin{tikzpicture}[remember picture,overlay]%
-		\node at (current page.center){%
-			\mode<beamer>{\animategraphics[autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/fishhead/head-without-gills0}{001}{160}}%
-			\mode<handout>{\includegraphics[width=\paperwidth]{./movies/fishhead/head-without-gills0001}}%
-			};%
-	\end{tikzpicture}%
+	\frametitle{Internal morphology of human teeth}
+	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}
+	\begin{itemize}
+		\item Numbers instead of just pretty images
+		\item Segmentation of teeth and root canal
+		\item (Unbiased) Characterization
+		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
+		\item Two publications:
+		\begin{itemize}
+			\item ~\cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}
+			\item ~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Gill anatomy}
-	\begin{tikzpicture}[remember picture,overlay]%
-\node at (current page.center){%
-			\mode<beamer>{\animategraphics[autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/fishhead/head-without-gills0}{161}{481}}%
-			\mode<handout>{\includegraphics[width=\paperwidth]{./movies/fishhead/head-without-gills0333}}%
-			};%
-	\end{tikzpicture}%
-\end{frame}
-
-\subsection{Setup}
-\renewcommand{\imwidth}{\columnwidth}
+\renewcommand{\imwidth}{0.75\linewidth}
+\renewcommand{\imheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{How?}
 	\begin{columns}
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\linewidth}
 			\begin{itemize}
-				\item<1-> Training for \SI{5}{w}, \SI{5}{\day\per w}, \SI{6}{\hour\per\day}, at \SI{66}{\percent} of critical speed~\cite{Palstra2010}
+				\item<1-> 104 extracted human permanent mandibular canines
+				\item<2-> \uct imaging
+				\item<4-> Morphology
 				\begin{itemize}
-					\item<1-> Endurance
+					\item<4-> Root canal configuration (RCC), according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
+					\item<5-> Foramen geometry and size, according to~\citeauthor{Wolf2017}~\cite{Wolf2017}
 				\end{itemize}
-				\item<3-|handout:2-> Morphology \& Physiology
-				\begin{itemize}
-					\item<3-|handout:2-> Body size \& weight
-					\item<3-|handout:2-> \ce{O2} consumption
-				\end{itemize}
-				\item<4-|handout:3-> Scanning electron microscopy
-				\begin{itemize}
-					\item<4-|handout:3-> Gill structure
-				\end{itemize}
-				\item<5-|handout:4-> Critical point drying\onslide<6-|handout:5->{, \uct imaging}\onslide<7-|handout:6->{, delineation in CTAn }\onslide<8-|handout:7->{and analysis}
-				\begin{itemize}
-					\item<8-|handout:7-> Gill volume, structure and complexity
-				\end{itemize}
+				\item<6-> \emph{Reproducible} analysis~\cite{Haberthur2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.49\linewidth}
-			\only<1|handout:1>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
-				\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
-				\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
-				\def\y{547}% scalebar-y at 90% of image height of 608px = 547
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/fishvideo_0001}};%
-					% 69px = 30mm > 100px = 44mm > 1142px = 500mm, 228px = 100mm
-					%\draw[|-|,blue] (410,188) -- (478,182) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{30}{\milli\meter} (TEMPORARY)};
-					\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
-				\end{tikzpicture}%
-				}%
-			\only<2|handout:0>{%
-				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/training/fishvideo_0}{001}{250}%
-				}%
-			\only<3|handout:2>{\centering\Huge\faFish:\xspace\faRuler\xspace\&\xspace\faWeight}
-			\renewcommand{\imwidth}{0.49\columnwidth}%
-			\only<4|handout:3>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
-				\pgfmathsetlength{\imagescale}{\imagewidth/794}%
-				\def\x{491}% scalebar-x starting at golden ratio of image width of 794px = 491
-				\def\y{458}% scalebar-y at 90% of image height of 509px = 458
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_c5_3}};%
-					% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
-					%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
-				\end{tikzpicture}%
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_s5_3}};%
-					% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
-					%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
-				\end{tikzpicture}%
-				}
-			\renewcommand{\imwidth}{\columnwidth}
-			\only<5|handout:4>{%
+		\begin{column}{0.5\linewidth}
+			\only<1>{%
 				\centering
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
-				\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
-				\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
-				\def\y{673}% scalebar-y at 90% of image height of 748px = 673
+				\pgfmathsetlength{\imagescale}{\imagewidth/2716}%
+				\def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
+				\def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/IMG_20190603_174659}};
-					% 294px = 12.5mm > 100px = 4250um > 118px = 5mm
-					%\draw[|-|,blue,thick] (494,218) -- (624,481) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{12.5}{\milli\meter} (294px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+118,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/bucketofteeth}};
+					% 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
+					%\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{140.0}{\milli\meter} (2132px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
-				}
-			\only<6|handout:5>{%
-				\lstinputlisting[linerange={2-5,17-17,19-23,29-31,34-34,38-40,51-51,58-59}]{./logfiles/Control05/proj/Control05.log}%
-				}
-			\includegraphics<7|handout:6>[height=\imheight]{./images/CTAn}%
-			\only<8|handout:7>{%
-				\mode<beamer>{%
-					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
-					\source{gph.is/2nqkple}{}%
+				}%
+			\only<2>{%
+				\lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
+				}%
+			\only<3>{%
+				\emph{Sample changer} on the SkyScan 1272\newline
+				In total:
+				\begin{itemize}
+					\item 13 days of \emph{continuous} \uct scanning
+					\item \SI{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
+					\item \SI{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
+				\end{itemize}
 					}%
-				\mode<handout>{%
-					\includegraphics[width=\linewidth]{./movies/coder/coder-0}%
-					\source{gph.is/2nqkple}{}%
-					}%
-				}
+			\renewcommand{\imwidth}{\linewidth}%
+			\only<4>{%
+				\centering%
+				\includegraphics[width=\imwidth]{./images/briseno}%
+				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
+				}%
+			\only<5>{%
+				\centering%
+				\includegraphics[width=\imwidth]{./images/foramen}%
+				\sourcecite{Wolf2017}{Fig.~1}%
+				}%
+			\only<6>{%
+				\centering%
+				\animategraphics[loop,autoplay,width=\imwidth]{24}{./movies/coder/coder-}{0}{133}%
+				\source{gph.is/2nqkple}{}%
+				}%
+			\only<7>{%
+				\centering
+				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imheight]{./images/binder}}%
+				}%
 		\end{column}
 	\end{columns}
 \end{frame}
-\note{Comparable with the weekly training routine of Michael Phelps.
-	The fish trained only for ca. \SI{7}{\percent} of their lifetime and started as adults.
-	The Olympic winner trained for half of his lifetime and started as child.}
-\note{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
-	This means we analyzed 129.40 Gigapixels.
-	This means we analyzed \num{129395.29} Megapixels.
-	In total \num{46014} slices.}
 
-\subsection{Image processing}
+\renewcommand{\imheight}{0.618\paperheight}
 \begin{frame}
-	\frametitle{Gill volume}
+	\frametitle{\uct imaging}
 	\centering
-	\only<1|handout:1>{%
-		\pgfmathsetlength{\imagewidth}{0.4\linewidth}%
-		\pgfmathsetlength{\imagescale}{\imagewidth/2524}%
-		\def\x{1560}% scalebar-x starting at golden ratio of image width of 2524px = 1560
-		\def\y{2272}% scalebar-y at 90% of image height of 2524px = 2272
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865}};
-			% 2524px = 4.1874422mm > 100px = 166um > 301px = 500um, 60px = 100um
-			%\draw[|-|,blue] (0,1262) -- (2524,1262) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{4.18}{\milli\meter} (2524px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%
-	}%
-	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
-	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
-	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
-	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
-	\only<2|handout:2>{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865_crop}};
-			% 2163px = 3.5885251499999997mm > 100px = 166um > 301px = 500um, 60px = 100um
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%
-		}%
-	\only<3|handout:3>{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec0000_voi_1865_crop}};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%
-		}%
-	\only<4|handout:4>{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%
-		}%
-	\only<5|handout:5>{\include{./plots/Gillvolume}}
-	\only<6|handout:0>{\include{./plots/Gillvolume_scaled}}
+	\includegraphics<1>[height=\imheight]{{{./images/ScanOverviews.104}}}%
+	\includegraphics<2>[height=\imheight]{{{./images/ScanOverviews.24}}}%
+\end{frame}
+
+\renewcommand{\imwidth}{\linewidth}
+\begin{frame}
+	\frametitle{Dataset cropping}
+	\begin{columns}
+		\begin{column}{0.382\linewidth}
+			\begin{itemize}
+				\item Full datasets: \SI{326}{\giga\byte}%
+				\item<2> Cropped datasets: \SI{115}{\giga\byte}%
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.618\linewidth}
+			\centering%
+			\includegraphics<1>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Original}}%
+			\includegraphics<2>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Cropped}}%
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Gill complexity}
-	\centering
-	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
-	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
-	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
-	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
-	\only<1|handout:1>{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%
-		}%
-	\only<2|handout:2>{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_edit}};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%
-		}%
-	\only<3|handout:3>{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_combination}};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-		\end{tikzpicture}%
-		}%
-	\only<4|handout:4>{%
-		\begin{tikzpicture}[remember picture,overlay]%
-			\node at (current page.center){%
-				\mode<beamer>{\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/complexity/control03_thresholded_0}{030}{256}}%
-				\mode<handout>{\includegraphics[width=\paperwidth]{./movies/complexity/control03_thresholded_0068}}%
-				};%
-		\end{tikzpicture}%
-		}%
-	\only<5|handout:5>{\include{./plots/Gills_per_organ}}
-	\only<6|handout:0>{\include{./plots/Gills_per_organ_scaled}}
+	\frametitle{Tooth morphology}
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node at (current page.center) [shift={(0,-25pt)}]{%
+			\only<1>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
+			\only<2>{\includegraphics[height=\imheight]{./images/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
+			\only<3>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}}%
+			};%
+	\end{tikzpicture}%
 \end{frame}
+
+\begin{frame}
+	\frametitle{Detection of enamel-dentin border}
+	\centering
+	\only<1>{%
+		\includegraphics[height=\imheight]{{./images/tooth045/Tooth045.ExtractedSlices}}%
+		}%
+	\only<2>{%
+		\includegraphics[width=\linewidth]{{./images/tooth045/Tooth045.Briseno}}%
+		}%
+\end{frame}
+
+\begin{frame}[shrink=20]
+	\frametitle{Outcome root canal configuration classification}%
+	\centering%
+	\begin{table}[]%
+		\only<1>{%
+		\begin{tabular}{llcSS}%
+			\toprule%
+			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
+			\midrule%
+			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & 74.5\\%
+			\multicolumn{2}{l}{}							   & 1-1-1/2 & 14 & 14.3\\%
+			\multicolumn{2}{l}{}							   & 1-1-1/3 &  1 &  1.0\\%
+			\multicolumn{2}{l}{}							   & 1-1-1/4 &  2 &  2.1\\%
+			\multicolumn{2}{l}{}							   & 1-1-2/1 &  1 &  1.0\\%
+			\multicolumn{2}{l}{}							   & 1-2-1/1 &  4 &  4.1\\%
+			\multicolumn{2}{l}{}							   & 1-2-1/2 &  1 &  1.0\\%
+			\multicolumn{2}{l}{}							   & 1-2-2/2 &  1 &  1.0\\%
+			\multicolumn{2}{l}{}							   & 2-3-1/1 &  1 &  1.0\\%
+			\midrule%
+			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}	& 1-1-1/1 & 2 & 66.6\\%
+											&							& 1-2-1/1 & 1 & 33.3\\%
+											& \multirow{2}{*}{Lingual}	& 1-1-1/1 & 2 & 66.6\\%
+											&							& 1-1-1/2 & 1 & 33.3\\%
+			\bottomrule%
+		\end{tabular}%
+		}%
+		\only<2>{%
+		\begin{tabular}{llcSS}%
+			\toprule%
+			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
+			\midrule%
+			\rowcolor{ubRed}\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}	& 1-1-1/1 & 73 & 74.5\\%
+			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/2 & 14 & 14.3\\%
+			\multicolumn{2}{l}{}												& 1-1-1/3 &  1 &  1.0\\%
+			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/4 &  2 &  2.1\\%
+			\multicolumn{2}{l}{}												& 1-1-2/1 &  1 &  1.0\\%
+			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-2-1/1 &  4 &  4.1\\%
+			\multicolumn{2}{l}{}												& 1-2-1/2 &  1 &  1.0\\%
+			\multicolumn{2}{l}{}												& 1-2-2/2 &  1 &  1.0\\%
+			\multicolumn{2}{l}{}												& 2-3-1/1 &  1 &  1.0\\%
+			\midrule%
+			\multirow{4}{*}{Double (N=3)} & \multirow{2}{*}{Buccal}				& 1-1-1/1 &  2 & 66.6\\%
+										  &										& 1-2-1/1 &  1 & 33.3\\%
+										  & \multirow{2}{*}{Lingual}			& 1-1-1/1 &  2 & 66.6\\%
+										  &										& 1-1-1/2 &  1 & 33.3\\%
+			\bottomrule%
+		\end{tabular}%
+		}%
+	\end{table}%
+\end{frame}%
+
+\begin{frame}
+	\frametitle{Extraction of root canal space}
+	\begin{tikzpicture}[remember picture,overlay]%
+	\node at (current page.center) [shift={(0,-25pt)}]{%
+		\only<1>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices/image0}{000}{473}}%
+		\only<2>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices-rcs/image0}{000}{457}}%
+		\only<3>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/rcs/image0}{000}{413}}%
+		};%
+	\end{tikzpicture}%
+\end{frame}
+
+\begin{frame}
+	\frametitle{Outcome of root canal space extraction}%
+	\renewcommand{\imheight}{0.618\paperheight}%
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%	
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0278}%
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0353}%
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0419}%
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0642}%
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0752}%
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0931}%
+\end{frame}
+
+\begin{frame}
+	\frametitle{Analysis of the physiological foramen geometry}
+	\centering
+	\only<1>{%
+		\includegraphics[height=\imheight]{./images/foramen}%
+		\sourcecite{Wolf2017}{Fig.~1}%
+		}%
+	\only<2>{%
+		\animategraphics[palindrome,autoplay,height=\imheight]{24}{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_}{100}{199}%
+		}%
+	\only<3>{%
+		\animategraphics[palindrome,autoplay,height=\imheight]{24}{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_}{123}{213}%
+		}%
+\end{frame}
+
+\begin{frame}
+	\frametitle{Outcome of foramen geometry analysis}
+	\centering
+	\begin{table}[]
+		\begin{tabular}{cSSSSSSSS}
+		\toprule
+		& \multicolumn{2}{c}{1 Foramen} & \multicolumn{2}{c}{2 Foramina} & \multicolumn{2}{c}{3 Foramina} & \multicolumn{2}{c}{4 Foramina}\\
+		& \#  & \% & \# & \% & \# & \% & \# & \%\\
+		\midrule
+		Oval		& 72 & 91.1 & 16 & 100.0 & 1 & 100.0 & 2 & 100.0\\
+		Round		&  6 &  7.6 &    &       &   &       &   &\\
+		Irregular	&  1 &  1.3 &    &       &   &       &   &\\
+		\midrule
+		N			& 79 &      & 16 &       & 1 &       & 2 &\\
+		\bottomrule
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusion}
+	\begin{itemize}
+		\item Efficient use of time, \eg more teeth does not mean more (human) work
+		\item Reproducible analysis with \emph{free and open-source} software, usable by \emph{anyone}
+		\item Objective analysis, \eg no operator bias
+	\end{itemize}
+\end{frame}
+
+
+
+
+
+%\begin{frame}
+%	\frametitle{Gill anatomy}
+%	\begin{tikzpicture}[remember picture,overlay]%
+%		\node at (current page.center){%
+%			\mode<beamer>{\animategraphics[autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/fishhead/head-without-gills0}{001}{160}}%
+%			\mode<handout>{\includegraphics[width=\paperwidth]{./movies/fishhead/head-without-gills0001}}%
+%			};%
+%	\end{tikzpicture}%
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{Gill anatomy}
+%	\begin{tikzpicture}[remember picture,overlay]%
+%\node at (current page.center){%
+%			\mode<beamer>{\animategraphics[autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/fishhead/head-without-gills0}{161}{481}}%
+%			\mode<handout>{\includegraphics[width=\paperwidth]{./movies/fishhead/head-without-gills0333}}%
+%			};%
+%	\end{tikzpicture}%
+%\end{frame}
+%
+%\subsection{Setup}
+%\renewcommand{\imwidth}{\columnwidth}
+%\begin{frame}
+%	\frametitle{How?}
+%	\begin{columns}
+%		\begin{column}{0.49\linewidth}
+%			\begin{itemize}
+%				\item<1-> Training for \SI{5}{w}, \SI{5}{\day\per w}, \SI{6}{\hour\per\day}, at \SI{66}{\percent} of critical speed~\cite{Palstra2010}
+%				\begin{itemize}
+%					\item<1-> Endurance
+%				\end{itemize}
+%				\item<3-|handout:2-> Morphology \& Physiology
+%				\begin{itemize}
+%					\item<3-|handout:2-> Body size \& weight
+%					\item<3-|handout:2-> \ce{O2} consumption
+%				\end{itemize}
+%				\item<4-|handout:3-> Scanning electron microscopy
+%				\begin{itemize}
+%					\item<4-|handout:3-> Gill structure
+%				\end{itemize}
+%				\item<5-|handout:4-> Critical point drying\onslide<6-|handout:5->{, \uct imaging}\onslide<7-|handout:6->{, delineation in CTAn }\onslide<8-|handout:7->{and analysis}
+%				\begin{itemize}
+%					\item<8-|handout:7-> Gill volume, structure and complexity
+%				\end{itemize}
+%			\end{itemize}
+%		\end{column}
+%		\begin{column}{0.49\linewidth}
+%			\only<1|handout:1>{%
+%				\pgfmathsetlength{\imagewidth}{\imwidth}%
+%				\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
+%				\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
+%				\def\y{547}% scalebar-y at 90% of image height of 608px = 547
+%				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+%					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./movies/training/fishvideo_0001}};%
+%					% 69px = 30mm > 100px = 44mm > 1142px = 500mm, 228px = 100mm
+%					%\draw[|-|,blue] (410,188) -- (478,182) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{30}{\milli\meter} (TEMPORARY)};
+%					\draw[|-|,white] (\x,\y) -- (\x+228.4,\y) node [midway,above] {\(\approx\)\SI{10}{\centi\meter}};%
+%				\end{tikzpicture}%
+%				}%
+%			\only<2|handout:0>{%
+%				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/training/fishvideo_0}{001}{250}%
+%				}%
+%			\only<3|handout:2>{\centering\Huge\faFish:\xspace\faRuler\xspace\&\xspace\faWeight}
+%			\renewcommand{\imwidth}{0.49\columnwidth}%
+%			\only<4|handout:3>{%
+%				\pgfmathsetlength{\imagewidth}{\imwidth}%
+%				\pgfmathsetlength{\imagescale}{\imagewidth/794}%
+%				\def\x{491}% scalebar-x starting at golden ratio of image width of 794px = 491
+%				\def\y{458}% scalebar-y at 90% of image height of 509px = 458
+%				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+%					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_c5_3}};%
+%					% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
+%					%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
+%					\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
+%				\end{tikzpicture}%
+%				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+%					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/EM_s5_3}};%
+%					% 794px = 2.4111398mm > 100px = 304um > 165px = 500um, 33px = 100um
+%					%\draw[|-|,blue] (0,298) -- (794,298) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.4111398}{\milli\meter} (794px) TEMPORARY!};
+%					\draw[|-|,white,shadowed] (\x,\y) -- (\x+165,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
+%				\end{tikzpicture}%
+%				}
+%			\renewcommand{\imwidth}{\columnwidth}
+%			\only<5|handout:4>{%
+%				\centering
+%				\pgfmathsetlength{\imagewidth}{\imwidth}%
+%				\pgfmathsetlength{\imagescale}{\imagewidth/1080}%
+%				\def\x{667}% scalebar-x starting at golden ratio of image width of 1080px = 667
+%				\def\y{673}% scalebar-y at 90% of image height of 748px = 673
+%				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imwidth]{./images/IMG_20190603_174659}};
+%					% 294px = 12.5mm > 100px = 4250um > 118px = 5mm
+%					%\draw[|-|,blue,thick] (494,218) -- (624,481) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{12.5}{\milli\meter} (294px) TEMPORARY!};
+%					\draw[|-|,white,shadowed] (\x,\y) -- (\x+118,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+%				\end{tikzpicture}%
+%				}
+%			\only<6|handout:5>{%
+%				\lstinputlisting[linerange={2-5,17-17,19-23,29-31,34-34,38-40,51-51,58-59}]{./logfiles/Control05/proj/Control05.log}%
+%				}
+%			\includegraphics<7|handout:6>[height=\imheight]{./images/CTAn}%
+%			\only<8|handout:7>{%
+%				\mode<beamer>{%
+%					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
+%					\source{gph.is/2nqkple}{}%
+%					}%
+%				\mode<handout>{%
+%					\includegraphics[width=\linewidth]{./movies/coder/coder-0}%
+%					\source{gph.is/2nqkple}{}%
+%					}%
+%				}
+%		\end{column}
+%	\end{columns}
+%\end{frame}
+%\note{Comparable with the weekly training routine of Michael Phelps.
+%	The fish trained only for ca. \SI{7}{\percent} of their lifetime and started as adults.
+%	The Olympic winner trained for half of his lifetime and started as child.}
+%\note{We analyzed 20 samples with a mean size of a cube with a side length of 1863 pixels.
+%	This means we analyzed 129.40 Gigapixels.
+%	This means we analyzed \num{129395.29} Megapixels.
+%	In total \num{46014} slices.}
+%
+%\subsection{Image processing}
+%\begin{frame}
+%	\frametitle{Gill volume}
+%	\centering
+%	\only<1|handout:1>{%
+%		\pgfmathsetlength{\imagewidth}{0.4\linewidth}%
+%		\pgfmathsetlength{\imagescale}{\imagewidth/2524}%
+%		\def\x{1560}% scalebar-x starting at golden ratio of image width of 2524px = 1560
+%		\def\y{2272}% scalebar-y at 90% of image height of 2524px = 2272
+%		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865}};
+%			% 2524px = 4.1874422mm > 100px = 166um > 301px = 500um, 60px = 100um
+%			%\draw[|-|,blue] (0,1262) -- (2524,1262) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{4.18}{\milli\meter} (2524px) TEMPORARY!};
+%			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+%		\end{tikzpicture}%
+%	}%
+%	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
+%	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
+%	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
+%	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
+%	\only<2|handout:2>{%
+%		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec00001865_crop}};
+%			% 2163px = 3.5885251499999997mm > 100px = 166um > 301px = 500um, 60px = 100um
+%			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+%		\end{tikzpicture}%
+%		}%
+%	\only<3|handout:3>{%
+%		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_rec0000_voi_1865_crop}};
+%			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+%		\end{tikzpicture}%
+%		}%
+%	\only<4|handout:4>{%
+%		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
+%			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+%		\end{tikzpicture}%
+%		}%
+%	\only<5|handout:5>{\include{./plots/Gillvolume}}
+%	\only<6|handout:0>{\include{./plots/Gillvolume_scaled}}
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{Gill complexity}
+%	\centering
+%	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
+%	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
+%	\def\x{1730}% scalebar-x starting at golden ratio of image width of 2163px = 1337
+%	\def\y{1191}% scalebar-y at 90% of image height of 1323px = 1191
+%	\only<1|handout:1>{%
+%		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_thresholded_1500_crop}};
+%			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+%		\end{tikzpicture}%
+%		}%
+%	\only<2|handout:2>{%
+%		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_edit}};
+%			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+%		\end{tikzpicture}%
+%		}%
+%	\only<3|handout:3>{%
+%		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+%			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Control03_area_organ_1500_crop_combination}};
+%			\draw[|-|,white,shadowed] (\x,\y) -- (\x+301,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+%		\end{tikzpicture}%
+%		}%
+%	\only<4|handout:4>{%
+%		\begin{tikzpicture}[remember picture,overlay]%
+%			\node at (current page.center){%
+%				\mode<beamer>{\animategraphics[palindrome,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/complexity/control03_thresholded_0}{030}{256}}%
+%				\mode<handout>{\includegraphics[width=\paperwidth]{./movies/complexity/control03_thresholded_0068}}%
+%				};%
+%		\end{tikzpicture}%
+%		}%
+%	\only<5|handout:5>{\include{./plots/Gills_per_organ}}
+%	\only<6|handout:0>{\include{./plots/Gills_per_organ_scaled}}
+%\end{frame}
 
 \begin{frame}
 	\frametitle{Thanks!}
@@ -1089,7 +1355,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[shrink]
+\begin{frame}[shrink=20]
 	\frametitle{References}
 	% Make the references continuously smaller :)
 	%\renewcommand*{\bibfont}{\small}
