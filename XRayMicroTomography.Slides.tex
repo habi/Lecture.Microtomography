@@ -689,15 +689,13 @@
 			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.9025}{\milli\meter} (387px) TEMPORARY!};
 			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
-		%\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<5|handout:0>{%
 		\animategraphics[autoplay,palindrome,width=0.45\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{666}{904}%
-		}%
-	\only<6|handout:3>{%
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
-	\only<7|handout:4>{%
+	\only<6|handout:4>{%
 		\pgfmathsetlength{\imagewidth}{0.42\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
 		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
@@ -709,7 +707,7 @@
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 	}%
-	\only<8|handout:5>{%
+	\only<7|handout:5>{%
 		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
 		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
