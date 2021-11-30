@@ -17,9 +17,7 @@
 	isbn=true,
 	maxnames=1,
 	sorting=none]{biblatex}
-% Load "several" bibliographies (no matter where we run this thing)
-% https://tex.stackexchange.com/a/295142/828
-\addbibresource{../../../Documents/library.bib} % FastSSD or Windows (on Linux we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` the correct file to it)
+\addbibresource{../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{spy}
@@ -57,7 +55,7 @@
 \usepackage{mathastext}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{1} % use only every nth frame for the animations
+\newcommand{\everyframe}{111} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.8\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -82,33 +80,6 @@
 % Globally thicker lines in with tikz
 % https://tex.stackexchange.com/a/206769/828
 \tikzset{every picture/.style={thick}}
-
-% And thicker plots by default
-% https://tex.stackexchange.com/a/235439/828
-% https://tex.stackexchange.com/q/262486/828
-\pgfplotsset{%
-	every axis plot/.append style={thick},
-	every axis/.append style={thick}
-	every axis plot post/.append style={every mark/.append style={thick}}
-	}
-
-% stripped-down plot styling
-% Based on https://tex.stackexchange.com/a/155210/828
-% And then start each plot with `\begin{axis}[tuftelike,'
-\pgfkeys{%
-	/pgfplots/simplified/.style={%
-		tick style={major tick length=0pt},
-%		separate axis lines,
-%		axis x line*=bottom,
-%		axis x line shift=10pt,
-%		xlabel shift=1pt,
-%		axis y line*=left,
-%		axis y line shift=10pt,
-		ymajorgrids=true,
-		axis line style={draw=none},
-%		ylabel shift=1pt
-		}
-	}
 
 % Acknowledge images just below them
 % Based on https://tex.stackexchange.com/a/282637/828
@@ -286,12 +257,12 @@
 		\end{column}
 		\begin{column}{0.382\linewidth}
 			\centering
-			\includegraphics<1>[height=\imheight]{./images/1172}%
-			\only<1>{\source{brukersupport.com}{}}
+			\includegraphics<1|handout:0>[height=\imheight]{./images/1172}%
+			\only<1|handout:0>{\source{brukersupport.com}{}}
 			\includegraphics<2>[width=\imwidth]{./images/1272}%
 			\only<2>{\source{bruker.com/skyscan1272}{}}
-			\includegraphics<3>[width=\imwidth]{./images/2214}%
-			\only<3>{\source{bruker.com/skyscan2214}{}}
+			\includegraphics<3|handout:0>[width=\imwidth]{./images/2214}%
+			\only<1|handout:0>{\source{bruker.com/skyscan2214}{}}
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -606,35 +577,35 @@
 \subsection{Tomography today}
 \begin{frame}
 	\frametitle{Machinery}
-	\begin{columns}
-		\begin{column}{0.4\linewidth}
-			\begin{itemize}
-				\item<1-> Hospital CT
-				\begin{itemize}
-					\item Voxel size around \SI{0.5}{\milli\meter}
-				\end{itemize}
-				\item<2-> Lab/Desktop CT
-				\begin{itemize}
-					\item Voxel size around \SI{7}{\micro\meter} (\emph{in vivo}) or \SI{0.5}{\micro\meter} (\emph{ex vivo})
-				\end{itemize}
-				\item<4-> Synchrotron CT
-				\begin{itemize}
-					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\SI{160}{\nano\meter}}
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.6\linewidth}
-			\centering
+	\begin{columns}%
+		\begin{column}{0.45\linewidth}%
+			\begin{itemize}%
+				\item<1-> Hospital CT%
+				\begin{itemize}%
+					\item Voxel size around \SI{0.5}{\milli\meter}%
+				\end{itemize}%
+				\item<2-> Lab/Desktop CT%
+				\begin{itemize}%
+					\item Voxel size around \SI{7}{\micro\meter} (\emph{in vivo}) or \SI{0.5}{\micro\meter} (\emph{ex vivo})%
+				\end{itemize}%
+				\item<4-> Synchrotron CT%
+				\begin{itemize}%
+					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\SI{160}{\nano\meter}}%
+				\end{itemize}%
+			\end{itemize}%
+		\end{column}%
+		\begin{column}{0.55\linewidth}%
+			\centering%
 			\includegraphics<1|handout:1>[height=\imheight]{./images/24324062640_751e011e1a_o}%
-			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}
+			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}%
 			\includegraphics<2|handout:2>[width=\imheight]{./images/9459311320_516179207a_o}%
-			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}
+			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}%
 			\includegraphics<3|handout:3>[width=\imwidth]{./images/1272}%
-			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}
+			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}%
 			\includegraphics<4|handout:4>[width=\imwidth]{./images/4563733710_f632792416_b}%
-			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}
-		\end{column}
-	\end{columns}
+			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}%
+		\end{column}%
+	\end{columns}%
 \end{frame}
 \note{FAN BEAM -> BRUKER\newline
 	PARALLEL BEAM -> TOMCAT\newline
@@ -718,13 +689,15 @@
 			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.9025}{\milli\meter} (387px) TEMPORARY!};
 			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
-		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+		%\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<5|handout:0>{%
 		\animategraphics[autoplay,palindrome,width=0.45\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{666}{904}%
+		}%
+	\only<6|handout:3>{%
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
-	\only<6|handout:4>{%
+	\only<7|handout:4>{%
 		\pgfmathsetlength{\imagewidth}{0.42\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
 		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
@@ -736,7 +709,7 @@
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 	}%
-	\only<7|handout:5>{%
+	\only<8|handout:5>{%
 		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
 		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
@@ -849,26 +822,26 @@
 \end{frame}
 
 \subsection{Overview}
-\begin{frame}[label=current]
-	\frametitle{Internal morphology of human teeth}
+\begin{frame}
+	\frametitle{Internal morphology of human teeth}%
+	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
+	\begin{itemize}%
+		\item Numbers instead of just pretty images%
+		\item Segmentation of teeth and root canal%
+		\item (Unbiased) Characterization%
+		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
+		\item Two publications:%
+		\begin{itemize}%
+			\item ~\cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
+			\item ~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
+		\end{itemize}%
+	\end{itemize}%
 	\begin{tikzpicture}[remember picture,overlay]%
 		\node at (current page.center) [shift={(0,-25pt)}]{%
 		\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
 		\mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
 			};%
 	\end{tikzpicture}%
-	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}
-	\begin{itemize}
-		\item Numbers instead of just pretty images
-		\item Segmentation of teeth and root canal
-		\item (Unbiased) Characterization
-		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
-		\item Two publications:
-		\begin{itemize}
-			\item ~\cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}
-			\item ~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}
-		\end{itemize}
-	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -889,7 +862,7 @@
 
 \renewcommand{\imwidth}{0.75\linewidth}
 \renewcommand{\imheight}{0.618\paperheight}
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{How?}
 	\begin{columns}
 		\begin{column}{0.5\linewidth}
@@ -905,7 +878,7 @@
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.5\linewidth}
-			\only<1>{%
+			\only<1|handout:1>{%
 				\centering
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/2716}%
@@ -918,10 +891,10 @@
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 				}%
-			\only<2>{%
+			\only<2|handout:2>{%
 				\lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
 				}%
-			\only<3>{%
+			\only<3|handout:3>{%
 				\emph{Sample changer} on the SkyScan 1272\newline
 				In total:
 				\begin{itemize}
@@ -931,17 +904,17 @@
 				\end{itemize}
 					}%
 			\renewcommand{\imwidth}{\linewidth}%
-			\only<4>{%
+			\only<4|handout:4>{%
 				\centering%
 				\includegraphics[width=\imwidth]{./images/briseno}%
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
-			\only<5>{%
+			\only<5|handout:5>{%
 				\centering%
 				\includegraphics[width=\imwidth]{./images/foramen}%
 				\sourcecite{Wolf2017}{Fig.~1}%
 				}%
-			\only<6>{%
+			\only<6|handout:6>{%
 				\centering%
 				\mode<beamer>{%
 					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
@@ -952,7 +925,7 @@
 					\source{gph.is/2nqkple}{}%
 					}%
 				}%
-			\only<7>{%
+			\only<7|handout:7>{%
 				\centering
 				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imheight]{./images/binder}}%
 				}%
@@ -961,10 +934,10 @@
 \end{frame}
 
 \renewcommand{\imheight}{0.618\paperheight}
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics<1>[height=\imheight]{{{./images/ScanOverviews.104}}}%
+	\includegraphics<1|handout:0>[height=\imheight]{{{./images/ScanOverviews.104}}}%
 	\includegraphics<2>[height=\imheight]{{{./images/ScanOverviews.24}}}%
 \end{frame}
 
@@ -980,8 +953,8 @@
 		\end{column}
 		\begin{column}{0.618\linewidth}
 			\centering%
-			\includegraphics<1>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Original}}%
-			\includegraphics<2>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Cropped}}%
+			\includegraphics<1|handout:1>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Original}}%
+			\includegraphics<2|handout:2>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Cropped}}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -990,7 +963,7 @@
 	\frametitle{Tooth morphology}
 	\begin{tikzpicture}[remember picture,overlay]%
 		\node at (current page.center) [shift={(0,-25pt)}]{%
-			\only<1>{%
+			\only<1|handout:1>{%
 				\mode<beamer>{%
 					\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}%
 					}%
@@ -998,8 +971,8 @@
 					\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0000}%
 					}%
 				}%
-			\only<2>{\includegraphics[height=\imheight]{./images/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
-			\only<3>{%
+			\only<2|handout:2>{\includegraphics[height=\imheight]{./images/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
+			\only<3|handout:3>{%
 				\mode<beamer>{%
 					\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
 					}%
@@ -1014,15 +987,15 @@
 \begin{frame}
 	\frametitle{Detection of enamel-dentin border}
 	\centering
-	\only<1>{%
+	\only<1|handout:1>{%
 		\includegraphics[height=\imheight]{{./images/tooth045/Tooth045.ExtractedSlices}}%
 		}%
-	\only<2>{%
+	\only<2|handout:2>{%
 		\includegraphics[width=\linewidth]{{./images/tooth045/Tooth045.Briseno}}%
 		}%
 \end{frame}
 
-\begin{frame}[shrink=20]
+\begin{frame}[shrink=2]
 	\frametitle{Outcome root canal configuration classification}%
 	\centering%
 	\begin{table}[]%
@@ -1048,7 +1021,7 @@
 			\bottomrule%
 		\end{tabular}%
 		}%
-		\only<2>{%
+		\only<2|handout:0>{%
 		\begin{tabular}{llcSS}%
 			\toprule%
 			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
@@ -1077,7 +1050,7 @@
 	\frametitle{Extraction of root canal space}
 	\begin{tikzpicture}[remember picture,overlay]%
 	\node at (current page.center) [shift={(0,-25pt)}]{%
-		\only<1>{%	
+		\only<1|handout:0>{%	
 			\mode<beamer>{%
 				\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices/image0}{000}{473}%
 				}%
@@ -1085,7 +1058,7 @@
 				\includegraphics[width=\paperwidth]{./movies/tooth045/transparent-slices/image0000}%
 				}%
 			}%
-		\only<2>{%
+		\only<2|handout:1>{%
 			\mode<beamer>{%
 				\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices-rcs/image0}{000}{457}%
 				}%
@@ -1093,7 +1066,7 @@
 				\includegraphics[width=\paperwidth]{./movies/tooth045/transparent-slices-rcs/image0000}%
 				}%
 			}%
-		\only<3>{%
+		\only<3|handout:0>{%
 			\mode<beamer>{%
 				\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/rcs/image0}{000}{413}%
 				}%
@@ -1120,11 +1093,11 @@
 \begin{frame}
 	\frametitle{Analysis of the physiological foramen geometry}
 	\centering
-	\only<1>{%
+	\only<1|handout:1>{%
 		\includegraphics[height=\imheight]{./images/foramen}%
 		\sourcecite{Wolf2017}{Fig.~1}%
 		}%
-	\only<2>{%
+	\only<2|handout:0>{%
 		\mode<beamer>{%
 			\animategraphics[palindrome,autoplay,height=\imheight]{24}{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_}{100}{199}%
 			}%
@@ -1132,33 +1105,14 @@
 			\includegraphics[height=\imheight]{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_151}%
 			}%	
 		}%
-	\only<3>{%
+	\only<3|handout:2>{%
 		\mode<beamer>{%
 			\animategraphics[palindrome,autoplay,height=\imheight]{24}{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_}{123}{213}%
 			}%
 		\mode<handout>{%
-			\includegraphics[height=\imheight]{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_168}%
+			\includegraphics[height=\imheight]{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_139}%
 			}%
 		}%
-\end{frame}
-
-\begin{frame}
-	\frametitle{Outcome of foramen geometry analysis}
-	\centering
-	\begin{table}[]
-		\begin{tabular}{cSSSSSSSS}
-		\toprule
-		& \multicolumn{2}{c}{1 Foramen} & \multicolumn{2}{c}{2 Foramina} & \multicolumn{2}{c}{3 Foramina} & \multicolumn{2}{c}{4 Foramina}\\
-		& \#  & \% & \# & \% & \# & \% & \# & \%\\
-		\midrule
-		Oval		& 72 & 91.1 & 16 & 100.0 & 1 & 100.0 & 2 & 100.0\\
-		Round		&  6 &  7.6 &    &       &   &       &   &\\
-		Irregular	&  1 &  1.3 &    &       &   &       &   &\\
-		\midrule
-		N			& 79 &      & 16 &       & 1 &       & 2 &\\
-		\bottomrule
-		\end{tabular}
-	\end{table}
 \end{frame}
 
 \begin{frame}
@@ -1207,8 +1161,8 @@
 	% Make the references continuously smaller :)
 	%\renewcommand*{\bibfont}{\small}
 	%\renewcommand*{\bibfont}{\footnotesize}
-	%\renewcommand*{\bibfont}{\scriptsize}
-	\renewcommand*{\bibfont}{\tiny}
+	\renewcommand*{\bibfont}{\scriptsize}
+	%\renewcommand*{\bibfont}{\tiny}
 	\setbeamertemplate{bibliography item}{\insertbiblabel}
 	\printbibliography
 \end{frame}
