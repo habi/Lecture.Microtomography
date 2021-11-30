@@ -995,7 +995,7 @@
 		}%
 \end{frame}
 
-\begin{frame}[shrink=2]
+\begin{frame}[shrink=20]
 	\frametitle{Outcome root canal configuration classification}%
 	\centering%
 	\begin{table}[]%
@@ -1099,7 +1099,7 @@
 		}%
 	\only<2|handout:0>{%
 		\mode<beamer>{%
-			\animategraphics[palindrome,autoplay,height=\imheight]{24}{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_}{100}{199}%
+			\animategraphics[palindrome,autoplay,height=\imheight,every=\everyframe]{24}{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_}{100}{199}%
 			}%
 		\mode<handout>{%
 			\includegraphics[height=\imheight]{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_151}%
@@ -1107,7 +1107,7 @@
 		}%
 	\only<3|handout:2>{%
 		\mode<beamer>{%
-			\animategraphics[palindrome,autoplay,height=\imheight]{24}{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_}{123}{213}%
+			\animategraphics[palindrome,autoplay,height=\imheight,every=\everyframe]{24}{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_}{123}{213}%
 			}%
 		\mode<handout>{%
 			\includegraphics[height=\imheight]{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_139}%
@@ -1156,13 +1156,11 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[allowframebreaks]
+\mode<beamer>{\begin{frame}[shrink=20]}
+\mode<handout>{\begin{frame}[allowframebreaks]}
 	\frametitle{References}
-	% Make the references continuously smaller :)
-	%\renewcommand*{\bibfont}{\small}
-	%\renewcommand*{\bibfont}{\footnotesize}
-	\renewcommand*{\bibfont}{\scriptsize}
-	%\renewcommand*{\bibfont}{\tiny}
+	\mode<beamer>{\renewcommand*{\bibfont}{\tiny}}
+	\mode<handout>{\renewcommand*{\bibfont}{\scriptsize}}
 	\setbeamertemplate{bibliography item}{\insertbiblabel}
 	\printbibliography
 \end{frame}
