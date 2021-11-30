@@ -301,7 +301,8 @@
 
 \renewcommand{\imheight}{0.618\textheight}
 \section{Overview}
-\begin{frame}{Biomedical imaging}
+\begin{frame}
+	\frametitle{Biomedical imaging}
 	\begin{columns}
 		\begin{column}{0.4\linewidth}
 			\begin{itemize}
@@ -329,7 +330,8 @@
 \end{frame}
 
 \section{Imaging}
-\begin{frame}{Wavelength \& Scale}
+\begin{frame}
+	\frametitle{Wavelength \& Scale}
 	\centering
 	\only<1|handout:1>{%
 		\includegraphics[height=\imheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
@@ -341,7 +343,8 @@
 		}
 \end{frame}
 
-\begin{frame}{Imaging methods}
+\begin{frame}
+	\frametitle{Imaging methods}
 	\begin{itemize}
 		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
@@ -353,7 +356,8 @@
 \end{frame}
 
 \section{Tomography}
-\begin{frame}{CT-Scanner}
+\begin{frame}
+	\frametitle{CT-Scanner}
 	\centering
 	\mode<beamer>{%
 		\animategraphics[loop,autoplay,height=0.618\textheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
@@ -371,7 +375,8 @@
 
 \subsection{History}
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}{History}
+\begin{frame}
+	\frametitle{History}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
@@ -397,7 +402,8 @@
 \end{frame}
 
 \subsection{Interaction of x-rays with matter}
-\begin{frame}[label=current]{X-ray interaction}
+\begin{frame}
+	\frametitle{X-ray interaction}
 	\begin{itemize}
 		\item \textquote[\cite{xrayphysics}]{X-rays interact with tissue in 2 main ways: photoelectric effect and Compton scatter.
 				To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
@@ -418,41 +424,42 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Composition of biological tissues}
+\begin{frame}
+	\frametitle{Composition of biological tissues}
 	Tissue: content by mass percentage
 	\centering
-	\begin{table}
+	\begin{table}%
 		\only<1>{%
 			\pgfplotstabletypeset[%
-				col sep=comma, % the seperator in our .csv file
-				display columns/0/.style={string type,column name={Element}},
+				col sep=comma,% the seperator in our .csv file
+				display columns/0/.style={string type,column name={Element}},%
 				% section 3.2 in pgfplotstable manual
-				every head row/.style={before row={\toprule}},
-				every row no 0/.style={after row=\midrule},
-				every last row/.style={after row=\bottomrule},
-			]{./tables/tissue-composition.csv}
-		}
+				every head row/.style={before row={\toprule}},%
+				every row no 0/.style={after row=\midrule},%
+				every last row/.style={after row=\bottomrule},%
+			]{./tables/tissue-composition.csv}%
+		}%
 		\only<2|handout:0>{%
 			\pgfplotstabletypeset[%
-				col sep=comma, % the seperator in our .csv file
-				display columns/0/.style={string type,column name={Element}},
-				every head row/.style={before row={\toprule}},
-				every row no 0/.style={after row=\midrule},
-				every last row/.style={after row=\bottomrule},
+				col sep=comma,% the seperator in our .csv file
+				display columns/0/.style={string type,column name={Element}},%
+				every head row/.style={before row={\toprule}},%
+				every row no 0/.style={after row=\midrule},%
+				every last row/.style={after row=\bottomrule},%
 				% make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
-				every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
-				every row 1 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
-				every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},
-				every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}
-			]{./tables/tissue-composition.csv}
-		}
+				every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+				every row 1 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+				every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+				every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
+			]{./tables/tissue-composition.csv}%
+		}%
 	\end{table}
 	\note{Bone, lean tissue, fat and air can be distinguished quite easily}	
 \end{frame}
 
-
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}{Why \uct?}
+\begin{frame}
+	\frametitle{Why \uct?}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
@@ -587,7 +594,8 @@
 	The voxel size of the original data is 7.96 um, the image size is 3295\(\times\)1492 pixels.
 	}
 	
-\begin{frame}{MIP}
+\begin{frame}
+	\frametitle{MIP}
 	\centering
 	% pdftoppm -png -r 300 2021_MIC_lecture_Advanced_Microscopy_v04.pdf 2021_MIC_lecture_Advanced_Microscopy_v04
 	\includegraphics[height=\imheight]{./images/2021_MIC_lecture_Advanced_Microscopy_v04-20}%
@@ -595,7 +603,8 @@
 \end{frame}
 
 \subsection{Tomography today}
-\begin{frame}{Machinery}
+\begin{frame}
+	\frametitle{Machinery}
 	\begin{columns}
 		\begin{column}{0.4\linewidth}
 			\begin{itemize}
@@ -632,7 +641,8 @@
 	MULTISLICE CT -> HOSPITAL
 }
 
-\begin{frame}{Machinery}
+\begin{frame}
+	\frametitle{Machinery}
 	No matter what kind of machine, the basic principle is always the same
 	\begin{itemize}
 		\item an x-ray source
@@ -641,7 +651,8 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Machinery}
+\begin{frame}
+	\frametitle{Machinery}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\centering
@@ -656,13 +667,15 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame}{What is happening?}
+\begin{frame}
+	\frametitle{What is happening?}
 	\centering
 	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
 	\source{w.wiki/7g3}{\ccbysa}
 \end{frame}
 
-\begin{frame}{Examples}
+\begin{frame}
+	\frametitle{Examples}
 	\centering%
 	\only<1|handout:1>{%
 		\pgfmathsetlength{\imagewidth}{0.9\linewidth}%
@@ -694,22 +707,21 @@
 		}%
 	\end{tikzpicture}%
 	\only<4|handout:3>{%
-		\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
+		\pgfmathsetlength{\imagewidth}{0.45\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/387}%
 		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
 		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/{{Diancta_rec00000666}}}};
-			\end{scope}
-			%\spy [red] on (87,10) in node at (0,0) [anchor=north west];
 			% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
 			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.9025}{\milli\meter} (387px) TEMPORARY!};
 			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
-		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}
+		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<5|handout:0>{%
-		\animategraphics[autoplay,palindrome,width=0.618\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{666}{921}%
+		\animategraphics[autoplay,palindrome,width=0.45\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{666}{921}%
+		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<6|handout:4>{%
 		\pgfmathsetlength{\imagewidth}{0.42\linewidth}%
@@ -738,28 +750,32 @@
 \end{frame}
 
 \section{A scan, from \emph{getting started} to \emph{nice image}}
-\begin{frame}{Preparation}
+\begin{frame}
+	\frametitle{Preparation}
 	\begin{itemize}
 		\item Study design
 		\item Sample preparation
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Projections}
+\begin{frame}
+	\frametitle{Projections}
 	\centering
 	% pdftoppm physical\ basics_2020.pdf -png physical_basics_2020
 	\includegraphics[height=\imheight]{./images/physical_basics_2021-21}%
 	\sourcelink{ilias.unibe.ch/goto_ilias3\_unibe\_sess\_2177936.html}{\emph{Laws of Physics for Microscopists} by Martin Frenz}{Slide 21}%
 \end{frame}
 
-\begin{frame}{Projections}
+\begin{frame}
+	\frametitle{Projections}
 	\centering
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
 	\mode<beamer>{\animategraphics[autoplay,loop,height=\imheight,every=\everyframe]{24}{./movies/scan/projections/KP-TNIKWT02_240_projections_of_940_800_px_}{000}{313}}
 	\mode<handout>{\includegraphics[height=\imheight]{./movies/scan/projections/KP-TNIKWT02_240_projections_of_940_800_px_000}}
 \end{frame}
 
-\begin{frame}{Projections}
+\begin{frame}
+	\frametitle{Projections}
 	\begin{itemize}
 		\item A (micro-focus) x-ray source illuminates the object
 		\item The x-rays penetrate the sample and are attenuated
@@ -769,14 +785,16 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Reconstructions}
+\begin{frame}
+	\frametitle{Reconstructions}
 	\centering
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
 	\mode<beamer>{\animategraphics[autoplay,palindrome,height=\imheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_240_reconstructions_of_556_800_px_}{000}{277}}
 	\mode<handout>{\includegraphics[height=\imheight]{./movies/scan/reconstructions/KP-TNIKWT02_240_reconstructions_of_556_800_px_100}}
 \end{frame}
 
-\begin{frame}{Reconstructions}
+\begin{frame}
+	\frametitle{Reconstructions}
 	\begin{itemize}
 		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
 		\item Radon Transformation
@@ -787,7 +805,8 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Visualization}
+\begin{frame}
+	\frametitle{Visualization}
 	\begin{tikzpicture}[remember picture,overlay]%
 	\node at (current page.center){%
 		\mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
@@ -796,13 +815,15 @@
 	\end{tikzpicture}%
 \end{frame}
 
-\begin{frame}{Visualization}
+\begin{frame}
+	\frametitle{Visualization}
 	\begin{itemize}
 		\item Based the on reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{What to use?}
+\begin{frame}
+	\frametitle{What to use?}
 	\begin{itemize}
 		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
 		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177933.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
@@ -811,13 +832,14 @@
 			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
 			\item \href{https://git-scm.com/}{\faGit}
 			\item Script all your things!
-			\item Data repositories; sharing is caring!
+			\item Data repositories; \ie sharing is caring!
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
-\section{Example of a full study}
-\begin{frame}{Quantitative data}
+\section{Example of a complete study}
+\begin{frame}
+	\frametitle{Quantitative data}
 	\begin{itemize}
 		\item Pretty images are nice, but we need quantitative numbers
 		\item Segmentation
@@ -856,7 +878,8 @@
 
 \subsection{Setup}
 \renewcommand{\imwidth}{\columnwidth}
-\begin{frame}{How?}
+\begin{frame}
+	\frametitle{How?}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
@@ -997,7 +1020,8 @@
 	\only<6|handout:0>{\include{./plots/Gillvolume_scaled}}
 \end{frame}
 
-\begin{frame}{Gill complexity}
+\begin{frame}
+	\frametitle{Gill complexity}
 	\centering
 	\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
 	\pgfmathsetlength{\imagescale}{\imagewidth/2163}%
@@ -1033,7 +1057,8 @@
 	\only<6|handout:0>{\include{./plots/Gills_per_organ_scaled}}
 \end{frame}
 
-\begin{frame}{Thanks!}
+\begin{frame}
+	\frametitle{Thanks!}
 	\begin{itemize}
 		\item Thanks for listening to me!
 		\item<2-> \href{https://twitter.com/jackiantonovich/status/1195699076056178691}{What questions do you have for me?}
@@ -1047,7 +1072,8 @@
 	}%
 \end{frame}
 
-\begin{frame}{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
+\begin{frame}
+	\frametitle{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
 	\begin{itemize}
 		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
@@ -1063,7 +1089,8 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{References} 
+\begin{frame}[shrink]
+	\frametitle{References}
 	% Make the references continuously smaller :)
 	%\renewcommand*{\bibfont}{\small}
 	%\renewcommand*{\bibfont}{\footnotesize}
