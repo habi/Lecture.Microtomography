@@ -6,7 +6,7 @@
 
 \usetheme{UniBern}
 
-\includeonlyframes{current}
+%\includeonlyframes{current}
 %then....
 %\begin{frame}[label=current]
 %\end{frame}
@@ -849,7 +849,7 @@
 \end{frame}
 
 \subsection{Overview}
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{Internal morphology of human teeth}
 	\begin{tikzpicture}[remember picture,overlay]%
 		\node at (current page.center) [shift={(0,-25pt)}]{%
@@ -961,7 +961,7 @@
 \end{frame}
 
 \renewcommand{\imheight}{0.618\paperheight}
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{\uct imaging}
 	\centering
 	\includegraphics<1>[height=\imheight]{{{./images/ScanOverviews.104}}}%
