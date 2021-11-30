@@ -19,9 +19,7 @@
 	sorting=none]{biblatex}
 % Load "several" bibliographies (no matter where we run this thing)
 % https://tex.stackexchange.com/a/295142/828
-\addbibresource{~/Documents/library.bib} % anomalocaris
-\addbibresource{../../../Documents/library.bib} % FastSSD or Windows
-\addbibresource{~/P/Documents/library.bib} % anaklin25
+\addbibresource{../../../Documents/library.bib} % FastSSD or Windows (on Linux we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` the correct file to it)
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{spy}
@@ -665,7 +663,7 @@
 \end{frame}
 
 \begin{frame}{Examples}
-	\centering
+	\centering%
 	\only<1|handout:1>{%
 		\pgfmathsetlength{\imagewidth}{0.9\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
@@ -693,23 +691,26 @@
 		%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{11.505}{\milli\meter} (2301px) TEMPORARY!};
 		\only<2-3|handout:2>{%
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
-		}
+		}%
 	\end{tikzpicture}%
 	\only<4|handout:3>{%
 		\pgfmathsetlength{\imagewidth}{0.618\linewidth}%
-		\pgfmathsetlength{\imagescale}{\imagewidth/690}%
-		\def\x{426}% scalebar-x starting at golden ratio of image width of 690px = 426
-		\def\y{421}% scalebar-y at 90% of image height of 468px = 421
+		\pgfmathsetlength{\imagescale}{\imagewidth/387}%
+		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
+		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/shell/Muschel_klein0150}};
-			% 690.000px = 7.452000000000001mm -> 100px = 1080.000um -> 46.296px = 500um, 9.259px = 100um
-			%\draw[|-|,blue,thick] (0,234) -- (690,234) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{7.452000000000001}{\milli\meter} (690px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+92.59,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/{{Diancta_rec00000666}}}};
+			\end{scope}
+			%\spy [red] on (87,10) in node at (0,0) [anchor=north west];
+			% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
+			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.9025}{\milli\meter} (387px) TEMPORARY!};
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
-	}
+		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}
+	}%
 	\only<5|handout:0>{%
-		\animategraphics[autoplay,loop,width=0.618\linewidth,every=\everyframe]{24}{./movies/shell/Muschel_klein}{0150}{431}
-	}
+		\animategraphics[autoplay,palindrome,width=0.618\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{666}{921}%
+	}%
 	\only<6|handout:4>{%
 		\pgfmathsetlength{\imagewidth}{0.42\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
@@ -721,7 +722,7 @@
 			%\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.754}{\milli\meter} (1224px) TEMPORARY!};
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
-	}
+	}%
 	\only<7|handout:5>{%
 		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
@@ -733,7 +734,7 @@
 			%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\SI{1}{\milli\meter}}};
 		\end{tikzpicture}%
-	}
+	}%
 \end{frame}
 
 \section{A scan, from \emph{getting started} to \emph{nice image}}
