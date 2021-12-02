@@ -12,7 +12,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333} % use only every nth frame for the animations
+\newcommand{\everyframe}{1} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.8\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -45,7 +45,7 @@
 	per-symbol=/]{siunitx}
 \usepackage{microtype}
 \usepackage[absolute,overlay]{textpos} %for the \source{} command
-\usepackage[missing=master]{gitinfo2} % GitHub Actions don't pull in the commit hash, so we just show `Master'
+\usepackage[missing=main]{gitinfo2} % GitHub Actions don't pull in the commit hash, so we just show `main'
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
@@ -262,7 +262,7 @@
 			\includegraphics<2>[width=\imwidth]{./images/1272}%
 			\only<2>{\source{bruker.com/skyscan1272}{}}
 			\includegraphics<3|handout:0>[width=\imwidth]{./images/2214}%
-			\only<1|handout:0>{\source{bruker.com/skyscan2214}{}}
+			\only<3|handout:0>{\source{bruker.com/skyscan2214}{}}
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -274,31 +274,31 @@
 \renewcommand{\imheight}{0.618\textheight}
 \section{Overview}
 \begin{frame}
-	\frametitle{Biomedical imaging}
-	\begin{columns}
-		\begin{column}{0.4\linewidth}
-			\begin{itemize}
-				\item<1-|handout:1-> Medical research
-				\item<1-|handout:1-> Non-destructive insights into the samples
-				\item<2-|handout:1->(Small) Biological samples
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.6\linewidth}
-			\centering
+	\frametitle{Biomedical imaging}%
+	\begin{columns}%
+		\begin{column}{0.4\linewidth}%
+			\begin{itemize}%
+				\item<1-|handout:1-> Medical research%
+				\item<1-|handout:1-> Non-destructive insights into the samples%
+				\item<2-|handout:1->(Small) Biological samples%
+			\end{itemize}%
+		\end{column}%
+		\begin{column}{0.6\linewidth}%
+			\centering%
 			\only<1-2|handout:1>{%
-				\includegraphics[height=\imheight]{./images/Sagittal_brain_MRI}
-				\source{w.wiki/7g4}{\ccbysa}
-			}
+				\includegraphics[height=\imheight]{./images/Sagittal_brain_MRI}%
+				\source{w.wiki/7g4}{\ccbysa}%
+			}%
 			\only<3|handout:2>{%
 				\begin{tikzpicture}[remember picture,overlay]%
 					\node at (current page.center){%
-						\mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}
+						\mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
 						\mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull075}}
 					};%
 				\end{tikzpicture}%
-			}
-		\end{column}
-	\end{columns}
+			}%
+		\end{column}%
+	\end{columns}%
 \end{frame}
 
 \section{Imaging}
@@ -694,7 +694,7 @@
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<5|handout:0>{%
-		\animategraphics[autoplay,palindrome,width=0.45\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{666}{904}%
+		\animategraphics[autoplay,palindrome,width=0.45\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<6|handout:4>{%
@@ -811,7 +811,7 @@
 	\end{itemize}
 \end{frame}
 
-\section{Example of a complete study}
+\section{Example of a complete study (about teeth)}
 \begin{frame}
 	\frametitle{Quantitative data}
 	\begin{itemize}
@@ -832,8 +832,8 @@
 		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
 		\item Two publications:%
 		\begin{itemize}%
-			\item ~\cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
-			\item ~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
+			\item \cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
+			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
 		\end{itemize}%
 	\end{itemize}%
 	\begin{tikzpicture}[remember picture,overlay]%
@@ -845,21 +845,22 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Internal morphology of human teeth}
-	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}
-	\begin{itemize}
-		\item Numbers instead of just pretty images
-		\item Segmentation of teeth and root canal
-		\item (Unbiased) Characterization
-		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
-		\item Two publications:
-		\begin{itemize}
-			\item ~\cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}
-			\item ~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}
-		\end{itemize}
-	\end{itemize}
+	\frametitle{Internal morphology of human teeth}%
+	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
+	\begin{itemize}%
+		\item Numbers instead of just pretty images%
+		\item Segmentation of teeth and root canal%
+		\item (Unbiased) Characterization%
+		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
+		\item Two publications:%
+		\begin{itemize}%
+			\item \cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
+			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
+		\end{itemize}%
+	\end{itemize}%
 \end{frame}
 
+\subsection{Materials \& Methods}
 \renewcommand{\imwidth}{0.75\linewidth}
 \renewcommand{\imheight}{0.618\paperheight}
 \begin{frame}
@@ -869,17 +870,17 @@
 			\begin{itemize}
 				\item<1-> 104 extracted human permanent mandibular canines
 				\item<2-> \uct imaging
-				\item<4-> Morphology
+				\item<5-> Morphology
 				\begin{itemize}
-					\item<4-> Root canal configuration (RCC), according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-					\item<5-> Foramen geometry and size, according to~\citeauthor{Wolf2017}~\cite{Wolf2017}
+					\item<5-> Root canal configuration (RCC), according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
+					\item<6-> Foramen geometry and size, according to~\citeauthor{Wolf2017}~\cite{Wolf2017}
 				\end{itemize}
-				\item<6-> \emph{Reproducible} analysis~\cite{Haberthur2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
+				\item<7-> \emph{Reproducible} analysis~\cite{Haberthur2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.5\linewidth}
 			\only<1|handout:1>{%
-				\centering
+				\centering%
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/2716}%
 				\def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
@@ -892,9 +893,14 @@
 				\end{tikzpicture}%
 				}%
 			\only<2|handout:2>{%
-				\lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
+				\centering%
+				\includegraphics[width=\imwidth]{./images/1272}%
+				\source{bruker.com/skyscan1272}{}%
 				}%
 			\only<3|handout:3>{%
+				\lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
+				}%
+			\only<4|handout:4>{%
 				\emph{Sample changer} on the SkyScan 1272\newline
 				In total:
 				\begin{itemize}
@@ -904,17 +910,17 @@
 				\end{itemize}
 					}%
 			\renewcommand{\imwidth}{\linewidth}%
-			\only<4|handout:4>{%
+			\only<5|handout:5>{%
 				\centering%
 				\includegraphics[width=\imwidth]{./images/briseno}%
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
-			\only<5|handout:5>{%
+			\only<6|handout:6>{%
 				\centering%
 				\includegraphics[width=\imwidth]{./images/foramen}%
 				\sourcecite{Wolf2017}{Fig.~1}%
 				}%
-			\only<6|handout:6>{%
+			\only<7|handout:7>{%
 				\centering%
 				\mode<beamer>{%
 					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
@@ -925,14 +931,15 @@
 					\source{gph.is/2nqkple}{}%
 					}%
 				}%
-			\only<7|handout:7>{%
-				\centering
+			\only<8|handout:8>{%
+				\centering%
 				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imheight]{./images/binder}}%
 				}%
 		\end{column}
 	\end{columns}
 \end{frame}
 
+\subsection{Results}
 \renewcommand{\imheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{\uct imaging}
