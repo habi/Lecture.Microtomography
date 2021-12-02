@@ -12,7 +12,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{25} % use only every nth frame for the animations
+\newcommand{\everyframe}{333} % use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.8\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -614,13 +614,22 @@
 }
 
 \begin{frame}
-	\frametitle{Machinery}
-	No matter what kind of machine, the basic principle is always the same
-	\begin{itemize}
-		\item an x-ray source
-		\item a sample
-		\item a detector
-	\end{itemize}
+	\frametitle{What is happening?}
+	\begin{columns}%
+		\begin{column}{0.45\linewidth}%
+			No matter what kind of machine, the basic principle is always the same
+			\begin{itemize}
+				\item an x-ray source
+				\item a sample
+				\item a detector
+			\end{itemize}
+		\end{column}%
+		\begin{column}{0.45\linewidth}%
+			\centering%
+			\includegraphics[width=\imwidth]{./images/3D_Computed_Tomography}%
+			\source{w.wiki/7g3}{\ccbysa}%
+		\end{column}%
+	\end{columns}%
 \end{frame}
 
 \begin{frame}
@@ -637,13 +646,6 @@
 			\only<3|handout:0>{\input{animations/microCT_hr}}%
 		\end{column}
 	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{What is happening?}
-	\centering
-	\includegraphics[height=0.618\textheight]{./images/3D_Computed_Tomography}
-	\source{w.wiki/7g3}{\ccbysa}
 \end{frame}
 
 \begin{frame}
