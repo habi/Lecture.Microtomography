@@ -251,7 +251,7 @@
 				\end{itemize}
 				\item Zebrafish musculature and gills~\cite{MesserliAaldijk2020}
 				\item (Lung) tumor detection and metastasis classification~\cite{Trappetti2021}
-				\item Collaborations with museums and scientist at our institute~\cite{Halm2021} to scan a wide range of specimens
+				\item Collaborations with museums~\cite{Bochud2021} and scientist at our institute~\cite{Halm2021} to scan a wide range of specimens
 				\item Automate \emph{all} the things!~\cite{Haberthur2021}
 			\end{itemize}
 		\end{column}
@@ -352,23 +352,25 @@
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
-				\item<1-|handout:1-> Long history 
+				\item Long history 
 				\begin{itemize}
-					\item<1-|handout:1-> \citeyear{Cormack1963}: \citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}
-					\item<1-|handout:1-> \citeyear{Hounsfield1976a}: \citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}
-					\item<1-|handout:1-> Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}
-				\end{itemize}
-				\item<1-|handout:1-> First, second and third generation of scanners
+					\item \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
+					\item 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
+					\item Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}%
+				\end{itemize}%
+				\item<2-|handout:2-> CT scanner generations: First\uncover<3-|handout:3->{, second}\uncover<4|handout:4->{ and third}%
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.49\linewidth}
 			\centering
-			\includegraphics<1|handout:1>[width=\imwidth]{./images/History_Generation1}%
-			\only<1|handout:1>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation2}%
-			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation3}%
-			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+			\includegraphics<1|handout:1>[height=\imheight]{./images/ch8f2}%
+			\only<1|handout:1>{\sourcecite{Taubmann2018}{Figure 8.2}}%
+			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation1}%
+			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation2}%
+			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+			\includegraphics<4|handout:4>[width=\imwidth]{./images/History_Generation3}%
+			\only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.14}}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -382,7 +384,7 @@
 				Both contribute to dose.}
 		\begin{itemize}
 			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
-			\note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=8\)), and if \(E\) doubles PEA will reduce by a factor of 16.
+			\note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
 				Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
 				This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
 				The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately 30 keV when human tissues (\(Z=7.4\)) are irradiated.

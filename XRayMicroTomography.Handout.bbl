@@ -727,6 +727,64 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
       \endverb
     \endentry
+    \entry{Bochud2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=74fb7e2b6c1d6c2c6be184733715cc75}{%
+           family={Bochud},
+           familyi={B\bibinitperiod},
+           given={Estée},
+           giveni={E\bibinitperiod}}}%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberthür},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=19d1c5f909bbd72b20042740109f3be6}{%
+           family={Hlushchuk},
+           familyi={H\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7d9e4255d14b8242bca07cd432fb58c5}{%
+           family={Neubert},
+           familyi={N\bibinitperiod},
+           given={Eike},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pensoft Publishers}%
+      }
+      \strng{namehash}{98f0e7802575f8679447b220e3944824}
+      \strng{fullhash}{c874b748b6e1420bdb71633e7d0c322f}
+      \strng{bibnamehash}{98f0e7802575f8679447b220e3944824}
+      \strng{authorbibnamehash}{98f0e7802575f8679447b220e3944824}
+      \strng{authornamehash}{98f0e7802575f8679447b220e3944824}
+      \strng{authorfullhash}{c874b748b6e1420bdb71633e7d0c322f}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new species of Diancta of the staircase snail family Diplommatinidae is described from Mt. Savusavu, Vanua Levu Island, Fiji. Due to its left coiling shell and a constriction before the last whorl, it is placed in the genus Diancta . Micro-CT imaging reveals two apertural teeth and an inner lamella that is situated at the zone of constriction. The shell abruptly changes coiling direction by 45 degrees before the last whorl. Up to now, this coiling modus had not yet been documented for any species of Diplommatinidae from the Fiji Islands.}
+      \field{issn}{1313-2970}
+      \field{journaltitle}{ZooKeys}
+      \field{month}{11}
+      \field{title}{{A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji}}
+      \field{volume}{1073}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.3897/zookeys.1073.73241
+      \endverb
+      \verb{file}
+      \verb :Users/habi/Documents/Mendeley Desktop/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://zookeys.pensoft.net/article/73241/
+      \endverb
+      \verb{url}
+      \verb https://zookeys.pensoft.net/article/73241/
+      \endverb
+    \endentry
     \entry{Halm2021}{article}{}
       \name{author}{5}{}{%
         {{hash=2ebdb45c042242e625238a3847f09541}{%
@@ -761,8 +819,8 @@
       \strng{authorbibnamehash}{df07a4b0b3d2c31e5083810041bdb3ab}
       \strng{authornamehash}{df07a4b0b3d2c31e5083810041bdb3ab}
       \strng{authorfullhash}{a1c30805312b3e5d96b3c06940e2912c}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This pilot study explores whether a human Thiel-embalmed temporal bone is suitable for generating an accurate and complete data set with micro-computed tomography (micro-CT) and whether solid iodine-staining improves visualization and facilitates segmentation of middle ear structures.}
@@ -811,8 +869,8 @@
       \strng{authorbibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
       \strng{authornamehash}{7b578b3863fde0aa59a94fe262c5ab64}
       \strng{authorfullhash}{4a55f016bae73744942f2fc3449c019e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{High-resolution micro-computed tomography is a powerful tool to analyze and visualize the internal morphology of human permanent teeth. It is increasingly used for investigation of epidemiological questions to provide the dentist with the necessary information required for successful endodontic treatment. The aim of the present paper was to propose an image processing method to automate parts of the work needed to fully describe the internal morphology of human permanent teeth. One hundred and four human teeth were scanned on a high-resolution micro-CT scanner using an automatic specimen changer. Python code in a Jupyter notebook was used to verify and process the scans, prepare the datasets for description of the internal morphology and to measure the apical region of the tooth. The presented method offers an easy, non-destructive, rapid and efficient approach to scan, check and preview tomographic datasets of a large number of teeth. It is a helpful tool for the detailed description and characterization of the internal morphology of human permanent teeth using automated segmentation by means of micro-CT with full reproducibility and high standardization.}
@@ -941,6 +999,63 @@
       \verb http://books.google.com/books?id=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%20http://books.google.com/books?hl=en%7B%5C&%7Dlr=%7B%5C&%7Did=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%7B%5C&%7Doi=fnd%7B%5C&%7Dpg=PR9%7B%5C&%7Ddq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances%7B%5C&%7Dots=RiM0%7B%5C_%7DrS-Rq%7B%5C&%7Dsig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
       \endverb
     \endentry
+    \entry{Taubmann2018}{incollection}{}
+      \name{author}{6}{}{%
+        {{hash=e02f1a6022d3ac2e6a5d87785bbea2ff}{%
+           family={Taubmann},
+           familyi={T\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod}}}%
+        {{hash=22b1cd26b9369f2fd4c8ab635819ba51}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=29fbd47c21e5f355058e827680368d7a}{%
+           family={Bögel},
+           familyi={B\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ef657b90b23c6ef1780cc33f5a703a6d}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2feb19b23408b39b78b567f3c5dd11f3}{%
+           family={Balda},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=462bec118e0475bc2b76640102589b78}{%
+           family={Maier},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b010ae68d12c47224aaf51e81460694c}
+      \strng{fullhash}{e0c38d4867132a53f5c25a92d3c69f3a}
+      \strng{bibnamehash}{b010ae68d12c47224aaf51e81460694c}
+      \strng{authorbibnamehash}{b010ae68d12c47224aaf51e81460694c}
+      \strng{authornamehash}{b010ae68d12c47224aaf51e81460694c}
+      \strng{authorfullhash}{e0c38d4867132a53f5c25a92d3c69f3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Computed Tomography}}
+      \field{year}{2018}
+      \field{pages}{147\bibrangedash 189}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1007/978-3-319-96520-8_8
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-319-96520-8{\_}8
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-319-96520-8%7B%5C_%7D8
+      \endverb
+    \endentry
     \entry{xrayphysics}{misc}{}
       \name{author}{1}{}{%
         {{hash=a01d42e39c3e0003eeafdabee986f41f}{%
@@ -955,8 +1070,8 @@
       \strng{authorbibnamehash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authornamehash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authorfullhash}{a01d42e39c3e0003eeafdabee986f41f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{X-Ray Physics: X-Ray Interaction with Matter, X-Ray Contrast, and Dose}}
@@ -985,8 +1100,8 @@
       \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
       \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
       \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{[Online; accessed 6-December-2019]}
@@ -1071,8 +1186,8 @@
       \strng{authorbibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
       \strng{authornamehash}{2ed2e64f00c4ed1070c31996864f39da}
       \strng{authorfullhash}{2dc5a31c0ea0e0786861de75f6908266}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0897-1889}
@@ -1095,64 +1210,6 @@
       \endverb
       \verb{url}
       \verb http://link.springer.com/10.1007/s10278-013-9622-7
-      \endverb
-    \endentry
-    \entry{Bochud2021}{article}{}
-      \name{author}{4}{}{%
-        {{hash=74fb7e2b6c1d6c2c6be184733715cc75}{%
-           family={Bochud},
-           familyi={B\bibinitperiod},
-           given={Estée},
-           giveni={E\bibinitperiod}}}%
-        {{hash=31208204cf1e706905070d03cc964a87}{%
-           family={Haberthür},
-           familyi={H\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=19d1c5f909bbd72b20042740109f3be6}{%
-           family={Hlushchuk},
-           familyi={H\bibinitperiod},
-           given={Ruslan},
-           giveni={R\bibinitperiod}}}%
-        {{hash=7d9e4255d14b8242bca07cd432fb58c5}{%
-           family={Neubert},
-           familyi={N\bibinitperiod},
-           given={Eike},
-           giveni={E\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Pensoft Publishers}%
-      }
-      \strng{namehash}{98f0e7802575f8679447b220e3944824}
-      \strng{fullhash}{c874b748b6e1420bdb71633e7d0c322f}
-      \strng{bibnamehash}{98f0e7802575f8679447b220e3944824}
-      \strng{authorbibnamehash}{98f0e7802575f8679447b220e3944824}
-      \strng{authornamehash}{98f0e7802575f8679447b220e3944824}
-      \strng{authorfullhash}{c874b748b6e1420bdb71633e7d0c322f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{A new species of Diancta of the staircase snail family Diplommatinidae is described from Mt. Savusavu, Vanua Levu Island, Fiji. Due to its left coiling shell and a constriction before the last whorl, it is placed in the genus Diancta . Micro-CT imaging reveals two apertural teeth and an inner lamella that is situated at the zone of constriction. The shell abruptly changes coiling direction by 45 degrees before the last whorl. Up to now, this coiling modus had not yet been documented for any species of Diplommatinidae from the Fiji Islands.}
-      \field{issn}{1313-2970}
-      \field{journaltitle}{ZooKeys}
-      \field{month}{11}
-      \field{title}{{A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji}}
-      \field{volume}{1073}
-      \field{year}{2021}
-      \field{pages}{1\bibrangedash 12}
-      \range{pages}{12}
-      \verb{doi}
-      \verb 10.3897/zookeys.1073.73241
-      \endverb
-      \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf:pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://zookeys.pensoft.net/article/73241/
-      \endverb
-      \verb{url}
-      \verb https://zookeys.pensoft.net/article/73241/
       \endverb
     \endentry
     \entry{Schindelin2012}{article}{}
@@ -1247,8 +1304,8 @@
       \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
@@ -1373,8 +1430,8 @@
       \strng{editorbibnamehash}{516f53de51f9bc1732acd69795bc77d2}
       \strng{editornamehash}{516f53de51f9bc1732acd69795bc77d2}
       \strng{editorfullhash}{f4e92088970444c9751575b55a2b5816}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Positioning and Power in Academic Publishing: Players, Agents and Agendas}
@@ -1386,7 +1443,7 @@
       \verb 10.3233/978-1-61499-649-1-87
       \endverb
       \verb{file}
-      \verb :Users/habi/Library/Application Support/Mendeley Desktop/Downloaded/Kluyver et al. - 2016 - Jupyter Notebooks—a publishing format for reproducible computational workflows.pdf:pdf
+      \verb :Users/habi/Documents/Mendeley Desktop/Kluyver et al. - 2016 - Jupyter Notebooks—a publishing format for reproducible computational workflows.pdf:pdf
       \endverb
     \endentry
     \entry{Wolf2021}{article}{}
@@ -1439,8 +1496,8 @@
       \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authorfullhash}{795d028f9f4534239332966341d28877}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The aim of this study was to investigate the root canal system morphology by means of a root canal configuration (RCC) classification described with a four-digit system, the physiological foramen geometry and accessory canal frequency and morphology, of 101 mandibular canines (MaCa) of a Swiss-German population by means of micro-computed tomography. Micro-CT examination of the MaCa was performed and the obtained images analyzed with a 3D imaging software. In single-rooted MaCas, the most frequently observed RCCs were 1-1-1/1 (74.5{\%}) and 1-1-1/2 (14.3{\%}). Seven other RCCs were less frequently observed with a frequency from 4.1 to 1.0{\%}. One physiological foramen was observed in 80.6{\%} of the MaCas, two in 16.3{\%}, three in 1.0{\%} and four in 2.0{\%}. Accessory and connecting canals were apparent only in the middle and apical root thirds. Two-rooted MaCas occurred less frequently (n = 3). When one physiological foramen was present, the mean size of the narrow and wide diameters were 0.28 mm (± 0.07) and 0.40 mm (± 0.11), while the distance between physiological and anatomical foramen was 0.45 mm (± 0.17). MaCas are predominantly single-rooted teeth with a 1-1-1/1 or 1-1-1/2 RCC. Most MaCas had one physiological foramen with an oval shape.}
@@ -1568,8 +1625,8 @@
       \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authorfullhash}{61b54fb10b56680ff2a39b33b4712bca}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The aim of this study was to investigate the physiological foramen diameter, shape and distance between physiological and anatomical apex of maxillary and mandibular first and second molars. Accurate knowledge of the physiological foramina morphology; thus, inherent mechanical shaping technical hindrances, is decisive when taking the corresponding root canal final preparation decision. The morphological dimensions of a total of 1 727 physiological foramina were investigated by means of micro-computed tomography. Mean narrow and wide (to a high number, oval) diameters of the physiological foramen were 0.24, 0.22 and 0.33 mm and 0.33, 0.31 and 0.42 mm in mesiobuccal (MB), distobuccal (DB) and palatal (P) roots in maxillary first molars; 0.24, 0.22 and 0.33 mm and 0.41, 0.33 and 0.44 in MB, DB, and P roots in maxillary second molars. Mandibular first molars showed mean narrow and wide diameters of 0.24 and 0.30 mm and of 0.39 and 0.46 mm in mesial (M) and distal (D) roots; second mandibular molars showed 0.25 and 0.31 mm and 0.47 mm in M and D roots. The mean distance between the physiological foramina and anatomical apex was 0.82, 0.81 and 1.02 mm and 0.54, 0.43 and 0.63 mm in MB, DB and P roots of the maxillary first and second molars, respectively. A mean distance of 0.95 mm (M) and 1.05 mm (D) in the first and 0.78 mm (M) and 0.81 mm (D) in the second mandibular molars was observed. Based on the results obtained, assumable recommendations for final preparation size of the physiological foramen were calculated. However, when taking into consideration, the resulting standard deviations of marginal errors must be cautiously considered when taking a final decision in clinical endodontic treatment.}
@@ -1607,8 +1664,8 @@
       \strng{authorbibnamehash}{31208204cf1e706905070d03cc964a87}
       \strng{authornamehash}{31208204cf1e706905070d03cc964a87}
       \strng{authorfullhash}{31208204cf1e706905070d03cc964a87}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
