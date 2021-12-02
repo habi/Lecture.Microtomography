@@ -11,6 +11,16 @@
 %\begin{frame}[label=current]
 %\end{frame}
 
+% Some often used abbreviations/commands
+\newcommand{\everyframe}{25} % use only every nth frame for the animations
+\newcommand{\imwidth}{\linewidth}% set global image width
+\newcommand{\imheight}{0.8\paperheight}% set global image height
+\newlength\imagewidth% needed for scalebars
+\newlength\imagescale% needed for scalebars
+\newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
+\newcommand{\eg}{e.\,g.\xspace}%
+\newcommand{\ie}{i.\,e.\xspace}%
+
 \usepackage[backend=biber,
 	style=numeric,
 	url=false,
@@ -53,16 +63,6 @@
 \usepackage{multirow}
 \usepackage{lipsum} %for alignment testing
 \usepackage{mathastext}
-
-% Some often used abbreviations/commands
-\newcommand{\everyframe}{111} % use only every nth frame for the animations
-\newcommand{\imwidth}{\linewidth}% set global image width
-\newcommand{\imheight}{0.8\paperheight}% set global image height
-\newlength\imagewidth% needed for scalebars
-\newlength\imagescale% needed for scalebars
-\newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
-\newcommand{\eg}{e.\,g.\xspace}%
-\newcommand{\ie}{i.\,e.\xspace}%
 
 % Define complementary colors to ubRed
 \definecolor{ubRedComplementary1}{HTML}{00a1e6}
