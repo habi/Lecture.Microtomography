@@ -426,7 +426,7 @@
 			]{./tables/tissue-composition.csv}%
 		}%
 	\end{table}
-	\note{Bone, lean tissue, fat and air can be distinguished quite easily}	
+	\note{Bone, lean tissue, fat and air can be distinguished quite easily}
 \end{frame}
 
 \renewcommand{\imwidth}{\columnwidth}
@@ -461,7 +461,7 @@
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
-			\renewcommand{\imwidth}{0.1554\columnwidth}%			
+			\renewcommand{\imwidth}{0.1554\columnwidth}%
 			\only<6|handout:5>{%
 				\centering
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
@@ -473,7 +473,7 @@
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
-			}%			
+			}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}%
 		\begin{column}{0.49\linewidth}
@@ -565,7 +565,7 @@
 	The files from the early animation are resized 0.25 times, so we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP.
 	The voxel size of the original data is 7.96 um, the image size is 3295\(\times\)1492 pixels.
 	}
-	
+
 \begin{frame}
 	\frametitle{MIP}
 	\centering
@@ -976,7 +976,7 @@
 					}%
 				\mode<handout>{%
 					\includegraphics[width=\paperwidth]{./movies/tooth045/full-slices/image0000}%
-					}%				
+					}%
 				}%
 			};%
 	\end{tikzpicture}%
@@ -1048,7 +1048,7 @@
 	\frametitle{Extraction of root canal space}
 	\begin{tikzpicture}[remember picture,overlay]%
 	\node at (current page.center) [shift={(0,-25pt)}]{%
-		\only<1|handout:0>{%	
+		\only<1|handout:0>{%
 			\mode<beamer>{%
 				\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices/image0}{000}{473}%
 				}%
@@ -1079,7 +1079,7 @@
 \begin{frame}
 	\frametitle{Outcome of root canal space extraction}%
 	\renewcommand{\imheight}{0.618\paperheight}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%	
+		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0278}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0353}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0419}%
@@ -1101,7 +1101,7 @@
 			}%
 		\mode<handout>{%
 			\includegraphics[height=\imheight]{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_151}%
-			}%	
+			}%
 		}%
 	\only<3|handout:2>{%
 		\mode<beamer>{%
