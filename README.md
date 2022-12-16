@@ -2,7 +2,7 @@
 
 # A lecture on (micro)tomography
 
-[My presentation](https://ilias.unibe.ch/goto_ilias3_unibe_sess_1815170.html) for the lecture series [9256-HS2020-0: Advanced Microscopy](https://ilias.unibe.ch/goto_ilias3_unibe_crs_1815141.html).
+[My presentation](https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466944.html) for the lecture series [9256-HS2022-0: Advanced Microscopy](https://ilias.unibe.ch/goto_ilias3_unibe_crs_2466916.html).
 
 The slides are generated in [LaTeX](https://www.latex-project.org/)/[beamer](https://bitbucket.org/rivanvx/beamer/wiki/Home) with the slightly tweaked [official beamer template of the University of Bern](http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html) and are automatically compiled to a PDF with a [GitHub action](https://github.com/xu-cheng/latex-action).
 
