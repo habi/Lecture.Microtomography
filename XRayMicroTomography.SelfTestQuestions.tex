@@ -1,5 +1,5 @@
 \documentclass[a4paper]{exam}
-%\documentclass[paper=a4,twoside=true,DIV=calc]{scrartcl}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
@@ -22,7 +22,6 @@
 \newlength\imagewidth% needed for scalebar
 \newlength\imagescale% needed for scalebar
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
-\newcommand{\ie}{i.\,e.\xspace}%
 
 \title{Self-test questions for the \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466944.html}{Lecture on X-ray microtomography}}
 \author{David Haberthür}
@@ -40,8 +39,13 @@
 \question Describe what happens with the the X-rays once they are emitted from the X-ray source until they are converted to an image in the detector of a desktop micro-CT or large human CT.
 	Can you describe all interactions with the sample and what needs to happen until we get a projection image on disk?
 
-\question How can the voxel size of the resulting dataset in a desktop micro-CT scanner be changed?
-	Can you scan a very large sample (\emph{large} for \uct) with a very small voxel size, \ie with high resolution?
+\question In a desktop \uct the researcher can change the voxel size of the image acquisition nearly continuously (in a certain bandwidth).
+	This is not possible in a large CT which is used for imaging humans in a hospital.
+	Why is this so?
+
+\question A researcher wants to image a sample with approximately \SI{30}{\centi\meter} with a very small voxel size (let's say below \SI{1}{\micro\meter}).
+	Is this possible or not?
+	Explain your reasoning.
 
 \question Why are the blood vessels in \autoref{fig:1265} not visible, but are visible in \autoref{fig:5158}?
 	\emph{Mouse 1265} in \autoref{fig:1265} is the same sample you have seen throughout the lecture.
@@ -84,7 +88,7 @@
 		The bright, elongated structure at the top of the skull is related to the experiment that was performed with these mice.}
 		\label{fig:5158}
 	\end{subfigure}	
-	\caption{\href{https://en.wikipedia.org/wiki/Maximum_intensity_projection}{MIP}s from a region of approximately \SI{500}{\micro\meter} around the sagittal centerline of two different mouse heads, scanned on two different desktop micro-CTs.}
+	\caption{\href{https://en.wikipedia.org/wiki/Maximum_intensity_projection}{MIP}s from a region of approximately \SI{500}{\micro\meter} around the sagittal centerline of two different mouse heads, scanned on two different desktop \uct scanners.}
 \end{figure}
 
 \end{questions}
