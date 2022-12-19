@@ -814,7 +814,7 @@
 \end{frame}
 
 \section{Example of a complete study (about teeth)}
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{Quantitative data}
 	\begin{itemize}
 		\item Pretty images are nice, but we need quantitative numbers
@@ -824,7 +824,7 @@
 \end{frame}
 
 \subsection{Overview}
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
 	\begin{itemize}%
@@ -846,7 +846,7 @@
 	\end{tikzpicture}%
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
 	\begin{itemize}%
@@ -934,15 +934,14 @@
 
 \subsection{Results}
 \renewcommand{\imheight}{0.618\paperheight}
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics<1|handout:0>[height=\imheight]{{{./images/ScanOverviews.104}}}%
-	\includegraphics<2>[height=\imheight]{{{./images/ScanOverviews.24}}}%
+	\includegraphics[height=\imheight]{{{./images/ScanOverviews.24}}}%
 \end{frame}
 
 \renewcommand{\imwidth}{\linewidth}
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{Dataset cropping}
 	\begin{columns}
 		\begin{column}{0.382\linewidth}
@@ -995,58 +994,7 @@
 		}%
 \end{frame}
 
-\begin{frame}[shrink=20]
-	\frametitle{Outcome root canal configuration classification}%
-	\centering%
-	\begin{table}[]%
-		\only<1>{%
-		\begin{tabular}{llcSS}%
-			\toprule%
-			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
-			\midrule%
-			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & 74.5\\%
-			\multicolumn{2}{l}{}							   & 1-1-1/2 & 14 & 14.3\\%
-			\multicolumn{2}{l}{}							   & 1-1-1/3 &  1 &  1.0\\%
-			\multicolumn{2}{l}{}							   & 1-1-1/4 &  2 &  2.1\\%
-			\multicolumn{2}{l}{}							   & 1-1-2/1 &  1 &  1.0\\%
-			\multicolumn{2}{l}{}							   & 1-2-1/1 &  4 &  4.1\\%
-			\multicolumn{2}{l}{}							   & 1-2-1/2 &  1 &  1.0\\%
-			\multicolumn{2}{l}{}							   & 1-2-2/2 &  1 &  1.0\\%
-			\multicolumn{2}{l}{}							   & 2-3-1/1 &  1 &  1.0\\%
-			\midrule%
-			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}	& 1-1-1/1 & 2 & 66.6\\%
-											&							& 1-2-1/1 & 1 & 33.3\\%
-											& \multirow{2}{*}{Lingual}	& 1-1-1/1 & 2 & 66.6\\%
-											&							& 1-1-1/2 & 1 & 33.3\\%
-			\bottomrule%
-		\end{tabular}%
-		}%
-		\only<2|handout:0>{%
-		\begin{tabular}{llcSS}%
-			\toprule%
-			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
-			\midrule%
-			\rowcolor{ubRed}\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}	& 1-1-1/1 & 73 & 74.5\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/2 & 14 & 14.3\\%
-			\multicolumn{2}{l}{}												& 1-1-1/3 &  1 &  1.0\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/4 &  2 &  2.1\\%
-			\multicolumn{2}{l}{}												& 1-1-2/1 &  1 &  1.0\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-2-1/1 &  4 &  4.1\\%
-			\multicolumn{2}{l}{}												& 1-2-1/2 &  1 &  1.0\\%
-			\multicolumn{2}{l}{}												& 1-2-2/2 &  1 &  1.0\\%
-			\multicolumn{2}{l}{}												& 2-3-1/1 &  1 &  1.0\\%
-			\midrule%
-			\multirow{4}{*}{Double (N=3)} & \multirow{2}{*}{Buccal}				& 1-1-1/1 &  2 & 66.6\\%
-										  &										& 1-2-1/1 &  1 & 33.3\\%
-										  & \multirow{2}{*}{Lingual}			& 1-1-1/1 &  2 & 66.6\\%
-										  &										& 1-1-1/2 &  1 & 33.3\\%
-			\bottomrule%
-		\end{tabular}%
-		}%
-	\end{table}%
-\end{frame}%
-
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{Extraction of root canal space}
 	\begin{tikzpicture}[remember picture,overlay]%
 	\node at (current page.center) [shift={(0,-25pt)}]{%
@@ -1078,7 +1026,7 @@
 	\end{tikzpicture}%
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{Outcome of root canal space extraction}%
 	\renewcommand{\imheight}{0.618\paperheight}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%
