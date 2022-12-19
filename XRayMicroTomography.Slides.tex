@@ -14,7 +14,7 @@
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{333}% use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
-\newcommand{\imheight}{0.8\paperheight}% set global image height
+\newcommand{\imheight}{0.9\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
@@ -116,7 +116,7 @@
 \newdimen\progressbar@pbht%progressbar height
 \newdimen\progressbar@pbwd%progressbar width
 \newdimen\progressbar@rcircle% radius for the circle
-\newdimen\progressbar@tmpdimgit% auxiliary dimension
+\newdimen\progressbar@tmpdim% auxiliary dimension
 \progressbar@pbwd=0.85\linewidth
 \progressbar@rcircle=1.5pt
 \def\progressbar@progressbar{%
@@ -232,8 +232,7 @@
 			\item Physicist by trade
 			\item \href{https://boris.unibe.ch/2619/}{PhD in high resolution imaging of the lung}, Institute of Anatomy, University of Bern, Switzerland
 			\item Post-Doc I: \href{https://www.psi.ch/sls/tomcat/}{TOMCAT}, \href{https://www.psi.ch/sls/}{Swiss Light Source}, \href{https://www.psi.ch/}{Paul Scherrer Institute}, Switzerland
-			\item Post-Doc II: \uct group, Institute of Anatomy, University of Bern, Switzerland.\newline
-				Together with Ruslan Hlushchuk, Oleksiy-Zakhar Khoma and Tim Hoessly.
+			\item Post-Doc II \& currently: \href{https://www.ana.unibe.ch/forschung/mikroct/research/}{\uct group}, Institute of Anatomy, University of Bern, Switzerland.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -363,8 +362,25 @@
 		\end{column}
 		\begin{column}{0.49\linewidth}
 			\centering
-			\includegraphics<1|handout:1>[height=\imheight]{./images/ch8f2}%
-			\only<1|handout:1>{\sourcecite{Taubmann2018}{Figure 8.2}}%
+			\only<1|handout:1>{%
+				\renewcommand{\imwidth}{0.714769648*\imheight}% 1055/1476
+				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
+				\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
+				\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
+					% 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
+					\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{160.00000004}{\milli\meter} (634px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+				\end{tikzpicture}%
+			}%
+			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
+			\note{We were unable to find any information on the voxel size of the first CT image.
+					My head is approximately 16 cm wide.
+					I counted 47 voxels across the head in the image.
+					This gives a voxel size of 3.4 mm per voxel.
+				}%
 			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation1}%
 			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
 			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation2}%
@@ -814,7 +830,7 @@
 \end{frame}
 
 \section{Example of a complete study (about teeth)}
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Quantitative data}
 	\begin{itemize}
 		\item Pretty images are nice, but we need quantitative numbers
@@ -824,7 +840,7 @@
 \end{frame}
 
 \subsection{Overview}
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
 	\begin{itemize}%
@@ -840,13 +856,25 @@
 	\end{itemize}%
 	\begin{tikzpicture}[remember picture,overlay]%
 		\node at (current page.center) [shift={(0,-25pt)}]{%
-		\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
-		\mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
+			\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
+			\mode<handout>{%
+				% Measured length of tooth on Tooth045_rec_spr.bmp: 2370 px at 10 um per pixel
+				\pgfmathsetlength{\imagewidth}{\paperwidth}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
+				\def\x{633}% scalebar-x starting at golden ratio of image width of 1024px = 633
+				\def\y{323}% scalebar-y at 90% of image height of 359px = 323
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/tooth045/full/image0237}};
+					% 886.084px = 23.7mm -> 100px = 2674.690um -> 18.694px = 500um, 3.739px = 100um
+					%\draw[|-|,blue,thick] (951,199) -- (66,226) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{23.7}{\milli\meter} (886px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+186.94,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+				}%
 			};%
 	\end{tikzpicture}%
 \end{frame}
 
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
 	\begin{itemize}%
@@ -865,7 +893,7 @@
 \subsection{Materials \& Methods}
 \renewcommand{\imwidth}{0.75\linewidth}
 \renewcommand{\imheight}{0.618\paperheight}
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{How?}
 	\begin{columns}
 		\begin{column}{0.5\linewidth}
@@ -920,7 +948,7 @@
 					\source{gph.is/2nqkple}{}%
 					}%
 				\mode<handout>{%
-					\includegraphics[width=\linewidth]{./movies/coder/coder-65}%
+					\includegraphics[width=\linewidth]{./movies/coder/coder-118}%
 					\source{gph.is/2nqkple}{}%
 					}%
 				}%
@@ -934,14 +962,14 @@
 
 \subsection{Results}
 \renewcommand{\imheight}{0.618\paperheight}
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{\uct imaging}
 	\centering
 	\includegraphics[height=\imheight]{{{./images/ScanOverviews.24}}}%
 \end{frame}
 
 \renewcommand{\imwidth}{\linewidth}
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Dataset cropping}
 	\begin{columns}
 		\begin{column}{0.382\linewidth}
@@ -994,7 +1022,7 @@
 		}%
 \end{frame}
 
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Extraction of root canal space}
 	\begin{tikzpicture}[remember picture,overlay]%
 	\node at (current page.center) [shift={(0,-25pt)}]{%
@@ -1027,15 +1055,27 @@
 \end{frame}
 
 \begin{frame}[label=current]
-	\frametitle{Outcome of root canal space extraction}%
-	\renewcommand{\imheight}{0.618\paperheight}%
+	\frametitle{Results of root canal space extraction}%
+		\renewcommand{\imheight}{0.618\paperheight}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0278}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0353}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0419}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0642}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0752}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0931}%
+		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
+		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
+		\renewcommand{\imwidth}{0.358565737*\imheight}% 720/2008
+		\pgfmathsetlength{\imagewidth}{\imwidth}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/720}%
+		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
+		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/rcs/Tooth0931}};
+				% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
+				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{20.92}{\milli\meter} (1760px) TEMPORARY!};
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+		\end{tikzpicture}%
 \end{frame}
 
 \begin{frame}
