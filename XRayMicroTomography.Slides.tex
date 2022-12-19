@@ -6,7 +6,7 @@
 
 \usetheme{UniBern}
 
-%\includeonlyframes{current}
+\includeonlyframes{current}
 %then....
 %\begin{frame}[label=current]
 %\end{frame}
@@ -32,7 +32,7 @@
 \usepackage{tikz}
 	\usetikzlibrary{spy}
 	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
-\usepackage{shadowtext}  % for the shadowed scalebar
+\usepackage{shadowtext} % for the shadowed scalebar
 	\shadowoffset{1pt}
 	\shadowcolor{ubRed}
 \usepackage{pgfplots}
@@ -865,19 +865,15 @@
 \subsection{Materials \& Methods}
 \renewcommand{\imwidth}{0.75\linewidth}
 \renewcommand{\imheight}{0.618\paperheight}
-\begin{frame}
+\begin{frame}[label=current]
 	\frametitle{How?}
 	\begin{columns}
 		\begin{column}{0.5\linewidth}
 			\begin{itemize}
 				\item<1-> 104 extracted human permanent mandibular canines
 				\item<2-> \uct imaging
-				\item<5-> Morphology
-				\begin{itemize}
-					\item<5-> Root canal configuration (RCC), according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-					\item<6-> Foramen geometry and size, according to~\citeauthor{Wolf2017}~\cite{Wolf2017}
-				\end{itemize}
-				\item<7-> \emph{Reproducible} analysis~\cite{Haberthur2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
+				\item<5-> Root canal configuration (RCC), according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
+				\item<6-> \emph{Reproducible} analysis~\cite{Haberthur2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.5\linewidth}
@@ -918,11 +914,6 @@
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
 			\only<6|handout:6>{%
-				\centering%
-				\includegraphics[width=\imwidth]{./images/foramen}%
-				\sourcecite{Wolf2017}{Fig.~1}%
-				}%
-			\only<7|handout:7>{%
 				\centering%
 				\mode<beamer>{%
 					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
@@ -1097,31 +1088,6 @@
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0642}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0752}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0931}%
-\end{frame}
-
-\begin{frame}
-	\frametitle{Analysis of the physiological foramen geometry}
-	\centering
-	\only<1|handout:1>{%
-		\includegraphics[height=\imheight]{./images/foramen}%
-		\sourcecite{Wolf2017}{Fig.~1}%
-		}%
-	\only<2|handout:0>{%
-		\mode<beamer>{%
-			\animategraphics[palindrome,autoplay,height=\imheight,every=\everyframe]{24}{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_}{100}{199}%
-			}%
-		\mode<handout>{%
-			\includegraphics[height=\imheight]{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_151}%
-			}%
-		}%
-	\only<3|handout:2>{%
-		\mode<beamer>{%
-			\animategraphics[palindrome,autoplay,height=\imheight,every=\everyframe]{24}{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_}{123}{213}%
-			}%
-		\mode<handout>{%
-			\includegraphics[height=\imheight]{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_139}%
-			}%
-		}%
 \end{frame}
 
 \begin{frame}
