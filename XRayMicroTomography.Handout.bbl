@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.1 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -51,12 +51,12 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Therapeutic modulation of angiogenesis is believed to be a prospective powerful treatment strategy to modulate the microcirculation and therefore help millions of patients with cardiovascular and cancer diseases. The often-frustrating results from late-stage clinical studies indicate an urgent need for improved assessment of the pro- and anti-angiogenic compounds in preclinical stage of investigation. For such a proper assessment, detailed vascular visualization and adequate quantification are essential. Nowadays, there are few imaging modalities available, but none of them provides non-destructive 3D-visualization of the vasculature down to the capillary level. In many instances, the approaches cannot be combined with the subsequent histological or ultrastructural analysis. In this review, we address the latest developments in the microvascular imaging, namely, the microangioCT approach with a polymer-based contrast agent ($\mu$Angiofil). This approach allows time-efficient non-destructive 3D-imaging of the organ and its vasculature including the finest capillaries. Besides the superior visualization, the obtained detailed 3D information on the organ vasculature enables its 3D-skeletonization and further quantitative analysis. Probably the only significant limitation of the described approach is that it can be used only ex vivo, i.e., no longitudinal studies. In spite of this drawback, microangioCT with $\mu$Angiofil is a relatively simple and straightforward tool with a broad application range for studying physiological and pathological alterations in the microvasculature of any organ. It provides microvascular imaging at unprecedented level and enables correlative microscopy.}
+      \field{abstract}{Therapeutic modulation of angiogenesis is believed to be a prospective powerful treatment strategy to modulate the microcirculation and therefore help millions of patients with cardiovascular and cancer diseases. The often-frustrating results from late-stage clinical studies indicate an urgent need for improved assessment of the pro- and anti-angiogenic compounds in preclinical stage of investigation. For such a proper assessment, detailed vascular visualization and adequate quantification are essential. Nowadays, there are few imaging modalities available, but none of them provides non-destructive 3D-visualization of the vasculature down to the capillary level. In many instances, the approaches cannot be combined with the subsequent histological or ultrastructural analysis. In this review, we address the latest developments in the microvascular imaging, namely, the microangioCT approach with a polymer-based contrast agent ({$\mu$}Angiofil). This approach allows time-efficient non-destructive 3D-imaging of the organ and its vasculature including the finest capillaries. Besides the superior visualization, the obtained detailed 3D information on the organ vasculature enables its 3D-skeletonization and further quantitative analysis. Probably the only significant limitation of the described approach is that it can be used only ex vivo, i.e., no longitudinal studies. In spite of this drawback, microangioCT with {$\mu$}Angiofil is a relatively simple and straightforward tool with a broad application range for studying physiological and pathological alterations in the microvasculature of any organ. It provides microvascular imaging at unprecedented level and enables correlative microscopy.}
       \field{issn}{15371891}
       \field{journaltitle}{Vascular Pharmacology}
       \field{month}{1}
       \field{number}{June}
-      \field{title}{{Ex vivo microangioCT: Advances in microvascular imaging}}
+      \field{title}{Ex Vivo {{microangioCT}}: {{Advances}} in Microvascular Imaging}
       \field{volume}{112}
       \field{year}{2019}
       \field{pages}{2\bibrangedash 7}
@@ -65,13 +65,13 @@
       \verb 10.1016/j.vph.2018.09.003
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Hlushchuk, Haberth{\"{u}}r, Djonov - 2019 - Ex vivo microangioCT Advances in microvascular imaging.pdf:pdf
+      \verb /home/habi/Zotero/storage/CPZYAGU3/Hlushchuk, Haberthür, Djonov - 2018 - Ex vivo microangioCT Advances in microvascular imaging(2).pdf
       \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.1016/j.vph.2018.09.003 https://linkinghub.elsevier.com/retrieve/pii/S1537189118302301
+      \verb https://doi.org/10.1016/j.vph.2018.09.003
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1016/j.vph.2018.09.003%20https://linkinghub.elsevier.com/retrieve/pii/S1537189118302301
+      \verb https://doi.org/10.1016/j.vph.2018.09.003
       \endverb
     \endentry
     \entry{Nording2021}{article}{}
@@ -132,8 +132,8 @@
            given={Moritz},
            giveni={M\bibinitperiod}}}%
         {{hash=5ac617f83857cb8cc4fcb3ba9a3b93a4}{%
-           family={Meyer-Saraei},
-           familyi={M\bibinithyphendelim S\bibinitperiod},
+           family={{Meyer-Saraei}},
+           familyi={M\bibinitperiod},
            given={Roza},
            giveni={R\bibinitperiod}}}%
         {{hash=19d1c5f909bbd72b20042740109f3be6}{%
@@ -191,13 +191,11 @@
            familyi={C\bibinitperiod},
            given={Triantafyllos},
            giveni={T\bibinitperiod}}}%
-        {{hash=80d3ca7e7d1a7265f2303e11c96a4848}{%
-           family={Hundelshausen},
-           familyi={H\bibinitperiod},
+        {{hash=8a7fbed34065538fa9d79505516a12a7}{%
+           family={{von Hundelshausen}},
+           familyi={v\bibinitperiod},
            given={Philipp},
-           giveni={P\bibinitperiod},
-           prefix={von},
-           prefixi={v\bibinitperiod}}}%
+           giveni={P\bibinitperiod}}}%
         {{hash=d23a9f489cbd355b569e9ff7d34df8d1}{%
            family={Köhl},
            familyi={K\bibinitperiod},
@@ -218,21 +216,21 @@
         {Springer US}%
       }
       \strng{namehash}{3ad91240b5914c63a991a3efa7a4e721}
-      \strng{fullhash}{efcdb6c4ccec80777ff6304cec2a7260}
+      \strng{fullhash}{5a396cadeb3b0851fe6fecf923380616}
       \strng{bibnamehash}{3ad91240b5914c63a991a3efa7a4e721}
       \strng{authorbibnamehash}{3ad91240b5914c63a991a3efa7a4e721}
       \strng{authornamehash}{3ad91240b5914c63a991a3efa7a4e721}
-      \strng{authorfullhash}{efcdb6c4ccec80777ff6304cec2a7260}
+      \strng{authorfullhash}{5a396cadeb3b0851fe6fecf923380616}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Platelets contribute to the regulation of tissue neovascularization, although the specific factors underlying this function are unknown. Here, we identified the complement anaphylatoxin C5a-mediated activation of C5a receptor 1 (C5aR1) on platelets as a negative regulatory mechanism of vessel formation. We showed that platelets expressing C5aR1 exert an inhibitory effect on endothelial cell functions such as migration and 2D and 3D tube formation. Growth factor- and hypoxia-driven vascularization was markedly increased in C5ar1 −/− mice. Platelet-specific deletion of C5aR1 resulted in a proangiogenic phenotype with increased collateralization, capillarization and improved pericyte coverage. Mechanistically, we found that C5a induced preferential release of CXC chemokine ligand 4 (CXCL4, PF4) from platelets as an important antiangiogenic paracrine effector molecule. Interfering with the C5aR1-CXCL4 axis reversed the antiangiogenic effect of platelets both in vitro and in vivo.}
+      \field{abstract}{Platelets contribute to the regulation of tissue neovascularization, although the specific factors underlying this function are unknown. Here, we identified the complement anaphylatoxin C5a-mediated activation of C5a receptor 1 (C5aR1) on platelets as a negative regulatory mechanism of vessel formation. We showed that platelets expressing C5aR1 exert an inhibitory effect on endothelial cell functions such as migration and 2D and 3D tube formation. Growth factor- and hypoxia-driven vascularization was markedly increased in C5ar1 -/- mice. Platelet-specific deletion of C5aR1 resulted in a proangiogenic phenotype with increased collateralization, capillarization and improved pericyte coverage. Mechanistically, we found that C5a induced preferential release of CXC chemokine ligand 4 (CXCL4, PF4) from platelets as an important antiangiogenic paracrine effector molecule. Interfering with the C5aR1-CXCL4 axis reversed the antiangiogenic effect of platelets both in vitro and in vivo.}
       \field{issn}{2041-1723}
       \field{journaltitle}{Nature Communications}
       \field{month}{12}
       \field{number}{1}
-      \field{title}{{The C5a/C5a receptor 1 axis controls tissue neovascularization through CXCL4 release from platelets}}
+      \field{title}{The {{C5a}}/{{C5a}} Receptor 1 Axis Controls Tissue Neovascularization through {{CXCL4}} Release from Platelets}
       \field{volume}{12}
       \field{year}{2021}
       \field{pages}{3352}
@@ -241,13 +239,13 @@
       \verb 10.1038/s41467-021-23499-w
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Nording et al. - 2021 - The C5aC5a receptor 1 axis controls tissue neovascularization through CXCL4 release from platelets.pdf:pdf
+      \verb /home/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
       \endverb
       \verb{urlraw}
-      \verb http://dx.doi.org/10.1038/s41467-021-23499-w http://www.nature.com/articles/s41467-021-23499-w
+      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
       \endverb
       \verb{url}
-      \verb http://dx.doi.org/10.1038/s41467-021-23499-w%20http://www.nature.com/articles/s41467-021-23499-w
+      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
       \endverb
     \endentry
     \entry{Hlushchuk2020}{article}{}
@@ -283,8 +281,8 @@
            given={Johannes},
            giveni={J\bibinitperiod}}}%
         {{hash=25d38a23b8f7d7849e90c53b11605a95}{%
-           family={{Haghayegh Jahromi}},
-           familyi={H\bibinitperiod},
+           family={Haghayegh\bibnamedelima Jahromi},
+           familyi={H\bibinitperiod\bibinitdelim J\bibinitperiod},
            given={Neda},
            giveni={N\bibinitperiod}}}%
         {{hash=ebb1ec0e28d77b13acca4f1075879b2b}{%
@@ -314,17 +312,17 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Analysis of the angioarchitecture and quantification of the conduit vessels and microvasculature is of paramount importance for understanding the physiological and pathological processes within the central nervous system (CNS). Most of the available in vivo imaging methods lack penetration depth and/or resolution. Some ex vivo methods may provide better resolution, but are mainly destructive, as they are designed for imaging the CNS tissues after their removal from the skull or vertebral column. The removal procedure inevitably alters the in situ relations of the investigated structures and damages the dura mater and leptomeninges. µAngiofil, a polymer-based contrast agent, permits a qualitatively novel postmortem microangio-computed tomography (microangioCT) approach with excellent resolution and, therefore, visualization of the smallest brain capillaries. The datasets obtained empower a rather straightforward quantitative analysis of the vascular tree, including the microvasculature. The µAngiofil has an excellent filling capacity as well as a radio-opacity higher than the one of bone tissue, which allows imaging the cerebral microvasculature even within the intact skull or vertebral column. This permits in situ visualization and thus investigation of the dura mater and leptomeningeal layers as well as their blood supply in their original geometry. Moreover, the methodology introduced here permits correlative approaches, i.e., microangioCT followed by classical histology, immunohistochemistry and even electron microscopy. The experimental approach presented here makes use of common desktop microCT scanners, rendering it a promising everyday tool for the evaluation of the (micro)vasculature of the central nervous system in preclinical and basic research.}
+      \field{abstract}{Analysis of the angioarchitecture and quantification of the conduit vessels and microvasculature is of paramount importance for understanding the physiological and pathological processes within the central nervous system (CNS). Most of the available in vivo imaging methods lack penetration depth and/or resolution. Some ex vivo methods may provide better resolution, but are mainly destructive, as they are designed for imaging the CNS tissues after their removal from the skull or vertebral column. The removal procedure inevitably alters the in situ relations of the investigated structures and damages the dura mater and leptomeninges. \textmu Angiofil, a polymer-based contrast agent, permits a qualitatively novel postmortem microangio-computed tomography (microangioCT) approach with excellent resolution and, therefore, visualization of the smallest brain capillaries. The datasets obtained empower a rather straightforward quantitative analysis of the vascular tree, including the microvasculature. The \textmu Angiofil has an excellent filling capacity as well as a radio-opacity higher than the one of bone tissue, which allows imaging the cerebral microvasculature even within the intact skull or vertebral column. This permits in situ visualization and thus investigation of the dura mater and leptomeningeal layers as well as their blood supply in their original geometry. Moreover, the methodology introduced here permits correlative approaches, i.e., microangioCT followed by classical histology, immunohistochemistry and even electron microscopy. The experimental approach presented here makes use of common desktop microCT scanners, rendering it a promising everyday tool for the evaluation of the (micro)vasculature of the central nervous system in preclinical and basic research.}
       \field{issn}{1863-2653}
       \field{journaltitle}{Brain Structure and Function}
       \field{month}{10}
-      \field{title}{{Innovative high-resolution microCT imaging of animal brain vasculature}}
+      \field{title}{Innovative High-Resolution {{microCT}} Imaging of Animal Brain Vasculature}
       \field{year}{2020}
       \verb{doi}
       \verb 10.1007/s00429-020-02158-8
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf:pdf
+      \verb /home/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
       \endverb
       \verb{urlraw}
       \verb http://link.springer.com/10.1007/s00429-020-02158-8
@@ -452,7 +450,7 @@
       \field{issn}{09284931}
       \field{journaltitle}{Materials Science and Engineering: C (in press)}
       \field{month}{8}
-      \field{title}{{Development of vascularized nerve scaffold using perfusion-decellularization and recellularization}}
+      \field{title}{Development of Vascularized Nerve Scaffold Using Perfusion-Decellularization and Recellularization}
       \field{year}{2020}
       \field{pages}{111311}
       \range{pages}{1}
@@ -460,7 +458,7 @@
       \verb 10.1016/j.msec.2020.111311
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/W{\"{u}}thrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf:pdf;:Users/habi/Documents/Mendeley Desktop/W{\"{u}}thrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization.pdf:pdf
+      \verb /home/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/home/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1016/j.msec.2020.111311
@@ -515,13 +513,17 @@
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Introduction: In order to achieve a satisfactory functional and aesthetic result a thin skin flap is often required in surgical reconstruction of various body regions. Perforator flaps based on either the superficial or deep branch of the superficial circumflex iliac artery (SCIA) have been used for this purpose mainly in the Asian population. Recently the superficial plane has been established as a new way of elevating the flap. Anatomical studies and details of this new flap are lacking. Material and methods: Wide areas were harvested subfascially from the groin of Thiel-fixated cadavers. Both deep and superficial branches of the superficial circumflex iliac artery were carefully dissected and individually injected with $\mu$Angiofil. After CT-imaging the flaps were raised on the superficial plane, perforators were marked and the flaps subsequently rescanned. High-resolution images of regions of interest were taken using micro-CT. Results: A total of 21 flaps were harvested and analyzed. Both the deep and superficial branch provided more than three perforators per branch, however, the deep branch based flap was significantly larger (202 vs. 112 cm2, p {<} 0.01) and had a longer pedicle (9.1 vs. 6.6 cm, p {<} 0.01). Raising the flap in the superficial plane reliably reduces bulk and increases homogeneity. Conclusions: The SCIP flap appears to have a reliable vascular blood supply. The SCIA and its main branches and perforators have a consistent vascular pattern. The deep branch of the SCIA has the anatomic potential to be the preferred pedicle in case larger flaps with longer pedicles are necessary.}
+      \field{abstract}{Introduction: In order to achieve a satisfactory functional and aesthetic result a thin skin flap is often required in surgical reconstruction of various body regions. Perforator flaps based on either the superficial or deep branch of the superficial circumflex iliac artery (SCIA) have been used for this purpose mainly in the Asian population. Recently the superficial plane has been established as a new way of elevating the flap. Anatomical studies and details of this new flap are lacking. Material and methods: Wide areas were harvested subfascially from the groin of Thiel-fixated cadavers. Both deep and superficial branches of the superficial circumflex iliac artery were carefully dissected and individually injected with {$\mu$}Angiofil. After CT-imaging the flaps were raised on the superficial plane, perforators were marked and the flaps subsequently rescanned. High-resolution images of regions of interest were taken using micro-CT. Results: A total of 21 flaps were harvested and analyzed. Both the deep and superficial branch provided more than three perforators per branch, however, the deep branch based flap was significantly larger (202 vs. 112 cm2, p {$<$} 0.01) and had a longer pedicle (9.1 vs. 6.6 cm, p {$<$} 0.01). Raising the flap in the superficial plane reliably reduces bulk and increases homogeneity. Conclusions: The SCIP flap appears to have a reliable vascular blood supply. The SCIA and its main branches and perforators have a consistent vascular pattern. The deep branch of the SCIA has the anatomic potential to be the preferred pedicle in case larger flaps with longer pedicles are necessary.}
       \field{issn}{09409602}
       \field{journaltitle}{Annals of Anatomy - Anatomischer Anzeiger}
       \field{month}{3}
-      \field{title}{{The anatomical reliability of the superficial circumflex iliac artery perforator (SCIP) flap}}
+      \field{title}{The Anatomical Reliability of the Superficial Circumflex Iliac Artery Perforator ({{SCIP}}) Flap}
+      \field{urlday}{23}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
       \field{volume}{234}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{pages}{151624}
       \range{pages}{1}
       \verb{doi}
@@ -558,13 +560,13 @@
            given={Helena},
            giveni={H\bibinitperiod}}}%
         {{hash=e022f8a1ba915a820d7c2fc18dd61c11}{%
-           family={García-Poyatos},
-           familyi={G\bibinithyphendelim P\bibinitperiod},
+           family={{García-Poyatos}},
+           familyi={G\bibinitperiod},
            given={Carolina},
            giveni={C\bibinitperiod}}}%
         {{hash=06ef4f3c16c5a6594a77a10f4bf91e27}{%
-           family={Sande-Melón},
-           familyi={S\bibinithyphendelim M\bibinitperiod},
+           family={{Sande-Melón}},
+           familyi={S\bibinitperiod},
            given={Marcos},
            giveni={M\bibinitperiod}}}%
         {{hash=bebf43f0239ede97718fcc66e3a01528}{%
@@ -611,21 +613,25 @@
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In order to study the adaptation scope of the fish respiratory organ and the O2 metabolism due to endurance training, we subjected adult zebrafish (Danio rerio) to endurance exercise for 5 weeks. After the training period, the swimmer group showed a significant increase in swimming performance, body weight and length. In scanning electron microscopy of the gills, the average length of centrally located primary filaments appeared significantly longer in the swimmer than in the non-trained control group (+6.1{\%}, 1639 $\mu$m vs. 1545 $\mu$m, p = 0.00043) and the average number of secondary filaments increased significantly (+7.7{\%}, 49.27 vs. 45.73, p = 9e-09). Micro-computed tomography indicated a significant increase in the gill volume (p = 0.048) by 11.8{\%} from 0.490 mm3 to 0.549 mm3. The space-filling complexity dropped significantly (p = 0.0088) by 8.2{\%} from 38.8{\%} to 35.9{\%}., i.e. making the gills of the swimmers less compact. Respirometry after 5 weeks showed a significantly higher oxygen consumption (+30.4{\%}, p = 0.0081) of trained fish during exercise compared to controls. Scanning electron microscopy revealed different stages of new secondary filament budding, which happened at the tip of the primary lamellae. Using BrdU we could confirm that the growth of the secondary filaments took place mainly in the distal half and the tip and for primary filaments mainly at the tip. We conclude that the zebrafish respiratory organ-unlike the mammalian lung-has a high plasticity, and after endurance training increases its volume and changes its structure in order to facilitate O2 uptake.}
+      \field{abstract}{In order to study the adaptation scope of the fish respiratory organ and the O2 metabolism due to endurance training, we subjected adult zebrafish (Danio rerio) to endurance exercise for 5 weeks. After the training period, the swimmer group showed a significant increase in swimming performance, body weight and length. In scanning electron microscopy of the gills, the average length of centrally located primary filaments appeared significantly longer in the swimmer than in the non-trained control group (+6.1\%, 1639 {$\mu$}m vs. 1545 {$\mu$}m, p = 0.00043) and the average number of secondary filaments increased significantly (+7.7\%, 49.27 vs. 45.73, p = 9e-09). Micro-computed tomography indicated a significant increase in the gill volume (p = 0.048) by 11.8\% from 0.490 mm3 to 0.549 mm3. The space-filling complexity dropped significantly (p = 0.0088) by 8.2\% from 38.8\% to 35.9\%., i.e. making the gills of the swimmers less compact. Respirometry after 5 weeks showed a significantly higher oxygen consumption (+30.4\%, p = 0.0081) of trained fish during exercise compared to controls. Scanning electron microscopy revealed different stages of new secondary filament budding, which happened at the tip of the primary lamellae. Using BrdU we could confirm that the growth of the secondary filaments took place mainly in the distal half and the tip and for primary filaments mainly at the tip. We conclude that the zebrafish respiratory organ-unlike the mammalian lung-has a high plasticity, and after endurance training increases its volume and changes its structure in order to facilitate O2 uptake.}
       \field{issn}{1932-6203}
       \field{journaltitle}{PLOS ONE}
       \field{month}{2}
       \field{number}{2}
-      \field{title}{{Adaptation mechanism of the adult zebrafish respiratory organ to endurance training}}
+      \field{title}{Adaptation Mechanism of the Adult Zebrafish Respiratory Organ to Endurance Training}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
       \field{volume}{15}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{pages}{e0228333}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1371/journal.pone.0228333
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf:pdf
+      \verb /home/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1371/journal.pone.0228333
@@ -642,8 +648,8 @@
            given={Verdiana},
            giveni={V\bibinitperiod}}}%
         {{hash=fbfd054826ec52385f5b4d42a54090d3}{%
-           family={Fernandez-Palomo},
-           familyi={F\bibinithyphendelim P\bibinitperiod},
+           family={{Fernandez-Palomo}},
+           familyi={F\bibinitperiod},
            given={Cristian},
            giveni={C\bibinitperiod}}}%
         {{hash=7ec3da93a009f8fa69c58326be207f57}{%
@@ -676,13 +682,11 @@
            familyi={S\bibinitperiod},
            given={Nahoko},
            giveni={N\bibinitperiod}}}%
-        {{hash=36e848dad5a12c862122a0d373ff36d5}{%
-           family={Veer},
-           familyi={V\bibinitperiod},
+        {{hash=a57275a3d8a9f551f5158649844b7186}{%
+           family={{de Veer}},
+           familyi={d\bibinitperiod},
            given={Michael},
-           giveni={M\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
+           giveni={M\bibinitperiod}}}%
         {{hash=b3db0158ff6279d1e5cee14cac6a52a3}{%
            family={Laissue},
            familyi={L\bibinitperiod},
@@ -703,11 +707,11 @@
         {Elsevier}%
       }
       \strng{namehash}{d47f5a2d69fc7ed85f604bc5c1084c5b}
-      \strng{fullhash}{08423150aa0e634cd008342d51f490f3}
+      \strng{fullhash}{45451aae11e455d443d10ec0425f5597}
       \strng{bibnamehash}{d47f5a2d69fc7ed85f604bc5c1084c5b}
       \strng{authorbibnamehash}{d47f5a2d69fc7ed85f604bc5c1084c5b}
       \strng{authornamehash}{d47f5a2d69fc7ed85f604bc5c1084c5b}
-      \strng{authorfullhash}{08423150aa0e634cd008342d51f490f3}
+      \strng{authorfullhash}{45451aae11e455d443d10ec0425f5597}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -715,10 +719,17 @@
       \field{issn}{03603016}
       \field{journaltitle}{International Journal of Radiation Oncology*Biology*Physics}
       \field{month}{8}
-      \field{title}{{Synchrotron Microbeam Radiotherapy for the treatment of lung carcinoma: a pre-clinical study}}
+      \field{title}{Synchrotron {{Microbeam Radiotherapy}} for the Treatment of Lung Carcinoma: A Pre-Clinical Study}
+      \field{urlday}{16}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.ijrobp.2021.07.1717
+      \endverb
+      \verb{file}
+      \verb /home/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
       \endverb
       \verb{urlraw}
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
@@ -767,16 +778,20 @@
       \field{issn}{1313-2970}
       \field{journaltitle}{ZooKeys}
       \field{month}{11}
-      \field{title}{{A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji}}
+      \field{title}{A New {{Diancta}} Species of the Family {{Diplommatinidae}} ({{Cyclophoroidea}}) from {{Vanua Levu Island}}, {{Fiji}}}
+      \field{urlday}{29}
+      \field{urlmonth}{11}
+      \field{urlyear}{2021}
       \field{volume}{1073}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 12}
       \range{pages}{12}
       \verb{doi}
       \verb 10.3897/zookeys.1073.73241
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf:pdf
+      \verb /home/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
       \endverb
       \verb{urlraw}
       \verb https://zookeys.pensoft.net/article/73241/
@@ -825,9 +840,9 @@
       \field{labeltitlesource}{title}
       \field{abstract}{This pilot study explores whether a human Thiel-embalmed temporal bone is suitable for generating an accurate and complete data set with micro-computed tomography (micro-CT) and whether solid iodine-staining improves visualization and facilitates segmentation of middle ear structures.}
       \field{issn}{1916-0216}
-      \field{journaltitle}{Journal of Otolaryngology - Head {\&} Neck Surgery}
+      \field{journaltitle}{Journal of Otolaryngology - Head \& Neck Surgery}
       \field{number}{1}
-      \field{title}{{Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling}}
+      \field{title}{Micro-{{CT}} Imaging of {{Thiel-embalmed}} and Iodine-Stained Human Temporal Bone for {{3D}} Modeling}
       \field{volume}{50}
       \field{year}{2021}
       \field{pages}{33}
@@ -836,7 +851,7 @@
       \verb 10.1186/s40463-021-00522-0
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf:pdf
+      \verb /home/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1186/s40463-021-00522-0
@@ -878,16 +893,20 @@
       \field{journaltitle}{BMC Oral Health}
       \field{month}{12}
       \field{number}{1}
-      \field{title}{{Automated segmentation and description of the internal morphology of human permanent teeth by means of micro-CT}}
+      \field{title}{Automated Segmentation and Description of the Internal Morphology of Human Permanent Teeth by Means of Micro-{{CT}}}
+      \field{urlday}{9}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
       \field{volume}{21}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{pages}{185}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1186/s12903-021-01551-x
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Haberth{\"{u}}r, Hlushchuk, Wolf - 2021 - Automated segmentation and description of the internal morphology of human permanent teeth by means.pdf:pdf
+      \verb /home/habi/Zotero/storage/NHN4G5MW/Haberthür, Hlushchuk, Wolf - 2021 - Automated segmentation and description of the internal morphology of human permanent teeth by means.pdf
       \endverb
       \verb{urlraw}
       \verb https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x
@@ -919,27 +938,31 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A method is given of finding a real function in a finite region of a plane given its line integrals along all straight lines intersecting the region. The solution found is applicable to three probl...}
-      \field{annotation}{From Duplicate 1 (Representation of a Function by Its Line Integrals, with Some Radiological Applications - Cormack, A. M.) http://is.gd/b0Bnr}
       \field{issn}{00218979}
       \field{journaltitle}{Journal of Applied Physics}
       \field{month}{9}
+      \field{note}{http://is.gd/b0Bnr}
       \field{number}{9}
-      \field{title}{{Representation of a Function by Its Line Integrals, with Some Radiological Applications}}
+      \field{title}{Representation of a {{Function}} by {{Its Line Integrals}}, with {{Some Radiological Applications}}}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2012}
       \field{volume}{34}
       \field{year}{1963}
+      \field{urldateera}{ce}
       \field{pages}{2722}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1063/1.1729798
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf:pdf
+      \verb /home/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
       \endverb
       \verb{urlraw}
-      \verb http://doi.org/10.1063/1.1729798 http://aip.scitation.org/doi/10.1063/1.1729798
+      \verb http://doi.org/10.1063/1.1729798
       \endverb
       \verb{url}
-      \verb http://doi.org/10.1063/1.1729798%20http://aip.scitation.org/doi/10.1063/1.1729798
+      \verb http://doi.org/10.1063/1.1729798
       \endverb
     \endentry
     \entry{Hounsfield1976a}{article}{}
@@ -962,7 +985,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the Canadian Association of Radiologists}
       \field{number}{3}
-      \field{title}{{Historical notes on computerized axial tomography.}}
+      \field{title}{Historical Notes on Computerized Axial Tomography.}
       \field{volume}{27}
       \field{year}{1976}
       \field{pages}{135}
@@ -989,14 +1012,18 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Computed tomography: principles, design, artifacts, and recent advances}}
+      \field{title}{Computed Tomography: Principles, Design, Artifacts, and Recent Advances}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2011}
       \field{volume}{114}
       \field{year}{2003}
+      \field{urldateera}{ce}
       \verb{urlraw}
-      \verb http://books.google.com/books?id=JX{\_}{\_}lLLXFHkC http://books.google.com/books?hl=en{\&}lr={\&}id=JX{\_}{\_}lLLXFHkC{\&}oi=fnd{\&}pg=PR9{\&}dq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances{\&}ots=RiM0{\_}rS-Rq{\&}sig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
+      \verb http://books.google.com/books?id=JX__lLLXFHkC
       \endverb
       \verb{url}
-      \verb http://books.google.com/books?id=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%20http://books.google.com/books?hl=en%7B%5C&%7Dlr=%7B%5C&%7Did=JX%7B%5C_%7D%7B%5C_%7DlLLXFHkC%7B%5C&%7Doi=fnd%7B%5C&%7Dpg=PR9%7B%5C&%7Ddq=Computed+tomography:+Principles,+design,+artifacts,+and+recent+advances%7B%5C&%7Dots=RiM0%7B%5C_%7DrS-Rq%7B%5C&%7Dsig=sCLTzkZ6jLjn8km7zlP2C4eUYAw
+      \verb http://books.google.com/books?id=JX__lLLXFHkC
       \endverb
     \endentry
     \entry{Taubmann2018}{incollection}{}
@@ -1042,7 +1069,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Computed Tomography}}
+      \field{title}{Computed {{Tomography}}}
       \field{year}{2018}
       \field{pages}{147\bibrangedash 189}
       \range{pages}{43}
@@ -1050,10 +1077,10 @@
       \verb 10.1007/978-3-319-96520-8_8
       \endverb
       \verb{urlraw}
-      \verb http://link.springer.com/10.1007/978-3-319-96520-8{\_}8
+      \verb http://link.springer.com/10.1007/978-3-319-96520-8_8
       \endverb
       \verb{url}
-      \verb http://link.springer.com/10.1007/978-3-319-96520-8%7B%5C_%7D8
+      \verb http://link.springer.com/10.1007/978-3-319-96520-8_8
       \endverb
     \endentry
     \entry{xrayphysics}{misc}{}
@@ -1074,7 +1101,7 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{X-Ray Physics: X-Ray Interaction with Matter, X-Ray Contrast, and Dose}}
+      \field{title}{X-{{Ray Physics}}: {{X-Ray Interaction}} with {{Matter}}, {{X-Ray Contrast}}, and {{Dose}}}
       \field{urlday}{6}
       \field{urlmonth}{12}
       \field{urlyear}{2019}
@@ -1088,30 +1115,28 @@
     \endentry
     \entry{wiki:beer-lambert}{misc}{}
       \name{author}{1}{}{%
-        {{hash=e2ceeea38f8620383cfbd3e99c5c0cd8}{%
-           family={contributors},
-           familyi={c\bibinitperiod},
-           given={Wikipedia},
-           giveni={W\bibinitperiod}}}%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
       }
-      \strng{namehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
-      \strng{fullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
-      \strng{bibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
-      \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
-      \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
-      \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{[Online; accessed 6-December-2019]}
-      \field{title}{{Beer–Lambert law --- Wikipedia, The Free Encyclopedia}}
+      \field{note}{[Online; accessed 6-December-2019]}
+      \field{title}{Beer–{{Lambert}} Law --- {{Wikipedia}}, {{The Free Encyclopedia}}}
       \field{year}{2019}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/w/index.php?title=Beer–Lambert{\_}law{\&}oldid=925859144
+      \verb https://en.wikipedia.org/w/index.php?title=Beer–Lambert_law&oldid=925859144
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/w/index.php?title=Beer%E2%80%93Lambert%7B%5C_%7Dlaw%7B%5C&%7Doldid=925859144
+      \verb https://en.wikipedia.org/w/index.php?title=Beer%E2%80%93Lambert_law&oldid=925859144
       \endverb
     \endentry
     \entry{Clark2013}{article}{}
@@ -1194,16 +1219,20 @@
       \field{journaltitle}{Journal of Digital Imaging}
       \field{month}{12}
       \field{number}{6}
-      \field{title}{{The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository}}
+      \field{title}{The {{Cancer Imaging Archive}} ({{TCIA}}): {{Maintaining}} and {{Operating}} a {{Public Information Repository}}}
+      \field{urlday}{2}
+      \field{urlmonth}{12}
+      \field{urlyear}{2019}
       \field{volume}{26}
       \field{year}{2013}
+      \field{urldateera}{ce}
       \field{pages}{1045\bibrangedash 1057}
       \range{pages}{13}
       \verb{doi}
       \verb 10.1007/s10278-013-9622-7
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Clark et al. - 2013 - The Cancer Imaging Archive (TCIA) Maintaining and Operating a Public Information Repository.pdf:pdf
+      \verb /home/habi/Zotero/storage/ANDPECX9/full-text.pdf
       \endverb
       \verb{urlraw}
       \verb http://link.springer.com/10.1007/s10278-013-9622-7
@@ -1220,8 +1249,8 @@
            given={Johannes},
            giveni={J\bibinitperiod}}}%
         {{hash=fb4a9b4f8cb47f8bee748d32779b7d01}{%
-           family={Arganda-Carreras},
-           familyi={A\bibinithyphendelim C\bibinitperiod},
+           family={{Arganda-Carreras}},
+           familyi={A\bibinitperiod},
            given={Ignacio},
            giveni={I\bibinitperiod}}}%
         {{hash=0a776e2acaca3da7f09464eed966703a}{%
@@ -1313,17 +1342,21 @@
       \field{journaltitle}{Nature Methods}
       \field{month}{7}
       \field{number}{7}
-      \field{shorttitle}{Nat Meth}
-      \field{title}{{Fiji: an open-source platform for biological-image analysis}}
+      \field{shorttitle}{Nat {{Meth}}}
+      \field{title}{Fiji: An Open-Source Platform for Biological-Image Analysis}
+      \field{urlday}{18}
+      \field{urlmonth}{10}
+      \field{urlyear}{2013}
       \field{volume}{9}
       \field{year}{2012}
+      \field{urldateera}{ce}
       \field{pages}{676\bibrangedash 682}
       \range{pages}{7}
       \verb{doi}
       \verb 10.1038/nmeth.2019
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf:pdf
+      \verb /home/habi/Zotero/storage/B2RHUUNG/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf
       \endverb
       \verb{urlraw}
       \verb http://www.nature.com/articles/nmeth.2019
@@ -1418,7 +1451,7 @@
            given={B},
            giveni={B\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
+      \list{publisher}{1}{%
         {IOS Press}%
       }
       \strng{namehash}{48035973e2ebb91d3445f30ca56d312f}
@@ -1435,7 +1468,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Positioning and Power in Academic Publishing: Players, Agents and Agendas}
-      \field{title}{{Jupyter Notebooks -- a publishing format for reproducible computational workflows}}
+      \field{title}{Jupyter {{Notebooks}} -- a Publishing Format for Reproducible Computational Workflows}
       \field{year}{2016}
       \field{pages}{87\bibrangedash 90}
       \range{pages}{4}
@@ -1443,7 +1476,7 @@
       \verb 10.3233/978-1-61499-649-1-87
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Kluyver et al. - 2016 - Jupyter Notebooks—a publishing format for reproducible computational workflows.pdf:pdf
+      \verb /home/habi/Zotero/storage/MA5JNYF8/Kluyver et al. - 2016 - Jupyter Notebooks -- a publishing format for reproducible computational workflows.pdf
       \endverb
     \endentry
     \entry{Wolf2021}{article}{}
@@ -1495,16 +1528,15 @@
       \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authorfullhash}{795d028f9f4534239332966341d28877}
-      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The aim of this study was to investigate the root canal system morphology by means of a root canal configuration (RCC) classification described with a four-digit system, the physiological foramen geometry and accessory canal frequency and morphology, of 101 mandibular canines (MaCa) of a Swiss-German population by means of micro-computed tomography. Micro-CT examination of the MaCa was performed and the obtained images analyzed with a 3D imaging software. In single-rooted MaCas, the most frequently observed RCCs were 1-1-1/1 (74.5{\%}) and 1-1-1/2 (14.3{\%}). Seven other RCCs were less frequently observed with a frequency from 4.1 to 1.0{\%}. One physiological foramen was observed in 80.6{\%} of the MaCas, two in 16.3{\%}, three in 1.0{\%} and four in 2.0{\%}. Accessory and connecting canals were apparent only in the middle and apical root thirds. Two-rooted MaCas occurred less frequently (n = 3). When one physiological foramen was present, the mean size of the narrow and wide diameters were 0.28 mm (± 0.07) and 0.40 mm (± 0.11), while the distance between physiological and anatomical foramen was 0.45 mm (± 0.17). MaCas are predominantly single-rooted teeth with a 1-1-1/1 or 1-1-1/2 RCC. Most MaCas had one physiological foramen with an oval shape.}
+      \field{abstract}{The aim of this study was to investigate the root canal system morphology by means of a root canal configuration (RCC) classification described with a four-digit system, the physiological foramen geometry and accessory canal frequency and morphology, of 101 mandibular canines (MaCa) of a Swiss-German population by means of micro-computed tomography. Micro-CT examination of the MaCa was performed and the obtained images analyzed with a 3D imaging software. In single-rooted MaCas, the most frequently observed RCCs were 1-1-1/1 (74.5\%) and 1-1-1/2 (14.3\%). Seven other RCCs were less frequently observed with a frequency from 4.1 to 1.0\%. One physiological foramen was observed in 80.6\% of the MaCas, two in 16.3\%, three in 1.0\% and four in 2.0\%. Accessory and connecting canals were apparent only in the middle and apical root thirds. Two-rooted MaCas occurred less frequently (n = 3). When one physiological foramen was present, the mean size of the narrow and wide diameters were 0.28 mm ({$\pm$} 0.07) and 0.40 mm ({$\pm$} 0.11), while the distance between physiological and anatomical foramen was 0.45 mm ({$\pm$} 0.17). MaCas are predominantly single-rooted teeth with a 1-1-1/1 or 1-1-1/2 RCC. Most MaCas had one physiological foramen with an oval shape.}
       \field{issn}{2045-2322}
       \field{journaltitle}{Scientific Reports}
       \field{number}{1}
-      \field{title}{{Internal morphology of 101 mandibular canines of a Swiss-German population by means of micro-CT: An ex vivo study}}
+      \field{title}{Internal Morphology of 101 Mandibular Canines of a {{Swiss-German}} Population by Means of Micro-{{CT}}: {{An}} Ex Vivo Study}
       \field{volume}{11}
       \field{year}{2021}
       \field{pages}{21281}
@@ -1513,7 +1545,7 @@
       \verb 10.1038/s41598-021-00758-w
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/s41598-021-00758-w copy.pdf:pdf
+      \verb /home/habi/Zotero/storage/AU948UHN/s41598-021-00758-w copy.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1038/s41598-021-00758-w
@@ -1525,8 +1557,8 @@
     \entry{Briseno-Marroquin2015}{article}{}
       \name{author}{5}{}{%
         {{hash=7a41b26f38c6ace1e4182a108e47e7b1}{%
-           family={Briseño-Marroquín},
-           familyi={B\bibinithyphendelim M\bibinitperiod},
+           family={{Briseño-Marroquín}},
+           familyi={B\bibinitperiod},
            given={Benjamín},
            giveni={B\bibinitperiod}}}%
         {{hash=7aef301479a84587c1fa1fac608150bc}{%
@@ -1563,21 +1595,25 @@
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Introduction The objective of this study was to propose a root canal configuration description method and to investigate the root canal system morphology of the maxillary first molar by means of micro-computed tomographic imaging. Methods The root canal configuration, foramina, and accessory canal frequency of 179 maxillary first molars were investigated by means of micro-computed tomographic imaging and 3-dimensional software imaging. The root canal configuration and main foramina number are described from coronal to apical with a 4-digit system. Results The most frequent root canal configurations were 1-1-1/1 (45.8{\%}), 2-2-2/2 (25.1{\%}) and 2-2-1/1 (10.1{\%}) in mesiobuccal roots and 1-1-1/1 in distobuccal (97.2{\%}) and palatal (98.9{\%}) roots. The first mesiobuccal (MB1) root canal had 1 accessory canal in 26.3{\%} of the teeth, the distobuccal root canal had 12.3{\%}, and the palatal root canal had 9.5{\%}; in the second mesiobuccal root canal, there was rarely 1 accessory canal. There was 1 accessory canal in 26.3{\%}, 12.3{\%}, and 9.5{\%} in the MB1, distobuccal, and palatal root canals, respectively. The MB1, distobuccal, and palatal root canals had 1 main foramen. The MB2 had 1 main foramen in 39.0{\%} of the teeth and no main foramen in 61.0{\%}. Conclusions The root canal configuration of maxillary first molars is quite diversified. Contrary to our expectations in this research, the mesiobuccal root has predominantly 1 root canal entrance and only 1 main foramen. Anatomic variations including connecting and accessory canals occur in any third of root.}
+      \field{abstract}{Introduction The objective of this study was to propose a root canal configuration description method and to investigate the root canal system morphology of the maxillary first molar by means of micro-computed tomographic imaging. Methods The root canal configuration, foramina, and accessory canal frequency of 179 maxillary first molars were investigated by means of micro-computed tomographic imaging and 3-dimensional software imaging. The root canal configuration and main foramina number are described from coronal to apical with a 4-digit system. Results The most frequent root canal configurations were 1-1-1/1 (45.8\%), 2-2-2/2 (25.1\%) and 2-2-1/1 (10.1\%) in mesiobuccal roots and 1-1-1/1 in distobuccal (97.2\%) and palatal (98.9\%) roots. The first mesiobuccal (MB1) root canal had 1 accessory canal in 26.3\% of the teeth, the distobuccal root canal had 12.3\%, and the palatal root canal had 9.5\%; in the second mesiobuccal root canal, there was rarely 1 accessory canal. There was 1 accessory canal in 26.3\%, 12.3\%, and 9.5\% in the MB1, distobuccal, and palatal root canals, respectively. The MB1, distobuccal, and palatal root canals had 1 main foramen. The MB2 had 1 main foramen in 39.0\% of the teeth and no main foramen in 61.0\%. Conclusions The root canal configuration of maxillary first molars is quite diversified. Contrary to our expectations in this research, the mesiobuccal root has predominantly 1 root canal entrance and only 1 main foramen. Anatomic variations including connecting and accessory canals occur in any third of root.}
       \field{issn}{00992399}
       \field{journaltitle}{Journal of Endodontics}
       \field{month}{12}
       \field{number}{12}
-      \field{title}{{Root Canal Morphology and Configuration of 179 Maxillary First Molars by Means of Micro–computed Tomography: An Ex Vivo Study}}
+      \field{title}{Root {{Canal Morphology}} and {{Configuration}} of 179 {{Maxillary First Molars}} by {{Means}} of {{Micro}}–Computed {{Tomography}}: {{An Ex Vivo Study}}}
+      \field{urlday}{9}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
       \field{volume}{41}
       \field{year}{2015}
+      \field{urldateera}{ce}
       \field{pages}{2008\bibrangedash 2013}
       \range{pages}{6}
       \verb{doi}
       \verb 10.1016/j.joen.2015.09.007
       \endverb
       \verb{file}
-      \verb :Users/habi/Documents/Mendeley Desktop/Brise{\~{n}}o-Marroqu{\'{i}}n et al. - 2015 - Root Canal Morphology and Configuration of 179 Maxillary First Molars by Means of Micro–computed T.pdf:pdf
+      \verb /home/habi/Zotero/storage/5FRE65F7/full-text.pdf
       \endverb
       \verb{urlraw}
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0099239915008328
@@ -1586,69 +1622,6 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0099239915008328
       \endverb
       \keyw{Foramina,maxillary first molar,micro-computed tomography,morphology,root canal configuration}
-    \endentry
-    \entry{Wolf2017}{article}{}
-      \name{author}{5}{}{%
-        {{hash=fdf6fa40a994c79d1b1f7f654c7601db}{%
-           family={Wolf},
-           familyi={W\bibinitperiod},
-           given={Thomas\bibnamedelima Gerhard},
-           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=7aef301479a84587c1fa1fac608150bc}{%
-           family={Paqué},
-           familyi={P\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-        {{hash=1f9fd8925e24d25d3aef11d313378c2a}{%
-           family={{Sven Patyna}},
-           familyi={S\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=023b0e41ddb46e953e5d493dc3c263ba}{%
-           family={Willershausen},
-           familyi={W\bibinitperiod},
-           given={Brita},
-           giveni={B\bibinitperiod}}}%
-        {{hash=7a41b26f38c6ace1e4182a108e47e7b1}{%
-           family={Briseño-Marroquín},
-           familyi={B\bibinithyphendelim M\bibinitperiod},
-           given={Benjamín},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Sichuan University Press}%
-      }
-      \strng{namehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{fullhash}{61b54fb10b56680ff2a39b33b4712bca}
-      \strng{bibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorfullhash}{61b54fb10b56680ff2a39b33b4712bca}
-      \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The aim of this study was to investigate the physiological foramen diameter, shape and distance between physiological and anatomical apex of maxillary and mandibular first and second molars. Accurate knowledge of the physiological foramina morphology; thus, inherent mechanical shaping technical hindrances, is decisive when taking the corresponding root canal final preparation decision. The morphological dimensions of a total of 1 727 physiological foramina were investigated by means of micro-computed tomography. Mean narrow and wide (to a high number, oval) diameters of the physiological foramen were 0.24, 0.22 and 0.33 mm and 0.33, 0.31 and 0.42 mm in mesiobuccal (MB), distobuccal (DB) and palatal (P) roots in maxillary first molars; 0.24, 0.22 and 0.33 mm and 0.41, 0.33 and 0.44 in MB, DB, and P roots in maxillary second molars. Mandibular first molars showed mean narrow and wide diameters of 0.24 and 0.30 mm and of 0.39 and 0.46 mm in mesial (M) and distal (D) roots; second mandibular molars showed 0.25 and 0.31 mm and 0.47 mm in M and D roots. The mean distance between the physiological foramina and anatomical apex was 0.82, 0.81 and 1.02 mm and 0.54, 0.43 and 0.63 mm in MB, DB and P roots of the maxillary first and second molars, respectively. A mean distance of 0.95 mm (M) and 1.05 mm (D) in the first and 0.78 mm (M) and 0.81 mm (D) in the second mandibular molars was observed. Based on the results obtained, assumable recommendations for final preparation size of the physiological foramen were calculated. However, when taking into consideration, the resulting standard deviations of marginal errors must be cautiously considered when taking a final decision in clinical endodontic treatment.}
-      \field{issn}{1674-2818}
-      \field{journaltitle}{International Journal of Oral Science}
-      \field{month}{9}
-      \field{number}{3}
-      \field{title}{{Three-dimensional analysis of the physiological foramen geometry of maxillary and mandibular molars by means of micro-CT}}
-      \field{volume}{9}
-      \field{year}{2017}
-      \field{pages}{151\bibrangedash 157}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1038/ijos.2017.29
-      \endverb
-      \verb{urlraw}
-      \verb http://www.nature.com/articles/ijos201729
-      \endverb
-      \verb{url}
-      \verb http://www.nature.com/articles/ijos201729
-      \endverb
-      \keyw{Apical constriction,Final apical file,Maxillary and mandibular molars morphology,Micro-computed tomography,Physiological foramen}
     \endentry
     \entry{Haberthur2020a}{article}{}
       \name{author}{1}{}{%
@@ -1669,8 +1642,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{title}{{habi/zmk-tooth-cohort: Used for manuscript about method}}
+      \field{title}{Habi/Zmk-Tooth-Cohort: {{Used}} for Manuscript about Method}
+      \field{urlday}{9}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.5281/ZENODO.3999402
       \endverb
