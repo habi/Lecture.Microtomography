@@ -12,7 +12,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333} % use only every nth frame for the animations
+\newcommand{\everyframe}{333}% use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.8\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -27,12 +27,12 @@
 	isbn=true,
 	maxnames=1,
 	sorting=none]{biblatex}
-\addbibresource{../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
+\addbibresource{../../../Documents/library.bib}% FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{spy}
 	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
-\usepackage{shadowtext} % for the shadowed scalebar
+\usepackage{shadowtext}% for the shadowed scalebar
 	\shadowoffset{1pt}
 	\shadowcolor{ubRed}
 \usepackage{pgfplots}
@@ -44,8 +44,8 @@
 	per-mode=symbol,
 	per-symbol=/]{siunitx}
 \usepackage{microtype}
-\usepackage[absolute,overlay]{textpos} %for the \source{} command
-\usepackage[missing=main]{gitinfo2} % GitHub Actions don't pull in the commit hash, so we just show `main'
+\usepackage[absolute,overlay]{textpos}%for the \source{} command
+\usepackage[missing=main]{gitinfo2}% GitHub Actions don't pull in the commit hash, so we just show `main'
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
@@ -61,7 +61,7 @@
 \usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{multirow}
-\usepackage{lipsum} %for alignment testing
+\usepackage{lipsum}%for alignment testing
 \usepackage{mathastext}
 
 % Define complementary colors to ubRed
@@ -110,13 +110,13 @@
 
 % Define us a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
 \makeatletter
-\def\progressbar@progressbar{} % the progress bar
+\def\progressbar@progressbar{}% the progress bar
 \newcount\progressbar@tmpcounta% auxiliary counter
 \newcount\progressbar@tmpcountb% auxiliary counter
-\newdimen\progressbar@pbht %progressbar height
-\newdimen\progressbar@pbwd %progressbar width
-\newdimen\progressbar@rcircle % radius for the circle
-\newdimen\progressbar@tmpdim % auxiliary dimension
+\newdimen\progressbar@pbht%progressbar height
+\newdimen\progressbar@pbwd%progressbar width
+\newdimen\progressbar@rcircle% radius for the circle
+\newdimen\progressbar@tmpdimgit% auxiliary dimension
 \progressbar@pbwd=0.85\linewidth
 \progressbar@rcircle=1.5pt
 \def\progressbar@progressbar{%
@@ -352,7 +352,7 @@
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
-				\item Long history 
+				\item Long history
 				\begin{itemize}
 					\item \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
 					\item 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
