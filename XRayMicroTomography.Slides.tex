@@ -6,7 +6,7 @@
 
 \usetheme{UniBern}
 
-\includeonlyframes{current}
+%\includeonlyframes{current}
 %then....
 %\begin{frame}[label=current]
 %\end{frame}
@@ -87,7 +87,7 @@
 	% Print out (short) link under image, with small text
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
-			\scriptsize\href{http://#1}{#1} #2%
+			\tiny\href{http://#1}{#1} #2%
 			}%
 		}%
 	}%
@@ -95,7 +95,7 @@
 	% Cite (an image from) a reference
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
-			\scriptsize From \cite{#1}, #2%
+			\tiny From \cite{#1}, #2%
 			}%
 		}%
 	}%
@@ -103,7 +103,7 @@
 	% Make the source command an \href{link}{text}
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
-			\scriptsize\href{http://#1}{#2}, #3%
+			\tiny\href{http://#1}{#2}, #3%
 			}%
 		}%
 	}%
@@ -194,7 +194,7 @@
 %\addtobeamertemplate{background canvas}{\transfade[duration=0.5]}{}
 
 % open in fullscreen
-\hypersetup{pdfpagemode=FullScreen}
+%\hypersetup{pdfpagemode=FullScreen}
 
 % Move the text down a bit
 % THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
@@ -318,12 +318,12 @@
 \begin{frame}
 	\frametitle{Imaging methods}
 	\begin{itemize}
-		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
+		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466931.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
 		\item Electron microscopy: see lectures
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177950.html}{\emph{Transmission Electron Microscopy} by Dimitri Vanhecke},
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177954.html}{\emph{Scanning Electron Microscopy} by Michael Stoffel} and
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177956.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan Iacovache}.
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466936.html}{\emph{Transmission Electron Microscopy} by Dimitri Vanhecke},
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466940.html}{\emph{Scanning Electron Microscopy} by Sabine Kässmeyer \& Ivana Jaric} and
+			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466942.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan Iacovache}.
 	\end{itemize}
 \end{frame}
 
@@ -569,11 +569,11 @@
 	}
 
 \begin{frame}
-	\frametitle{MIP}
+	\frametitle{Maximum intensity projection}
 	\centering
-	% pdftoppm -png -r 300 2021_MIC_lecture_Advanced_Microscopy_v04.pdf 2021_MIC_lecture_Advanced_Microscopy_v04
-	\includegraphics[height=\imheight]{./images/2021_MIC_lecture_Advanced_Microscopy_v04-20}%
-	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2177933.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 20}%
+	% pdfseparate 220923_Fundamentals_image_processing_2022_Witz.pdf -f 23 -l 23 220923_Fundamentals_image_processing_2022_Witz-%d.pdf
+	\includegraphics[height=\imheight]{./images/220923_Fundamentals_image_processing_2022_Witz-23}%
+	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466919.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 23}%
 \end{frame}
 
 \subsection{Tomography today}
@@ -737,9 +737,9 @@
 \begin{frame}
 	\frametitle{Projections}
 	\centering
-	% pdftoppm physical\ basics_2020.pdf -png physical_basics_2020
-	\includegraphics[height=\imheight]{./images/physical_basics_2021-21}%
-	\sourcelink{ilias.unibe.ch/goto_ilias3\_unibe\_sess\_2177936.html}{\emph{Laws of Physics for Microscopists} by Martin Frenz}{Slide 21}%
+	% pdfseparate physical\ basics_2022_folien.pdf -f 21 -l 21 physical_basics_2022_folien-%d.pdf
+	\includegraphics[height=\imheight]{./images/physical_basics_2022_folien-21.pdf}%
+	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution - Laws of Physics for Microscopists (1)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
 \begin{frame}
@@ -802,7 +802,7 @@
 	\frametitle{What to use?}
 	\begin{itemize}
 		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
-		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177933.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
+		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466919.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
 		\item Reproducible research
 		\begin{itemize}
 			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
