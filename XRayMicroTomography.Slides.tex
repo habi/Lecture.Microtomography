@@ -302,7 +302,7 @@
 
 \section{Imaging}
 \begin{frame}
-	\frametitle{Wavelength \& Scale}
+	\frametitle{Wavelength and scales}
 	\centering
 	\only<1|handout:1>{%
 		\includegraphics[height=\imheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
@@ -340,8 +340,8 @@
 		}
 	\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}{Bruker Homepage}:
 		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
-		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
-		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
+		It represents proper "3D microscopy", where very fine scale internal structure of objects is imaged non-destructively.
+		No sample preparation, no staining, no thin slicing---a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
 
 \subsection{History}
@@ -402,15 +402,15 @@
 			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
 			\note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
 				Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
-				This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
+				This has practical implications in the field of radiation protection and is the reason materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
 				The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \SI{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
 				At beam energies above this, the Compton effect predominates.}
-			\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
-				It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
-			\note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_e\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
+			\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the electron density and physical density of the material.
+				Compton scattering does \emph{not} depend on the atomic number: \(\lambda'-\lambda=\frac{h}{m_{e}c}\left(1-\cos{\theta}\right)\)
+			\note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_{e}\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
 		\end{itemize}
 		\item Lowering x-ray energy increases contrast
-		\item X-ray penetration decreases exponentially with sample thickness (\cite[\ie Beer-Lamberts law]{wiki:beer-lambert} \(I(t) = I_0 \, e^{-\alpha z}\)
+		\item X-ray penetration decreases exponentially with sample thickness (\cite[\ie Beer-Lamberts law]{wiki:beer-lambert} \(I(t)=I_{0}e^{-\alpha z}\)
 	\end{itemize}
 \end{frame}
 
@@ -444,7 +444,7 @@
 			]{./tables/tissue-composition.csv}%
 		}%
 	\end{table}
-	\note{Bone, lean tissue, fat and air can be distinguished quite easily}
+	\note{Bone, lean tissue, fat and air can be distinguished easily}
 \end{frame}
 
 \renewcommand{\imwidth}{\columnwidth}
@@ -635,10 +635,10 @@
 	\frametitle{What is happening?}
 	\begin{columns}%
 		\begin{column}{0.45\linewidth}%
-			No matter what kind of machine, the basic principle is always the same
+			The basic components of a computer tomography device are always
 			\begin{itemize}
 				\item an x-ray source
-				\item a sample
+				\item something to image
 				\item a detector
 			\end{itemize}
 		\end{column}%
@@ -755,7 +755,7 @@
 	\centering
 	% pdfseparate physical\ basics_2022_folien.pdf -f 21 -l 21 physical_basics_2022_folien-%d.pdf
 	\includegraphics[height=\imheight]{./images/physical_basics_2022_folien-21.pdf}%
-	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution - Laws of Physics for Microscopists (1)} by Martin Frenz}{Slide 21}%
+	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
 \begin{frame}
