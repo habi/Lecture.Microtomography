@@ -237,7 +237,6 @@
 	\end{itemize}
 \end{frame}
 
-\renewcommand{\imheight}{0.5\paperheight}
 \begin{frame}
 	\frametitle{\uct-group}
 	\begin{columns}
@@ -256,7 +255,7 @@
 		\end{column}
 		\begin{column}{0.382\linewidth}
 			\centering
-			\includegraphics<1|handout:0>[height=\imheight]{./images/1172}%
+			\includegraphics<1|handout:0>[width=\imwidth]{./images/1172}%
 			\only<1|handout:0>{\source{brukersupport.com}{}}
 			\includegraphics<2>[width=\imwidth]{./images/1272}%
 			\only<2>{\source{bruker.com/skyscan1272}{}}
@@ -270,7 +269,7 @@
 	\tableofcontents
 \end{frame}
 
-\renewcommand{\imheight}{0.618\textheight}
+\renewcommand{\imheight}{0.6\paperheight}
 \section{Overview}
 \begin{frame}
 	\frametitle{Biomedical imaging}%
@@ -279,7 +278,7 @@
 			\begin{itemize}%
 				\item<1-|handout:1-> Medical research%
 				\item<1-|handout:1-> Non-destructive insights into the samples%
-				\item<2-|handout:1->(Small) Biological samples%
+				\item<2-|handout:1->(Small) biological samples%
 			\end{itemize}%
 		\end{column}%
 		\begin{column}{0.6\linewidth}%
@@ -331,7 +330,7 @@
 	\frametitle{CT-Scanner}
 	\centering
 	\mode<beamer>{%
-		\animategraphics[loop,autoplay,height=0.618\textheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
+		\animategraphics[loop,autoplay,height=\imheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\mode<handout>{%
