@@ -337,11 +337,11 @@
 		\includegraphics[height=\imheight]{./movies/ct-scanner/ct-scanner0001}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
-	\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}{Bruker Homepage}:
-		Micro computed tomography or micro-CT is X-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
-		It represents proper "3D microscopy", where very fine scale internal structure of objects is imaged non-destructively.
-		No sample preparation, no staining, no thin slicing---a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
+\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}{Bruker Homepage}:
+	Micro computed tomography or micro-CT is X-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
+	It represents proper "3D microscopy", where very fine scale internal structure of objects is imaged non-destructively.
+	No sample preparation, no staining, no thin slicing---a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 
 \subsection{History}
 \renewcommand{\imwidth}{\columnwidth}
@@ -375,11 +375,6 @@
 				\end{tikzpicture}%
 			}%
 			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
-			\note{We were unable to find any information on the voxel size of the first CT image.
-					My head is approximately 16 cm wide.
-					I counted 47 voxels across the head in the image.
-					This gives a voxel size of 3.4 mm per voxel.
-				}%
 			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation1}%
 			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
 			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation2}%
@@ -389,6 +384,11 @@
 		\end{column}
 	\end{columns}
 \end{frame}
+\note{We were unable to find any information on the voxel size of the first CT image.
+	My head is approximately 16 cm wide.
+	I counted 47 voxels across the head in the image.
+	This gives a voxel size of 3.4 mm per voxel.
+}
 
 \subsection{Interaction of X-rays with matter}
 \begin{frame}
@@ -399,19 +399,19 @@
 				Both contribute to dose.}
 		\begin{itemize}
 			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
-			\note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
-				Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
-				This has practical implications in the field of radiation protection and is the reason materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
-				The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \SI{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
-				At beam energies above this, the Compton effect predominates.}
 			\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the electron density and physical density of the material.
 				Compton scattering does \emph{not} depend on the atomic number: \(\lambda'-\lambda=\frac{h}{m_{e}c}\left(1-\cos{\theta}\right)\)
-			\note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_{e}\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
 		\end{itemize}
 		\item Lowering X-ray energy increases contrast
 		\item X-ray penetration decreases exponentially with sample thickness (\cite[\ie Beer-Lamberts law]{wiki:beer-lambert} \(I(t)=I_{0}e^{-\alpha z}\)
 	\end{itemize}
 \end{frame}
+\note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
+    Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
+	This has practical implications in the field of radiation protection and is the reason materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
+	The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \SI{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
+	At beam energies above this, the Compton effect predominates.}
+\note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_{e}\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
 
 \begin{frame}
 	\frametitle{Composition of biological tissues}
@@ -443,8 +443,8 @@
 			]{./tables/tissue-composition.csv}%
 		}%
 	\end{table}
-	\note{Bone, lean tissue, fat and air can be distinguished easily}
 \end{frame}
+\note{Bone, lean tissue, fat and air can be distinguished easily}
 
 \renewcommand{\imwidth}{\columnwidth}
 \begin{frame}
@@ -581,7 +581,7 @@
 	The mouse head is the same as shown in the early animation.
 	The files from the early animation were resized 0.25 times; here we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP.
 	The voxel size of the original data is 7.96 um, the image size is 3295\(\times\)1492 pixels.
-	}
+}
 
 \begin{frame}
 	\frametitle{Maximum intensity projection}
