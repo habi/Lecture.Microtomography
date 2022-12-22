@@ -249,7 +249,7 @@
 				\end{itemize}
 				\item Zebrafish musculature and gills~\cite{MesserliAaldijk2020}
 				\item (Lung) tumor detection and metastasis classification~\cite{Trappetti2021}
-				\item Collaborations with museums~\cite{Bochud2021} and scientist at our institute~\cite{Halm2021} to scan a wide range of specimens
+				\item Collaborations with museums~\cite{Bochud2021} and scientist at UniBe~\cite{Halm2021} to scan a wide range of specimens
 				\item Automate \emph{all} the things!~\cite{Haberthur2021}
 			\end{itemize}
 		\end{column}
@@ -269,19 +269,19 @@
 	\tableofcontents
 \end{frame}
 
-\renewcommand{\imheight}{0.6\paperheight}
+\renewcommand{\imheight}{0.65\paperheight}
 \section{Overview}
 \begin{frame}
 	\frametitle{Biomedical imaging}%
 	\begin{columns}%
-		\begin{column}{0.4\linewidth}%
+		\begin{column}{0.37\linewidth}%
 			\begin{itemize}%
 				\item<1-|handout:1-> Medical research%
 				\item<1-|handout:1-> Non-destructive insights into the samples%
 				\item<2-|handout:1->(Small) biological samples%
 			\end{itemize}%
 		\end{column}%
-		\begin{column}{0.6\linewidth}%
+		\begin{column}{0.61\linewidth}%
 			\centering%
 			\only<1-2|handout:1>{%
 				\includegraphics[height=\imheight]{./images/Sagittal_brain_MRI}%
@@ -309,7 +309,7 @@
 		}%
 	\only<2|handout:2>{%
 		\includegraphics[height=\imheight]{./images/MIC-AM_techniques}%
-		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{, with permission}%
+		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{with permission}%
 		}
 \end{frame}
 
@@ -330,7 +330,7 @@
 	\frametitle{CT-Scanner}
 	\centering
 	\mode<beamer>{%
-		\animategraphics[loop,autoplay,height=\imheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
+		\animategraphics[loop,height=\imheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\mode<handout>{%
@@ -757,6 +757,7 @@
 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
+\renewcommand{\imheight}{0.7\paperheight}
 \begin{frame}
 	\frametitle{Projections}
 	\centering
@@ -1101,6 +1102,15 @@
 	}%
 \end{frame}
 
+\mode<beamer>{\begin{frame}[shrink=20]}
+\mode<handout>{\begin{frame}[allowframebreaks]}
+	\frametitle{References}
+	\mode<beamer>{\renewcommand*{\bibfont}{\tiny}}
+	\mode<handout>{\renewcommand*{\bibfont}{\scriptsize}}
+	\setbeamertemplate{bibliography item}{\insertbiblabel}
+	\printbibliography
+\end{frame}
+
 \begin{frame}
 	\frametitle{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
 	\begin{itemize}
@@ -1116,15 +1126,6 @@
 			\item \href{mailto:david.haberthuer@unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: david.haberthuer@unibe.ch}
 		\end{itemize}
 	\end{itemize}
-\end{frame}
-
-\mode<beamer>{\begin{frame}[shrink=20]}
-\mode<handout>{\begin{frame}[allowframebreaks]}
-	\frametitle{References}
-	\mode<beamer>{\renewcommand*{\bibfont}{\tiny}}
-	\mode<handout>{\renewcommand*{\bibfont}{\scriptsize}}
-	\setbeamertemplate{bibliography item}{\insertbiblabel}
-	\printbibliography
 \end{frame}
 
 \end{document}
