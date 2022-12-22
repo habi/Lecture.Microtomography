@@ -14,7 +14,7 @@
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{1}% use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
-\newcommand{\imheight}{0.9\paperheight}% set global image height
+\newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
@@ -269,7 +269,6 @@
 	\tableofcontents
 \end{frame}
 
-\renewcommand{\imheight}{0.65\paperheight}
 \section{Overview}
 \begin{frame}
 	\frametitle{Biomedical imaging}%
@@ -337,11 +336,11 @@
 		\includegraphics[height=\imheight]{./movies/ct-scanner/ct-scanner0001}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
-	\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}{Bruker Homepage}:
-		Micro computed tomography or micro-CT is X-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
-		It represents proper "3D microscopy", where very fine scale internal structure of objects is imaged non-destructively.
-		No sample preparation, no staining, no thin slicing---a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
+\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}{Bruker Homepage}:
+	Micro computed tomography or micro-CT is X-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
+	It represents proper "3D microscopy", where very fine scale internal structure of objects is imaged non-destructively.
+	No sample preparation, no staining, no thin slicing---a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 
 \subsection{History}
 \renewcommand{\imwidth}{\columnwidth}
@@ -375,11 +374,6 @@
 				\end{tikzpicture}%
 			}%
 			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
-			\note{We were unable to find any information on the voxel size of the first CT image.
-					My head is approximately 16 cm wide.
-					I counted 47 voxels across the head in the image.
-					This gives a voxel size of 3.4 mm per voxel.
-				}%
 			\includegraphics<2|handout:2>[width=\imwidth]{./images/History_Generation1}%
 			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
 			\includegraphics<3|handout:3>[width=\imwidth]{./images/History_Generation2}%
@@ -389,6 +383,11 @@
 		\end{column}
 	\end{columns}
 \end{frame}
+\note{We were unable to find any information on the voxel size of the first CT image.
+	My head is approximately 16 cm wide.
+	I counted 47 voxels across the head in the image.
+	This gives a voxel size of 3.4 mm per voxel.
+}
 
 \subsection{Interaction of X-rays with matter}
 \begin{frame}
@@ -399,19 +398,19 @@
 				Both contribute to dose.}
 		\begin{itemize}
 			\item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
-			\note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
-				Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
-				This has practical implications in the field of radiation protection and is the reason materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
-				The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \SI{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
-				At beam energies above this, the Compton effect predominates.}
 			\item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the electron density and physical density of the material.
 				Compton scattering does \emph{not} depend on the atomic number: \(\lambda'-\lambda=\frac{h}{m_{e}c}\left(1-\cos{\theta}\right)\)
-			\note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_{e}\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
 		\end{itemize}
 		\item Lowering X-ray energy increases contrast
 		\item X-ray penetration decreases exponentially with sample thickness (\cite[\ie Beer-Lamberts law]{wiki:beer-lambert} \(I(t)=I_{0}e^{-\alpha z}\)
 	\end{itemize}
 \end{frame}
+\note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
+    Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
+	This has practical implications in the field of radiation protection and is the reason materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
+	The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \SI{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
+	At beam energies above this, the Compton effect predominates.}
+\note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_{e}\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
 
 \begin{frame}
 	\frametitle{Composition of biological tissues}
@@ -438,15 +437,16 @@
 				% make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
 				every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
 				every row 1 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+				every row 2 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+				every row 6 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
 				every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
 				every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
 			]{./tables/tissue-composition.csv}%
 		}%
 	\end{table}
-	\note{Bone, lean tissue, fat and air can be distinguished easily}
 \end{frame}
+\note{Bone, lean tissue, fat and air can be distinguished easily}
 
-\renewcommand{\imwidth}{\columnwidth}
 \begin{frame}
 	\frametitle{Why \uct?}
 	\begin{columns}
@@ -581,7 +581,7 @@
 	The mouse head is the same as shown in the early animation.
 	The files from the early animation were resized 0.25 times; here we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP.
 	The voxel size of the original data is 7.96 um, the image size is 3295\(\times\)1492 pixels.
-	}
+}
 
 \begin{frame}
 	\frametitle{Maximum intensity projection}
@@ -592,6 +592,7 @@
 \end{frame}
 
 \subsection{Tomography today}
+\renewcommand{\imwidth}{\columnwidth}
 \begin{frame}
 	\frametitle{Machinery}
 	\begin{columns}%
@@ -613,7 +614,7 @@
 		\end{column}%
 		\begin{column}{0.49\linewidth}%
 			\centering%
-			\includegraphics<1|handout:1>[height=\imheight]{./images/24324062640_751e011e1a_o}%
+			\includegraphics<1|handout:1>[width=\imwidth]{./images/24324062640_751e011e1a_o}%
 			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}%
 			\includegraphics<2|handout:2>[height=\imheight]{./images/9459311320_516179207a_o}%
 			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}%
@@ -757,7 +758,6 @@
 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
-\renewcommand{\imheight}{0.7\paperheight}
 \begin{frame}
 	\frametitle{Projections}
 	\centering
@@ -891,8 +891,6 @@
 \end{frame}
 
 \subsection{Materials \& Methods}
-\renewcommand{\imwidth}{0.75\linewidth}
-\renewcommand{\imheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{How?}
 	\begin{columns}
@@ -907,6 +905,7 @@
 		\begin{column}{0.49\linewidth}
 			\only<1|handout:1>{%
 				\centering%
+				\renewcommand{\imwidth}{0.75\linewidth}
 				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/2716}%
 				\def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
@@ -917,6 +916,7 @@
 					%\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{140.0}{\milli\meter} (2132px) TEMPORARY!};
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
+				\renewcommand{\imwidth}{\columnwidth}
 				}%
 			\only<2|handout:2>{%
 				\centering%
@@ -944,11 +944,11 @@
 			\only<6|handout:6>{%
 				\centering%
 				\mode<beamer>{%
-					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
+					\animategraphics[loop,autoplay,width=\imwidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
 					\source{gph.is/2nqkple}{}%
 					}%
 				\mode<handout>{%
-					\includegraphics[width=\linewidth]{./movies/coder/coder-118}%
+					\includegraphics[width=\imwidth]{./movies/coder/coder-118}%
 					\source{gph.is/2nqkple}{}%
 					}%
 				}%
@@ -961,7 +961,6 @@
 \end{frame}
 
 \subsection{Results}
-\renewcommand{\imheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
@@ -1056,7 +1055,6 @@
 
 \begin{frame}
 	\frametitle{Results of root canal space extraction}%
-		\renewcommand{\imheight}{0.618\paperheight}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0278}%
 		\includegraphics[height=\imheight]{./images/rcs/Tooth0353}%
