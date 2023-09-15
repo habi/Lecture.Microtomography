@@ -918,7 +918,7 @@
 				\def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
 				\def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/bucketofteeth}};
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
 					% 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
 					%\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{140.0}{\milli\meter} (2132px) TEMPORARY!};
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
@@ -945,7 +945,7 @@
 			\renewcommand{\imwidth}{\linewidth}%
 			\only<5|handout:5>{%
 				\centering%
-				\includegraphics[width=\imwidth]{./images/briseno}%
+				\includegraphics[width=\imwidth]{./images/zmk/briseno}%
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
 			\only<6|handout:6>{%
@@ -961,7 +961,7 @@
 				}%
 			\only<7|handout:7>{%
 				\centering%
-				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imheight]{./images/binder}}%
+				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imheight]{./images/zmk/binder}}%
 				}%
 		\end{column}
 	\end{columns}
@@ -971,7 +971,7 @@
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics[height=\imheight]{{{./images/ScanOverviews.24}}}%
+	\includegraphics[height=\imheight]{{{./images/zmk/ScanOverviews.24}}}%
 \end{frame}
 
 \renewcommand{\imwidth}{\linewidth}
@@ -986,8 +986,8 @@
 		\end{column}
 		\begin{column}{0.61\linewidth}
 			\centering%
-			\includegraphics<1|handout:1>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Original}}%
-			\includegraphics<2|handout:2>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Cropped}}%
+			\includegraphics<1|handout:1>[width=\imwidth]{{./images/zmk/tooth045/Tooth045.Cropper.Original}}%
+			\includegraphics<2|handout:2>[width=\imwidth]{{./images/zmk/tooth045/Tooth045.Cropper.Cropped}}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -1021,10 +1021,10 @@
 	\frametitle{Detection of enamel-dentin border}
 	\centering
 	\only<1|handout:1>{%
-		\includegraphics[height=\imheight]{{./images/tooth045/Tooth045.ExtractedSlices}}%
+		\includegraphics[height=\imheight]{{./images/zmk/tooth045/Tooth045.ExtractedSlices}}%
 		}%
 	\only<2|handout:2>{%
-		\includegraphics[width=\linewidth]{{./images/tooth045/Tooth045.Briseno}}%
+		\includegraphics[width=\linewidth]{{./images/zmk/tooth045/Tooth045.Briseno}}%
 		}%
 \end{frame}
 
@@ -1062,12 +1062,12 @@
 
 \begin{frame}
 	\frametitle{Results of root canal space extraction}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0278}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0353}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0419}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0642}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0752}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0452}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0278}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0353}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0419}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0642}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0752}%
 		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
 		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
 		\renewcommand{\imwidth}{0.358565737*\imheight}% 720/2008
@@ -1076,7 +1076,7 @@
 		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/rcs/Tooth0931}};
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
 				% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
 				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{20.92}{\milli\meter} (1760px) TEMPORARY!};
 				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
