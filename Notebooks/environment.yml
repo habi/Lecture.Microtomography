@@ -1,0 +1,14 @@
+name: uct_lecture
+dependencies:
+  - jupyterlab
+  - nodejs
+  - ipywidgets
+  - imageio
+  - dask
+  - dask-image  
+  - dask-labextension
+  - scikit-image 
+  - matplotlib
+  - matplotlib-scalebar
+  - seaborn
+  - tqdm
