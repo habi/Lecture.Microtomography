@@ -1,4 +1,4 @@
-\documentclass[tikz]{standalone}
+\documentclass{standalone}
 % Draw the setup where the only the sample moves, e.g. microCT
 % For the case of small samples close to the source
 \usepackage{animate}
@@ -37,9 +37,9 @@
 			\pgfdeclarelayer{background}
 			\pgfsetlayers{background,main}
 			%Help lines
-			\draw[<->] (-2.25,0) -- (2.25,0);
-			\draw[<->] (0,-2.25) -- (0,2.25);
-			\draw[help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);%
+			%\draw[<->] (-2.25,0) -- (2.25,0);
+			%\draw[<->] (0,-2.25) -- (0,2.25);
+			%\draw[help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);%
 			% Stuff that stays put
 			\source%
 			\detector%
