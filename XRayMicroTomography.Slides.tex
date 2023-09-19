@@ -29,22 +29,23 @@
 \addbibresource{../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
-	\usetikzlibrary{spy}
+	\usetikzlibrary{shadows,spy,mindmap}
 	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
-\usepackage{shadowtext}  % for the shadowed scalebar
+\usepackage{pgf-pie}
+\usepackage{shadowtext}
 	\shadowoffset{1pt}
 	\shadowcolor{ubRed}
 \usepackage{pgfplots}
 	\pgfplotsset{compat=newest}
+\usepackage{microtype}
 \usepackage[detect-all=true,
 	range-phrase=--,
 	range-units=single,
 	binary-units=true,
 	per-mode=symbol,
 	per-symbol=/]{siunitx}
-\usepackage{microtype}
-\usepackage[absolute,overlay]{textpos} %for the \source{} command
-\usepackage[missing=main]{gitinfo2} % GitHub Actions don't pull in the commit hash, so we just show `main'
+\usepackage[absolute,overlay]{textpos}
+\usepackage{gitinfo2}
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
@@ -53,24 +54,19 @@
 \usepackage{csquotes}
 \usepackage{listings}
 	\lstset{frame=single,
-		%backgroundcolor = \color{lightgray},
+		backgroundcolor = \color{ubRed!10},
 		basicstyle=\tiny\ttfamily
 		}
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{multirow}
-<<<<<<< Updated upstream
-\usepackage{lipsum}%for alignment testing
+\usepackage{lipsum}
 \usepackage{datetime2}
-=======
-\usepackage{lipsum} %for alignment testing
->>>>>>> Stashed changes
 \usepackage{mathastext}
 
-% Define complementary colors to ubRed
-\definecolor{ubRedComplementary1}{HTML}{00a1e6}
-\definecolor{ubRedComplementary2}{HTML}{00e645}
+% Define complementary colors to ubRed, from https://www.sessions.edu/color-calculator/
+\definecolor{ubRedComplementary}{HTML}{2EE600}
 
 % change tikz font to slide font
 % https://tex.stackexchange.com/a/33329/828
@@ -261,7 +257,7 @@
 \begin{frame}
 	\frametitle{\uct-group}
 	\begin{columns}
-		\begin{column}{0.618\linewidth}
+		\begin{column}{0.61\linewidth}
 			\begin{itemize}
 				\item microangioCT~\cite{Hlushchuk2018}
 				\begin{itemize}
@@ -270,32 +266,27 @@
 				\end{itemize}
 				\item Zebrafish musculature and gills~\cite{MesserliAaldijk2020}
 				\item (Lung) tumor detection and metastasis classification~\cite{Trappetti2021}
-<<<<<<< Updated upstream
 				\item Collaborations with museums~\cite{Bochud2021} and scientist at UniBe~\cite{Halm2021} to scan a wide range of specimens
-				\item Automate \emph{all} the things!~\cite{Haberthuer2021}
-=======
-				\item Collaborations with museums~\cite{Bochud2021} and scientist at our institute~\cite{Halm2021} to scan a wide range of specimens
-				\item Automate \emph{all} the things!~\cite{Haberthur2021}
->>>>>>> Stashed changes
+				\item Automate \emph{all} the things!~\cite{Haberthuer2021, Haberthuer2023}
 			\end{itemize}
-		\end{column}
-		\begin{column}{0.382\linewidth}
-			\centering
-			\includegraphics<1|handout:0>[height=\imageheight]{./images/1172}%
-			\only<1|handout:0>{\source{brukersupport.com}{}}
+		\end{column}%
+		\begin{column}{0.37\linewidth}%
+			\centering%
+			\includegraphics<1>[width=\imagewidth]{./images/1172}%
+			\only<1>{\source{brukersupport.com}{}}%
 			\includegraphics<2>[width=\imagewidth]{./images/1272}%
-			\only<2>{\source{bruker.com/skyscan1272}{}}
-			\includegraphics<3|handout:0>[width=\imagewidth]{./images/2214}%
-			\only<3|handout:0>{\source{bruker.com/skyscan2214}{}}
-		\end{column}
-	\end{columns}
+			\only<2>{\source{bruker.com/skyscan1272}{}}%
+			\includegraphics<3>[width=\imagewidth]{./images/2214}%
+			\only<3>{\source{bruker.com/skyscan2214}{}}%
+		\end{column}%
+	\end{columns}%
 \end{frame}
 
 \begin{frame}{Contents}
 	\tableofcontents
 \end{frame}
 
-\renewcommand{\imheight}{0.618\textheight}
+\renewcommand{\imageheight}{0.618\textheight}
 \section{Overview}
 \begin{frame}
 	\frametitle{Biomedical imaging}%
@@ -462,7 +453,6 @@
 		\begin{column}{0.49\linewidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4|handout:1-4>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
@@ -474,7 +464,6 @@
 				\end{tikzpicture}%
 			}%
 			\only<5|handout:0>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
@@ -490,7 +479,6 @@
 			\renewcommand{\imagewidth}{0.1554\columnwidth}%
 			\only<6|handout:5>{%
 				\centering
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
@@ -504,7 +492,6 @@
 		\end{column}%
 		\begin{column}{0.49\linewidth}
 			\only<1|handout:1>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -518,7 +505,6 @@
 			\renewcommand{\imagewidth}{0.1\columnwidth}%
 			\only<2|handout:2>{%
 				\centering
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
@@ -533,7 +519,6 @@
 			\renewcommand{\imagewidth}{\columnwidth}
 			\only<3|handout:3>{%
 				\centering
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
@@ -546,7 +531,6 @@
 				\end{tikzpicture}%
 			}%
 			\only<4|handout:4>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -557,7 +541,6 @@
 				\end{tikzpicture}%
 			}%
 			\only<5|handout:0>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -571,7 +554,6 @@
 				\end{tikzpicture}%
 			}%
 			\only<6|handout:5>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -624,7 +606,7 @@
 			\centering%
 			\includegraphics<1|handout:1>[height=\imageheight]{./images/24324062640_751e011e1a_o}%
 			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}%
-			\includegraphics<2|handout:2>[width=\imheight]{./images/9459311320_516179207a_o}%
+			\includegraphics<2|handout:2>[width=\imageheight]{./images/9459311320_516179207a_o}%
 			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}%
 			\includegraphics<3|handout:3>[width=\imagewidth]{./images/1272}%
 			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}%
@@ -904,7 +886,7 @@
 		\begin{column}{0.5\linewidth}
 			\only<1|handout:1>{%
 				\centering%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+
 				\pgfmathsetlength{\imagescale}{\imagewidth/2716}%
 				\def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
 				\def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
@@ -935,11 +917,7 @@
 			\renewcommand{\imagewidth}{\linewidth}%
 			\only<5|handout:5>{%
 				\centering%
-<<<<<<< Updated upstream
-				\includegraphics[width=\imwidth]{./images/zmk/briseno}%
-=======
 				\includegraphics[width=\imagewidth]{./images/briseno}%
->>>>>>> Stashed changes
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
 			\only<6|handout:6>{%
@@ -970,16 +948,13 @@
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics[height=\imheight]{{{./images/zmk/ScanOverviews.24}}}%
-=======
-\subsection{Results}
-\renewcommand{\imheight}{0.618\paperheight}
+	\includegraphics[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
+\renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics<1|handout:0>[height=\imageheight]{{{./images/ScanOverviews.104}}}%
-	\includegraphics<2>[height=\imageheight]{{{./images/ScanOverviews.24}}}%
->>>>>>> Stashed changes
+	\includegraphics<1|handout:0>[height=\imageheight]{./images/ScanOverviews.104.png}%
+	\includegraphics<2>[height=\imageheight]{./images/ScanOverviews.24.png}%
 \end{frame}
 
 \renewcommand{\imagewidth}{\linewidth}
@@ -994,13 +969,8 @@
 		\end{column}
 		\begin{column}{0.618\linewidth}
 			\centering%
-<<<<<<< Updated upstream
-			\includegraphics<1|handout:1>[width=\imwidth]{{./images/zmk/tooth045/Tooth045.Cropper.Original}}%
-			\includegraphics<2|handout:2>[width=\imwidth]{{./images/zmk/tooth045/Tooth045.Cropper.Cropped}}%
-=======
-			\includegraphics<1|handout:1>[width=\imagewidth]{{./images/tooth045/Tooth045.Cropper.Original}}%
-			\includegraphics<2|handout:2>[width=\imagewidth]{{./images/tooth045/Tooth045.Cropper.Cropped}}%
->>>>>>> Stashed changes
+			\includegraphics<1|handout:1>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Original.png}%
+			\includegraphics<2|handout:2>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Cropped.png}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -1017,11 +987,7 @@
 					\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0000}%
 					}%
 				}%
-<<<<<<< Updated upstream
-			\only<2|handout:2>{\includegraphics[height=\imheight]{./images/zmk/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
-=======
 			\only<2|handout:2>{\includegraphics[height=\imageheight]{./images/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
->>>>>>> Stashed changes
 			\only<3|handout:3>{%
 				\mode<beamer>{%
 					\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
@@ -1038,14 +1004,10 @@
 	\frametitle{Detection of enamel-dentin border}
 	\centering
 	\only<1|handout:1>{%
-<<<<<<< Updated upstream
-		\includegraphics[height=\imheight]{{./images/zmk/tooth045/Tooth045.ExtractedSlices}}%
-=======
-		\includegraphics[height=\imageheight]{{./images/tooth045/Tooth045.ExtractedSlices}}%
->>>>>>> Stashed changes
+		\includegraphics[height=\imageheight]{./images/zmk/tooth045/Tooth045.ExtractedSlices.png}%
 		}%
 	\only<2|handout:2>{%
-		\includegraphics[width=\linewidth]{{./images/zmk/tooth045/Tooth045.Briseno}}%
+		\includegraphics[width=\linewidth]{./images/zmk/tooth045/Tooth045.Briseno.png}%
 		}%
 \end{frame}
 
@@ -1133,18 +1095,17 @@
 \end{frame}
 
 \begin{frame}
-<<<<<<< Updated upstream
+	\renewcommand{\imageheight}{0.618\paperheight}%
 	\frametitle{Results of root canal space extraction}%
-		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0452}%
-		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0278}%
-		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0353}%
-		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0419}%
-		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0642}%
-		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0752}%
+		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0452}%
+		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0278}%
+		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0353}%
+		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0419}%
+		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0642}%
+		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0752}%
 		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
 		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
-		\renewcommand{\imwidth}{0.358565737*\imheight}% 720/2008
-		\pgfmathsetlength{\imagewidth}{\imwidth}%
+		\renewcommand{\imagewidth}{0.358565737*\imageheight}% 720/2008
 		\pgfmathsetlength{\imagescale}{\imagewidth/720}%
 		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
@@ -1154,16 +1115,6 @@
 				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{20.92}{\milli\meter} (1760px) TEMPORARY!};
 				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 		\end{tikzpicture}%
-=======
-	\frametitle{Outcome of root canal space extraction}%
-	\renewcommand{\imheight}{0.618\paperheight}%
-		\includegraphics[height=\imageheight]{./images/rcs/Tooth0452}%
-		\includegraphics[height=\imageheight]{./images/rcs/Tooth0278}%
-		\includegraphics[height=\imageheight]{./images/rcs/Tooth0353}%
-		\includegraphics[height=\imageheight]{./images/rcs/Tooth0419}%
-		\includegraphics[height=\imageheight]{./images/rcs/Tooth0642}%
-		\includegraphics[height=\imageheight]{./images/rcs/Tooth0752}%
-		\includegraphics[height=\imageheight]{./images/rcs/Tooth0931}%
 \end{frame}
 
 \begin{frame}
