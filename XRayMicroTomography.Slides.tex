@@ -1161,9 +1161,34 @@
 
 \subsection{A study on fish}
 \begin{frame}
-	\frametitle{EAWAG}
+	\frametitle{Data wrangling by example: Cichlids}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\begin{itemize}
+				\item 372 tomographic scans of 133 different Cichlids, from \SIrange{6}{18}{\centi\meter}\footcite{Haberthuer2023}
+				\item \SI{9.8}{\tera\byte} of projection images, \SI{1.5}{\tera\byte} of reconstructions
+				\item Reproducible and automated dataset wrangling, checking and image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\includegraphics[width=\imagewidth]{./images/cichlids/104016}%
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Data wrangling by example: Cichlids}
 	\centering
-	\includegraphics[width=\imagewidth]{./images/can_eb03_hart_0_4um_al0_25_80kv_rec0000}%
+	\includegraphics<1>[height=\imageheight]{./images/cichlids/Otolither_104016_head_01_Overview}%
+	\includegraphics<2>[height=\imageheight]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
+	\includegraphics<3>[height=\imageheight]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
+	\includegraphics<4>[height=\imageheight]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
+	\includegraphics<5>[height=\imageheight]{./images/cichlids/Otolither_104016_head_05_Peaks}%
+	\includegraphics<6>[height=\imageheight]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
+	\includegraphics<7>[height=\imageheight]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
+	\includegraphics<8>[height=\imageheight]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
+	\includegraphics<9>[height=\imageheight]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
+	\only<10>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
 \begin{frame}
