@@ -14,22 +14,6 @@
 	% complementary colors from https://www.sessions.edu/color-calculator/
 	\definecolor{ubRedComplementary}{HTML}{2EE600}
 	}{}
-\newcommand\source{%
-	% red box
-	\fill[ubRed] (-0.25,1.5) rectangle node (source) {} +(0.5,0.5);
-  % Define us an x-ray sign, "cheating" with drawing a pie chart
-	% The size is 0.618 x the box size of the ubRed source
-	\draw[fill=yellow] (0,1.75) circle (0.1545);%
-	\pie[draw=yellow,color={black,yellow},sum=360,hide number,radius=0.1236,pos={0,1.75}]{60/,60/,60/,60/,60/,60/}%
-	\draw[color=yellow,fill=black] (0,1.75) circle (0.0309);%
-	}%
-\newcommand\detector{%
-	% Detector box
-	\fill[gray] (-0.5,-1.75) rectangle node (detector) {} +(1,0.25);
-	% Detector edged to point the x-ray cone edges at
-	\coordinate (dl) at (-0.45,-1.75);
-	\coordinate (dr) at (0.45,-1.75);
-	}%
 \begin{document}
 		\begin{animateinline}[every=\everyframe]{25}
 		\multiframe{180}{n=1+2}{%
@@ -47,10 +31,18 @@
 					\begin{scope}[rotate around={\n:(sample)}]
 					}%
 					% Rotation arc
-					\draw[->, thick,line cap=rect] (1.5,0) arc [start angle=0, end angle=180, radius=1.5];
-					\draw[->, thick,line cap=rect] (-1.5,0) arc [start angle=-180, end angle=0, radius=1.5];
-					\source%
-					\detector%
+					\draw[->, line cap=rect] (1.5,0) arc  [start angle=0, end angle=180, radius=1.5];
+					\draw[->, line cap=rect] (-1.5,0) arc [start angle=-180, end angle=0, radius=1.5];
+					% X-ray source
+					\fill[ubRed] (-0.25,1) rectangle node (source) {} +(0.5,0.5);
+					\draw[fill=yellow] (0,1.75) circle (0.1545);%
+					\pie[draw=yellow,color={black,yellow},sum=360,hide number,radius=0.1236,pos={0,1.75}]{60/,60/,60/,60/,60/,60/}%
+					\draw[color=yellow,fill=black] (0,1.75) circle (0.0309);%
+					% Detector
+					\fill[gray] (-0.5,-1.75) rectangle node (detector) {} +(1,0.25);
+					% Detector edged to point the x-ray cone edges at
+					\coordinate (dl) at (-0.45,-1.75);
+					\coordinate (dr) at (0.45,-1.75);
 					% X-ray cone
 					\begin{pgfonlayer}{background}
 						\fill[gray,semitransparent] (source.center) -- (dl) -- (dr) -- cycle;
