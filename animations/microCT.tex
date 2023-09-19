@@ -1,41 +1,48 @@
-\documentclass{standalone}
+\documentclass[tikz]{standalone}
 % Draw the setup where the only the sample moves, e.g. microCT
 % Essentially just a copy of classicCT in the same folder
 \usepackage{animate}
 \usepackage{tikz}
-%	\usetikzlibrary{external}
-%	\tikzexternalize
-%	\tikzsetnextfilename{microCT}
-\usepackage{fontawesome5}	
+\usepackage{pgf-pie}
+\usepackage{fontawesome5}
 \usepackage{ifthen}
 \ifthenelse{\isundefined{\everyframe}}{%
 	% If we're compiling this file via \input, then these variables are already defined.
 	% In the other case, we need to define them
 	\newcommand{\everyframe}{5}
 	\definecolor{ubRed}{HTML}{E6002E}
-	% split complementary images from https://www.sessions.edu/color-calculator/
-	\definecolor{ubRedComplementary1}{HTML}{00a1e6}
-	\definecolor{ubRedComplementary2}{HTML}{00e645}
-	\definecolor{ubGrey}{RGB}{217,217,217}
+	% complementary colors from https://www.sessions.edu/color-calculator/
+	\definecolor{ubRedComplementary}{HTML}{2EE600}
 	}{}
+\newcommand\source{%
+	% red box
+	\fill[ubRed] (-0.25,1) rectangle node (source) {} +(0.5,0.5);
+  % Define us an x-ray sign, "cheating" with drawing a pie chart
+	% The size is 0.618 x the box size of the ubRed source
+	\draw[fill=yellow] (0,1.75) circle (0.1545);%
+	\pie[draw=yellow,color={black,yellow},sum=360,hide number,radius=0.1236,pos={0,1.75}]{60/,60/,60/,60/,60/,60/}%
+	\draw[color=yellow,fill=black] (0,1.75) circle (0.0309);%
+	}%
+\newcommand\detector{%
+	% Detector box
+	\fill[gray] (-0.5,-1.75) rectangle node (detector) {} +(1,0.25);
+	% Detector edged to point the x-ray cone edges at
+	\coordinate (dl) at (-0.45,-1.75);
+	\coordinate (dr) at (0.45,-1.75);
+	}%
 \begin{document}
 \begin{animateinline}[every=\everyframe]{25}
 	\multiframe{180}{n=1+2}{%
-%	\tikzifexternalizing{Work-around to make animate happy	}{}%https://tex.stackexchange.com/a/39026/828
 		\begin{tikzpicture}
 			\pgfdeclarelayer{background}
 			\pgfsetlayers{background,main}
 			%Help lines
 			\draw[<->] (-2.25,0) -- (2.25,0);
 			\draw[<->] (0,-2.25) -- (0,2.25);
-			\draw[help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);
+			\draw[help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);%
 			% Stuff that stays put
-			% Source
-			\fill[ubRed] (-0.25,1) rectangle node (source) [black,opacity=0, text opacity=1] {X-ray} +(0.5,0.5);
-			% Detector and detector edges
-			\fill[ubRedComplementary2,fill] (-0.5,-1.25) rectangle node (detector) [black] {Detector} +(1,0.25);
-			\coordinate (dl) at (-0.45,-1);
-			\coordinate (dr) at (0.45,-1);
+			\source%
+			\detector%
 			% X-ray cone
 			\begin{pgfonlayer}{background}
 				\fill[gray,semitransparent] (source.center) -- (dl) -- (dr) -- cycle;
@@ -48,7 +55,7 @@
 				\draw[->, thick,line cap=rect] (0.618,0) arc [start angle=0, end angle=180, radius=0.618];
 				\draw[->, thick,line cap=rect] (-0.618,0) arc [start angle=-180, end angle=0, radius=0.618];
 				% Sample
-				\node[ubRedComplementary1] at (0,0) (sample) {\rotatebox{\n}{\normalsize\faFish}};
+				\node[ubRedComplementary] at (0,0) (sample) {\rotatebox{\n}{\normalsize\faFish}};
 			\mode<beamer>{%
 				\end{scope}
 				}
