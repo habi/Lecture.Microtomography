@@ -1,0 +1,17 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: A lecture on (micro)tomography
+message: >-
+  If you reference this talk somewhere, please cite
+  it using the metadata from this file.
+type: software
+authors:
+  - given-names: David
+    family-names: Haberthür
+    affiliation: 'Institute of Anatomy, University of Bern'
+    orcid: 'https://orcid.org/0000-0003-3388-9187'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.7474383
