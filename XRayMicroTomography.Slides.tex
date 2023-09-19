@@ -581,14 +581,13 @@
 			}%
 		\end{column}
 	\end{columns}
+	\note{The human head scan was downloaded from the \href{https://www.cancerimagingarchive.net}{Cancer Imaging Archive}.
+		We loaded the DICOM slices in Fiji, resliced it to show it from the side and then used to generate an MIP.
+		According to the DICOM tags, the voxel size is \SI{0.4883 x 0.4883 x 0.625}{\milli\meter\cubed}, the image size is 512\(\times\)512 pixels.
+		The mouse head is the same as shown in the early animation.
+		The files from the early animation were resized 0.25 times; here we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP.
+		The voxel size of the original data is 7.96 um, the image size is 3295\(\times\)1492 pixels.}
 \end{frame}
-\note{The human head scan was downloaded from the \href{https://www.cancerimagingarchive.net}{Cancer Imaging Archive}.
-	We loaded the DICOM slices in Fiji, resliced it to show it from the side and then used to generate an MIP.
-	According to the DICOM tags, the voxel size is \SI{0.4883x0.4883x0.625}{\milli\meter\cubed}, the image size is 512\(\times\)512 pixels.
-	The mouse head is the same as shown in the early animation.
-	The files from the early animation were resized 0.25 times; here we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP.
-	The voxel size of the original data is 7.96 um, the image size is 3295\(\times\)1492 pixels.
-	}
 
 \begin{frame}
 	\frametitle{Maximum intensity projection}
@@ -769,7 +768,7 @@
 	\centering
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
 	\mode<beamer>{\animategraphics[autoplay,loop,height=\imageheight,every=\everyframe]{24}{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_}{000}{359}}
-	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_}}
+	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_180}}
 \end{frame}
 
 \begin{frame}[label=current]
@@ -933,12 +932,12 @@
 			\renewcommand{\imagewidth}{\linewidth}%
 			\only<5|handout:5>{%
 				\centering%
-				\includegraphics[width=\imagewidth]{./images/briseno}%
+				\includegraphics[width=\imagewidth]{./images/zmk/briseno}%
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
 			\only<6|handout:6>{%
 				\centering%
-				\includegraphics[width=\imagewidth]{./images/foramen}%
+				\includegraphics[width=\imagewidth]{./images/zmk/foramen}%
 				\sourcecite{Wolf2017}{Fig.~1}%
 				}%
 			\only<7|handout:7>{%
