@@ -12,7 +12,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{1}% use only every nth frame for the animations
+\newcommand{\everyframe}{333}% use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
@@ -62,6 +62,7 @@
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage{lipsum}%for alignment testing
+\usepackage{datetime2}
 \usepackage{mathastext}
 
 % Define complementary colors to ubRed
@@ -256,7 +257,7 @@
 				\item Zebrafish musculature and gills~\cite{MesserliAaldijk2020}
 				\item (Lung) tumor detection and metastasis classification~\cite{Trappetti2021}
 				\item Collaborations with museums~\cite{Bochud2021} and scientist at UniBe~\cite{Halm2021} to scan a wide range of specimens
-				\item Automate \emph{all} the things!~\cite{Haberthur2021}
+				\item Automate \emph{all} the things!~\cite{Haberthuer2021}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.37\linewidth}
@@ -835,7 +836,8 @@
 	\end{itemize}
 \end{frame}
 
-\section{Example of a complete study (about teeth)}
+\section{Examples}
+\subsection{A study about teeth}
 \begin{frame}
 	\frametitle{Quantitative data}
 	\begin{itemize}
@@ -845,7 +847,7 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Overview}
+\subsubsection{Overview}
 \begin{frame}
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
@@ -856,7 +858,7 @@
 		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
 		\item Two publications:%
 		\begin{itemize}%
-			\item \cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
+			\item \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
 			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
 		\end{itemize}%
 	\end{itemize}%
@@ -890,13 +892,13 @@
 		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
 		\item Two publications:%
 		\begin{itemize}%
-			\item \cite{Haberthur2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
+			\item \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
 			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
 		\end{itemize}%
 	\end{itemize}%
 \end{frame}
 
-\subsection{Materials \& Methods}
+\subsubsection{Materials \& Methods}
 \begin{frame}
 	\frametitle{How?}
 	\begin{columns}
@@ -905,7 +907,7 @@
 				\item<1-> 104 extracted human permanent mandibular canines
 				\item<2-> \uct imaging
 				\item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-				\item<6-> \emph{Reproducible} analysis~\cite{Haberthur2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
+				\item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.49\linewidth}
@@ -917,7 +919,7 @@
 				\def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
 				\def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/bucketofteeth}};
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
 					% 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
 					%\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{140.0}{\milli\meter} (2132px) TEMPORARY!};
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
@@ -944,7 +946,7 @@
 			\renewcommand{\imwidth}{\linewidth}%
 			\only<5|handout:5>{%
 				\centering%
-				\includegraphics[width=\imwidth]{./images/briseno}%
+				\includegraphics[width=\imwidth]{./images/zmk/briseno}%
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
 			\only<6|handout:6>{%
@@ -960,17 +962,17 @@
 				}%
 			\only<7|handout:7>{%
 				\centering%
-				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imheight]{./images/binder}}%
+				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imheight]{./images/zmk/binder}}%
 				}%
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\subsection{Results}
+\subsubsection{Results}
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics[height=\imheight]{{{./images/ScanOverviews.24}}}%
+	\includegraphics[height=\imheight]{{{./images/zmk/ScanOverviews.24}}}%
 \end{frame}
 
 \renewcommand{\imwidth}{\linewidth}
@@ -985,8 +987,8 @@
 		\end{column}
 		\begin{column}{0.61\linewidth}
 			\centering%
-			\includegraphics<1|handout:1>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Original}}%
-			\includegraphics<2|handout:2>[width=\imwidth]{{./images/tooth045/Tooth045.Cropper.Cropped}}%
+			\includegraphics<1|handout:1>[width=\imwidth]{{./images/zmk/tooth045/Tooth045.Cropper.Original}}%
+			\includegraphics<2|handout:2>[width=\imwidth]{{./images/zmk/tooth045/Tooth045.Cropper.Cropped}}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -1003,7 +1005,7 @@
 					\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0000}%
 					}%
 				}%
-			\only<2|handout:2>{\includegraphics[height=\imheight]{./images/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
+			\only<2|handout:2>{\includegraphics[height=\imheight]{./images/zmk/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
 			\only<3|handout:3>{%
 				\mode<beamer>{%
 					\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
@@ -1020,10 +1022,10 @@
 	\frametitle{Detection of enamel-dentin border}
 	\centering
 	\only<1|handout:1>{%
-		\includegraphics[height=\imheight]{{./images/tooth045/Tooth045.ExtractedSlices}}%
+		\includegraphics[height=\imheight]{{./images/zmk/tooth045/Tooth045.ExtractedSlices}}%
 		}%
 	\only<2|handout:2>{%
-		\includegraphics[width=\linewidth]{{./images/tooth045/Tooth045.Briseno}}%
+		\includegraphics[width=\linewidth]{{./images/zmk/tooth045/Tooth045.Briseno}}%
 		}%
 \end{frame}
 
@@ -1061,12 +1063,12 @@
 
 \begin{frame}
 	\frametitle{Results of root canal space extraction}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0452}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0278}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0353}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0419}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0642}%
-		\includegraphics[height=\imheight]{./images/rcs/Tooth0752}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0452}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0278}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0353}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0419}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0642}%
+		\includegraphics[height=\imheight]{./images/zmk/rcs/Tooth0752}%
 		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
 		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
 		\renewcommand{\imwidth}{0.358565737*\imheight}% 720/2008
@@ -1075,7 +1077,7 @@
 		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/rcs/Tooth0931}};
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
 				% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
 				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{20.92}{\milli\meter} (1760px) TEMPORARY!};
 				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
@@ -1083,12 +1085,26 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Conclusion}
+	\frametitle{Conclusion ZMK}
 	\begin{itemize}
 		\item Efficient use of time, \eg more teeth does not mean more (human) work
 		\item Reproducible analysis with \emph{free and open-source} software, usable by \emph{anyone}
 		\item Objective analysis, \eg no operator bias
 	\end{itemize}
+\end{frame}
+
+\subsection{Metal foam analysis}
+\begin{frame}
+	\frametitle{Metal foam}
+	\centering
+	\includegraphics[width=\imagewidth]{./images/can_eb03_hart_0_4um_al0_25_80kv_rec0000}%
+\end{frame}
+
+\subsection{A study on fish}
+\begin{frame}
+	\frametitle{EAWAG}
+	\centering
+	\includegraphics[width=\imagewidth]{./images/can_eb03_hart_0_4um_al0_25_80kv_rec0000}%
 \end{frame}
 
 \begin{frame}
