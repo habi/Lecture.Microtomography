@@ -282,6 +282,100 @@
 	\end{columns}%
 \end{frame}
 
+% \begin{frame}
+% 	\frametitle{Overview}
+% 	\centering
+% 	\only<1>{%
+% 		\begin{tikzpicture}%
+% 			\tikzset{small mindmap}%
+% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
+% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
+% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed]%
+% 				node{unibe.ch\ Faculties}
+% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
+% 					child [grow=45] {node[concept] {​Law}}
+% 					child [grow=135] {node[concept] {​Human Sciences}}
+% 					child [grow=165] {node[concept] {Science}}
+% 					child [grow=195] {node[concept] {​Humanities}}
+% 					child [grow=225] {node[concept] {Vetsuisse}}
+% 					child [grow=315] {node[concept] {​Theology}}
+% 					child [grow=345] {node[concept] {​Medicine}};%
+% 		\end{tikzpicture}%
+% 	}%
+% 	\only<2>{%
+% 		\begin{tikzpicture}%
+% 			\tikzset{small mindmap}%
+% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
+% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
+% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
+% 				node{unibe.ch\ Faculties}
+% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
+% 					child [grow=45] {node[concept] {​Law}}
+% 					child [grow=135] {node[concept] {​Human Sciences}}
+% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}}
+% 					child [grow=195] {node[concept] {​Humanities}}
+% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}}
+% 					child [grow=315] {node[concept] {​Theology}}
+% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}};%
+% 		\end{tikzpicture}%
+% 	}%
+% 	\only<3>{%
+% 		\begin{tikzpicture}%
+% 			\tikzset{small mindmap}%
+% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
+% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
+% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
+% 				node{unibe.ch\ Faculties}
+% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
+% 					child [grow=45] {node[concept] {​Law}}
+% 					child [grow=135] {node[concept] {​Human Sciences}}
+% 					child [grow=195] {node[concept] {​Humanities}}
+% 					child [grow=315] {node[concept] {​Theology}}
+% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}
+% 					child [concept color=ubRed,opaque,grow=-45] {node[concept] {{Institute of Ecology and Evolution}}}
+% 						child [concept color=ubRed,opaque,grow=15] {node[concept] {Space Research \& Planetary Sciences}}
+% 					}
+% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}
+% 						child [concept color=ubRed,opaque,grow=0] {node[concept] {Clinical radiology}}
+% 					}
+% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}
+% 						child [concept color=ubRed,opaque,grow=105] {node[concept] {Theodor Kocher Institute}}
+% 						child [concept color=ubRed,opaque,grow=140] {node[concept] {School of Dental Medicine}}
+% 						child [concept color=ubRed,opaque,grow=185] {node[concept] {Institute of Anatomy}}
+% 						child [concept color=ubRed,opaque,grow=225] {node[concept] {Klinik für Orthopädische Chirurgie \& Traumatologie}}
+% 					};%
+% 		\end{tikzpicture}%
+% 	}%
+% 	% Get emojis from https://unicode.org/emoji/charts/emoji-list.html
+% 	\only<4->{%
+% 		\begin{tikzpicture}%
+% 			\tikzset{small mindmap}%
+% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
+% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
+% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
+% 				node{unibe.ch\ Faculties}
+% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
+% 					child [grow=45] {node[concept] {​Law}}
+% 					child [grow=135] {node[concept] {​Human Sciences}}
+% 					child [grow=195] {node[concept] {​Humanities}}
+% 					child [grow=315] {node[concept] {​Theology}}
+% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}
+% 						child [concept color=ubRed,opaque,grow=-45] {node[concept] {\huge{\emoji{fish}}}}
+% 						child [concept color=ubRed,opaque,grow=15] {node[concept] {\huge{\emoji{comet}}}}
+% 						}
+% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}
+% 						child [concept color=ubRed,opaque,grow=0] {node[concept] {\only<4>{\huge{\emoji{unicorn}}}\only<5>{\huge{\emoji{horse}}}}}
+% 						}
+% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}
+% 						child [concept color=ubRed,opaque,grow=105] {node[concept] {\huge{\emoji{mouse-face}}}}
+% 						child [concept color=ubRed,opaque,grow=140] {node[concept] {\huge{\emoji{tooth}}}}
+% 						child [concept color=ubRed,opaque,grow=185] {node[concept] {Institute of Anatomy}}
+% 						child [concept color=ubRed,opaque,grow=225] {node[concept] {\huge\emoji{bone}}}
+% 						};%
+% 		\end{tikzpicture}%
+% 	}%
+% \end{frame}
+
 \begin{frame}{Contents}
 	\tableofcontents
 \end{frame}
