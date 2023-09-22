@@ -54,7 +54,7 @@
 \usepackage{csquotes}
 \usepackage{listings}
 	\lstset{frame=single,
-		backgroundcolor = \color{ubRed!10},
+		backgroundcolor = \color{ubRed!61.8},
 		basicstyle=\tiny\ttfamily
 		}
 \usepackage{pgfplotstable}
@@ -87,7 +87,7 @@
 	% Print out (short) link under image, with small text
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
-			\scriptsize\href{http://#1}{#1} #2%
+			\tiny\href{http://#1}{#1} #2%
 			}%
 		}%
 	}%
@@ -95,7 +95,7 @@
 	% Cite (an image from) a reference
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
-			\scriptsize From \cite{#1}, #2%
+			\tiny From \cite{#1}, #2%
 			}%
 		}%
 	}%
@@ -103,7 +103,7 @@
 	% Make the source command an \href{link}{text}
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
-			\scriptsize\href{http://#1}{#2}, #3%
+			\tiny\href{http://#1}{#2}, #3%
 			}%
 		}%
 	}%
@@ -133,7 +133,7 @@
 	\hfill git.io/JqIBH\hfill|\hfill%
 	v. \href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\hfill|\hfill%
 	p.\xspace\insertframenumber/\inserttotalframenumber\hfill%
-	\hspace*{4ex}%
+	%\hspace*{4ex}%
 	\vspace{0.5ex}%
 	%\par%
 }
@@ -190,14 +190,9 @@
 	}
 }
 
-% Slide transiton
-%\addtobeamertemplate{background canvas}{\transfade[duration=0.5]}{}
-
-% open in fullscreen
-\hypersetup{pdfpagemode=FullScreen}
-
 % Move the text down a bit
 % THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
+% But otherwise, the images are not aligned nicely into the gray background rectangle
 \addtobeamertemplate{frametitle}{}{\vspace*{0.75em}}
 
 \begin{document}
@@ -210,19 +205,19 @@
 	\end{frame}%
 }
 
-%% Alignment frames to test the ugly text-block-movement hack above
-%\begin{frame}[label=current]{Alignment frame}
-%	\begin{tikzpicture}%
-%		\def\cut{2}%
-%		\draw [|-|,ultra thick] (0,\cut) -- (0,\textheight-\cut);%
-%		\draw [<->,ultra thick] (0.5\textwidth,\cut) -- (0.5\textwidth,\textheight-\cut);%
-%		\draw [|-|,ultra thick] (\textwidth,\cut) -- (\textwidth,\textheight-\cut);%
-%	\end{tikzpicture}%
-%\end{frame}
+% % Alignment frames to test the ugly text-block-movement hack above
+% \begin{frame}[label=current]{Alignment frame}
+% 	\begin{tikzpicture}%
+% 		\def\cut{2}%
+% 		\draw [|-|] (0,\cut) -- (0,\textheight-\cut);%
+% 		\draw [<->] (0.5\textwidth,\cut) -- (0.5\textwidth,\textheight-\cut);%
+% 		\draw [|-|] (\textwidth,\cut) -- (\textwidth,\textheight-\cut);%
+% 	\end{tikzpicture}%
+% \end{frame}
 %
-%\begin{frame}[allowframebreaks,label=current]{Alignment frame II}
-%	\lipsum[1-3]
-%\end{frame}
+% \begin{frame}[allowframebreaks,label=current]{Alignment frame II}
+% 	\lipsum[1-3]
+% \end{frame}
 
 \begin{frame}
 	\frametitle{Grüessech mitenang!}
