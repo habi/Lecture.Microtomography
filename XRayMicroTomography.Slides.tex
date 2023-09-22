@@ -375,8 +375,20 @@
 	\tableofcontents
 \end{frame}
 
-\renewcommand{\imageheight}{0.618\textheight}
 \section{Overview}
+\begin{frame}
+	\frametitle{\uct}
+	\begin{itemize}
+		\item Dense and/or non‐transparent samples
+		\item Calibrated \& isotropic 3D images at micron resolutions
+		\item Covers a very large range of sample sizes
+		\item Gives information at different length scales
+	 	\item Nondestructive imaging, thus compatible with routine sample preparation.\newline
+			Ccorrelative imaging pipelines, museum/ collection material)
+	\end{itemize}
+\end{frame}
+
+\renewcommand{\imageheight}{0.65\textheight}
 \begin{frame}
 	\frametitle{Biomedical imaging}%
 	\begin{columns}%
@@ -424,10 +436,12 @@
 	\begin{itemize}
 		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
-		\item Electron microscopy: see lectures
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2788105.html}{\emph{Analytical electron microscopy} by Dimitri},
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177954.html}{\emph{SEM Grundlagen} by Sabine Kässmeyer and Ivana Jaric} and
-			\href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177956.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan}.
+		\item Electron microscopy
+		\begin{itemize}
+			\item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2788105.html}{\emph{Analytical electron microscopy} by Dimitri}
+			\item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177954.html}{\emph{SEM Grundlagen} by Sabine Kässmeyer and Ivana Jaric}
+			\item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177956.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan}
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -449,50 +463,50 @@
 		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
 \end{frame}
 
-% \subsection{History}
-% \renewcommand{\imagewidth}{\columnwidth}
-% \begin{frame}
-% 	\frametitle{History}
-% 	\begin{columns}
-% 		\begin{column}{0.49\linewidth}
-% 			\begin{itemize}
-% 				\item Long history
-% 				\begin{itemize}
-% 					\item \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
-% 					\item 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
-% 					\item Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}%
-% 				\end{itemize}%
-% 				\item<2-|handout:2-> CT scanner generations: First\uncover<3-|handout:3->{, second}\uncover<4|handout:4->{ and third}%
-% 			\end{itemize}
-% 		\end{column}
-% 		\begin{column}{0.49\linewidth}
-% 			\centering
-% 			\only<1|handout:1>{%
-% 				\renewcommand{\imagewidth}{0.715\imageheight}% 1055/1476
-% 				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
-% 				\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
-% 				\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
-% 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-% 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
-% 					% 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
-% 					%\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{160.00000004}{\milli\meter} (634px) TEMPORARY!};
-% 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
-% 				\end{tikzpicture}%
-% 			}%
-% 			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
-% 			\includegraphics<2|handout:2>[width=\imagewidth]{./images/History_Generation1}%
-% 			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-% 			\includegraphics<3|handout:3>[width=\imagewidth]{./images/History_Generation2}%
-% 			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-% 			\includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation3}%
-% 			\only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.14}}%
-% 		\end{column}
-% 	\end{columns}
-% 	\note{I was unable to find conclusive information on the voxel size of the first CT image.
-% 		My head is approximately \SI{16}{\centi\meter} wide.
-% 		I counted 47 voxels across the head in the image.
-% 		This gives a voxel size of \SI{3.4}{\milli\meter} per voxel.}
-% \end{frame}
+\subsection{History}
+\renewcommand{\imagewidth}{\columnwidth}
+\begin{frame}
+	\frametitle{History}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\begin{itemize}
+				\item Long history
+				\begin{itemize}
+					\item \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
+					\item 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
+					\item Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}%
+				\end{itemize}%
+				\item<2-|handout:2-> CT scanner generations: First\uncover<3-|handout:3->{, second}\uncover<4|handout:4->{ and third}%
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\only<1|handout:1>{%
+				\renewcommand{\imagewidth}{0.55\linewidth}% 1055/1476
+				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
+				\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
+				\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
+					% 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
+					%\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{160.00000004}{\milli\meter} (634px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+				\end{tikzpicture}%
+			}%
+			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
+			\includegraphics<2|handout:2>[width=\imagewidth]{./images/History_Generation1}%
+			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+			\includegraphics<3|handout:3>[width=\imagewidth]{./images/History_Generation2}%
+			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+			\includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation3}%
+			\only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+		\end{column}
+	\end{columns}
+	\note{I was unable to find conclusive information on the voxel size of the first CT image.
+		My head is approximately \SI{16}{\centi\meter} wide.
+		I counted 47 voxels across the head in the image.
+		This gives a voxel size of \SI{3.4}{\milli\meter} per voxel.}
+\end{frame}
 
 \subsection{Interaction of x-rays with matter}
 \begin{frame}
@@ -749,21 +763,21 @@
 	\end{columns}%
 \end{frame}
 
-\begin{frame}
-	\frametitle{Machinery}
-	\begin{columns}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\input{animations/classicCT}
-		\end{column}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\only<1>{\input{animations/microCT}}%
-			\only<2|handout:0>{\input{animations/microCT_lr}}%
-			\only<3|handout:0>{\input{animations/microCT_hr}}%
-		\end{column}
-	\end{columns}
-\end{frame}
+% \begin{frame}
+% 	\frametitle{Machinery}
+% 	\begin{columns}
+% 		\begin{column}{0.49\linewidth}
+% 			\centering
+% 			\input{animations/classicCT}
+% 		\end{column}
+% 		\begin{column}{0.49\linewidth}
+% 			\centering
+% 			\only<1>{\input{animations/microCT}}%
+% 			\only<2|handout:0>{\input{animations/microCT_lr}}%
+% 			\only<3|handout:0>{\input{animations/microCT_hr}}%
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
 
 \begin{frame}
 	\frametitle{Examples}
@@ -811,11 +825,11 @@
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<5|handout:0>{%
-		\animategraphics[autoplay,palindrome,width=0.45\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
+		\animategraphics[autoplay,palindrome,width=\imagewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<6|handout:4>{%
-		\pgfmathsetlength{\imagewidth}{0.42\linewidth}%
+		\pgfmathsetlength{\imagewidth}{0.8\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
 		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
 		\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
@@ -827,7 +841,7 @@
 		\end{tikzpicture}%
 	}%
 	\only<7|handout:5>{%
-		\pgfmathsetlength{\imagewidth}{0.55\linewidth}%
+		\pgfmathsetlength{\imagewidth}{\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
 		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
 		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
@@ -918,7 +932,7 @@
 	\frametitle{What to use?}
 	\begin{itemize}
 		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
-		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177933.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
+		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774485.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
 		\item Reproducible research
 		\begin{itemize}
 			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
@@ -1054,16 +1068,12 @@
 \end{frame}
 
 \subsubsection{Results}
-\begin{frame}
-	\frametitle{\uct imaging}
-	\centering
-	\includegraphics[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics<1|handout:0>[height=\imageheight]{./images/ScanOverviews.104.png}%
-	\includegraphics<2>[height=\imageheight]{./images/ScanOverviews.24.png}%
+	\includegraphics<1|handout:0>[height=\imageheight]{./images/zmk/ScanOverviews.104.png}%
+	\includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \end{frame}
 
 \renewcommand{\imagewidth}{\linewidth}
@@ -1096,7 +1106,7 @@
 					\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0000}%
 					}%
 				}%
-			\only<2|handout:2>{\includegraphics[height=\imageheight]{./images/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
+			\only<2|handout:2>{\includegraphics[height=\imageheight]{./images/zmk/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
 			\only<3|handout:3>{%
 				\mode<beamer>{%
 					\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
@@ -1261,10 +1271,12 @@
 \end{frame}
 
 \subsection{Metal foam analysis}
+\renewcommand{\imageheight}{0.618\paperheight}%
 \begin{frame}
 	\frametitle{Metal foam}
 	\centering
-	\includegraphics[width=\imagewidth]{./images/can_eb03_hart_0_4um_al0_25_80kv_rec0000}%
+	\includegraphics[height=\imageheight]{./images/can_eb03_hart_0_4um_al0_25_80kv_rec0000}%
+	\source{Etienne Berner}{NanoElectroCatalysis Group}
 \end{frame}
 
 \subsection{A study on fish}
