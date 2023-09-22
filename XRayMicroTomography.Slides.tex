@@ -12,7 +12,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333}% use only every nth frame for the animations
+\newcommand{\everyframe}{111}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\imageheight}{0.8\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
@@ -677,6 +677,7 @@
 		The voxel size of the original data is \qty{7.96}{\micro\meter}, the image size is \numproduct{3295 x 1492} pixels.}
 \end{frame}
 
+\renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{Maximum intensity projection}
 	\centering
@@ -686,6 +687,7 @@
 \end{frame}
 
 \subsection{Tomography today}
+\renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{Machinery}
 	\begin{columns}%
@@ -715,6 +717,9 @@
 			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}%
 			\includegraphics<4|handout:4>[width=\imagewidth]{./images/4563733710_f632792416_b}%
 			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}%
+			%trim={<left> <lower> <right> <upper>}
+			\includegraphics<5|handout:0>[trim={430 0 290 0},clip,width=\imagewidth]{./images/4563733710_f632792416_b}%
+			\only<5|handout:0>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}%
 		\end{column}%
 	\end{columns}%
 \end{frame}
@@ -724,10 +729,11 @@
 	MULTISLICE CT -> HOSPITAL
 }
 
+\renewcommand{\imagewidth}{\linewidth}
 \begin{frame}
 	\frametitle{What is happening?}
 	\begin{columns}%
-		\begin{column}{0.45\linewidth}%
+		\begin{column}{0.49\linewidth}%
 			No matter what kind of machine, the basic principle is always the same
 			\begin{itemize}
 				\item an x-ray source
@@ -735,7 +741,7 @@
 				\item a detector
 			\end{itemize}
 		\end{column}%
-		\begin{column}{0.45\linewidth}%
+		\begin{column}{0.49\linewidth}%
 			\centering%
 			\includegraphics[width=\imagewidth]{./images/3D_Computed_Tomography}%
 			\source{w.wiki/7g3}{\ccbysa}%
@@ -792,7 +798,7 @@
 		}%
 	\end{tikzpicture}%
 	\only<4|handout:3>{%
-		\pgfmathsetlength{\imagewidth}{0.45\linewidth}%
+		\pgfmathsetlength{\imagewidth}{\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/387}%
 		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
 		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
@@ -843,6 +849,7 @@
 	\end{itemize}
 \end{frame}
 
+\renewcommand{\imageheight}{0.618\paperheight}%
 \begin{frame}
 	\frametitle{Projections}
 	\centering
@@ -851,7 +858,7 @@
 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Projections}
 	\centering
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
@@ -859,7 +866,7 @@
 	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_180}}
 \end{frame}
 
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Projections}
 	\begin{itemize}
 		\item A (micro-focus) x-ray source illuminates the object
@@ -870,7 +877,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Reconstructions}
 	\centering
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
@@ -878,7 +885,7 @@
 	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_180}}
 \end{frame}
 
-\begin{frame}[label=current]
+\begin{frame}
 	\frametitle{Reconstructions}
 	\begin{itemize}
 		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
@@ -1144,12 +1151,12 @@
 			\toprule%
 			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
 			\midrule%
-			\rowcolor{ubRed}\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}	& 1-1-1/1 & 73 & 74.5\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/2 & 14 & 14.3\\%
+			\rowcolor{ubRed!61.8}\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}	& 1-1-1/1 & 73 & 74.5\\%
+			\rowcolor{ubRed!61.8}\multicolumn{2}{l}{}								& 1-1-1/2 & 14 & 14.3\\%
 			\multicolumn{2}{l}{}												& 1-1-1/3 & 1 & 1.0\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/4 & 2 & 2.1\\%
+			\rowcolor{ubRed!61.8}\multicolumn{2}{l}{}								& 1-1-1/4 & 2 & 2.1\\%
 			\multicolumn{2}{l}{}												& 1-1-2/1 & 1 & 1.0\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-2-1/1 & 4 & 4.1\\%
+			\rowcolor{ubRed!61.8}\multicolumn{2}{l}{}								& 1-2-1/1 & 4 & 4.1\\%
 			\multicolumn{2}{l}{}												& 1-2-1/2 & 1 & 1.0\\%
 			\multicolumn{2}{l}{}												& 1-2-2/2 & 1 & 1.0\\%
 			\multicolumn{2}{l}{}												& 2-3-1/1 & 1 & 1.0\\%
@@ -1207,7 +1214,7 @@
 		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0752}%
 		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
 		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
-		\renewcommand{\imagewidth}{0.358565737*\imageheight}% 720/2008
+		\renewcommand{\imagewidth}{0.13\linewidth}% 720/2008
 		\pgfmathsetlength{\imagescale}{\imagewidth/720}%
 		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
@@ -1223,7 +1230,7 @@
 	\frametitle{Analysis of the physiological foramen geometry}
 	\centering
 	\only<1|handout:1>{%
-		\includegraphics[height=\imageheight]{./images/foramen}%
+		\includegraphics[height=\imageheight]{./images/zmk/foramen}%
 		\sourcecite{Wolf2017}{Fig.~1}%
 		}%
 	\only<2|handout:0>{%
@@ -1242,7 +1249,6 @@
 			\includegraphics[height=\imageheight]{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_139}%
 			}%
 		}%
->>>>>>> Stashed changes
 \end{frame}
 
 \begin{frame}
