@@ -53,10 +53,28 @@
 \usepackage{fontawesome5}
 \usepackage{csquotes}
 \usepackage{listings}
-	\lstset{frame=single,
-		backgroundcolor = \color{ubRed!61.8},
-		basicstyle=\tiny\ttfamily
-		}
+	\lstset{basicstyle=\tiny\ttfamily}
+	% highlight a line in listings: https://tex.stackexchange.com/a/58543/828
+	% Including a crude workaround for recent versions of `listings`: https://tex.stackexchange.com/a/451538/828
+	\makeatletter
+	\let\old@lstKV@SwitchCases\lstKV@SwitchCases
+	\def\lstKV@SwitchCases#1#2#3{}
+	\makeatother
+	\usepackage{lstlinebgrd}
+	\makeatletter
+	\let\lstKV@SwitchCases\old@lstKV@SwitchCases
+	\lst@Key{numbers}{none}{%
+		\def\lst@PlaceNumber{\lst@linebgrd}%
+		\lstKV@SwitchCases{#1}%
+		{none:\\%
+		left:\def\lst@PlaceNumber{\llap{\normalfont
+		\lst@numberstyle{\thelstnumber}\kern\lst@numbersep}\lst@linebgrd}\\%
+		right:\def\lst@PlaceNumber{\rlap{\normalfont
+			\kern\linewidth \kern\lst@numbersep
+			\lst@numberstyle{\thelstnumber}}\lst@linebgrd}%
+		}{\PackageError{Listings}{Numbers #1 unknown}\@ehc}}
+	\makeatother
+	% highlight a line in listings: https://tex.stackexchange.com/a/58543/828
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 \usepackage{colortbl}
@@ -235,17 +253,20 @@
 \begin{frame}
 	\frametitle{Grüessech from the \uct-group}
 	\centering
-	\includegraphics[width=0.925\linewidth]{./images/team}
+	\includegraphics[width=0.9\linewidth]{./images/team}
 		\begin{columns}
 		\hfill\begin{column}{0.3\linewidth}
-			\centering David{\color{ubRed!50}.}Haberthuer{\color{ubRed!50}@unibe.ch}
+			\centering%
+			David{\color{ubRed!0.618}.}Haberthuer{\color{ubRed!0.618}@unibe.ch}%
 		\end{column}
 		\begin{column}{0.3\linewidth}
-			\centering Ruslan{\color{ubRed!50}.}Hlushchuk{\color{ubRed!50}@unibe.ch}
+			\centering%
+			Ruslan{\color{ubRed!0.618}.}Hlushchuk{\color{ubRed!0.618}@unibe.ch}%
 		\end{column}
 		\begin{column}{0.3\linewidth}
-			\centering Oleksiy{\color{ubRed!50}.}Khoma{\color{ubRed!50}@unibe.ch}
-		\end{column}\hfill
+			\centering%
+			Oleksiy{\color{ubRed!0.618}.}Khoma{\color{ubRed!0.618}@unibe.ch}%
+		\end{column}\hfill%
 	\end{columns}
 \end{frame}
 
@@ -276,100 +297,6 @@
 		\end{column}%
 	\end{columns}%
 \end{frame}
-
-% \begin{frame}
-% 	\frametitle{Overview}
-% 	\centering
-% 	\only<1>{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [grow=165] {node[concept] {Science}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [grow=225] {node[concept] {Vetsuisse}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [grow=345] {node[concept] {​Medicine}};%
-% 		\end{tikzpicture}%
-% 	}%
-% 	\only<2>{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}};%
-% 		\end{tikzpicture}%
-% 	}%
-% 	\only<3>{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}
-% 					child [concept color=ubRed,opaque,grow=-45] {node[concept] {{Institute of Ecology and Evolution}}}
-% 						child [concept color=ubRed,opaque,grow=15] {node[concept] {Space Research \& Planetary Sciences}}
-% 					}
-% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}
-% 						child [concept color=ubRed,opaque,grow=0] {node[concept] {Clinical radiology}}
-% 					}
-% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}
-% 						child [concept color=ubRed,opaque,grow=105] {node[concept] {Theodor Kocher Institute}}
-% 						child [concept color=ubRed,opaque,grow=140] {node[concept] {School of Dental Medicine}}
-% 						child [concept color=ubRed,opaque,grow=185] {node[concept] {Institute of Anatomy}}
-% 						child [concept color=ubRed,opaque,grow=225] {node[concept] {Klinik für Orthopädische Chirurgie \& Traumatologie}}
-% 					};%
-% 		\end{tikzpicture}%
-% 	}%
-% 	% Get emojis from https://unicode.org/emoji/charts/emoji-list.html
-% 	\only<4->{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}
-% 						child [concept color=ubRed,opaque,grow=-45] {node[concept] {\huge{\emoji{fish}}}}
-% 						child [concept color=ubRed,opaque,grow=15] {node[concept] {\huge{\emoji{comet}}}}
-% 						}
-% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}
-% 						child [concept color=ubRed,opaque,grow=0] {node[concept] {\only<4>{\huge{\emoji{unicorn}}}\only<5>{\huge{\emoji{horse}}}}}
-% 						}
-% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}
-% 						child [concept color=ubRed,opaque,grow=105] {node[concept] {\huge{\emoji{mouse-face}}}}
-% 						child [concept color=ubRed,opaque,grow=140] {node[concept] {\huge{\emoji{tooth}}}}
-% 						child [concept color=ubRed,opaque,grow=185] {node[concept] {Institute of Anatomy}}
-% 						child [concept color=ubRed,opaque,grow=225] {node[concept] {\huge\emoji{bone}}}
-% 						};%
-% 		\end{tikzpicture}%
-% 	}%
-% \end{frame}
 
 \begin{frame}{Contents}
 	\tableofcontents
@@ -490,7 +417,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
 					% 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
 					%\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{160.00000004}{\milli\meter} (634px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
 			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
@@ -820,7 +747,7 @@
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
 			% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
 			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.9025}{\milli\meter} (387px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
@@ -1017,7 +944,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
 					% 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
 					%\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{140.0}{\milli\meter} (2132px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 				}%
 			\only<2|handout:2>{%
@@ -1232,7 +1159,7 @@
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
 				% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
 				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{20.92}{\milli\meter} (1760px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 		\end{tikzpicture}%
 \end{frame}
 
