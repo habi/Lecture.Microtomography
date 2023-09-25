@@ -289,12 +289,12 @@
 		\end{column}%
 		\begin{column}{0.37\linewidth}%
 			\centering%
-			\includegraphics<1>[width=\imagewidth]{./images/1172}%
-			\only<1>{\source{brukersupport.com}{}}%
-			\includegraphics<2>[width=\imagewidth]{./images/1272}%
-			\only<2>{\source{bruker.com/skyscan1272}{}}%
-			\includegraphics<3>[width=\imagewidth]{./images/2214}%
-			\only<3>{\source{bruker.com/skyscan2214}{}}%
+			\includegraphics<1|handout:0>[width=\imagewidth]{./images/1172}%
+			\only<1|handout:0>{\source{brukersupport.com}{}}%
+			\includegraphics<2|handout:1>[width=\imagewidth]{./images/1272}%
+			\only<2|handout:1>{\source{bruker.com/skyscan1272}{}}%
+			\includegraphics<3|handout:0>[width=\imagewidth]{./images/2214}%
+			\only<3|handout:0>{\source{bruker.com/skyscan2214}{}}%
 		\end{column}%
 	\end{columns}%
 \end{frame}
@@ -1247,7 +1247,7 @@
 		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0752}%
 		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
 		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
-		\renewcommand{\imagewidth}{0.13\linewidth}% 720/2008
+		\renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
 		\pgfmathsetlength{\imagescale}{\imagewidth/720}%
 		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
@@ -1369,7 +1369,7 @@
 		% For the visualisation, we binned the stack 2x, thus have a voxel size of 60 um
 		% The image is 1412 pixels high, so we used `python ~/P/Dev/latex/draw_a_scalebar.py -p 12 -i frames/video-0000.jpg -l 1412` to draw a scale bar
 		\renewcommand{\imagewidth}{0.7\linewidth}%
-		\only<1>{%
+		\only<1|handout:1>{%
 		\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}% shadowed drawing https://tex.stackexchange.com/a/185853/828
 			\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
 			\def\x{633-50}% scalebar-x starting at golden ratio of image width of 1024px = 633
@@ -1381,16 +1381,16 @@
 				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+332.8,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};%
 			\end{tikzpicture}%
 		}%
-		\only<2>{%
+		\only<2|handout:0>{%
 			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{000}{082}%
 		}%
-		\only<3>{%
+		\only<3|handout:0>{%
 			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{082}{162}%
 		}%
-		\only<4>{%
+		\only<4|handout:0>{%
 			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{122}{241}%
 		}%
-		\only<5>{%
+		\only<5|handout:0>{%
 			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{241}{320}%
 		}%
 \end{frame}
@@ -1398,16 +1398,16 @@
 \begin{frame}
 	\frametitle{Data wrangling by example: Cichlids}
 	\centering
-	\includegraphics<1>[height=\imageheight]{./images/cichlids/Otolither_104016_head_01_Overview}%
-	\includegraphics<2>[height=\imageheight]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
-	\includegraphics<3>[height=\imageheight]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
-	\includegraphics<4>[height=\imageheight]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
-	\includegraphics<5>[height=\imageheight]{./images/cichlids/Otolither_104016_head_05_Peaks}%
-	\includegraphics<6>[height=\imageheight]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
-	\includegraphics<7>[height=\imageheight]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
-	\includegraphics<8>[height=\imageheight]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
+	\includegraphics<1|handout:1>[height=\imageheight]{./images/cichlids/Otolither_104016_head_01_Overview}%
+	\includegraphics<2|handout:2>[height=\imageheight]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
+	\includegraphics<3|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
+	\includegraphics<4|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
+	\includegraphics<5|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_05_Peaks}%
+	\includegraphics<6|handout:3>[height=\imageheight]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
+	\includegraphics<7|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
+	\includegraphics<8|handout:4>[height=\imageheight]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
 	\includegraphics<9>[height=\imageheight]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
-	\only<10>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
+	\only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
 \begin{frame}
