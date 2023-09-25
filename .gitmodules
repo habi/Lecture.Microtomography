@@ -1,0 +1,3 @@
+[submodule "Notebooks/BrukerSkyScanLogfileRuminator"]
+	path = Notebooks/BrukerSkyScanLogfileRuminator
+	url = git@github.com:habi/BrukerSkyScanLogfileRuminator.git
