@@ -80,7 +80,7 @@
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage{lipsum}
-\usepackage{datetime2}
+\usepackage[showseconds=false,showzone=false]{datetime2}
 \usepackage{mathastext}
 
 % Define complementary colors to ubRed, from https://www.sessions.edu/color-calculator/
@@ -126,40 +126,39 @@
 		}%
 	}%
 
-% Define us a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
+% Define a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
 \makeatletter
-\mode<beamer>{%
-	\def\progressbar@progressbar{} % the progress bar
-	\newcount\progressbar@tmpcounta% auxiliary counter
-	\newcount\progressbar@tmpcountb% auxiliary counter
-	\newdimen\progressbar@pbht %progressbar height
-	\newdimen\progressbar@pbwd %progressbar width
-	\newdimen\progressbar@rcircle % radius for the circle
-	\newdimen\progressbar@tmpdim % auxiliary dimension
-	\progressbar@pbwd=0.85\linewidth
-	\progressbar@rcircle=1.5pt
-	\def\progressbar@progressbar{%
-		\progressbar@tmpcounta=\insertframenumber
-		\progressbar@tmpcountb=\inserttotalframenumber
-		\progressbar@tmpdim=\progressbar@pbwd
-		\multiply\progressbar@tmpdim by \progressbar@tmpcounta
-		\divide\progressbar@tmpdim by \progressbar@tmpcountb
-		\par%
-		\begin{tikzpicture}%
-			\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);
-			\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);
-		\end{tikzpicture}%
-  	}%
-	\hfill git.io/JqIBH\hfill|\hfill%
-	v. \href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\hfill|\hfill%
-	p.\xspace\insertframenumber/\inserttotalframenumber\hfill%
-	%\hspace*{4ex}%
-	\vspace{0.5ex}%
-	%\par%
+\def\progressbar@progressbar{}% the progress bar
+\newcount\progressbar@tmpcounta% auxiliary counter
+\newcount\progressbar@tmpcountb% auxiliary counter
+\newdimen\progressbar@pbht%progressbar height
+\newdimen\progressbar@pbwd%progressbar width
+\newdimen\progressbar@rcircle% radius for the circle
+\newdimen\progressbar@tmpdim% auxiliary dimension
+\progressbar@pbwd=0.75\linewidth%
+\progressbar@rcircle=1.5pt%
+\def\progressbar@progressbar{%
+	\progressbar@tmpcounta=\insertframenumber%
+	\progressbar@tmpcountb=\inserttotalframenumber%
+	\progressbar@tmpdim=\progressbar@pbwd%
+	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
+	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
+		\mode<beamer>{%
+			\hfill%
+			\begin{tikzpicture}%
+				\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);%
+				\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
+			\end{tikzpicture}%
+			\hfill%
+			git.io/JqIBH\xspace|\xspace v.\xspace\href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace\insertframenumber/\inserttotalframenumber%
+			}%
+\mode<handout>{Handout for git.io/JqIBH, created on \DTMnow\xspace| p.\xspace\insertframenumber/\inserttotalframenumber}%
+		\vspace{0.5ex}%
 }
 \addtobeamertemplate{footline}{}%
 {%
-	\begin{beamercolorbox}[wd=\paperwidth,center]{green}%
+
+	\begin{beamercolorbox}[wd=\paperwidth,center]{white}%
 		\progressbar@progressbar%
 	\end{beamercolorbox}%
 }%
@@ -204,10 +203,10 @@
 % Show current section at begin of sections, but only in presentation mode
 \mode<beamer>{%
 	\AtBeginSection[]{%
-		\begin{frame}{Contents}
-			\tableofcontents[currentsection,currentsubsection,hideothersubsections]
-		\end{frame}
-	}
+		\begin{frame}{Contents}%
+			\tableofcontents[currentsection,currentsubsection,hideothersubsections]%
+		\end{frame}%
+	}%
 }
 
 % Move the text down a bit
