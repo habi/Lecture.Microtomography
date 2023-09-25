@@ -12,10 +12,9 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333}% use only every nth frame for the animations
-\newcommand{\imwidth}{\linewidth}% set global image width
-\newcommand{\imheight}{0.618\paperheight}% set global image height
-\newlength\imagewidth% needed for scalebars
+\newcommand{\everyframe}{1}% use only every nth frame for the animations
+\newcommand{\imageheight}{\linewidth}% set global image width
+\newcommand{\imagewidth}{0.618\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
@@ -392,7 +391,6 @@
 \end{frame}
 
 \subsection{History}
-\renewcommand{\imagewidth}{\columnwidth}
 \begin{frame}
 	\frametitle{CT History}
 	\begin{columns}
@@ -409,8 +407,8 @@
 		\end{column}
 		\begin{column}{0.49\linewidth}
 			\centering
+			\renewcommand{\imagewidth}{0.55\columnwidth}%
 			\only<1|handout:1>{%
-				\renewcommand{\imagewidth}{0.55\linewidth}% 1055/1476
 				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
 				\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
 				\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
@@ -421,6 +419,7 @@
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
+			\renewcommand{\imagewidth}{\columnwidth}%
 			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
 			\includegraphics<2|handout:2>[width=\imagewidth]{./images/History_Generation1}%
 			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
@@ -431,9 +430,9 @@
 		\end{column}
 	\end{columns}
 	\note{I was unable to find conclusive information on the voxel size of the first CT image.
-		My head is approximately \SI{16}{\centi\meter} wide.
+		My head is approximately \qty{16}{\centi\meter} wide.
 		I counted 47 voxels across the head in the image.
-		This gives a voxel size of \SI{3.4}{\milli\meter} per voxel.}
+		This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
 \end{frame}
 
 \begin{frame}
@@ -786,21 +785,21 @@
 	\end{columns}%
 \end{frame}
 
-% \begin{frame}
-% 	\frametitle{Machinery}
-% 	\begin{columns}
-% 		\begin{column}{0.49\linewidth}
-% 			\centering
-% 			\input{animations/classicCT}
-% 		\end{column}
-% 		\begin{column}{0.49\linewidth}
-% 			\centering
-% 			\only<1>{\input{animations/microCT}}%
-% 			\only<2|handout:0>{\input{animations/microCT_lr}}%
-% 			\only<3|handout:0>{\input{animations/microCT_hr}}%
-% 		\end{column}
-% 	\end{columns}
-% \end{frame}
+\begin{frame}
+	\frametitle{Machinery}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\input{animations/classicCT}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\only<1>{\input{animations/microCT}}%
+			\only<2|handout:0>{\input{animations/microCT_lr}}%
+			\only<3|handout:0>{\input{animations/microCT_hr}}%
+		\end{column}
+	\end{columns}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Examples}
