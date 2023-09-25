@@ -1,0 +1,70 @@
+At frame 0:
+- reset transformation
+- change channel 1 intensity to (1.0, 128.0, 1.0)
+- change channel 1 alpha to (15.0, 128.0, 2.0)
+- change background color to (217, 217, 217)
+- change bounding box visibility to off 
+- change scalebar visibility to off
+- change channel 1 bounding box x to (0.0, 2202.0)
+- change channel 1 bounding box y to (0.0, 1468.0)
+- change channel 1 bounding box z to (0.0, 1054.0)
+- change channel 1 front/back clipping to (-1425.0, 1425.0)
+From frame 0 to frame 80:
+- rotate by 0.8 degrees vertically
+- rotate by -56.6 degrees around (0, 0, 1)
+- rotate by -150.0 degrees horizontally
+- zoom by a factor of 3.0
+- translate by (153.9, -2045.1, 1896.7)
+
+At frame 81:
+- reset transformation
+- rotate by 0.8 degrees vertically
+- rotate by -56.6 degrees around (0, 0, 1)
+- rotate by -150.0 degrees horizontally
+- zoom by a factor of 3.0
+- translate by (153.9, -2045.1, 1896.7)
+
+From frame 81 to frame 160:
+- rotate by 90.5 degrees vertically
+- rotate by -29.3 degrees around (0, 0, 1)
+- rotate by 56.9 degrees horizontally
+- zoom by a factor of 0.7
+- translate by (2430.1, 80.0, 835.1)
+
+At frame 161:
+- reset transformation
+- rotate by -90.0 degrees vertically
+- rotate by 0.0 degrees around (0, 0, 1)
+- rotate by -180.0 degrees horizontally
+- zoom by a factor of 2.0
+- translate by (981.3, -1071.2, 519.7)
+
+From frame 161 to frame 240:
+- rotate by -22.8 degrees vertically
+- rotate by 6.6 degrees around (0, 0, 1)
+- rotate by 38.2 degrees horizontally
+- zoom by a factor of 1.2
+- translate by (-343.1, -194.5, 779.2)
+- change channel 1 bounding box x to (1248.0, 1771.0)
+- change channel 1 bounding box y to (697.0, 979.0)
+- change channel 1 bounding box z to (215.0, 812.0)
+- change channel 1 front/back clipping to (249.0, 1425.0)
+
+At frame 241:
+- reset transformation
+- rotate by -67.2 degrees vertically
+- rotate by -6.6 degrees around (0, 0, 1)
+- rotate by -141.8 degrees horizontally
+- zoom by a factor of 2.5
+- translate by (1377.8, -1021.8, 833.9)
+
+From frame 241 to frame 320:
+- rotate by -62.9 degrees vertically
+- rotate by 32.3 degrees around (0, 0, 1)
+- rotate by 157.5 degrees horizontally
+- zoom by a factor of 0.4
+- translate by (178.7, -389.0, 633.0)
+- change channel 1 bounding box x to (0.0, 2202.0)
+- change channel 1 bounding box y to (0.0, 1468.0)
+- change channel 1 bounding box z to (0.0, 1054.0)
+- change channel 1 front/back clipping to (-1425.0, 1425.0)
