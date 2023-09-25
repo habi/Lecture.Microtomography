@@ -1338,6 +1338,63 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Cichlids}
+	\begin{columns}
+		\begin{column}{0.495\linewidth}
+			\begin{itemize}
+				\item Institute of Ecology and Evolution
+				\begin{itemize}%
+					\item Ole Seehausen
+					\item Marcel Häsler
+					\item Mikki Law
+					\item Kassandra Ford
+				\end{itemize}
+				\item 150 Lake Victoria fishes\newline (+300 tomographic scans)
+				\item Morphological description of oral and pharyngeal jaws
+				\item PCA of skull structure
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.495\linewidth}
+			\lstinputlisting[linerange={2-4,7-7,15-18,28-29,31-31,36-37,42-42,45-45,55-56},linebackgroundcolor={\ifnum\value{lstnumber}=11\color{ubRed!0.618}\fi}]{./movies/EAWAG/161543/head_30um/proj/161543.log}%
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cichlids}
+		\centering
+		% # Fish 161543, Scan head_30um_rec was scanned with 30 um
+		% 161543 is 17 cm long
+		% For the visualisation, we binned the stack 2x, thus have a voxel size of 60 um
+		% The image is 1412 pixels high, so we used `python ~/P/Dev/latex/draw_a_scalebar.py -p 12 -i frames/video-0000.jpg -l 1412` to draw a scale bar
+		\renewcommand{\imagewidth}{0.7\linewidth}%
+		\only<1>{%
+		\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}% shadowed drawing https://tex.stackexchange.com/a/185853/828
+			\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
+			\def\x{633-50}% scalebar-x starting at golden ratio of image width of 1024px = 633
+			\def\y{540}% scalebar-y at 90% of image height of 600px = 540
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/161543/head_30um/frames/video-0000}};%
+				% 586.337px = 88.08mm -> 100px = 15022.075um -> 3.328px = 500um, 0.666px = 100um
+				%\draw[|-|,blue,thick] (955,6) -- (960,592) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{88.08}{\milli\meter} (586px) TEMPORARY!};%
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+332.8,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};%
+			\end{tikzpicture}%
+		}%
+		\only<2>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{000}{082}%
+		}%
+		\only<3>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{082}{162}%
+		}%
+		\only<4>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{122}{241}%
+		}%
+		\only<5>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{241}{320}%
+		}%
+\end{frame}
+
+\begin{frame}
 	\frametitle{Data wrangling by example: Cichlids}
 	\centering
 	\includegraphics<1>[height=\imageheight]{./images/cichlids/Otolither_104016_head_01_Overview}%
