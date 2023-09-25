@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/162259004.svg)](https://zenodo.org/badge/latestdoi/162259004) ![Build LaTeX & upload handout](https://github.com/habi/Lecture.Microtomography/workflows/Build%20LaTeX%20&%20upload%20handout/badge.svg)
+[![DOI](https://zenodo.org/badge/162259004.svg)](https://zenodo.org/badge/latestdoi/162259004) [![Build LaTeX & upload handout](https://github.com/habi/Lecture.Microtomography/actions/workflows/latex.yaml/badge.svg)](https://github.com/habi/Lecture.Microtomography/actions/workflows/latex.yaml)
 
 # A lecture on (micro)tomography
 
