@@ -884,6 +884,7 @@
       \strng{authorbibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
       \strng{authornamehash}{7b578b3863fde0aa59a94fe262c5ab64}
       \strng{authorfullhash}{4a55f016bae73744942f2fc3449c019e}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -915,6 +916,80 @@
       \verb https://doi.org/gjpw2d
       \endverb
       \keyw{Automated segmentation,Biomedical image analysis,Internal tooth morphology,Micro-CT,Physiological foramen geometry,Root canal configuration}
+    \endentry
+    \entry{Haberthuer2023}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberthür},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=84ea9fb46ffbf07bc60fc647352ad435}{%
+           family={Law},
+           familyi={L\bibinitperiod},
+           given={Mikki},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1912e22c04700e5f32ad165109fd7015}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Kassandra},
+           giveni={K\bibinitperiod}}}%
+        {{hash=70934deda6bfea69302d6f504ba9f152}{%
+           family={Häsler},
+           familyi={H\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=80b1719708477d2cb174bbfbea96ab2e}{%
+           family={Seehausen},
+           familyi={S\bibinitperiod},
+           given={Ole},
+           giveni={O\bibinitperiod}}}%
+        {{hash=19d1c5f909bbd72b20042740109f3be6}{%
+           family={Hlushchuk},
+           familyi={H\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {bioRxiv}%
+      }
+      \strng{namehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{fullhash}{8015d964f7565cf1d07afc51cfc0746e}
+      \strng{bibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorbibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authornamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorfullhash}{8015d964f7565cf1d07afc51cfc0746e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A large collection of cichlids from Lake Victoria in Africa spanning a length range of 6 to 18 cm was nondestructively imaged using micro-computed tomography. We describe our method to efficiently obtain three-dimensional tomographic datasets of the oral and pharyngeal jaws and the whole skull of these fishes for accurately describing their morphology. The tomographic data we acquired (9.5 TB projection images) yielded 1.4 TB of three-dimensional image stacks used for extracting the relevant features of interest. Herein we present our method and an outlook on analyzing the acquired data; a morphological description of the oral and pharyngeal jaws of the fishes, a three-dimensional geometric morphometrics analysis of landmark features on the fish skulls, and a robust method to automatically extract the otoliths of the fishes from the tomographic data.}
+      \field{chapter}{New Results}
+      \field{eprintclass}{New Results}
+      \field{eprinttype}{bioRxiv}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{title}{Microtomographic Investigation of a Large Corpus of Cichlids}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{2023.03.30.534917}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1101/2023.03.30.534917
+      \endverb
+      \verb{file}
+      \verb /Users/habi/Zotero/storage/6WESNW3R/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf;/Users/habi/Zotero/storage/FPUMVTJT/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/krfn
+      \endverb
+      \verb{url}
+      \verb https://doi.org/krfn
+      \endverb
     \endentry
     \entry{Cormack1963}{article}{}
       \name{author}{1}{}{%
@@ -1469,6 +1544,7 @@
       \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authorfullhash}{795d028f9f4534239332966341d28877}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -1532,8 +1608,8 @@
       \strng{authorbibnamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
       \strng{authornamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
       \strng{authorfullhash}{cbec28ac1f2fccd6b9b619b97b15669a}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Introduction The objective of this study was to propose a root canal configuration description method and to investigate the root canal system morphology of the maxillary first molar by means of micro-computed tomographic imaging. Methods The root canal configuration, foramina, and accessory canal frequency of 179 maxillary first molars were investigated by means of micro-computed tomographic imaging and 3-dimensional software imaging. The root canal configuration and main foramina number are described from coronal to apical with a 4-digit system. Results The most frequent root canal configurations were 1-1-1/1 (45.8\%), 2-2-2/2 (25.1\%) and 2-2-1/1 (10.1\%) in mesiobuccal roots and 1-1-1/1 in distobuccal (97.2\%) and palatal (98.9\%) roots. The first mesiobuccal (MB1) root canal had 1 accessory canal in 26.3\% of the teeth, the distobuccal root canal had 12.3\%, and the palatal root canal had 9.5\%; in the second mesiobuccal root canal, there was rarely 1 accessory canal. There was 1 accessory canal in 26.3\%, 12.3\%, and 9.5\% in the MB1, distobuccal, and palatal root canals, respectively. The MB1, distobuccal, and palatal root canals had 1 main foramen. The MB2 had 1 main foramen in 39.0\% of the teeth and no main foramen in 61.0\%. Conclusions The root canal configuration of maxillary first molars is quite diversified. Contrary to our expectations in this research, the mesiobuccal root has predominantly 1 root canal entrance and only 1 main foramen. Anatomic variations including connecting and accessory canals occur in any third of root.}
@@ -1599,8 +1675,76 @@
       \verb https://zenodo.org/record/3999402
       \endverb
     \endentry
+    \entry{Wolf2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=fdf6fa40a994c79d1b1f7f654c7601db}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Thomas\bibnamedelima Gerhard},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=7aef301479a84587c1fa1fac608150bc}{%
+           family={Paqué},
+           familyi={P\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1f9fd8925e24d25d3aef11d313378c2a}{%
+           family={Sven\bibnamedelima Patyna},
+           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=023b0e41ddb46e953e5d493dc3c263ba}{%
+           family={Willershausen},
+           familyi={W\bibinitperiod},
+           given={Brita},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7a41b26f38c6ace1e4182a108e47e7b1}{%
+           family={{Briseño-Marroquín}},
+           familyi={B\bibinitperiod},
+           given={Benjamín},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sichuan University Press}%
+      }
+      \strng{namehash}{5af6331b2ccb7cdf421ff390877fcdfb}
+      \strng{fullhash}{61b54fb10b56680ff2a39b33b4712bca}
+      \strng{bibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
+      \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
+      \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
+      \strng{authorfullhash}{61b54fb10b56680ff2a39b33b4712bca}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The aim of this study was to investigate the physiological foramen diameter, shape and distance between physiological and anatomical apex of maxillary and mandibular first and second molars. Accurate knowledge of the physiological foramina morphology; thus, inherent mechanical shaping technical hindrances, is decisive when taking the corresponding root canal final preparation decision. The morphological dimensions of a total of 1 727 physiological foramina were investigated by means of micro-computed tomography. Mean narrow and wide (to a high number, oval) diameters of the physiological foramen were 0.24, 0.22 and 0.33 mm and 0.33, 0.31 and 0.42 mm in mesiobuccal (MB), distobuccal (DB) and palatal (P) roots in maxillary first molars; 0.24, 0.22 and 0.33 mm and 0.41, 0.33 and 0.44 in MB, DB, and P roots in maxillary second molars. Mandibular first molars showed mean narrow and wide diameters of 0.24 and 0.30 mm and of 0.39 and 0.46 mm in mesial (M) and distal (D) roots; second mandibular molars showed 0.25 and 0.31 mm and 0.47 mm in M and D roots. The mean distance between the physiological foramina and anatomical apex was 0.82, 0.81 and 1.02 mm and 0.54, 0.43 and 0.63 mm in MB, DB and P roots of the maxillary first and second molars, respectively. A mean distance of 0.95 mm (M) and 1.05 mm (D) in the first and 0.78 mm (M) and 0.81 mm (D) in the second mandibular molars was observed. Based on the results obtained, assumable recommendations for final preparation size of the physiological foramen were calculated. However, when taking into consideration, the resulting standard deviations of marginal errors must be cautiously considered when taking a final decision in clinical endodontic treatment.}
+      \field{issn}{1674-2818}
+      \field{journaltitle}{International Journal of Oral Science}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Three-Dimensional Analysis of the Physiological Foramen Geometry of Maxillary and Mandibular Molars by Means of Micro-{{CT}}}
+      \field{urlday}{10}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
+      \field{volume}{9}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{151\bibrangedash 157}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/ijos.2017.29
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nature.com/articles/ijos201729
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/articles/ijos201729
+      \endverb
+      \keyw{Apical constriction,Final apical file,Maxillary and mandibular molars morphology,Micro-computed tomography,Physiological foramen}
+    \endentry
   \enddatalist
   \missing{Beckmann2006}
+  \missing{Lin2019}
 \endrefsection
 \endinput
 

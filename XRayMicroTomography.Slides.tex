@@ -12,10 +12,9 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333}% use only every nth frame for the animations
-\newcommand{\imwidth}{\linewidth}% set global image width
-\newcommand{\imheight}{0.618\paperheight}% set global image height
-\newlength\imagewidth% needed for scalebars
+\newcommand{\everyframe}{1}% use only every nth frame for the animations
+\newcommand{\imageheight}{\linewidth}% set global image width
+\newcommand{\imagewidth}{0.618\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
@@ -54,10 +53,28 @@
 \usepackage{fontawesome5}
 \usepackage{csquotes}
 \usepackage{listings}
-	\lstset{frame=single,
-		backgroundcolor = \color{ubRed!61.8},
-		basicstyle=\tiny\ttfamily
-		}
+	\lstset{basicstyle=\tiny\ttfamily}
+	% highlight a line in listings: https://tex.stackexchange.com/a/58543/828
+	% Including a crude workaround for recent versions of `listings`: https://tex.stackexchange.com/a/451538/828
+	\makeatletter
+	\let\old@lstKV@SwitchCases\lstKV@SwitchCases
+	\def\lstKV@SwitchCases#1#2#3{}
+	\makeatother
+	\usepackage{lstlinebgrd}
+	\makeatletter
+	\let\lstKV@SwitchCases\old@lstKV@SwitchCases
+	\lst@Key{numbers}{none}{%
+		\def\lst@PlaceNumber{\lst@linebgrd}%
+		\lstKV@SwitchCases{#1}%
+		{none:\\%
+		left:\def\lst@PlaceNumber{\llap{\normalfont
+		\lst@numberstyle{\thelstnumber}\kern\lst@numbersep}\lst@linebgrd}\\%
+		right:\def\lst@PlaceNumber{\rlap{\normalfont
+			\kern\linewidth \kern\lst@numbersep
+			\lst@numberstyle{\thelstnumber}}\lst@linebgrd}%
+		}{\PackageError{Listings}{Numbers #1 unknown}\@ehc}}
+	\makeatother
+	% highlight a line in listings: https://tex.stackexchange.com/a/58543/828
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 \usepackage{colortbl}
@@ -111,26 +128,28 @@
 
 % Define us a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
 \makeatletter
-\def\progressbar@progressbar{} % the progress bar
-\newcount\progressbar@tmpcounta% auxiliary counter
-\newcount\progressbar@tmpcountb% auxiliary counter
-\newdimen\progressbar@pbht %progressbar height
-\newdimen\progressbar@pbwd %progressbar width
-\newdimen\progressbar@rcircle % radius for the circle
-\newdimen\progressbar@tmpdim % auxiliary dimension
-\progressbar@pbwd=0.85\linewidth
-\progressbar@rcircle=1.5pt
-\def\progressbar@progressbar{%
-	\progressbar@tmpcounta=\insertframenumber
-	\progressbar@tmpcountb=\inserttotalframenumber
-	\progressbar@tmpdim=\progressbar@pbwd
-	\multiply\progressbar@tmpdim by \progressbar@tmpcounta
-	\divide\progressbar@tmpdim by \progressbar@tmpcountb
-	\par%
-	\begin{tikzpicture}%
-		\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);
-		\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);
-	\end{tikzpicture}%
+\mode<beamer>{%
+	\def\progressbar@progressbar{} % the progress bar
+	\newcount\progressbar@tmpcounta% auxiliary counter
+	\newcount\progressbar@tmpcountb% auxiliary counter
+	\newdimen\progressbar@pbht %progressbar height
+	\newdimen\progressbar@pbwd %progressbar width
+	\newdimen\progressbar@rcircle % radius for the circle
+	\newdimen\progressbar@tmpdim % auxiliary dimension
+	\progressbar@pbwd=0.85\linewidth
+	\progressbar@rcircle=1.5pt
+	\def\progressbar@progressbar{%
+		\progressbar@tmpcounta=\insertframenumber
+		\progressbar@tmpcountb=\inserttotalframenumber
+		\progressbar@tmpdim=\progressbar@pbwd
+		\multiply\progressbar@tmpdim by \progressbar@tmpcounta
+		\divide\progressbar@tmpdim by \progressbar@tmpcountb
+		\par%
+		\begin{tikzpicture}%
+			\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);
+			\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);
+		\end{tikzpicture}%
+  	}%
 	\hfill git.io/JqIBH\hfill|\hfill%
 	v. \href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\hfill|\hfill%
 	p.\xspace\insertframenumber/\inserttotalframenumber\hfill%
@@ -236,17 +255,20 @@
 \begin{frame}
 	\frametitle{Grüessech from the \uct-group}
 	\centering
-	\includegraphics[width=0.925\linewidth]{./images/team}
+	\includegraphics[width=0.9\linewidth]{./images/team}
 		\begin{columns}
 		\hfill\begin{column}{0.3\linewidth}
-			\centering David{\color{ubRed!50}.}Haberthuer{\color{ubRed!50}@unibe.ch}
+			\centering%
+			David{\color{ubRed!0.618}.}Haberthuer{\color{ubRed!0.618}@unibe.ch}%
 		\end{column}
 		\begin{column}{0.3\linewidth}
-			\centering Ruslan{\color{ubRed!50}.}Hlushchuk{\color{ubRed!50}@unibe.ch}
+			\centering%
+			Ruslan{\color{ubRed!0.618}.}Hlushchuk{\color{ubRed!0.618}@unibe.ch}%
 		\end{column}
 		\begin{column}{0.3\linewidth}
-			\centering Oleksiy{\color{ubRed!50}.}Khoma{\color{ubRed!50}@unibe.ch}
-		\end{column}\hfill
+			\centering%
+			Oleksiy{\color{ubRed!0.618}.}Khoma{\color{ubRed!0.618}@unibe.ch}%
+		\end{column}\hfill%
 	\end{columns}
 \end{frame}
 
@@ -277,100 +299,6 @@
 		\end{column}%
 	\end{columns}%
 \end{frame}
-
-% \begin{frame}
-% 	\frametitle{Overview}
-% 	\centering
-% 	\only<1>{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [grow=165] {node[concept] {Science}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [grow=225] {node[concept] {Vetsuisse}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [grow=345] {node[concept] {​Medicine}};%
-% 		\end{tikzpicture}%
-% 	}%
-% 	\only<2>{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}};%
-% 		\end{tikzpicture}%
-% 	}%
-% 	\only<3>{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}
-% 					child [concept color=ubRed,opaque,grow=-45] {node[concept] {{Institute of Ecology and Evolution}}}
-% 						child [concept color=ubRed,opaque,grow=15] {node[concept] {Space Research \& Planetary Sciences}}
-% 					}
-% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}
-% 						child [concept color=ubRed,opaque,grow=0] {node[concept] {Clinical radiology}}
-% 					}
-% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}
-% 						child [concept color=ubRed,opaque,grow=105] {node[concept] {Theodor Kocher Institute}}
-% 						child [concept color=ubRed,opaque,grow=140] {node[concept] {School of Dental Medicine}}
-% 						child [concept color=ubRed,opaque,grow=185] {node[concept] {Institute of Anatomy}}
-% 						child [concept color=ubRed,opaque,grow=225] {node[concept] {Klinik für Orthopädische Chirurgie \& Traumatologie}}
-% 					};%
-% 		\end{tikzpicture}%
-% 	}%
-% 	% Get emojis from https://unicode.org/emoji/charts/emoji-list.html
-% 	\only<4->{%
-% 		\begin{tikzpicture}%
-% 			\tikzset{small mindmap}%
-% 			\tikzset{level 1 concept/.append style={scale=0.9,level distance = 40mm,transform shape}}%
-% 			\tikzset{level 2 concept/.append style={scale=0.95,level distance = 25mm,transform shape}}%
-% 			\path[mindmap,every node/.style={concept,circular drop shadow},concept color=ubRed!50,semitransparent]%
-% 				node{unibe.ch\ Faculties}
-% 					child [grow=15] {node[concept] {Business, Economics ​and Social Sciences}}
-% 					child [grow=45] {node[concept] {​Law}}
-% 					child [grow=135] {node[concept] {​Human Sciences}}
-% 					child [grow=195] {node[concept] {​Humanities}}
-% 					child [grow=315] {node[concept] {​Theology}}
-% 					child [concept color=ubRed,opaque,grow=165] {node[concept] {Science}
-% 						child [concept color=ubRed,opaque,grow=-45] {node[concept] {\huge{\emoji{fish}}}}
-% 						child [concept color=ubRed,opaque,grow=15] {node[concept] {\huge{\emoji{comet}}}}
-% 						}
-% 					child [concept color=ubRed,opaque,grow=225] {node[concept] {Vetsuisse}
-% 						child [concept color=ubRed,opaque,grow=0] {node[concept] {\only<4>{\huge{\emoji{unicorn}}}\only<5>{\huge{\emoji{horse}}}}}
-% 						}
-% 					child [concept color=ubRed,opaque,grow=345] {node[concept] {​Medicine}
-% 						child [concept color=ubRed,opaque,grow=105] {node[concept] {\huge{\emoji{mouse-face}}}}
-% 						child [concept color=ubRed,opaque,grow=140] {node[concept] {\huge{\emoji{tooth}}}}
-% 						child [concept color=ubRed,opaque,grow=185] {node[concept] {Institute of Anatomy}}
-% 						child [concept color=ubRed,opaque,grow=225] {node[concept] {\huge\emoji{bone}}}
-% 						};%
-% 		\end{tikzpicture}%
-% 	}%
-% \end{frame}
 
 \begin{frame}{Contents}
 	\tableofcontents
@@ -465,9 +393,8 @@
 \end{frame}
 
 \subsection{History}
-\renewcommand{\imagewidth}{\columnwidth}
 \begin{frame}
-	\frametitle{History}
+	\frametitle{CT History}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\begin{itemize}
@@ -482,18 +409,19 @@
 		\end{column}
 		\begin{column}{0.49\linewidth}
 			\centering
+ 			\renewcommand{\imagewidth}{0.55\columnwidth}%
 			\only<1|handout:1>{%
-				\renewcommand{\imagewidth}{0.55\linewidth}% 1055/1476
 				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
-				\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
-				\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
+			 	\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
+			 	\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
-					% 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
-					%\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{160.00000004}{\milli\meter} (634px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+			 		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
+			 		% 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
+			 		%\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{160.00000004}{\milli\meter} (634px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
+			\renewcommand{\imagewidth}{\columnwidth}%
 			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
 			\includegraphics<2|handout:2>[width=\imagewidth]{./images/History_Generation1}%
 			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
@@ -504,9 +432,104 @@
 		\end{column}
 	\end{columns}
 	\note{I was unable to find conclusive information on the voxel size of the first CT image.
-		My head is approximately \SI{16}{\centi\meter} wide.
+		My head is approximately \qty{16}{\centi\meter} wide.
 		I counted 47 voxels across the head in the image.
-		This gives a voxel size of \SI{3.4}{\milli\meter} per voxel.}
+		This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\uct History}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\begin{itemize}
+				\item Scanning gemstones
+\cite{Lin2019}
+				X-ray computed tomography began to replace analog
+				focal plane tomography in the early 1970s [24.1, 2],
+				and high-resolution x-ray computed tomography (i. e.,
+				microtomography or microCT) was first reported in
+				the 1980s [24.3–11]. MicroCT systems were developed
+				in response to the need to nondestructively examine
+				materials at higher resolution than provided by con-
+				ventional CT imaging. Dr. Lee Feldkamp, for example,
+				developed one of the early laboratory microCT systems
+				by assembling a microfocus cone beam x-ray source,
+				specimen holder and stagers, and an image intensifier
+				at Ford Motor Company’s Scientific Research Labo-
+				ratory (Fig. 24.1a) to nondestructively detect damage
+				in ceramic manufactured automobile parts. His work
+				attracted the attention of investigators at Henry Ford
+				Hospital and the University of Michigan interested in
+				understanding the relationship between the microstruc-
+				ture and biomechanical function of trabecular (i. e.,
+				cancellous) bone as a critical step towards elucidating
+				mechanisms of skeletal fragility associated with aging
+
+				and osteoporotic fractures. The initial proof of con-
+				cept scans of bone samples were performed at Ford
+				and provided preliminary data for a National Institutes
+				of Health (NIH) grant awarded to Professor Steven
+				Goldstein to construct a microCT system at the Uni-
+				versity of Michigan and study bone structure-function
+				(Fig. 24.1b–d) [24.6, 9, 10].
+
+
+				Use of CT scanners in medical diagnostics, begin-
+				ning in the early 1970s, was revolutionary because it
+				vastly improved clinicians’ ability to obtain detailed
+
+				internal information about human anatomical struc-
+				tures compared to other available noninvasive imaging
+				modalities. CT introduced the capability of acquiring
+				a series of high-resolution virtual sections that could be
+				stacked to form 3-D volumetric data while other tech-
+				niques only provided 2-D or projection images. These
+				capabilities were extended to nonmedical use in the
+				lateia 1970s as industrial CT systems were developed
+				for applications involving detection of internal defects
+				in fabricated parts and equipment [24.16, 17].
+				While industrial CT systems were initially designed
+				with large-scale inorganic materials in mind, improved
+				technologies in the 1980s and 1990s allowed for higher-
+				resolution imaging of small-scale features. The ability
+				to provide nondestructive 3-D imaging at spatial reso-
+				lution of 100 m and higher has opened doors to many
+				engineering applications [24.4, 7, 8, 18, 19].
+				In materials science and mechanics, some of
+				these application areas include microcrack detection
+				and fatigue behavior, characterization and design of
+				porous structures, analysis of composite materials, and
+
+
+				fiber/fabric geometry quantification [24.3, 20–42]. Fig-
+				ure 24.3 provides a few examples of images from
+				microCT scans of inorganic materials and composites.
+				One of the primary initial applications of labora-
+				tory microCT systems was to provide nondestructive
+				imaging capabilities for quantifying the microstruc-
+				ture of organic materials, particularly mineralized bone
+				tissue and the relationships between the mechanical
+				behavior of bone to its structural and compositional
+				properties [24.5, 6, 10, 29, 43–67]. Since the 1990s, mi-
+				croCT techniques have also evolved to include imaging
+				of soft tissues and vasculature using radio-opaque con-
+				trast agents [24.68–73]. Figure 24.4 includes examples
+				from microCT imaging of such biological tissues.
+				An estimated 2500 microCT systems are in use
+				worldwide with currently over 1000 publications an-
+				nually [24.74]. The use of microCT has grown into
+				a mainstream imaging modality that is regarded as
+				the gold standard for producing quantitative measure-
+				ments in many application areas, particularly bone
+				morphometry.
+
+
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			includegraphics
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \subsection{Interaction of x-rays with matter}
@@ -764,21 +787,21 @@
 	\end{columns}%
 \end{frame}
 
-% \begin{frame}
-% 	\frametitle{Machinery}
-% 	\begin{columns}
-% 		\begin{column}{0.49\linewidth}
-% 			\centering
-% 			\input{animations/classicCT}
-% 		\end{column}
-% 		\begin{column}{0.49\linewidth}
-% 			\centering
-% 			\only<1>{\input{animations/microCT}}%
-% 			\only<2|handout:0>{\input{animations/microCT_lr}}%
-% 			\only<3|handout:0>{\input{animations/microCT_hr}}%
-% 		\end{column}
-% 	\end{columns}
-% \end{frame}
+\begin{frame}
+	\frametitle{Machinery}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\input{animations/classicCT}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\only<1>{\input{animations/microCT}}%
+			\only<2|handout:0>{\input{animations/microCT_lr}}%
+			\only<3|handout:0>{\input{animations/microCT_hr}}%
+		\end{column}
+	\end{columns}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Examples}
@@ -821,7 +844,7 @@
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
 			% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
 			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{2.9025}{\milli\meter} (387px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
 		\end{tikzpicture}%
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
@@ -1018,7 +1041,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
 					% 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
 					%\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{140.0}{\milli\meter} (2132px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 				}%
 			\only<2|handout:2>{%
@@ -1233,7 +1256,7 @@
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
 				% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
 				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{20.92}{\milli\meter} (1760px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 		\end{tikzpicture}%
 \end{frame}
 
@@ -1272,11 +1295,30 @@
 \end{frame}
 
 \subsection{Metal foam analysis}
-\renewcommand{\imageheight}{0.618\paperheight}%
+\renewcommand{\imagewidth}{0.55\linewidth}%
 \begin{frame}
 	\frametitle{Metal foam}
 	\centering
-	\includegraphics[height=\imageheight]{./images/can_eb03_hart_0_4um_al0_25_80kv_rec0000}%
+	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
+	\def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
+	\def\y{540}% scalebar-y at 90% of image height of 600px = 540
+	\only<1|handout:1>{
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0000}};
+			% 665.634px = 1.221973872mm -> 100px = 183.580um -> 272.360px = 500um, 54.472px = 100um
+			%\draw[|-|,blue,thick] (67,245) -- (732,237) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{1.221973872}{\milli\meter} (666px) TEMPORARY!};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+272.360,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+			\end{tikzpicture}%
+			}%
+	\only<2|handout:0>{
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{000}{134}%
+	}%
+	\only<3|handout:0>{
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{135}{155}%
+	}%
+	\only<4|handout:0>{
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{156}{239}%
+	}%
 	\source{Etienne Berner}{NanoElectroCatalysis Group}
 \end{frame}
 
@@ -1295,6 +1337,63 @@
 			\includegraphics[width=\imagewidth]{./images/cichlids/104016}%
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cichlids}
+	\begin{columns}
+		\begin{column}{0.495\linewidth}
+			\begin{itemize}
+				\item Institute of Ecology and Evolution
+				\begin{itemize}%
+					\item Ole Seehausen
+					\item Marcel Häsler
+					\item Mikki Law
+					\item Kassandra Ford
+				\end{itemize}
+				\item 150 Lake Victoria fishes\newline (+300 tomographic scans)
+				\item Morphological description of oral and pharyngeal jaws
+				\item PCA of skull structure
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.495\linewidth}
+			\lstinputlisting[linerange={2-4,7-7,15-18,28-29,31-31,36-37,42-42,45-45,55-56},linebackgroundcolor={\ifnum\value{lstnumber}=11\color{ubRed!0.618}\fi}]{./movies/EAWAG/161543/head_30um/proj/161543.log}%
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cichlids}
+		\centering
+		% # Fish 161543, Scan head_30um_rec was scanned with 30 um
+		% 161543 is 17 cm long
+		% For the visualisation, we binned the stack 2x, thus have a voxel size of 60 um
+		% The image is 1412 pixels high, so we used `python ~/P/Dev/latex/draw_a_scalebar.py -p 12 -i frames/video-0000.jpg -l 1412` to draw a scale bar
+		\renewcommand{\imagewidth}{0.7\linewidth}%
+		\only<1>{%
+		\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}% shadowed drawing https://tex.stackexchange.com/a/185853/828
+			\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
+			\def\x{633-50}% scalebar-x starting at golden ratio of image width of 1024px = 633
+			\def\y{540}% scalebar-y at 90% of image height of 600px = 540
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/161543/head_30um/frames/video-0000}};%
+				% 586.337px = 88.08mm -> 100px = 15022.075um -> 3.328px = 500um, 0.666px = 100um
+				%\draw[|-|,blue,thick] (955,6) -- (960,592) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{88.08}{\milli\meter} (586px) TEMPORARY!};%
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+332.8,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};%
+			\end{tikzpicture}%
+		}%
+		\only<2>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{000}{082}%
+		}%
+		\only<3>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{082}{162}%
+		}%
+		\only<4>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{122}{241}%
+		}%
+		\only<5>{%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{241}{320}%
+		}%
 \end{frame}
 
 \begin{frame}
@@ -1346,8 +1445,7 @@
 
 \begin{frame}[allowframebreaks]
 	\frametitle{References}
-	\mode<beamer>{\renewcommand*{\bibfont}{\tiny}}
-	\mode<handout>{\renewcommand*{\bibfont}{\scriptsize}}
+	\renewcommand*{\bibfont}{\scriptsize}
 	\setbeamertemplate{bibliography item}{\insertbiblabel}
 	\printbibliography
 \end{frame}
