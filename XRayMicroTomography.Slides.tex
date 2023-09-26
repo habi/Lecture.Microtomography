@@ -1268,30 +1268,11 @@
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.49\linewidth}
-			\includegraphics[width=\imagewidth]{./images/cichlids/104016}%
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Cichlids}
-	\begin{columns}
-		\begin{column}{0.495\linewidth}
-			\begin{itemize}
-				\item Institute of Ecology and Evolution
-				\begin{itemize}%
-					\item Ole Seehausen
-					\item Marcel Häsler
-					\item Mikki Law
-					\item Kassandra Ford
-				\end{itemize}
-				\item 150 Lake Victoria fishes\newline (+300 tomographic scans)
-				\item Morphological description of oral and pharyngeal jaws
-				\item PCA of skull structure
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.495\linewidth}
-			\lstinputlisting[linerange={2-4,7-7,15-18,28-29,31-31,36-37,42-42,45-45,55-56},linebackgroundcolor={\ifnum\value{lstnumber}=11\color{ubRed!61.8}\fi}]{./movies/EAWAG/161543/head_30um/proj/161543.log}%
+			\centering%
+			\includegraphics<1>[height=\imageheight]{./images/cichlids/104016}%
+			\only<2>{%
+			\lstinputlisting[linerange={2-4,7-7,15-18,28-29,31-31,36-37,42-42,45-45,55-56}]{./movies/EAWAG/161543/head_30um/proj/161543.log}%
+				}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -1341,7 +1322,7 @@
 	\includegraphics<6|handout:3>[height=\imageheight]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
 	\includegraphics<7|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
 	\includegraphics<8|handout:4>[height=\imageheight]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
-	\includegraphics<9>[height=\imageheight]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
+	\includegraphics<9|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
 	\only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
