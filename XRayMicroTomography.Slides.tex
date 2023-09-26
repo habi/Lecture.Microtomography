@@ -212,7 +212,7 @@
 % Move the text down a bit
 % THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
 % But otherwise, the images are not aligned nicely into the gray background rectangle
-%\addtobeamertemplate{frametitle}{}{\vspace*{0.75em}}
+\addtobeamertemplate{frametitle}{}{\vspace*{0.75em}}
 
 \begin{document}
 % No footline on the title page
@@ -233,7 +233,7 @@
 % 		\draw [|-|] (\textwidth,\cut) -- (\textwidth,\textheight-\cut);%
 % 	\end{tikzpicture}%
 % \end{frame}
-%
+
 % \begin{frame}[allowframebreaks,label=current]{Alignment frame II}
 % 	\lipsum[1-3]
 % \end{frame}
@@ -436,99 +436,19 @@
 		This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[allowframebreaks]
 	\frametitle{\uct History}
-	\begin{columns}
-		\begin{column}{0.49\linewidth}
 			\begin{itemize}
-				\item Scanning gemstones
-\cite{Lin2019}
-				X-ray computed tomography began to replace analog
-				focal plane tomography in the early 1970s [24.1, 2],
-				and high-resolution x-ray computed tomography (i. e.,
-				microtomography or microCT) was first reported in
-				the 1980s [24.3–11]. MicroCT systems were developed
-				in response to the need to nondestructively examine
-				materials at higher resolution than provided by con-
-				ventional CT imaging. Dr. Lee Feldkamp, for example,
-				developed one of the early laboratory microCT systems
-				by assembling a microfocus cone beam x-ray source,
-				specimen holder and stagers, and an image intensifier
-				at Ford Motor Company’s Scientific Research Labo-
-				ratory (Fig. 24.1a) to nondestructively detect damage
-				in ceramic manufactured automobile parts. His work
-				attracted the attention of investigators at Henry Ford
-				Hospital and the University of Michigan interested in
-				understanding the relationship between the microstruc-
-				ture and biomechanical function of trabecular (i. e.,
-				cancellous) bone as a critical step towards elucidating
-				mechanisms of skeletal fragility associated with aging
-
-				and osteoporotic fractures. The initial proof of con-
-				cept scans of bone samples were performed at Ford
-				and provided preliminary data for a National Institutes
-				of Health (NIH) grant awarded to Professor Steven
-				Goldstein to construct a microCT system at the Uni-
-				versity of Michigan and study bone structure-function
-				(Fig. 24.1b–d) [24.6, 9, 10].
-
-
-				Use of CT scanners in medical diagnostics, begin-
-				ning in the early 1970s, was revolutionary because it
-				vastly improved clinicians’ ability to obtain detailed
-
-				internal information about human anatomical struc-
-				tures compared to other available noninvasive imaging
-				modalities. CT introduced the capability of acquiring
-				a series of high-resolution virtual sections that could be
-				stacked to form 3-D volumetric data while other tech-
-				niques only provided 2-D or projection images. These
-				capabilities were extended to nonmedical use in the
-				lateia 1970s as industrial CT systems were developed
-				for applications involving detection of internal defects
-				in fabricated parts and equipment [24.16, 17].
-				While industrial CT systems were initially designed
-				with large-scale inorganic materials in mind, improved
-				technologies in the 1980s and 1990s allowed for higher-
-				resolution imaging of small-scale features. The ability
-				to provide nondestructive 3-D imaging at spatial reso-
-				lution of 100 m and higher has opened doors to many
-				engineering applications [24.4, 7, 8, 18, 19].
-				In materials science and mechanics, some of
-				these application areas include microcrack detection
-				and fatigue behavior, characterization and design of
-				porous structures, analysis of composite materials, and
-
-
-				fiber/fabric geometry quantification [24.3, 20–42]. Fig-
-				ure 24.3 provides a few examples of images from
-				microCT scans of inorganic materials and composites.
-				One of the primary initial applications of labora-
-				tory microCT systems was to provide nondestructive
-				imaging capabilities for quantifying the microstruc-
-				ture of organic materials, particularly mineralized bone
-				tissue and the relationships between the mechanical
-				behavior of bone to its structural and compositional
-				properties [24.5, 6, 10, 29, 43–67]. Since the 1990s, mi-
-				croCT techniques have also evolved to include imaging
-				of soft tissues and vasculature using radio-opaque con-
-				trast agents [24.68–73]. Figure 24.4 includes examples
-				from microCT imaging of such biological tissues.
-				An estimated 2500 microCT systems are in use
-				worldwide with currently over 1000 publications an-
-				nually [24.74]. The use of microCT has grown into
-				a mainstream imaging modality that is regarded as
-				the gold standard for producing quantitative measure-
-				ments in many application areas, particularly bone
-				morphometry.
-
-
+				\item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}
+				\item \uct was first reported in the 1980s, for scanning gemstones
+				\item Lee Feldkamp~\cite{Feldkamp1984} developed one of the early laboratory microCT systems by assembling a microfocus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to nondestructively detect damage in ceramic manufactured automobile parts
+				\item Met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}
+				\item CT scanners in medical diagnostics, beginning in the early 1970s
+				\item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment
+				\item Today: Nondestructive imaging for quantifying the microstructure of organic materials, particularly mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties
+				\item Since the 1990s, \uct includes imaging of soft tissues and vasculature using radio-opaque contrast agents
+				\item \(\approx\)2500 \uct systems are in use worldwide with over 1000 publications annually
 			\end{itemize}
-		\end{column}
-		\begin{column}{0.49\linewidth}
-			includegraphics
-		\end{column}
-	\end{columns}
 \end{frame}
 
 \subsection{Interaction of x-rays with matter}
@@ -895,6 +815,14 @@
 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
+\renewcommand{\imageheight}{0.618\paperheight}
+\begin{frame}
+	\frametitle{Projection acquisition}
+	\centering
+	\includegraphics[height=\imageheight]{./images/2214/ControlSoftware01}%
+\end{frame}
+
+\renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{Projections}
 	\centering
@@ -912,6 +840,13 @@
 		\item A (planar) x-ray detector collects (magnified) projection images.
 		\item The projections are recorded on disk
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reconstructions}
+	\centering
+	\includegraphics<1|handout:0>[height=\imageheight]{./images/2214/NRecon_proj}%
+	\includegraphics<2>[height=\imageheight]{./images/2214/NRecon_rec}%
 \end{frame}
 
 \begin{frame}
