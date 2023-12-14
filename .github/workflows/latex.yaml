@@ -2,7 +2,7 @@ name: Build LaTeX & upload handout
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,9 +10,8 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v1
     - name: Compile LaTeX document
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v3
       with:
-        args: -pdf -bibtex- -file-line-error -interaction=nonstopmode
         root_file: XRayMicroTomography.Handout.tex
     - name: Check pdf file
       run: |
@@ -20,13 +19,13 @@ jobs:
     - name: Upload
       run: |
         set -e
-
+        #
         # Configure git
         git config --global user.name "David Haberthür"
         git config --global user.email "email@davidhaberthuer.ch"
         # https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-494158599
         # git config --local lfs.https://github.com/.locksverify false
-        
+        #
         # Setup SSH
         # Don't forget to generate and upload the key first!
         # See https://www.reddit.com/r/LaTeX/comments/cudaqz/github_actions_to_compile_latex_documents/f0hz61t/ for details
@@ -35,13 +34,13 @@ jobs:
         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        
+        # 
         # Copy and commit the PDF file to the gh-pages branch
         git clone --depth=1 --branch gh-pages git@github.com:habi/lecture.microtomography.git pages
         cp -f XRayMicroTomography.Handout.pdf pages/XRayMicroTomography.Handout.pdf
         cd pages
         git add XRayMicroTomography.Handout.pdf
         git commit -m "Deploy new version of presentation handout to gh-pages branch"
-        git push        
+        git push
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
