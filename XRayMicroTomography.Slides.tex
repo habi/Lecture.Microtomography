@@ -1232,34 +1232,6 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Metal foam analysis}
-\renewcommand{\imagewidth}{0.55\linewidth}%
-\begin{frame}
-	\frametitle{Metal foam}
-	\centering
-	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
-	\def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
-	\def\y{540}% scalebar-y at 90% of image height of 600px = 540
-	\only<1|handout:1>{
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0000}};
-			% 665.634px = 1.221973872mm -> 100px = 183.580um -> 272.360px = 500um, 54.472px = 100um
-			%\draw[|-|,blue,thick] (67,245) -- (732,237) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{1.221973872}{\milli\meter} (666px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+272.360,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-			\end{tikzpicture}%
-			}%
-	\only<2|handout:0>{
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{000}{134}%
-	}%
-	\only<3|handout:0>{
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{135}{155}%
-	}%
-	\only<4|handout:0>{
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{156}{239}%
-	}%
-	\source{Etienne Berner}{NanoElectroCatalysis Group}
-\end{frame}
-
 \begin{frame}
 	\frametitle{Thanks!}
 	\begin{itemize}
