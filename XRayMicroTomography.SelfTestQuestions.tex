@@ -24,7 +24,7 @@
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\mct}{micro-CT\xspace}% make our life easier
 
-\title{Self-test questions for the \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2466944.html}{Lecture on X-ray microtomography}}
+\title{Self-test questions for the lecture on \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774509.html}{X-ray microtomography}}
 \author{David Haberthür}
 \date{\today\xspace| v. \gitAbbrevHash}
 
@@ -37,25 +37,30 @@
 
 \begin{questions}
 
-\question Describe what happens with the the X-rays once they are emitted from the X-ray source until they are converted to an image in the detector of a desktop \mct or large human CT.
-	Can you describe all interactions with the sample and what needs to happen until we get a projection image on disk?
+\question{}
+Describe what happens with the the X-rays once they are emitted from the X-ray source until they are converted to an image in the detector of a desktop \mct{} or large human CT.\@
+Can you describe all interactions with the sample and what needs to happen until we get a projection image on disk?
 
-\question In a desktop \uct the researcher can change the voxel size of the image acquisition nearly continuously (in a certain bandwidth).
-	This is not possible in a large CT which is used for imaging humans in a hospital.
-	Why is this so?
+\question{}
+In a desktop \mct{} the researcher can change the voxel size of the image acquisition nearly continuously (in a certain bandwidth).
+This is not possible in a large CT which is used for imaging humans in a hospital.
+Why is this so?
 
-\question A researcher wants to image a sample with approximately \SI{30}{\centi\meter} with a very small voxel size (let's say below \SI{1}{\micro\meter}).
-	Is this possible or not?
-	Explain your reasoning.
+\question{}
+A researcher wants to image a sample with approximately \qty{30}{\centi\meter} with a very small voxel size (let's say below \qty{1}{\micro\meter}).
+Is this possible or not?
+Explain your reasoning.
 
-\question Why are the blood vessels in \autoref{fig:1265} not visible, but are visible in \autoref{fig:5158}?
-	\emph{Mouse 1265} in \autoref{fig:1265} is the same sample you have seen throughout the lecture.
-	Compare the contrast of the skull bones, which is visible in both images; it looks quite equal.
-	Both samples have been scanned on different machines and with with settings that result in slightly different voxel sizes, but this is \emph{not} the cause\ldots
+\question{}
+Why can you not detect any blood vessels in \autoref{fig:1265}, while they are nicely visualized  in \autoref{fig:5158}?
+Different visualizations of \emph{Mouse 1265} in \autoref{fig:1265} have been shown throughout the lecture.
+The contrast in the skull looks quite equal in both images.
+Both samples have been scanned on different machines, with slighly different settings, resulting in a different voxel sizes.
+The different voxel size is not the cause, though.
 
 \begin{figure}[h]
 	\centering%
-	\begin{subfigure}{0.495\textwidth}%
+	\begin{subfigure}[t]{0.5\linewidth}%
 		\pgfmathsetlength{\imagewidth}{\imsize}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
@@ -63,16 +68,16 @@
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
 			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
 		\end{tikzpicture}%
-		\caption{\emph{Mouse 1265}, which you might remember from the visualization on slide 4.
-			Scanned on a SkyScan1172 at an isotropic voxel size of \SI{7.96}{\micro\meter}.
-			No blood vessels are visible, neither in the brain nor in the mandibles.}
-		\label{fig:1265}
+		\caption{\emph{Mouse 1265}.
+			Scanned on a SkyScan1172 at an isotropic voxel size of \qty{7.96}{\micro\meter}.
+			No blood vessels are visible, neither in the brain nor in the mandibles.}%
+		\label{fig:1265}%
 	\end{subfigure}%
 	\hfill%
-	\begin{subfigure}{0.495\textwidth}%
+	\begin{subfigure}[t]{0.5\linewidth}%
 		\pgfmathsetlength{\imagewidth}{\imsize}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/2358}%
 		\def\x{1457}% scalebar-x starting at golden ratio of image width of 2358px = 1457
@@ -80,16 +85,16 @@
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse5158_resliced_MIP500um}};
 			% 2358.000px = 24.759mm -> 100px = 1050.000um -> 47.619px = 500um, 9.524px = 100um
-			%\draw[|-|,blue,thick] (0,786) -- (2358,786) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{24.759}{\milli\meter} (2358px) TEMPORARY!};
-			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+476.19,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+			%\draw[|-|,blue,thick] (0,786) -- (2358,786) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{24.759}{\milli\meter} (2358px) TEMPORARY!};
+			\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+476.19,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
 		\end{tikzpicture}%
-		\caption{Mouse 5158.
-		Scanned on a SkyScan1272 at an isotropic voxel size of \SI{10.5}{\micro\meter}.
+		\caption{\emph{Mouse 5158}.
+		Scanned on a SkyScan1272 at an isotropic voxel size of \qty{10.5}{\micro\meter}.
 		The blood vessels are nicely visible.
-		The bright, elongated structure at the top of the skull is related to the experiment that was performed with these mice.}
-		\label{fig:5158}
+		The bright, elongated structure at the top of the skull is related to the experiment that was performed with these mice, but also not the cause.}%
+		\label{fig:5158}%
 	\end{subfigure}
-	\caption{\href{https://en.wikipedia.org/wiki/Maximum_intensity_projection}{MIP}s from a region of approximately \SI{500}{\micro\meter} around the sagittal centerline of two different mouse heads, scanned on two different desktop \uct scanners.}
+	\caption{\href{https://en.wikipedia.org/wiki/Maximum_intensity_projection}{MIP}s from a region of approximately \qty{500}{\micro\meter} around the sagittal centerline of two different mouse heads, scanned on two different desktop \mct{} scanners.}
 \end{figure}
 
 \end{questions}
