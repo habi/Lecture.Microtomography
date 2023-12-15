@@ -13,8 +13,8 @@
 
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{333}% use only every nth frame for the animations
-\newcommand{\imageheight}{\linewidth}% set global image width
-\newcommand{\imagewidth}{0.618\paperheight}% set global image height
+\newcommand{\imagewidth}{\columnwidth}% set global image width
+\newcommand{\imageheight}{0.618\paperheight}% set global image heidht
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
@@ -135,7 +135,7 @@
 \newdimen\progressbar@pbwd%progressbar width
 \newdimen\progressbar@rcircle% radius for the circle
 \newdimen\progressbar@tmpdim% auxiliary dimension
-\progressbar@pbwd=0.618\linewidth%
+\progressbar@pbwd=0.618\paperwidth%
 \progressbar@rcircle=1.5pt%
 \def\progressbar@progressbar{%
 	\progressbar@tmpcounta=\insertframenumber%
@@ -233,7 +233,7 @@
 % 		\draw [|-|] (\textwidth,\cut) -- (\textwidth,\textheight-\cut);%
 % 	\end{tikzpicture}%
 % \end{frame}
-
+%
 % \begin{frame}[allowframebreaks,label=current]{Alignment frame II}
 % 	\lipsum[1-3]
 % \end{frame}
@@ -254,27 +254,28 @@
 \begin{frame}
 	\frametitle{Grüessech from the \uct-group}
 	\centering
-	\includegraphics[width=0.9\linewidth]{./images/team}
+	\includegraphics[height=\imageheight]{./images/team}
 		\begin{columns}
-		\hfill\begin{column}{0.3\linewidth}
+		\hfill\begin{column}{0.33\textwidth}
 			\centering%
 			David{\color{ubRed!61.8}.}Haberthuer{\color{ubRed!61.8}@unibe.ch}%
 		\end{column}
-		\begin{column}{0.3\linewidth}
+		\begin{column}{0.33\textwidth}
 			\centering%
 			Ruslan{\color{ubRed!61.8}.}Hlushchuk{\color{ubRed!61.8}@unibe.ch}%
 		\end{column}
-		\begin{column}{0.3\linewidth}
+		\begin{column}{0.33\textwidth}
 			\centering%
 			Oleksiy{\color{ubRed!61.8}.}Khoma{\color{ubRed!61.8}@unibe.ch}%
 		\end{column}\hfill%
 	\end{columns}
 \end{frame}
 
+\renewcommand{\imagewidth}{\columnwidth}
 \begin{frame}
 	\frametitle{\uct-group}
 	\begin{columns}
-		\begin{column}{0.61\linewidth}
+		\begin{column}{0.62\textwidth}
 			\begin{itemize}
 				\item microangioCT~\cite{Hlushchuk2018}
 				\begin{itemize}
@@ -287,7 +288,7 @@
 				\item Automate \emph{all} the things!~\cite{Haberthuer2021, Haberthuer2023}
 			\end{itemize}
 		\end{column}%
-		\begin{column}{0.37\linewidth}%
+		\begin{column}{0.38\textwidth}%
 			\centering%
 			\includegraphics<1|handout:0>[width=\imagewidth]{./images/1172}%
 			\only<1|handout:0>{\source{brukersupport.com}{}}%
@@ -320,14 +321,16 @@
 \begin{frame}
 	\frametitle{Biomedical imaging}%
 	\begin{columns}%
-		\begin{column}{0.4\linewidth}%
+		% https://de.wikipedia.org/wiki/Goldener_Schnitt#/media/Datei:Golden_ratio_line_percentages.svg
+		% 61.8% vs. 38.2%
+		\begin{column}{0.62\textwidth}%
 			\begin{itemize}%
 				\item<1-|handout:1-> Medical research%
 				\item<1-|handout:1-> Non-destructive insights into the samples%
 				\item<2-|handout:1-> (Small) Biological samples%
 			\end{itemize}%
 		\end{column}%
-		\begin{column}{0.6\linewidth}%
+		\begin{column}{0.38\textwidth}%%
 			\centering%
 			\only<1-2|handout:1>{%
 				\includegraphics[height=\imageheight]{./images/Sagittal_brain_MRI}%
@@ -378,7 +381,7 @@
 	\frametitle{CT-Scanner}
 	\centering
 	\mode<beamer>{%
-		\animategraphics[loop,autoplay,height=0.618\textheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
+		\animategraphics[loop,autoplay,height=\imageheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\mode<handout>{%
@@ -395,7 +398,7 @@
 \begin{frame}
 	\frametitle{CT History}
 	\begin{columns}
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\textwidth}
 			\begin{itemize}
 				\item Long history
 				\begin{itemize}
@@ -406,7 +409,7 @@
 				\item<2-|handout:2-> CT scanner generations: First\uncover<3-|handout:3->{, second}\uncover<4|handout:4->{ and third}%
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\textwidth}
 			\centering
  			\renewcommand{\imagewidth}{0.55\columnwidth}%
 			\only<1|handout:1>{%
@@ -422,11 +425,11 @@
 			}%
 			\renewcommand{\imagewidth}{\columnwidth}%
 			\only<1|handout:1>{\sourcecite{Beckmann2006}{Figure 5}}%
-			\includegraphics<2|handout:2>[width=\imagewidth]{./images/History_Generation1}%
+			\includegraphics<2|handout:2>[height=\imageheight]{./images/History_Generation1}%
 			\only<2|handout:2>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-			\includegraphics<3|handout:3>[width=\imagewidth]{./images/History_Generation2}%
+			\includegraphics<3|handout:3>[height=\imageheight]{./images/History_Generation2}%
 			\only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-			\includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation3}%
+			\includegraphics<4|handout:4>[height=\imageheight]{./images/History_Generation3}%
 			\only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.14}}%
 		\end{column}
 	\end{columns}
@@ -511,7 +514,7 @@
 \begin{frame}
 	\frametitle{Why \uct?}
 	\begin{columns}
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\textwidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4|handout:1-4>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
@@ -551,7 +554,7 @@
 			}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}%
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\textwidth}
 			\only<1|handout:1>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
@@ -648,7 +651,7 @@
 \begin{frame}
 	\frametitle{Machinery}
 	\begin{columns}%
-		\begin{column}{0.45\linewidth}%
+		\begin{column}{0.5\textwidth}%
 			\begin{itemize}%
 				\item<1-> Hospital CT%
 				\begin{itemize}%
@@ -664,11 +667,11 @@
 				\end{itemize}%
 			\end{itemize}%
 		\end{column}%
-		\begin{column}{0.55\linewidth}%
+		\begin{column}{0.5\textwidth}%
 			\centering%
 			\includegraphics<1|handout:1>[height=\imageheight]{./images/24324062640_751e011e1a_o}%
 			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}%
-			\includegraphics<2|handout:2>[width=\imageheight]{./images/9459311320_516179207a_o}%
+			\includegraphics<2|handout:2>[height=\imageheight]{./images/9459311320_516179207a_o}%
 			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}%
 			\includegraphics<3|handout:3>[width=\imagewidth]{./images/1272}%
 			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}%
@@ -686,11 +689,11 @@
 	MULTISLICE CT -> HOSPITAL
 }
 
-\renewcommand{\imagewidth}{\linewidth}
+\renewcommand{\imagewidth}{\textwidth}
 \begin{frame}
 	\frametitle{What is happening?}
 	\begin{columns}%
-		\begin{column}{0.49\linewidth}%
+		\begin{column}{0.5\textwidth}%
 			No matter what kind of machine, the basic principle is always the same
 			\begin{itemize}
 				\item an x-ray source
@@ -698,7 +701,7 @@
 				\item a detector
 			\end{itemize}
 		\end{column}%
-		\begin{column}{0.49\linewidth}%
+		\begin{column}{0.5\textwidth}%
 			\centering%
 			\includegraphics[width=\imagewidth]{./images/3D_Computed_Tomography}%
 			\source{w.wiki/7g3}{\ccbysa}%
@@ -709,11 +712,11 @@
 \begin{frame}
 	\frametitle{Machinery}
 	\begin{columns}
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\textwidth}
 			\centering
 			\input{animations/classicCT}
 		\end{column}
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\textwidth}
 			\centering
 			\only<1>{\input{animations/microCT}}%
 			\only<2|handout:0>{\input{animations/microCT_lr}}%
@@ -726,7 +729,7 @@
 	\frametitle{Examples}
 	\centering%
 	\only<1|handout:1>{%
-		\pgfmathsetlength{\imagewidth}{0.9\linewidth}%
+		\pgfmathsetlength{\imagewidth}{0.9\textwidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -737,7 +740,7 @@
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
 		\end{tikzpicture}%
 	}%
-	\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
+	\pgfmathsetlength{\imagewidth}{0.5\textwidth}%
 	\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
 	\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
 	\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
@@ -755,7 +758,7 @@
 		}%
 	\end{tikzpicture}%
 	\only<4|handout:3>{%
-		\pgfmathsetlength{\imagewidth}{\linewidth}%
+		\pgfmathsetlength{\imagewidth}{\textwidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/387}%
 		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
 		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
@@ -772,7 +775,7 @@
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<6|handout:4>{%
-		\pgfmathsetlength{\imagewidth}{0.8\linewidth}%
+		\pgfmathsetlength{\imagewidth}{0.8\textwidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
 		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
 		\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
@@ -784,7 +787,7 @@
 		\end{tikzpicture}%
 	}%
 	\only<7|handout:5>{%
-		\pgfmathsetlength{\imagewidth}{\linewidth}%
+		\pgfmathsetlength{\imagewidth}{\textwidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
 		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
 		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
@@ -956,12 +959,12 @@
 \end{frame}
 
 \subsubsection{Materials \& Methods}
-\renewcommand{\imagewidth}{0.75\linewidth}
+\renewcommand{\imagewidth}{0.75\textwidth}
 \renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{How?}
 	\begin{columns}
-		\begin{column}{0.5\linewidth}
+		\begin{column}{0.5\textwidth}
 			\begin{itemize}
 				\item<1-> 104 extracted human permanent mandibular canines
 				\item<2-> \uct{} imaging
@@ -969,7 +972,7 @@
 				\item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg{} you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.5\linewidth}
+		\begin{column}{0.5\textwidth}
 			\only<1|handout:1>{%
 				\centering%
 				\pgfmathsetlength{\imagescale}{\imagewidth/2716}%
@@ -999,7 +1002,7 @@
 					\item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
 				\end{itemize}
 					}%
-			\renewcommand{\imagewidth}{\linewidth}%
+			\renewcommand{\imagewidth}{\textwidth}%
 			\only<5|handout:5>{%
 				\centering%
 				\includegraphics[width=\imagewidth]{./images/zmk/briseno}%
@@ -1013,11 +1016,11 @@
 			\only<7|handout:7>{%
 				\centering%
 				\mode<beamer>{%
-					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
+					\animategraphics[loop,autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
 					\source{gph.is/2nqkple}{}%
 					}%
 				\mode<handout>{%
-					\includegraphics[width=\linewidth]{./movies/coder/coder-65}%
+					\includegraphics[width=\imagewidth]{./movies/coder/coder-65}%
 					\source{gph.is/2nqkple}{}%
 					}%
 				}%
@@ -1038,17 +1041,17 @@
 	\includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \end{frame}
 
-\renewcommand{\imagewidth}{\linewidth}
+\renewcommand{\imagewidth}{\textwidth}
 \begin{frame}
 	\frametitle{Dataset cropping}
 	\begin{columns}
-		\begin{column}{0.382\linewidth}
+		\begin{column}{0.38\textwidth}
 			\begin{itemize}
 				\item Full datasets: \qty{326}{\giga\byte}%
 				\item<2> Cropped datasets: \qty{115}{\giga\byte}%
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.618\linewidth}
+		\begin{column}{0.62\textwidth}
 			\centering%
 			\includegraphics<1|handout:1>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Original.png}%
 			\includegraphics<2|handout:2>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Cropped.png}%
@@ -1088,7 +1091,7 @@
 		\includegraphics[height=\imageheight]{./images/zmk/tooth045/Tooth045.ExtractedSlices.png}%
 		}%
 	\only<2|handout:2>{%
-		\includegraphics[width=\linewidth]{./images/zmk/tooth045/Tooth045.Briseno.png}%
+		\includegraphics[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Briseno.png}%
 		}%
 \end{frame}
 
@@ -1186,7 +1189,7 @@
 		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0752}%
 		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
 		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
-		\renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
+		\renewcommand{\imagewidth}{0.14\textwidth}% 720/2008
 		\pgfmathsetlength{\imagescale}{\imagewidth/720}%
 		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
