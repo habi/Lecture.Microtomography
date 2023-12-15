@@ -306,37 +306,46 @@
 
 \section{Overview}
 \begin{frame}
-	\frametitle{\uct}
-	\begin{itemize}
-		\item Dense and/or non‐transparent samples
-		\item Calibrated \& isotropic 3D images at micron resolutions
-		\item Covers a very large range of sample sizes
-		\item Gives information at different length scales
-	 	\item Nondestructive imaging, thus compatible with routine sample preparation.\newline
-			Enables correlative imaging pipelines, scanning of museum \& collection material
-	\end{itemize}
-\end{frame}
-
-\renewcommand{\imageheight}{0.65\textheight}
-\begin{frame}
-	\frametitle{Biomedical imaging}%
+	\frametitle<1>{Computed tomography}
+	\frametitle<2->{\uct{} imaging}
 	\begin{columns}%
 		% https://de.wikipedia.org/wiki/Goldener_Schnitt#/media/Datei:Golden_ratio_line_percentages.svg
 		% 61.8% vs. 38.2%
 		\begin{column}{0.62\textwidth}%
 			\begin{itemize}%
-				\item<1-|handout:1-> Medical research%
-				\item<1-|handout:1-> Non-destructive insights into the samples%
-				\item<2-|handout:1-> (Small) Biological samples%
+				\item<1-|handout:1> Allows for imaging dense and non‐transparent samples
+				\item<1-|handout:1> Non-destructive imaging\only<2>{, thus compatible with routine sample preparation}
+				\item<1-|handout:1> Results in three-dimensional images \only<2>{with \unit{\micro\meter} resolution}
+				\item<1-|handout:1> Covers a very large range of sample sizes
+				\item<2-|handout:2> (Small) biological samples%
+				\item<2-|handout:2> Enables correlative imaging pipelines, scanning of precious biological samples, as well as museum \& collection material
 			\end{itemize}%
 		\end{column}%
 		\begin{column}{0.38\textwidth}%%
 			\centering%
-			\only<1-2|handout:1>{%
-				\includegraphics[height=\imageheight]{./images/Sagittal_brain_MRI}%
-				\source{w.wiki/7g4}{\ccbysa}%
+			\only<1|handout:1>{%
+			\pgfmathsetlength{\imagescale}{\imagewidth/512}%
+			\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
+			\def\y{361}% scalebar-y at 90% of image height of 401px = 361
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
+				% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+				%\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{250.0096}{\milli\meter} (512px) TEMPORARY!};
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
+			\end{tikzpicture}%
+			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}%
 			}%
-			\only<3|handout:2>{%
+			\only<2-|handout:2>{%
+			\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+			\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+			\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+				% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+			\end{tikzpicture}%
+			}%
+			\only<3|handout:0>{%
 				\begin{tikzpicture}[remember picture,overlay]%
 					\node at (current page.center){%
 						\mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
@@ -629,7 +638,7 @@
 			}%
 		\end{column}
 	\end{columns}
-	\note<1|handout:1>{The human head scan was downloaded from the \href{https://www.cancerimagingarchive.net}{Cancer Imaging Archive}.
+	\note<1|handout:1>{The human head scan was downloaded from the \href{https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509}{Cancer Imaging Archive}.
 		We loaded the DICOM slices in Fiji, resliced it to show it from the side and then used to generate an MIP.
 		According to the DICOM tags, the voxel size is \qtyproduct{0.4883 x 0.4883 x 0.625}{\milli\meter\cubed}, the image size is \numproduct{512 x 512} pixels.
 		The mouse head is the same as shown in the early animation.
