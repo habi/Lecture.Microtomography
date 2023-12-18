@@ -127,7 +127,7 @@
 	}%
 
 % Define a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
-\makeatletter
+\makeatletter%
 \def\progressbar@progressbar{}% the progress bar
 \newcount\progressbar@tmpcounta% auxiliary counter
 \newcount\progressbar@tmpcountb% auxiliary counter
@@ -135,7 +135,7 @@
 \newdimen\progressbar@pbwd%progressbar width
 \newdimen\progressbar@rcircle% radius for the circle
 \newdimen\progressbar@tmpdim% auxiliary dimension
-\progressbar@pbwd=0.618\paperwidth%
+\progressbar@pbwd=0.75\paperwidth%
 \progressbar@rcircle=1.5pt%
 \def\progressbar@progressbar{%
 	\progressbar@tmpcounta=\insertframenumber%
@@ -154,15 +154,14 @@
 			}%
 \mode<handout>{Handout for git.io/fjpP7, created on \DTMnow\xspace| p.\xspace\insertframenumber/\inserttotalframenumber}%
 		\vspace{0.5ex}%
-}
+}%
 \addtobeamertemplate{footline}{}%
 {%
-
 	\begin{beamercolorbox}[wd=\paperwidth,center]{white}%
 		\progressbar@progressbar%
 	\end{beamercolorbox}%
 }%
-\makeatother
+\makeatother%
 
 % Format bibliography for beamer
 % http://tex.stackexchange.com/a/10686/828
@@ -176,22 +175,10 @@
 	\clearname{editor}
 	\clearfield{issn}
 	\clearfield{year}
-}
+}%
 % No parentheses around the (now empty) year: https://tex.stackexchange.com/a/147537/828
 \renewcommand{\bibopenparen}{\addcomma\addspace}
 \renewcommand{\bibcloseparen}{\addcomma\addspace}
-
-% Redefine \footcite based on https://tex.stackexchange.com/a/453528/828
-\DeclareCiteCommand{\footcite}[\mkbibfootnote]{%
-	\usebibmacro{prenote}}{%
-		\printnames[family-given]{labelname}%
-		\newunit%
-		\printfield{doi}%
-		\newunit%
-		\printlabeldateextra%
-	}{\addsemicolon\space}{%
-		\usebibmacro{postnote}%
-	}%
 
 % References as footnotes at the bottom of the slides
 % https://tex.stackexchange.com/a/368760/828
@@ -208,11 +195,6 @@
 		\end{frame}%
 	}%
 }
-
-% Move the text down a bit
-% THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
-% But otherwise, the images are not aligned nicely into the gray background rectangle
-\addtobeamertemplate{frametitle}{}{\vspace*{0.75em}}
 
 \begin{document}
 % No footline on the title page
