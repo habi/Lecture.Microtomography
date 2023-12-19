@@ -1190,36 +1190,11 @@
 		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
-				% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
-				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
-				\draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
+			% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
+			%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
 		\end{tikzpicture}%
-\end{frame}
-
-\begin{frame}
-	\frametitle{Analysis of the physiological foramen geometry}
-	\centering
-	\only<1|handout:1>{%
-		\includegraphics[height=\imageheight]{./images/zmk/foramen}%
-		\sourcecite{Wolf2017}{Fig.~1}%
-		}%
-	\only<2|handout:0>{%
-		\mode<beamer>{%
-			\animategraphics[palindrome,autoplay,height=\imageheight,every=\everyframe]{24}{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_}{100}{199}%
-			}%
-		\mode<handout>{%
-			\includegraphics[height=\imageheight]{./movies/tooth045/edt-axial/Tooth045_EDT_Axial_151}%
-			}%
-		}%
-	\only<3|handout:2>{%
-		\mode<beamer>{%
-			\animategraphics[palindrome,autoplay,height=\imageheight,every=\everyframe]{24}{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_}{123}{213}%
-			}%
-		\mode<handout>{%
-			\includegraphics[height=\imageheight]{./movies/tooth045/edt-coronal/Tooth045_EDT_Coronal_139}%
-			}%
-		}%
 \end{frame}
 
 \begin{frame}
