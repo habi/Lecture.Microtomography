@@ -12,7 +12,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333}% use only every nth frame for the animations
+\newcommand{\everyframe}{1}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\columnwidth}% set global image width
 \newcommand{\imageheight}{0.618\paperheight}% set global image heidht
 \newlength\imagescale% needed for scalebars
@@ -44,7 +44,7 @@
 	per-symbol=/]{siunitx}
 \usepackage[absolute,overlay]{textpos}
 \usepackage[showseconds=false,showzone=false]{datetime2}
-\usepackage[missing=main]{gitinfo2}
+\usepackage[local]{gitinfo2}
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
@@ -154,7 +154,7 @@
 			}%
 \mode<handout>{%
 	Handout for \href{https://github.com/habi/Lecture.Microtomography}{git.io/fjpP7}\xspace|%
-	\xspace Generated on \DTMnow, from v.~\href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|%
+	\xspace Generated on \DTMnow, from version \href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|%
 	\xspace Page\xspace\insertframenumber/\inserttotalframenumber%
 	}%
 \vspace{0.5ex}%
