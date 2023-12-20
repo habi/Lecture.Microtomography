@@ -396,13 +396,14 @@
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
 			\begin{itemize}
-				\item Long history
+				\item \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
+				\item 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
+				\item<2-|handout:2-> CT scanner generations
 				\begin{itemize}
-					\item \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
-					\item 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
-					\item Nice overview by \citeauthor{Hsieh2003}~\cite{Hsieh2003}%
-				\end{itemize}%
-				\item<2-|handout:2-> CT scanner generations: First\uncover<3-|handout:3->{, second}\uncover<4|handout:4->{ and third}%
+					\item<2-|handout:2-> First generation
+					\item<3-|handout:3-> Second generation
+					\item<4|handout:4> Third generation
+				\end{itemize}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.5\textwidth}
@@ -439,13 +440,17 @@
 	\frametitle{\uct{} History}
 			\begin{itemize}
 				\item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}
+				\item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment
 				\item \uct{} was first reported in the 1980s, for scanning gemstones
 				\item Lee Feldkamp~\cite{Feldkamp1984} developed one of the early laboratory microCT systems by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to nondestructively detect damage in ceramic manufactured automobile parts
-				\item Met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}
-				\item CT scanners in medical diagnostics, beginning in the early 1970s
-				\item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment
-				\item Today: Nondestructive imaging for quantifying the microstructure of organic materials, particularly mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties
-				\item Since the 1990s, \uct{} includes imaging of soft tissues and vasculature using radio-opaque contrast agents
+				\item Feldkamp met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}
+				\item Today: Nondestructive imaging for quantifying the (micros)tructure of organic materials
+				\begin{\begin{itemize}
+					\item Mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties
+					\item Teeth and their internal details
+					\item Soft tissues and vasculature using radio-opaque contrast agents
+					\item Characterization of anatomical details in high resolution
+				\end{itemize}}
 				\item \(\approx\)2500 \uct{} systems are in use worldwide with over 1000 publications annually
 			\end{itemize}
 \end{frame}
@@ -867,7 +872,7 @@
 		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
 		\item Radon Transformation
 		\item Filtered back projection
-		\item Fan beam reconstruction
+		\item Cone beam reconstruction~\cite{Feldkamp1984}
 		\item Corrections (beam hardening, etc.)
 		\item Writing to stack
 	\end{itemize}
@@ -926,8 +931,8 @@
 		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
 		\item Two publications:%
 		\begin{itemize}%
-			\item \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
-			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
+			\item \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{doi.org/gjpw2d}%
+			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{doi.org/g7r8}%
 		\end{itemize}%
 	\end{itemize}%
 	\begin{tikzpicture}[remember picture,overlay]%
