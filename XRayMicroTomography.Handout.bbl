@@ -1231,41 +1231,6 @@
       \field{pages}{135}
       \range{pages}{1}
     \endentry
-    \entry{Hsieh2003}{book}{}
-      \name{author}{1}{}{%
-        {{hash=04723f860550f84b6efa7cbd0264669a}{%
-           family={Hsieh},
-           familyi={H\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Society of Photo Optical}%
-      }
-      \strng{namehash}{04723f860550f84b6efa7cbd0264669a}
-      \strng{fullhash}{04723f860550f84b6efa7cbd0264669a}
-      \strng{bibnamehash}{04723f860550f84b6efa7cbd0264669a}
-      \strng{authorbibnamehash}{04723f860550f84b6efa7cbd0264669a}
-      \strng{authornamehash}{04723f860550f84b6efa7cbd0264669a}
-      \strng{authorfullhash}{04723f860550f84b6efa7cbd0264669a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Computed Tomography: Principles, Design, Artifacts, and Recent Advances}
-      \field{urlday}{4}
-      \field{urlmonth}{8}
-      \field{urlyear}{2011}
-      \field{volume}{114}
-      \field{year}{2003}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://books.google.com/books?id=JX__lLLXFHkC
-      \endverb
-      \verb{url}
-      \verb http://books.google.com/books?id=JX__lLLXFHkC
-      \endverb
-    \endentry
     \entry{Beckmann2006}{article}{}
       \name{author}{1}{}{%
         {{hash=f11518cd561a6dbc0e299636fa234110}{%
@@ -1312,6 +1277,41 @@
       \endverb
       \keyw{20th Century,Animals,Computer-Assisted,Equipment Design,History,Humans,Image Interpretation,Swine,Tomography,Tomography Scanners,X-Ray Computed,X-Ray Computed: history,X-Ray Computed: instrumentation}
     \endentry
+    \entry{Hsieh2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=04723f860550f84b6efa7cbd0264669a}{%
+           family={Hsieh},
+           familyi={H\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society of Photo Optical}%
+      }
+      \strng{namehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{fullhash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{bibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorbibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authornamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorfullhash}{04723f860550f84b6efa7cbd0264669a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computed Tomography: Principles, Design, Artifacts, and Recent Advances}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2011}
+      \field{volume}{114}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://books.google.com/books?id=JX__lLLXFHkC
+      \endverb
+      \verb{url}
+      \verb http://books.google.com/books?id=JX__lLLXFHkC
+      \endverb
+    \endentry
     \entry{Lin2019}{incollection}{}
       \name{author}{3}{}{%
         {{hash=f7c9150d415d9b0dcd1102ab00083ba2}{%
@@ -1357,8 +1357,8 @@
       \strng{editorbibnamehash}{1d8725e48e22e21f13d76a994ffe7ade}
       \strng{editornamehash}{1d8725e48e22e21f13d76a994ffe7ade}
       \strng{editorfullhash}{b0eff2eb615cd046621647006d3c390e}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Since Röntgen discovered x-rays at the end of the nineteenth century and established their usefulness for medical diagnostics imaging, many technological advances have allowed for x-rays to be employed in even more powerful ways. This includes utilizing x-rays for tomographic imaging and quantification.}
@@ -1409,8 +1409,8 @@
       \strng{authornamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
       \strng{authorfullhash}{f635c34fd0e821789bb7e8d8496b34dc}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A convolution-backprojection formula is deduced for direct reconstruction of a three-dimensional density function from a set of two-dimensional projections. The formula is approximate but has useful properties, including errors that are relatively small in many practical instances and a form that leads to convenient computation. It reduces to the standard fan-beam formula in the plane that is perpendicular to the axis of rotation and contains the point source. The algorithm is applied to a mathematical phantom as an example of its performance.}
@@ -1481,8 +1481,8 @@
       \strng{authornamehash}{6bf61e7619c1b7debf80be6a44440d8a}
       \strng{authorfullhash}{1dfdfebea57e1009df80813781d1c3d4}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Calcified Tissue International}
@@ -1640,8 +1640,8 @@
       \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
@@ -1770,8 +1770,8 @@
       \strng{editorbibnamehash}{516f53de51f9bc1732acd69795bc77d2}
       \strng{editornamehash}{516f53de51f9bc1732acd69795bc77d2}
       \strng{editorfullhash}{f4e92088970444c9751575b55a2b5816}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Positioning and Power in Academic Publishing: Players, Agents and Agendas}
@@ -1899,8 +1899,8 @@
       \strng{authorbibnamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
       \strng{authornamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
       \strng{authorfullhash}{cbec28ac1f2fccd6b9b619b97b15669a}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Introduction The objective of this study was to propose a root canal configuration description method and to investigate the root canal system morphology of the maxillary first molar by means of micro-computed tomographic imaging. Methods The root canal configuration, foramina, and accessory canal frequency of 179 maxillary first molars were investigated by means of micro-computed tomographic imaging and 3-dimensional software imaging. The root canal configuration and main foramina number are described from coronal to apical with a 4-digit system. Results The most frequent root canal configurations were 1-1-1/1 (45.8\%), 2-2-2/2 (25.1\%) and 2-2-1/1 (10.1\%) in mesiobuccal roots and 1-1-1/1 in distobuccal (97.2\%) and palatal (98.9\%) roots. The first mesiobuccal (MB1) root canal had 1 accessory canal in 26.3\% of the teeth, the distobuccal root canal had 12.3\%, and the palatal root canal had 9.5\%; in the second mesiobuccal root canal, there was rarely 1 accessory canal. There was 1 accessory canal in 26.3\%, 12.3\%, and 9.5\% in the MB1, distobuccal, and palatal root canals, respectively. The MB1, distobuccal, and palatal root canals had 1 main foramen. The MB2 had 1 main foramen in 39.0\% of the teeth and no main foramen in 61.0\%. Conclusions The root canal configuration of maxillary first molars is quite diversified. Contrary to our expectations in this research, the mesiobuccal root has predominantly 1 root canal entrance and only 1 main foramen. Anatomic variations including connecting and accessory canals occur in any third of root.}
@@ -1945,8 +1945,8 @@
       \strng{authorbibnamehash}{31208204cf1e706905070d03cc964a87}
       \strng{authornamehash}{31208204cf1e706905070d03cc964a87}
       \strng{authorfullhash}{31208204cf1e706905070d03cc964a87}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
@@ -2004,8 +2004,8 @@
       \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authorfullhash}{61b54fb10b56680ff2a39b33b4712bca}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The aim of this study was to investigate the physiological foramen diameter, shape and distance between physiological and anatomical apex of maxillary and mandibular first and second molars. Accurate knowledge of the physiological foramina morphology; thus, inherent mechanical shaping technical hindrances, is decisive when taking the corresponding root canal final preparation decision. The morphological dimensions of a total of 1 727 physiological foramina were investigated by means of micro-computed tomography. Mean narrow and wide (to a high number, oval) diameters of the physiological foramen were 0.24, 0.22 and 0.33 mm and 0.33, 0.31 and 0.42 mm in mesiobuccal (MB), distobuccal (DB) and palatal (P) roots in maxillary first molars; 0.24, 0.22 and 0.33 mm and 0.41, 0.33 and 0.44 in MB, DB, and P roots in maxillary second molars. Mandibular first molars showed mean narrow and wide diameters of 0.24 and 0.30 mm and of 0.39 and 0.46 mm in mesial (M) and distal (D) roots; second mandibular molars showed 0.25 and 0.31 mm and 0.47 mm in M and D roots. The mean distance between the physiological foramina and anatomical apex was 0.82, 0.81 and 1.02 mm and 0.54, 0.43 and 0.63 mm in MB, DB and P roots of the maxillary first and second molars, respectively. A mean distance of 0.95 mm (M) and 1.05 mm (D) in the first and 0.78 mm (M) and 0.81 mm (D) in the second mandibular molars was observed. Based on the results obtained, assumable recommendations for final preparation size of the physiological foramen were calculated. However, when taking into consideration, the resulting standard deviations of marginal errors must be cautiously considered when taking a final decision in clinical endodontic treatment.}
