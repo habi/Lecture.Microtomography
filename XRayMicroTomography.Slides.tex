@@ -954,26 +954,28 @@
 \renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{How?}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\begin{itemize}
-				\item<1-> 104 extracted human permanent mandibular canines
-				\item<2-> \uct{} imaging
-				\item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-				\item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg{} you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.5\textwidth}
+	\begin{columns}%
+		\begin{column}{0.5\textwidth}%
+			\begin{itemize}%
+				\item<1-> 104 extracted human permanent mandibular canines%
+				\item<2-> \uct{} imaging%
+				\item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}%
+				\item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg{} you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}%
+			\end{itemize}%
+		\end{column}%
+		\begin{column}{0.5\textwidth}%
 			\only<1|handout:1>{%
 				\centering%
+				% Redefine image width, because of the big square bucket image
+				\renewcommand{\imagewidth}{0.85\textwidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/2716}%
 				\def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
 				\def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};%
 					% 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
 					%\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{140.0}{\milli\meter} (2132px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};%
 				\end{tikzpicture}%
 				}%
 			\only<2|handout:2>{%
@@ -998,12 +1000,13 @@
 				\includegraphics[width=\imagewidth]{./images/zmk/briseno}%
 				\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 				}%
+			% \only<6|handout:6>{%
+			% 	\centering%
+			% 	\includegraphics[width=\imagewidth]{./images/zmk/foramen}%
+			% 	\sourcecite{Wolf2017}{Fig.~1}%
+			% 	}%
 			\only<6|handout:6>{%
-				\centering%
-				\includegraphics[width=\imagewidth]{./images/zmk/foramen}%
-				\sourcecite{Wolf2017}{Fig.~1}%
-				}%
-			\only<7|handout:7>{%
+			% \only<7|handout:7>{%
 				\centering%
 				\mode<beamer>{%
 					\animategraphics[loop,autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
@@ -1014,7 +1017,8 @@
 					\source{gph.is/2nqkple}{}%
 					}%
 				}%
-			\only<8|handout:8>{%
+			\only<7|handout:7>{%
+			% \only<8|handout:8>{%
 				\centering%
 				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
 				}%
