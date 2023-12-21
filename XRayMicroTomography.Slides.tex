@@ -52,7 +52,7 @@
 \usepackage{fontawesome5}
 \usepackage{csquotes}
 \usepackage{listings}
-	\lstset{basicstyle=\tiny\ttfamily}
+	\lstset{basicstyle=\scriptsize\ttfamily}
 	% highlight a line in listings: https://tex.stackexchange.com/a/58543/828
 	% Including a crude workaround for recent versions of `listings`: https://tex.stackexchange.com/a/451538/828
 	\makeatletter%
@@ -210,18 +210,24 @@
 	\end{frame}%
 }
 
-% Alignment frames to test the ugly text-block-movement hack above
+% Alignment frames to test the text-block alignment
+% Mostly here for historic reasons :)
 % \begin{frame}{Alignment frame}
 % 	\begin{tikzpicture}%
-% 		\def\cut{1.4}%
-% 		\draw [|-|] (0,\cut) -- (0,\textheight-\cut);%
+% 		\def\cut{1.75}%
+% 		\draw [->] (0,\cut) -- (0.0,\textheight-\cut);%
 % 		\draw [<->] (0.5\textwidth,\cut) -- (0.5\textwidth,\textheight-\cut);%
 % 		\draw [|-|] (\textwidth,\cut) -- (\textwidth,\textheight-\cut);%
-% 		\draw [<->] (0,0.5\paperheight) -- (\paperwidth,0.5\paperheight);%
+% 		\draw [<->] (0,\cut) -- node [midway, above] {(c, cut) -- (textwidth-cut,textheight-cut))} (\textwidth-\cut,\textheight-\cut) ;%
 % 	\end{tikzpicture}%
 % \end{frame}
-
-% \begin{frame}[allowframebreaks,label=current]{Alignment frame II}
+%
+% \begin{frame}{Alignment frame II}
+% \centering%
+% \color{red}\rule{0.618\paperwidth}{\paperheight-0.125\paperheight-0.032\paperheight-6ex}%
+% \end{frame}
+%
+% \begin{frame}[allowframebreaks]{Alignment frame III}
 % 	\lipsum[1-3]
 % \end{frame}
 
