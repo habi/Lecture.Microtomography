@@ -929,38 +929,24 @@
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
 	\begin{itemize}%
-		\item Numbers instead of just pretty images%
+		\item<1-2|handout:1> Numbers instead of just pretty images%
 		\item Segmentation of teeth and root canal%
 		\item (Unbiased) Characterization%
 		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
 		\item Two publications:%
 		\begin{itemize}%
-			\item \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{doi.org/gjpw2d}%
-			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{doi.org/g7r8}%
+			\item \cite{Haberthuer2021}: \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{doi.org/gjpw2d}%
+			\item \cite{Wolf2021}: \href{https://www.nature.com/articles/s41598-021-00758-w}{doi.org/g7r8}%
 		\end{itemize}%
 	\end{itemize}%
-	\begin{tikzpicture}[remember picture,overlay]%
-		\node at (current page.center) [shift={(0,-25pt)}]{%
-		\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
-		\mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
-			};%
-	\end{tikzpicture}%
-\end{frame}
-
-\begin{frame}
-	\frametitle{Internal morphology of human teeth}%
-	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
-	\begin{itemize}%
-		\item Numbers instead of just pretty images%
-		\item Segmentation of teeth and root canal%
-		\item (Unbiased) Characterization%
-		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
-		\item Two publications:%
-		\begin{itemize}%
-			\item \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
-			\item \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
-		\end{itemize}%
-	\end{itemize}%
+	\only<1|handout:0>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center) [shift={(0,-25pt)}]{%
+			\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
+			\mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
+				};%
+				\end{tikzpicture}%
+			}%
 \end{frame}
 
 \subsection{Materials \& Methods}
