@@ -775,7 +775,7 @@
 	Tissue: content by mass percentage
 	\centering
 	\begin{table}%
-		\only<1>{%
+		\only<1|handout:0>{%
 			\pgfplotstabletypeset[%
 				col sep=comma,% the seperator in our .csv file
 				display columns/0/.style={string type},%
@@ -785,7 +785,7 @@
 				every last row/.style={after row=\bottomrule},%
 			]{./tables/tissue-composition.csv}%
 		}%
-		\only<2|handout:0>{%
+		\only<2|handout:1>{%
 			\pgfplotstabletypeset[%
 				col sep=comma,% the seperator in our .csv file
 				display columns/0/.style={string type},%
