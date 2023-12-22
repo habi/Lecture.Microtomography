@@ -1835,7 +1835,6 @@
       \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authorfullhash}{795d028f9f4534239332966341d28877}
-      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -1965,73 +1964,6 @@
       \verb{url}
       \verb https://zenodo.org/record/3999402
       \endverb
-    \endentry
-    \entry{Wolf2017}{article}{}
-      \name{author}{5}{}{%
-        {{hash=fdf6fa40a994c79d1b1f7f654c7601db}{%
-           family={Wolf},
-           familyi={W\bibinitperiod},
-           given={Thomas\bibnamedelima Gerhard},
-           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=7aef301479a84587c1fa1fac608150bc}{%
-           family={Paqué},
-           familyi={P\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-        {{hash=1f9fd8925e24d25d3aef11d313378c2a}{%
-           family={Sven\bibnamedelima Patyna},
-           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=023b0e41ddb46e953e5d493dc3c263ba}{%
-           family={Willershausen},
-           familyi={W\bibinitperiod},
-           given={Brita},
-           giveni={B\bibinitperiod}}}%
-        {{hash=7a41b26f38c6ace1e4182a108e47e7b1}{%
-           family={{Briseño-Marroquín}},
-           familyi={B\bibinitperiod},
-           given={Benjamín},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Sichuan University Press}%
-      }
-      \strng{namehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{fullhash}{61b54fb10b56680ff2a39b33b4712bca}
-      \strng{bibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorfullhash}{61b54fb10b56680ff2a39b33b4712bca}
-      \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The aim of this study was to investigate the physiological foramen diameter, shape and distance between physiological and anatomical apex of maxillary and mandibular first and second molars. Accurate knowledge of the physiological foramina morphology; thus, inherent mechanical shaping technical hindrances, is decisive when taking the corresponding root canal final preparation decision. The morphological dimensions of a total of 1 727 physiological foramina were investigated by means of micro-computed tomography. Mean narrow and wide (to a high number, oval) diameters of the physiological foramen were 0.24, 0.22 and 0.33 mm and 0.33, 0.31 and 0.42 mm in mesiobuccal (MB), distobuccal (DB) and palatal (P) roots in maxillary first molars; 0.24, 0.22 and 0.33 mm and 0.41, 0.33 and 0.44 in MB, DB, and P roots in maxillary second molars. Mandibular first molars showed mean narrow and wide diameters of 0.24 and 0.30 mm and of 0.39 and 0.46 mm in mesial (M) and distal (D) roots; second mandibular molars showed 0.25 and 0.31 mm and 0.47 mm in M and D roots. The mean distance between the physiological foramina and anatomical apex was 0.82, 0.81 and 1.02 mm and 0.54, 0.43 and 0.63 mm in MB, DB and P roots of the maxillary first and second molars, respectively. A mean distance of 0.95 mm (M) and 1.05 mm (D) in the first and 0.78 mm (M) and 0.81 mm (D) in the second mandibular molars was observed. Based on the results obtained, assumable recommendations for final preparation size of the physiological foramen were calculated. However, when taking into consideration, the resulting standard deviations of marginal errors must be cautiously considered when taking a final decision in clinical endodontic treatment.}
-      \field{issn}{1674-2818}
-      \field{journaltitle}{International Journal of Oral Science}
-      \field{month}{9}
-      \field{number}{3}
-      \field{title}{Three-Dimensional Analysis of the Physiological Foramen Geometry of Maxillary and Mandibular Molars by Means of Micro-{{CT}}}
-      \field{urlday}{10}
-      \field{urlmonth}{11}
-      \field{urlyear}{2020}
-      \field{volume}{9}
-      \field{year}{2017}
-      \field{urldateera}{ce}
-      \field{pages}{151\bibrangedash 157}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1038/ijos.2017.29
-      \endverb
-      \verb{urlraw}
-      \verb http://www.nature.com/articles/ijos201729
-      \endverb
-      \verb{url}
-      \verb http://www.nature.com/articles/ijos201729
-      \endverb
-      \keyw{Apical constriction,Final apical file,Maxillary and mandibular molars morphology,Micro-computed tomography,Physiological foramen}
     \endentry
   \enddatalist
 \endrefsection
