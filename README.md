@@ -16,6 +16,6 @@ This PDF is always corresponding to the last (successfully compiled) version I c
 If you set up the repository on a new machine, then:
 - `git clone git@github.com:habi/Lecture.Microtomography.git` it to a folder
 - Track *all* remote branches with `git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done` (hat tip to https://stackoverflow.com/a/10312587)
-- Use [git worktree](https://git-scm.com/docs/git-worktree) to have the relevant branches in folders. `git worktree add UPE advanced_course_II_ultraprecision_engineering & git worktree add GCB advanced_microscopy_series`
+- Use [git worktree](https://git-scm.com/docs/git-worktree) to have the relevant branches in folders. `git worktree add UPE advanced_course_II_ultraprecision_engineering;git worktree add GCB advanced_microscopy_series`. This makes working with concurrent versions a tad easier...
 - Tweak lectures and copy stuff from one folder to another.
 - Update [the workflow file to point](https://github.com/habi/Lecture.Microtomography/blob/main/.github/workflows/latex.yaml) to the [correct branch](https://github.com/habi/Lecture.Microtomography/branches) to currently build for the online handout.
