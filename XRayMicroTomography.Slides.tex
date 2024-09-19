@@ -1,10 +1,10 @@
 % !TEX root = XRayMicroTomography.Presentation.tex
+\usetheme[language=english]{ubbeamer2023}
 
 \title{X-ray microtomography}
+\subtitle{\href{https://ilias.unibe.ch/goto_ilias3_unibe_crs_3075869.html}{485018-HS2024-0: Advanced Course II Ultraprecision Engineering}}
 \author{David Haberthür}
-\date{September 27, 2023 | \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2788107.html}{485018-HS2023-0: Advanced Course II Ultraprecision Engineering}}
-
-\usetheme{UniBern}
+\date{September 25, 2024}
 
 %\includeonlyframes{current}
 %then....
@@ -12,20 +12,40 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{1}% use only every nth frame for the animations
-\newcommand{\imageheight}{\linewidth}% set global image width
-\newcommand{\imagewidth}{0.618\paperheight}% set global image height
+\newcommand{\everyframe}{321}% use only every nth frame for the animations
+\newcommand{\imagewidth}{\columnwidth}% set global image width
+\newcommand{\imageheight}{0.7\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
 \newcommand{\ie}{i.\,e.\xspace}%
 
-\usepackage[backend=biber,
-	style=numeric,
-	url=false,
-	isbn=true,
-	maxnames=1,
-	sorting=none]{biblatex}
+\usepackage[%
+	backend=biber,%
+	sorting=none,%
+	style=ieee,% `ieee` is needed for hypercite/footcite at the bottom of the slides
+	citetracker=true,%
+	isbn=false,%
+	url=false,%
+	maxnames=1,minnames=1,% Show only first author in references
+	]{biblatex}%
+% Globally remove stuff from bibliography
+% https://tex.stackexchange.com/a/25232
+\DeclareSourcemap{%
+  \maps[datatype=bibtex]{%
+    \map{%
+      \step[fieldset=journal, null]%
+      \step[fieldset=editor, null]%
+      \step[fieldset=volume, null]%
+      \step[fieldset=number, null]%
+      \step[fieldset=pages, null]%
+      \step[fieldset=year, null]%
+    }%
+  }%
+}%
+% Fix double-comma in footcite
+% Copy the relevant line from https://tex.stackexchange.com/a/409861/828
+\renewcommand\labelnamepunct{\adddot\space} %punct after autor
 \addbibresource{../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
@@ -41,7 +61,6 @@
 \usepackage[detect-all=true,
 	range-phrase=--,
 	range-units=single,
-	binary-units=true,
 	per-mode=symbol,
 	per-symbol=/]{siunitx}
 \usepackage[absolute,overlay]{textpos}
@@ -89,11 +108,11 @@
 % change tikz font to slide font
 % https://tex.stackexchange.com/a/33329/828
 \usepackage[eulergreek]{sansmath}
-	\pgfplotsset{tick label style = {font=\sansmath\sffamily},
-		every axis label = {font=\sansmath\sffamily},
-		legend style = {font=\sansmath\sffamily},
-		label style = {font=\sansmath\sffamily}
-		}
+\pgfplotsset{tick label style = {font=\sansmath\sffamily},
+	every axis label = {font=\sansmath\sffamily},
+	legend style = {font=\sansmath\sffamily},
+	label style = {font=\sansmath\sffamily}
+	}
 
 % Globally thicker lines in with tikz
 % https://tex.stackexchange.com/a/206769/828
@@ -126,79 +145,71 @@
 		}%
 	}%
 
-% Define a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
+% % Define a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
+% \makeatletter
+% \def\progressbar@progressbar{}% the progress bar
+% \newcount\progressbar@tmpcounta% auxiliary counter
+% \newcount\progressbar@tmpcountb% auxiliary counter
+% \newdimen\progressbar@pbht%progressbar height
+% \newdimen\progressbar@pbwd%progressbar width
+% \newdimen\progressbar@rcircle% radius for the circle
+% \newdimen\progressbar@tmpdim% auxiliary dimension
+% \progressbar@pbwd=0.618\linewidth%
+% \progressbar@rcircle=1.5pt%
+% \def\progressbar@progressbar{%
+% 	\progressbar@tmpcounta=\insertframenumber%
+% 	\progressbar@tmpcountb=\inserttotalframenumber%
+% 	\progressbar@tmpdim=\progressbar@pbwd%
+% 	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
+% 	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
+% 		\mode<beamer>{%
+% 			\hfill%
+% 			\begin{tikzpicture}%
+% 				\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);%
+% 				\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
+% 			\end{tikzpicture}%
+% 			\hfill%
+% 			git.io/fjpP7\xspace|\xspace v.\xspace\href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace\insertframenumber/\inserttotalframenumber%
+% 			}%
+% \mode<handout>{Handout for git.io/fjpP7, created on \DTMnow\xspace| p.\xspace\insertframenumber/\inserttotalframenumber}%
+% 		\vspace{0.5ex}%
+% }
+% \addtobeamertemplate{footline}{}%
+% {%
+
+% 	\begin{beamercolorbox}[wd=\paperwidth,center]{white}%
+% 		\progressbar@progressbar%
+% 	\end{beamercolorbox}%
+% }%
+% \makeatother
+
+
+% Make us a nice citation command for citing in a footnote
+% https://tex.stackexchange.com/a/396754/828
 \makeatletter
-\def\progressbar@progressbar{}% the progress bar
-\newcount\progressbar@tmpcounta% auxiliary counter
-\newcount\progressbar@tmpcountb% auxiliary counter
-\newdimen\progressbar@pbht%progressbar height
-\newdimen\progressbar@pbwd%progressbar width
-\newdimen\progressbar@rcircle% radius for the circle
-\newdimen\progressbar@tmpdim% auxiliary dimension
-\progressbar@pbwd=0.618\linewidth%
-\progressbar@rcircle=1.5pt%
-\def\progressbar@progressbar{%
-	\progressbar@tmpcounta=\insertframenumber%
-	\progressbar@tmpcountb=\inserttotalframenumber%
-	\progressbar@tmpdim=\progressbar@pbwd%
-	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
-	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
-		\mode<beamer>{%
-			\hfill%
-			\begin{tikzpicture}%
-				\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);%
-				\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
-			\end{tikzpicture}%
-			\hfill%
-			git.io/fjpP7\xspace|\xspace v.\xspace\href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace\insertframenumber/\inserttotalframenumber%
+\newbibmacro*{hypercite}{%
+	\renewcommand{\@makefntext}[1]{\noindent\normalfont##1}%
+	\footnotetext{%
+		\blxmkbibnote{foot}{%
+			\printtext[labelnumberwidth]{%
+				\printfield{prefixnumber}%
+				\printfield{labelnumber}%
 			}%
-\mode<handout>{Handout for git.io/fjpP7, created on \DTMnow\xspace| p.\xspace\insertframenumber/\inserttotalframenumber}%
-		\vspace{0.5ex}%
-}
-\addtobeamertemplate{footline}{}%
-{%
-
-	\begin{beamercolorbox}[wd=\paperwidth,center]{white}%
-		\progressbar@progressbar%
-	\end{beamercolorbox}%
-}%
-\makeatother
-
-% Format bibliography for beamer
-% http://tex.stackexchange.com/a/10686/828
-\renewbibmacro{in:}{}
-% http://tex.stackexchange.com/a/13076/828
-\AtEveryBibitem{%
-	\clearfield{journaltitle}
-	\clearfield{pages}
-	\clearfield{volume}
-	\clearfield{number}
-	\clearname{editor}
-	\clearfield{issn}
-	\clearfield{year}
-}
-% No parentheses around the (now empty) year: https://tex.stackexchange.com/a/147537/828
-\renewcommand{\bibopenparen}{\addcomma\addspace}
-\renewcommand{\bibcloseparen}{\addcomma\addspace}
-
-% Redefine \footcite based on https://tex.stackexchange.com/a/453528/828
-\DeclareCiteCommand{\footcite}[\mkbibfootnote]{%
-	\usebibmacro{prenote}}{%
-		\printnames[family-given]{labelname}%
-		\newunit%
-		\printfield{doi}%
-		\newunit%
-		\printlabeldateextra%
-	}{\addsemicolon\space}{%
-		\usebibmacro{postnote}%
+			\addspace%
+			\fullcite{\thefield{entrykey}}%
+			}%
+		}%
 	}%
-
-% References as footnotes at the bottom of the slides
-% https://tex.stackexchange.com/a/368760/828
-\makeatletter
-\renewcommand\@makefnmark{\xspace\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
-\renewcommand\@makefntext[1]{\tiny{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
+\DeclareCiteCommand{\hypercite}%
+	{\usebibmacro{cite:init}}%
+	{\usebibmacro{hypercite}}%
+	{}%
+	{\usebibmacro{cite:dump}}%
+% Redefine the \footcite command to use the reference number
+\renewcommand{\footcite}[1]{\cite{#1}\hypercite{#1}}
 \makeatother
+% Remove title when using footcite/hypercite
+\AtEveryCitekey{\clearfield{title}}
 
 % Show current section at begin of sections, but only in presentation mode
 \mode<beamer>{%
@@ -209,34 +220,10 @@
 	}%
 }
 
-% Move the text down a bit
-% THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
-% But otherwise, the images are not aligned nicely into the gray background rectangle
-\addtobeamertemplate{frametitle}{}{\vspace*{0.75em}}
-
 \begin{document}
-% No footline on the title page
-% http://tex.stackexchange.com/a/18829/828 helps us to achieve that
-{%
-	\setbeamertemplate{footline}{}%
-	\begin{frame}%
-		\maketitle
-	\end{frame}%
-}
-
-% % Alignment frames to test the ugly text-block-movement hack above
-% \begin{frame}[label=current]{Alignment frame}
-% 	\begin{tikzpicture}%
-% 		\def\cut{2}%
-% 		\draw [|-|] (0,\cut) -- (0,\textheight-\cut);%
-% 		\draw [<->] (0.5\textwidth,\cut) -- (0.5\textwidth,\textheight-\cut);%
-% 		\draw [|-|] (\textwidth,\cut) -- (\textwidth,\textheight-\cut);%
-% 	\end{tikzpicture}%
-% \end{frame}
-
-% \begin{frame}[allowframebreaks,label=current]{Alignment frame II}
-% 	\lipsum[1-3]
-% \end{frame}
+\begin{frame}
+	\maketitle
+\end{frame}
 
 \begin{frame}
 	\frametitle{Grüessech mitenang!}
