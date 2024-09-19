@@ -18,4 +18,4 @@ If you set up the repository on a new machine, then:
 - Track *all* remote branches with `git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done` (hat tip to https://stackoverflow.com/a/10312587)
 - Use [git worktree](https://git-scm.com/docs/git-worktree) to have the relevant branches in folders. `git worktree add UPE advanced_course_II_ultraprecision_engineering & git worktree add GCB advanced_microscopy_series`
 - Tweak lectures and copy stuff from one folder to another.
-- Update [https://github.com/habi/Lecture.Microtomography/blob/main/.github/workflows/latex.yaml][the workflow file to point] to the [correct branch](https://github.com/habi/Lecture.Microtomography/branches) to currently build for the online handout.
+- Update [the workflow file to point](https://github.com/habi/Lecture.Microtomography/blob/main/.github/workflows/latex.yaml) to the [correct branch](https://github.com/habi/Lecture.Microtomography/branches) to currently build for the online handout.
