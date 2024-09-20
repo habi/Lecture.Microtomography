@@ -4,6 +4,7 @@
 \title{X-ray microtomography}
 \subtitle{\href{https://ilias.unibe.ch/goto_ilias3_unibe_crs_3075869.html}{485018-HS2024-0: Advanced Course II Ultraprecision Engineering}}
 \author{David Haberthür}
+\institute{Institute of Anatomy}
 \date{September 25, 2024}
 
 %\includeonlyframes{current}
@@ -46,7 +47,7 @@
 % Fix double-comma in footcite
 % Copy the relevant line from https://tex.stackexchange.com/a/409861/828
 \renewcommand\labelnamepunct{\adddot\space} %punct after autor
-\addbibresource{../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
+\addbibresource{../../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{shadows,spy,mindmap}
@@ -358,7 +359,6 @@
 	\end{itemize}
 \end{frame}
 
-\end{document}
 \section{Tomography}
 \begin{frame}
 	\frametitle{CT-Scanner}
@@ -1221,18 +1221,19 @@
 \renewcommand{\imagewidth}{0.55\linewidth}%
 \begin{frame}
 	\frametitle{Metal foam}
+	asdf
 	\centering
 	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
 	\def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
 	\def\y{540}% scalebar-y at 90% of image height of 600px = 540
 	\only<1|handout:1>{
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0000}};
-			% 665.634px = 1.221973872mm -> 100px = 183.580um -> 272.360px = 500um, 54.472px = 100um
-			%\draw[|-|,blue,thick] (67,245) -- (732,237) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{1.221973872}{\milli\meter} (666px) TEMPORARY!};
+	 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0000}};
+	% 		% 665.634px = 1.221973872mm -> 100px = 183.580um -> 272.360px = 500um, 54.472px = 100um
+	% 		%\draw[|-|,blue,thick] (67,245) -- (732,237) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{1.221973872}{\milli\meter} (666px) TEMPORARY!};
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+272.360,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-			\end{tikzpicture}%
-			}%
+		\end{tikzpicture}%
+	}%
 	\only<2|handout:0>{
 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{000}{134}%
 	}%
@@ -1319,7 +1320,7 @@
 	\frametitle{Thanks!}
 	\begin{itemize}
 		\item Thanks for listening to me!
-		\item<2-> \href{https://twitter.com/jackiantonovich/status/1195699076056178691}{What questions do you have for me?}
+		\item<2-> \href{https://mannerofspeaking.org/2019/12/29/what-questions-do-you-have-for-me/}{What questions do you have for me?}
 	\end{itemize}
 	\only<3|handout:0>{%
 		\begin{tikzpicture}[remember picture,overlay]%
