@@ -98,9 +98,9 @@
 \usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{multirow}
-\usepackage{lipsum}
 \usepackage[showseconds=false,showzone=false]{datetime2}
 \usepackage{mathastext}
+\usepackage{hyperref}
 
 % Define complementary colors to ubRed, from https://www.sessions.edu/color-calculator/
 \definecolor{ubRedComplementary}{HTML}{2EE600}
@@ -145,38 +145,38 @@
 		}%
 	}%
 
-% Define an aditional footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
-\makeatletter
-\def\progressbar@progressbar{}% the progress bar
-\newcount\progressbar@tmpcounta% auxiliary counter
-\newcount\progressbar@tmpcountb% auxiliary counter
-\newdimen\progressbar@pbht%progressbar height
-\newdimen\progressbar@pbwd%progressbar width
-\newdimen\progressbar@rcircle% radius for the circle
-\newdimen\progressbar@tmpdim% auxiliary dimension
-\progressbar@pbwd=\paperwidth%
-\progressbar@rcircle=1pt%
-\def\progressbar@progressbar{%
-	\progressbar@tmpcounta=\insertframenumber%
-	\progressbar@tmpcountb=\inserttotalframenumber%
-	\progressbar@tmpdim=\progressbar@pbwd%
-	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
-	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
-		\mode<beamer>{%
-			\begin{tikzpicture}%
-				\draw[ubRed] (0,0) -- ++ (\progressbar@pbwd,0);%
-				\draw[draw=ubRed,fill=white] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
-			\end{tikzpicture}%
-			}%
-		\mode<handout>{\centering Handout for git.io/fjpP7, created on \DTMnow}%
-}
-\addtobeamertemplate{footline}{}%
-{%
-	\begin{beamercolorbox}[wd=\paperwidth]{white}%
-		\progressbar@progressbar%
-	\end{beamercolorbox}%
-}%
-\makeatother
+%% Define an aditional footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
+%\makeatletter
+%\def\progressbar@progressbar{}% the progress bar
+%\newcount\progressbar@tmpcounta% auxiliary counter
+%\newcount\progressbar@tmpcountb% auxiliary counter
+%\newdimen\progressbar@pbht%progressbar height
+%\newdimen\progressbar@pbwd%progressbar width
+%\newdimen\progressbar@rcircle% radius for the circle
+%\newdimen\progressbar@tmpdim% auxiliary dimension
+%\progressbar@pbwd=\paperwidth%
+%\progressbar@rcircle=1pt%
+%\def\progressbar@progressbar{%
+%	\progressbar@tmpcounta=\insertframenumber%
+%	\progressbar@tmpcountb=\inserttotalframenumber%
+%	\progressbar@tmpdim=\progressbar@pbwd%
+%	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
+%	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
+%		\mode<beamer>{%
+%  			\begin{tikzpicture}%
+%				\draw[ubRed] (0,0) -- ++ (\progressbar@pbwd,0);%
+%				\draw[draw=ubRed,fill=white] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
+%			\end{tikzpicture}%
+%			}%
+%		\mode<handout>{\centering Handout for git.io/fjpP7, created on \DTMnow}%
+%}
+%\addtobeamertemplate{footline}{}%
+%{%
+%	\begin{beamercolorbox}[wd=\paperwidth]{white}%
+%		\progressbar@progressbar%
+%	\end{beamercolorbox}%
+%}%
+%\makeatother
 
 % Make us a nice citation command for citing in a footnote
 % https://tex.stackexchange.com/a/396754/828
@@ -1216,7 +1216,6 @@
 \renewcommand{\imagewidth}{0.55\linewidth}%
 \begin{frame}
 	\frametitle{Metal foam}
-	asdf
 	\centering
 	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
 	\def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
@@ -1245,13 +1244,23 @@
 \begin{frame}
 	\frametitle{Data wrangling by example: Cichlids}
 	\begin{columns}
-		\begin{column}{0.49\linewidth}
-			\begin{itemize}
-				\item 372 tomographic scans of 133 different Cichlids, from \qtyrange{6}{18}{\centi\meter}\footcite{Haberthuer2023}
-				\item \qty{9.8}{\tera\byte} of projection images, \qty{1.5}{\tera\byte} of reconstructions
-				\item Reproducible and automated dataset wrangling, checking and image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
-			\end{itemize}
-		\end{column}
+			\begin{column}{0.49\linewidth}
+			Collaboration with team of \href{https://www.aqua.iee.unibe.ch/}{\emph{Aquatic Ecology \& Evolution}}, from the \href{https://www.iee.unibe.ch/}{Institute of Ecology and Evolution}~\footcite{Haberthuer2023}
+		\begin{itemize}
+					\item 133 Cichlids from Lake Victoria, East Africa
+					\begin{itemize}
+						\item Functional anatomy of the skulls and jaws
+						\item<2-> \qtyrange{6}{18}{\centi\meter} in size
+					\end{itemize}
+					\item<7-> 375 scans in total
+					\begin{itemize}
+						\item<7-> Voxelsizes from \qtyrange{3.5}{50}{\micro\meter}
+						\item<7-> 46 days of scanning time
+						\item<7-> \qty{9.8}{\tera\byte} of raw data
+						\item<7-> \qty{1.5}{\tera\byte}/+\num{1000000} reconstructions
+					\end{itemize}
+				\end{itemize}
+			\end{column}
 		\begin{column}{0.49\linewidth}
 			\centering%
 			\includegraphics<1|handout:1>[height=\imageheight]{./images/cichlids/104016}%
@@ -1298,17 +1307,17 @@
 
 \begin{frame}
 	\frametitle{Data wrangling by example: Cichlids}
-	\centering
-	\includegraphics<1|handout:1>[height=\imageheight]{./images/cichlids/Otolither_104016_head_01_Overview}%
-	\includegraphics<2|handout:2>[height=\imageheight]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
-	\includegraphics<3|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
-	\includegraphics<4|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
-	\includegraphics<5|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_05_Peaks}%
-	\includegraphics<6|handout:3>[height=\imageheight]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
-	\includegraphics<7|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
-	\includegraphics<8|handout:4>[height=\imageheight]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
-	\includegraphics<9|handout:0>[height=\imageheight]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
-	\only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
+	\centering%
+	\includegraphics<1>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_01_Overview}%
+	\includegraphics<2>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
+	\includegraphics<3>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
+	\includegraphics<4>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
+	\includegraphics<5>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_05_Peaks}%
+	\includegraphics<6>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
+	\includegraphics<7>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
+	\includegraphics<8>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
+	\includegraphics<9>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
+	\only<10>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
 \begin{frame}
@@ -1332,7 +1341,7 @@
 		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
 			\item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
-			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action}\footnote{Details on how this works are specified in a \href{https://github.com/habi/latex-test/}{small test repository here: git.io/JeOOj}} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
+			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
 		\end{itemize}
 		\item Did you spot an error?
 		\begin{itemize}
@@ -1343,11 +1352,11 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[allowframebreaks]
-	\frametitle{References}
-	\renewcommand*{\bibfont}{\scriptsize}
-	\setbeamertemplate{bibliography item}{\insertbiblabel}
-	\printbibliography
-\end{frame}
+%\begin{frame}
+%	\frametitle{References}%[allowframebreaks]
+%	\renewcommand*{\bibfont}{\tiny}
+%	\setbeamertemplate{bibliography item}{\insertbiblabel}
+%	\printbibliography
+%\end{frame}
 
 \end{document}
