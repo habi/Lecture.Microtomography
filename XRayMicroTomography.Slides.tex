@@ -155,8 +155,8 @@
 \newdimen\progressbar@pbwd%progressbar width
 \newdimen\progressbar@rcircle% radius for the circle
 \newdimen\progressbar@tmpdim% auxiliary dimension
-\progressbar@pbwd=0.618\linewidth%
-\progressbar@rcircle=1.5pt%
+\progressbar@pbwd=\paperwidth%
+\progressbar@rcircle=1pt%
 \def\progressbar@progressbar{%
 	\progressbar@tmpcounta=\insertframenumber%
 	\progressbar@tmpcountb=\inserttotalframenumber%
@@ -164,20 +164,16 @@
 	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
 	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
 		\mode<beamer>{%
-			\hfill%
 			\begin{tikzpicture}%
-				\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);%
-				\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
+				\draw[ubRed] (0,0) -- ++ (\progressbar@pbwd,0);%
+				\draw[draw=ubRed,fill=white] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
 			\end{tikzpicture}%
-			\hfill%
-			git.io/fjpP7\xspace|\xspace v.\xspace\href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace\insertframenumber/\inserttotalframenumber%
 			}%
-\mode<handout>{Handout for git.io/fjpP7, created on \DTMnow\xspace| p.\xspace\insertframenumber/\inserttotalframenumber}%
-		\vspace{0.5ex}%
+		\mode<handout>{\centering Handout for git.io/fjpP7, created on \DTMnow}%
 }
 \addtobeamertemplate{footline}{}%
 {%
-	\begin{beamercolorbox}[wd=\paperwidth,center]{white}%
+	\begin{beamercolorbox}[wd=\paperwidth]{white}%
 		\progressbar@progressbar%
 	\end{beamercolorbox}%
 }%
