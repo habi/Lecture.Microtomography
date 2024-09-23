@@ -149,19 +149,17 @@
 	\progressbar@tmpcountb=\inserttotalframenumber%
 	\progressbar@tmpdim=\progressbar@pbwd%
 	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
-	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
-		\mode<beamer>{%
+	\divide\progressbar@tmpdim by \progressbar@tmpcountb
 			\begin{tikzpicture}%
 				\draw[ubRed] (0,0) -- ++ (\progressbar@pbwd,0);%
 				\draw[draw=ubRed,fill=white] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
 			\end{tikzpicture}%
-			}%
-		\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}
 		}%
 \addtobeamertemplate{footline}{}%
 {%
 	\begin{beamercolorbox}[wd=\paperwidth]{white}%
-		\progressbar@progressbar%
+		\mode<beamer>{\progressbar@progressbar}%
+		\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}
 	\end{beamercolorbox}%
 }%
 \makeatother
