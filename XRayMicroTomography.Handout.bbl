@@ -99,11 +99,18 @@
       \field{issn}{1931-857X}
       \field{month}{3}
       \field{title}{Cutting-Edge Microangio-{{CT}}: New Dimensions in Vascular Imaging and Kidney Morphometry}
+      \field{year}{2018}
       \verb{doi}
       \verb 10.1152/ajprenal.00099.2017
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/Z457KMJX/Hlushchuk et al. - 2017 - Cutting-edge microangio-CT new dimensions in vascular imaging and kidney morphometry.pdf
+      \verb /Users/habi/Zotero/storage/Z457KMJX/Hlushchuk et al. - 2017 - Cutting-edge microangio-CT new dimensions in vascular imaging and kidney morphometry.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1152/ajprenal.00099.2017
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1152/ajprenal.00099.2017
       \endverb
     \endentry
     \entry{Nording2021}{article}{}{}
@@ -263,11 +270,18 @@
       \field{issn}{2041-1723}
       \field{month}{12}
       \field{title}{The {{C5a}}/{{C5a}} Receptor 1 Axis Controls Tissue Neovascularization through {{CXCL4}} Release from Platelets}
+      \field{year}{2021}
       \verb{doi}
       \verb 10.1038/s41467-021-23499-w
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
+      \verb /Users/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
       \endverb
     \endentry
     \entry{Hlushchuk2020}{article}{}{}
@@ -340,11 +354,18 @@
       \field{issn}{1863-2653}
       \field{month}{10}
       \field{title}{Innovative High-Resolution {{microCT}} Imaging of Animal Brain Vasculature}
+      \field{year}{2020}
       \verb{doi}
       \verb 10.1007/s00429-020-02158-8
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
+      \verb /Users/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s00429-020-02158-8
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s00429-020-02158-8
       \endverb
     \endentry
     \entry{Wuthrich2020}{article}{}{}
@@ -468,11 +489,18 @@
       \field{issn}{09284931}
       \field{month}{8}
       \field{title}{Development of Vascularized Nerve Scaffold Using Perfusion-Decellularization and Recellularization}
+      \field{year}{2020}
       \verb{doi}
       \verb 10.1016/j.msec.2020.111311
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/home/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
+      \verb /Users/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/Users/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.msec.2020.111311
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.msec.2020.111311
       \endverb
     \endentry
     \entry{Zubler2021}{article}{}{}
@@ -530,9 +558,16 @@
       \field{urlday}{23}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
+      \field{year}{2021}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.aanat.2020.151624
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0940960220301680
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0940960220301680
       \endverb
       \keyw{Deep branch,Perforator flap,Reconstructive surgery,Superficial branch,Superficial circumflex iliac artery,Superficial circumflex iliac artery perforator fla}
     \endentry
@@ -611,12 +646,19 @@
       \field{urlday}{6}
       \field{urlmonth}{2}
       \field{urlyear}{2020}
+      \field{year}{2020}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1371/journal.pone.0228333
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
+      \verb /Users/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pone.0228333
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pone.0228333
       \endverb
     \endentry
     \entry{Trappetti2021}{article}{}{}
@@ -703,12 +745,19 @@
       \field{urlday}{16}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
+      \field{year}{2021}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.ijrobp.2021.07.1717
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
+      \verb /Users/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
       \endverb
     \endentry
     \entry{Bochud2021}{article}{}{}
@@ -756,12 +805,19 @@
       \field{urlday}{29}
       \field{urlmonth}{11}
       \field{urlyear}{2021}
+      \field{year}{2021}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.3897/zookeys.1073.73241
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
+      \verb /Users/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://zookeys.pensoft.net/article/73241/
+      \endverb
+      \verb{url}
+      \verb https://zookeys.pensoft.net/article/73241/
       \endverb
     \endentry
     \entry{Halm2021}{article}{}{}
@@ -807,11 +863,18 @@
       \field{abstract}{This pilot study explores whether a human Thiel-embalmed temporal bone is suitable for generating an accurate and complete data set with micro-computed tomography (micro-CT) and whether solid iodine-staining improves visualization and facilitates segmentation of middle ear structures.}
       \field{issn}{1916-0216}
       \field{title}{Micro-{{CT}} Imaging of {{Thiel-embalmed}} and Iodine-Stained Human Temporal Bone for {{3D}} Modeling}
+      \field{year}{2021}
       \verb{doi}
       \verb 10.1186/s40463-021-00522-0
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
+      \verb /Users/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s40463-021-00522-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s40463-021-00522-0
       \endverb
     \endentry
     \entry{Haberthuer2021}{article}{}{}
@@ -852,12 +915,19 @@
       \field{urlday}{10}
       \field{urlmonth}{1}
       \field{urlyear}{2024}
+      \field{year}{2021}
       \field{urldateera}{ce}
       \verb{doi}
       \verb gjpw2d
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/5B9UNST7/Haberthür et al. - 2021 - Automated segmentation and description of the inte.pdf;/home/habi/Zotero/storage/7IICXMLR/s12903-021-01551-x.html
+      \verb /Users/habi/Zotero/storage/5B9UNST7/Haberthür et al. - 2021 - Automated segmentation and description of the inte.pdf;/Users/habi/Zotero/storage/7IICXMLR/s12903-021-01551-x.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s12903-021-01551-x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s12903-021-01551-x
       \endverb
       \keyw{Automated segmentation,Biomedical image analysis,Internal tooth morphology,Micro-CT,Physiological foramen geometry,Root canal configuration}
     \endentry
@@ -918,12 +988,19 @@
       \field{urlday}{28}
       \field{urlmonth}{9}
       \field{urlyear}{2023}
+      \field{year}{2023}
       \field{urldateera}{ce}
       \verb{doi}
       \verb gsst8t
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/KA9CXT3X/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
+      \verb /Users/habi/Zotero/storage/KA9CXT3X/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0291003
+      \endverb
+      \verb{url}
+      \verb https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0291003
       \endverb
       \keyw{Data acquisition,Data visualization,Fish biology,Image processing,Jaw,Otolith,Skull,X-ray radiography}
     \endentry
@@ -957,12 +1034,19 @@
       \field{urlday}{2}
       \field{urlmonth}{11}
       \field{urlyear}{2012}
+      \field{year}{1963}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1063/1.1729798
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
+      \verb /Users/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.org/10.1063/1.1729798
+      \endverb
+      \verb{url}
+      \verb http://doi.org/10.1063/1.1729798
       \endverb
     \endentry
     \entry{Hounsfield1976a}{article}{}{}
@@ -986,6 +1070,50 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Historical Notes on Computerized Axial Tomography.}
+      \field{year}{1976}
+    \endentry
+    \entry{Beckmann2006}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f11518cd561a6dbc0e299636fa234110}{%
+           family={Beckmann},
+           familyi={B\bibinitperiod},
+           given={E\bibnamedelima C},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{fullhash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{fullhashraw}{f11518cd561a6dbc0e299636fa234110}
+      \strng{bibnamehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authorbibnamehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authornamehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authorfullhash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authorfullhashraw}{f11518cd561a6dbc0e299636fa234110}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{CT scanning has become an established diagnostic tool within the radiology department. This article covers some of the history of the development and early days of CT scanning. It is based upon the lecture given on the Memorial Day for Sir Godfrey Hounsfield during the British Institute of Radiology President's Conference 2005.}
+      \field{issn}{0007-1285}
+      \field{month}{1}
+      \field{title}{{{CT}} Scanning the Early Days.}
+      \field{urlday}{16}
+      \field{urlmonth}{3}
+      \field{urlyear}{2012}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1259/bjr/29444122
+      \endverb
+      \verb{file}
+      \verb /Users/habi/Zotero/storage/QCVD4992/Beckmann - 2006 - CT scanning the early days.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1259/bjr/29444122
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1259/bjr/29444122
+      \endverb
+      \keyw{20th Century,Animals,Computer-Assisted,Equipment Design,History,Humans,Image Interpretation,Swine,Tomography,Tomography Scanners,X-Ray Computed,X-Ray Computed: history,X-Ray Computed: instrumentation}
     \endentry
     \entry{Hsieh2003}{book}{}{}
       \name{author}{1}{}{%
@@ -1006,51 +1134,22 @@
       \strng{authornamehash}{04723f860550f84b6efa7cbd0264669a}
       \strng{authorfullhash}{04723f860550f84b6efa7cbd0264669a}
       \strng{authorfullhashraw}{04723f860550f84b6efa7cbd0264669a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Computed Tomography: Principles, Design, Artifacts, and Recent Advances}
       \field{urlday}{4}
       \field{urlmonth}{8}
       \field{urlyear}{2011}
+      \field{year}{2003}
       \field{urldateera}{ce}
-    \endentry
-    \entry{Beckmann2006}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=f11518cd561a6dbc0e299636fa234110}{%
-           family={Beckmann},
-           familyi={B\bibinitperiod},
-           given={E\bibnamedelima C},
-           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \strng{namehash}{f11518cd561a6dbc0e299636fa234110}
-      \strng{fullhash}{f11518cd561a6dbc0e299636fa234110}
-      \strng{fullhashraw}{f11518cd561a6dbc0e299636fa234110}
-      \strng{bibnamehash}{f11518cd561a6dbc0e299636fa234110}
-      \strng{authorbibnamehash}{f11518cd561a6dbc0e299636fa234110}
-      \strng{authornamehash}{f11518cd561a6dbc0e299636fa234110}
-      \strng{authorfullhash}{f11518cd561a6dbc0e299636fa234110}
-      \strng{authorfullhashraw}{f11518cd561a6dbc0e299636fa234110}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{CT scanning has become an established diagnostic tool within the radiology department. This article covers some of the history of the development and early days of CT scanning. It is based upon the lecture given on the Memorial Day for Sir Godfrey Hounsfield during the British Institute of Radiology President's Conference 2005.}
-      \field{issn}{0007-1285}
-      \field{month}{1}
-      \field{title}{{{CT}} Scanning the Early Days.}
-      \field{urlday}{16}
-      \field{urlmonth}{3}
-      \field{urlyear}{2012}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1259/bjr/29444122
+      \verb{urlraw}
+      \verb http://books.google.com/books?id=JX__lLLXFHkC
       \endverb
-      \verb{file}
-      \verb /home/habi/Zotero/storage/QCVD4992/Beckmann - 2006 - CT scanning the early days.pdf
+      \verb{url}
+      \verb http://books.google.com/books?id=JX__lLLXFHkC
       \endverb
-      \keyw{20th Century,Animals,Computer-Assisted,Equipment Design,History,Humans,Image Interpretation,Swine,Tomography,Tomography Scanners,X-Ray Computed,X-Ray Computed: history,X-Ray Computed: instrumentation}
     \endentry
     \entry{Lin2019}{incollection}{}{}
       \name{author}{3}{}{%
@@ -1097,9 +1196,16 @@
       \field{urlday}{25}
       \field{urlmonth}{9}
       \field{urlyear}{2023}
+      \field{year}{2019}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1007/978-3-030-00069-1_24
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-030-00069-1_24
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-030-00069-1_24
       \endverb
     \endentry
     \entry{Feldkamp1984}{article}{}{}
@@ -1128,7 +1234,6 @@
       \strng{authornamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
       \strng{authorfullhash}{f635c34fd0e821789bb7e8d8496b34dc}
       \strng{authorfullhashraw}{f635c34fd0e821789bb7e8d8496b34dc}
-      \field{extraname}{1}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -1141,62 +1246,17 @@
       \field{urlday}{26}
       \field{urlmonth}{9}
       \field{urlyear}{2023}
+      \field{year}{1984}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1364/JOSAA.1.000612
       \endverb
-    \endentry
-    \entry{Feldkamp1983}{inproceedings}{}{}
-      \name{author}{6}{}{%
-        {{hash=a0441373477cd6f02732b19a09d43130}{%
-           family={Feldkamp},
-           familyi={F\bibinitperiod},
-           given={{\relax LA}},
-           giveni={_\bibinitperiod}}}%
-        {{hash=ca9b6cb9ac2801a92e41d95e110afe09}{%
-           family={Kleerekoper},
-           familyi={K\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod}}}%
-        {{hash=976175527987279f06ee7a7d46292f94}{%
-           family={Kress},
-           familyi={K\bibinitperiod},
-           given={{\relax JW}},
-           giveni={_\bibinitperiod}}}%
-        {{hash=2ac5a240df75dd799f8c054415b69b2c}{%
-           family={Freeling},
-           familyi={F\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod}}}%
-        {{hash=ab78a0e3a78dda5fb589ab6b132e9c71}{%
-           family={Mathews},
-           familyi={M\bibinitperiod},
-           given={{\relax CHE}},
-           giveni={_\bibinitperiod}}}%
-        {{hash=626fa8068682bb719fcf8a6b5fd154c3}{%
-           family={Parfitt},
-           familyi={P\bibinitperiod},
-           given={{\relax AM}},
-           giveni={_\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SPRINGER VERLAG 175 FIFTH AVE, NEW YORK, NY 10010}%
-      }
-      \strng{namehash}{6bf61e7619c1b7debf80be6a44440d8a}
-      \strng{fullhash}{1dfdfebea57e1009df80813781d1c3d4}
-      \strng{fullhashraw}{1dfdfebea57e1009df80813781d1c3d4}
-      \strng{bibnamehash}{6bf61e7619c1b7debf80be6a44440d8a}
-      \strng{authorbibnamehash}{6bf61e7619c1b7debf80be6a44440d8a}
-      \strng{authornamehash}{6bf61e7619c1b7debf80be6a44440d8a}
-      \strng{authorfullhash}{1dfdfebea57e1009df80813781d1c3d4}
-      \strng{authorfullhashraw}{1dfdfebea57e1009df80813781d1c3d4}
-      \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Calcified Tissue International}
-      \field{title}{Investigation of 3-Dimensional Structure of Trabecular Bone by Computed-Tomography of Iliac Biopsy Samples}
+      \verb{urlraw}
+      \verb https://opg.optica.org/josaa/abstract.cfm?uri=josaa-1-6-612
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/josaa/abstract.cfm?uri=josaa-1-6-612
+      \endverb
     \endentry
     \entry{xrayphysics}{misc}{}{}
       \name{author}{1}{}{%
@@ -1218,12 +1278,17 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{http://xrayphysics.com/attenuation.html}
       \field{title}{X-{{Ray Physics}}: {{X-Ray Interaction}} with {{Matter}}, {{X-Ray Contrast}}, and {{Dose}}}
       \field{urlday}{6}
       \field{urlmonth}{12}
       \field{urlyear}{2019}
       \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://xrayphysics.com/attenuation.html
+      \endverb
+      \verb{url}
+      \verb http://xrayphysics.com/attenuation.html
+      \endverb
     \endentry
     \entry{wiki:beer-lambert}{misc}{}{}
       \name{author}{1}{}{%
@@ -1244,6 +1309,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Beer--{{Lambert}} Law --- {{Wikipedia}}, {{The Free Encyclopedia}}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Beer–Lambert_law&oldid=925859144
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Beer%E2%80%93Lambert_law&oldid=925859144
+      \endverb
     \endentry
     \entry{Clark2013}{article}{}{}
       \name{author}{12}{}{%
@@ -1329,12 +1401,19 @@
       \field{urlday}{2}
       \field{urlmonth}{12}
       \field{urlyear}{2019}
+      \field{year}{2013}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1007/s10278-013-9622-7
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/ANDPECX9/full-text.pdf
+      \verb /Users/habi/Zotero/storage/ANDPECX9/full-text.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10278-013-9622-7
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10278-013-9622-7
       \endverb
     \endentry
     \entry{Schindelin2012}{article}{}{}
@@ -1443,12 +1522,19 @@
       \field{urlday}{18}
       \field{urlmonth}{10}
       \field{urlyear}{2013}
+      \field{year}{2012}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1038/nmeth.2019
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/B2RHUUNG/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf
+      \verb /Users/habi/Zotero/storage/B2RHUUNG/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nature.com/articles/nmeth.2019
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/articles/nmeth.2019
       \endverb
       \keyw{Algorithms,Animals,Brain,Brain: ultrastructure,Computational Biology,Computational Biology: methods,Computer-Assisted,Computer-Assisted: methods,Drosophila melanogaster,Drosophila melanogaster: ultrastructure,Image Enhancement,Image Enhancement: methods,Image Processing,Imaging,Information Dissemination,Software,Software Design,Three-Dimensional,Three-Dimensional: methods}
     \endentry
@@ -1541,11 +1627,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Jupyter {{Notebooks}} -- a Publishing Format for Reproducible Computational Workflows}
+      \field{year}{2016}
       \verb{doi}
       \verb 10.3233/978-1-61499-649-1-87
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/MA5JNYF8/Kluyver et al. - 2016 - Jupyter Notebooks -- a publishing format for reproducible computational workflows.pdf
+      \verb /Users/habi/Zotero/storage/MA5JNYF8/Kluyver et al. - 2016 - Jupyter Notebooks -- a publishing format for reproducible computational workflows.pdf
       \endverb
     \endentry
     \entry{Wolf2021}{article}{}{}
@@ -1607,11 +1694,18 @@
       \field{abstract}{The aim of this study was to investigate the root canal system morphology by means of a root canal configuration (RCC) classification described with a four-digit system, the physiological foramen geometry and accessory canal frequency and morphology, of 101 mandibular canines (MaCa) of a Swiss-German population by means of micro-computed tomography. Micro-CT examination of the MaCa was performed and the obtained images analyzed with a 3D imaging software. In single-rooted MaCas, the most frequently observed RCCs were 1-1-1/1 (74.5\%) and 1-1-1/2 (14.3\%). Seven other RCCs were less frequently observed with a frequency from 4.1 to 1.0\%. One physiological foramen was observed in 80.6\% of the MaCas, two in 16.3\%, three in 1.0\% and four in 2.0\%. Accessory and connecting canals were apparent only in the middle and apical root thirds. Two-rooted MaCas occurred less frequently (n = 3). When one physiological foramen was present, the mean size of the narrow and wide diameters were 0.28 mm ({\textpm} 0.07) and 0.40 mm ({\textpm} 0.11), while the distance between physiological and anatomical foramen was 0.45 mm ({\textpm} 0.17). MaCas are predominantly single-rooted teeth with a 1-1-1/1 or 1-1-1/2 RCC. Most MaCas had one physiological foramen with an oval shape.}
       \field{issn}{2045-2322}
       \field{title}{Internal Morphology of 101 Mandibular Canines of a {{Swiss-German}} Population by Means of Micro-{{CT}}: {{An}} Ex Vivo Study}
+      \field{year}{2021}
       \verb{doi}
       \verb g7r8
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/AU948UHN/s41598-021-00758-w copy.pdf
+      \verb /Users/habi/Zotero/storage/AU948UHN/s41598-021-00758-w copy.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41598-021-00758-w
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41598-021-00758-w
       \endverb
     \endentry
     \entry{Briseno-Marroquin2015}{article}{}{}
@@ -1664,12 +1758,19 @@
       \field{urlday}{9}
       \field{urlmonth}{11}
       \field{urlyear}{2020}
+      \field{year}{2015}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.joen.2015.09.007
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/5FRE65F7/full-text.pdf
+      \verb /Users/habi/Zotero/storage/5FRE65F7/full-text.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0099239915008328
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0099239915008328
       \endverb
       \keyw{Foramina,maxillary first molar,micro-computed tomography,morphology,root canal configuration}
     \endentry
@@ -1698,9 +1799,16 @@
       \field{urlday}{9}
       \field{urlmonth}{11}
       \field{urlyear}{2020}
+      \field{year}{2020}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.5281/ZENODO.3999402
+      \endverb
+      \verb{urlraw}
+      \verb https://zenodo.org/record/3999402
+      \endverb
+      \verb{url}
+      \verb https://zenodo.org/record/3999402
       \endverb
     \endentry
     \entry{Wolf2017}{article}{}{}
@@ -1743,8 +1851,8 @@
       \strng{authorfullhash}{61b54fb10b56680ff2a39b33b4712bca}
       \strng{authorfullhashraw}{61b54fb10b56680ff2a39b33b4712bca}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The aim of this study was to investigate the physiological foramen diameter, shape and distance between physiological and anatomical apex of maxillary and mandibular first and second molars. Accurate knowledge of the physiological foramina morphology; thus, inherent mechanical shaping technical hindrances, is decisive when taking the corresponding root canal final preparation decision. The morphological dimensions of a total of 1 727 physiological foramina were investigated by means of micro-computed tomography. Mean narrow and wide (to a high number, oval) diameters of the physiological foramen were 0.24, 0.22 and 0.33 mm and 0.33, 0.31 and 0.42 mm in mesiobuccal (MB), distobuccal (DB) and palatal (P) roots in maxillary first molars; 0.24, 0.22 and 0.33 mm and 0.41, 0.33 and 0.44 in MB, DB, and P roots in maxillary second molars. Mandibular first molars showed mean narrow and wide diameters of 0.24 and 0.30 mm and of 0.39 and 0.46 mm in mesial (M) and distal (D) roots; second mandibular molars showed 0.25 and 0.31 mm and 0.47 mm in M and D roots. The mean distance between the physiological foramina and anatomical apex was 0.82, 0.81 and 1.02 mm and 0.54, 0.43 and 0.63 mm in MB, DB and P roots of the maxillary first and second molars, respectively. A mean distance of 0.95 mm (M) and 1.05 mm (D) in the first and 0.78 mm (M) and 0.81 mm (D) in the second mandibular molars was observed. Based on the results obtained, assumable recommendations for final preparation size of the physiological foramen were calculated. However, when taking into consideration, the resulting standard deviations of marginal errors must be cautiously considered when taking a final decision in clinical endodontic treatment.}
@@ -1754,13 +1862,22 @@
       \field{urlday}{10}
       \field{urlmonth}{11}
       \field{urlyear}{2020}
+      \field{year}{2017}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1038/ijos.2017.29
       \endverb
+      \verb{urlraw}
+      \verb http://www.nature.com/articles/ijos201729
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/articles/ijos201729
+      \endverb
       \keyw{Apical constriction,Final apical file,Maxillary and mandibular molars morphology,Micro-computed tomography,Physiological foramen}
     \endentry
   \enddatalist
+  \missing{Feldkamp1989}
+  \missing{Layton1988}
 \endrefsection
 \endinput
 
