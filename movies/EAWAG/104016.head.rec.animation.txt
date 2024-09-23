@@ -1,0 +1,87 @@
+// Start
+// General setup
+At frame 0:
+- change scalebar visibility to off  
+- change bounding box visibility to off
+// Full ROI
+- change all channels' bounding box x to (0.0, 1488.0)
+- change all channels' bounding box y to (0.0, 999.0)
+- change all channels' bounding box z to (0.0, 1889.0)
+- change all channels' front/back clipping to (-1278.0, 1278.0)
+// Original light
+- change channel 1 intensity to (0.0, 222.0, 1.0)
+- change channel 1 alpha to (0.0, 196.0, 2.0)
+- change channel 1 color to (255.0, 255.0, 255.0)
+- change channel 1 lookup table to fixed channel color
+- change channel 1 light to (1.0, 0.2, 0.2, 5.0)
+- change channel 1 lighting to on
+- change channel 1 weight to 1.0
+- change rendering algorithm to independent transparency
+- change background color to (255.0, 255.0, 255.0)
+// Starting position
+// Rotate from dataset start position to looking to the left on screen
+- reset transformation
+- rotate by -90.0 degrees around (0, 0, 1)
+- rotate by 90.0 degrees horizontally
+// Move to border of the frame
+- zoom by a factor of 0.5
+- translate by (300, 0, 0.0)
+// Move to OJ in 20 seconds (20*24)
+From frame 0 to frame 480:
+- rotate by -0.0 degrees around (0, 0, 1)
+- rotate by -90.0 degrees horizontally
+- zoom by a factor of 5.9
+- translate by (107.1, -922.5, -1783.2)
+// Move out to see whole head again in another 20 seconds (40*24)
+From frame 481 to frame 960:
+- rotate by 11.2 degrees vertically
+- rotate by -0.7 degrees around (0, 0, 1)
+- rotate by 49.0 degrees horizontally
+- zoom by a factor of 0.3
+- translate by (-13.9, 148.6, 39.1)
+// Crop left side of head to show otolith in another 20 seconds (60*24)
+From frame 961 to frame 1440:
+- change all channels' bounding box x to (0.0, 1488.0)
+- change all channels' bounding box y to (0.0, 445.0)
+- change all channels' bounding box z to (0.0, 1889.0)
+- change all channels' front/back clipping to (-1278.0, 1278.0)
+// Transition to otolith position
+- rotate by -1.0 degrees vertically
+- rotate by 0.0 degrees around (0, 0, 1)
+- rotate by 12.0 degrees horizontally
+- zoom by a factor of 2.5
+- translate by (2.8, 494.7, 4.2)
+- change channel 1 intensity to (58.0, 106.0, 1.0)
+- change channel 1 alpha to (13.0, 255.0, 2.0)
+// Transition to position where we can see the PJ nicely in another 20 seconds (80*24)
+From frame 1441 to frame 1920:
+- rotate by 1.7 degrees vertically
+- rotate by -0.1 degrees around (0, 0, 1)
+- rotate by -61.0 degrees horizontally
+- zoom by a factor of 1.0
+- translate by (-190.3, -530.2, 73.9)
+- change all channels' bounding box x to (300.0, 600.0)
+- change all channels' bounding box y to (210.0, 668.0)
+- change all channels' bounding box z to (943.0, 1506.0)
+- change all channels' front/back clipping to (-1278.0, 1278.0)
+- change all channels' bounding box x to (435.0, 709.0)
+- change all channels' bounding box y to (220.0, 634.0)
+- change all channels' bounding box z to (979.0, 1297.0)
+- change all channels' front/back clipping to (237.0, 1278.0)// Recorded transition
+- rotate by 33.5 degrees vertically
+- rotate by 0.0 degrees around (0, 0, 1)
+- rotate by -0.0 degrees horizontally
+- zoom by a factor of 0.8
+- translate by (183.7, 222.3, 168.2)
+// Transition to position that corresponds to second animation in 5 seconds (85*24) (120frames)
+// Like this we can moroh in another 5 seconds
+From frame 1921 to frame 2040:
+- rotate by -30.0 degrees vertically
+- rotate by 0.0 degrees around (0, 0, 1)
+- rotate by 0.0 degrees horizontally
+- zoom by a factor of 1.4
+- translate by (-4.0, -306.4, -1.1)
+- change all channels' bounding box x to (435.0, 709.0)
+- change all channels' bounding box y to (221.0, 652.0)
+- change all channels' bounding box z to (971.0, 1292.0)
+- change all channels' front/back clipping to (23.0, 1200.0)

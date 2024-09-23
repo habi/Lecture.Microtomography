@@ -1,0 +1,64 @@
+// Start
+// General setup
+At frame 0:
+- change scalebar visibility to off  
+- change bounding box visibility to off
+// Record cropping
+At frame 0:
+- change all channels' bounding box x to (0.0, 871.0)
+- change all channels' bounding box y to (0.0, 1165.0)
+- change all channels' bounding box z to (0.0, 1054.0)
+- change all channels' front/back clipping to (-898.1622924804688, 898.1622924804688)
+// Original light
+At frame 0:
+- change channel 1 intensity to (0.0, 255.0, 1.0)
+- change channel 1 alpha to (0.0, 200.0, 2.0)
+- change channel 1 color to (255.0, 255.0, 255.0)
+- change channel 1 lookup table to fixed channel color
+- change channel 1 light to (1.0, 0.2, 0.2, 5.0)
+- change channel 1 lighting to on
+- change channel 1 weight to 1.0
+- change rendering algorithm to independent transparency
+- change background color to (255.0, 255.0, 255.0)
+// Rotate tip down
+- rotate by 90.0 degrees vertically
+- rotate by -80.0 degrees around (0, 0, 1)
+- rotate by 90.0 degrees horizontally
+- translate by (0.0, -100.0, 0.0)
+- zoom by a factor of 1.4
+
+// Recorded transition to show side in 20 seconds (20*24)
+From frame 0 to frame 480:
+- rotate by -45.0 degrees vertically
+- rotate by -45.0 degrees around (0, 0, 1)
+- rotate by 70.0 degrees horizontally
+- translate by (-75.0, -75.0, -100.0)
+
+// Recorded transition
+From frame 481 to frame 960:
+- rotate by 12.0 degrees vertically
+- rotate by -4.0 degrees horizontally
+- zoom by a factor of 2.5
+- translate by (-116.2, 53.7, 76.4)
+// Recorded transition
+From frame 961 to frame 1440:
+- rotate by 24.5 degrees vertically
+- rotate by 31.4 degrees around (0, 0, 1)
+- rotate by 110.3 degrees horizontally
+- zoom by a factor of 0.5
+- translate by (66.4, 48.6, -6.1)// Recorded transition
+// Go back to start
+//From frame 145 to frame 192:
+- rotate by 7.8 degrees vertically
+- rotate by 17.9 degrees around (0, 0, 1)
+- rotate by 51.0 degrees horizontally
+- zoom by a factor of 0.8
+- translate by (116.1, -107.3, 26.4)
+- rotate by -43.5 degrees vertically
+- rotate by 38.5 degrees around (0, 0, 1)
+- rotate by 136.1 degrees horizontally
+- translate by (19.9, -114.8, 213.8)
+- rotate by 13.6 degrees vertically
+- rotate by 7.2 degrees around (0, 0, 1)
+- rotate by -7.0 degrees horizontally
+- translate by (0.8, 39.9, 34.6)

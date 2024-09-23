@@ -1214,97 +1214,162 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Metal foam analysis}
-\renewcommand{\imagewidth}{0.55\linewidth}%
-\begin{frame}
-	\frametitle{Metal foam}
-	\centering
-	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
-	\def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
-	\def\y{540}% scalebar-y at 90% of image height of 600px = 540
-	\only<1|handout:1>{
-	 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0000}};
-	% 		% 665.634px = 1.221973872mm -> 100px = 183.580um -> 272.360px = 500um, 54.472px = 100um
-	% 		%\draw[|-|,blue,thick] (67,245) -- (732,237) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{1.221973872}{\milli\meter} (666px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+272.360,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-		\end{tikzpicture}%
-	}%
-	\only<2|handout:0>{
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{000}{134}%
-	}%
-	\only<3|handout:0>{
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{135}{155}%
-	}%
-	\only<4|handout:0>{
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{156}{239}%
-	}%
-	\source{Etienne Berner}{NanoElectroCatalysis Group}
-\end{frame}
+% \subsection{Metal foam analysis}
+% \renewcommand{\imagewidth}{0.55\linewidth}%
+% \begin{frame}
+% 	\frametitle{Metal foam}
+% 	\centering
+% 	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
+% 	\def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
+% 	\def\y{540}% scalebar-y at 90% of image height of 600px = 540
+% 	\only<1|handout:1>{
+% 	 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+% 		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0000}};
+% 	% 		% 665.634px = 1.221973872mm -> 100px = 183.580um -> 272.360px = 500um, 54.472px = 100um
+% 	% 		%\draw[|-|,blue,thick] (67,245) -- (732,237) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{1.221973872}{\milli\meter} (666px) TEMPORARY!};
+% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+272.360,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+% 		\end{tikzpicture}%
+% 	}%
+% 	\only<2|handout:0>{
+% 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{000}{134}%
+% 	}%
+% 	\only<3|handout:0>{
+% 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{135}{155}%
+% 	}%
+% 	\only<4|handout:0>{
+% 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/metal_foam/HART_0.4um_Al0.25mm_180_rec_frames/HART_0.4um_Al0.25mm_180_rec0}{156}{239}%
+% 	}%
+% 	\source{Etienne Berner}{NanoElectroCatalysis Group}
+% \end{frame}
 
-\subsection{A study on fish}
-\begin{frame}
+ \subsection{A study on fish}
+ \begin{frame}
 	\frametitle{Data wrangling by example: Cichlids}
 	\begin{columns}
-			\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\linewidth}
 			Collaboration with team of \href{https://www.aqua.iee.unibe.ch/}{\emph{Aquatic Ecology \& Evolution}}, from the \href{https://www.iee.unibe.ch/}{Institute of Ecology and Evolution}~\footcite{Haberthuer2023}
-		\begin{itemize}
-					\item 133 Cichlids from Lake Victoria, East Africa
-					\begin{itemize}
-						\item Functional anatomy of the skulls and jaws
-						\item<2-> \qtyrange{6}{18}{\centi\meter} in size
-					\end{itemize}
-					\item<7-> 375 scans in total
-					\begin{itemize}
-						\item<7-> Voxelsizes from \qtyrange{3.5}{50}{\micro\meter}
-						\item<7-> 46 days of scanning time
-						\item<7-> \qty{9.8}{\tera\byte} of raw data
-						\item<7-> \qty{1.5}{\tera\byte}/+\num{1000000} reconstructions
-					\end{itemize}
+			\begin{itemize}
+				\item 133 Cichlids from Lake Victoria, East Africa
+				\begin{itemize}
+					\item Functional anatomy of the skulls and jaws
+					\item<2-> \qtyrange{6}{18}{\centi\meter} in size
 				\end{itemize}
-			\end{column}
-		\begin{column}{0.49\linewidth}
-			\centering%
-			\includegraphics<1|handout:1>[height=\imageheight]{./images/cichlids/104016}%
+				\item<7-> 375 scans in total
+				\begin{itemize}
+					\item<7-> Voxelsizes from \qtyrange{3.5}{50}{\micro\meter}
+					\item<7-> 46 days of scanning time
+					\item<7-> \qty{9.8}{\tera\byte} of raw data
+					\item<7-> \qty{1.5}{\tera\byte}/+\num{1000000} reconstructions
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\linewidth}
+			\centering
+			\only<1>{%
+				\includegraphics[width=\imagewidth]{./images/cichlids/journal.pone.0291003.g001.png}%
+				\sourcelink{https://doi.org/10.1371/journal.pone.0291003.g001}{DOI:gsst8t}{Fig.~1}%
+				}%
 			\only<2|handout:0>{%
-				\lstinputlisting[linerange={2-4,7-7,15-18,28-29,31-31,36-37,42-42,45-45,55-56}]{./movies/EAWAG/161543/head_30um/proj/161543.log}%
+				\lstinputlisting[linerange={2-4,7-7,15-18,28-29,31-31,36-37,42-42,45-45,55-56}]{./movies/EAWAG/104016/head/proj/104016.log}%
+				}%
+			\only<3|handout:0>{%
+				\lstinputlisting[linerange={2-4,7-7,15-18,28-29,31-31,36-37,42-42,45-45,55-56}]{./movies/EAWAG/104016/pharynx/proj/104016.log}%
 				}%
 		\end{column}
 	\end{columns}
+ \end{frame}
+\end{document}
+\begin{frame}
+	\frametitle{Visualization of cichlid head}
+	% Generate animations in ImageJ with 3Dscript (files are in repository)
+	% Save out as .tif slices
+	% mogrify -format png -transparent "rgb(255,255,255)" -fuzz 4% *.tif
+	\centering%
+	\only<1>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/1280}%
+		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
+		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./media/EAWAG/animation.head/104016.head.rec.animation.0000.png}};
+			% 196.739px = 6.045mm -> 100px = 3072.594um -> 16.273px = 500um, 3.255px = 100um
+			\draw[|-|,white,shadowed] (652,353) -- (849,369) node [sloped,midway,above] {\shadowtext{\(\approx\)\SI{6}{\milli\meter}}};
+		\end{tikzpicture}%
+	}
+	\only<2>{%
+		% Show PJ
+		%\begin{tikzpicture}[remember picture,overlay]%
+			%\node at (current page.center) {%
+				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./media/EAWAG/animation.head/104016.head.rec.animation.0}{000}{480}%
+			%};%
+		%\end{tikzpicture}%
+	}%
+	\only<3>{%
+		% Show full head again
+		%\begin{tikzpicture}[remember picture,overlay]%
+			%\node at (current page.center) {%
+				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./media/EAWAG/animation.head/104016.head.rec.animation.}{0481}{0960}%
+			%};%
+		%\end{tikzpicture}%
+	}%
+	\only<4>{%
+		% Show full head again
+		%\begin{tikzpicture}[remember picture,overlay]%
+			%\node at (current page.center) {%
+				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./media/EAWAG/animation.head/104016.head.rec.animation.}{0961}{1440}%
+			%};%
+		%\end{tikzpicture}%
+	}%
+	\only<5>{%
+		%Move to PJ
+		%\begin{tikzpicture}[remember picture,overlay]%
+			%\node at (current page.center) {%
+				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./media/EAWAG/animation.head/104016.head.rec.animation.}{1441}{1920}%
+			%};%
+		%\end{tikzpicture}%
+	}%
+	\note[item]<1>{Fish 104016, Scan head\_rec; This fish was scanned on 2022-01-27T13:32:59 on the SkyScan2214, with a voxel size of \qty{13.0}{\micro\meter}.}
+	\note[item]<1>{The eye has a diameter of approximately \qty{6}{\milli\meter}.}
+	\note[item]<1>{DOI:10.1002/ece3.9669: The detritivorous Enterochromis cinctus Greenwood \& Gee, 1969 has a red dorsum and a bright yellow flank too but it has dark vertical bars and lacks any mid-lateral band. Before the near extinctions, it used to occur at depths between \qtyrange{13}{60}{\meter}(Greenwood \& Gee, 1969).}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Cichlids}
-		\centering
-		% # Fish 161543, Scan head_30um_rec was scanned with 30 um
-		% 161543 is 17 cm long
-		% For the visualisation, we binned the stack 2x, thus have a voxel size of 60 um
-		% The image is 1412 pixels high, so we used `python ~/P/Dev/latex/draw_a_scalebar.py -p 12 -i frames/video-0000.jpg -l 1412` to draw a scale bar
-		\renewcommand{\imagewidth}{0.7\linewidth}%
-		\only<1|handout:1>{%
-		\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}% shadowed drawing https://tex.stackexchange.com/a/185853/828
-			\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
-			\def\x{633-50}% scalebar-x starting at golden ratio of image width of 1024px = 633
-			\def\y{540}% scalebar-y at 90% of image height of 600px = 540
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/161543/head_30um/frames/video-0000}};%
-				% 586.337px = 88.08mm -> 100px = 15022.075um -> 3.328px = 500um, 0.666px = 100um
-				%\draw[|-|,blue,thick] (955,6) -- (960,592) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{88.08}{\milli\meter} (586px) TEMPORARY!};%
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+332.8,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};%
-			\end{tikzpicture}%
+	\frametitle{Visualization of segmented pharyngeal jaw}
+	\centering
+	\only<1>{%
+		%Animate from head-dataset to segmented pj
+		%\begin{tikzpicture}[remember picture,overlay]%
+			%\node at (current page.center) {%
+				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./media/EAWAG/animation.head2pj/morphed.0}{000}{240}%
+			%};%
+		%\end{tikzpicture}
 		}%
-		\only<2|handout:0>{%
-			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{000}{082}%
-		}%
-		\only<3|handout:0>{%
-			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{082}{162}%
-		}%
-		\only<4|handout:0>{%
-			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{162}{241}%
-		}%
-		\only<5|handout:0>{%
-			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/161543/head_30um/frames/video-0}{241}{320}%
-		}%
+	\only<2>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/1280}%
+		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
+		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./media/EAWAG/animation.pj/104016.pj.animation.0000.png}};
+			% 846.456px = 4.9mm -> 100px = 578.885um -> 86.373px = 500um, 17.275px = 100um
+			\draw[|-|,white,shadowed] (209,23) -- (1055,26) node [sloped,midway,below] {\shadowtext{\(\approx\)\SI{5}{\milli\meter}}};
+		\end{tikzpicture}%
+	}%
+	\only<3>{%
+		%\begin{tikzpicture}[remember picture,overlay]%
+			%\node at (current page.center) {%
+				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./media/EAWAG/animation.pj/104016.pj.animation.0}{000}{700}%
+			%};%
+		%\end{tikzpicture}%
+	}%
+	\only<4>{%
+	%\begin{tikzpicture}[remember picture,overlay]%
+		%\node at (current page.center) {%
+			\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./media/EAWAG/animation.pj/104016.pj.animation.}{0701}{1440}%
+		%};%
+	%\end{tikzpicture}%
+	}%
+	\note[item]<1>{Fish 104016, Scan pharynx\_rec; This fish was scanned on 2021-02-04T13:30:11 on the SkyScan1272, with a voxel size of \qty{5.0}{\micro\meter}.}
+	\note[item]<1>{The distance between the two ends at the top is approximately \qty{5}{\milli\meter}.}
+	\note[item]<1>{A human hair typically has a thickness ranging from \qtyrange{17}{181}{\micro\meter}, depending on various factors like the individual's hair type, age, and ethnicity. On average, most human hair strands fall between \qtyrange{50}{100}{\micro\meter} in diameter.}
 \end{frame}
 
 \begin{frame}
