@@ -13,45 +13,45 @@
 	% If we're compiling this file via \input, then these variables are already defined.
 	% In the other case, we need to define them
 	\newcommand{\everyframe}{5}
-	\definecolor{ubRed}{HTML}{E6002E}
-	% split complementary images from https://www.sessions.edu/color-calculator/
-	\definecolor{ubRedComplementary}{HTML}{2EE600}
-	\definecolor{ubRedComplementary2}{HTML}{00e645}
-	\definecolor{ubGrey}{RGB}{217,217,217}
+	\definecolor{ubRed}{HTML}{e4003c}%
+	\definecolor{ubGrey}{HTML}{646363}%
+	\definecolor{ubRedComplementary}{HTML}{00E3A6}
 	}{}
 \begin{document}
 \begin{animateinline}[loop,every=\everyframe]{25}
 	\multiframe{90}{n=1+4}{%
-		\begin{tikzpicture}[scale=1.125]
+		\begin{tikzpicture}[scale=1.618]
 			\pgfdeclarelayer{background}
 			\pgfsetlayers{background,main}
-			%Help lines
-			\begin{pgfonlayer}{background}
-				\draw[ubGrey,transparent] (-2.25,0) -- (2.25,0);
-				\draw[ubGrey,transparent] (0,-2.25) -- (0,2.25);
-				\draw[ubGrey,transparent,help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);
-			\end{pgfonlayer}
+			\mode<beamer>{%
+				%Help lines, to force same size of images
+				\begin{pgfonlayer}{background}
+					\draw[ubGrey,transparent] (-2.25,0) -- (2.25,0);
+					\draw[ubGrey,transparent] (0,-2.25) -- (0,2.25);
+					\draw[ubGrey,transparent,help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);
+				\end{pgfonlayer}
+			}%
 			% Stuff that stays put
 			% Source
-			\fill[ubRed] (-0.25,1) rectangle node (source) {} +(0.5,0.5);
+			\fill[red] (-0.25,1) rectangle node (source) {} +(0.5,0.5);
 			\draw[fill=yellow] (0,1.25) circle (0.2);
-			\node at (0,1.235) (radiation) {\small\faRadiation};
+			\node at (0,1.235) (radiation) {\faRadiation};
 			% Detector and detector edges
-			\fill[gray] (-0.5,-1.25) rectangle node (detector) {} +(1,0.25);
+			\fill[ubGrey] (-0.5,-1.25) rectangle node (detector) {} +(1,0.25);
 			\coordinate (dl) at (-0.45,-1);
 			\coordinate (dr) at (0.45,-1);
 			% X-ray cone
 			\begin{pgfonlayer}{background}
-				\fill[gray,semitransparent] (source.center) -- (dl) -- (dr) -- cycle;
+				\fill[ubGrey,semitransparent] (source.center) -- (dl) -- (dr) -- cycle;
 			\end{pgfonlayer}
 			% Stuff that moves
-				\begin{scope}[rotate around={\n:(0,-0.5)}]
+			\begin{scope}[rotate around={\n:(0,-0.5)}]
 				% Rotation arc
-				\draw[->, thick,line cap=rect] (0.618,-0.5) arc [start angle=0, end angle=180, radius=0.618];
-				\draw[->, thick,line cap=rect] (-0.618,-0.5) arc [start angle=-180, end angle=0, radius=0.618];
+				\draw[->, thick,line cap=rect] (0.5,-0.5) arc [start angle=0, end angle=180, radius=0.5];
+				\draw[->, thick,line cap=rect] (-0.5,-0.5) arc [start angle=-180, end angle=0, radius=0.5];
 				% Sample
 				\node[ubRedComplementary] at (0,-0.5) (sample) {\rotatebox{\n}{\huge\faFish}};
-				\end{scope}
+			\end{scope}
 		\end{tikzpicture}
 	}
 \end{animateinline}
