@@ -16,13 +16,11 @@ jobs:
       shell: perl {0}
       run: |
         do './perl/gitinfo2.pm';
-    - name: Compile handout, presentation and notes. Presentation and notes are not uploaded, but go into workflow artefacts
+    - name: Compile handout, presentation and notes.
       uses: xu-cheng/latex-action@v3
       with:
         root_file: |
           XRayMicroTomography.Handout.tex
-          XRayMicroTomography.Presentation.tex
-          XRayMicroTomography.Notes.tex
     - name: Check handout PDF
       run: |
         file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
