@@ -1004,42 +1004,44 @@
       \endverb
       \keyw{Data acquisition,Data visualization,Fish biology,Image processing,Jaw,Otolith,Skull,X-ray radiography}
     \endentry
-    \entry{Cormack1963}{article}{}{}
+    \entry{Beckmann2006}{article}{}{}
       \name{author}{1}{}{%
-        {{hash=ed7cf735165a23ae53379b52a3248bf0}{%
-           family={Cormack},
-           familyi={C\bibinitperiod},
-           given={A.\bibnamedelimi M.},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f11518cd561a6dbc0e299636fa234110}{%
+           family={Beckmann},
+           familyi={B\bibinitperiod},
+           given={E\bibnamedelima C},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {American Institute of Physics}%
-      }
-      \strng{namehash}{ed7cf735165a23ae53379b52a3248bf0}
-      \strng{fullhash}{ed7cf735165a23ae53379b52a3248bf0}
-      \strng{fullhashraw}{ed7cf735165a23ae53379b52a3248bf0}
-      \strng{bibnamehash}{ed7cf735165a23ae53379b52a3248bf0}
-      \strng{authorbibnamehash}{ed7cf735165a23ae53379b52a3248bf0}
-      \strng{authornamehash}{ed7cf735165a23ae53379b52a3248bf0}
-      \strng{authorfullhash}{ed7cf735165a23ae53379b52a3248bf0}
-      \strng{authorfullhashraw}{ed7cf735165a23ae53379b52a3248bf0}
+      \strng{namehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{fullhash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{fullhashraw}{f11518cd561a6dbc0e299636fa234110}
+      \strng{bibnamehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authorbibnamehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authornamehash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authorfullhash}{f11518cd561a6dbc0e299636fa234110}
+      \strng{authorfullhashraw}{f11518cd561a6dbc0e299636fa234110}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{A method is given of finding a real function in a finite region of a plane given its line integrals along all straight lines intersecting the region. The solution found is applicable to three probl...}
-      \field{issn}{00218979}
-      \field{month}{9}
-      \field{title}{Representation of a {{Function}} by {{Its Line Integrals}}, with {{Some Radiological Applications}}}
-      \field{urlday}{2}
-      \field{urlmonth}{11}
+      \field{abstract}{CT scanning has become an established diagnostic tool within the radiology department. This article covers some of the history of the development and early days of CT scanning. It is based upon the lecture given on the Memorial Day for Sir Godfrey Hounsfield during the British Institute of Radiology President's Conference 2005.}
+      \field{issn}{0007-1285}
+      \field{month}{1}
+      \field{title}{{{CT}} Scanning the Early Days.}
+      \field{urlday}{16}
+      \field{urlmonth}{3}
       \field{urlyear}{2012}
+<<<<<<< Updated upstream
       \field{year}{1963}
+=======
+      \field{year}{2006}
+>>>>>>> Stashed changes
       \field{urldateera}{ce}
       \verb{doi}
-      \verb 10.1063/1.1729798
+      \verb 10.1259/bjr/29444122
       \endverb
       \verb{file}
+<<<<<<< Updated upstream
       \verb /Users/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
       \endverb
       \verb{urlraw}
@@ -1065,10 +1067,36 @@
       \strng{authornamehash}{5b87eb90495f912086684cbb9a03b999}
       \strng{authorfullhash}{5b87eb90495f912086684cbb9a03b999}
       \strng{authorfullhashraw}{5b87eb90495f912086684cbb9a03b999}
+=======
+      \verb /home/habi/Zotero/storage/QCVD4992/Beckmann - 2006 - CT scanning the early days.pdf
+      \endverb
+      \keyw{20th Century,Animals,Computer-Assisted,Equipment Design,History,Humans,Image Interpretation,Swine,Tomography,Tomography Scanners,X-Ray Computed,X-Ray Computed: history,X-Ray Computed: instrumentation}
+    \endentry
+    \entry{Hsieh2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=04723f860550f84b6efa7cbd0264669a}{%
+           family={Hsieh},
+           familyi={H\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society of Photo Optical}%
+      }
+      \strng{namehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{fullhash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{fullhashraw}{04723f860550f84b6efa7cbd0264669a}
+      \strng{bibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorbibnamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authornamehash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorfullhash}{04723f860550f84b6efa7cbd0264669a}
+      \strng{authorfullhashraw}{04723f860550f84b6efa7cbd0264669a}
+>>>>>>> Stashed changes
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+<<<<<<< Updated upstream
       \field{title}{Historical Notes on Computerized Axial Tomography.}
       \field{year}{1976}
     \endentry
@@ -1151,6 +1179,15 @@
       \verb http://books.google.com/books?id=JX__lLLXFHkC
       \endverb
     \endentry
+=======
+      \field{title}{Computed Tomography: Principles, Design, Artifacts, and Recent Advances}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2011}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+    \endentry
+>>>>>>> Stashed changes
     \entry{Lin2019}{incollection}{}{}
       \name{author}{3}{}{%
         {{hash=f7c9150d415d9b0dcd1102ab00083ba2}{%
@@ -1183,8 +1220,8 @@
       \strng{authornamehash}{21278b324aca409573e33503968f922f}
       \strng{authorfullhash}{861994b9aefe2311db06444ea842fda4}
       \strng{authorfullhashraw}{861994b9aefe2311db06444ea842fda4}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Since Röntgen discovered x-rays at the end of the nineteenth century and established their usefulness for medical diagnostics imaging, many technological advances have allowed for x-rays to be employed in even more powerful ways. This includes utilizing x-rays for tomographic imaging and quantification.}
@@ -1234,8 +1271,14 @@
       \strng{authornamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
       \strng{authorfullhash}{f635c34fd0e821789bb7e8d8496b34dc}
       \strng{authorfullhashraw}{f635c34fd0e821789bb7e8d8496b34dc}
+<<<<<<< Updated upstream
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+=======
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+>>>>>>> Stashed changes
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A convolution-backprojection formula is deduced for direct reconstruction of a three-dimensional density function from a set of two-dimensional projections. The formula is approximate but has useful properties, including errors that are relatively small in many practical instances and a form that leads to convenient computation. It reduces to the standard fan-beam formula in the plane that is perpendicular to the axis of rotation and contains the point source. The algorithm is applied to a mathematical phantom as an example of its performance.}
@@ -1251,6 +1294,7 @@
       \verb{doi}
       \verb 10.1364/JOSAA.1.000612
       \endverb
+<<<<<<< Updated upstream
       \verb{urlraw}
       \verb https://opg.optica.org/josaa/abstract.cfm?uri=josaa-1-6-612
       \endverb
@@ -1414,33 +1458,67 @@
       \endverb
       \verb{url}
       \verb http://link.springer.com/10.1007/s10278-013-9622-7
-      \endverb
+=======
     \endentry
-    \entry{Schindelin2012}{article}{}{}
-      \name{author}{16}{}{%
-        {{hash=ac82c7686cb5af1a978185f449f30702}{%
-           family={Schindelin},
-           familyi={S\bibinitperiod},
-           given={Johannes},
-           giveni={J\bibinitperiod}}}%
-        {{hash=fb4a9b4f8cb47f8bee748d32779b7d01}{%
-           family={{Arganda-Carreras}},
-           familyi={A\bibinitperiod},
-           given={Ignacio},
-           giveni={I\bibinitperiod}}}%
-        {{hash=0a776e2acaca3da7f09464eed966703a}{%
-           family={Frise},
+    \entry{Feldkamp1989}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=aa740ea0ddcc2e8637d38e83d3ccb538}{%
+           family={Feldkamp},
            familyi={F\bibinitperiod},
-           given={Erwin},
-           giveni={E\bibinitperiod}}}%
-        {{hash=cf3458a8158dd8bcbccb1d9f3bae1444}{%
-           family={Kaynig},
+           given={L.\bibnamedelimi A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=05ba625c07212300b76bcb18258cbf51}{%
+           family={Goldstein},
+           familyi={G\bibinitperiod},
+           given={S.\bibnamedelimi A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a1213817ae89681223c9d247e4843928}{%
+           family={Parfitt},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=dcec4aab1f7772525bc84b02333c3077}{%
+           family={Jesion},
+           familyi={J\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ca9b6cb9ac2801a92e41d95e110afe09}{%
+           family={Kleerekoper},
            familyi={K\bibinitperiod},
-           given={Verena},
-           giveni={V\bibinitperiod}}}%
-        {{hash=f8d350e633e669ecce76f53a255ca7e6}{%
-           family={Longair},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f350c0f03f5a13447f096a2c42a9a8b1}
+      \strng{fullhash}{880fd80f98ab9d01023b98ed463a445e}
+      \strng{fullhashraw}{880fd80f98ab9d01023b98ed463a445e}
+      \strng{bibnamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
+      \strng{authorbibnamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
+      \strng{authornamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
+      \strng{authorfullhash}{880fd80f98ab9d01023b98ed463a445e}
+      \strng{authorfullhashraw}{880fd80f98ab9d01023b98ed463a445e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe a new method for the direct examination of three-dimensional bone structure in vitro based on high-resolution computed tomography (CT). Unlike clinical CT, a three-dimensional reconstruction array is created directly, rather than a series of two-dimensional slices. All structural indices commonly determined from two-dimensional histologic sections can be obtained nondestructively from a large number of slices in each of three orthogonal directions. This permits a comprehensive description of structural variation within a specimen and greatly facilitates the study of structural anisotropy. A measure of three-dimensional connectivity (Euler number/tissue volume) has been determined for the first time in human cancellous bone and shown to correlate with several two-dimensional histomorphometric indices. The method has the potential for overcoming many of the limitations of current approaches to the study of bone architecture at the microscopic level.}
+      \field{issn}{0884-0431}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{title}{The Direct Examination of Three-Dimensional Bone Architecture in Vitro by Computed Tomography}
+      \field{year}{1989}
+      \verb{doi}
+      \verb 10.1002/jbmr.5650040103
+>>>>>>> Stashed changes
+      \endverb
+      \keyw{Bone and Bones,Humans,Image Processing Computer-Assisted,Tomography X-Ray Computed}
+    \endentry
+    \entry{Layton1988}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=25981402a57e86c631827aa8d67e7841}{%
+           family={Layton},
            familyi={L\bibinitperiod},
+<<<<<<< Updated upstream
            given={Mark},
            giveni={M\bibinitperiod}}}%
         {{hash=74624b572b3fd665ada5f45e837b3fad}{%
@@ -1557,32 +1635,19 @@
            giveni={F\bibinitperiod}}}%
         {{hash=da7210cb80d97a3a426f16a9d4f40d24}{%
            family={Granger},
+=======
+           given={M.\bibnamedelimi W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=05ba625c07212300b76bcb18258cbf51}{%
+           family={Goldstein},
+>>>>>>> Stashed changes
            familyi={G\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod}}}%
-        {{hash=7f34166865a83ff30f9d4413ef06b9c4}{%
-           family={Bussonnier},
-           familyi={B\bibinitperiod},
-           given={Matthias},
-           giveni={M\bibinitperiod}}}%
-        {{hash=0f7d9893defe60d76157e1cadb5400c0}{%
-           family={Frederic},
-           familyi={F\bibinitperiod},
-           given={Jonathan},
-           giveni={J\bibinitperiod}}}%
-        {{hash=deedcc61b45535cf6338ad78ce8f8232}{%
-           family={Kelley},
-           familyi={K\bibinitperiod},
-           given={Kyle},
-           giveni={K\bibinitperiod}}}%
-        {{hash=05461f0d944dc591c3ec713dc214129b}{%
-           family={Hamrick},
-           familyi={H\bibinitperiod},
-           given={Jessica},
-           giveni={J\bibinitperiod}}}%
-        {{hash=fd289a69d047befbdbf4cdb8c13e5114}{%
-           family={Grout},
+           given={S.\bibnamedelimi A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5da350e9beaf883bffbed82416d4d90f}{%
+           family={Goulet},
            familyi={G\bibinitperiod},
+<<<<<<< Updated upstream
            given={Jason},
            giveni={J\bibinitperiod}}}%
         {{hash=983b7e23a76250681fa9f1b243743ee6}{%
@@ -1835,10 +1900,27 @@
            giveni={B\bibinitperiod}}}%
         {{hash=7a41b26f38c6ace1e4182a108e47e7b1}{%
            family={{Briseño-Marroquín}},
+=======
+           given={R.\bibnamedelimi W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=aa740ea0ddcc2e8637d38e83d3ccb538}{%
+           family={Feldkamp},
+           familyi={F\bibinitperiod},
+           given={L.\bibnamedelimi A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=69c1e49ba7dd0373d2bdc54d2d41fa90}{%
+           family={Kubinski},
+           familyi={K\bibinitperiod},
+           given={D.\bibnamedelimi J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9875951fa10978b5446878a84e80a41b}{%
+           family={Bole},
+>>>>>>> Stashed changes
            familyi={B\bibinitperiod},
-           given={Benjamín},
-           giveni={B\bibinitperiod}}}%
+           given={G.\bibnamedelimi G.},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
+<<<<<<< Updated upstream
       \list{publisher}{1}{%
         {Sichuan University Press}%
       }
@@ -1864,9 +1946,30 @@
       \field{urlyear}{2020}
       \field{year}{2017}
       \field{urldateera}{ce}
+=======
+      \strng{namehash}{6d29e7981affa704f01f02448642bbe5}
+      \strng{fullhash}{3616835fbe3133a51290eaafbb2f0a02}
+      \strng{fullhashraw}{3616835fbe3133a51290eaafbb2f0a02}
+      \strng{bibnamehash}{6d29e7981affa704f01f02448642bbe5}
+      \strng{authorbibnamehash}{6d29e7981affa704f01f02448642bbe5}
+      \strng{authornamehash}{6d29e7981affa704f01f02448642bbe5}
+      \strng{authorfullhash}{3616835fbe3133a51290eaafbb2f0a02}
+      \strng{authorfullhashraw}{3616835fbe3133a51290eaafbb2f0a02}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Subchondral bone changes have been proposed as an early event in the pathogenesis of osteoarthritis. In this study, microscopic computed axial tomography was used to evaluate the subchondral bone structure in femoral heads from a guinea pig model of osteoarthritis. Examination of trabecular bone within the femoral head showed a highly significant increase in bone fraction in the experimental animals. This was due to the development of trabeculae that were thicker and closer together. We conclude that trabecular remodeling may be an early event in this model of osteoarthritis.}
+      \field{issn}{0004-3591}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Examination of Subchondral Bone Architecture in Experimental Osteoarthritis by Microscopic Computed Axial Tomography}
+      \field{year}{1988}
+>>>>>>> Stashed changes
       \verb{doi}
-      \verb 10.1038/ijos.2017.29
+      \verb 10.1002/art.1780311109
       \endverb
+<<<<<<< Updated upstream
       \verb{urlraw}
       \verb http://www.nature.com/articles/ijos201729
       \endverb
@@ -1874,6 +1977,9 @@
       \verb http://www.nature.com/articles/ijos201729
       \endverb
       \keyw{Apical constriction,Final apical file,Maxillary and mandibular molars morphology,Micro-computed tomography,Physiological foramen}
+=======
+      \keyw{Animals,Bone and Bones,Cartilage Articular,Guinea Pigs,Male,Osteoarthritis,Tomography X-Ray Computed}
+>>>>>>> Stashed changes
     \endentry
   \enddatalist
   \missing{Feldkamp1989}

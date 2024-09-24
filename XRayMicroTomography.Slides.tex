@@ -150,10 +150,11 @@
 	\progressbar@tmpdim=\progressbar@pbwd%
 	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
 	\divide\progressbar@tmpdim by \progressbar@tmpcountb
-			\begin{tikzpicture}%
+  			\begin{tikzpicture}%
 				\draw[ubRed] (0,0) -- ++ (\progressbar@pbwd,0);%
 				\draw[draw=ubRed,fill=white] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
 			\end{tikzpicture}%
+			}%
 		}%
 \addtobeamertemplate{footline}{}%
 {%
@@ -270,19 +271,46 @@
 	\tableofcontents
 \end{frame}
 
-%\section{Overview \& Imaging methods}
-%\begin{frame}
-%	\frametitle{\uct}
-%	\begin{itemize}
-%		\item Dense and/or non‐transparent samples
-%		\item Calibrated \& isotropic 3D images at micron resolutions
-%		\item Covers a very large range of sample sizes
-%		\item Gives information at different length scales
-%	 	\item Nondestructive imaging, thus compatible with routine sample preparation.\newline
-%			Enables correlative imaging pipelines, scanning of museum \& collection material
-%	\end{itemize}
-%\end{frame}
+\section{Overview \& Imaging methods}
+\begin{frame}
+	\frametitle{\uct}
+	\begin{itemize}
+		\item Dense and/or non‐transparent samples
+		\item Calibrated \& isotropic 3D images at micron resolutions
+		\item Covers a very large range of sample sizes
+		\item Gives information at different length scales
+	 	\item Nondestructive imaging, thus compatible with routine sample preparation.\newline
+			Enables correlative imaging pipelines, scanning of museum \& collection material
+	\end{itemize}
+\end{frame}
 
+\begin{frame}
+	\frametitle{Biomedical imaging}%
+	\begin{columns}%
+		\begin{column}{0.618\linewidth}%
+			\begin{itemize}%
+				\item<1-|handout:1-> Medical research%
+				\item<1-|handout:1-> Non-destructive insights into the samples%
+				\item<2-|handout:1-> (Small) Biological samples%
+			\end{itemize}%
+		\end{column}%
+		\begin{column}{0.382\linewidth}%
+			\centering%
+			\only<1-2|handout:1>{%
+				\includegraphics[width=\imagewidth]{./images/Sagittal_brain_MRI}%
+				\source{w.wiki/7g4}{\ccbysa}%
+			}%
+			\only<3|handout:2>{%
+				\begin{tikzpicture}[remember picture,overlay]%
+					\node at (current page.center){%
+						\mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
+						\mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull075}}
+					};%
+				\end{tikzpicture}%
+			}%
+		\end{column}%
+	\end{columns}%
+\end{frame}
 \begin{frame}
 	\frametitle{Biomedical imaging}%
 	\begin{columns}%
@@ -323,6 +351,18 @@
  		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{with permission}%
  		}
  \end{frame}
+\begin{frame}
+ 	\frametitle{Wavelengths \& Scales}
+ 	\centering
+ 	\only<1|handout:1>{%
+ 		\includegraphics[height=\imageheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
+ 		\source{w.wiki/7fz}{\ccbysa}%
+ 		}%
+ 	\only<2|handout:2>{%
+ 		\frame{\includegraphics[height=\imageheight]{./images/MIC-AM_techniques}}%
+ 		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{with permission}%
+ 		}
+ \end{frame}
 
 \begin{frame}
 	\frametitle{Imaging methods}
@@ -337,7 +377,37 @@
  		\end{itemize}
  	\end{itemize}
  \end{frame}
+\begin{frame}
+	\frametitle{Imaging methods}
+ 	\begin{itemize}
+ 		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
+ 		\item X-ray imaging
+ 		\item Electron microscopy
+ 		\begin{itemize}
+ 			\item \href{https://moodle.bfh.ch/course/section.php?id=546756}{\emph{Analytical electron microscopy} by Dimitri}
+ 			\item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177954.html}{\emph{SEM Grundlagen} by Sabine Kässmeyer and Ivana Jaric}
+ 			\item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177956.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan}
+ 		\end{itemize}
+ 	\end{itemize}
+ \end{frame}
 
+ \section{Tomography}
+ \begin{frame}
+ 	\frametitle{CT-Scanner}
+ 	\centering
+ 	\mode<beamer>{%
+ 		\animategraphics[loop,autoplay,height=\imageheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
+ 		\source{youtu.be/2CWpZKuy-NE}{}%
+ 		}
+ 	\mode<handout>{%
+ 		\includegraphics[height=\imageheight]{./movies/ct-scanner/ct-scanner0001}%
+ 		\source{youtu.be/2CWpZKuy-NE}{}%
+ 		}
+ 	\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}{Bruker Homepage}:
+ 		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
+ 		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
+ 		No sample preparation, no staining, no thin slicing - a single scan will image your sample's complete internal 3D structure at high resolution, plus you get your intact sample back at the end!}
+\end{frame}
  \section{Tomography}
  \begin{frame}
  	\frametitle{CT-Scanner}
@@ -424,7 +494,24 @@
 				\item \(\approx\)2500 \uct systems are in use worldwide with over 1000 publications annually
 			\end{itemize}
 \end{frame}
-
+\begin{frame}[allowframebreaks]
+	\frametitle{\uct History}
+			\begin{itemize}
+				\item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}
+				\item  In the early 1980s, Lee Feldkamp~\cite{Feldkamp1984} developed one of the early laboratory microCT systems by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to nondestructively detect damage in ceramic manufactured automobile parts
+				\item Met with scientists at Henry Ford Hospital and University of Michigan interested in understanding bone microstructure~\cite{Feldkamp1989} and osteoarthritis~\cite{Layton1988}
+				\item 1987: The first commercially available \uct scanner was developed by SkyScan (now Bruker)
+				\pagebreak
+				\item Today: \uct is widely used in various fields for non-destructive imaging
+				\begin{itemize}
+					\item quantifying the microstructure of organic materials, particularly mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties
+					\item Material Science: internal structure of composites, foams, and other materials. Understand the relationship between structure and properties.
+					\item Biomedical Research: microarchitecture of bone tissue, dental research, and small animal imaging. Since the 1990s, \uct includes imaging of soft tissues and vasculature using radio-opaque contrast agents
+					\item Paleontology and Archaeology: study of fossils and archaeological artifacts
+				\end{itemize}
+				\item \(\approx\)2500 \uct systems are in use worldwide with over 1000 publications annually
+			\end{itemize}
+\end{frame}
 
 \subsection{Interaction of x-rays with matter}
 \begin{frame}
@@ -1073,20 +1160,20 @@
  			\toprule%
  			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
  			\midrule%
- 			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}				& 1-1-1/1 & 73 & 74.5\\%
- 			\multicolumn{2}{l}{}																			& 1-1-1/2 & 14 & 14.3\\%
- 			\multicolumn{2}{l}{}																			& 1-1-1/3 & 1 & 1.0\\%
- 			\multicolumn{2}{l}{}																			& 1-1-1/4 & 2 & 2.1\\%
- 			\multicolumn{2}{l}{}																			& 1-1-2/1 & 1 & 1.0\\%
- 			\multicolumn{2}{l}{}																			& 1-2-1/1 & 4 & 4.1\\%
- 			\multicolumn{2}{l}{}																			& 1-2-1/2 & 1 & 1.0\\%
- 			\multicolumn{2}{l}{}																			& 1-2-2/2 & 1 & 1.0\\%
- 			\multicolumn{2}{l}{}																			& 2-3-1/1 & 1 & 1.0\\%
+ 			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}			& 1-1-1/1 & 73 & 74.5\\%
+ 			\multicolumn{2}{l}{}										& 1-1-1/2 & 14 & 14.3\\%
+ 			\multicolumn{2}{l}{}										& 1-1-1/3 & 1 & 1.0\\%
+ 			\multicolumn{2}{l}{}										& 1-1-1/4 & 2 & 2.1\\%
+ 			\multicolumn{2}{l}{}										& 1-1-2/1 & 1 & 1.0\\%
+ 			\multicolumn{2}{l}{}										& 1-2-1/1 & 4 & 4.1\\%
+ 			\multicolumn{2}{l}{}										& 1-2-1/2 & 1 & 1.0\\%
+ 			\multicolumn{2}{l}{}										& 1-2-2/2 & 1 & 1.0\\%
+ 			\multicolumn{2}{l}{}										& 2-3-1/1 & 1 & 1.0\\%
  			\midrule%
- 			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}		& 1-1-1/1 & 2 & 66.6\\%
- 																		&														& 1-2-1/1 & 1 & 33.3\\%
- 																		& \multirow{2}{*}{Lingual}	& 1-1-1/1 & 2 & 66.6\\%
- 																		&														& 1-1-1/2 & 1 & 33.3\\%
+ 			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}	& 1-1-1/1 & 2 & 66.6\\%
+ 											&							& 1-2-1/1 & 1 & 33.3\\%
+ 											& \multirow{2}{*}{Lingual}	& 1-1-1/1 & 2 & 66.6\\%
+ 											&							& 1-1-1/2 & 1 & 33.3\\%
  			\bottomrule%
  		\end{tabular}%
  		}%
@@ -1096,19 +1183,19 @@
  			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
  			\midrule%
  			\rowcolor{ubRed}\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}	& 1-1-1/1 & 73 & 74.5\\%
- 			\rowcolor{ubRed}\multicolumn{2}{l}{}																& 1-1-1/2 & 14 & 14.3\\%
- 			\multicolumn{2}{l}{}																										& 1-1-1/3 & 1 & 1.0\\%
- 			\rowcolor{ubRed}\multicolumn{2}{l}{}																& 1-1-1/4 & 2 & 2.1\\%
- 			\multicolumn{2}{l}{}																										& 1-1-2/1 & 1 & 1.0\\%
- 			\rowcolor{ubRed}\multicolumn{2}{l}{}																& 1-2-1/1 & 4 & 4.1\\%
- 			\multicolumn{2}{l}{}																										& 1-2-1/2 & 1 & 1.0\\%
- 			\multicolumn{2}{l}{}																										& 1-2-2/2 & 1 & 1.0\\%
- 			\multicolumn{2}{l}{}																										& 2-3-1/1 & 1 & 1.0\\%
+ 			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/2 & 14 & 14.3\\%
+ 			\multicolumn{2}{l}{}												& 1-1-1/3 & 1 & 1.0\\%
+ 			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/4 & 2 & 2.1\\%
+ 			\multicolumn{2}{l}{}												& 1-1-2/1 & 1 & 1.0\\%
+ 			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-2-1/1 & 4 & 4.1\\%
+ 			\multicolumn{2}{l}{}												& 1-2-1/2 & 1 & 1.0\\%
+ 			\multicolumn{2}{l}{}												& 1-2-2/2 & 1 & 1.0\\%
+ 			\multicolumn{2}{l}{}												& 2-3-1/1 & 1 & 1.0\\%
  			\midrule%
- 			\multirow{4}{*}{Double (N=3)} & \multirow{2}{*}{Buccal}									& 1-1-1/1 & 2 & 66.6\\%
- 																		&																					& 1-2-1/1 & 1 & 33.3\\%
- 																		& \multirow{2}{*}{Lingual}								& 1-1-1/1 & 2 & 66.6\\%
- 																		&																					& 1-1-1/2 & 1 & 33.3\\%
+ 			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}			& 1-1-1/1 & 2 & 66.6\\%
+ 											&									& 1-2-1/1 & 1 & 33.3\\%
+ 											& \multirow{2}{*}{Lingual}			& 1-1-1/1 & 2 & 66.6\\%
+ 											&									& 1-1-1/2 & 1 & 33.3\\%
  			\bottomrule%
  		\end{tabular}%
  		}%
