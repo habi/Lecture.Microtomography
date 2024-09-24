@@ -9,21 +9,24 @@ jobs:
     steps:
     - name: Set up Git repository
       uses: actions/checkout@v1
-    - name: Setup perl
+    - name: Setup perl for local gitinfo2
       uses: shogo82148/actions-setup-perl@v1
       id: set-matrix
-    - name: Run perl script
+    - name: Run local perl script for gitinfo2
       shell: perl {0}
       run: |
         do './perl/gitinfo2.pm';
-    - name: Compile LaTeX document
+    - name: Compile handout, presentation and notes. Presentation and notes are not uploaded, but go into workflow artefacts
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: XRayMicroTomography.Handout.tex
-    - name: Check pdf file
+        root_file: |
+          XRayMicroTomography.Handout.tex
+          XRayMicroTomography.Presentation.tex
+          XRayMicroTomography.Notes.tex
+    - name: Check handout PDF
       run: |
-        file *Handout.pdf | grep -q ' PDF '
-    - name: Upload
+        file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
+    - name: Upload handout PDF to gh-pages branch, so students can download it easily
       run: |
         set -e
         #
