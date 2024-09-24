@@ -13,7 +13,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{100}% use only every nth frame for the animations
+\newcommand{\everyframe}{333}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
@@ -201,7 +201,7 @@
 
 \begin{frame}
 	\frametitle{Grüessech from the \uct group}
-	\centering
+	\centering%
 	\includegraphics[width=\imagewidth]{./images/team}
 	\begin{columns}[t,onlytextwidth]
 		\hfill%
@@ -295,7 +295,7 @@
 
 \begin{frame}
 	\frametitle{Wavelengths \& Scales}
-	\centering
+	\centering%
 	\only<1|handout:1>{%
 		\includegraphics[height=\imageheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
 		\source{w.wiki/7fz}{\ccbysa}%
@@ -323,7 +323,7 @@
 \section{Tomography}
 \begin{frame}
 	\frametitle{CT-Scanner}
-	\centering
+	\centering%
 	\mode<beamer>{%
 		\animategraphics[loop,autoplay,height=\imageheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
@@ -355,7 +355,7 @@
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.4\linewidth}
-			\centering
+			\centering%
 			\includegraphics<1|handout:1>[height=\imageheight]{./images/First_medical_X-ray_by_Wilhelm_Röntgen_of_his_wife_Anna_Bertha_Ludwig's_hand_-_18951222}%
 			\only<1|handout:1>{\source{w.wiki/BHAN}{\ccPublicDomain}}%
 			\only<2|handout:2>{%
@@ -431,7 +431,7 @@
 \begin{frame}
 	\frametitle{Composition of biological tissues}
 	Tissue: content by mass percentage
-	\centering
+	\centering%
 	\begin{table}%
 		\only<1|handout:0>{%
 			\pgfplotstabletypeset[%
@@ -591,7 +591,7 @@
 
 \begin{frame}
 	\frametitle{Maximum intensity projection}
-	\centering
+	\centering%
 	% pdfseparate 220923_Fundamentals_image_processing_2022_Witz.pdf -f 23 -l 23 220923_Fundamentals_image_processing_2022_Witz-%d.pdf
 	\frame{\includegraphics[height=\imageheight]{./images/220923_Fundamentals_image_processing_2022_Witz-23}}
 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466919.html}{\emph{Fundamentals of Digital Image Processing (2022)} by Guillaume Witz}{Slide 23}
@@ -750,7 +750,7 @@
 	}%
 \end{frame}
 
-\section{A scan, from \emph{getting started} to \emph{nice images}}
+\section{A scan, from \emph{getting started} to \emph{nice image}}
 \begin{frame}
 	\frametitle{Preparation}
 	\begin{itemize}
@@ -759,26 +759,29 @@
 	\end{itemize}
 \end{frame}
 
+\renewcommand{\imageheight}{0.618\paperheight}%
 \begin{frame}
 	\frametitle{Projections}
-	\centering
+	\centering%
 	% pdfseparate physical\ basics_2022_folien.pdf -f 21 -l 21 physical_basics_2022_folien-%d.pdf
 	\frame{\includegraphics[height=\imageheight]{./images/physical_basics_2022_folien-21.pdf}}%
 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
+\renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{Projection acquisition}
-	\centering
+	\centering%
 	\includegraphics<1|handout:0>[height=\imageheight]{./images/2214}%
 	\includegraphics<2|handout:0>[height=\imageheight]{./images/2214/room}%
 	\includegraphics<3|handout:0>[height=\imageheight]{./images/2214/scanning_compartement}%
 	\includegraphics<4|handout:1>[height=\imageheight]{./images/2214/ControlSoftware01}%
 \end{frame}
 
+\renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{Projections}
-	\centering
+	\centering%
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
 	\mode<beamer>{\animategraphics[autoplay,loop,height=\imageheight,every=\everyframe]{24}{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_}{000}{359}}
 	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_180}}
@@ -797,14 +800,14 @@
 
 \begin{frame}
 	\frametitle{Reconstructions}
-	\centering
+	\centering%
 	\includegraphics<1|handout:1>[height=\imageheight]{./images/2214/NRecon_proj}%
 	\includegraphics<2|handout:2>[height=\imageheight]{./images/2214/NRecon_rec}%
 \end{frame}
 
 \begin{frame}
 	\frametitle{Reconstructions}
-	\centering
+	\centering%
 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
 	\mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{359}}
 	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_180}}
@@ -816,7 +819,7 @@
 		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
 		\item Radon Transformation
 		\item Filtered back projection
-		\item Fan beam reconstruction
+		\item Cone beam reconstruction~\cite{Feldkamp1984}
 		\item Corrections (beam hardening, etc.)
 		\item Writing to stack
 	\end{itemize}
@@ -839,6 +842,8 @@
 	\end{itemize}
 \end{frame}
 
+\end{document}
+
 \begin{frame}
 	\frametitle{What to use?}
 	\begin{itemize}
@@ -849,21 +854,21 @@
 			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
 			\item \href{https://git-scm.com/}{\faGit}
 			\item Script all your things!
-			\item Data repositories; \ie sharing is caring!
+			\item Data repositories; \ie{} sharing is caring!
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
-\section{Examples}
-\subsection{A study about teeth}
-\begin{frame}
-	\frametitle{Quantitative data}
-	\begin{itemize}
-		\item Pretty images are nice, but we need quantitative numbers
-		\item Segmentation
-		\item Characterization
-	\end{itemize}
-\end{frame}
+%\section{Examples}
+%\subsection{A study about teeth}
+%\begin{frame}
+%	\frametitle{Quantitative data}
+%	\begin{itemize}
+%		\item Pretty images are nice to have, but science is quantitative data
+%		\item Segmentation
+%		\item Characterization
+%	\end{itemize}	
+%\end{frame}
  
 \subsubsection{Overview}
 \begin{frame}
@@ -964,7 +969,7 @@
 \subsubsection{Results}
 \begin{frame}
 	\frametitle{\uct imaging}
-	\centering
+	\centering%
 	\includegraphics<1|handout:0>[height=\imageheight]{./images/zmk/ScanOverviews.104.png}%
 	\includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \end{frame}
@@ -1020,7 +1025,7 @@
 
 \begin{frame}
 	\frametitle{Detection of enamel-dentin border}
-	\centering
+	\centering%
 	\only<1|handout:1>{%
 		\includegraphics[height=\imageheight]{./images/zmk/tooth045/Tooth045.ExtractedSlices.png}%
 		}%
@@ -1137,7 +1142,7 @@
 
 \begin{frame}
 	\frametitle{Physiological foramen geometry}
-	\centering
+	\centering%
 	\only<1|handout:1>{%
 		\includegraphics[height=\imageheight]{./images/zmk/foramen}%
 		\sourcecite{Wolf2017}{Fig.~1}%
@@ -1173,7 +1178,7 @@
 \begin{frame}
 	\renewcommand{\imagewidth}{\paperheight}%
 	\frametitle{Metal foam}
-	\centering
+	\centering%
 	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
 	\def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
 	\def\y{540}% scalebar-y at 90% of image height of 600px = 540
@@ -1219,7 +1224,7 @@
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.4\linewidth}
-			\centering
+			\centering%
 			\only<1|handout:1>{%
 				\includegraphics[width=\imagewidth]{./images/cichlids/journal.pone.0291003.g001.png}%
 				\sourcelink{https://doi.org/10.1371/journal.pone.0291003.g001}{DOI:gsst8t}{Fig.~1}%
