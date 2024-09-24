@@ -4,3 +4,5 @@ SupportingMaterial
 Exam
 .fuse_hidden*
 *.b??-SAVE-ERROR
+.latexmkrc
+gitHeadLocal.gin
