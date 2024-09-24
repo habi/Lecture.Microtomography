@@ -15,7 +15,7 @@
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{321}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
-\newcommand{\imageheight}{0.725\paperheight}% set global image height
+\newcommand{\imageheight}{0.72\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
@@ -133,19 +133,6 @@
 		}%
 	}%
 
-% Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
-\makeatletter
-\addtobeamertemplate{footline}{}{%
-	\mode<beamer>{%
-		\begin{tikzpicture}%
-			\useasboundingbox (0pt, 0pt) rectangle (\paperwidth, 2pt);%
-			\draw[draw=ubRed,fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, 2pt) circle (1pt);%
-		\end{tikzpicture}%
-		}%
-	\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
-}%
-\makeatother
-
 % Make us a nice citation command for citing in a footnote
 % https://tex.stackexchange.com/a/396754/828
 \makeatletter
@@ -172,6 +159,19 @@
 \makeatother
 % Remove title when using footcite/hypercite
 \AtEveryCitekey{\clearfield{title}}
+
+% Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
+\makeatletter
+\addtobeamertemplate{footline}{}{%
+	\mode<beamer>{%
+		\begin{tikzpicture}%
+			\useasboundingbox (0pt, 0pt) rectangle (\paperwidth, 2pt);%
+			\draw[draw=ubRed,fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, 2pt) circle (1pt);%
+		\end{tikzpicture}%
+		}%
+	\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
+}%
+\makeatother
 
 % Show current section at begin of sections, but only in presentation mode
 \mode<beamer>{%
@@ -204,26 +204,27 @@
 	\frametitle{Grüessech from the \uct group}
 	\centering
 	\includegraphics[width=\imagewidth]{./images/team}
-		\begin{columns}
-		\hfill\begin{column}{0.3\imagewidth}
-			\centering%
+	\begin{columns}[t,onlytextwidth]
+		\hfill%
+		\begin{column}{0.3\imagewidth}
 			David{\color{ubRed}.}Haberthuer{\color{ubRed}@unibe.ch}%
-		\end{column}
+		\end{column}%
+		\hfill%
 		\begin{column}{0.3\imagewidth}
-			\centering%
 			Ruslan{\color{ubRed}.}Hlushchuk{\color{ubRed}@unibe.ch}%
-		\end{column}
+		\end{column}%
+		\hfill%
 		\begin{column}{0.3\imagewidth}
-			\centering%
 			Oleksiy{\color{ubRed}.}Khoma{\color{ubRed}@unibe.ch}%
-		\end{column}\hfill%
+		\end{column}%
+		\hfill%
 	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{\uct-group}
-	\begin{columns}
-		\begin{column}{0.618\linewidth}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.6\linewidth}
 			\begin{itemize}
 				\item microangioCT~\cite{Hlushchuk2018}
 				\begin{itemize}
@@ -236,7 +237,7 @@
 				\item Automate \emph{all} the things!~\cite{Haberthuer2021, Haberthuer2023}
 			\end{itemize}
 		\end{column}%
-		\begin{column}{0.382\linewidth}%
+		\begin{column}{0.4\linewidth}%
 			\centering%
 			\includegraphics<1|handout:0>[width=\imagewidth]{./images/1172}%
 			\only<1|handout:0>{\source{brukersupport.com}{}}%
@@ -267,43 +268,15 @@
 
 \begin{frame}
 	\frametitle{Biomedical imaging}%
-	\begin{columns}%
-		\begin{column}{0.618\linewidth}%
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.6\linewidth}%
 			\begin{itemize}%
 				\item<1-|handout:1-> Medical research%
 				\item<1-|handout:1-> Non-destructive insights into the samples%
 				\item<2-|handout:1-> (Small) Biological samples%
 			\end{itemize}%
 		\end{column}%
-		\begin{column}{0.382\linewidth}%
-			\centering%
-			\only<1-2|handout:1>{%
-				\includegraphics[width=\imagewidth]{./images/Sagittal_brain_MRI}%
-				\source{w.wiki/7g4}{\ccbysa}%
-			}%
-			\only<3|handout:2>{%
-				\begin{tikzpicture}[remember picture,overlay]%
-					\node at (current page.center){%
-						\mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
-						\mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull075}}
-					};%
-				\end{tikzpicture}%
-			}%
-		\end{column}%
-	\end{columns}%
-\end{frame}
-
-\begin{frame}
-	\frametitle{Biomedical imaging}%
-	\begin{columns}%
-		\begin{column}{0.618\linewidth}%
-			\begin{itemize}%
-				\item<1-|handout:1-> Medical research%
-				\item<1-|handout:1-> Non-destructive insights into the samples%
-				\item<2-|handout:1-> (Small) Biological samples%
-			\end{itemize}%
-		\end{column}%
-		\begin{column}{0.382\linewidth}%
+		\begin{column}{0.4\linewidth}%
 			\centering%
 			\only<1-2|handout:1>{%
 				\includegraphics[width=\imagewidth]{./images/Sagittal_brain_MRI}%
@@ -331,39 +304,13 @@
 	\only<2|handout:2>{%
 		\frame{\includegraphics[height=\imageheight]{./images/MIC-AM_techniques}}%
 		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{with permission}%
-		}
-\end{frame}
-\begin{frame}
-	\frametitle{Wavelengths \& Scales}
-	\centering
-	\only<1|handout:1>{%
-		\includegraphics[height=\imageheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
-		\source{w.wiki/7fz}{\ccbysa}%
 		}%
-	\only<2|handout:2>{%
-		\frame{\includegraphics[height=\imageheight]{./images/MIC-AM_techniques}}%
-		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{with permission}%
-		}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Imaging methods}
 	\begin{itemize}
 		\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
-		\item X-ray imaging
-		\item Electron microscopy
-		\begin{itemize}
-			\item \href{https://moodle.bfh.ch/course/section.php?id=546756}{\emph{Analytical electron microscopy} by Dimitri}
-			\item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177954.html}{\emph{SEM Grundlagen} by Sabine Kässmeyer and Ivana Jaric}
-			\item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177956.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-		\frametitle{Imaging methods}
-	\begin{itemize}
-				\item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
 		\item X-ray imaging
 		\item Electron microscopy
 		\begin{itemize}
@@ -381,11 +328,11 @@
 	\mode<beamer>{%
 		\animategraphics[loop,autoplay,height=\imageheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
-		}
+		}%
 	\mode<handout>{%
 		\includegraphics[height=\imageheight]{./movies/ct-scanner/ct-scanner0001}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
-		}
+		}%
 	\note{From \href{https://www.bruker.com/products/microtomography/micro-ct-for-sample-scanning/x-ray-micro-ct-microtomography.html}{Bruker Homepage}:
 		Micro computed tomography or micro-CT is x-ray imaging in 3D, by the same method used in hospital CT (or CAT) scans, but on a small scale with massively increased resolution.
 		It really represents 3D microscopy, where very fine scale internal structure of objects is imaged non-destructively.
@@ -394,8 +341,8 @@
 
 \begin{frame}
 	\frametitle{CT History}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.6\linewidth}
 			\begin{itemize}
 				\item 1895: Wilhelm Conrad Röntgen discovers X-rays
 				\item<2-|handout:2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
@@ -408,12 +355,12 @@
 				\end{itemize}
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.4\linewidth}
 			\centering
 			\includegraphics<1|handout:1>[height=\imageheight]{./images/First_medical_X-ray_by_Wilhelm_Röntgen_of_his_wife_Anna_Bertha_Ludwig's_hand_-_18951222}%
 			\only<1|handout:1>{\source{w.wiki/BHAN}{\ccPublicDomain}}%
 			\only<2|handout:2>{%
-				\renewcommand{\imagewidth}{0.7\linewidth}%redefine imagewidth \only here so that we can use the simple way to draw a scale bar
+				\renewcommand{\imagewidth}{0.52\paperheight}% redefine imagewidth \only here so that we can use the simple way to draw a scale bar. 0.52 is an empirically found value
 				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
 			 	\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
 			 	\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
@@ -520,8 +467,8 @@
 
 \begin{frame}
 	\frametitle{Why \uct?}
-	\begin{columns}
-		\begin{column}{0.49\linewidth}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.5\linewidth}
 			\centering%
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4|handout:1-4>{%
@@ -561,7 +508,7 @@
 			}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}%
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.5\linewidth}
 			\centering%
 			\only<1|handout:1>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
@@ -651,41 +598,42 @@
 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466919.html}{\emph{Fundamentals of Digital Image Processing (2022)} by Guillaume Witz}{Slide 23}
 \end{frame}
 
- \subsection{Tomography today}
+\subsection{Tomography today}
 \begin{frame}
 	\frametitle{Machinery}
-	\begin{columns}
-		\begin{column}{0.5\linewidth}
-			\begin{itemize}
-				\item<1-> Hospital CT
-				\begin{itemize}
-					\item Voxel size around \qty{0.5}{\milli\meter}
-				\end{itemize}
-				\item<2-> Lab/Desktop CT
-				\begin{itemize}
-					\item Voxel size around \qty{7}{\micro\meter} (\emph{in vivo}) or \qty{0.5}{\micro\meter} (\emph{ex vivo})
-				\end{itemize}
-				\item<4-> Synchrotron CT
-				\begin{itemize}
-					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\qty{160}{\nano\meter}}
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.5\linewidth}
-			\centering
-			\includegraphics<1|handout:1>[width=\imagewidth]{./images/24324062640_751e011e1a_o}
-			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}
-			\includegraphics<2|handout:2>[height=\imageheight]{./images/9459311320_516179207a_o}
-			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}
-			\includegraphics<3|handout:3>[width=\imagewidth]{./images/1272}
-			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}
-			\includegraphics<4|handout:4>[width=\imagewidth]{./images/4563733710_f632792416_b}
-			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}
-			trim={<left> <lower> <right> <upper>}
-			\includegraphics<5|handout:0>[trim={430 0 290 0},clip,width=\imagewidth]{./images/4563733710_f632792416_b}
-			\only<5|handout:0>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}
-		\end{column}
-	\end{columns}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.5\linewidth}%
+			\begin{itemize}%
+				\item<1-> Hospital CT%
+				\begin{itemize}%
+					\item Voxel size around \qty{0.5}{\milli\meter}%
+				\end{itemize}%
+				\item<2-> Lab/Desktop CT%
+				\begin{itemize}%
+					\item Voxel size around \qty{7}{\micro\meter} (\emph{in vivo})%
+					\item Voxel size around \qty{0.5}{\micro\meter} (\emph{ex vivo})%
+				\end{itemize}%
+				\item<4-> Synchrotron CT%
+				\begin{itemize}%
+					\item Voxel size down to \href{https://www.psi.ch/en/sls/tomcat/detectors}{\qty{160}{\nano\meter}}%
+				\end{itemize}%
+			\end{itemize}%
+		\end{column}%
+		\begin{column}{0.5\linewidth}%
+			\centering%
+			\includegraphics<1|handout:1>[width=\imagewidth]{./images/24324062640_751e011e1a_o}%
+			\only<1|handout:1>{\source{flic.kr/p/D4rbom}{\ccbyncsa}}%
+			\includegraphics<2|handout:2>[height=\imageheight]{./images/9459311320_516179207a_o}%
+			\only<2|handout:2>{\source{flic.kr/p/fpTrGu}{\ccbysa}}%
+			\includegraphics<3|handout:3>[width=\imagewidth]{./images/1272}%
+			\only<3|handout:3>{\source{bruker.com/skyscan1272}{}}%
+			\includegraphics<4|handout:4>[width=\imagewidth]{./images/4563733710_f632792416_b}%
+			\only<4|handout:4>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}%
+			%trim={<left> <lower> <right> <upper>}
+			\includegraphics<5|handout:0>[trim={430 0 290 0},clip,width=\imagewidth]{./images/4563733710_f632792416_b}%
+			\only<5|handout:0>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}%
+		\end{column}%
+	\end{columns}%
 	\note<1|handout:1>{Fan beam \textrightarrow Bruker and other \uct machines\newline
 		Parallel beam \textrightarrow TOMCAT et al.\newline
 		Helical/spiral CT/multislice CT \textrightarrow Hospitals}
@@ -694,9 +642,9 @@
 \renewcommand{\imagewidth}{\linewidth}
 \begin{frame}
 	\frametitle{What is happening?}
-	\begin{columns}%
+	\begin{columns}[onlytextwidth]
 		\begin{column}{0.5\linewidth}%
-			No matter what kind of machine, the basic principle is always the same
+			No matter what kind of machine, the basic principle is always
 			\begin{itemize}
 				\item an x-ray source
 				\item a sample
@@ -713,18 +661,18 @@
 
 \begin{frame}
 	\frametitle{Machinery}
-	\begin{columns}
+	\begin{columns}[onlytextwidth]
 		\begin{column}{0.5\linewidth}
-			\centering%
+			%\centering%
 			\input{animations/classicCT}%
-		\end{column}
+		\end{column}%
 		\begin{column}{0.5\linewidth}
-			\centering%
+			%\centering%
 			% "List" the LR, normal and HR animations in a weird order here, to display them nicely in the handout
 			\only<2|handout:1>{\input{animations/microCT_lr}}%
 			\only<1>{\input{animations/microCT}}%
 			\only<3|handout:1>{\input{animations/microCT_hr}}%
-		\end{column}
+		\end{column}%
 	\end{columns}
 \end{frame}
 
@@ -732,7 +680,6 @@
 	\frametitle{Examples}
 	\centering%
 	\only<1|handout:1>{%
-		\pgfmathsetlength{\imagewidth}{0.9\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -743,10 +690,12 @@
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
 		\end{tikzpicture}%
 	}%
-	\pgfmathsetlength{\imagewidth}{0.5\linewidth}%
-	\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
-	\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
-	\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
+	\renewcommand{\imagewidth}{0.6\linewidth}%
+	\only<2-3|handout:2>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
+		\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
+		\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
+	}%
 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 		\only<2|handout:2>{%
 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
@@ -761,7 +710,6 @@
 		}%
 	\end{tikzpicture}%
 	\only<4|handout:3>{%
-		\pgfmathsetlength{\imagewidth}{\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/387}%
 		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
 		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
@@ -774,11 +722,11 @@
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
 	\only<5|handout:0>{%
-		\animategraphics[autoplay,palindrome,width=\imagewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
+		\animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
 		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
+	\renewcommand{\imagewidth}{0.5\linewidth}%	
 	\only<6|handout:4>{%
-		\pgfmathsetlength{\imagewidth}{0.8\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
 		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
 		\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
@@ -789,8 +737,8 @@
 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
 		\end{tikzpicture}%
 	}%
+	\renewcommand{\imagewidth}{0.65\linewidth}%
 	\only<7|handout:5>{%
-		\pgfmathsetlength{\imagewidth}{\linewidth}%
 		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
 		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
 		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
@@ -908,7 +856,7 @@
 \end{frame}
 
 \section{Examples}
- \subsection{A study about teeth}
+\subsection{A study about teeth}
 \begin{frame}
 	\frametitle{Quantitative data}
 	\begin{itemize}
@@ -918,51 +866,35 @@
 	\end{itemize}
 \end{frame}
 
- \subsubsection{Overview}
+\subsubsection{Overview}
 \begin{frame}
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
 	\begin{itemize}%
-		\item Numbers instead of just pretty images%
+		\item<1-2> Numbers instead of just pretty images% force to show this on frame 1 AND 2, so that we can first show the hovering tooth
 		\item Segmentation of teeth and root canal%
 		\item (Unbiased) Characterization%
 		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
 		\item Two publications:%
 		\begin{itemize}%
-			\item Methodolocial \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
-			\item Analytical \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
+			\item Methodolocial~\cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
+			\item Analytical~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
 		\end{itemize}%
 	\end{itemize}%
-	\begin{tikzpicture}[remember picture,overlay]%
-		\node at (current page.center) [shift={(0,-25pt)}]{%
-		\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
-		\mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
-			};%
-	\end{tikzpicture}%
+	\only<1|handout:1>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center) [shift={(0,-2.9mm)}]{%
+				\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
+				\mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
+				};%
+		\end{tikzpicture}%
+	}%	
 \end{frame}
 
-\begin{frame}
-	\frametitle{Internal morphology of human teeth}%
-	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
-	\begin{itemize}%
-		\item Numbers instead of just pretty images%
-		\item Segmentation of teeth and root canal%
-		\item (Unbiased) Characterization%
-		\item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
-		\item Two publications:%
-		\begin{itemize}%
-			\item Methodolocial \cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
-			\item Analytical \cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
-		\end{itemize}%
-	\end{itemize}%
-\end{frame}
-
- \subsubsection{Materials \& Methods}
-\renewcommand{\imagewidth}{0.75\linewidth}
-\renewcommand{\imageheight}{0.618\paperheight}
+\subsubsection{Materials \& Methods}
 \begin{frame}
 	\frametitle{How?}
-	\begin{columns}
+	\begin{columns}[onlytextwidth]
 		\begin{column}{0.5\linewidth}
 			\begin{itemize}
 				\item<1-> 104 extracted human permanent mandibular canines
@@ -1001,7 +933,6 @@
 					\item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
 				\end{itemize}
 					}%
-			\renewcommand{\imagewidth}{\linewidth}%
 			\only<5|handout:5>{%
 				\centering%
 				\includegraphics[width=\imagewidth]{./images/zmk/briseno}%
@@ -1031,8 +962,7 @@
 	\end{columns}
 \end{frame}
 
- \subsubsection{Results}
-\renewcommand{\imageheight}{0.618\paperheight}
+\subsubsection{Results}
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
@@ -1040,17 +970,16 @@
 	\includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \end{frame}
 
-\renewcommand{\imagewidth}{\linewidth}
 \begin{frame}
 	\frametitle{Dataset cropping}
-	\begin{columns}
-		\begin{column}{0.382\linewidth}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.4\linewidth}
 			\begin{itemize}
 				\item Full datasets: \qty{326}{\giga\byte}%
 				\item<2> Cropped datasets: \qty{115}{\giga\byte}%
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.618\linewidth}
+		\begin{column}{0.6\linewidth}
 			\centering%
 			\includegraphics<1|handout:1>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Original.png}%
 			\includegraphics<2|handout:2>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Cropped.png}%
@@ -1060,27 +989,34 @@
 
 \begin{frame}
 	\frametitle{Tooth morphology}
-	\begin{tikzpicture}[remember picture,overlay]%
-		\node at (current page.center) [shift={(0,-25pt)}]{%
-			\only<1|handout:1>{%
+	\only<1|handout:1>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center) [shift={(0,-2.9mm)}]{%
 				\mode<beamer>{%
 					\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}%
 					}%
 				\mode<handout>{%
 					\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0000}%
 					}%
+			};%
+		\end{tikzpicture}%		
+		}%
+	\only<2|handout:2>{%
+		\includegraphics[height=\imageheight]{./images/zmk/briseno}%
+		\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
+		}%
+	\only<3|handout:3>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center) [shift={(0,-2.9mm)}]{%
+			\mode<beamer>{%
+				\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
 				}%
-			\only<2|handout:2>{\includegraphics[height=\imageheight]{./images/zmk/briseno}\sourcecite{Briseno-Marroquin2015}{Fig.~2}}%
-			\only<3|handout:3>{%
-				\mode<beamer>{%
-					\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
-					}%
-				\mode<handout>{%
-					\includegraphics[width=\paperwidth]{./movies/tooth045/full-slices/image0000}%
-					}%
+			\mode<handout>{%
+				\includegraphics[width=\paperwidth]{./movies/tooth045/full-slices/image0000}%
 				}%
 			};%
-	\end{tikzpicture}%
+		\end{tikzpicture}%
+		}%
 \end{frame}
 
 \begin{frame}
@@ -1090,7 +1026,7 @@
 		\includegraphics[height=\imageheight]{./images/zmk/tooth045/Tooth045.ExtractedSlices.png}%
 		}%
 	\only<2|handout:2>{%
-		\includegraphics[width=\linewidth]{./images/zmk/tooth045/Tooth045.Briseno.png}%
+		\includegraphics[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Briseno.png}%
 		}%
 \end{frame}
 
@@ -1148,7 +1084,7 @@
 \begin{frame}
 	\frametitle{Extraction of root canal space}
 	\begin{tikzpicture}[remember picture,overlay]%
-	\node at (current page.center) [shift={(0,-25pt)}]{%
+	\node at (current page.center) [shift={(0,-2.9mm)}]{%
 		\only<1|handout:0>{%
 			\mode<beamer>{%
 				\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices/image0}{000}{473}%
@@ -1201,7 +1137,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Analysis of the physiological foramen geometry}
+	\frametitle{Physiological foramen geometry}
 	\centering
 	\only<1|handout:1>{%
 		\includegraphics[height=\imageheight]{./images/zmk/foramen}%
@@ -1234,8 +1170,9 @@
 	\end{itemize}
 \end{frame}
 
- \subsection{Metal foam analysis}
+\subsection{Metal foam analysis}
 \begin{frame}
+	\renewcommand{\imagewidth}{\paperheight}%
 	\frametitle{Metal foam}
 	\centering
 	\pgfmathsetlength{\imagescale}{\imagewidth/800}%
@@ -1261,11 +1198,11 @@
 	\source{Etienne Berner}{NanoElectroCatalysis Group}
 \end{frame}
 
- \subsection{A study on fish}
+\subsection{A study on fish}
 \begin{frame}
 	\frametitle{Data wrangling by example: Cichlids}
-	\begin{columns}
-		\begin{column}{0.618\linewidth}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.6\linewidth}
 			Collaboration with team of \href{https://www.aqua.iee.unibe.ch/}{\emph{Aquatic Ecology \& Evolution}}, from the \href{https://www.iee.unibe.ch/}{Institute of Ecology and Evolution}~\footcite{Haberthuer2023}
 			\begin{itemize}
 				\item 133 Cichlids from Lake Victoria, East Africa
@@ -1282,7 +1219,7 @@
 				\end{itemize}
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.382\linewidth}
+		\begin{column}{0.4\linewidth}
 			\centering
 			\only<1|handout:1>{%
 				\includegraphics[width=\imagewidth]{./images/cichlids/journal.pone.0291003.g001.png}%
@@ -1304,21 +1241,22 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Visualization of cichlid head}
+	\renewcommand{\imagewidth}{0.9\linewidth}%
+	\frametitle{Visualization of cichlid head}%
+	\centering%
 	% Generate animations in ImageJ with 3Dscript (files are in repository)
 	% Save out as .tif slices
 	% mogrify -format png -transparent "rgb(255,255,255)" -fuzz 4% *.tif
-	\centering%
 	\only<1|handout:1>{%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1280}%
 		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
 		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0000.png}};
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0000.png}};%
 			% 196.739px = 6.045mm -> 100px = 3072.594um -> 16.273px = 500um, 3.255px = 100um
-			\draw[|-|,white,shadowed] (652,353) -- (849,369) node [sloped,midway,above] {\shadowtext{\(\approx\)\SI{6}{\milli\meter}}};
+			\draw[|-|,white,shadowed] (652,353) -- (849,369) node [sloped,midway,above] {\shadowtext{\(\approx\)\SI{6}{\milli\meter}}};%
 		\end{tikzpicture}%
-	}
+	}%
 	\only<2|handout:2>{%
 		% Show PJ
 		\mode<beamer>{\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.0}{000}{480}}%
@@ -1336,15 +1274,16 @@
 		%Move to PJ
 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{1441}{1920}%
 	}%
-	\note[item]<1>{Fish 104016, Scan head\_rec; This fish was scanned on 2022-01-27T13:32:59 on the SkyScan2214, with a voxel size of \qty{13.0}{\micro\meter}.}
-	\note[item]<1>{The eye has a diameter of approximately \qty{6}{\milli\meter}.}
-	\note[item]<1>{DOI:10.1002/ece3.9669: The detritivorous Enterochromis cinctus Greenwood \& Gee, 1969 has a red dorsum and a bright yellow flank too but it has dark vertical bars and lacks any mid-lateral band.
-		Before the near extinctions, it used to occur at depths between \qtyrange{13}{60}{\meter} (Greenwood \& Gee, 1969).}
+	\note[item]<1>{Fish 104016, Scan head\_rec; This fish was scanned on 2022-01-27T13:32:59 on the SkyScan2214, with a voxel size of \qty{13.0}{\micro\meter}.}%
+	\note[item]<1>{The eye has a diameter of approximately \qty{6}{\milli\meter}.}%
+	\note[item]<1>{DOI:10.1002/ece3.9669: The detritivorous Enterochromis cinctus Greenwood \& Gee, 1969 has a red dorsum and a bright yellow flank too but it has dark vertical bars and lacks any mid-lateral band.%
+		Before the near extinctions, it used to occur at depths between \qtyrange{13}{60}{\meter} (Greenwood \& Gee, 1969).}%
 \end{frame}
 
 \begin{frame}
-	\frametitle{Visualization of segmented pharyngeal jaw}
-	\centering
+	\renewcommand{\imagewidth}{0.9\linewidth}%
+	\frametitle{Visualization of segmented pharyngeal jaw}%
+	\centering%
 	\only<1|handout:0>{%
 		%Animate from head-dataset to segmented pj
 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head2pj/morphed.0}{000}{240}%
@@ -1353,10 +1292,10 @@
 		\pgfmathsetlength{\imagescale}{\imagewidth/1280}%
 		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
 		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.pj/104016.pj.animation.0000.png}};
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.pj/104016.pj.animation.0000.png}};%
 			% 846.456px = 4.9mm -> 100px = 578.885um -> 86.373px = 500um, 17.275px = 100um
-			\draw[|-|,white,shadowed] (209,23) -- (1055,26) node [sloped,midway,below] {\shadowtext{\(\approx\)\SI{5}{\milli\meter}}};
+			\draw[|-|,white,shadowed] (209,23) -- (1055,26) node [sloped,midway,below] {\shadowtext{\(\approx\)\SI{5}{\milli\meter}}};%
 		\end{tikzpicture}%
   	}%
 	\only<3|handout:0>{%
@@ -1365,9 +1304,9 @@
 	\only<4|handout:0>{%
 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.}{0701}{1440}%
 	}%
-	\note[item]<1|handout:1>{Fish 104016, Scan pharynx\_rec; This fish was scanned on 2021-02-04T13:30:11 on the SkyScan1272, with a voxel size of \qty{5.0}{\micro\meter}.}
-	\note[item]<1|handout:1>{The distance between the two ends at the top is approximately \qty{5}{\milli\meter}.}
-	\note[item]<1|handout:1>{A human hair typically has a thickness ranging from \qtyrange{17}{181}{\micro\meter}, depending on various factors like the individual's hair type, age, and ethnicity. On average, most human hair strands fall between \qtyrange{50}{100}{\micro\meter} in diameter.}
+	\note[item]<1|handout:1>{Fish 104016, Scan pharynx\_rec; This fish was scanned on 2021-02-04T13:30:11 on the SkyScan1272, with a voxel size of \qty{5.0}{\micro\meter}.}%
+	\note[item]<1|handout:1>{The distance between the two ends at the top is approximately \qty{5}{\milli\meter}.}%
+	\note[item]<1|handout:1>{A human hair typically has a thickness ranging from \qtyrange{17}{181}{\micro\meter}, depending on various factors like the individual's hair type, age, and ethnicity. On average, most human hair strands fall between \qtyrange{50}{100}{\micro\meter} in diameter.}%
 \end{frame}
 
 \begin{frame}
@@ -1385,15 +1324,15 @@
 	\only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
-\begin{frame}
-	\frametitle{Thanks!}
-	\begin{itemize}
-		\item Thanks for listening to me!
-		\item<2-> \href{https://mannerofspeaking.org/2019/12/29/what-questions-do-you-have-for-me/}{What questions do you have for me?}
-	\end{itemize}
+\begin{frame}%
+	\frametitle{Thanks!}%
+	\begin{itemize}%
+		\item Thanks for listening to me!%
+		\item<2-> \href{https://mannerofspeaking.org/2019/12/29/what-questions-do-you-have-for-me/}{What questions do you have for me?}%
+	\end{itemize}%
 	\only<3|handout:0>{%
 		\begin{tikzpicture}[remember picture,overlay]%
-			\node at (current page.center){%
+			\node at (current page.center) {%
 				\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
 				};%
 		\end{tikzpicture}%
@@ -1419,7 +1358,7 @@
 
 \begin{frame}[allowframebreaks]
 	\frametitle{References}
-	\renewcommand*{\bibfont}{\scriptsize}%
+	\renewcommand*{\bibfont}{\footnotesize}%
 	%\setbeamertemplate{bibliography item}{\insertbiblabel}
 	\printbibliography%
 \end{frame}
