@@ -13,7 +13,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{321}% use only every nth frame for the animations
+\newcommand{\everyframe}{1}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
@@ -55,8 +55,6 @@
 \usepackage{shadowtext}
 	\shadowoffset{1pt}
 	\shadowcolor{ubRed}
-\usepackage{pgfplots}
-	\pgfplotsset{compat=newest}
 \usepackage{microtype}
 \usepackage[detect-all=true,
 	range-phrase=--,
@@ -82,6 +80,7 @@
 }%
 \ExplSyntaxOff
 \usepackage{pgfplotstable}
+	\pgfplotsset{compat=1.18}
 \usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{multirow}
@@ -165,8 +164,8 @@
 \addtobeamertemplate{footline}{}{%
 	\mode<beamer>{%
 		\begin{tikzpicture}%
-			\useasboundingbox (0pt, 0pt) rectangle (\paperwidth, 2pt);%
-			\draw[draw=ubRed,fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, 2pt) circle (1pt);%
+			\useasboundingbox (0pt, 0pt) rectangle (\paperwidth, 1.5pt);%
+			\draw[draw=ubRed,fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, 1.5pt) circle (1pt);%
 		\end{tikzpicture}%
 		}%
 	\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
@@ -180,7 +179,7 @@
 			\tableofcontents[currentsection,currentsubsection,hideothersubsections]%
 		\end{frame}%
 	}%
-}
+}%
 
 \begin{document}
 \begin{frame}
@@ -206,15 +205,15 @@
 	\includegraphics[width=\imagewidth]{./images/team}
 	\begin{columns}[t,onlytextwidth]
 		\hfill%
-		\begin{column}{0.3\imagewidth}
+		\begin{column}{0.3\linewidth}
 			David{\color{ubRed}.}Haberthuer{\color{ubRed}@unibe.ch}%
 		\end{column}%
 		\hfill%
-		\begin{column}{0.3\imagewidth}
+		\begin{column}{0.3\linewidth}
 			Ruslan{\color{ubRed}.}Hlushchuk{\color{ubRed}@unibe.ch}%
 		\end{column}%
 		\hfill%
-		\begin{column}{0.3\imagewidth}
+		\begin{column}{0.3\linewidth}
 			Oleksiy{\color{ubRed}.}Khoma{\color{ubRed}@unibe.ch}%
 		\end{column}%
 		\hfill%
@@ -346,7 +345,7 @@
 			\begin{itemize}
 				\item 1895: Wilhelm Conrad Röntgen discovers X-rays
 				\item<2-|handout:2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
-				\item<2-|handout:2-> 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
+				\item<2-|handout:2-> \citeyear{Hounsfield1976a}:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
 				\item<3-|handout:3-> CT scanner generations
 				\begin{itemize}
 					\item<3-|handout:3-> First generation
@@ -468,7 +467,7 @@
 \begin{frame}
 	\frametitle{Why \uct?}
 	\begin{columns}[onlytextwidth]
-		\begin{column}{0.5\linewidth}
+		\begin{column}{0.49\linewidth}% deliberately a bit smaller here, so that the images do not touch
 			\centering%
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4|handout:1-4>{%
@@ -508,7 +507,7 @@
 			}%
 			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}%
-		\begin{column}{0.5\linewidth}
+		\begin{column}{0.49\linewidth}% deliberately a bit smaller here, so that the images do not touch
 			\centering%
 			\only<1|handout:1>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
@@ -751,7 +750,7 @@
 	}%
 \end{frame}
 
-\section{A scan, from \emph{getting started} to \emph{nice image}}
+\section{A scan, from \emph{getting started} to \emph{nice images}}
 \begin{frame}
 	\frametitle{Preparation}
 	\begin{itemize}
@@ -865,7 +864,7 @@
 		\item Characterization
 	\end{itemize}
 \end{frame}
-
+ 
 \subsubsection{Overview}
 \begin{frame}
 	\frametitle{Internal morphology of human teeth}%
@@ -1030,28 +1029,28 @@
 		}%
 \end{frame}
 
-\begin{frame}[shrink=20]
+\begin{frame}
 	\frametitle{Outcome root canal configuration classification}%
 	\centering%
-	\begin{table}[]%
+	%\begin{table}[]%
 		\only<1>{%
 		\begin{tabular}{llcSS}%
 			\toprule%
 			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
 			\midrule%
-			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}			& 1-1-1/1 & 73 & 74.5\\%
-			\multicolumn{2}{l}{}										& 1-1-1/2 & 14 & 14.3\\%
-			\multicolumn{2}{l}{}										& 1-1-1/3 & 1 & 1.0\\%
-			\multicolumn{2}{l}{}										& 1-1-1/4 & 2 & 2.1\\%
-			\multicolumn{2}{l}{}										& 1-1-2/1 & 1 & 1.0\\%
-			\multicolumn{2}{l}{}										& 1-2-1/1 & 4 & 4.1\\%
-			\multicolumn{2}{l}{}										& 1-2-1/2 & 1 & 1.0\\%
-			\multicolumn{2}{l}{}										& 1-2-2/2 & 1 & 1.0\\%
-			\multicolumn{2}{l}{}										& 2-3-1/1 & 1 & 1.0\\%
+			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}		& 1-1-1/1 & 73 & 74.5\\%
+			\multicolumn{2}{l}{}						& 1-1-1/2 & 14 & 14.3\\%
+			\multicolumn{2}{l}{}						& 1-1-1/3 & 1 & 1.0\\%
+			\multicolumn{2}{l}{}						& 1-1-1/4 & 2 & 2.1\\%
+			\multicolumn{2}{l}{}						& 1-1-2/1 & 1 & 1.0\\%
+			\multicolumn{2}{l}{}						& 1-2-1/1 & 4 & 4.1\\%
+			\multicolumn{2}{l}{}						& 1-2-1/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{}						& 1-2-2/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{}						& 2-3-1/1 & 1 & 1.0\\%
 			\midrule%
 			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}	& 1-1-1/1 & 2 & 66.6\\%
-											&							& 1-2-1/1 & 1 & 33.3\\%
-											& \multirow{2}{*}{Lingual}	& 1-1-1/1 & 2 & 66.6\\%
+										&	& 1-2-1/1 & 1 & 33.3\\%
+							& \multirow{2}{*}{Lingual}	& 1-1-1/1 & 2 & 66.6\\%
 											&							& 1-1-1/2 & 1 & 33.3\\%
 			\bottomrule%
 		\end{tabular}%
@@ -1062,23 +1061,23 @@
 			\multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
 			\midrule%
 			\rowcolor{ubRed}\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}	& 1-1-1/1 & 73 & 74.5\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/2 & 14 & 14.3\\%
-			\multicolumn{2}{l}{}												& 1-1-1/3 & 1 & 1.0\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-1-1/4 & 2 & 2.1\\%
-			\multicolumn{2}{l}{}												& 1-1-2/1 & 1 & 1.0\\%
-			\rowcolor{ubRed}\multicolumn{2}{l}{}								& 1-2-1/1 & 4 & 4.1\\%
-			\multicolumn{2}{l}{}												& 1-2-1/2 & 1 & 1.0\\%
-			\multicolumn{2}{l}{}												& 1-2-2/2 & 1 & 1.0\\%
-			\multicolumn{2}{l}{}												& 2-3-1/1 & 1 & 1.0\\%
+			\rowcolor{ubRed}\multicolumn{2}{l}{}					& 1-1-1/2 & 14 & 14.3\\%
+			\multicolumn{2}{l}{}							& 1-1-1/3 & 1 & 1.0\\%
+			\rowcolor{ubRed}\multicolumn{2}{l}{}					& 1-1-1/4 & 2 & 2.1\\%
+			\multicolumn{2}{l}{}							& 1-1-2/1 & 1 & 1.0\\%
+			\rowcolor{ubRed}\multicolumn{2}{l}{}					& 1-2-1/1 & 4 & 4.1\\%
+			\multicolumn{2}{l}{}							& 1-2-1/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{}							& 1-2-2/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{}							& 2-3-1/1 & 1 & 1.0\\%
 			\midrule%
-			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}			& 1-1-1/1 & 2 & 66.6\\%
-											&									& 1-2-1/1 & 1 & 33.3\\%
-											& \multirow{2}{*}{Lingual}			& 1-1-1/1 & 2 & 66.6\\%
-											&									& 1-1-1/2 & 1 & 33.3\\%
+			\multirow{4}{*}{Double (N=3)}	& \multirow{2}{*}{Buccal}		& 1-1-1/1 & 2 & 66.6\\%
+							&					& 1-2-1/1 & 1 & 33.3\\%
+							& \multirow{2}{*}{Lingual}		& 1-1-1/1 & 2 & 66.6\\%
+							&					& 1-1-1/2 & 1 & 33.3\\%
 			\bottomrule%
 		\end{tabular}%
 		}%
-	\end{table}%
+	%\end{table}%
 \end{frame}%
 
 \begin{frame}
