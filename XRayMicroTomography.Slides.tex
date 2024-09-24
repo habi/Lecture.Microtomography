@@ -13,7 +13,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333}% use only every nth frame for the animations
+\newcommand{\everyframe}{2}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
@@ -52,6 +52,9 @@
 \usepackage{tikz}
 	\usetikzlibrary{shadows,spy,mindmap}
 	\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
+\usepackage{pgfplots}
+	\pgfplotsset{compat=1.18}
+\usepackage{pgfplotstable}
 \usepackage{shadowtext}
 	\shadowoffset{1pt}
 	\shadowcolor{ubRed}
@@ -79,9 +82,8 @@
  \clist_if_in:nVT { #2 } { \the\value{lstnumber} }{ \color{#1} }%
 }%
 \ExplSyntaxOff
-\usepackage{pgfplotstable}
-	\pgfplotsset{compat=1.18}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage[showseconds=false,showzone=false]{datetime2}
@@ -659,115 +661,115 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Machinery}
-	\begin{columns}[onlytextwidth]
-		\begin{column}{0.5\linewidth}
-			%\centering%
-			\input{animations/classicCT}%
-		\end{column}%
-		\begin{column}{0.5\linewidth}
-			%\centering%
-			% "List" the LR, normal and HR animations in a weird order here, to display them nicely in the handout
-			\only<2|handout:1>{\input{animations/microCT_lr}}%
-			\only<1>{\input{animations/microCT}}%
-			\only<3|handout:1>{\input{animations/microCT_hr}}%
-		\end{column}%
-	\end{columns}
+  \frametitle{Machinery}
+  \begin{columns}[onlytextwidth]
+  	\begin{column}{0.5\linewidth}
+  		%\centering%
+  		\input{animations/classicCT}%
+  	\end{column}%
+  	\begin{column}{0.5\linewidth}
+  		%\centering%
+  		% "List" the LR, normal and HR animations in a weird order here, to display them nicely in the handout
+  		\only<2|handout:1>{\input{animations/microCT_lr}}%
+  		\only<1>{\input{animations/microCT}}%
+  		\only<3|handout:1>{\input{animations/microCT_hr}}%
+  	\end{column}%
+  \end{columns}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Examples}
-	\centering%
-	\only<1|handout:1>{%
-		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
-			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-		\end{tikzpicture}%
-	}%
-	\renewcommand{\imagewidth}{0.6\linewidth}%
-	\only<2-3|handout:2>{%
-		\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
-		\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
-		\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
-	}%
-	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		\only<2|handout:2>{%
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
-		}%
-		\only<3|handout:0>{%
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
-		}%
-		% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
-		%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
-		\only<2-3|handout:2>{%
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-		}%
-	\end{tikzpicture}%
-	\only<4|handout:3>{%
-		\pgfmathsetlength{\imagescale}{\imagewidth/387}%
-		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
-		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
-			% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
-			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-		\end{tikzpicture}%
-		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
-	}%
-	\only<5|handout:0>{%
-		\animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
-		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
-	}%
-	\renewcommand{\imagewidth}{0.5\linewidth}%	
-	\only<6|handout:4>{%
-		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
-		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
-		\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
-			% 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
-			%\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-		\end{tikzpicture}%
-	}%
-	\renewcommand{\imagewidth}{0.65\linewidth}%
-	\only<7|handout:5>{%
-		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
-		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
-		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
-			% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
-			%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
-			\draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-		\end{tikzpicture}%
-	}%
+  \frametitle{Examples}
+  \centering%
+  \only<1|handout:1>{%
+  	\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+  	\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+  	\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
+  		% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+  		%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+  	\end{tikzpicture}%
+  }%
+  \renewcommand{\imagewidth}{0.6\linewidth}%
+  \only<2-3|handout:2>{%
+  	\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
+  	\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
+  	\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
+  }%
+  \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+  	\only<2|handout:2>{%
+  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
+  	}%
+  	\only<3|handout:0>{%
+  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
+  	}%
+  	% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
+  	%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
+  	\only<2-3|handout:2>{%
+  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+  	}%
+  \end{tikzpicture}%
+  \only<4|handout:3>{%
+  	\pgfmathsetlength{\imagescale}{\imagewidth/387}%
+  	\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
+  	\def\y{279}% scalebar-y at 90% of image height of 310px = 279
+  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
+  		% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
+  		%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
+  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+  	\end{tikzpicture}%
+  	\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+  }%
+  \only<5|handout:0>{%
+  	\animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
+  	\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+  }%
+  \renewcommand{\imagewidth}{0.5\linewidth}%	
+  \only<6|handout:4>{%
+  	\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
+  	\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
+  	\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
+  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
+  		% 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
+  		%\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
+  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+  	\end{tikzpicture}%
+  }%
+  \renewcommand{\imagewidth}{0.65\linewidth}%
+  \only<7|handout:5>{%
+  	\pgfmathsetlength{\imagescale}{\imagewidth/708}%
+  	\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
+  	\def\y{463}% scalebar-y at 90% of image height of 514px = 463
+  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
+  		% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
+  		%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
+  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+  	\end{tikzpicture}%
+  }%
 \end{frame}
 
-\section{A scan, from \emph{getting started} to \emph{nice image}}
-\begin{frame}
-	\frametitle{Preparation}
-	\begin{itemize}
-		\item Study design
-		\item Sample preparation
-	\end{itemize}
-\end{frame}
-
-\renewcommand{\imageheight}{0.618\paperheight}%
-\begin{frame}
-	\frametitle{Projections}
-	\centering%
-	% pdfseparate physical\ basics_2022_folien.pdf -f 21 -l 21 physical_basics_2022_folien-%d.pdf
-	\frame{\includegraphics[height=\imageheight]{./images/physical_basics_2022_folien-21.pdf}}%
-	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
-\end{frame}
-
+ \section{A scan, from \emph{getting started} to \emph{nice image}}
+ \begin{frame}
+ 	\frametitle{Preparation}
+ 	\begin{itemize}
+ 		\item Study design
+ 		\item Sample preparation
+ 	\end{itemize}
+ \end{frame}
+ 
+ \renewcommand{\imageheight}{0.618\paperheight}%
+ \begin{frame}
+ 	\frametitle{Projections}
+ 	\centering%
+ 	% pdfseparate physical\ basics_2022_folien.pdf -f 21 -l 21 physical_basics_2022_folien-%d.pdf
+ 	\frame{\includegraphics[height=\imageheight]{./images/physical_basics_2022_folien-21.pdf}}%
+ 	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
+ \end{frame}
+ 
 \renewcommand{\imageheight}{0.618\paperheight}
 \begin{frame}
 	\frametitle{Projection acquisition}
@@ -787,17 +789,17 @@
 	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_180}}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Projections}
-	\begin{itemize}
-		\item A (micro-focus) x-ray source illuminates the object
-		\item The x-rays penetrate the sample and are attenuated
-		\item A scintillator converts the x-rays to visible light
-		\item A (planar) x-ray detector collects (magnified) projection images.
-		\item The projections are recorded on disk
-	\end{itemize}
-\end{frame}
-
+ \begin{frame}
+ 	\frametitle{Projections}
+ 	\begin{itemize}
+ 		\item A (micro-focus) x-ray source illuminates the object
+ 		\item The x-rays penetrate the sample and are attenuated
+ 		\item A scintillator converts the x-rays to visible light
+ 		\item A (planar) x-ray detector collects (magnified) projection images.
+ 		\item The projections are recorded on disk
+ 	\end{itemize}
+ \end{frame}
+ 
 \begin{frame}
 	\frametitle{Reconstructions}
 	\centering%
@@ -805,70 +807,68 @@
 	\includegraphics<2|handout:2>[height=\imageheight]{./images/2214/NRecon_rec}%
 \end{frame}
 
-\begin{frame}
-	\frametitle{Reconstructions}
-	\centering%
-	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
-	\mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{359}}
-	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_180}}
-\end{frame}
+ \begin{frame}
+ 	\frametitle{Reconstructions}
+ 	\centering%
+ 	% Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
+ 	\mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{359}}
+ 	\mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_180}}
+ \end{frame}
+ 
+ \begin{frame}
+ 	\frametitle{Reconstructions}
+ 	\begin{itemize}
+ 		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
+ 		\item Radon Transformation
+ 		\item Filtered back projection
+ 		\item Cone beam reconstruction~\cite{Feldkamp1984}
+ 		\item Corrections (beam hardening, etc.)
+ 		\item Writing to stack
+ 	\end{itemize}
+ \end{frame}
+ 
+ \begin{frame}
+ 	\frametitle{Visualization}
+ 	\begin{tikzpicture}[remember picture,overlay]%
+ 	\node at (current page.center){%
+ 		\mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
+ 		\mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
+ 		};%
+ 	\end{tikzpicture}%
+ \end{frame}
+ 
+ \begin{frame}
+ 	\frametitle{Visualization}
+ 	\begin{itemize}
+ 		\item Based the on reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
+ 	\end{itemize}
+ \end{frame}
 
+ \begin{frame}
+ 	\frametitle{What to use?}
+ 	\begin{itemize}
+ 		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
+ 		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774485.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
+ 		\item Reproducible research
+ 		\begin{itemize}
+ 			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
+ 			\item \href{https://git-scm.com/}{\faGit}
+ 			\item Script all your things!
+ 			\item Data repositories; \ie{} sharing is caring!
+ 		\end{itemize}
+ 	\end{itemize}
+ \end{frame}
+
+\section{Examples}
+\subsection{A study about teeth}
 \begin{frame}
-	\frametitle{Reconstructions}
+	\frametitle{Quantitative data}
 	\begin{itemize}
-		\item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
-		\item Radon Transformation
-		\item Filtered back projection
-		\item Cone beam reconstruction~\cite{Feldkamp1984}
-		\item Corrections (beam hardening, etc.)
-		\item Writing to stack
-	\end{itemize}
+		\item Pretty images are nice to have, but science is quantitative data
+		\item Segmentation
+		\item Characterization
+	\end{itemize}	
 \end{frame}
-
-\begin{frame}
-	\frametitle{Visualization}
-	\begin{tikzpicture}[remember picture,overlay]%
-	\node at (current page.center){%
-		\mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
-		\mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
-		};%
-	\end{tikzpicture}%
-\end{frame}
-
-\begin{frame}
-	\frametitle{Visualization}
-	\begin{itemize}
-		\item Based the on reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
-	\end{itemize}
-\end{frame}
-
-\end{document}
-
-\begin{frame}
-	\frametitle{What to use?}
-	\begin{itemize}
-		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
-		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774485.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
-		\item Reproducible research
-		\begin{itemize}
-			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
-			\item \href{https://git-scm.com/}{\faGit}
-			\item Script all your things!
-			\item Data repositories; \ie{} sharing is caring!
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-%\section{Examples}
-%\subsection{A study about teeth}
-%\begin{frame}
-%	\frametitle{Quantitative data}
-%	\begin{itemize}
-%		\item Pretty images are nice to have, but science is quantitative data
-%		\item Segmentation
-%		\item Characterization
-%	\end{itemize}	
-%\end{frame}
  
 \subsubsection{Overview}
 \begin{frame}
@@ -993,6 +993,7 @@
 
 \begin{frame}
 	\frametitle{Tooth morphology}
+	\centering%
 	\only<1|handout:1>{%
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center) [shift={(0,-2.9mm)}]{%
@@ -1118,26 +1119,27 @@
 \end{frame}
 
 \begin{frame}
-	\renewcommand{\imageheight}{0.618\paperheight}%
+	\renewcommand{\imageheight}{0.6\paperheight}%
 	\frametitle{Results of root canal space extraction}%
-		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0452}%
-		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0278}%
-		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0353}%
-		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0419}%
-		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0642}%
-		\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0752}%
-		% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
-		% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
-		\renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
-		\pgfmathsetlength{\imagescale}{\imagewidth/720}%
-		\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
-		\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
-				% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
-				%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
-				\draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-		\end{tikzpicture}%
+	\centering%
+ 	\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0452}\hfill%
+ 	\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0278}\hfill%
+ 	\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0353}\hfill%
+ 	\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0419}\hfill%
+ 	\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0642}\hfill%
+ 	\includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0752}\hfill%
+ 	% Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
+ 	% "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
+ 	\renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
+ 	\pgfmathsetlength{\imagescale}{\imagewidth/720}%
+ 	\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
+ 	\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
+ 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+ 		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
+ 		% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
+ 		%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
+ 		\draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+ 	\end{tikzpicture}%
 \end{frame}
 
 \begin{frame}
@@ -1363,7 +1365,7 @@
 \begin{frame}[allowframebreaks]
 	\frametitle{References}
 	\renewcommand*{\bibfont}{\footnotesize}%
-	%\setbeamertemplate{bibliography item}{\insertbiblabel}
+	\setbeamertemplate{bibliography item}{\insertbiblabel}%
 	\printbibliography%
 \end{frame}
 
