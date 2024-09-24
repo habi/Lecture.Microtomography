@@ -133,35 +133,16 @@
 		}%
 	}%
 
-% Define an aditional footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
+% Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
 \makeatletter
-\def\progressbar@progressbar{}% the progress bar
-\newcount\progressbar@tmpcounta% auxiliary counter
-\newcount\progressbar@tmpcountb% auxiliary counter
-\newdimen\progressbar@pbht%progressbar height
-\newdimen\progressbar@pbwd%progressbar width
-\newdimen\progressbar@rcircle% radius for the circle
-\newdimen\progressbar@tmpdim% auxiliary dimension
-\progressbar@pbwd=\paperwidth%
-\progressbar@rcircle=1pt%
-\def\progressbar@progressbar{%
-	\progressbar@tmpcounta=\insertframenumber%
-	\progressbar@tmpcountb=\inserttotalframenumber%
-	\progressbar@tmpdim=\progressbar@pbwd%
-	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
-	\divide\progressbar@tmpdim by \progressbar@tmpcountb
-  			\begin{tikzpicture}%
-				\draw[ubRed] (0,0) -- ++ (\progressbar@pbwd,0);%
-				\draw[draw=ubRed,fill=white] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
-			\end{tikzpicture}%
-			}%
-		}%
-\addtobeamertemplate{footline}{}%
-{%
-	\begin{beamercolorbox}[wd=\paperwidth]{white}%
-		\mode<beamer>{\progressbar@progressbar}%
-		\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}
-	\end{beamercolorbox}%
+\addtobeamertemplate{footline}{}{%
+	\mode<beamer>{%
+		\begin{tikzpicture}%
+			\useasboundingbox (0pt, 0pt) rectangle (\paperwidth, 2pt);%
+			\draw[draw=ubRed,fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, 2pt) circle (1pt);%
+		\end{tikzpicture}%
+ 		}%
+	\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
 }%
 \makeatother
 
@@ -390,7 +371,7 @@
  		\end{itemize}
  	\end{itemize}
  \end{frame}
-
+ 
  \section{Tomography}
  \begin{frame}
  	\frametitle{CT-Scanner}
