@@ -2,7 +2,7 @@ name: Build LaTeX & upload handout
 on:
   push:
     branches:
-      - advanced_course_II_ultraprecision_engineering
+      - advanced_microscopy_series
 jobs:
   build:
     runs-on: ubuntu-latest
