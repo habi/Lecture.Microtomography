@@ -1,0 +1,73 @@
+%%
+%% This is file `beamercolorthemeubbeamer2023.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ubbeamer2023.dtx  (with options: `color')
+%% This is a generated file.
+%% 
+%% Copyright 2023 Univeristy of Bern
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in:
+%% 
+%%     https://www.latex-project.org/lppl.txt
+%% 
+
+\definecolor{ubRed}{HTML}{e4003c}%
+\definecolor{ubGrey}{HTML}{646363}%
+\def\ub@framecolor{base}
+\NewDocumentCommand{\ubsetframecolor}{m}{
+    \def\ub@framecolor{#1}
+    \ifdefstring{\ub@framecolor}{base}{
+        \setbeamercolor{normal text}{fg=black,bg=white}
+        \setbeamercolor{alerted text}{fg=ubRed}
+        \setbeamercolor{itemize item}{fg=ubRed}
+        \setbeamercolor{itemize subitem}{fg=black}
+        \setbeamercolor{itemize subsubitemsubitem}{fg=black}
+        \setbeamercolor{example text}{fg=black}
+        \setbeamercolor{structure}{fg=black}
+        \setbeamercolor{title}{fg=ubRed}
+        \setbeamercolor{frametitle}{fg=ubRed}
+        \setbeamercolor{framesubtitle}{fg=ubGrey}
+        \setbeamercolor{ub page rule}{fg=ubRed}
+    }{}
+    \ifdefstring{\ub@framecolor}{grey}{
+        \setbeamercolor{normal text}{fg=white,bg=ubGrey}
+        \setbeamercolor{alerted text}{fg=white}
+        \setbeamercolor{itemize item}{fg=white}
+        \setbeamercolor{itemize subitem}{fg=white}
+        \setbeamercolor{itemize subsubitem}{fg=white}
+        \setbeamercolor{example text}{fg=white}
+        \setbeamercolor{structure}{fg=white}
+        \setbeamercolor{itemize/enumerate body}{parent=normal text}
+        \setbeamercolor{description body}{parent=normal text}
+        \setbeamercolor{title}{fg=white}
+        \setbeamercolor{frametitle}{fg=white}
+        \setbeamercolor{framesubtitle}{fg=white}
+        \setbeamercolor{ub page rule}{fg=ubGrey}
+    }{}
+    \ifdefstring{\ub@framecolor}{red}{
+        \setbeamercolor{normal text}{fg=white,bg=ubRed}
+        \setbeamercolor{alerted text}{fg=white}
+        \setbeamercolor{itemize subitem}{fg=white}
+        \setbeamercolor{itemize subsubitem}{fg=white}
+        \setbeamercolor{example text}{fg=white}
+        \setbeamercolor{structure}{fg=white}
+        \setbeamercolor{itemize/enumerate body}{parent=normal text}
+        \setbeamercolor{description body}{parent=normal text}
+        \setbeamercolor{title}{fg=white}
+        \setbeamercolor{frametitle}{fg=white}
+        \setbeamercolor{framesubtitle}{fg=white}
+        \setbeamercolor{ub page rule}{fg=ubRed}
+    }{}
+}
+\ubsetframecolor{base}
+
+
+\endinput
+%%
+%% End of file `beamercolorthemeubbeamer2023.sty'.

@@ -1,0 +1,103 @@
+%%
+%% This is file `beamerthemeubbeamer2023.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ubbeamer2023.dtx  (with options: `theme')
+%% This is a generated file.
+%% 
+%% Copyright 2023 Univeristy of Bern
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in:
+%% 
+%%     https://www.latex-project.org/lppl.txt
+%% 
+
+\DeclareOptionBeamer{language}{%
+    \PassOptionsToPackage{language=#1}{beamerouterthemeubbeamer2023}%
+    \def\beamer@ubLanguage{#1}%
+}
+\DeclareOptionBeamer{titlepage}{%
+    \def\beamer@ubTitlepage{#1}%
+}
+\def\beamer@ubTitlepicture{ub_slide_title_01.jpg}%
+\DeclareOptionBeamer{titlepicture}{%
+    \def\beamer@ubTitlepicture{#1}%
+}
+\ProcessOptionsBeamer
+\usefonttheme{ubbeamer2023}
+\usecolortheme{ubbeamer2023}
+\useinnertheme{ubbeamer2023}
+\useoutertheme{ubbeamer2023}
+
+\ifdefstring{\beamer@ubLanguage}{german}{
+  \RequirePackage[ngerman]{babel}
+}{}
+\ifdefstring{\beamer@ubLanguage}{french}{
+  \RequirePackage[french]{babel}
+}{}
+
+\mode<presentation>
+\AtBeginDocument{{
+    \ifdefstring{\beamer@ubTitlepage}{picture}{
+        \setbeamertemplate{background}{
+            \includegraphics[trim=0 0 0 7cm,width=\paperwidth]{\beamer@ubTitlepicture}
+        }
+        \begin{frame}[plain]
+            \vspace*{\stretch{1}}
+            \vspace*{0.1\paperheight}
+            \begin{center}
+                \hspace*{-0.8cm}\includegraphics[height=0.35\paperheight]{./images/ub_logo_mini_2019_white.pdf}
+            \end{center}
+            \vspace*{\stretch{1}}
+        \end{frame}
+    }{
+        \ifdefstring{\beamer@ubTitlepage}{red}{
+
+            \setbeamertemplate{background}{
+                \color{ubRed}\rule{\paperwidth}{\paperheight}
+            }
+            \begin{frame}[plain]
+                \vspace*{\stretch{1}}
+                \vspace*{0.11\paperheight}
+                \begin{center}
+                    \hspace*{-0.8cm}\includegraphics[height=0.35\paperheight]{./images/ub_logo_mini_2019_white.pdf}
+                \end{center}
+                \vspace*{\stretch{1}}
+            \end{frame}
+        } {
+            \ifdefstring{\beamer@ubTitlepage}{grey}{
+                \setbeamertemplate{background}{
+                    \color{ubGrey}\rule{\paperwidth}{\paperheight}
+                }
+                \begin{frame}[plain]
+                    \vspace*{\stretch{1}}
+                    \vspace*{0.11\paperheight}
+                    \begin{center}
+                        \hspace*{-0.8cm}\includegraphics[height=0.35\paperheight]{./images/ub_logo_mini_2019_white.pdf}
+                    \end{center}
+                    \vspace*{\stretch{1}}
+                \end{frame}
+            } {
+                \begin{frame}[plain]
+                    \vspace*{\stretch{1}}
+                    \begin{center}
+                    \hspace*{30pt}\includegraphics[height=0.6\paperheight]{\beamer@ubLogo}
+                    \end{center}
+                    \vspace*{\stretch{1}}
+                \end{frame}
+            }
+        }
+    }
+}}
+\mode<all>
+\pretocmd\beamer@framenotesbegin{\usebeamercolor[fg]{normal text}}
+
+
+\endinput
+%%
+%% End of file `beamerthemeubbeamer2023.sty'.

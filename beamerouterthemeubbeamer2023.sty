@@ -1,0 +1,56 @@
+%%
+%% This is file `beamerouterthemeubbeamer2023.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ubbeamer2023.dtx  (with options: `outer')
+%% This is a generated file.
+%% 
+%% Copyright 2023 Univeristy of Bern
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in:
+%% 
+%%     https://www.latex-project.org/lppl.txt
+%% 
+
+\DeclareOptionBeamer{language}{\def\beamer@ubLanguage{#1}}
+\def\beamer@ubLanguage{german}
+\ProcessOptionsBeamer
+\mode<presentation>
+\def\beamer@ubLogo{./images/ub_logo_2018_de_rgb.pdf}
+\ifdefstring{\beamer@ubLanguage}{french}{
+  \def\beamer@ubLogo{./images/ub_logo_2019_fr_rgb.pdf}
+}{}
+\ifdefstring{\beamer@ubLanguage}{english}{
+  \def\beamer@ubLogo{./images/ub_logo_2019_en_rgb.pdf}
+}{}
+\RequirePackage{calc}
+\RequirePackage{graphicx}
+\setbeamersize{text margin left=15.2mm}
+\setbeamersize{text margin right=7.6mm}
+\defbeamertemplate*{background canvas}{ubbeamer2023}{
+    \ifnumgreater{\c@framenumber}{1}{%
+        \setlength{\unitlength}{1mm}%
+        \begin{picture}(0,0)
+            \put(0,-\paperheight){\usebeamercolor[bg]{background canvas}\rule{\paperwidth}{\paperheight}}
+            \put(3.25,-11.1){\ifdefstring{\ub@framecolor}{base}{\includegraphics[width=5mm]{./images/ub_logo_mini_2019.pdf}}{\includegraphics[width=5mm]{./images/ub_logo_mini_2019_white.pdf}}}
+            \put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}
+            \put(15.2,-87.6){\usebeamerfont{footline}\insertpagenumber}
+            \put(20,-87.6){\usebeamerfont{footline}\insertdate}
+            \put(51.4,-87.6){\usebeamerfont{footline}\insertinstitute}
+            \put(154,-87.6){\usebeamerfont{footline}\makebox[0pt][r]{v.~\href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}}}
+        \end{picture}%
+    }{}%
+}
+
+\setbeamertemplate{navigation symbols}{} % remove navigation symbols
+\mode<all>
+
+
+\endinput
+%%
+%% End of file `beamerouterthemeubbeamer2023.sty'.
