@@ -163,14 +163,17 @@ per-symbol=/]{siunitx}
 
 % Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
 \makeatletter
+\newdimen\progressbar@height
+\progressbar@height=1.36mm
+% The template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
 \addtobeamertemplate{footline}{}{%
-  \mode<beamer>{%
-    \begin{tikzpicture}%
-      \useasboundingbox (0pt, 0pt) rectangle (\paperwidth, 1.5pt);%
-      \draw[draw=ubRed,fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, 1.5pt) circle (1pt);%
-    \end{tikzpicture}%
-  }%
-  \mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
+		\mode<beamer>{%
+				\begin{tikzpicture}%
+						\useasboundingbox (0pt, 0pt) rectangle (\paperwidth, \progressbar@height);%
+						\draw[draw=ubRed,fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, \progressbar@height) circle (\progressbar@height*0.5);%
+				\end{tikzpicture}%
+		}%
+		\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
 }%
 \makeatother
 
