@@ -564,9 +564,17 @@ per-symbol=/]{siunitx}
 \begin{frame}
 		\frametitle{Maximum intensity projection}
 		\centering
-		% Download Guillaumes 'current' slide as PNG from https://ilias.unibe.ch/ilias.php?baseClass=ilLinkResourceHandlerGUI&ref_id=2856632&cmd=calldirectlink
-		\includegraphics[height=\imageheight]{./images/Fundamentals_image_processing_2023.png}%
-		\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2774485.html}{\emph{Fundamentals of Digital Image Processing (2023)} by Guillaume Witz}{Slide 24}%
+		% Download Guillaumes presentation from https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html
+		% Export the PDF from https://ilias.unibe.ch/ilias.php?baseClass=ilLinkResourceHandlerGUI&ref_id=3196885&cmd=calldirectlink
+		% Then `pdftoppm -png Fundamentals_image_processing_2024.pdf Fundamentals_image_processing_2024` and copy relevant slide images to here
+		\only<1|handout:0>{%
+			\includegraphics[height=\imageheight]{./images/Fundamentals_image_processing_2024-21.png}%
+			\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 21}%
+		}%
+		\only<2|handout:1>{
+			\includegraphics[height=\imageheight]{./images/Fundamentals_image_processing_2024-23.png}%
+			\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 23}%
+		}%
 \end{frame}
 
 \subsection{Tomography today}
