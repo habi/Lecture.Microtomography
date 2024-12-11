@@ -88,6 +88,7 @@ per-symbol=/]{siunitx}
 \usepackage{multirow}
 \usepackage[showseconds=false,showzone=false]{datetime2}
 \usepackage{mathastext}
+\usepackage[many]{tcolorbox}
 \usepackage{hyperref}
 
 % Define complementary colors to ubRed=e4003c, which is defined in the .sty file
@@ -129,9 +130,17 @@ per-symbol=/]{siunitx}
   % Make the source command an \href{link}{text}
   \raisebox{-1.618ex}{%
     \makebox[0pt][r]{%
-      \tiny\href{http://#1}{#2}, #3%
+      \tiny\href{#1}{#2}, #3%
     }%
   }%
+}%
+\newcommand{\citeslide}[5]{% slideimage,lecturelink,lecturetitle,author,page
+  % Drop a slide of another lecture into our presentation, with attribution
+  \begin{tcolorbox}[enhanced,colframe=ubRed,drop shadow,hbox,size=tight]{%
+    \includegraphics[height=\imageheight]{#1}%
+    \sourcelink{#2}{\emph{#3} by #4}{Slide #5}%
+  }%
+  \end{tcolorbox}%
 }%
 
 % Make us a nice citation command for citing in a footnote
@@ -565,19 +574,17 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Maximum intensity projection}
-  \centering
-  % Download Guillaumes presentation from https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html
-  % Export the PDF from https://ilias.unibe.ch/ilias.php?baseClass=ilLinkResourceHandlerGUI&ref_id=3196885&cmd=calldirectlink
-  % Then `pdftoppm -png Fundamentals_image_processing_2024.pdf Fundamentals_image_processing_2024` and copy relevant slide images to here
-  \only<1|handout:0>{%
-    \includegraphics[height=\imageheight]{./images/Fundamentals_image_processing_2024-21.png}%
-    \sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 21}%
-  }%
-  \only<2|handout:1>{
-    \includegraphics[height=\imageheight]{./images/Fundamentals_image_processing_2024-23.png}%
-    \sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}{Slide 23}%
-  }%
+ \frametitle{Maximum intensity projection}
+ \centering
+ % Download Guillaumes presentation from https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html
+ % Export the PDF from https://ilias.unibe.ch/ilias.php?baseClass=ilLinkResourceHandlerGUI&ref_id=3196885&cmd=calldirectlink
+ % Then `pdfseparate Fundamentals_image_processing_2024.pdf Fundamentals_image_processing_2024-%03d.pdf` and copy relevant slide images to here
+ \only<1|handout:0>{%
+  \citeslide{./images/Fundamentals_image_processing_2024-021}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html}{Fundamentals of Digital Image Processing}{Guillaume Witz}{21}%
+ }%
+ \only<2|handout:1>{%
+  \citeslide{./images/Fundamentals_image_processing_2024-023}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html}{Fundamentals of Digital Image Processing}{Guillaume Witz}{23}%
+ }%
 \end{frame}
 
 \subsection{Tomography today}
@@ -800,17 +807,16 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-\renewcommand{\imageheight}{0.618\paperheight}%
+\renewcommand{\imageheight}{0.72\paperheight}%
 \begin{frame}
   \frametitle{Projections}
   \centering
   % Download Martins slides from https://ilias.unibe.ch/goto_ilias3_unibe_file_2867533_download.html
   % pdfseparate physical\ basics_2023_folien.pdf -f 21 -l 21 physical_basics_2023_folien-%d.pdf
-  \includegraphics[height=\imageheight]{./images/physical_basics_2023_folien-21.pdf}%
-  \sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2774486.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2023)} by Martin Frenz}{Slide 21}%
+  \citeslide{./images/physical_basics_2023_folien-21.pdf}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774486.html}{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1), 2023}{Martin Frenz}{21}%
 \end{frame}
 
-\renewcommand{\imageheight}{0.618\paperheight}
+%\renewcommand{\imageheight}{0.75\paperheight}
 \begin{frame}
   \frametitle{Projection acquisition}
   \centering%
@@ -820,7 +826,7 @@ per-symbol=/]{siunitx}
   \includegraphics<4|handout:1>[height=\imageheight]{./images/2214/ControlSoftware01}%
 \end{frame}
 
-\renewcommand{\imageheight}{0.618\paperheight}
+%\renewcommand{\imageheight}{0.75\paperheight}
 \begin{frame}
   \frametitle{Projections}
   \centering%
@@ -882,6 +888,15 @@ per-symbol=/]{siunitx}
   \begin{itemize}
     \item Based the on reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Imaging}
+  \centering
+  % Download Nadias presentation from https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933
+  % Then `https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933` and copy relevant slide images to here
+  \only<1|handout:0>{\citeslide{./images/SPIM 2024-033}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{33}}%
+  \only<2|handout:1>{\citeslide{./images/SPIM 2024-043}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{43}}%
 \end{frame}
 
 \begin{frame}
@@ -1203,11 +1218,10 @@ per-symbol=/]{siunitx}
       };%
     \end{tikzpicture}%
   }%
-  \transduration{0}% auto-advance slide
   \only<4|handout:0>{%
     \begin{tikzpicture}[remember picture,overlay]%
       \node at (current page.center) {%
-        \animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/samichlous0}{000}{480}%
+        \animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/samichlous/samichlous0}{000}{480}%
       };%
     \end{tikzpicture}%
   }%
