@@ -757,39 +757,39 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \begin{frame}
- \frametitle{Composition of biological tissues}
- Tissue: content by mass percentage
- \centering
- \begin{table}%
-   \only<1|handout:0>{%
-     \pgfplotstabletypeset[%
-       col sep=comma,% the seperator in our .csv file
-       display columns/0/.style={string type},%
-       % section 3.2 in pgfplotstable manual
-       every head row/.style={before row={\toprule}},%
-       every row no 0/.style={after row=\midrule},%
-       every last row/.style={after row=\bottomrule},%
-     ]{./tables/tissue-composition.csv}%
-   }%
-   \only<2|handout:1>{%
-     \pgfplotstabletypeset[%
-       col sep=comma,% the seperator in our .csv file
-       display columns/0/.style={string type},%
-       every head row/.style={before row={\toprule}},%
-       every row no 0/.style={after row=\midrule},%
-       every last row/.style={after row=\bottomrule},%
-       % make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
-       every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-       every row 2 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-       every row 3 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-       every row 4 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-       every row 5 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-       every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-       every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
-     ]{./tables/tissue-composition.csv}%
-   }%
- \end{table}
- \note{In an \emph{unstained} sample, bone, lean tissue, fat and air can be distinguished easily}
+  \frametitle{Composition of biological tissues}
+  Tissue: content by mass percentage
+  \centering
+  \begin{table}%
+    \only<1|handout:0>{%
+      \pgfplotstabletypeset[%
+        col sep=comma,% the seperator in our .csv file
+        display columns/0/.style={string type},%
+        % section 3.2 in pgfplotstable manual
+        every head row/.style={before row={\toprule}},%
+        every row no 0/.style={after row=\midrule},%
+        every last row/.style={after row=\bottomrule},%
+      ]{./tables/tissue-composition.csv}%
+    }%
+    \only<2|handout:1>{%
+      \pgfplotstabletypeset[%
+        col sep=comma,% the seperator in our .csv file
+        display columns/0/.style={string type},%
+        every head row/.style={before row={\toprule}},%
+        every row no 0/.style={after row=\midrule},%
+        every last row/.style={after row=\bottomrule},%
+        % make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
+        every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+        every row 2 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+        every row 3 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+        every row 4 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+        every row 5 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+        every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+        every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
+      ]{./tables/tissue-composition.csv}%
+    }%
+  \end{table}
+  \note{In an \emph{unstained} sample, bone, lean tissue, fat and air can be distinguished easily}
 \end{frame}
 
 \section{A scan, from \emph{getting started} to \emph{nice image}}
@@ -857,18 +857,15 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-% \renewcommand{\imageheight}{0.5\paperheight}%
-% \begin{frame}
-%   \frametitle{Imaging}
-%   \centering
-%   % Download Nadias presentation from https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933
-%   % Then `https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933` and copy relevant slide images to here
-%   \only<1|handout:0>{\citeslide{./images/SPIM 2024-033}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{33}}%
-%   \only<2|handout:1>{\citeslide{./images/SPIM 2024-043}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{43}}%
-% \end{frame}
-% \renewcommand{\imageheight}{0.72\paperheight}%
-
-\end{document}
+\begin{frame}
+  \frametitle{Imaging}
+  \centering
+  % Download Nadias presentation from https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933
+  % Then `https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933` and copy relevant slide images to here
+  \only<1|handout:0>{\citeslide{./images/SPIM 2024-033}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{33}}%
+  \only<2|handout:1>{\citeslide{./images/SPIM 2024-043}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{43}}%
+\end{frame}
+\renewcommand{\imageheight}{0.72\paperheight}%
 
 \begin{frame}
   \frametitle{What to use?}
@@ -920,12 +917,11 @@ per-symbol=/]{siunitx}
   }%
 \end{frame}
 
-\renewcommand{\imagewidth}{0.618\columnwidth}% Reset imagewidth to standard
 \subsubsection{Materials \& Methods}
 \begin{frame}
   \frametitle{How?}
    \begin{columns}[onlytextwidth]
-     \begin{column}{0.5\linewidth}
+     \begin{column}{0.49\linewidth}
        \begin{itemize}
          \item<1-> 104 extracted human permanent mandibular canines
          \item<2-> \uct imaging
@@ -933,7 +929,7 @@ per-symbol=/]{siunitx}
          \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-ohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
        \end{itemize}
      \end{column}
-     \begin{column}{0.5\linewidth}
+     \begin{column}{0.49\linewidth}
        \only<1|handout:1>{%
          \centering%
          \pgfmathsetlength{\imagescale}{\imagewidth/2716}%
@@ -946,49 +942,49 @@ per-symbol=/]{siunitx}
            \draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
          \end{tikzpicture}%
        }%
-%       \only<2|handout:2>{%
-%         \centering%
-%         \includegraphics[width=\imagewidth]{./images/1272}%
-%         \source{bruker.com/skyscan1272}{}%
-%       }%
-%       \only<3|handout:3>{%
-%         \lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
-%       }%
-%       \only<4|handout:4>{%
-%         \emph{Sample changer} on the SkyScan 1272\newline
-%         In total:
-%         \begin{itemize}
-%           \item 13 days of \emph{continuous} \uct scanning
-%           \item \qty{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
-%           \item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
-%         \end{itemize}
-%       }%
-%       \only<5|handout:5>{%
-%         \centering%
-%         \includegraphics[width=\imagewidth]{./images/zmk/briseno}%
-%         \sourcecite{Briseno-Marroquin2015}{Fig.~2}%
-%       }%
-%       \only<6|handout:6>{%
-%         \centering%
-%         \includegraphics[width=\imagewidth]{./images/zmk/foramen}%
-%         \sourcecite{Wolf2017}{Fig.~1}%
-%       }%
-%       \only<7|handout:7>{%
-%         \centering%
-%         \mode<beamer>{%
-%           \animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
-%           \source{gph.is/2nqkple}{}%
-%         }%
-%         \mode<handout>{%
-%           \includegraphics[width=\linewidth]{./movies/coder/coder-65}%
-%           \source{gph.is/2nqkple}{}%
-%         }%
-%       }%
-%       \only<8|handout:8>{%
-%         \centering%
-%         \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
-%       }%
-     \end{column}
+      \only<2|handout:2>{%
+        \centering%
+        \includegraphics[width=\imagewidth]{./images/1272}%
+        \source{bruker.com/skyscan1272}{}%
+      }%
+      \only<3|handout:3>{%
+        \lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
+      }%
+      \only<4|handout:4>{%
+        \emph{Sample changer} on the SkyScan 1272\newline
+        In total:
+        \begin{itemize}
+          \item 13 days of \emph{continuous} \uct scanning
+          \item \qty{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
+          \item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
+        \end{itemize}
+      }%
+      \only<5|handout:5>{%
+        \centering%
+        \includegraphics[width=\imagewidth]{./images/zmk/briseno}%
+        \sourcecite{Briseno-Marroquin2015}{Fig.~2}%
+      }%
+      \only<6|handout:6>{%
+        \centering%
+        \includegraphics[width=\imagewidth]{./images/zmk/foramen}%
+        \sourcecite{Wolf2017}{Fig.~1}%
+      }%
+      \only<7|handout:7>{%
+        \centering%
+        \mode<beamer>{%
+          \animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
+          \source{gph.is/2nqkple}{}%
+        }%
+        \mode<handout>{%
+          \includegraphics[width=\linewidth]{./movies/coder/coder-65}%
+          \source{gph.is/2nqkple}{}%
+        }%
+      }%
+      \only<8|handout:8>{%
+        \centering%
+        \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
+      }%
+    \end{column}
   \end{columns}
 \end{frame}
 
@@ -999,8 +995,6 @@ per-symbol=/]{siunitx}
   \includegraphics<1|handout:0>[height=\imageheight]{./images/zmk/ScanOverviews.104.png}%
   \includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \end{frame}
-
-\end{document}
 
 \begin{frame}
   \frametitle{Dataset cropping}
@@ -1073,19 +1067,19 @@ per-symbol=/]{siunitx}
         \multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
         \midrule%
         \multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}    & 1-1-1/1 & 73 & 74.5\\%
-        \multicolumn{2}{l}{}            & 1-1-1/2 & 14 & 14.3\\%
-        \multicolumn{2}{l}{}            & 1-1-1/3 & 1 & 1.0\\%
-        \multicolumn{2}{l}{}            & 1-1-1/4 & 2 & 2.1\\%
-        \multicolumn{2}{l}{}            & 1-1-2/1 & 1 & 1.0\\%
-        \multicolumn{2}{l}{}            & 1-2-1/1 & 4 & 4.1\\%
-        \multicolumn{2}{l}{}            & 1-2-1/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{}            & 1-2-2/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{}            & 2-3-1/1 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 1-1-1/2 & 14 & 14.3\\%
+        \multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
+        \multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
+        \multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
         \midrule%
         \multirow{4}{*}{Double (N=3)}  & \multirow{2}{*}{Buccal}  & 1-1-1/1 & 2 & 66.6\\%
-        &  & 1-2-1/1 & 1 & 33.3\\%
+        & & 1-2-1/1 & 1 & 33.3\\%
         & \multirow{2}{*}{Lingual}  & 1-1-1/1 & 2 & 66.6\\%
-        &              & 1-1-1/2 & 1 & 33.3\\%
+        & & 1-1-1/2 & 1 & 33.3\\%
         \bottomrule%
       \end{tabular}%
     }%
@@ -1094,20 +1088,20 @@ per-symbol=/]{siunitx}
         \toprule%
         \multicolumn{2}{c}{Roots} & RCC & \# & \%\\%
         \midrule%
-        \rowcolor{ubRed}\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}  & 1-1-1/1 & 73 & 74.5\\%
-        \rowcolor{ubRed}\multicolumn{2}{l}{}          & 1-1-1/2 & 14 & 14.3\\%
-        \multicolumn{2}{l}{}              & 1-1-1/3 & 1 & 1.0\\%
-        \rowcolor{ubRed}\multicolumn{2}{l}{}          & 1-1-1/4 & 2 & 2.1\\%
-        \multicolumn{2}{l}{}              & 1-1-2/1 & 1 & 1.0\\%
-        \rowcolor{ubRed}\multicolumn{2}{l}{}          & 1-2-1/1 & 4 & 4.1\\%
-        \multicolumn{2}{l}{}              & 1-2-1/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{}              & 1-2-2/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{}              & 2-3-1/1 & 1 & 1.0\\%
+	\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & \cellcolor{ubRed!61.8}74.5\\%
+        \multicolumn{2}{l}{} & 1-1-1/2 & 14 & \cellcolor{ubRed!61.8}14.3\\%
+        \multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
+        \multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
+        \multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
+        \multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
         \midrule%
         \multirow{4}{*}{Double (N=3)}  & \multirow{2}{*}{Buccal}    & 1-1-1/1 & 2 & 66.6\\%
-        &          & 1-2-1/1 & 1 & 33.3\\%
-        & \multirow{2}{*}{Lingual}    & 1-1-1/1 & 2 & 66.6\\%
-        &          & 1-1-1/2 & 1 & 33.3\\%
+        & & 1-2-1/1 & 1 & 33.3\\%
+        & \multirow{2}{*}{Lingual} & 1-1-1/1 & 2 & 66.6\\%
+        & & 1-1-1/2 & 1 & 33.3\\%
         \bottomrule%
       \end{tabular}%
     }%
@@ -1201,6 +1195,7 @@ per-symbol=/]{siunitx}
   }%
 \end{frame}
 
+
 \begin{frame}
   \frametitle{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
   \begin{itemize}
@@ -1218,13 +1213,18 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-%\begin{frame}
-%  \frametitle{References}
-%  \renewcommand*{\bibfont}{\footnotesize}%
-%  \setbeamertemplate{bibliography item}{\insertbiblabel}%
-%  \printbibliography%
-%\end{frame}
-
 \end{document}
 
+\begin{frame}
+\frametitle{References}
+\printbibliography
+\end{frame}
 
+\begin{frame}
+  \frametitle{References}
+  %\renewcommand*{\bibfont}{\footnotesize}%
+  %\setbeamertemplate{bibliography item}{\insertbiblabel}%
+  \printbibliography%
+\end{frame}
+
+\end{document}
