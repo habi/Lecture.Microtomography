@@ -15,7 +15,9 @@
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{333}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
+\newcommand{\standardimagewidth}{\linewidth}% Save us a standard image width, so we can always \renewcommand{\imagewidth} to it
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
+\newcommand{\standardimageheight}{0.72\paperheight}% Save us standard image height, so we can always \renewommand{\imageheight} to it
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
@@ -136,9 +138,9 @@ per-symbol=/]{siunitx}
 }%
 \newcommand{\citeslide}[5]{% slideimage,lecturelink,lecturetitle,author,page
   % Drop a slide of another lecture into our presentation, with attribution
-  \begin{tcolorbox}[enhanced,colframe=ubRed,drop shadow,hbox,size=tight]{%
-      \includegraphics[height=\imageheight]{#1}%
-      \sourcelink{#2}{\emph{#3} by #4}{Slide #5}%
+  \begin{tcolorbox}[enhanced,colframe=ubRed,colback=white,drop shadow,hbox,size=tight]{%
+      \includegraphics[height=0.618\paperheight]{#1}%
+      \sourcelink{#2}{\emph{#3}, #4}{Slide #5}%
     }%
   \end{tcolorbox}%
 }%
@@ -409,6 +411,7 @@ per-symbol=/]{siunitx}
     In the late 1990s, Dr Yoshinori Arai in Japan and Dr Piero Mozzo in Italy independently developed Cone Beam Computed Technology for oral and maxillofacial radiology.
   The first commercial system (the NewTom 9000) was introduced in the European market in 1996 and into the US market in 2001, by Italian company Quantitative Radiology.}
 \end{frame}
+\renewcommand{\imagewidth}{\standardimagewidth}
 
 \begin{frame}[allowframebreaks]
   \frametitle{\uct{} History}
@@ -429,7 +432,6 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-\renewcommand{\imagewidth}{\columnwidth}
 \begin{frame}
   \frametitle{Why \uct?}
   \begin{columns}[onlytextwidth]
@@ -554,6 +556,7 @@ per-symbol=/]{siunitx}
     The files from the early animation were resized 0.25 times; here we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP\@.
   The voxel size of the original data is \qty{7.96}{\micro\meter}, the image size is \numproduct{3295 x 1492} pixels.}
 \end{frame}
+\renewcommand{\imagewidth}{\standardimagewidth}
 
 \begin{frame}
   \frametitle{Maximum intensity projection}
@@ -630,164 +633,164 @@ per-symbol=/]{siunitx}
   \end{columns}%
 \end{frame}
 
-%%\begin{frame}
-%%  \frametitle{Machinery}
-%%  \begin{columns}
-%%    \begin{column}{0.5\textwidth}
-%%      \centering
-%%     \input{animations/classicCT}
-%%    \end{column}
-%%    \begin{column}{0.5\textwidth}
-%%      \centering
-%%      \only<1>{\input{animations/microCT}}%
-%%      \only<2|handout:0>{\input{animations/microCT_lr}}%
-%%      \only<3|handout:0>{\input{animations/microCT_hr}}%
-%%    \end{column}
-%%  \end{columns}
-%%\end{frame}
+%\begin{frame}
+% \frametitle{Machinery}
+% \begin{columns}
+%   \begin{column}{0.5\textwidth}
+%     \centering
+%    \input{animations/classicCT}
+%   \end{column}
+%   \begin{column}{0.5\textwidth}
+%     \centering
+%     \only<1>{\input{animations/microCT}}%
+%     \only<2|handout:0>{\input{animations/microCT_lr}}%
+%     \only<3|handout:0>{\input{animations/microCT_hr}}%
+%   \end{column}
+% \end{columns}
+%\end{frame}
 
-%\renewcommand{\imageheight}{0.618\paperheight}%
 \begin{frame}
   \frametitle{Magnification}
   \centering
   % Download Michaels slides from https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022922.html
   % pdfseparate MiC\ physical\ basics.pdf MiC\ physical\ basics-%03d.pdf
-  \citeslide{./images/MiC physical basics-004}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022922.html}{Contrast, Magnification and Resolution - Laws of Physics for Microscopists (1)}{Michael Jaeger}{4}%
+  \citeslide{./images/MiC physical basics-004}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022922.html}{Contrast, Magnification and Resolution}{Michael Jaeger}{4}%
 \end{frame}
 
-%\begin{frame}
-%  \frametitle{Examples}
-%  \centering%
-%  \only<1|handout:1>{%
-%    \pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-%    \def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-%    \def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-%    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
-%      % 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-%      %\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-%      \draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-%    \end{tikzpicture}%
-%  }%
-%  \renewcommand{\imagewidth}{0.6\linewidth}%
-%  \only<2-3|handout:2>{%
-%    \pgfmathsetlength{\imagescale}{\imagewidth/2301}%
-%    \def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
-%    \def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
-%  }%
-%  \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%    \only<2|handout:2>{%
-%      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
-%    }%
-%    \only<3|handout:0>{%
-%      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
-%    }%
-%    % 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
-%    %\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
-%    \only<2-3|handout:2>{%
-%      \draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-%    }%
-%  \end{tikzpicture}%
-%  \only<4|handout:3>{%
-%    \pgfmathsetlength{\imagescale}{\imagewidth/387}%
-%    \def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
-%    \def\y{279}% scalebar-y at 90% of image height of 310px = 279
-%    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
-%      % 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
-%      %\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
-%      \draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-%    \end{tikzpicture}%
-%    \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
-%  }%
-%  \only<5|handout:0>{%
-%    \animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
-%    \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
-%  }%
-%  \renewcommand{\imagewidth}{0.5\linewidth}%
-%  \only<6|handout:4>{%
-%    \pgfmathsetlength{\imagescale}{\imagewidth/1224}%
-%    \def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
-%    \def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
-%    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
-%      % 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
-%      %\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
-%      \draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-%    \end{tikzpicture}%
-%  }%
-%  \renewcommand{\imagewidth}{0.65\linewidth}%
-%  \only<7|handout:5>{%
-%    \pgfmathsetlength{\imagescale}{\imagewidth/708}%
-%    \def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
-%    \def\y{463}% scalebar-y at 90% of image height of 514px = 463
-%    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
-%      % 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
-%      %\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
-%      \draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-%    \end{tikzpicture}%
-%  }%
-%\end{frame}
+\begin{frame}
+ \frametitle{Examples}
+ \centering%
+ \only<1|handout:1>{%
+   \pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+   \def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+   \def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
+     % 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+     %\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+     \draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+   \end{tikzpicture}%
+ }%
+ \renewcommand{\imagewidth}{0.6\linewidth}%
+ \only<2-3|handout:2>{%
+   \pgfmathsetlength{\imagescale}{\imagewidth/2301}%
+   \def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
+   \def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
+ }%
+ \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+   \only<2|handout:2>{%
+     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
+   }%
+   \only<3|handout:0>{%
+     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
+   }%
+   % 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
+   %\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
+   \only<2-3|handout:2>{%
+     \draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+   }%
+ \end{tikzpicture}%
+ \only<4|handout:3>{%
+   \pgfmathsetlength{\imagescale}{\imagewidth/387}%
+   \def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
+   \def\y{279}% scalebar-y at 90% of image height of 310px = 279
+   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
+     % 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
+     %\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
+     \draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+   \end{tikzpicture}%
+   \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+ }%
+ \only<5|handout:0>{%
+   \animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
+   \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+ }%
+ \renewcommand{\imagewidth}{0.5\linewidth}%
+ \only<6|handout:4>{%
+   \pgfmathsetlength{\imagescale}{\imagewidth/1224}%
+   \def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
+   \def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
+   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
+     % 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
+     %\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
+     \draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+   \end{tikzpicture}%
+ }%
+ \renewcommand{\imagewidth}{0.65\linewidth}%
+ \only<7|handout:5>{%
+   \pgfmathsetlength{\imagescale}{\imagewidth/708}%
+   \def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
+   \def\y{463}% scalebar-y at 90% of image height of 514px = 463
+   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
+     % 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
+     %\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
+     \draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+   \end{tikzpicture}%
+ }%
+\end{frame}
+\renewcommand{\imagewidth}{\standardimagewidth}% Reset imagewidth to standard
 
-%\subsection{Interaction of x-rays with matter}
-%\begin{frame}
-%  \frametitle{X-ray interaction}
-%  \begin{itemize}
-%    \item \textquote[\cite{xrayphysics}]{X-rays interact with tissue in 2 main ways: photoelectric effect and Compton scatter.
-%        To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
-%      Both contribute to dose.}
-%      \begin{itemize}
-%        \item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
-%          \note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
-%            Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
-%            This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
-%            The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \qty{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
-%          At beam energies above this, the Compton effect predominates.}
-%        \item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
-%          It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
-%          \note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_e\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
-%      \end{itemize}
-%    \item Lowering x-ray energy increases contrast
-%    \item X-ray penetration decreases exponentially with sample thickness~\cite[\ie{} Beer-Lamberts law]{wiki:beer-lambert}: \(I(t) = I_0 \, e^{-\alpha z}\)
-%  \end{itemize}
-%\end{frame}
+\subsection{Interaction of x-rays with matter}
+\begin{frame}
+ \frametitle{X-ray interaction}
+ \begin{itemize}
+   \item \textquote[\cite{xrayphysics}]{X-rays interact with tissue in 2 main ways: photoelectric effect and Compton scatter.
+       To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
+     Both contribute to dose.}
+     \begin{itemize}
+       \item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
+         \note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
+           Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
+           This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
+           The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \qty{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
+         At beam energies above this, the Compton effect predominates.}
+       \item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
+         It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
+         \note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_e\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
+     \end{itemize}
+   \item Lowering x-ray energy increases contrast
+   \item X-ray penetration decreases exponentially with sample thickness~\cite[\ie{} Beer-Lamberts law]{wiki:beer-lambert}: \(I(t) = I_0 \, e^{-\alpha z}\)
+ \end{itemize}
+\end{frame}
 
-%\begin{frame}
-%  \frametitle{Composition of biological tissues}
-%  Tissue: content by mass percentage
-%  \centering
-%  \begin{table}%
-%    \only<1|handout:0>{%
-%      \pgfplotstabletypeset[%
-%        col sep=comma,% the seperator in our .csv file
-%        display columns/0/.style={string type},%
-%        % section 3.2 in pgfplotstable manual
-%        every head row/.style={before row={\toprule}},%
-%        every row no 0/.style={after row=\midrule},%
-%        every last row/.style={after row=\bottomrule},%
-%      ]{./tables/tissue-composition.csv}%
-%    }%
-%    \only<2|handout:1>{%
-%      \pgfplotstabletypeset[%
-%        col sep=comma,% the seperator in our .csv file
-%        display columns/0/.style={string type},%
-%        every head row/.style={before row={\toprule}},%
-%        every row no 0/.style={after row=\midrule},%
-%        every last row/.style={after row=\bottomrule},%
-%        % make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
-%        every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-%        every row 2 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-%        every row 3 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-%        every row 4 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-%        every row 5 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-%        every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-%        every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
-%      ]{./tables/tissue-composition.csv}%
-%    }%
-%  \end{table}
-%  \note{In an \emph{unstained} sample, bone, lean tissue, fat and air can be distinguished easily}
-%\end{frame}
+\begin{frame}
+ \frametitle{Composition of biological tissues}
+ Tissue: content by mass percentage
+ \centering
+ \begin{table}%
+   \only<1|handout:0>{%
+     \pgfplotstabletypeset[%
+       col sep=comma,% the seperator in our .csv file
+       display columns/0/.style={string type},%
+       % section 3.2 in pgfplotstable manual
+       every head row/.style={before row={\toprule}},%
+       every row no 0/.style={after row=\midrule},%
+       every last row/.style={after row=\bottomrule},%
+     ]{./tables/tissue-composition.csv}%
+   }%
+   \only<2|handout:1>{%
+     \pgfplotstabletypeset[%
+       col sep=comma,% the seperator in our .csv file
+       display columns/0/.style={string type},%
+       every head row/.style={before row={\toprule}},%
+       every row no 0/.style={after row=\midrule},%
+       every last row/.style={after row=\bottomrule},%
+       % make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
+       every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+       every row 2 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+       every row 3 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+       every row 4 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+       every row 5 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+       every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+       every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
+     ]{./tables/tissue-composition.csv}%
+   }%
+ \end{table}
+ \note{In an \emph{unstained} sample, bone, lean tissue, fat and air can be distinguished easily}
+\end{frame}
 
 \section{A scan, from \emph{getting started} to \emph{nice image}}
 \begin{frame}
@@ -798,26 +801,6 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-\renewcommand{\imageheight}{0.72\paperheight}%
-\begin{frame}
-  \frametitle{Projections}
-  \centering
-  % Download Martins slides from https://ilias.unibe.ch/goto_ilias3_unibe_file_2867533_download.html
-  % pdfseparate physical\ basics_2023_folien.pdf -f 21 -l 21 physical_basics_2023_folien-%d.pdf
-  \citeslide{./images/physical_basics_2023_folien-21.pdf}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774486.html}{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1), 2023}{Martin Frenz}{21}%
-\end{frame}
-
-%\renewcommand{\imageheight}{0.75\paperheight}
-\begin{frame}
-  \frametitle{Projection acquisition}
-  \centering%
-  \includegraphics<1|handout:0>[height=\imageheight]{./images/2214}%
-  \includegraphics<2|handout:0>[height=\imageheight]{./images/2214/room}%
-  \includegraphics<3|handout:0>[height=\imageheight]{./images/2214/scanning_compartement}%
-  \includegraphics<4|handout:1>[height=\imageheight]{./images/2214/ControlSoftware01}%
-\end{frame}
-
-%\renewcommand{\imageheight}{0.75\paperheight}
 \begin{frame}
   \frametitle{Projections}
   \centering%
@@ -835,13 +818,6 @@ per-symbol=/]{siunitx}
     \item A (planar) x-ray detector collects (magnified) projection images.
     \item The projections are recorded on disk
   \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Reconstructions}
-  \centering
-  \includegraphics<1|handout:1>[height=\imageheight]{./images/2214/NRecon_proj}%
-  \includegraphics<2|handout:2>[height=\imageheight]{./images/2214/NRecon_rec}%
 \end{frame}
 
 \begin{frame}
@@ -881,14 +857,18 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Imaging}
-  \centering
-  % Download Nadias presentation from https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933
-  % Then `https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933` and copy relevant slide images to here
-  \only<1|handout:0>{\citeslide{./images/SPIM 2024-033}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{33}}%
-  \only<2|handout:1>{\citeslide{./images/SPIM 2024-043}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{43}}%
-\end{frame}
+% \renewcommand{\imageheight}{0.5\paperheight}%
+% \begin{frame}
+%   \frametitle{Imaging}
+%   \centering
+%   % Download Nadias presentation from https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933
+%   % Then `https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreen&ref_id=3022933` and copy relevant slide images to here
+%   \only<1|handout:0>{\citeslide{./images/SPIM 2024-033}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{33}}%
+%   \only<2|handout:1>{\citeslide{./images/SPIM 2024-043}{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{Light Sheet Microscopy}{Nadia Mercader}{43}}%
+% \end{frame}
+% \renewcommand{\imageheight}{0.72\paperheight}%
+
+\end{document}
 
 \begin{frame}
   \frametitle{What to use?}
@@ -940,74 +920,75 @@ per-symbol=/]{siunitx}
   }%
 \end{frame}
 
+\renewcommand{\imagewidth}{0.618\columnwidth}% Reset imagewidth to standard
 \subsubsection{Materials \& Methods}
 \begin{frame}
   \frametitle{How?}
-  \begin{columns}[onlytextwidth]
-    \begin{column}{0.5\linewidth}
-      \begin{itemize}
-        \item<1-> 104 extracted human permanent mandibular canines
-        \item<2-> \uct imaging
-        \item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-        \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.5\linewidth}
-      \only<1|handout:1>{%
-        \centering%
-        \pgfmathsetlength{\imagescale}{\imagewidth/2716}%
-        \def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
-        \def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
-        \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-          \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
-          % 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
-          %\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{140.0}{\milli\meter} (2132px) TEMPORARY!};
-          \draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
-        \end{tikzpicture}%
-      }%
-      \only<2|handout:2>{%
-        \centering%
-        \includegraphics[width=\imagewidth]{./images/1272}%
-        \source{bruker.com/skyscan1272}{}%
-      }%
-      \only<3|handout:3>{%
-        \lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
-      }%
-      \only<4|handout:4>{%
-        \emph{Sample changer} on the SkyScan 1272\newline
-        In total:
-        \begin{itemize}
-          \item 13 days of \emph{continuous} \uct scanning
-          \item \qty{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
-          \item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
-        \end{itemize}
-      }%
-      \only<5|handout:5>{%
-        \centering%
-        \includegraphics[width=\imagewidth]{./images/zmk/briseno}%
-        \sourcecite{Briseno-Marroquin2015}{Fig.~2}%
-      }%
-      \only<6|handout:6>{%
-        \centering%
-        \includegraphics[width=\imagewidth]{./images/zmk/foramen}%
-        \sourcecite{Wolf2017}{Fig.~1}%
-      }%
-      \only<7|handout:7>{%
-        \centering%
-        \mode<beamer>{%
-          \animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
-          \source{gph.is/2nqkple}{}%
-        }%
-        \mode<handout>{%
-          \includegraphics[width=\linewidth]{./movies/coder/coder-65}%
-          \source{gph.is/2nqkple}{}%
-        }%
-      }%
-      \only<8|handout:8>{%
-        \centering%
-        \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
-      }%
-    \end{column}
+   \begin{columns}[onlytextwidth]
+     \begin{column}{0.5\linewidth}
+       \begin{itemize}
+         \item<1-> 104 extracted human permanent mandibular canines
+         \item<2-> \uct imaging
+         \item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
+         \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-ohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
+       \end{itemize}
+     \end{column}
+     \begin{column}{0.5\linewidth}
+       \only<1|handout:1>{%
+         \centering%
+         \pgfmathsetlength{\imagescale}{\imagewidth/2716}%
+         \def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
+         \def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
+         \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+           \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
+%           % 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
+%           %\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{140.0}{\milli\meter} (2132px) TEMPORARY!};
+           \draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
+         \end{tikzpicture}%
+       }%
+%       \only<2|handout:2>{%
+%         \centering%
+%         \includegraphics[width=\imagewidth]{./images/1272}%
+%         \source{bruker.com/skyscan1272}{}%
+%       }%
+%       \only<3|handout:3>{%
+%         \lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
+%       }%
+%       \only<4|handout:4>{%
+%         \emph{Sample changer} on the SkyScan 1272\newline
+%         In total:
+%         \begin{itemize}
+%           \item 13 days of \emph{continuous} \uct scanning
+%           \item \qty{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
+%           \item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
+%         \end{itemize}
+%       }%
+%       \only<5|handout:5>{%
+%         \centering%
+%         \includegraphics[width=\imagewidth]{./images/zmk/briseno}%
+%         \sourcecite{Briseno-Marroquin2015}{Fig.~2}%
+%       }%
+%       \only<6|handout:6>{%
+%         \centering%
+%         \includegraphics[width=\imagewidth]{./images/zmk/foramen}%
+%         \sourcecite{Wolf2017}{Fig.~1}%
+%       }%
+%       \only<7|handout:7>{%
+%         \centering%
+%         \mode<beamer>{%
+%           \animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
+%           \source{gph.is/2nqkple}{}%
+%         }%
+%         \mode<handout>{%
+%           \includegraphics[width=\linewidth]{./movies/coder/coder-65}%
+%           \source{gph.is/2nqkple}{}%
+%         }%
+%       }%
+%       \only<8|handout:8>{%
+%         \centering%
+%         \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
+%       }%
+     \end{column}
   \end{columns}
 \end{frame}
 
@@ -1018,6 +999,8 @@ per-symbol=/]{siunitx}
   \includegraphics<1|handout:0>[height=\imageheight]{./images/zmk/ScanOverviews.104.png}%
   \includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \end{frame}
+
+\end{document}
 
 \begin{frame}
   \frametitle{Dataset cropping}
@@ -1243,4 +1226,5 @@ per-symbol=/]{siunitx}
 %\end{frame}
 
 \end{document}
+
 
