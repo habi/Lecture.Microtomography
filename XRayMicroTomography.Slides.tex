@@ -81,7 +81,7 @@ per-symbol=/]{siunitx}
 \ExplSyntaxOn%
 \NewDocumentCommand\lstcolorlines{O{green}m}%
 {%
-\clist_if_in:nVT { #2 } { \the\value{lstnumber} }{ \color{#1} }%
+  \clist_if_in:nVT { #2 } { \the\value{lstnumber} }{ \color{#1} }%
 }%
 \ExplSyntaxOff%
 \usepackage{booktabs}
@@ -139,8 +139,8 @@ per-symbol=/]{siunitx}
 \newcommand{\citeslide}[5]{% slideimage,lecturelink,lecturetitle,author,page
   % Drop a slide of another lecture into our presentation, with attribution
   \begin{tcolorbox}[enhanced,colframe=ubRed,colback=white,drop shadow,hbox,size=tight]{%
-    \includegraphics[width=\linewidth,height=0.7\paperheight,keepaspectratio]{#1}% https://tex.stackexchange.com/a/12041/828
-    \sourcelink{#2}{\emph{#3}, #4}{Slide #5}%
+      \includegraphics[width=\linewidth,height=0.7\paperheight,keepaspectratio]{#1}% https://tex.stackexchange.com/a/12041/828
+      \sourcelink{#2}{\emph{#3}, #4}{Slide #5}%
     }%
   \end{tcolorbox}%
 }%
@@ -633,21 +633,21 @@ per-symbol=/]{siunitx}
   \end{columns}%
 \end{frame}
 
-%\begin{frame}
-% \frametitle{Machinery}
-% \begin{columns}
-%   \begin{column}{0.5\textwidth}
-%     \centering
-%    \input{animations/classicCT}
-%   \end{column}
-%   \begin{column}{0.5\textwidth}
-%     \centering
-%     \only<1>{\input{animations/microCT}}%
-%     \only<2|handout:0>{\input{animations/microCT_lr}}%
-%     \only<3|handout:0>{\input{animations/microCT_hr}}%
-%   \end{column}
-% \end{columns}
-%\end{frame}
+\begin{frame}
+  \frametitle{Machinery}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \input{animations/classicCT}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \only<1>{\input{animations/microCT}}%
+      \only<2|handout:0>{\input{animations/microCT_lr}}%
+      \only<3|handout:0>{\input{animations/microCT_hr}}%
+    \end{column}
+  \end{columns}
+\end{frame}
 
 \begin{frame}
   \frametitle{Magnification}
@@ -658,102 +658,102 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \begin{frame}
- \frametitle{Examples}
- \centering%
- \only<1|handout:1>{%
-   \pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-   \def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-   \def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
-     % 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-     %\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-     \draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-   \end{tikzpicture}%
- }%
- \renewcommand{\imagewidth}{0.6\linewidth}%
- \only<2-3|handout:2>{%
-   \pgfmathsetlength{\imagescale}{\imagewidth/2301}%
-   \def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
-   \def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
- }%
- \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-   \only<2|handout:2>{%
-     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
-   }%
-   \only<3|handout:0>{%
-     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
-   }%
-   % 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
-   %\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
-   \only<2-3|handout:2>{%
-     \draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-   }%
- \end{tikzpicture}%
- \only<4|handout:3>{%
-   \pgfmathsetlength{\imagescale}{\imagewidth/387}%
-   \def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
-   \def\y{279}% scalebar-y at 90% of image height of 310px = 279
-   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
-     % 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
-     %\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
-     \draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-   \end{tikzpicture}%
-   \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
- }%
- \only<5|handout:0>{%
-   \animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
-   \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
- }%
- \renewcommand{\imagewidth}{0.5\linewidth}%
- \only<6|handout:4>{%
-   \pgfmathsetlength{\imagescale}{\imagewidth/1224}%
-   \def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
-   \def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
-   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
-     % 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
-     %\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
-     \draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-   \end{tikzpicture}%
- }%
- \renewcommand{\imagewidth}{0.65\linewidth}%
- \only<7|handout:5>{%
-   \pgfmathsetlength{\imagescale}{\imagewidth/708}%
-   \def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
-   \def\y{463}% scalebar-y at 90% of image height of 514px = 463
-   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
-     % 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
-     %\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
-     \draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-   \end{tikzpicture}%
- }%
+  \frametitle{Examples}
+  \centering%
+  \only<1|handout:1>{%
+    \pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+    \def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+    \def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
+      % 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+      %\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+      \draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+    \end{tikzpicture}%
+  }%
+  \renewcommand{\imagewidth}{0.6\linewidth}%
+  \only<2-3|handout:2>{%
+    \pgfmathsetlength{\imagescale}{\imagewidth/2301}%
+    \def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
+    \def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
+  }%
+  \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+    \only<2|handout:2>{%
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
+    }%
+    \only<3|handout:0>{%
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
+    }%
+    % 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
+    %\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
+    \only<2-3|handout:2>{%
+      \draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+    }%
+  \end{tikzpicture}%
+  \only<4|handout:3>{%
+    \pgfmathsetlength{\imagescale}{\imagewidth/387}%
+    \def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
+    \def\y{279}% scalebar-y at 90% of image height of 310px = 279
+    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
+      % 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
+      %\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
+      \draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+    \end{tikzpicture}%
+    \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+  }%
+  \only<5|handout:0>{%
+    \animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
+    \sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+  }%
+  \renewcommand{\imagewidth}{0.5\linewidth}%
+  \only<6|handout:4>{%
+    \pgfmathsetlength{\imagescale}{\imagewidth/1224}%
+    \def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
+    \def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
+    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
+      % 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
+      %\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
+      \draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+    \end{tikzpicture}%
+  }%
+  \renewcommand{\imagewidth}{0.65\linewidth}%
+  \only<7|handout:5>{%
+    \pgfmathsetlength{\imagescale}{\imagewidth/708}%
+    \def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
+    \def\y{463}% scalebar-y at 90% of image height of 514px = 463
+    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
+      % 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
+      %\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
+      \draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+    \end{tikzpicture}%
+  }%
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}% Reset imagewidth to standard
 
 \subsection{Interaction of x-rays with matter}
 \begin{frame}
- \frametitle{X-ray interaction}
- \begin{itemize}
-   \item \textquote[\cite{xrayphysics}]{X-rays interact with tissue in 2 main ways: photoelectric effect and Compton scatter.
-       To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
-     Both contribute to dose.}
-     \begin{itemize}
-       \item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
-         \note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
-           Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
-           This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
-           The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \qty{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
-         At beam energies above this, the Compton effect predominates.}
-       \item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
-         It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
-         \note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_e\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
-     \end{itemize}
-   \item Lowering x-ray energy increases contrast
-   \item X-ray penetration decreases exponentially with sample thickness~\cite[\ie{} Beer-Lamberts law]{wiki:beer-lambert}: \(I(t) = I_0 \, e^{-\alpha z}\)
- \end{itemize}
+  \frametitle{X-ray interaction}
+  \begin{itemize}
+    \item \textquote[\cite{xrayphysics}]{X-rays interact with tissue in 2 main ways: photoelectric effect and Compton scatter.
+        To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
+      Both contribute to dose.}
+      \begin{itemize}
+        \item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
+          \note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
+            Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
+            This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
+            The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \qty{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
+          At beam energies above this, the Compton effect predominates.}
+        \item Compton scattering is one of the principle forms of photon interaction and is directly proportional to the (electron \& physical) density of the material.
+          It does \emph{not} depend on the atomic number: \(\lambda' - \lambda = \frac{h}{m_e c}\left(1-\cos{\theta}\right)\)
+          \note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_e\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
+      \end{itemize}
+    \item Lowering x-ray energy increases contrast
+    \item X-ray penetration decreases exponentially with sample thickness~\cite[\ie{} Beer-Lamberts law]{wiki:beer-lambert}: \(I(t) = I_0 \, e^{-\alpha z}\)
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -920,28 +920,28 @@ per-symbol=/]{siunitx}
 \subsubsection{Materials \& Methods}
 \begin{frame}
   \frametitle{How?}
-   \begin{columns}
-     \begin{column}{0.49\linewidth}
-       \begin{itemize}
-         \item<1-> 104 extracted human permanent mandibular canines
-         \item<2-> \uct imaging
-         \item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-         \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-ohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
-       \end{itemize}
-     \end{column}
-     \begin{column}{0.49\linewidth}
-       \only<1|handout:1>{%
-         \centering%
-         \pgfmathsetlength{\imagescale}{\imagewidth/2716}%
-         \def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
-         \def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
-         \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-           \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
-            % 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
-            %\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{140.0}{\milli\meter} (2132px) TEMPORARY!};
-           \draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
-         \end{tikzpicture}%
-       }%
+  \begin{columns}
+    \begin{column}{0.49\linewidth}
+      \begin{itemize}
+        \item<1-> 104 extracted human permanent mandibular canines
+        \item<2-> \uct imaging
+        \item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
+        \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-ohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.49\linewidth}
+      \only<1|handout:1>{%
+        \centering%
+        \pgfmathsetlength{\imagescale}{\imagewidth/2716}%
+        \def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
+        \def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
+        \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+          \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
+          % 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
+          %\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{140.0}{\milli\meter} (2132px) TEMPORARY!};
+          \draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
+        \end{tikzpicture}%
+      }%
       \only<2|handout:2>{%
         \centering%
         \includegraphics[width=\imagewidth]{./images/1272}%
@@ -1088,7 +1088,7 @@ per-symbol=/]{siunitx}
         \toprule%
         \multicolumn{2}{c}{Roots} & RCC & \# & \% \\%
         \midrule%
-	\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & \cellcolor{ubRed!61.8}74.5\\%
+        \multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & \cellcolor{ubRed!61.8}74.5\\%
         \multicolumn{2}{l}{} & 1-1-1/2 & 14 & \cellcolor{ubRed!61.8}14.3\\%
         \multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
         \multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
