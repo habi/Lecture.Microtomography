@@ -204,19 +204,6 @@ per-symbol=/]{siunitx}
 
 \begin{frame}
   \frametitle{Grüessech mitenang!}
-  \begin{itemize}
-    \item David Haberthür
-      \begin{itemize}
-        \item Physicist by trade
-        \item \href{https://boris.unibe.ch/2619/}{PhD in high resolution imaging of the lung}, Institute of Anatomy, University of Bern, Switzerland
-        \item Post-Doc I: \href{https://www.psi.ch/sls/tomcat/}{TOMCAT}, \href{https://www.psi.ch/sls/}{Swiss Light Source}, \href{https://www.psi.ch/}{Paul Scherrer Institute}, Switzerland
-        \item Post-Doc II: \uct group, Institute of Anatomy, University of Bern, Switzerland
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Grüessech from the \uct group}
   \centering%
   \includegraphics[width=\imagewidth]{./images/team}
   \begin{columns}
@@ -280,8 +267,11 @@ per-symbol=/]{siunitx}
         \item<1-|handout:1-> Allows for imaging dense and non‐transparent samples
         \item<1-|handout:1-> Non-destructive imaging\uncover<2-|handout:2>{, thus compatible with routine sample preparation}
         \item<1-|handout:1-> Results in three-dimensional images \uncover<2-|handout:2>{with \unit{\micro\meter} resolution}
-        \item<1-|handout:1-> Covers a very large range of sample sizes
-        \item<2-|handout:2> (Small) biological samples%
+          \only<1>{
+        \item<1-|handout:1-> Covers a large range of sample sizes}
+          \only<2->{
+        \item<2-|handout:2-> Covers a \emph{very} large range of sample sizes}
+        \item<2-|handout:2> Small (biological) samples%
         \item<2-|handout:2> Enables correlative imaging pipelines, scanning of precious biological samples, as well as museum \& collection material
       \end{itemize}%
     \end{column}%
@@ -371,11 +361,12 @@ per-symbol=/]{siunitx}
         \item 1895: Wilhelm Conrad Röntgen discovers X-rays
         \item<2-|handout:2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
         \item<2-|handout:2-> \citeyear{Hounsfield1976a}:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
-        \item<3-|handout:3-> CT scanner generations
+        \item<3-|handout:3-> Nobel Prize in 1979, jointly for Allan Cormack and Godfrey Hounsfield
+        \item<4-|handout:4-> CT scanner generations
           \begin{itemize}
-            \item<3-|handout:3-> First generation
-            \item<4-|handout:4-> Second generation
-            \item<5|handout:5> Third generation
+            \item<4-|handout:4-> First generation
+            \item<5-|handout:5-> Second generation
+            \item<6|handout:6> Third generation
           \end{itemize}
       \end{itemize}
     \end{column}
@@ -396,12 +387,14 @@ per-symbol=/]{siunitx}
         \end{tikzpicture}%
       }%
       \only<2|handout:2>{\sourcecite{Beckmann2006}{Figure 5}}%
-      \includegraphics<3|handout:3>[width=\imagewidth]{./images/History_Generation1}%
-      \only<3|handout:3>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-      \includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation2}%
-      \only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-      \includegraphics<5|handout:5>[width=\imagewidth]{./images/History_Generation3}%
-      \only<5|handout:5>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+      \includegraphics<3|handout:3>[height=\imageheight]{./images/US3940625-drawings-page-2}%
+      \only<3|handout:3>{\sourcecite{US3940625A}{}}%
+      \includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation1}%
+      \only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+      \includegraphics<5|handout:5>[width=\imagewidth]{./images/History_Generation2}%
+      \only<5|handout:5>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+      \includegraphics<6|handout:6>[width=\imagewidth]{./images/History_Generation3}%
+      \only<6|handout:6>{\sourcecite{Hsieh2003}{Figure 1.14}}%
     \end{column}
   \end{columns}
   \note<1|handout:1>{I was unable to find conclusive information on the voxel size of the first CT image.
@@ -417,19 +410,22 @@ per-symbol=/]{siunitx}
 \begin{frame}[allowframebreaks]
   \frametitle{\uct{} History}
   \begin{itemize}
-    \item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}%
-    \item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment%
-    \item Lee Feldkamp~\cite{Feldkamp1984} developed one of the early laboratory microCT systems by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to nondestructively detect damage in ceramic manufactured automobile parts%
-    \item Feldkamp met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}%
-    \item \uct{} was first reported in the 1980s, for scanning gemstones to cut out the largest possible one%
-    \item Today: Nondestructive imaging for quantifying the (micros)tructure of organic materials%
-      \begin{itemize}%
-        \item Mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties%
-        \item Teeth and their internal details%
-        \item Soft tissues and vasculature using radio-opaque contrast agents%
-        \item Characterization of anatomical details in high resolution%
-      \end{itemize}%
-    \item \(\approx\)2500 \uct{} systems are in use worldwide with over 1000 publications annually%
+    \item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}
+    \item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment
+    \item Lee Feldkamp~\cite{Feldkamp1984} developed an early laboratory microCT system by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to \emph{nondestructively} detect damage in ceramic manufactured automobile parts
+    \item Feldkamp met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}
+      \pagebreak
+    \item \uct{} was first reported in the 1980s, for scanning gemstones
+    \item Early 1990s: Manufacturers like SkyScan and Scanco Medical made \uct{} systems commercially available
+    \item Today: Nondestructive imaging for quantifying the (micro)structure of (organic) materials
+      \begin{itemize}
+        \item Mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties
+        \item Teeth and their internal details
+        \item Tissues, small animals, and medical devices like stents and implants
+        \item Soft tissues and vasculature using radio-opaque contrast agents
+        \item Characterization of anatomical details in high resolution
+      \end{itemize}
+    \item \(\approx\)2500 \uct{} systems are in use worldwide with over 1000 publications annually
   \end{itemize}
 \end{frame}
 
@@ -872,7 +868,7 @@ per-symbol=/]{siunitx}
   \begin{itemize}
     \item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
     \item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022928.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
-    \item Reproducible research
+    \item Reproducible research, \ie{} Pretty images are nice, but we want quantitative numbers
       \begin{itemize}
         \item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
         \item \href{https://git-scm.com/}{\faGit}
@@ -883,15 +879,6 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \section{Example: A study about teeth}
-\begin{frame}
-  \frametitle{Quantitative data}
-  \begin{itemize}
-    \item Pretty images are nice, but we need quantitative numbers
-    \item Segmentation
-    \item Characterization
-  \end{itemize}
-\end{frame}
-
 \subsubsection{Overview}
 \begin{frame}
   \frametitle{Internal morphology of human teeth}%
@@ -1058,7 +1045,7 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Outcome root canal configuration classification}%
+  \frametitle{Classification of root canal configurations}%
   \centering%
   \small{% Smaller text for fitting the table onto the slide
     \only<1>{%
@@ -1140,29 +1127,28 @@ per-symbol=/]{siunitx}
   \end{tikzpicture}%
 \end{frame}
 
-% \begin{frame}
-%   \renewcommand{\imageheight}{0.4\paperheight}%
-%   \frametitle{Results of root canal space extraction}%
-%   \centering%
-%   \includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0452}\hfill%
-%   \includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0278}\hfill%
-%   \includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0353}\hfill%
-%   \includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0419}\hfill%
-%   \includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0642}\hfill%
-%   \includegraphics[height=\imageheight]{./images/zmk/rcs/Tooth0752}\hfill%
-%   % Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
-%   % "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
-%   \renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
-%   \pgfmathsetlength{\imagescale}{\imagewidth/720}%
-%   \def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
-%   \def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
-%   \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%     \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
-%     % 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
-%     %\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
-%     \draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-%   \end{tikzpicture}%
-% \end{frame}
+\begin{frame}
+  \renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
+  \frametitle{Results of root canal space extraction}%
+  \centering%
+  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0452}\hfill%
+  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0278}\hfill%
+  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0353}\hfill%
+  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0419}\hfill%
+  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0642}\hfill%
+  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0752}\hfill%
+  % Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
+  % "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
+  \pgfmathsetlength{\imagescale}{\imagewidth/720}%
+  \def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
+  \def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
+  \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+    \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
+    % 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
+    %\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
+    \draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+  \end{tikzpicture}%
+\end{frame}
 
 \begin{frame}
   \frametitle{Conclusion ZMK}
@@ -1212,18 +1198,10 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-\end{document}
-
-\begin{frame}
-\frametitle{References}
-\printbibliography
-\end{frame}
-
-\begin{frame}
+begin{frame}[allowframebreaks]
   \frametitle{References}
-  %\renewcommand*{\bibfont}{\footnotesize}%
-  %\setbeamertemplate{bibliography item}{\insertbiblabel}%
-  \printbibliography%
+  \renewcommand*{\bibfont}{\footnotesize}%
+  \printbibliography
 \end{frame}
 
 \end{document}
