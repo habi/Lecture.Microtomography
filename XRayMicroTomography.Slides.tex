@@ -13,7 +13,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{10}% use only every nth frame for the animations
+\newcommand{\everyframe}{1}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\standardimagewidth}{\linewidth}% Save us a standard image width, so we can always \renewcommand{\imagewidth} to it
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
@@ -220,8 +220,8 @@ per-symbol=/]{siunitx}
 
 \section{Overview}
 \begin{frame}
-  \frametitle<1>{Computed tomography}
-  \frametitle<2->{micro-Computed tomography}
+  \frametitle<1|handout:1>{Computed tomography}
+  \frametitle<2-|handout:2>{micro-Computed tomography}
   \begin{columns}%
     % https://de.wikipedia.org/wiki/Goldener_Schnitt#/media/Datei:Golden_ratio_line_percentages.svg
     % 61.8% vs. 38.2%
@@ -373,7 +373,7 @@ per-symbol=/]{siunitx}
   \begin{itemize}
     \item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}
     \item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment
-    \item Lee Feldkamp~\cite{Feldkamp1984} developed an early laboratory microCT system by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to \emph{nondestructively} detect damage in ceramic manufactured automobile parts
+    \item Lee Feldkamp~\cite{Feldkamp1984} developed an early laboratory microCT system by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to nondestructively detect damage in ceramic manufactured automobile parts
     \item Feldkamp met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}
       \pagebreak
     \item \uct{} was first reported in the 1980s, for scanning gemstones
@@ -914,11 +914,6 @@ per-symbol=/]{siunitx}
       }%
       \only<6|handout:6>{%
         \centering%
-        \includegraphics[width=\imagewidth]{./images/zmk/foramen}%
-        \sourcecite{Wolf2017}{Fig.~1}%
-      }%
-      \only<7|handout:7>{%
-        \centering%
         \mode<beamer>{%
           \animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
           \source{gph.is/2nqkple}{}%
@@ -928,7 +923,7 @@ per-symbol=/]{siunitx}
           \source{gph.is/2nqkple}{}%
         }%
       }%
-      \only<8|handout:8>{%
+      \only<7|handout:7>{%
         \centering%
         \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
       }%
