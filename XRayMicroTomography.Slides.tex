@@ -13,7 +13,7 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{333}% use only every nth frame for the animations
+\newcommand{\everyframe}{10}% use only every nth frame for the animations
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\standardimagewidth}{\linewidth}% Save us a standard image width, so we can always \renewcommand{\imagewidth} to it
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
@@ -26,7 +26,7 @@
 \usepackage[%
   backend=biber,%
   sorting=none,%
-  style=ieee,% `ieee` is needed for hypercite/footcite at the bottom of the slides
+  %style=ieee,%
   citetracker=true,%
   isbn=false,%
   url=false,%
@@ -42,13 +42,10 @@
       \step[fieldset=volume, null]%
       \step[fieldset=number, null]%
       \step[fieldset=pages, null]%
-      %\step[fieldset=year, null]% Do not remove year, otherwise the \citeyear on the history slide does not work :)
+      %\step[fieldset=year, null]% Do *not* remove year, otherwise the \citeyear on the history slide does not work :)
     }%
   }%
 }%
-% Fix double-comma in footcite
-% Copy the relevant line from https://tex.stackexchange.com/a/409861/828
-\renewcommand\labelnamepunct{\adddot\space} %punct after autor
 \addbibresource{../../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
@@ -75,21 +72,14 @@ per-symbol=/]{siunitx}
 \usepackage{fontawesome5}
 \usepackage{csquotes}
 \usepackage{listings}
-\lstset{basicstyle=\tiny\ttfamily}
-\usepackage{lstlinebgrd}%https://tex.stackexchange.com/a/58543/828
-\usepackage{expl3,xparse}
-\ExplSyntaxOn%
-\NewDocumentCommand\lstcolorlines{O{green}m}%
-{%
-  \clist_if_in:nVT { #2 } { \the\value{lstnumber} }{ \color{#1} }%
-}%
-\ExplSyntaxOff%
+\lstset{basicstyle=\scriptsize\ttfamily}
 \usepackage{booktabs}
-\usepackage{array}
+\renewcommand{\familydefault}{\rmdefault}
+\usepackage[defaultmathsizes,symbolgreek]{mathastext}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage[showseconds=false,showzone=false]{datetime2}
-\usepackage{mathastext}
 \usepackage[many]{tcolorbox}
 \usepackage{hyperref}
 
@@ -144,33 +134,6 @@ per-symbol=/]{siunitx}
     }%
   \end{tcolorbox}%
 }%
-
-% Make us a nice citation command for citing in a footnote
-% https://tex.stackexchange.com/a/396754/828
-\makeatletter
-\newbibmacro*{hypercite}{%
-  \renewcommand{\@makefntext}[1]{\noindent\normalfont##1}%
-  \footnotetext{%
-    \blxmkbibnote{foot}{%
-      \printtext[labelnumberwidth]{%
-        \printfield{prefixnumber}%
-        \printfield{labelnumber}%
-      }%
-      \addspace%
-      \fullcite{\thefield{entrykey}}%
-    }%
-  }%
-}%
-\DeclareCiteCommand{\hypercite}%
-{\usebibmacro{cite:init}}%
-{\usebibmacro{hypercite}}%
-{}%
-{\usebibmacro{cite:dump}}%
-% Redefine the \footcite command to use the reference number
-\renewcommand{\footcite}[1]{\cite{#1}\hypercite{#1}}
-\makeatother
-% Remove title when using footcite/hypercite
-\AtEveryCitekey{\clearfield{title}}
 
 % Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
 \makeatletter
@@ -267,10 +230,8 @@ per-symbol=/]{siunitx}
         \item<1-|handout:1-> Allows for imaging dense and non‐transparent samples
         \item<1-|handout:1-> Non-destructive imaging\uncover<2-|handout:2>{, thus compatible with routine sample preparation}
         \item<1-|handout:1-> Results in three-dimensional images \uncover<2-|handout:2>{with \unit{\micro\meter} resolution}
-          \only<1>{
-        \item<1-|handout:1-> Covers a large range of sample sizes}
-          \only<2->{
-        \item<2-|handout:2-> Covers a \emph{very} large range of sample sizes}
+        \only<1|handout:1>{\item Covers a large range of sample sizes}
+        \only<2-|handout:2>{\item Covers a \emph{very} large range of sample sizes}
         \item<2-|handout:2> Small (biological) samples%
         \item<2-|handout:2> Enables correlative imaging pipelines, scanning of precious biological samples, as well as museum \& collection material
       \end{itemize}%
@@ -388,7 +349,7 @@ per-symbol=/]{siunitx}
       }%
       \only<2|handout:2>{\sourcecite{Beckmann2006}{Figure 5}}%
       \includegraphics<3|handout:3>[height=\imageheight]{./images/US3940625-drawings-page-2}%
-      \only<3|handout:3>{\sourcecite{US3940625A}{}}%
+      \only<3|handout:3>{\sourcecite{US3940625A}{p.~2}}%
       \includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation1}%
       \only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.12}}%
       \includegraphics<5|handout:5>[width=\imagewidth]{./images/History_Generation2}%
@@ -400,10 +361,10 @@ per-symbol=/]{siunitx}
   \note<1|handout:1>{I was unable to find conclusive information on the voxel size of the first CT image.
     My head is approximately \qty{16}{\centi\meter} wide.
     I counted 47 voxels across the head in the image.
-  This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
+    This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
   \note<4|handout:4>{Cone-beam MicroCT: A major development was the introduction of cone-beam microCT, which uses a cone-shaped X-ray beam and a flat-panel detector, allowing for faster image acquisition and higher resolution.
     In the late 1990s, Dr Yoshinori Arai in Japan and Dr Piero Mozzo in Italy independently developed Cone Beam Computed Technology for oral and maxillofacial radiology.
-  The first commercial system (the NewTom 9000) was introduced in the European market in 1996 and into the US market in 2001, by Italian company Quantitative Radiology.}
+    The first commercial system (the NewTom 9000) was introduced in the European market in 1996 and into the US market in 2001, by Italian company Quantitative Radiology.}
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}
 
@@ -551,7 +512,7 @@ per-symbol=/]{siunitx}
     According to the DICOM tags, the voxel size is \qtyproduct{0.4883 x 0.4883 x 0.625}{\milli\meter\cubed}, the image size is \numproduct{512 x 512} pixels.
     The mouse head is the same as shown in the early animation.
     The files from the early animation were resized 0.25 times; here we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP\@.
-  The voxel size of the original data is \qty{7.96}{\micro\meter}, the image size is \numproduct{3295 x 1492} pixels.}
+    The voxel size of the original data is \qty{7.96}{\micro\meter}, the image size is \numproduct{3295 x 1492} pixels.}
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}
 
@@ -605,9 +566,9 @@ per-symbol=/]{siunitx}
       \only<5|handout:0>{\source{flic.kr/p/7Xhk2Y}{\ccbync}}%
     \end{column}%
   \end{columns}%
-  \note<1|handout:1>{Fan beam \textrightarrow Bruker and other \uct machines\newline
-    Parallel beam \textrightarrow TOMCAT et al.\newline
-    Helical/spiral CT/multislice CT \textrightarrow Hospitals}
+  \note<1|handout:1>{Fan beam \textrightarrow{} Bruker and other \uct{} machines\newline
+    Parallel beam \textrightarrow{} TOMCAT et al.\newline
+    Helical/spiral CT/multislice CT \textrightarrow{} Hospitals}
 \end{frame}
 
 \begin{frame}
@@ -739,7 +700,7 @@ per-symbol=/]{siunitx}
       \begin{itemize}
         \item Photoelectric absorption (\(\tau\)) is strongly dependent on the atomic number \(Z\) of the absorbing material: \(\tau\propto\frac{Z^4}{E^{3.5}}\)
           \note{From \href{https://radiopaedia.org/articles/photoelectric-effect}{Radiopaedia.org}: Therefore if \(Z\) doubles, PEA will increase by a factor of 16 (\(2^4=16\)), and if \(E\) doubles PEA will be reduced by a factor of 11.
-            Small changes in \(Z\) and \(E\) can therefore significantly affect PEA.
+            Small changes in \(Z\) and \(E\) can therefore significantly affect PEA\@.
             This has practical implications in the field of radiation protection and is the reason why materials with a high \(Z\) such as lead (\(Z= 82\)) are useful shielding materials.
             The dependence of PEA on \(Z\) and \(E\) means that it is the major contributor to beam attenuation up to approximately \qty{30}{\kilo\electronvolt} when human tissues (\(Z=7.4\)) are irradiated.
           At beam energies above this, the Compton effect predominates.}
@@ -911,9 +872,9 @@ per-symbol=/]{siunitx}
     \begin{column}{0.49\linewidth}
       \begin{itemize}
         \item<1-> 104 extracted human permanent mandibular canines
-        \item<2-> \uct imaging
+        \item<2-> \uct{} imaging
         \item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-        \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-ohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
+        \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg{} you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-ohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
       \end{itemize}
     \end{column}
     \begin{column}{0.49\linewidth}
@@ -941,7 +902,7 @@ per-symbol=/]{siunitx}
         \emph{Sample changer} on the SkyScan 1272\newline
         In total:
         \begin{itemize}
-          \item 13 days of \emph{continuous} \uct scanning
+          \item 13 days of \emph{continuous} \uct{} scanning
           \item \qty{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
           \item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
         \end{itemize}
@@ -977,7 +938,7 @@ per-symbol=/]{siunitx}
 
 \subsubsection{Results}
 \begin{frame}
-  \frametitle{\uct imaging}
+  \frametitle{\uct{} imaging}
   \centering%
   \includegraphics<1|handout:0>[height=\imageheight]{./images/zmk/ScanOverviews.104.png}%
   \includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
@@ -1198,10 +1159,10 @@ per-symbol=/]{siunitx}
   \end{itemize}
 \end{frame}
 
-begin{frame}[allowframebreaks]
+\begin{frame}[allowframebreaks]
   \frametitle{References}
   \renewcommand*{\bibfont}{\footnotesize}%
-  \printbibliography
+  \printbibliography%
 \end{frame}
 
 \end{document}
