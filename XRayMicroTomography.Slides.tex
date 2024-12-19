@@ -596,12 +596,13 @@ per-symbol=/]{siunitx}
     \begin{column}{0.5\textwidth}
       \centering
       \input{animations/classicCT}
+      \pause
     \end{column}
     \begin{column}{0.5\textwidth}
       \centering
-      \only<1>{\input{animations/microCT}}%
-      \only<2|handout:0>{\input{animations/microCT_lr}}%
-      \only<3|handout:0>{\input{animations/microCT_hr}}%
+      \only<1-2>{\input{animations/microCT}}%
+      \only<3|handout:0>{\input{animations/microCT_lr}}%
+      \only<4|handout:0>{\input{animations/microCT_hr}}%
     \end{column}
   \end{columns}
 \end{frame}
