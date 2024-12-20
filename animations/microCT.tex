@@ -1,17 +1,13 @@
-%\documentclass{beamer}% For self-contained compilation
-\documentclass[tikz]{standalone}% For inclusion in the presentation
-% Draw the setup where the only the sample moves, e.g. microCT
-% Essentially just a copy of classicCT in the same folder
-\usepackage{animate}
-\usepackage{tikz}
-%	\usetikzlibrary{external}
-%	\tikzexternalize
-%	\tikzsetnextfilename{microCT}
+\documentclass{standalone}%
+% Draw the setup where the source and detector move, e.g. classic CT
+% With help from https://tex.stackexchange.com/q/515519/828
 \usepackage{fontawesome5}
 \usepackage{ifthen}
 \ifthenelse{\isundefined{\everyframe}}{%
-	% If we're compiling this file via \input, then these variables are already defined.
+	% If we're compiling this file via \input, then we already defined some things
 	% In the other case, we need to define them
+	\usepackage{tikz}
+	\usepackage{animate}
 	\newcommand{\everyframe}{5}
 	\definecolor{ubRed}{HTML}{e4003c}%
 	\definecolor{ubGrey}{HTML}{646363}%
@@ -21,35 +17,31 @@
 \begin{document}
 \begin{animateinline}[loop,every=\everyframe]{25}
 	\multiframe{90}{n=1+4}{%
-		\begin{tikzpicture}[scale=1.5]
+		\begin{tikzpicture}[scale=1.25]
 			\pgfdeclarelayer{background}
 			\pgfsetlayers{background,main}
-			\mode<beamer>{%
-				%Help lines, to force same size of images
-				\begin{pgfonlayer}{background}
-					\draw[ubGrey,transparent] (-2.25,0) -- (2.25,0);
-					\draw[ubGrey,transparent] (0,-2.25) -- (0,2.25);
-					\draw[ubGrey,transparent,help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);
-				\end{pgfonlayer}
-			}%
+			%Help lines used to setup the animation (set to semitransparent), drawing them transparent in the presentation forces a consistent size
+			\begin{pgfonlayer}{background}
+				\draw[ubGrey,transparent,help lines,step=5mm] (-0.75,-1.25) grid (0.75,1.5);
+			\end{pgfonlayer}
 			% Stuff that stays put
 			% Source
-			\fill[red] (-0.25,1) rectangle node (source) {} +(0.5,0.5);
+			\fill[ubRed] (-0.25,1) rectangle node (source) {} +(0.5,0.5);
 			\draw[fill=yellow] (0,1.25) circle (0.2);
-			\node at (0,1.235) (radiation) {\faRadiation};
+			\node at (0,1.235) (radiation) {\small\faRadiation};
 			% Detector and detector edges
-			\fill[ubGrey] (-0.5,-1.25) rectangle node (detector) {} +(1,0.25);
+			\fill[gray] (-0.5,-1.25) rectangle node (detector) {} +(1,0.25);
 			\coordinate (dl) at (-0.45,-1);
 			\coordinate (dr) at (0.45,-1);
 			% X-ray cone
 			\begin{pgfonlayer}{background}
-				\fill[ubGrey,semitransparent] (source.center) -- (dl) -- (dr) -- cycle;
+				\fill[gray,semitransparent] (source.center) -- (dl) -- (dr) -- cycle;
 			\end{pgfonlayer}
 			% Stuff that moves
 				\begin{scope}[rotate around={\n:(0,0)}]
 				% Rotation arc
-				\draw[->, thick,line cap=rect] (0.5,0) arc [start angle=0, end angle=180, radius=0.5];
-				\draw[->, thick,line cap=rect] (-0.5,0) arc [start angle=-180, end angle=0, radius=0.5];
+				\draw[->, thick,line cap=rect] (0.618,0) arc [start angle=0, end angle=180, radius=0.618];
+				\draw[->, thick,line cap=rect] (-0.618,0) arc [start angle=-180, end angle=0, radius=0.618];
 				% Sample
 				\node[ubRedComplementary] at (0,0) (sample) {\rotatebox{\n}{\normalsize\faFish}};
 				\end{scope}
