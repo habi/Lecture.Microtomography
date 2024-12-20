@@ -591,20 +591,21 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Machinery}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \centering
-      \input{animations/classicCT}
-      \pause
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \centering
-      \only<1-2>{\input{animations/microCT}}%
-      \only<3|handout:0>{\input{animations/microCT_lr}}%
-      \only<4|handout:0>{\input{animations/microCT_hr}}%
-    \end{column}
-  \end{columns}
+	\frametitle{Machinery}
+	\begin{columns}
+	  \begin{column}{0.5\textwidth}
+		\centering
+		\input{animations/classicCT}
+		\pause
+	  \end{column}
+	  \begin{column}{0.5\textwidth}
+		\centering
+  		% "List" the LR, normal and HR animations in a weird order here, to display them logically side-by-side in the handout
+  		\only<3|handout:1>{\input{animations/microCT_lr}}%
+  		\only<1-2|handout:1>{\input{animations/microCT}}%
+  		\only<4|handout:1>{\input{animations/microCT_hr}}%
+	  \end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}

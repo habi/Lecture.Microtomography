@@ -1,34 +1,28 @@
-%\documentclass{beamer}% For self-contained compilation
-\documentclass[tikz]{standalone}% For inclusion in the presentation
+\documentclass{standalone}%
 % Draw the setup where the source and detector move, e.g. classic CT
 % With help from https://tex.stackexchange.com/q/515519/828
-\usepackage{animate}
-\usepackage{tikz}
-%	\usetikzlibrary{external}
-%	\tikzexternalize
-%	\tikzsetnextfilename{classicCT}
 \usepackage{fontawesome5}
 \usepackage{ifthen}
 \ifthenelse{\isundefined{\everyframe}}{%
-	% If we're compiling this file via \input, then these variables are already defined.
+	% If we're compiling this file via \input, then we already defined some things
 	% In the other case, we need to define them
+	\usepackage{tikz}
+	\usepackage{animate}
 	\newcommand{\everyframe}{5}
-	\definecolor{ubRed}{HTML}{E6002E}
+	\definecolor{ubRed}{HTML}{e4003c}%
+	\definecolor{ubGrey}{HTML}{646363}%
 	% split complementary images from https://www.sessions.edu/color-calculator/
 	\definecolor{ubRedComplementary}{HTML}{2EE600}
-	\definecolor{ubGrey}{RGB}{217,217,217}
 	}{}
 \begin{document}
 \begin{animateinline}[loop,every=\everyframe]{25}
 	\multiframe{90}{n=1+4}{%
-		\begin{tikzpicture}[scale=1.125]
+		\begin{tikzpicture}[scale=1.25]
 			\pgfdeclarelayer{background}
 			\pgfsetlayers{background,main}
-			%Help lines
+			%Help lines used to setup the animation (set to semitransparent), drawing them transparent in the presentation forces a consistent size
 			\begin{pgfonlayer}{background}
-				\draw[ubGrey,transparent] (-2.25,0) -- (2.25,0);
-				\draw[ubGrey,transparent] (0,-2.25) -- (0,2.25);
-				\draw[ubGrey,transparent,help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);
+				\draw[ubGrey,transparent,help lines,step=5mm] (-2.05,-2.05) grid (2.05,2.05);
 			\end{pgfonlayer}
 			% Stuff that stays put
 			\node[ubRedComplementary] at (0,0) (sample) {\Huge\faUser};
