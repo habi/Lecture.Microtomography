@@ -661,20 +661,21 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Machinery}
-  \begin{columns}[onlytextwidth]
-  	\begin{column}{0.5\linewidth}
-  		%\centering%
-  		\input{animations/classicCT}%
-  	\end{column}%
-  	\begin{column}{0.5\linewidth}
-  		%\centering%
+	\frametitle{Machinery}
+	\begin{columns}
+	  \begin{column}{0.5\textwidth}
+		\centering
+		\input{animations/classicCT}
+		\pause
+	  \end{column}
+	  \begin{column}{0.5\textwidth}
+		\centering
   		% "List" the LR, normal and HR animations in a weird order here, to display them nicely in the handout
-  		\only<2|handout:1>{\input{animations/microCT_lr}}%
-  		\only<1>{\input{animations/microCT}}%
-  		\only<3|handout:1>{\input{animations/microCT_hr}}%
-  	\end{column}%
-  \end{columns}
+		\only<3|handout:1>{\input{animations/microCT_lr}}%
+		\only<1-2|handout:1>{\input{animations/microCT}}%
+		\only<4|handout:1>{\input{animations/microCT_hr}}%
+	  \end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
