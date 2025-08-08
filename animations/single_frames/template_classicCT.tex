@@ -1,0 +1,34 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+\definecolor{ubRed}{HTML}{E6002E}
+\definecolor{ubRedComplementary}{HTML}{2EE600}
+\definecolor{ubGrey}{RGB}{217,217,217}
+\begin{document}
+\begin{tikzpicture}[scale=1.125]
+  \pgfdeclarelayer{background}
+  \pgfsetlayers{background,main}
+
+  \begin{pgfonlayer}{background}
+    \draw[ubGrey,transparent] (-2.25,0) -- (2.25,0);
+    \draw[ubGrey,transparent] (0,-2.25) -- (0,2.25);
+    \draw[ubGrey,transparent,help lines,step=1cm,ultra thin] (-2.45,-2.45) grid (2.45,2.45);
+  \end{pgfonlayer}
+
+  \node[ubRedComplementary] at (0,0) (sample) {\Huge\faUser};
+
+  \begin{scope}[rotate around={%d:(sample)}]
+    \draw[->, thick,line cap=rect] (1.5,0) arc [start angle=0, end angle=180, radius=1.5];
+    \draw[->, thick,line cap=rect] (-1.5,0) arc [start angle=-180, end angle=0, radius=1.5];
+    \fill[ubRed] (-0.25,1.5) rectangle node (source) {} +(0.5,0.5);
+    \draw[fill=yellow] (0,1.75) circle (0.2);
+    \node at (0,1.735) (radiation) {\small\faRadiation};
+    \fill[gray] (-0.5,-1.75) rectangle node (detector) {} +(1,0.25);
+    \coordinate (dl) at (-0.45,-1.75);
+    \coordinate (dr) at (0.45,-1.75);
+    \begin{pgfonlayer}{background}
+      \fill[gray,opacity=0.4] (source.center) -- (dl) -- (dr) -- cycle;
+    \end{pgfonlayer}
+  \end{scope}
+\end{tikzpicture}
+\end{document}
