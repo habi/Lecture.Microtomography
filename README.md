@@ -14,7 +14,7 @@ This PDF is always corresponding to the last (successfully compiled) version I c
 ----
 
 If you set up the repository on a new machine, then:
-- `git clone git@github.com:habi/Lecture.Microtomography.git` it to a folder
+- `git clone git@github.com:habi/Lecture.Microtomography.git` it to a folder. Use such a folder that `../../../Documents/library.bib` is either the correct references file or a symlink of it.
 - Track *all* remote branches with `git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done` (hat tip to https://stackoverflow.com/a/10312587)
 - `git fetch --all`
 - `git pull --all`
