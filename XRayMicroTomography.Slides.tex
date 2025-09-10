@@ -137,20 +137,18 @@ per-symbol=/]{siunitx}
 }%
 
 % Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
-\makeatletter
-\newdimen\progressbar@height%
-\progressbar@height=1.36mm
+\newdimen\progressbarheight%
+\progressbarheight=1.36mm
 % The template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
 \addtobeamertemplate{footline}{}{%
   \mode<beamer>{%
     \begin{tikzpicture}%
-      \useasboundingbox (0, \progressbar@height) rectangle (\paperwidth, \progressbar@height);%
-      \draw[draw=ubRed, fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, \progressbar@height) circle (\progressbar@height/2);%
+      \useasboundingbox (0, \progressbarheight) rectangle (\paperwidth, \progressbarheight);%
+      \draw[draw=ubRed, fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, \progressbarheight) circle (\progressbarheight/2);%
     \end{tikzpicture}%
   }%
   \mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
 }%
-\makeatother
 
 % Show current section at begin of sections, but only in presentation mode
 \mode<beamer>{%
