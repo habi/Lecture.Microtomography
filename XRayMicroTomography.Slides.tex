@@ -163,11 +163,11 @@ per-symbol=/]{siunitx}
 
 \begin{frame}
 	\titlepage%
-	\begin{flushright}%
-		\vfill%
-		\mode<beamer>{Handout PDF \(\rightarrow\)\qrcode[height=4cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}}%
-		\vfill%
-	\end{flushright}%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
+        \mode<beamer>{Handout PDF \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}}%
+      };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}
