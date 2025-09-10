@@ -81,6 +81,7 @@ per-symbol=/]{siunitx}
 \usepackage{multirow}
 \usepackage[showseconds=false,showzone=false]{datetime2}
 \usepackage[many]{tcolorbox}
+\usepackage{qrcode}
 \usepackage{hyperref}
 
 % Define complementary colors to ubRed=e4003c, which is defined in the .sty file
@@ -161,8 +162,14 @@ per-symbol=/]{siunitx}
 }%
 
 \begin{document}
+
 \begin{frame}
-  \maketitle
+	\titlepage%
+	\begin{flushright}%
+		\vfill%
+		\mode<beamer>{Handout PDF \(\rightarrow\)\qrcode[height=4cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}}%
+		\vfill%
+	\end{flushright}%
 \end{frame}
 
 \begin{frame}
