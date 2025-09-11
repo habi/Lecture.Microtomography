@@ -89,10 +89,9 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{colortbl}
 \usepackage{multirow}
-\usepackage[showseconds=false,showzone=false]{datetime2}
-\usepackage[many]{tcolorbox}
+\usepackage[english,showseconds=false,showzone=false]{datetime2}
+\DTMsettimestyle{iso}
 \usepackage{qrcode}
-\usepackage{hyperref}
 
 % Define complementary colors to ubRed=e4003c, which is defined in the .sty file
 % https://duckduckgo.com/?t=lm&q=html+e4003c&ia=answer
@@ -158,7 +157,6 @@
 			\draw[draw=ubRed, fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, \progressbarheight) circle (\progressbarheight/2);%
 		\end{tikzpicture}%
 	}%
-	\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
 }%
 
 % Show current section at begin of sections, but only in presentation mode
