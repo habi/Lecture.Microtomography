@@ -24,33 +24,36 @@
 \newcommand{\ie}{i.\,e.\xspace}%
 
 \usepackage[%
-  backend=biber,%
-  sorting=none,%
-  %style=ieee,%
-  citetracker=true,%
-  isbn=false,%
-  url=false,%
-  maxnames=1,minnames=1,% Show only first author in references
-]{biblatex}%
+	backend=biber,%
+	sorting=none,%
+	%style=ieee,%
+	citetracker=true,%
+	isbn=false,%
+	url=false,%
+	maxnames=1,minnames=1,% Show only first author in references
+	]{biblatex}%
 % Globally remove stuff from bibliography
 % https://tex.stackexchange.com/a/25232
 \DeclareSourcemap{%
-  \maps[datatype=bibtex]{%
-    \map{%
-      \step[fieldset=journal, null]%
-      \step[fieldset=editor, null]%
-      \step[fieldset=volume, null]%
-      \step[fieldset=number, null]%
-      \step[fieldset=pages, null]%
-      %\step[fieldset=year, null]% Do *not* remove year, otherwise the \citeyear on the history slide does not work :)
-    }%
-  }%
+	\maps[datatype=bibtex]{%
+	\map{%
+		\step[fieldset=journal, null]%
+		\step[fieldset=editor, null]%
+		\step[fieldset=volume, null]%
+		\step[fieldset=number, null]%
+		\step[fieldset=pages, null]%
+		%\step[fieldset=year, null]% Do *not* remove year, otherwise the \citeyear on the history slide does not work :)
+		}%
+	}%
 }%
 \addbibresource{../../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
 \usetikzlibrary{shadows,spy}
-\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
+\tikzset{%
+	shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},
+	draw=ubRed}},%
+	}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{pgfplotstable}
@@ -58,11 +61,13 @@
 \shadowoffset{1pt}
 \shadowcolor{ubRed}
 \usepackage{microtype}
-\usepackage[detect-all=true,
-  range-phrase=--,
-  range-units=single,
-  per-mode=symbol,
-per-symbol=/]{siunitx}
+\usepackage[%
+	detect-all=true,
+	range-phrase=--,
+	range-units=single,
+	per-mode=symbol,
+	per-symbol=/,%
+	]{siunitx}
 \usepackage[absolute,overlay]{textpos}
 \usepackage[local]{gitinfo2}
 \usepackage{xspace}
@@ -91,10 +96,11 @@ per-symbol=/]{siunitx}
 % change tikz font to slide font
 % https://tex.stackexchange.com/a/33329/828
 \usepackage[eulergreek]{sansmath}
-\pgfplotsset{tick label style = {font=\sansmath\sffamily},
-  every axis label = {font=\sansmath\sffamily},
-  legend style = {font=\sansmath\sffamily},
-  label style = {font=\sansmath\sffamily}
+\pgfplotsset{%
+	tick label style = {font=\sansmath\sffamily},
+	every axis label = {font=\sansmath\sffamily},
+	legend style = {font=\sansmath\sffamily},
+	label style = {font=\sansmath\sffamily},%
 }
 
 % Globally thicker lines in with tikz
@@ -104,36 +110,36 @@ per-symbol=/]{siunitx}
 % Acknowledge images just below them
 % Based on https://tex.stackexchange.com/a/282637/828
 \newcommand{\source}[2]{%
-  % Print out (short) link under image, with small text
-  \raisebox{-1.618ex}{%
-    \makebox[0pt][r]{%
-      \tiny\href{http://#1}{#1} #2%
-    }%
-  }%
-}%
+	% Print out (short) link under image, with small text
+	\raisebox{-1.618ex}{%
+		\makebox[0pt][r]{%
+			\tiny\href{http://#1}{#1} #2%
+			}%
+		}%
+	}%
 \newcommand{\sourcecite}[2]{%
-  % Cite (an image from) a reference
-  \raisebox{-1.618ex}{%
-    \makebox[0pt][r]{%
-      \tiny From~\cite{#1}, #2%
-    }%
-  }%
-}%
+	% Cite (an image from) a reference
+	\raisebox{-1.618ex}{%
+		\makebox[0pt][r]{%
+			\tiny From~\cite{#1}, #2%
+			}%
+		}%
+	}%
 \newcommand{\sourcelink}[3]{%
-  % Make the source command an \href{link}{text}
-  \raisebox{-1.618ex}{%
-    \makebox[0pt][r]{%
-      \tiny\href{#1}{#2}, #3%
-    }%
-  }%
-}%
+	% Make the source command an \href{link}{text}
+	\raisebox{-1.618ex}{%
+		\makebox[0pt][r]{%
+			\tiny\href{#1}{#2}, #3%
+			}%
+		}%
+	}%
 \newcommand{\citeslide}[5]{% slideimage,lecturelink,lecturetitle,author,page
-  % Drop a slide of another lecture into our presentation, with attribution
-  \begin{tcolorbox}[enhanced,colframe=ubRed,colback=white,drop shadow,hbox,size=tight]{%
-      \includegraphics[width=\linewidth,height=0.7\paperheight,keepaspectratio]{#1}% https://tex.stackexchange.com/a/12041/828
-      \sourcelink{#2}{\emph{#3}, #4}{Slide #5}%
-    }%
-  \end{tcolorbox}%
+	% Drop a slide of another lecture into our presentation, with attribution
+	\begin{tcolorbox}[enhanced,colframe=ubRed,colback=white,drop shadow,hbox,size=tight]{%
+		\includegraphics[width=\linewidth,height=0.7\paperheight,keepaspectratio]{#1}% https://tex.stackexchange.com/a/12041/828
+		\sourcelink{#2}{\emph{#3}, #4}{Slide #5}%
+		}%
+	\end{tcolorbox}%
 }%
 
 % Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
@@ -141,33 +147,35 @@ per-symbol=/]{siunitx}
 \progressbarheight=1.36mm
 % The template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
 \addtobeamertemplate{footline}{}{%
-  \mode<beamer>{%
-    \begin{tikzpicture}%
-      \useasboundingbox (0, \progressbarheight) rectangle (\paperwidth, \progressbarheight);%
-      \draw[draw=ubRed, fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, \progressbarheight) circle (\progressbarheight/2);%
-    \end{tikzpicture}%
-  }%
-  \mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
+	\mode<beamer>{%
+		\begin{tikzpicture}%
+			\useasboundingbox (0, \progressbarheight) rectangle (\paperwidth, \progressbarheight);%
+			\draw[draw=ubRed, fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, \progressbarheight) circle (\progressbarheight/2);%
+		\end{tikzpicture}%
+	}%
+	\mode<handout>{\centering\tiny Handout for git.io/fjpP7, created on \DTMnow}%
 }%
 
 % Show current section at begin of sections, but only in presentation mode
 \mode<beamer>{%
-  \AtBeginSection[]{%
-    \begin{frame}{Contents}%
-      \tableofcontents[currentsection,currentsubsection,hideothersubsections]%
-    \end{frame}%
-  }%
+	\AtBeginSection[]{%
+	\begin{frame}{Contents}%
+		\tableofcontents[currentsection,currentsubsection,hideothersubsections]%
+	\end{frame}%
+	}%
 }%
 
 \begin{document}
 
 \begin{frame}
 	\titlepage%
-    \begin{tikzpicture}[remember picture,overlay]
-      \node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
-        \mode<beamer>{Handout PDF \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}}%
-      };
-    \end{tikzpicture}
+	\mode<beamer>{
+		\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
+			Handout PDF \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}%
+			};
+		\end{tikzpicture}
+	}
 \end{frame}
 
 \begin{frame}
@@ -316,82 +324,81 @@ per-symbol=/]{siunitx}
 
 \subsection{History}
 \begin{frame}
-  \frametitle<1>{History}
-  \frametitle<2->{CT History}
-  \begin{columns}
-    \begin{column}{0.49\linewidth}
-      \begin{itemize}
-        \item 1895: Wilhelm Conrad Röntgen discovers X-rays
-        \item<2-|handout:2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
-        \item<2-|handout:2-> \citeyear{Hounsfield1976a}:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
-        \item<3-|handout:3-> Nobel Prize in 1979, jointly for Allan Cormack and Godfrey Hounsfield
-        \item<4-|handout:4-> CT scanner generations
-          \begin{itemize}
-            \item<4-|handout:4-> First generation
-            \item<5-|handout:5-> Second generation
-            \item<6|handout:6> Third generation
-          \end{itemize}
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.49\linewidth}
-      \centering%
-      \includegraphics<1|handout:1>[height=\imageheight]{./images/First_medical_X-ray_by_Wilhelm_Röntgen_of_his_wife_Anna_Bertha_Ludwig's_hand_-_18951222}%
-      \only<1|handout:1>{\source{w.wiki/BHAN}{\ccPublicDomain}}%
-      \only<2|handout:2>{%
-        \renewcommand{\imagewidth}{0.52\paperheight}% redefine imagewidth \only here so that we can use the simple way to draw a scale bar. 0.52 is an empirically found value
-        \pgfmathsetlength{\imagescale}{\imagewidth/1055}%
-        \def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
-        \def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
-        \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-          \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
-          % 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
-          %\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{160.00000004}{\milli\meter} (634px) TEMPORARY!};
-          \draw[|-|,white,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
-        \end{tikzpicture}%
-      }%
-      \only<2|handout:2>{\sourcecite{Beckmann2006}{Figure 5}}%
-      \includegraphics<3|handout:3>[height=\imageheight]{./images/US3940625-drawings-page-2}%
-      \only<3|handout:3>{\sourcecite{US3940625A}{p.~2}}%
-      \includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation1}%
-      \only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-      \includegraphics<5|handout:5>[width=\imagewidth]{./images/History_Generation2}%
-      \only<5|handout:5>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-      \includegraphics<6|handout:6>[width=\imagewidth]{./images/History_Generation3}%
-      \only<6|handout:6>{\sourcecite{Hsieh2003}{Figure 1.14}}%
-    \end{column}
-  \end{columns}
-  \note<1|handout:1>{I was unable to find conclusive information on the voxel size of the first CT image.
-    My head is approximately \qty{16}{\centi\meter} wide.
-    I counted 47 voxels across the head in the image.
-    This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
-  \note<4|handout:4>{Cone-beam MicroCT: A major development was the introduction of cone-beam microCT, which uses a cone-shaped X-ray beam and a flat-panel detector, allowing for faster image acquisition and higher resolution.
-    In the late 1990s, Dr Yoshinori Arai in Japan and Dr Piero Mozzo in Italy independently developed Cone Beam Computed Technology for oral and maxillofacial radiology.
-    The first commercial system (the NewTom 9000) was introduced in the European market in 1996 and into the US market in 2001, by Italian company Quantitative Radiology.}
+	\frametitle<1>{History}
+	\frametitle<2->{CT History}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\begin{itemize}
+				\item 1895: Wilhelm Conrad Röntgen discovers X-rays
+				\item<2-|handout:2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
+				\item<2-|handout:2-> \citeyear{Hounsfield1976a}:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
+				\item<3-|handout:3-> Nobel Prize in 1979, jointly for Allan Cormack and Godfrey Hounsfield
+				\item<4-|handout:4-> CT scanner generations
+				\begin{itemize}
+					\item<4-|handout:4-> First generation
+					\item<5-|handout:5-> Second generation
+					\item<6|handout:6> Third generation
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering%
+			\includegraphics<1|handout:1>[height=\imageheight]{./images/First_medical_X-ray_by_Wilhelm_Röntgen_of_his_wife_Anna_Bertha_Ludwig's_hand_-_18951222}%
+			\only<1|handout:1>{\source{w.wiki/BHAN}{\ccPublicDomain}}%
+			\only<2|handout:2>{%
+				\renewcommand{\imagewidth}{0.52\paperheight}% redefine imagewidth \only here so that we can use the simple way to draw a scale bar. 0.52 is an empirically found value
+				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
+				\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
+				\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/first_ct_image}};
+					% 633.730px = 160.00000004mm -> 100px = 25247.344um -> 1.980px = 500um, 0.396px = 100um
+					%\draw[|-|,blue,thick] (224,832) -- (858,826) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{160.00000004}{\milli\meter} (634px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
+				\end{tikzpicture}%
+				}%
+			\only<2|handout:2>{\sourcecite{Beckmann2006}{Figure 5}}%
+			\includegraphics<3|handout:3>[height=\imageheight]{./images/US3940625-drawings-page-2}%
+			\only<3|handout:3>{\sourcecite{US3940625A}{p.~2}}%
+			\includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation1}%
+			\only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+			\includegraphics<5|handout:5>[width=\imagewidth]{./images/History_Generation2}%
+			\only<5|handout:5>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+			\includegraphics<6|handout:6>[width=\imagewidth]{./images/History_Generation3}%
+			\only<6|handout:6>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+		\end{column}
+	\end{columns}
+	\note<1|handout:1>{I was unable to find conclusive information on the voxel size of the first CT image.
+		My head is approximately \qty{16}{\centi\meter} wide.
+		I counted 47 voxels across the head in the image.
+		This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
+	\note<4|handout:4>{Cone-beam MicroCT: A major development was the introduction of cone-beam microCT, which uses a cone-shaped X-ray beam and a flat-panel detector, allowing for faster image acquisition and higher resolution.
+		In the late 1990s, Dr Yoshinori Arai in Japan and Dr Piero Mozzo in Italy independently developed Cone Beam Computed Technology for oral and maxillofacial radiology.
+		The first commercial system (the NewTom 9000) was introduced in the European market in 1996 and into the US market in 2001, by Italian company Quantitative Radiology.}
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}
 
 \begin{frame}[allowframebreaks]
 	\frametitle{\uct{} History}
 	\begin{itemize}
-	  \item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}
-	  \item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment
-	  \item Lee Feldkamp~\cite{Feldkamp1984} developed an early laboratory microCT system by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to nondestructively detect damage in ceramic manufactured automobile parts
-	  \item Feldkamp met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}
+		\item X-ray computed tomography began to replace analog focal plane tomography in the early 1970s~\cite{Lin2019}
+		\item Non-medical use in the late 1970s, for detection of internal defects in fabricated parts and equipment
+		\item Lee Feldkamp~\cite{Feldkamp1984} developed an early laboratory microCT system by assembling a micro-focus cone beam x-ray source, specimen holder and stagers, and an image intensifier at Ford Motor Company’s Scientific Research Laboratory to nondestructively detect damage in ceramic manufactured automobile parts
+		\item Feldkamp met with scientists at Henry Ford Hospital and University of Michigan interested in understanding the relationship between the microstructure and biomechanical function of trabecular bone to study osteoporotic fractures~\cite{Feldkamp1983}
 		\pagebreak
-	  \item \uct{} was first reported in the 1980s, for scanning gemstones
-	  \item Early 1990s: Manufacturers like SkyScan and Scanco Medical made \uct{} systems commercially available
-	  \item Today: Nondestructive imaging for quantifying the (micro)structure of (organic) materials
+		\item \uct{} was first reported in the 1980s, for scanning gemstones
+		\item Early 1990s: Manufacturers like SkyScan and Scanco Medical made \uct{} systems commercially available
+		\item Today: Nondestructive imaging for quantifying the (micro)structure of (organic) materials
 		\begin{itemize}
-		  \item Mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties
-		  \item Teeth and their internal details
-		  \item Tissues, small animals, and medical devices like stents and implants
-		  \item Soft tissues and vasculature using radio-opaque contrast agents
-		  \item Characterization of anatomical details in high resolution
+			\item Mineralized bone tissue and the relationships between the mechanical behavior of bone to its structural and compositional properties
+			\item Teeth and their internal details
+			\item Tissues, small animals, and medical devices like stents and implants
+			\item Soft tissues and vasculature using radio-opaque contrast agents
+			\item Characterization of anatomical details in high resolution
 		\end{itemize}
-	  \item \(\approx\)2500 \uct{} systems are in use worldwide with over 1000 publications annually
+		\item \(\approx\)2500 \uct{} systems are in use worldwide with over 1000 publications annually
 	\end{itemize}
-  \end{frame}
-  
+\end{frame}
 
 \subsection{Interaction of x-rays with matter}
 \begin{frame}
@@ -421,36 +428,36 @@ per-symbol=/]{siunitx}
 	Tissue: content by mass percentage
 	\centering
 	\begin{table}%
-	  \only<1|handout:0>{%
+		\only<1|handout:0>{%
 		\pgfplotstabletypeset[%
-		  col sep=comma,% the seperator in our .csv file
-		  display columns/0/.style={string type},%
-		  % section 3.2 in pgfplotstable manual
-		  every head row/.style={before row={\toprule}},%
-		  every row no 0/.style={after row=\midrule},%
-		  every last row/.style={after row=\bottomrule},%
+			col sep=comma,% the seperator in our .csv file
+			display columns/0/.style={string type},%
+			% section 3.2 in pgfplotstable manual
+			every head row/.style={before row={\toprule}},%
+			every row no 0/.style={after row=\midrule},%
+			every last row/.style={after row=\bottomrule},%
 		]{./tables/tissue-composition.csv}%
-	  }%
-	  \only<2|handout:1>{%
+		}%
+		\only<2|handout:1>{%
 		\pgfplotstabletypeset[%
-		  col sep=comma,% the seperator in our .csv file
-		  display columns/0/.style={string type},%
-		  every head row/.style={before row={\toprule}},%
-		  every row no 0/.style={after row=\midrule},%
-		  every last row/.style={after row=\bottomrule},%
-		  % make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
-		  every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-		  every row 2 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-		  every row 3 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-		  every row 4 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-		  every row 5 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-		  every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
-		  every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
+			col sep=comma,% the seperator in our .csv file
+			display columns/0/.style={string type},%
+			every head row/.style={before row={\toprule}},%
+			every row no 0/.style={after row=\midrule},%
+			every last row/.style={after row=\bottomrule},%
+			% make certain cells ubRed, based on https://tex.stackexchange.com/a/296914/828
+			every row 1 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+			every row 2 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+			every row 3 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+			every row 4 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+			every row 5 column 4/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+			every row 6 column 6/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}},%
+			every row 6 column 10/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{ubRed!61.8}}{}}}%
 		]{./tables/tissue-composition.csv}%
-	  }%
+		}%
 	\end{table}
 	\note{In an \emph{unstained} sample, bone, lean tissue, fat and air can be distinguished easily}
-  \end{frame}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Why \uct?}
@@ -649,94 +656,94 @@ per-symbol=/]{siunitx}
 \begin{frame}
 	\frametitle{Machinery}
 	\begin{columns}
-	  \begin{column}{0.5\textwidth}
-		\centering
-		\input{animations/classicCT}
-		\pause
-	  \end{column}
-	  \begin{column}{0.5\textwidth}
-		\centering
-  		% "List" the LR, normal and HR animations in a weird order here, to display them nicely in the handout
-  		\only<3|handout:1>{\input{animations/microCT_lr}}%
-  		\only<1-2|handout:1>{\input{animations/microCT}}%
-  		\only<4|handout:1>{\input{animations/microCT_hr}}%
-	  \end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\input{animations/classicCT}
+			\pause
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			% "List" the LR, normal and HR animations in a weird order here, to display them nicely in the handout
+			\only<3|handout:1>{\input{animations/microCT_lr}}%
+			\only<1-2|handout:1>{\input{animations/microCT}}%
+			\only<4|handout:1>{\input{animations/microCT_hr}}%
+		\end{column}
 	\end{columns}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Examples}
-  \centering%
-  \only<1|handout:1>{%
-  	\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-  	\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-  	\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
-  		% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-  		%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-  	\end{tikzpicture}%
-  }%
-  \renewcommand{\imagewidth}{0.6\linewidth}%
-  \only<2-3|handout:2>{%
-  	\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
-  	\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
-  	\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
-  }%
-  \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-  	\only<2|handout:2>{%
-  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
-  	}%
-  	\only<3|handout:0>{%
-  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
-  	}%
-  	% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
-  	%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
-  	\only<2-3|handout:2>{%
-  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-  	}%
-  \end{tikzpicture}%
-  \only<4|handout:3>{%
-  	\pgfmathsetlength{\imagescale}{\imagewidth/387}%
-  	\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
-  	\def\y{279}% scalebar-y at 90% of image height of 310px = 279
-  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
-  		% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
-  		%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
-  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-  	\end{tikzpicture}%
-  	\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
-  }%
-  \only<5|handout:0>{%
-  	\animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
-  	\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
-  }%
-  \renewcommand{\imagewidth}{0.5\linewidth}%	
-  \only<6|handout:4>{%
-  	\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
-  	\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
-  	\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
-  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
-  		% 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
-  		%\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
-  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
-  	\end{tikzpicture}%
-  }%
-  \renewcommand{\imagewidth}{0.65\linewidth}%
-  \only<7|handout:5>{%
-  	\pgfmathsetlength{\imagescale}{\imagewidth/708}%
-  	\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
-  	\def\y{463}% scalebar-y at 90% of image height of 514px = 463
-  	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-  		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
-  		% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
-  		%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
-  		\draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
-  	\end{tikzpicture}%
-  }%
+	\frametitle{Examples}
+	\centering%
+	\only<1|handout:1>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse1265_resliced_MIP500um}};
+			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+		\end{tikzpicture}%
+	}%
+	\renewcommand{\imagewidth}{0.6\linewidth}%
+	\only<2-3|handout:2>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/2301}%
+		\def\x{1422+450}% scalebar-x starting at golden ratio of image width of 2301px = 1422
+		\def\y{1715}% scalebar-y at 90% of image height of 1906px = 1715
+	}%
+	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+		\only<2|handout:2>{%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice}};
+			}%
+		\only<3|handout:0>{%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/2834_left_post_Cu_011_1272_360_5um_reslice_stretched}};
+		}%
+		% 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
+		%\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
+		\only<2-3|handout:2>{%
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+200,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+		}%
+	\end{tikzpicture}%
+	\only<4|handout:3>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/387}%
+		\def\x{239}% scalebar-x starting at golden ratio of image width of 387px = 239
+		\def\y{279}% scalebar-y at 90% of image height of 310px = 279
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/diancta/Diancta_rec00000666}};
+			% 387.000px = 2.9025mm -> 100px = 750.000um -> 66.667px = 500um, 13.333px = 100um
+			%\draw[|-|,blue,thick] (0,155) -- (387,155) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.9025}{\milli\meter} (387px) TEMPORARY!};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+66.667,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+		\end{tikzpicture}%
+		\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+	}%
+	\only<5|handout:0>{%
+		\animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
+	\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
+	}%
+	\renewcommand{\imagewidth}{0.5\linewidth}%
+	\only<6|handout:4>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
+		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
+		\def\y{1102}% scalebar-y at 90% of image height of 1224px = 1102
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Toothpick_rec00000555}};
+			% 1224.000px = 2.754mm -> 100px = 225.000um -> 222.222px = 500um, 44.444px = 100um
+			%\draw[|-|,blue,thick] (0,612) -- (1224,612) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{2.754}{\milli\meter} (1224px) TEMPORARY!};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+222.222,\y) node [midway,above] {\shadowtext{\qty{500}{\micro\meter}}};
+		\end{tikzpicture}%
+	}%
+	\renewcommand{\imagewidth}{0.65\linewidth}%
+	\only<7|handout:5>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/708}%
+		\def\x{438+150}% scalebar-x starting at golden ratio of image width of 708px = 438
+		\def\y{463}% scalebar-y at 90% of image height of 514px = 463
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/KP-TNIKWT2_rec_reslice_MIP500um}};
+			% 708.000px = 15.292800000000002mm -> 100px = 2160.000um -> 23.148px = 500um, 4.630px = 100um
+			%\draw[|-|,blue,thick] (0,257) -- (708,257) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{15.292800000000002}{\milli\meter} (708px) TEMPORARY!};
+			\draw[|-|,white,shadowed] (\x,\y) -- (\x+46.3,\y) node [midway,above] {\shadowtext{\qty{1}{\milli\meter}}};
+		\end{tikzpicture}%
+	}%
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}% Reset imagewidth to standard
 
@@ -1024,50 +1031,50 @@ per-symbol=/]{siunitx}
 	\frametitle{Classification of root canal configurations}%
 	\centering%
 	\small{% Smaller text for fitting the table onto the slide
-	  \only<1>{%
-		\begin{tabular}{llcSS}%
-		  \toprule%
-		  \multicolumn{2}{c}{Roots} & RCC & \# & \% \\%
-		  \midrule%
-		  \multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}    & 1-1-1/1 & 73 & 74.5\\%
-		  \multicolumn{2}{l}{} & 1-1-1/2 & 14 & 14.3\\%
-		  \multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
-		  \multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
-		  \multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
-		  \midrule%
-		  \multirow{4}{*}{Double (N=3)}  & \multirow{2}{*}{Buccal}  & 1-1-1/1 & 2 & 66.6\\%
-		  & & 1-2-1/1 & 1 & 33.3\\%
-		  & \multirow{2}{*}{Lingual}  & 1-1-1/1 & 2 & 66.6\\%
-		  & & 1-1-1/2 & 1 & 33.3\\%
-		  \bottomrule%
+		\only<1>{%
+			\begin{tabular}{llcSS}%
+			\toprule%
+			\multicolumn{2}{c}{Roots} & RCC & \# & \% \\%
+			\midrule%
+			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & 74.5\\%
+			\multicolumn{2}{l}{} & 1-1-1/2 & 14 & 14.3\\%
+			\multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
+			\multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
+			\multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
+			\midrule%
+			\multirow{4}{*}{Double (N=3)} & \multirow{2}{*}{Buccal} & 1-1-1/1 & 2 & 66.6\\%
+			& & 1-2-1/1 & 1 & 33.3\\%
+			& \multirow{2}{*}{Lingual} & 1-1-1/1 & 2 & 66.6\\%
+			& & 1-1-1/2 & 1 & 33.3\\%
+			\bottomrule%
 		\end{tabular}%
-	  }%
-	  \only<2|handout:0>{%
-		\begin{tabular}{llcSS}%
-		  \toprule%
-		  \multicolumn{2}{c}{Roots} & RCC & \# & \% \\%
-		  \midrule%
-		  \multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & \cellcolor{ubRed!61.8}74.5\\%
-		  \multicolumn{2}{l}{} & 1-1-1/2 & 14 & \cellcolor{ubRed!61.8}14.3\\%
-		  \multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
-		  \multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
-		  \multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
-		  \multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
-		  \midrule%
-		  \multirow{4}{*}{Double (N=3)}  & \multirow{2}{*}{Buccal}    & 1-1-1/1 & 2 & 66.6\\%
-		  & & 1-2-1/1 & 1 & 33.3\\%
-		  & \multirow{2}{*}{Lingual} & 1-1-1/1 & 2 & 66.6\\%
-		  & & 1-1-1/2 & 1 & 33.3\\%
-		  \bottomrule%
+		}%
+		\only<2|handout:0>{%
+			\begin{tabular}{llcSS}%
+			\toprule%
+			\multicolumn{2}{c}{Roots} & RCC & \# & \% \\%
+			\midrule%
+			\multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & \cellcolor{ubRed!61.8}74.5\\%
+			\multicolumn{2}{l}{} & 1-1-1/2 & 14 & \cellcolor{ubRed!61.8}14.3\\%
+			\multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
+			\multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
+			\multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
+			\multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
+			\midrule%
+			\multirow{4}{*}{Double (N=3)} & \multirow{2}{*}{Buccal} & 1-1-1/1 & 2 & 66.6\\%
+			& & 1-2-1/1 & 1 & 33.3\\%
+			& \multirow{2}{*}{Lingual} & 1-1-1/1 & 2 & 66.6\\%
+			& & 1-1-1/2 & 1 & 33.3\\%
+			\bottomrule%
 		\end{tabular}%
-	  }%
+		}%
 	}%
 \end{frame}%
 
@@ -1119,10 +1126,10 @@ per-symbol=/]{siunitx}
 	\def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
 	\def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-	  \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
-	  % 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
-	  %\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
-	  \draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
+		% 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
+		%\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
+		\draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
 	\end{tikzpicture}%
 \end{frame}
 
@@ -1287,7 +1294,7 @@ per-symbol=/]{siunitx}
 			% 846.456px = 4.9mm -> 100px = 578.885um -> 86.373px = 500um, 17.275px = 100um
 			\draw[|-|,white,shadowed] (209,23) -- (1055,26) node [sloped,midway,below] {\shadowtext{\(\approx\)\SI{5}{\milli\meter}}};%
 		\end{tikzpicture}%
-  	}%
+	}%
 	\only<3|handout:0>{%
 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.0}{000}{700}%
 	}%
@@ -1332,19 +1339,19 @@ per-symbol=/]{siunitx}
 \begin{frame}
 	\frametitle{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
 	\begin{itemize}
-	  \item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
+		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
 		\begin{itemize}
-		  \item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
-		  \item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
+			\item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
+			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
 		\end{itemize}
-	  \item Did you spot an error?
+		\item Did you spot an error?
 		\begin{itemize}
-		  \item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
-		  \item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
-		  \item \href{mailto:david.haberthuer@unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: david.haberthuer@unibe.ch}
+			\item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
+			\item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
+			\item \href{mailto:david.haberthuer@unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: david.haberthuer@unibe.ch}
 		\end{itemize}
 	\end{itemize}
-  \end{frame}
+\end{frame}
 
 \begin{frame}[allowframebreaks]
 	\frametitle{References}
