@@ -68,7 +68,6 @@
 	per-mode=symbol,
 	per-symbol=/,%
 	]{siunitx}
-\usepackage[absolute,overlay]{textpos}
 \usepackage[local]{gitinfo2}
 \usepackage{xspace}
 \usepackage{ccicons}
@@ -118,17 +117,17 @@
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
 			\tiny\href{http://#1}{#1} #2%
-			}%
 		}%
 	}%
+}%
 \newcommand{\sourcecite}[2]{%
 	% Cite (an image from) a reference
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
 			\tiny From~\cite{#1}, #2%
-			}%
 		}%
 	}%
+}%
 \newcommand{\sourcelink}[3]{%
 	% Make the source command an \href{link}{text}
 	\raisebox{-1.618ex}{%
@@ -138,12 +137,13 @@
 		}%
 	}%
 \newcommand{\citeslide}[5]{% slideimage,lecturelink,lecturetitle,author,page
-	% Drop a slide of another lecture into our presentation, with attribution
-	\begin{tcolorbox}[enhanced,colframe=ubRed,colback=white,drop shadow,hbox,size=tight]{%
-		\includegraphics[width=\linewidth,height=0.7\paperheight,keepaspectratio]{#1}% https://tex.stackexchange.com/a/12041/828
-		\sourcelink{#2}{\emph{#3}, #4}{Slide #5}%
+	\fboxsep=0pt%
+	\fcolorbox{ubRed!62}{white}{\includegraphics[width=\linewidth,height=\imageheight,keepaspectratio]{#1}}% https://tex.stackexchange.com/a/12041/828
+	\raisebox{-1.618ex}{%
+		\makebox[0pt][r]{%
+			\tiny\href{#2}{\emph{#3} by #4}, Slide #5%
 		}%
-	\end{tcolorbox}%
+	}%
 }%
 
 % Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
@@ -288,8 +288,7 @@
 		\source{w.wiki/7fz}{\ccbysa}%
 		}%
 	\only<2|handout:2>{%
-		\frame{\includegraphics[height=\imageheight]{./images/MIC-AM_techniques}}%
-		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{with permission}%
+		\citeslide{./images/MIC-AM_techniques}{https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&cmd=infoScreenGoto&ref_id=1401591}{Introduction to Microscopy}{Stefan Tschanz}{1}%
 		}%
 \end{frame}
 
@@ -478,6 +477,7 @@
 					%\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{250.0096}{\milli\meter} (512px) TEMPORARY!};
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
 				\end{tikzpicture}%
+				\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 			}%
 			\only<5|handout:0>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
@@ -491,6 +491,7 @@
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
 				\end{tikzpicture}%
+				\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 			}%
 			\only<6|handout:5>{%
 				\renewcommand{\imagewidth}{0.1554\linewidth}% redefine the width only locally
@@ -503,7 +504,6 @@
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
-			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
 		\end{column}%
 		\begin{column}{0.49\linewidth}% deliberately a bit smaller here, so that the images do not touch
 			\centering%
@@ -591,8 +591,7 @@
 	\frametitle{Maximum intensity projection}
 	\centering%
 	% pdfseparate 220923_Fundamentals_image_processing_2022_Witz.pdf -f 23 -l 23 220923_Fundamentals_image_processing_2022_Witz-%d.pdf
-	\frame{\includegraphics[height=\imageheight]{./images/220923_Fundamentals_image_processing_2022_Witz-23}}
-	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466919.html}{\emph{Fundamentals of Digital Image Processing (2022)} by Guillaume Witz}{Slide 23}
+	\citeslide{./images/220923_Fundamentals_image_processing_2022_Witz-23}{https://ilias.unibe.ch/go/sess/2466919}{Fundamentals of Digital Image Processing}{Guillaume Witz}{23}
 \end{frame}
 
 \subsection{Tomography today}
