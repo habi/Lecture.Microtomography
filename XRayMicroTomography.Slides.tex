@@ -171,16 +171,24 @@
 }%
 
 % Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
-\newdimen\progressbarheight%
-\progressbarheight=1.36mm
+\newdimen\progressbarheight
 % The template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
+\progressbarheight=1.36mm
 \addtobeamertemplate{footline}{}{%
-	\mode<beamer>{%
-		\begin{tikzpicture}%
-			\useasboundingbox (0, \progressbarheight) rectangle (\paperwidth, \progressbarheight);%
-			\draw[draw=ubRed, fill=white] (\insertframenumber/\inserttotalframenumber*\paperwidth, \progressbarheight) circle (\progressbarheight/2);%
-		\end{tikzpicture}%
-	}%
+    \mode<beamer>{%
+        \begin{tikzpicture}[remember picture,overlay]
+            % Bounding box for the footline
+            \useasboundingbox (0,0) rectangle (\paperwidth,\progressbarheight);
+            % Compute progress fraction safely
+            \pgfmathparse{\insertframenumber/\inserttotalframenumber}
+            \let\progressfraction\pgfmathresult
+            % Convert fraction to TeX dimension relative to paper width
+            \newdimen\progressx
+            \setlength{\progressx}{\progressfraction\paperwidth}
+            % Draw the progress circle
+            \draw[draw=ubRed, fill=white] (\progressx, \progressbarheight/2) circle (\progressbarheight/2);
+        \end{tikzpicture}%
+    }%
 }%
 
 % Show current section at begin of sections, but only in presentation mode
@@ -1227,7 +1235,7 @@
 	\frametitle{Data wrangling by example: Cichlids}
 	\begin{columns}
 		\begin{column}{0.5\linewidth}
-			Collaboration with \href{https://www.aqua.iee.unibe.ch/}{\emph{Aquatic Ecology \& Evolution}}, from the \href{https://www.iee.unibe.ch/}{Institute of Ecology and Evolution}~\cite{Haberthuer2023}
+			Collaboration with the \href{https://www.aqua.iee.unibe.ch/}{Institute of Ecology and Evolution}~\cite{Haberthuer2023}
 			\begin{itemize}
 				\item 133 Cichlids from Lake Victoria, East Africa
 				\begin{itemize}
