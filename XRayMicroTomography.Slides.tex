@@ -33,12 +33,25 @@
 \usepackage[%
 	backend=biber,%
 	sorting=none,%
-	%style=ieee,%
+	backref=true,%
+	backrefstyle=none,%
 	citetracker=true,%
 	isbn=false,%
 	url=false,%
 	maxnames=1,minnames=1,% Show only first author in references
 	]{biblatex}%
+% show "cited on slide(s) <numbers>" in bibliography
+\DefineBibliographyStrings{english}{
+  backrefpage  = {slide},
+  backrefpages = {slide},
+}
+\renewbibmacro*{pageref}{%
+  \iflistundef{pageref}
+    {}
+    {\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}}
+
+% No "In" in bibliography
+\renewbibmacro{in:}{}
 % Globally remove stuff from bibliography
 % https://tex.stackexchange.com/a/25232
 \DeclareSourcemap{%
@@ -46,6 +59,8 @@
 	\map{%
 		\step[fieldset=journal, null]%
 		\step[fieldset=editor, null]%
+		\step[fieldset=publisher, null]%
+		\step[fieldset=series, null]%
 		\step[fieldset=volume, null]%
 		\step[fieldset=number, null]%
 		\step[fieldset=pages, null]%
