@@ -101,7 +101,7 @@
 \lstset{%
 	basicstyle=\scriptsize\ttfamily,
 	breaklines=true,
-	breakatwhitespace=true,
+	%breakatwhitespace=true,
 	%frame=shadowbox,
 	}
 \usepackage{lstlinebgrd}
@@ -111,8 +111,9 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{colortbl}
 \usepackage{multirow}
-\usepackage[english,showseconds=false,showzone=false]{datetime2}
+\usepackage[english,showseconds=false,showzone=false]{datetime2}% nice compilation date in handout
 \DTMsettimestyle{iso}
+\usepackage{appendixnumberbeamer}% do now count appendix frames in total frame count
 \usepackage{qrcode}
 
 % Define complementary colors to ubRed=e4003c, which is defined in the .sty file
@@ -198,7 +199,7 @@
 	\mode<beamer>{
 		\begin{tikzpicture}[remember picture,overlay]
 		\node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
-			Handout PDF \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}%
+			Handout PDF: git.io/JeQxO \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}%
 			};
 		\end{tikzpicture}
 	}
