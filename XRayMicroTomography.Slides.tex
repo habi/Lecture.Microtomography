@@ -18,10 +18,17 @@
 \newcommand{\standardimagewidth}{\linewidth}% Save us a standard image width, so we can always \renewcommand{\imagewidth} to it
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
 \newcommand{\standardimageheight}{0.72\paperheight}% Save us standard image height, so we can always \renewommand{\imageheight} to it
-\newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
 \newcommand{\ie}{i.\,e.\xspace}%
+
+% Helper stuff
+\newlength\imagescale% needed for scalebars
+\newlength\imgwdtmp% helper temporary length for safe calculations
+\newcommand{\setimagescalefrom}[2]{% #1 = width (length or macro), #2 = pixel width (numeric)
+  \setlength{\imgwdtmp}{#1}%
+  \pgfmathsetlength{\imagescale}{\imgwdtmp/#2}%
+}
 
 \usepackage[%
 	backend=biber,%
