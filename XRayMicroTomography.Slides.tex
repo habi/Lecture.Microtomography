@@ -797,7 +797,7 @@
  	\frame{\includegraphics[height=\imageheight]{./images/physical_basics_2022_folien-21.pdf}}%
  	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
  \end{frame}
-
+  
 \begin{frame}
 	\frametitle{Projections}
 	\centering%
@@ -840,9 +840,9 @@
  \begin{frame}
  	\frametitle{Visualization}
  	\begin{tikzpicture}[remember picture,overlay]%
-		\node at (current page.center){%
-				\mode<beamer>{\animategraphics[autoplay,loop,height=0.98\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
-		\mode<handout>{\includegraphics[height=0.98\paperheight]{./movies/scan/visualization/lung000}}%
+ 		\node at (current page.center){%
+ 				\mode<beamer>{\animategraphics[autoplay,loop,height=0.98\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
+ 		\mode<handout>{\includegraphics[height=0.98\paperheight]{./movies/scan/visualization/lung000}}%
  		};%
  	\end{tikzpicture}%
 \end{frame}
@@ -1263,20 +1263,20 @@
 			\only<3|handout:0>{%
 				\lstinputlisting[linerange={2-4,6-7,14,16-18,26-29,32,36-38,41,45},
 					  linebackgroundcolor={%
-						 \ifnum\value{lstnumber}=1 \color{ubRed!61.8}\fi
-						 \ifnum\value{lstnumber}=5 \color{ubRed!61.8}\fi
-						 \ifnum\value{lstnumber}=10 \color{ubRed!61.8}\fi
-						 \ifnum\value{lstnumber}=11 \color{ubRed!61.8}\fi				   						 \ifnum\value{lstnumber}=14 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=1 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=5 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=10 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=11 \color{ubRed!61.8}\fi				   						 \ifnum\value{lstnumber}=14 \color{ubRed!61.8}\fi
 }
 					]{./movies/EAWAG/104016/head/proj/104016.log}
 				}%
 			\only<4|handout:0>{%
 				\lstinputlisting[linerange={2-4,6-7,14,17-19,26-29,31,36-38,40,45},
 		  linebackgroundcolor={%
-						 \ifnum\value{lstnumber}=1 \color{ubRed!61.8}\fi
-						 \ifnum\value{lstnumber}=5 \color{ubRed!61.8}\fi
-						 \ifnum\value{lstnumber}=10 \color{ubRed!61.8}\fi
-						 \ifnum\value{lstnumber}=11 \color{ubRed!61.8}\fi				   						 \ifnum\value{lstnumber}=14 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=1 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=5 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=10 \color{ubRed!61.8}\fi
+  						 \ifnum\value{lstnumber}=11 \color{ubRed!61.8}\fi				   						 \ifnum\value{lstnumber}=14 \color{ubRed!61.8}\fi
 }
 					]{./movies/EAWAG/104016/pharynx/proj/104016.log}
 				}%
@@ -1378,9 +1378,9 @@
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center) {%
 			        \animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
-				};%
-		\end{tikzpicture}%
-	}%
+        			};%
+    		\end{tikzpicture}%
+    	}%
 \end{frame}
 
 \appendix
