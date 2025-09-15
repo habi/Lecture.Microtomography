@@ -372,7 +372,7 @@
 			\includegraphics<1|handout:1>[height=\imageheight]{./images/First_medical_X-ray_by_Wilhelm_Röntgen_of_his_wife_Anna_Bertha_Ludwig's_hand_-_18951222}%
 			\only<1|handout:1>{\source{w.wiki/BHAN}{\ccPublicDomain}}%
 			\only<2|handout:2>{%
-				\renewcommand{\imagewidth}{0.52\paperheight}% redefine imagewidth \only here so that we can use the simple way to draw a scale bar. 0.52 is an empirically found value
+				\renewcommand{\imagewidth}{0.52\paperheight}% redefine imagewidth \only here so that we can use the simple way to draw a scale bar. 0.52 is a purely empirical value
 				\pgfmathsetlength{\imagescale}{\imagewidth/1055}%
 				\def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
 				\def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
@@ -789,15 +789,6 @@
  	\frame{\includegraphics[height=\imageheight]{./images/physical_basics_2022_folien-21.pdf}}%
  	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
  \end{frame}
- 
-\begin{frame}
-	\frametitle{Projection acquisition}
-	\centering%
-	\includegraphics<1|handout:0>[height=\imageheight]{./images/2214}%
-	\includegraphics<2|handout:0>[height=\imageheight]{./images/2214/room}%
-	\includegraphics<3|handout:0>[height=\imageheight]{./images/2214/scanning_compartement}%
-	\includegraphics<4|handout:1>[height=\imageheight]{./images/2214/ControlSoftware01}%
-\end{frame}
 
 \begin{frame}
 	\frametitle{Projections}
@@ -817,13 +808,6 @@
  		\item The projections are recorded on disk
  	\end{itemize}
  \end{frame}
- 
-\begin{frame}
-	\frametitle{Reconstructions}
-	\centering%
-	\includegraphics<1|handout:1>[height=\imageheight]{./images/2214/NRecon_proj}%
-	\includegraphics<2|handout:2>[height=\imageheight]{./images/2214/NRecon_rec}%
-\end{frame}
 
  \begin{frame}
  	\frametitle{Reconstructions}
@@ -848,18 +832,34 @@
  \begin{frame}
  	\frametitle{Visualization}
  	\begin{tikzpicture}[remember picture,overlay]%
- 	\node at (current page.center){%
- 		\mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
- 		\mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
+		\node at (current page.center){%
+				\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,height=\paperheight,keepaspectratio,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
+		\mode<handout>{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{./movies/scan/visualization/lung000}}%
  		};%
  	\end{tikzpicture}%
- \end{frame}
+\end{frame}
  
 \begin{frame}
 	\frametitle{Visualization}
 	\begin{itemize}
 		\item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Projection acquisition}
+	\centering%
+	\includegraphics<1|handout:0>[height=\imageheight]{./images/2214}%
+	\includegraphics<2|handout:0>[height=\imageheight]{./images/2214/room}%
+	\includegraphics<3|handout:0>[height=\imageheight]{./images/2214/scanning_compartement}%
+	\includegraphics<4|handout:1>[height=\imageheight]{./images/2214/ControlSoftware01}%
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reconstructions}
+	\centering%
+	\includegraphics<1|handout:1>[height=\imageheight]{./images/2214/NRecon_proj}%
+	\includegraphics<2|handout:2>[height=\imageheight]{./images/2214/NRecon_rec}%
 \end{frame}
 
 \begin{frame}
@@ -888,7 +888,7 @@
 	\end{itemize}	
 \end{frame}
 
-\subsubsection{Overview}
+%\subsubsection{Overview}
 \begin{frame}
 	\frametitle{Internal morphology of human teeth}%
 	Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
@@ -906,8 +906,8 @@
 	\only<1|handout:1>{%
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center) [shift={(0,-2.9mm)}]{%
-				\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
-				\mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
+				\mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,height=\paperheight,keepaspectratio,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
+				\mode<handout>{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{./movies/tooth045/full/image0237}}%
 				};%
 		\end{tikzpicture}%
 	}%	
@@ -954,7 +954,7 @@
 					\item \qty{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
 					\item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
 				\end{itemize}
-					}%
+				}%
 			\only<5|handout:5>{%
 				\centering%
 				\includegraphics[width=\imagewidth]{./images/zmk/briseno}%
@@ -970,12 +970,13 @@
 				\mode<beamer>{%
 					\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
 					\source{gph.is/2nqkple}{}%
-					}%
+				}%
 				\mode<handout>{%
 					\includegraphics[width=\linewidth]{./movies/coder/coder-65}%
 					\source{gph.is/2nqkple}{}%
 					}%
 				}%
+			\renewcommand{\imageheight}{0.5\textheight}%
 			\only<8|handout:8>{%
 				\centering%
 				\href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
