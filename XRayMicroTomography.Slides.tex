@@ -176,16 +176,20 @@
 \progressbarheight=1.36mm
 \addtobeamertemplate{footline}{}{%
     \mode<beamer>{%
+        \centering
         \begin{tikzpicture}[remember picture,overlay]
-            % Bounding box for the footline
-            \useasboundingbox (0,0) rectangle (\paperwidth,\progressbarheight);
-            % Compute progress fraction safely
-            \pgfmathparse{\insertframenumber/\inserttotalframenumber}
-            \let\progressfraction\pgfmathresult
-            % Convert fraction to TeX dimension relative to paper width
+            \useasboundingbox (0,0) rectangle (0.9\paperwidth,\progressbarheight);
             \newdimen\progressx
-            \setlength{\progressx}{\progressfraction\paperwidth}
-            % Draw the progress circle
+            \ifnum\inserttotalframenumber>0
+                \pgfmathparse{\insertframenumber/\inserttotalframenumber}
+                \ifdim\pgfmathresult pt>0pt
+                    \setlength{\progressx}{\pgfmathresult\paperwidth}
+                \else
+                    \setlength{\progressx}{0pt}
+                \fi
+            \else
+                \setlength{\progressx}{0pt}
+            \fi
             \draw[draw=ubRed, fill=white] (\progressx, \progressbarheight/2) circle (\progressbarheight/2);
         \end{tikzpicture}%
     }%
