@@ -104,13 +104,7 @@
       \verb 10.1152/ajprenal.00099.2017
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/Z457KMJX/Hlushchuk et al. - 2017 - Cutting-edge microangio-CT new dimensions in vascular imaging and kidney morphometry.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1152/ajprenal.00099.2017
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1152/ajprenal.00099.2017
+      \verb /home/habi/Zotero/storage/Z457KMJX/Hlushchuk et al. - 2017 - Cutting-edge microangio-CT new dimensions in vascular imaging and kidney morphometry.pdf
       \endverb
     \endentry
     \entry{Nording2021}{article}{}{}
@@ -251,9 +245,6 @@
            given={Harald\bibnamedelima F.},
            giveni={H\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Springer US}%
-      }
       \strng{namehash}{3ad91240b5914c63a991a3efa7a4e721}
       \strng{fullhash}{5a396cadeb3b0851fe6fecf923380616}
       \strng{fullhashraw}{5a396cadeb3b0851fe6fecf923380616}
@@ -275,13 +266,7 @@
       \verb 10.1038/s41467-021-23499-w
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
+      \verb /home/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
       \endverb
     \endentry
     \entry{Hlushchuk2020}{article}{}{}
@@ -359,13 +344,7 @@
       \verb 10.1007/s00429-020-02158-8
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/s00429-020-02158-8
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/s00429-020-02158-8
+      \verb /home/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
       \endverb
     \endentry
     \entry{Wuthrich2020}{article}{}{}
@@ -471,9 +450,6 @@
            given={Adriano},
            giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier B.V}%
-      }
       \strng{namehash}{17db22efeb1e0dbbd0e5da060d62f54b}
       \strng{fullhash}{818e1c73dcf02d27d018c35cd38035d4}
       \strng{fullhashraw}{818e1c73dcf02d27d018c35cd38035d4}
@@ -494,13 +470,7 @@
       \verb 10.1016/j.msec.2020.111311
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/Users/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1016/j.msec.2020.111311
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1016/j.msec.2020.111311
+      \verb /home/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/home/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
       \endverb
     \endentry
     \entry{Zubler2021}{article}{}{}
@@ -536,9 +506,6 @@
            given={Radu},
            giveni={R\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier GmbH}%
-      }
       \strng{namehash}{b52b668f6babc3e706c1417fd95c6f8a}
       \strng{fullhash}{02ccb6238c7ce524764838bf8274c0b3}
       \strng{fullhashraw}{02ccb6238c7ce524764838bf8274c0b3}
@@ -562,12 +529,6 @@
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.aanat.2020.151624
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0940960220301680
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0940960220301680
       \endverb
       \keyw{Deep branch,Perforator flap,Reconstructive surgery,Superficial branch,Superficial circumflex iliac artery,Superficial circumflex iliac artery perforator fla}
     \endentry
@@ -624,9 +585,6 @@
            given={Valentin},
            giveni={V\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Public Library of Science}%
-      }
       \strng{namehash}{b5d39536ff21f9f8a3df67677d00614d}
       \strng{fullhash}{54eb8171df18aa5ff409e125aaa76b1f}
       \strng{fullhashraw}{54eb8171df18aa5ff409e125aaa76b1f}
@@ -652,13 +610,7 @@
       \verb 10.1371/journal.pone.0228333
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1371/journal.pone.0228333
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1371/journal.pone.0228333
+      \verb /home/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
       \endverb
     \endentry
     \entry{Trappetti2021}{article}{}{}
@@ -724,9 +676,6 @@
            given={Valentin},
            giveni={V\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
       \strng{namehash}{d47f5a2d69fc7ed85f604bc5c1084c5b}
       \strng{fullhash}{45451aae11e455d443d10ec0425f5597}
       \strng{fullhashraw}{45451aae11e455d443d10ec0425f5597}
@@ -751,13 +700,7 @@
       \verb 10.1016/j.ijrobp.2021.07.1717
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
+      \verb /home/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
       \endverb
     \endentry
     \entry{Bochud2021}{article}{}{}
@@ -782,9 +725,6 @@
            familyi={N\bibinitperiod},
            given={Eike},
            giveni={E\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Pensoft Publishers}%
       }
       \strng{namehash}{98f0e7802575f8679447b220e3944824}
       \strng{fullhash}{c874b748b6e1420bdb71633e7d0c322f}
@@ -811,13 +751,7 @@
       \verb 10.3897/zookeys.1073.73241
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://zookeys.pensoft.net/article/73241/
-      \endverb
-      \verb{url}
-      \verb https://zookeys.pensoft.net/article/73241/
+      \verb /home/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
       \endverb
     \endentry
     \entry{Halm2021}{article}{}{}
@@ -868,13 +802,7 @@
       \verb 10.1186/s40463-021-00522-0
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1186/s40463-021-00522-0
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1186/s40463-021-00522-0
+      \verb /home/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
       \endverb
     \endentry
     \entry{Haberthuer2021}{article}{}{}
@@ -921,13 +849,7 @@
       \verb gjpw2d
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/5B9UNST7/Haberthür et al. - 2021 - Automated segmentation and description of the inte.pdf;/Users/habi/Zotero/storage/7IICXMLR/s12903-021-01551-x.html
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1186/s12903-021-01551-x
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1186/s12903-021-01551-x
+      \verb /home/habi/Zotero/storage/5B9UNST7/Haberthür et al. - 2021 - Automated segmentation and description of the inte.pdf;/home/habi/Zotero/storage/7IICXMLR/s12903-021-01551-x.html
       \endverb
       \keyw{Automated segmentation,Biomedical image analysis,Internal tooth morphology,Micro-CT,Physiological foramen geometry,Root canal configuration}
     \endentry
@@ -964,9 +886,6 @@
            given={Ruslan},
            giveni={R\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Public Library of Science}%
-      }
       \strng{namehash}{7b578b3863fde0aa59a94fe262c5ab64}
       \strng{fullhash}{8015d964f7565cf1d07afc51cfc0746e}
       \strng{fullhashraw}{8015d964f7565cf1d07afc51cfc0746e}
@@ -994,13 +913,7 @@
       \verb gsst8t
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/KA9CXT3X/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0291003
-      \endverb
-      \verb{url}
-      \verb https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0291003
+      \verb /home/habi/Zotero/storage/KA9CXT3X/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
       \endverb
       \keyw{Data acquisition,Data visualization,Fish biology,Image processing,Jaw,Otolith,Skull,X-ray radiography}
     \endentry
@@ -1011,9 +924,6 @@
            familyi={C\bibinitperiod},
            given={A.\bibnamedelimi M.},
            giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Institute of Physics}%
       }
       \strng{namehash}{ed7cf735165a23ae53379b52a3248bf0}
       \strng{fullhash}{ed7cf735165a23ae53379b52a3248bf0}
@@ -1040,13 +950,7 @@
       \verb 10.1063/1.1729798
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://doi.org/10.1063/1.1729798
-      \endverb
-      \verb{url}
-      \verb http://doi.org/10.1063/1.1729798
+      \verb /home/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
       \endverb
     \endentry
     \entry{Hounsfield1976a}{article}{}{}
@@ -1105,15 +1009,23 @@
       \verb 10.1259/bjr/29444122
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/QCVD4992/Beckmann - 2006 - CT scanning the early days.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1259/bjr/29444122
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1259/bjr/29444122
+      \verb /home/habi/Zotero/storage/QCVD4992/Beckmann - 2006 - CT scanning the early days.pdf
       \endverb
       \keyw{20th Century,Animals,Computer-Assisted,Equipment Design,History,Humans,Image Interpretation,Swine,Tomography,Tomography Scanners,X-Ray Computed,X-Ray Computed: history,X-Ray Computed: instrumentation}
+    \endentry
+    \entry{US3940625A}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://patents.google.com/patent/US3940625A/}
+      \field{title}{{{US3940625A}} - {{Apparatus}} for Examining Objects by Means of Penetrating Radiation - {{Google Patents}}}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/habi/Zotero/storage/B2HW3ZWE/US3940625A.html
+      \endverb
     \endentry
     \entry{Hsieh2003}{book}{}{}
       \name{author}{1}{}{%
@@ -1122,9 +1034,6 @@
            familyi={H\bibinitperiod},
            given={J},
            giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Society of Photo Optical}%
       }
       \strng{namehash}{04723f860550f84b6efa7cbd0264669a}
       \strng{fullhash}{04723f860550f84b6efa7cbd0264669a}
@@ -1144,11 +1053,52 @@
       \field{urlyear}{2011}
       \field{year}{2003}
       \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://books.google.com/books?id=JX__lLLXFHkC
-      \endverb
-      \verb{url}
-      \verb http://books.google.com/books?id=JX__lLLXFHkC
+    \endentry
+    \entry{Lin2019}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{hash=f7c9150d415d9b0dcd1102ab00083ba2}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Angela\bibnamedelima S.P.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=8e5a22a48b33f602a8ebb868d8eb9556}{%
+           family={Stock},
+           familyi={S\bibinitperiod},
+           given={Stuart\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=4488085875bdb98cbb4793c42c3f985c}{%
+           family={Guldberg},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \strng{namehash}{21278b324aca409573e33503968f922f}
+      \strng{fullhash}{861994b9aefe2311db06444ea842fda4}
+      \strng{fullhashraw}{861994b9aefe2311db06444ea842fda4}
+      \strng{bibnamehash}{21278b324aca409573e33503968f922f}
+      \strng{authorbibnamehash}{21278b324aca409573e33503968f922f}
+      \strng{authornamehash}{21278b324aca409573e33503968f922f}
+      \strng{authorfullhash}{861994b9aefe2311db06444ea842fda4}
+      \strng{authorfullhashraw}{861994b9aefe2311db06444ea842fda4}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since Röntgen discovered x-rays at the end of the nineteenth century and established their usefulness for medical diagnostics imaging, many technological advances have allowed for x-rays to be employed in even more powerful ways. This includes utilizing x-rays for tomographic imaging and quantification.}
+      \field{booktitle}{Springer {{Handbook}} of {{Microscopy}}}
+      \field{isbn}{978-3-030-00069-1}
+      \field{langid}{english}
+      \field{title}{Microcomputed {{Tomography}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-030-00069-1_24
       \endverb
     \endentry
     \entry{Feldkamp1984}{article}{}{}
@@ -1178,8 +1128,8 @@
       \strng{authorfullhash}{f635c34fd0e821789bb7e8d8496b34dc}
       \strng{authorfullhashraw}{f635c34fd0e821789bb7e8d8496b34dc}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A convolution-backprojection formula is deduced for direct reconstruction of a three-dimensional density function from a set of two-dimensional projections. The formula is approximate but has useful properties, including errors that are relatively small in many practical instances and a form that leads to convenient computation. It reduces to the standard fan-beam formula in the plane that is perpendicular to the axis of rotation and contains the point source. The algorithm is applied to a mathematical phantom as an example of its performance.}
@@ -1195,120 +1145,56 @@
       \verb{doi}
       \verb 10.1364/JOSAA.1.000612
       \endverb
-      \verb{urlraw}
-      \verb https://opg.optica.org/josaa/abstract.cfm?uri=josaa-1-6-612
-      \endverb
-      \verb{url}
-      \verb https://opg.optica.org/josaa/abstract.cfm?uri=josaa-1-6-612
-      \endverb
     \endentry
-    \entry{Feldkamp1989}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=aa740ea0ddcc2e8637d38e83d3ccb538}{%
+    \entry{Feldkamp1983}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=a0441373477cd6f02732b19a09d43130}{%
            family={Feldkamp},
            familyi={F\bibinitperiod},
-           given={L.\bibnamedelimi A.},
-           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=05ba625c07212300b76bcb18258cbf51}{%
-           family={Goldstein},
-           familyi={G\bibinitperiod},
-           given={S.\bibnamedelimi A.},
-           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=a1213817ae89681223c9d247e4843928}{%
-           family={Parfitt},
-           familyi={P\bibinitperiod},
-           given={A.\bibnamedelimi M.},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=dcec4aab1f7772525bc84b02333c3077}{%
-           family={Jesion},
-           familyi={J\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
+           given={{\relax LA}},
+           giveni={_\bibinitperiod}}}%
         {{hash=ca9b6cb9ac2801a92e41d95e110afe09}{%
            family={Kleerekoper},
            familyi={K\bibinitperiod},
-           given={M.},
+           given={M},
            giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{f350c0f03f5a13447f096a2c42a9a8b1}
-      \strng{fullhash}{880fd80f98ab9d01023b98ed463a445e}
-      \strng{fullhashraw}{880fd80f98ab9d01023b98ed463a445e}
-      \strng{bibnamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
-      \strng{authorbibnamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
-      \strng{authornamehash}{f350c0f03f5a13447f096a2c42a9a8b1}
-      \strng{authorfullhash}{880fd80f98ab9d01023b98ed463a445e}
-      \strng{authorfullhashraw}{880fd80f98ab9d01023b98ed463a445e}
-      \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We describe a new method for the direct examination of three-dimensional bone structure in vitro based on high-resolution computed tomography (CT). Unlike clinical CT, a three-dimensional reconstruction array is created directly, rather than a series of two-dimensional slices. All structural indices commonly determined from two-dimensional histologic sections can be obtained nondestructively from a large number of slices in each of three orthogonal directions. This permits a comprehensive description of structural variation within a specimen and greatly facilitates the study of structural anisotropy. A measure of three-dimensional connectivity (Euler number/tissue volume) has been determined for the first time in human cancellous bone and shown to correlate with several two-dimensional histomorphometric indices. The method has the potential for overcoming many of the limitations of current approaches to the study of bone architecture at the microscopic level.}
-      \field{issn}{0884-0431}
-      \field{langid}{english}
-      \field{month}{2}
-      \field{title}{The Direct Examination of Three-Dimensional Bone Architecture in Vitro by Computed Tomography}
-      \field{year}{1989}
-      \verb{doi}
-      \verb 10.1002/jbmr.5650040103
-      \endverb
-      \keyw{Bone and Bones,Humans,Image Processing Computer-Assisted,Tomography X-Ray Computed}
-    \endentry
-    \entry{Layton1988}{article}{}{}
-      \name{author}{6}{}{%
-        {{hash=25981402a57e86c631827aa8d67e7841}{%
-           family={Layton},
-           familyi={L\bibinitperiod},
-           given={M.\bibnamedelimi W.},
-           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=05ba625c07212300b76bcb18258cbf51}{%
-           family={Goldstein},
-           familyi={G\bibinitperiod},
-           given={S.\bibnamedelimi A.},
-           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=5da350e9beaf883bffbed82416d4d90f}{%
-           family={Goulet},
-           familyi={G\bibinitperiod},
-           given={R.\bibnamedelimi W.},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=aa740ea0ddcc2e8637d38e83d3ccb538}{%
-           family={Feldkamp},
-           familyi={F\bibinitperiod},
-           given={L.\bibnamedelimi A.},
-           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=69c1e49ba7dd0373d2bdc54d2d41fa90}{%
-           family={Kubinski},
+        {{hash=976175527987279f06ee7a7d46292f94}{%
+           family={Kress},
            familyi={K\bibinitperiod},
-           given={D.\bibnamedelimi J.},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=9875951fa10978b5446878a84e80a41b}{%
-           family={Bole},
-           familyi={B\bibinitperiod},
-           given={G.\bibnamedelimi G.},
-           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+           given={{\relax JW}},
+           giveni={_\bibinitperiod}}}%
+        {{hash=2ac5a240df75dd799f8c054415b69b2c}{%
+           family={Freeling},
+           familyi={F\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ab78a0e3a78dda5fb589ab6b132e9c71}{%
+           family={Mathews},
+           familyi={M\bibinitperiod},
+           given={{\relax CHE}},
+           giveni={_\bibinitperiod}}}%
+        {{hash=626fa8068682bb719fcf8a6b5fd154c3}{%
+           family={Parfitt},
+           familyi={P\bibinitperiod},
+           given={{\relax AM}},
+           giveni={_\bibinitperiod}}}%
       }
-      \strng{namehash}{6d29e7981affa704f01f02448642bbe5}
-      \strng{fullhash}{3616835fbe3133a51290eaafbb2f0a02}
-      \strng{fullhashraw}{3616835fbe3133a51290eaafbb2f0a02}
-      \strng{bibnamehash}{6d29e7981affa704f01f02448642bbe5}
-      \strng{authorbibnamehash}{6d29e7981affa704f01f02448642bbe5}
-      \strng{authornamehash}{6d29e7981affa704f01f02448642bbe5}
-      \strng{authorfullhash}{3616835fbe3133a51290eaafbb2f0a02}
-      \strng{authorfullhashraw}{3616835fbe3133a51290eaafbb2f0a02}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \strng{namehash}{6bf61e7619c1b7debf80be6a44440d8a}
+      \strng{fullhash}{1dfdfebea57e1009df80813781d1c3d4}
+      \strng{fullhashraw}{1dfdfebea57e1009df80813781d1c3d4}
+      \strng{bibnamehash}{6bf61e7619c1b7debf80be6a44440d8a}
+      \strng{authorbibnamehash}{6bf61e7619c1b7debf80be6a44440d8a}
+      \strng{authornamehash}{6bf61e7619c1b7debf80be6a44440d8a}
+      \strng{authorfullhash}{1dfdfebea57e1009df80813781d1c3d4}
+      \strng{authorfullhashraw}{1dfdfebea57e1009df80813781d1c3d4}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Subchondral bone changes have been proposed as an early event in the pathogenesis of osteoarthritis. In this study, microscopic computed axial tomography was used to evaluate the subchondral bone structure in femoral heads from a guinea pig model of osteoarthritis. Examination of trabecular bone within the femoral head showed a highly significant increase in bone fraction in the experimental animals. This was due to the development of trabeculae that were thicker and closer together. We conclude that trabecular remodeling may be an early event in this model of osteoarthritis.}
-      \field{issn}{0004-3591}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{title}{Examination of Subchondral Bone Architecture in Experimental Osteoarthritis by Microscopic Computed Axial Tomography}
-      \field{year}{1988}
-      \verb{doi}
-      \verb 10.1002/art.1780311109
-      \endverb
-      \keyw{Animals,Bone and Bones,Cartilage Articular,Guinea Pigs,Male,Osteoarthritis,Tomography X-Ray Computed}
+      \field{booktitle}{Calcified Tissue International}
+      \field{title}{Investigation of 3-Dimensional Structure of Trabecular Bone by Computed-Tomography of Iliac Biopsy Samples}
+      \field{year}{1983}
     \endentry
     \entry{xrayphysics}{misc}{}{}
       \name{author}{1}{}{%
@@ -1326,21 +1212,16 @@
       \strng{authornamehash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authorfullhash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authorfullhashraw}{a01d42e39c3e0003eeafdabee986f41f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{howpublished}{http://xrayphysics.com/attenuation.html}
       \field{title}{X-{{Ray Physics}}: {{X-Ray Interaction}} with {{Matter}}, {{X-Ray Contrast}}, and {{Dose}}}
       \field{urlday}{6}
       \field{urlmonth}{12}
       \field{urlyear}{2019}
       \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://xrayphysics.com/attenuation.html
-      \endverb
-      \verb{url}
-      \verb http://xrayphysics.com/attenuation.html
-      \endverb
     \endentry
     \entry{wiki:beer-lambert}{misc}{}{}
       \name{author}{1}{}{%
@@ -1356,18 +1237,12 @@
       \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Beer--{{Lambert}} Law --- {{Wikipedia}}, {{The Free Encyclopedia}}}
       \field{year}{2019}
-      \verb{urlraw}
-      \verb https://en.wikipedia.org/w/index.php?title=Beer–Lambert_law&oldid=925859144
-      \endverb
-      \verb{url}
-      \verb https://en.wikipedia.org/w/index.php?title=Beer%E2%80%93Lambert_law&oldid=925859144
-      \endverb
     \endentry
     \entry{Clark2013}{article}{}{}
       \name{author}{12}{}{%
@@ -1432,9 +1307,6 @@
            given={Fred},
            giveni={F\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Springer US}%
-      }
       \strng{namehash}{2ed2e64f00c4ed1070c31996864f39da}
       \strng{fullhash}{2dc5a31c0ea0e0786861de75f6908266}
       \strng{fullhashraw}{2dc5a31c0ea0e0786861de75f6908266}
@@ -1459,473 +1331,8 @@
       \verb 10.1007/s10278-013-9622-7
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/ANDPECX9/full-text.pdf
+      \verb /home/habi/Zotero/storage/ANDPECX9/full-text.pdf
       \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/s10278-013-9622-7
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/s10278-013-9622-7
-      \endverb
-    \endentry
-    \entry{Schindelin2012}{article}{}{}
-      \name{author}{16}{}{%
-        {{hash=ac82c7686cb5af1a978185f449f30702}{%
-           family={Schindelin},
-           familyi={S\bibinitperiod},
-           given={Johannes},
-           giveni={J\bibinitperiod}}}%
-        {{hash=fb4a9b4f8cb47f8bee748d32779b7d01}{%
-           family={{Arganda-Carreras}},
-           familyi={A\bibinitperiod},
-           given={Ignacio},
-           giveni={I\bibinitperiod}}}%
-        {{hash=0a776e2acaca3da7f09464eed966703a}{%
-           family={Frise},
-           familyi={F\bibinitperiod},
-           given={Erwin},
-           giveni={E\bibinitperiod}}}%
-        {{hash=cf3458a8158dd8bcbccb1d9f3bae1444}{%
-           family={Kaynig},
-           familyi={K\bibinitperiod},
-           given={Verena},
-           giveni={V\bibinitperiod}}}%
-        {{hash=f8d350e633e669ecce76f53a255ca7e6}{%
-           family={Longair},
-           familyi={L\bibinitperiod},
-           given={Mark},
-           giveni={M\bibinitperiod}}}%
-        {{hash=74624b572b3fd665ada5f45e837b3fad}{%
-           family={Pietzsch},
-           familyi={P\bibinitperiod},
-           given={Tobias},
-           giveni={T\bibinitperiod}}}%
-        {{hash=52ebeccf5706d204d6ea2f00afdc0a82}{%
-           family={Preibisch},
-           familyi={P\bibinitperiod},
-           given={Stephan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=1278dc454496030a575c2364261b643e}{%
-           family={Rueden},
-           familyi={R\bibinitperiod},
-           given={Curtis},
-           giveni={C\bibinitperiod}}}%
-        {{hash=e3100f88cc060bd3d2cc5fc5d24ea490}{%
-           family={Saalfeld},
-           familyi={S\bibinitperiod},
-           given={Stephan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=21b481f5dff243098574c2319c707eef}{%
-           family={Schmid},
-           familyi={S\bibinitperiod},
-           given={Benjamin},
-           giveni={B\bibinitperiod}}}%
-        {{hash=51fcbf8611c8067bed3b33bf0f587c8e}{%
-           family={Tinevez},
-           familyi={T\bibinitperiod},
-           given={Jean-Yves},
-           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
-        {{hash=2cbf1102bb63abcf1e7de9007399d6cb}{%
-           family={White},
-           familyi={W\bibinitperiod},
-           given={Daniel\bibnamedelima James},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=6469e23f6e55008a8f1d6ad677777332}{%
-           family={Hartenstein},
-           familyi={H\bibinitperiod},
-           given={Volker},
-           giveni={V\bibinitperiod}}}%
-        {{hash=ab16022f9fa944777da25790f7620b79}{%
-           family={Eliceiri},
-           familyi={E\bibinitperiod},
-           given={Kevin},
-           giveni={K\bibinitperiod}}}%
-        {{hash=6166a3f540ffe514a2b0a8932f8fca1c}{%
-           family={Tomancak},
-           familyi={T\bibinitperiod},
-           given={Pavel},
-           giveni={P\bibinitperiod}}}%
-        {{hash=704fa1d6130928d88680f2323fd9ff84}{%
-           family={Cardona},
-           familyi={C\bibinitperiod},
-           given={Albert},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.}%
-      }
-      \strng{namehash}{ad1bfba2c8792d8fa685fed6100cfb98}
-      \strng{fullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \strng{fullhashraw}{15eb877bfd5e9b93ab284d7309220074}
-      \strng{bibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
-      \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
-      \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
-      \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
-      \strng{authorfullhashraw}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
-      \field{issn}{1548-7091}
-      \field{month}{7}
-      \field{shorttitle}{Nat {{Meth}}}
-      \field{title}{Fiji: An Open-Source Platform for Biological-Image Analysis}
-      \field{urlday}{18}
-      \field{urlmonth}{10}
-      \field{urlyear}{2013}
-      \field{year}{2012}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1038/nmeth.2019
-      \endverb
-      \verb{file}
-      \verb /Users/habi/Zotero/storage/B2RHUUNG/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://www.nature.com/articles/nmeth.2019
-      \endverb
-      \verb{url}
-      \verb http://www.nature.com/articles/nmeth.2019
-      \endverb
-      \keyw{Algorithms,Animals,Brain,Brain: ultrastructure,Computational Biology,Computational Biology: methods,Computer-Assisted,Computer-Assisted: methods,Drosophila melanogaster,Drosophila melanogaster: ultrastructure,Image Enhancement,Image Enhancement: methods,Image Processing,Imaging,Information Dissemination,Software,Software Design,Three-Dimensional,Three-Dimensional: methods}
-    \endentry
-    \entry{Kluyver2016}{article}{}{}
-      \name{author}{14}{}{%
-        {{hash=282b5d6fe909cc357c8dd473058b8fdc}{%
-           family={Kluyver},
-           familyi={K\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-        {{hash=bb0499362e4246138a245cb29663ef0e}{%
-           family={Ragan},
-           familyi={R\bibinitperiod},
-           given={Benjamin},
-           giveni={B\bibinitperiod}}}%
-        {{hash=cdf727c87390cdf7a8ab76f9efc61f93}{%
-           family={Perez},
-           familyi={P\bibinitperiod},
-           given={Fernando},
-           giveni={F\bibinitperiod}}}%
-        {{hash=da7210cb80d97a3a426f16a9d4f40d24}{%
-           family={Granger},
-           familyi={G\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod}}}%
-        {{hash=7f34166865a83ff30f9d4413ef06b9c4}{%
-           family={Bussonnier},
-           familyi={B\bibinitperiod},
-           given={Matthias},
-           giveni={M\bibinitperiod}}}%
-        {{hash=0f7d9893defe60d76157e1cadb5400c0}{%
-           family={Frederic},
-           familyi={F\bibinitperiod},
-           given={Jonathan},
-           giveni={J\bibinitperiod}}}%
-        {{hash=deedcc61b45535cf6338ad78ce8f8232}{%
-           family={Kelley},
-           familyi={K\bibinitperiod},
-           given={Kyle},
-           giveni={K\bibinitperiod}}}%
-        {{hash=05461f0d944dc591c3ec713dc214129b}{%
-           family={Hamrick},
-           familyi={H\bibinitperiod},
-           given={Jessica},
-           giveni={J\bibinitperiod}}}%
-        {{hash=fd289a69d047befbdbf4cdb8c13e5114}{%
-           family={Grout},
-           familyi={G\bibinitperiod},
-           given={Jason},
-           giveni={J\bibinitperiod}}}%
-        {{hash=983b7e23a76250681fa9f1b243743ee6}{%
-           family={Corlay},
-           familyi={C\bibinitperiod},
-           given={Sylvain},
-           giveni={S\bibinitperiod}}}%
-        {{hash=df5e4f7bc60c539377e4eb9dcfb21183}{%
-           family={Ivanov},
-           familyi={I\bibinitperiod},
-           given={Paul},
-           giveni={P\bibinitperiod}}}%
-        {{hash=2657875abf2d343b08f60de47a3fd224}{%
-           family={Avila},
-           familyi={A\bibinitperiod},
-           given={Damián},
-           giveni={D\bibinitperiod}}}%
-        {{hash=e9ee2512e4cee488a23dc45742e57bca}{%
-           family={Abdalla},
-           familyi={A\bibinitperiod},
-           given={Safia},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e154bce99b3c9f96d7d2a6f1b1965fb6}{%
-           family={Willing},
-           familyi={W\bibinitperiod},
-           given={Carol},
-           giveni={C\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IOS Press}%
-      }
-      \strng{namehash}{48035973e2ebb91d3445f30ca56d312f}
-      \strng{fullhash}{1588ee70032b792a3f649bc36fe0a6ca}
-      \strng{fullhashraw}{1588ee70032b792a3f649bc36fe0a6ca}
-      \strng{bibnamehash}{48035973e2ebb91d3445f30ca56d312f}
-      \strng{authorbibnamehash}{48035973e2ebb91d3445f30ca56d312f}
-      \strng{authornamehash}{48035973e2ebb91d3445f30ca56d312f}
-      \strng{authorfullhash}{1588ee70032b792a3f649bc36fe0a6ca}
-      \strng{authorfullhashraw}{1588ee70032b792a3f649bc36fe0a6ca}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Jupyter {{Notebooks}} -- a Publishing Format for Reproducible Computational Workflows}
-      \field{year}{2016}
-      \verb{doi}
-      \verb 10.3233/978-1-61499-649-1-87
-      \endverb
-      \verb{file}
-      \verb /Users/habi/Zotero/storage/MA5JNYF8/Kluyver et al. - 2016 - Jupyter Notebooks -- a publishing format for reproducible computational workflows.pdf
-      \endverb
-    \endentry
-    \entry{Wolf2021}{article}{}{}
-      \name{author}{8}{}{%
-        {{hash=fdf6fa40a994c79d1b1f7f654c7601db}{%
-           family={Wolf},
-           familyi={W\bibinitperiod},
-           given={Thomas\bibnamedelima Gerhard},
-           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=66c409447e6df454bc7bd4defd7c7cc0}{%
-           family={Anderegg},
-           familyi={A\bibinitperiod},
-           given={Andrea\bibnamedelima Lisa},
-           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=31208204cf1e706905070d03cc964a87}{%
-           family={Haberthür},
-           familyi={H\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=bebf43f0239ede97718fcc66e3a01528}{%
-           family={Khoma},
-           familyi={K\bibinitperiod},
-           given={Oleksiy-Zakhar},
-           giveni={O\bibinithyphendelim Z\bibinitperiod}}}%
-        {{hash=a9c0d1c3769020ff0f80e6e7b69b9a26}{%
-           family={Schumann},
-           familyi={S\bibinitperiod},
-           given={Sven},
-           giveni={S\bibinitperiod}}}%
-        {{hash=b3597c7650eb4253a7690899c1f9086e}{%
-           family={Boemke},
-           familyi={B\bibinitperiod},
-           given={Nane},
-           giveni={N\bibinitperiod}}}%
-        {{hash=b413c7aa5f3eeee1ff00f0eafe819414}{%
-           family={Wierichs},
-           familyi={W\bibinitperiod},
-           given={Richard\bibnamedelima Johannes},
-           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=19d1c5f909bbd72b20042740109f3be6}{%
-           family={Hlushchuk},
-           familyi={H\bibinitperiod},
-           given={Ruslan},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{fullhash}{795d028f9f4534239332966341d28877}
-      \strng{fullhashraw}{795d028f9f4534239332966341d28877}
-      \strng{bibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorfullhash}{795d028f9f4534239332966341d28877}
-      \strng{authorfullhashraw}{795d028f9f4534239332966341d28877}
-      \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The aim of this study was to investigate the root canal system morphology by means of a root canal configuration (RCC) classification described with a four-digit system, the physiological foramen geometry and accessory canal frequency and morphology, of 101 mandibular canines (MaCa) of a Swiss-German population by means of micro-computed tomography. Micro-CT examination of the MaCa was performed and the obtained images analyzed with a 3D imaging software. In single-rooted MaCas, the most frequently observed RCCs were 1-1-1/1 (74.5\%) and 1-1-1/2 (14.3\%). Seven other RCCs were less frequently observed with a frequency from 4.1 to 1.0\%. One physiological foramen was observed in 80.6\% of the MaCas, two in 16.3\%, three in 1.0\% and four in 2.0\%. Accessory and connecting canals were apparent only in the middle and apical root thirds. Two-rooted MaCas occurred less frequently (n = 3). When one physiological foramen was present, the mean size of the narrow and wide diameters were 0.28 mm ({\textpm} 0.07) and 0.40 mm ({\textpm} 0.11), while the distance between physiological and anatomical foramen was 0.45 mm ({\textpm} 0.17). MaCas are predominantly single-rooted teeth with a 1-1-1/1 or 1-1-1/2 RCC. Most MaCas had one physiological foramen with an oval shape.}
-      \field{issn}{2045-2322}
-      \field{title}{Internal Morphology of 101 Mandibular Canines of a {{Swiss-German}} Population by Means of Micro-{{CT}}: {{An}} Ex Vivo Study}
-      \field{year}{2021}
-      \verb{doi}
-      \verb g7r8
-      \endverb
-      \verb{file}
-      \verb /Users/habi/Zotero/storage/AU948UHN/s41598-021-00758-w copy.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1038/s41598-021-00758-w
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1038/s41598-021-00758-w
-      \endverb
-    \endentry
-    \entry{Briseno-Marroquin2015}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=7a41b26f38c6ace1e4182a108e47e7b1}{%
-           family={{Briseño-Marroquín}},
-           familyi={B\bibinitperiod},
-           given={Benjamín},
-           giveni={B\bibinitperiod}}}%
-        {{hash=7aef301479a84587c1fa1fac608150bc}{%
-           family={Paqué},
-           familyi={P\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-        {{hash=9e86a97a6f7cde113196bc98c4c70157}{%
-           family={Maier},
-           familyi={M\bibinitperiod},
-           given={Karolin},
-           giveni={K\bibinitperiod}}}%
-        {{hash=023b0e41ddb46e953e5d493dc3c263ba}{%
-           family={Willershausen},
-           familyi={W\bibinitperiod},
-           given={Brita},
-           giveni={B\bibinitperiod}}}%
-        {{hash=fdf6fa40a994c79d1b1f7f654c7601db}{%
-           family={Wolf},
-           familyi={W\bibinitperiod},
-           given={Thomas\bibnamedelima Gerhard},
-           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier Inc.}%
-      }
-      \strng{namehash}{09c4ee1f6a10347b20560e782ab5a3ce}
-      \strng{fullhash}{cbec28ac1f2fccd6b9b619b97b15669a}
-      \strng{fullhashraw}{cbec28ac1f2fccd6b9b619b97b15669a}
-      \strng{bibnamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
-      \strng{authorbibnamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
-      \strng{authornamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
-      \strng{authorfullhash}{cbec28ac1f2fccd6b9b619b97b15669a}
-      \strng{authorfullhashraw}{cbec28ac1f2fccd6b9b619b97b15669a}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Introduction The objective of this study was to propose a root canal configuration description method and to investigate the root canal system morphology of the maxillary first molar by means of micro-computed tomographic imaging. Methods The root canal configuration, foramina, and accessory canal frequency of 179 maxillary first molars were investigated by means of micro-computed tomographic imaging and 3-dimensional software imaging. The root canal configuration and main foramina number are described from coronal to apical with a 4-digit system. Results The most frequent root canal configurations were 1-1-1/1 (45.8\%), 2-2-2/2 (25.1\%) and 2-2-1/1 (10.1\%) in mesiobuccal roots and 1-1-1/1 in distobuccal (97.2\%) and palatal (98.9\%) roots. The first mesiobuccal (MB1) root canal had 1 accessory canal in 26.3\% of the teeth, the distobuccal root canal had 12.3\%, and the palatal root canal had 9.5\%; in the second mesiobuccal root canal, there was rarely 1 accessory canal. There was 1 accessory canal in 26.3\%, 12.3\%, and 9.5\% in the MB1, distobuccal, and palatal root canals, respectively. The MB1, distobuccal, and palatal root canals had 1 main foramen. The MB2 had 1 main foramen in 39.0\% of the teeth and no main foramen in 61.0\%. Conclusions The root canal configuration of maxillary first molars is quite diversified. Contrary to our expectations in this research, the mesiobuccal root has predominantly 1 root canal entrance and only 1 main foramen. Anatomic variations including connecting and accessory canals occur in any third of root.}
-      \field{issn}{00992399}
-      \field{month}{12}
-      \field{title}{Root {{Canal Morphology}} and {{Configuration}} of 179 {{Maxillary First Molars}} by {{Means}} of {{Micro}}--Computed {{Tomography}}: {{An Ex Vivo Study}}}
-      \field{urlday}{9}
-      \field{urlmonth}{11}
-      \field{urlyear}{2020}
-      \field{year}{2015}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1016/j.joen.2015.09.007
-      \endverb
-      \verb{file}
-      \verb /Users/habi/Zotero/storage/5FRE65F7/full-text.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0099239915008328
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0099239915008328
-      \endverb
-      \keyw{Foramina,maxillary first molar,micro-computed tomography,morphology,root canal configuration}
-    \endentry
-    \entry{Haberthuer2020a}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=31208204cf1e706905070d03cc964a87}{%
-           family={Haberthür},
-           familyi={H\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{31208204cf1e706905070d03cc964a87}
-      \strng{fullhash}{31208204cf1e706905070d03cc964a87}
-      \strng{fullhashraw}{31208204cf1e706905070d03cc964a87}
-      \strng{bibnamehash}{31208204cf1e706905070d03cc964a87}
-      \strng{authorbibnamehash}{31208204cf1e706905070d03cc964a87}
-      \strng{authornamehash}{31208204cf1e706905070d03cc964a87}
-      \strng{authorfullhash}{31208204cf1e706905070d03cc964a87}
-      \strng{authorfullhashraw}{31208204cf1e706905070d03cc964a87}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{8}
-      \field{title}{Habi/Zmk-Tooth-Cohort: {{Used}} for Manuscript about Method}
-      \field{urlday}{9}
-      \field{urlmonth}{11}
-      \field{urlyear}{2020}
-      \field{year}{2020}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.5281/ZENODO.3999402
-      \endverb
-      \verb{urlraw}
-      \verb https://zenodo.org/record/3999402
-      \endverb
-      \verb{url}
-      \verb https://zenodo.org/record/3999402
-      \endverb
-    \endentry
-    \entry{Wolf2017}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=fdf6fa40a994c79d1b1f7f654c7601db}{%
-           family={Wolf},
-           familyi={W\bibinitperiod},
-           given={Thomas\bibnamedelima Gerhard},
-           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=7aef301479a84587c1fa1fac608150bc}{%
-           family={Paqué},
-           familyi={P\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-        {{hash=1f9fd8925e24d25d3aef11d313378c2a}{%
-           family={Sven\bibnamedelima Patyna},
-           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=023b0e41ddb46e953e5d493dc3c263ba}{%
-           family={Willershausen},
-           familyi={W\bibinitperiod},
-           given={Brita},
-           giveni={B\bibinitperiod}}}%
-        {{hash=7a41b26f38c6ace1e4182a108e47e7b1}{%
-           family={{Briseño-Marroquín}},
-           familyi={B\bibinitperiod},
-           given={Benjamín},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Sichuan University Press}%
-      }
-      \strng{namehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{fullhash}{61b54fb10b56680ff2a39b33b4712bca}
-      \strng{fullhashraw}{61b54fb10b56680ff2a39b33b4712bca}
-      \strng{bibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorbibnamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
-      \strng{authorfullhash}{61b54fb10b56680ff2a39b33b4712bca}
-      \strng{authorfullhashraw}{61b54fb10b56680ff2a39b33b4712bca}
-      \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The aim of this study was to investigate the physiological foramen diameter, shape and distance between physiological and anatomical apex of maxillary and mandibular first and second molars. Accurate knowledge of the physiological foramina morphology; thus, inherent mechanical shaping technical hindrances, is decisive when taking the corresponding root canal final preparation decision. The morphological dimensions of a total of 1 727 physiological foramina were investigated by means of micro-computed tomography. Mean narrow and wide (to a high number, oval) diameters of the physiological foramen were 0.24, 0.22 and 0.33 mm and 0.33, 0.31 and 0.42 mm in mesiobuccal (MB), distobuccal (DB) and palatal (P) roots in maxillary first molars; 0.24, 0.22 and 0.33 mm and 0.41, 0.33 and 0.44 in MB, DB, and P roots in maxillary second molars. Mandibular first molars showed mean narrow and wide diameters of 0.24 and 0.30 mm and of 0.39 and 0.46 mm in mesial (M) and distal (D) roots; second mandibular molars showed 0.25 and 0.31 mm and 0.47 mm in M and D roots. The mean distance between the physiological foramina and anatomical apex was 0.82, 0.81 and 1.02 mm and 0.54, 0.43 and 0.63 mm in MB, DB and P roots of the maxillary first and second molars, respectively. A mean distance of 0.95 mm (M) and 1.05 mm (D) in the first and 0.78 mm (M) and 0.81 mm (D) in the second mandibular molars was observed. Based on the results obtained, assumable recommendations for final preparation size of the physiological foramen were calculated. However, when taking into consideration, the resulting standard deviations of marginal errors must be cautiously considered when taking a final decision in clinical endodontic treatment.}
-      \field{issn}{1674-2818}
-      \field{month}{9}
-      \field{title}{Three-Dimensional Analysis of the Physiological Foramen Geometry of Maxillary and Mandibular Molars by Means of Micro-{{CT}}}
-      \field{urlday}{10}
-      \field{urlmonth}{11}
-      \field{urlyear}{2020}
-      \field{year}{2017}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1038/ijos.2017.29
-      \endverb
-      \verb{urlraw}
-      \verb http://www.nature.com/articles/ijos201729
-      \endverb
-      \verb{url}
-      \verb http://www.nature.com/articles/ijos201729
-      \endverb
-      \keyw{Apical constriction,Final apical file,Maxillary and mandibular molars morphology,Micro-computed tomography,Physiological foramen}
     \endentry
   \enddatalist
 \endrefsection

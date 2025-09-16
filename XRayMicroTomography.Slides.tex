@@ -24,12 +24,8 @@
 
 % Helper stuff
 \newlength\imagescale% needed for scalebars
-\newlength\imgwdtmp% helper temporary length for safe calculations
-\newcommand{\setimagescalefrom}[2]{% #1 = width (length or macro), #2 = pixel width (numeric)
-  \setlength{\imgwdtmp}{#1}%
-  \pgfmathsetlength{\imagescale}{\imgwdtmp/#2}%
-}
 
+% Packages and package setup
 \usepackage[%
 	backend=biber,%
 	sorting=none,%
@@ -41,15 +37,15 @@
 	maxnames=1,minnames=1,% Show only first author in references
 	]{biblatex}%
 % show "cited on slide(s) <numbers>" in bibliography
-\DefineBibliographyStrings{english}{
-  backrefpage  = {slide},
-  backrefpages = {slide},
-}
+\DefineBibliographyStrings{english}{%
+	backrefpage={slide},%
+	backrefpages={slide}%
+	}
 \renewbibmacro*{pageref}{%
-  \iflistundef{pageref}
-    {}
-    {\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}}
-
+	\iflistundef{pageref}%
+	{}%
+	{\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}
+	}
 % No "In" in bibliography
 \renewbibmacro{in:}{}
 % Globally remove stuff from bibliography
@@ -527,7 +523,7 @@
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
 				\end{tikzpicture}%
-				\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
+				\sourcecite{Clark2013}{Subject \emph{C3L-02465}}				
 			}%
 			\only<6|handout:5>{%
 				\renewcommand{\imagewidth}{0.1554\linewidth}% redefine the width only locally
@@ -758,7 +754,7 @@
 		\animategraphics[autoplay,palindrome,width=0.6\linewidth,every=\everyframe]{24}{./movies/diancta/Diancta_rec00000}{565}{904}%
 	\sourcecite{Bochud2021}{\emph{Diancta phoenīx}}%
 	}%
-	\renewcommand{\imagewidth}{0.5\linewidth}%
+	\renewcommand{\imagewidth}{0.5\linewidth}%	
 	\only<6|handout:4>{%
 		\pgfmathsetlength{\imagescale}{\imagewidth/1224}%
 		\def\x{756}% scalebar-x starting at golden ratio of image width of 1224px = 756
@@ -800,8 +796,8 @@
  	% pdfseparate physical\ basics_2022_folien.pdf -f 21 -l 21 physical_basics_2022_folien-%d.pdf
  	\frame{\includegraphics[height=\imageheight]{./images/physical_basics_2022_folien-21.pdf}}%
  	\sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
- \end{frame}
-  
+\end{frame}
+
 \begin{frame}
 	\frametitle{Projections}
 	\centering%
@@ -838,6 +834,19 @@
  		\item Cone beam reconstruction~\cite{Feldkamp1984}
  		\item Corrections (beam hardening, etc.)
  		\item Writing to stack
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Visualization}
+	\begin{tikzpicture}[remember picture,overlay]%
+	\node at (current page.center){%
+	\mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
+	\mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
+	};%
+	\end{tikzpicture}%
+\end{frame}
+
  	\end{itemize}
  \end{frame}
  
@@ -878,13 +887,13 @@
 	\frametitle{What to use?}
 	\begin{itemize}
 		\item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
-		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774485.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
+ 		\item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774485.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
 		\item Reproducible research
 		\begin{itemize}
-			\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
-			\item \href{https://git-scm.com/}{\faGit}
-			\item Script all your things!
-			\item Data repositories; \ie{} sharing is caring!
+		\item \href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016}
+ 			\item \href{https://git-scm.com/}{\faGit}
+ 			\item Script all your things!
+ 			\item Data repositories; \ie{} sharing is caring!
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -1380,6 +1389,10 @@
 	\end{itemize}%
 	\only<3|handout:0>{%
 		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center){%
+			\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%		
+		\end{tikzpicture}%
+	}%
 			\node at (current page.center) {%
 			        \animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
         			};%
