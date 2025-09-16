@@ -177,13 +177,13 @@
 %        \ifnum\inserttotalframenumber>0
 %          % Calculate progress ratio
 %          \pgfmathsetmacro{\progressratio}{\insertframenumber/\inserttotalframenumber}
-%
+%          
 %          % Position circle at the very bottom edge
-%          \fill[white]
-%            ($(current page.south west)!\progressratio!(current page.south east) + (0, 2pt)$)
+%          \fill[white] 
+%            ($(current page.south west)!\progressratio!(current page.south east) + (0, 2pt)$) 
 %            circle (2pt);
-%          \draw[red, line width=0.5pt]
-%            ($(current page.south west)!\progressratio!(current page.south east) + (0, 2pt)$)
+%          \draw[red, line width=0.5pt] 
+%            ($(current page.south west)!\progressratio!(current page.south east) + (0, 2pt)$) 
 %            circle (2pt);
 %        \fi
 %      \end{tikzpicture}
