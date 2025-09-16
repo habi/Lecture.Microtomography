@@ -844,19 +844,6 @@
 \begin{frame}
 	\frametitle{Visualization}
 	\begin{tikzpicture}[remember picture,overlay]%
-	\node at (current page.center){%
-	\mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
-	\mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
-	};%
-	\end{tikzpicture}%
-\end{frame}
-
- 	\end{itemize}
- \end{frame}
- 
- \begin{frame}
- 	\frametitle{Visualization}
- 	\begin{tikzpicture}[remember picture,overlay]%
  		\node at (current page.center){%
  				\mode<beamer>{\animategraphics[autoplay,loop,height=0.98\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
  		\mode<handout>{\includegraphics[height=0.98\paperheight]{./movies/scan/visualization/lung000}}%
@@ -1401,15 +1388,11 @@
 	\end{itemize}%
 	\only<3|handout:0>{%
 		\begin{tikzpicture}[remember picture,overlay]%
-			\node at (current page.center){%
-			\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%		
+			\node at (current page.center) {%
+				\animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
+			};%
 		\end{tikzpicture}%
 	}%
-			\node at (current page.center) {%
-			        \animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
-        			};%
-    		\end{tikzpicture}%
-    	}%
 \end{frame}
 
 \appendix
