@@ -67,7 +67,7 @@
 \addbibresource{../../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
-\usetikzlibrary{shadows,spy}
+\usetikzlibrary{shadows,spy,calc}
 \tikzset{%
 	shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},
 	draw=ubRed}},%
@@ -166,30 +166,34 @@
 	}%
 }%
 
-% Unobtrusive progress bar at the botton, based on 'update' in https://tex.stackexchange.com/a/554527/828
-\newdimen\progressbarheight
-% The template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
-\progressbarheight=1.36mm
-\addtobeamertemplate{footline}{}{%
-    \mode<beamer>{%
-        \centering
-        \begin{tikzpicture}[remember picture,overlay]
-            \useasboundingbox (0,0) rectangle (0.9\paperwidth,\progressbarheight);
-            \newdimen\progressx
-            \ifnum\inserttotalframenumber>0
-                \pgfmathparse{\insertframenumber/\inserttotalframenumber}
-                \ifdim\pgfmathresult pt>0pt
-                    \setlength{\progressx}{\pgfmathresult\paperwidth}
-                \else
-                    \setlength{\progressx}{0pt}
-                \fi
-            \else
-                \setlength{\progressx}{0pt}
-            \fi
-            \draw[draw=ubRed, fill=white] (\progressx, \progressbarheight/2) circle (\progressbarheight/2);
-        \end{tikzpicture}%
-    }%
-}%
+%% Define us a moving circle at the bottom of the slides as progress indicator, generated with the help of Claude.ai
+%% The template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
+%\defbeamertemplate{footline}{progress bar}{
+%  \leavevmode%
+%  \hbox{%
+%    \begin{beamercolorbox}[wd=\paperwidth,ht=4pt,dp=0pt]{}%
+%      \begin{tikzpicture}[overlay, remember picture]
+%        % Safety check to avoid division by zero
+%        \ifnum\inserttotalframenumber>0
+%          % Calculate progress ratio
+%          \pgfmathsetmacro{\progressratio}{\insertframenumber/\inserttotalframenumber}
+%
+%          % Position circle at the very bottom edge
+%          \fill[white]
+%            ($(current page.south west)!\progressratio!(current page.south east) + (0, 2pt)$)
+%            circle (2pt);
+%          \draw[red, line width=0.5pt]
+%            ($(current page.south west)!\progressratio!(current page.south east) + (0, 2pt)$)
+%            circle (2pt);
+%        \fi
+%      \end{tikzpicture}
+%    \end{beamercolorbox}%
+%  }%
+%  \vskip0pt%
+%}
+%
+%% Use the progress bar footline
+%\setbeamertemplate{footline}[progress bar]
 
 % Show current section at begin of sections, but only in presentation mode
 \mode<beamer>{%
