@@ -166,6 +166,7 @@
 	}%
 }%
 
+
 % Progress bar setup
 % At the beginning, we've set up custom footer with progress bar based on https://tex.stackexchange.com/a/59749/828
 % This lead to problems with 'dimension too large' errors which we've tried to fix with ChatGPT
@@ -175,48 +176,51 @@
 % Read marker position from aux file
 \newcommand{\myframenumber}{-1}  % Use -1 to indicate "undefined"
 \AtBeginDocument{%
-  \InputIfFileExists{\jobname.mkr}{}{}%
+\InputIfFileExists{\jobname.mkr}{}{}%
 }
 % Save marker position to aux file
 \newcommand{\saveframenumber}{%
-  \immediate\write\@auxout{\gdef\string\myframenumber{\insertframenumber}}%
-  \immediate\openout\@markerout=\jobname.mkr%
-  \immediate\write\@markerout{\gdef\string\myframenumber{\insertframenumber}}%
-  \immediate\closeout\@markerout%
-  % Don't overwrite the current value - let the aux file handle it
+\immediate\write\@auxout{\gdef\string\myframenumber{\insertframenumber}}%
+\immediate\openout\@markerout=\jobname.mkr%
+\immediate\write\@markerout{\gdef\string\myframenumber{\insertframenumber}}%
+\immediate\closeout\@markerout%
+% Don't overwrite the current value - let the aux file handle it
 }
 \newwrite\@markerout
 \makeatother
 
-% Footline template
-% The UniBe template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
-\defbeamertemplate{footline}{progress bar}{
-	\leavevmode%
-	\hbox{%
-	\begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
-		\begin{tikzpicture}[overlay,remember picture]
-		\pgfmathsetlengthmacro{\pw}{\paperwidth}        % full width in pt
-		\pgfmathsetlengthmacro{\halfheight}{0.68mm}     % half bar height
-		\ifnum\inserttotalframenumber>0
-			% current slide circle
-			\pgfmathsetlengthmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)*\pw}
-			\draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
-			
-			% marked slide line - draw if marker frame number is known and > 0
-			\ifnum\myframenumber>0
-			\pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
-			\draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
+% Do this only in beamer mode :)
+\mode<beamer>{%
+	% Footline template
+	% The UniBe template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
+	\defbeamertemplate{footline}{progress bar}{
+		\leavevmode%
+		\hbox{%
+		\begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
+			\begin{tikzpicture}[overlay,remember picture]
+			\pgfmathsetlengthmacro{\pw}{\paperwidth}        % full width in pt
+			\pgfmathsetlengthmacro{\halfheight}{0.68mm}     % half bar height
+			\ifnum\inserttotalframenumber>0
+				% current slide circle
+				\pgfmathsetlengthmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)*\pw}
+				\draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
+
+				% marked slide line - draw if marker frame number is known and > 0
+				\ifnum\myframenumber>0
+				\pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
+				\draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
+				\fi
 			\fi
-		\fi
-		\end{tikzpicture}
-	\end{beamercolorbox}%
-	}%
-}
+			\end{tikzpicture}
+		\end{beamercolorbox}%
+		}%
+	}
 
-% Use the new footline template
-\setbeamertemplate{footline}[progress bar]
+	% Use the new footline template
+	\setbeamertemplate{footline}[progress bar]
+}%
 
-% Show current section at begin of sections, but only in presentation mode
+% Show current section at begin of sections, only in presentation mode
 \mode<beamer>{%
 	\AtBeginSection[]{%
 	\begin{frame}{Contents}%
