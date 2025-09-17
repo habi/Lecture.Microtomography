@@ -6,3 +6,4 @@ Exam
 *.b??-SAVE-ERROR
 .latexmkrc
 gitHeadLocal.gin
+*.mkr
