@@ -1,9 +1,8 @@
+# Use locally generated gitinfo: https://github.com/rbarazzutti/gitinfo2-latexmk
 do './perl/gitinfo2.pm';
+# Exclude slides file from default build: https://tex.stackexchange.com/a/233796
 @default_excluded_files = ( '*Slides.tex' );
-# use pdflatex by default, so you don't need to pass `-pdf` argument
-$pdf_mode= 1;
-# -synctex=1 allow easy jumps between latex source and pdf file
-# -file-line-error make latex report file and line number when there is an error
-$pdflatex= 'pdflatex -synctex=1 -file-line-error %O %S';
-# https://tex.stackexchange.com/a/83386/828
-$clean_ext = 'synctex.gz synctex.gz(busy) run.xml tex.bak bbl bcf fdb_latexmk run tdo %R-blx.bib snm nav'
+# use `lualatex` by default, so we don't run into memory errors: https://tex.stackexchange.com/a/356432
+$pdf_mode = 4;
+# Good clean up with `latexmk -C`: https://tex.stackexchange.com/a/83386/828
+$clean_ext = 'synctex.gz synctex.gz(busy) run.xml tex.bak bbl bbl-SAVE-ERROR bcf fdb_latexmk run tdo %R-blx.bib snm nav mkr'
