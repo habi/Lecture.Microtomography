@@ -179,7 +179,6 @@ per-symbol=/]{siunitx}
 				% current slide circle
 				\pgfmathsetlengthmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)*\pw}
 				\draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
-
 				% marked slide line - draw if marker frame number is known and > 0
 				\ifnum\myframenumber>0
 				\pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
@@ -190,7 +189,6 @@ per-symbol=/]{siunitx}
 		\end{beamercolorbox}%
 		}%
 	}
-
 	% Use the new footline template
 	\setbeamertemplate{footline}[progress bar]
 }%
@@ -203,7 +201,6 @@ per-symbol=/]{siunitx}
 	\end{frame}%
 	}%
 }%
-
 
 \begin{document}
 
@@ -334,23 +331,23 @@ per-symbol=/]{siunitx}
 \subsection{Imaging methods}
 \begin{frame}
   \frametitle{Imaging methods}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
+  \begin{columns}%
+    \begin{column}{0.5\textwidth}%
       \citeslide{./images/MIC-AM_techniques}{https://www.anatomie.unibe.ch/tschanz}{Advanced Microscopy Lecture 2018}{Stefan Tschanz}{copied with permission}%
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
+    \end{column}%
+    \begin{column}{0.5\textwidth}%
+      \begin{itemize}%
         \item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022933.html}{\emph{Light Sheet Microscopy}} by Nadia Mercader Huber
         \item X-ray imaging
         \item Electron microscopy
-          \begin{itemize}
+          \begin{itemize}%
             \item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022941.html}{\emph{Transmission Electron Microscopy} by Dimitri Vanhecke}
             \item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022943.html}{\emph{Scanning Electron Microscopy} by Sabine Kässmeyer and Ivana Jaric}
             \item \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_3022945.html}{\emph{Cryoelectron Microscopy \& Serial Block Face SEM} by Ioan Iacovache}
-          \end{itemize}
-      \end{itemize}
-    \end{column}
-  \end{columns}
+          \end{itemize}%
+      \end{itemize}%
+    \end{column}%
+  \end{columns}%
 \end{frame}
 
 \section{Tomography}
