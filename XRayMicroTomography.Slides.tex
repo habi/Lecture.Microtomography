@@ -142,6 +142,28 @@ per-symbol=/]{siunitx}
   \end{tcolorbox}%
 }%
 
+% Progress bar setup
+% At the beginning, we've set up custom footer with progress bar based on https://tex.stackexchange.com/a/59749/828
+% This lead to problems with 'dimension too large' errors which we've tried to fix with ChatGPT
+% Then we thought it would be nice to have a marker for the break at the correct position, which we've implemented with some back and forth between ChatGPT and Claude.ai
+% To achieve the desired result, we need to save the slide number (marked with \saveframenumber to the .aux file and read it bac
+\makeatletter
+% Read marker position from aux file
+\newcommand{\myframenumber}{-1}  % Use -1 to indicate "undefined"
+\AtBeginDocument{%
+\InputIfFileExists{\jobname.mkr}{}{}%
+}
+% Save marker position to aux file
+\newcommand{\saveframenumber}{%
+\immediate\write\@auxout{\gdef\string\myframenumber{\insertframenumber}}%
+\immediate\openout\@markerout=\jobname.mkr%
+\immediate\write\@markerout{\gdef\string\myframenumber{\insertframenumber}}%
+\immediate\closeout\@markerout%
+% Don't overwrite the current value - let the aux file handle it
+}
+\newwrite\@markerout
+\makeatother
+
 % Do this only in beamer mode :)
 \mode<beamer>{%
 	% Footline template
@@ -181,6 +203,7 @@ per-symbol=/]{siunitx}
 	\end{frame}%
 	}%
 }%
+
 
 \begin{document}
 
