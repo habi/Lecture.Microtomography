@@ -74,10 +74,10 @@ per-symbol=/]{siunitx}
 \usepackage{listings}
 \lstset{%
   basicstyle=\scriptsize\ttfamily,
-	breaklines=true,
-	breakatwhitespace=true,
-	frame=shadowbox,
-	}
+  breaklines=true,
+  breakatwhitespace=true,
+  frame=shadowbox,
+  }
 \usepackage{booktabs}
 \renewcommand{\familydefault}{\rmdefault}
 \usepackage[defaultmathsizes,symbolgreek]{mathastext}
@@ -166,53 +166,53 @@ per-symbol=/]{siunitx}
 
 % Do this only in beamer mode :)
 \mode<beamer>{%
-	% Footline template
-	% The UniBe template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
-	\defbeamertemplate{footline}{progress bar}{%
-		\leavevmode%
-		\hbox{%
-		\begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
-			\begin{tikzpicture}[overlay,remember picture]
-			\pgfmathsetlengthmacro{\pw}{\paperwidth}        % full width in pt
-			\pgfmathsetlengthmacro{\halfheight}{0.68mm}     % half bar height
-			\ifnum\inserttotalframenumber>0
-				% current slide circle
-				\pgfmathsetlengthmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)*\pw}
-				\draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
-				% marked slide line - draw if marker frame number is known and > 0
-				\ifnum\myframenumber>0
-				\pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
-				\draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
-				\fi
-			\fi
-			\end{tikzpicture}
-		\end{beamercolorbox}%
-		}%
-	}
-	% Use the new footline template
-	\setbeamertemplate{footline}[progress bar]
+  % Footline template
+  % The UniBe template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
+  \defbeamertemplate{footline}{progress bar}{%
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
+      \begin{tikzpicture}[overlay,remember picture]
+      \pgfmathsetlengthmacro{\pw}{\paperwidth}        % full width in pt
+      \pgfmathsetlengthmacro{\halfheight}{0.68mm}     % half bar height
+      \ifnum\inserttotalframenumber>0
+        % current slide circle
+        \pgfmathsetlengthmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)*\pw}
+        \draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
+        % marked slide line - draw if marker frame number is known and > 0
+        \ifnum\myframenumber>0
+        \pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
+        \draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
+        \fi
+      \fi
+      \end{tikzpicture}
+    \end{beamercolorbox}%
+    }%
+  }
+  % Use the new footline template
+  \setbeamertemplate{footline}[progress bar]
 }%
 
 % Show current section at begin of sections, only in presentation mode
 \mode<beamer>{%
-	\AtBeginSection[]{%
-	\begin{frame}{Contents}%
-		\tableofcontents[currentsection,currentsubsection,hideothersubsections]%
-	\end{frame}%
-	}%
+  \AtBeginSection[]{%
+  \begin{frame}{Contents}%
+    \tableofcontents[currentsection,currentsubsection,hideothersubsections]%
+  \end{frame}%
+  }%
 }%
 
 \begin{document}
 
 \begin{frame}
-	\titlepage%
-	\mode<beamer>{%
-		\begin{tikzpicture}[remember picture,overlay]
-			\node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
-				Handout PDF: git.io/JeQxO \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}%
-			};
-		\end{tikzpicture}
-	}
+  \titlepage%
+  \mode<beamer>{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
+        Handout PDF: git.io/JeQxO \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}%
+      };
+    \end{tikzpicture}
+  }
 \end{frame}
 
 % \begin{frame}
@@ -229,16 +229,16 @@ per-symbol=/]{siunitx}
 % \end{frame}
 
 \begin{frame}
-	\frametitle{Grüessech from the \uct group}
-		\centering%
-		\includegraphics[width=\imagewidth]{./images/team}
-		\hfill%
-		David{\color{ubRed}.}Haberthuer{\color{ubRed}@unibe.ch}%
-		\hfill%
-		Ruslan{\color{ubRed}.}Hlushchuk{\color{ubRed}@unibe.ch}%
-		\hfill%
-		Oleksiy{\color{ubRed}.}Khoma{\color{ubRed}@unibe.ch}%
-		\hfill%
+  \frametitle{Grüessech from the \uct group}
+    \centering%
+    \includegraphics[width=\imagewidth]{./images/team}
+    \hfill%
+    David{\color{ubRed}.}Haberthuer{\color{ubRed}@unibe.ch}%
+    \hfill%
+    Ruslan{\color{ubRed}.}Hlushchuk{\color{ubRed}@unibe.ch}%
+    \hfill%
+    Oleksiy{\color{ubRed}.}Khoma{\color{ubRed}@unibe.ch}%
+    \hfill%
 \end{frame}
 
 \begin{frame}
@@ -660,21 +660,21 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Machinery}
-	\begin{columns}
-	  \begin{column}{0.5\textwidth}
-		\centering
-		\input{animations/classicCT}
-		\pause
-	  \end{column}
-	  \begin{column}{0.5\textwidth}
-		\centering
-  		% "List" the LR, normal and HR animations in a weird order here, to display them logically side-by-side in the handout
-  		\only<3|handout:1>{\input{animations/microCT_lr}}%
-  		\only<1-2|handout:1>{\input{animations/microCT}}%
-  		\only<4|handout:1>{\input{animations/microCT_hr}}%
-	  \end{column}
-	\end{columns}
+  \frametitle{Machinery}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+    \centering
+    \input{animations/classicCT}
+    \pause
+    \end{column}
+    \begin{column}{0.5\textwidth}
+    \centering
+      % "List" the LR, normal and HR animations in a weird order here, to display them logically side-by-side in the handout
+      \only<3|handout:1>{\input{animations/microCT_lr}}%
+      \only<1-2|handout:1>{\input{animations/microCT}}%
+      \only<4|handout:1>{\input{animations/microCT_hr}}%
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -1212,26 +1212,26 @@ Laws of Physics for Microscopists}{Michael Jaeger}{5}%
 \appendix
 
 \begin{frame}[allowframebreaks]
-	\frametitle{References}
-	%\renewcommand*{\bibfont}{\footnotesize}%
-	\printbibliography%
+  \frametitle{References}
+  %\renewcommand*{\bibfont}{\footnotesize}%
+  \printbibliography%
 \end{frame}
 
 \begin{frame}
-	\frametitle[Colophon]{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
-	\begin{itemize}
-		\item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
-		\begin{itemize}
-			\item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
-			\item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
-		\end{itemize}
-		\item Did you spot an error?
-		\begin{itemize}
-			\item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
-			\item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
-			\item \href{mailto:david.haberthuer@unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: david.haberthuer@unibe.ch}
-		\end{itemize}
-	\end{itemize}
+  \frametitle[Colophon]{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
+  \begin{itemize}
+    \item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
+    \begin{itemize}
+      \item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
+      \item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
+    \end{itemize}
+    \item Did you spot an error?
+    \begin{itemize}
+      \item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
+      \item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
+      \item \href{mailto:david.haberthuer@unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: david.haberthuer@unibe.ch}
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \end{document}
