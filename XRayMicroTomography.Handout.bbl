@@ -95,7 +95,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In the last decades the contrast-enhanced microCT-imaging of whole animal kidney became increasingly important. The visualization was mainly limited to middle-sized vessels. Since modern desktop microCT-scanners provide the necessary detail resolution, we developed an approach for rapid visualization and consistent assessment of kidney vasculature and glomeruli number. This method is based on {$\mu$}Angiofil{®}, a new polymerizing contrast agent with homogenous X-ray absorption, which provides continuous filling of the complete vasculature and enables correlative imaging approaches. For rapid and reliable kidney morphometry the microangioCT-datasets from GDNF+/- mice and their wildtype littermates were used. The results were obtained much faster compared to the current gold standard, histology-based stereology, and without processing artefacts. The histology-based morphometry was afterwards done on the same kidneys. Both approaches revealed that the GDNF+/- male mice had more than 30\% fewer glomeruli. Futhermore,...}
+      \field{abstract}{In the last decades the contrast-enhanced microCT-imaging of whole animal kidney became increasingly important. The visualization was mainly limited to middle-sized vessels. Since modern desktop microCT-scanners provide the necessary detail resolution, we developed an approach for rapid visualization and consistent assessment of kidney vasculature and glomeruli number. This method is based on {$\mu$}Angiofil®, a new polymerizing contrast agent with homogenous X-ray absorption, which provides continuous filling of the complete vasculature and enables correlative imaging approaches. For rapid and reliable kidney morphometry the microangioCT-datasets from GDNF+/- mice and their wildtype littermates were used. The results were obtained much faster compared to the current gold standard, histology-based stereology, and without processing artefacts. The histology-based morphometry was afterwards done on the same kidneys. Both approaches revealed that the GDNF+/- male mice had more than 30\% fewer glomeruli. Futhermore,...}
       \field{issn}{1931-857X}
       \field{month}{3}
       \field{title}{Cutting-Edge Microangio-{{CT}}: New Dimensions in Vascular Imaging and Kidney Morphometry}
@@ -104,7 +104,7 @@
       \verb 10.1152/ajprenal.00099.2017
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/Z457KMJX/Hlushchuk et al. - 2017 - Cutting-edge microangio-CT new dimensions in vascular imaging and kidney morphometry.pdf
+      \verb /Users/habi/Zotero/storage/Z457KMJX/Hlushchuk et al. - 2017 - Cutting-edge microangio-CT new dimensions in vascular imaging and kidney morphometry.pdf
       \endverb
     \endentry
     \entry{Nording2021}{article}{}{}
@@ -269,7 +269,7 @@
       \verb 10.1038/s41467-021-23499-w
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
+      \verb /Users/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
       \endverb
     \endentry
     \entry{Hlushchuk2020}{article}{}{}
@@ -338,7 +338,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Analysis of the angioarchitecture and quantification of the conduit vessels and microvasculature is of paramount importance for understanding the physiological and pathological processes within the central nervous system (CNS). Most of the available in vivo imaging methods lack penetration depth and/or resolution. Some ex vivo methods may provide better resolution, but are mainly destructive, as they are designed for imaging the CNS tissues after their removal from the skull or vertebral column. The removal procedure inevitably alters the in situ relations of the investigated structures and damages the dura mater and leptomeninges. {\textmu}Angiofil, a polymer-based contrast agent, permits a qualitatively novel postmortem microangio-computed tomography (microangioCT) approach with excellent resolution and, therefore, visualization of the smallest brain capillaries. The datasets obtained empower a rather straightforward quantitative analysis of the vascular tree, including the microvasculature. The {\textmu}Angiofil has an excellent filling capacity as well as a radio-opacity higher than the one of bone tissue, which allows imaging the cerebral microvasculature even within the intact skull or vertebral column. This permits in situ visualization and thus investigation of the dura mater and leptomeningeal layers as well as their blood supply in their original geometry. Moreover, the methodology introduced here permits correlative approaches, i.e., microangioCT followed by classical histology, immunohistochemistry and even electron microscopy. The experimental approach presented here makes use of common desktop microCT scanners, rendering it a promising everyday tool for the evaluation of the (micro)vasculature of the central nervous system in preclinical and basic research.}
+      \field{abstract}{Analysis of the angioarchitecture and quantification of the conduit vessels and microvasculature is of paramount importance for understanding the physiological and pathological processes within the central nervous system (CNS). Most of the available in vivo imaging methods lack penetration depth and/or resolution. Some ex vivo methods may provide better resolution, but are mainly destructive, as they are designed for imaging the CNS tissues after their removal from the skull or vertebral column. The removal procedure inevitably alters the in situ relations of the investigated structures and damages the dura mater and leptomeninges. \textmu Angiofil, a polymer-based contrast agent, permits a qualitatively novel postmortem microangio-computed tomography (microangioCT) approach with excellent resolution and, therefore, visualization of the smallest brain capillaries. The datasets obtained empower a rather straightforward quantitative analysis of the vascular tree, including the microvasculature. The \textmu Angiofil has an excellent filling capacity as well as a radio-opacity higher than the one of bone tissue, which allows imaging the cerebral microvasculature even within the intact skull or vertebral column. This permits in situ visualization and thus investigation of the dura mater and leptomeningeal layers as well as their blood supply in their original geometry. Moreover, the methodology introduced here permits correlative approaches, i.e., microangioCT followed by classical histology, immunohistochemistry and even electron microscopy. The experimental approach presented here makes use of common desktop microCT scanners, rendering it a promising everyday tool for the evaluation of the (micro)vasculature of the central nervous system in preclinical and basic research.}
       \field{issn}{1863-2653}
       \field{month}{10}
       \field{title}{Innovative High-Resolution {{microCT}} Imaging of Animal Brain Vasculature}
@@ -347,7 +347,7 @@
       \verb 10.1007/s00429-020-02158-8
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
+      \verb /Users/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
       \endverb
     \endentry
     \entry{Wuthrich2020}{article}{}{}
@@ -476,7 +476,7 @@
       \verb 10.1016/j.msec.2020.111311
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/home/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
+      \verb /Users/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/Users/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
       \endverb
     \endentry
     \entry{Zubler2021}{article}{}{}
@@ -622,7 +622,7 @@
       \verb 10.1371/journal.pone.0228333
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
+      \verb /Users/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
       \endverb
     \endentry
     \entry{Trappetti2021}{article}{}{}
@@ -715,7 +715,7 @@
       \verb 10.1016/j.ijrobp.2021.07.1717
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
+      \verb /Users/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
       \endverb
     \endentry
     \entry{Bochud2021}{article}{}{}
@@ -769,7 +769,7 @@
       \verb 10.3897/zookeys.1073.73241
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
+      \verb /Users/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
       \endverb
     \endentry
     \entry{Halm2021}{article}{}{}
@@ -820,7 +820,7 @@
       \verb 10.1186/s40463-021-00522-0
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
+      \verb /Users/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
       \endverb
     \endentry
     \entry{Kadlag2023}{article}{}{}
@@ -863,7 +863,7 @@
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Micro-computed tomography is a fast and essentially non-destructive technique for studying 3D properties of solid objects. This study explores the use of a micro-CT technique to determine the physical properties and average atomic numbers of 44 chondrules from unequilibrated (petrologic type 3.00 to 3.6) ordinary, carbonaceous, and enstatite chondrites. Many chondrules deviate from a spherical geometry, implying that they were affected by strain during cooling and prior to complete solidification. The porosity of the studied chondrules ranges from 0.04~vol\% to 5.3~vol\%. Chondrules from carbonaceous chondrites show the highest porosity and the largest voids. The high porosity could be caused by the presence of oxidized precursors in the chondrule melt that escaped as a gas during high temperature processing and crystallization of the melt. In some chondrules, pores are associated with opaque phases, suggesting their formation either during solidification of metal phases and/or during aqueous alteration. The average atomic numbers of chondrules range from 35~{\textpm}~4 to 22~{\textpm}~2, independently of porosity and opaque content and is likely controlled by the variation of Mg/Fe in chondrule silicates. The absence of a consistent variation between the degree of deformation, chondrule diameter, and porosity among the studied chondrules from different groups, suggests that the processes responsible for the different physical properties of the chondrules are decoupled from each other and are likely universal to all chondrules.}
+      \field{abstract}{Micro-computed tomography is a fast and essentially non-destructive technique for studying 3D properties of solid objects. This study explores the use of a micro-CT technique to determine the physical properties and average atomic numbers of 44 chondrules from unequilibrated (petrologic type 3.00 to 3.6) ordinary, carbonaceous, and enstatite chondrites. Many chondrules deviate from a spherical geometry, implying that they were affected by strain during cooling and prior to complete solidification. The porosity of the studied chondrules ranges from 0.04~vol\% to 5.3~vol\%. Chondrules from carbonaceous chondrites show the highest porosity and the largest voids. The high porosity could be caused by the presence of oxidized precursors in the chondrule melt that escaped as a gas during high temperature processing and crystallization of the melt. In some chondrules, pores are associated with opaque phases, suggesting their formation either during solidification of metal phases and/or during aqueous alteration. The average atomic numbers of chondrules range from 35~\textpm ~4 to 22~\textpm ~2, independently of porosity and opaque content and is likely controlled by the variation of Mg/Fe in chondrule silicates. The absence of a consistent variation between the degree of deformation, chondrule diameter, and porosity among the studied chondrules from different groups, suggests that the processes responsible for the different physical properties of the chondrules are decoupled from each other and are likely universal to all chondrules.}
       \field{issn}{0032-0633}
       \field{month}{11}
       \field{title}{Physical Properties and Average Atomic Numbers of Chondrules Using Computed Tomography}
@@ -875,6 +875,62 @@
       \verb{doi}
       \verb 10.1016/j.pss.2023.105799
       \endverb
+    \endentry
+    \entry{Aaldijk2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d9b8997f148f3eab30d6054b88843b19}{%
+           family={Aaldijk},
+           familyi={A\bibinitperiod},
+           given={Dea},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2ebdb45c042242e625238a3847f09541}{%
+           family={Halm},
+           familyi={H\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ef72f84d4140abef3dfba3794a457008}{%
+           family={Liashchenko},
+           familyi={L\bibinitperiod},
+           given={Diana\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberthür},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{ac161b79465fcbc2c754b936c9f27d1f}
+      \strng{fullhash}{7157160f1cf7a6524f924104bbd2b4e9}
+      \strng{fullhashraw}{7157160f1cf7a6524f924104bbd2b4e9}
+      \strng{bibnamehash}{ac161b79465fcbc2c754b936c9f27d1f}
+      \strng{authorbibnamehash}{ac161b79465fcbc2c754b936c9f27d1f}
+      \strng{authornamehash}{ac161b79465fcbc2c754b936c9f27d1f}
+      \strng{authorfullhash}{7157160f1cf7a6524f924104bbd2b4e9}
+      \strng{authorfullhashraw}{7157160f1cf7a6524f924104bbd2b4e9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background The pelvic floor is a highly important structure for the stability of the pelvis, providing support for the organs that lie within it. Until today, the detailed anatomy of the female perineal centre and the exact course of surrounding muscles remain controversial. We demonstrate a method to non-destructively obtain high-resolution contrast-enhanced x-ray microtomography images from a long-fixed sample and thereby aim to contribute to the detailed anatomical knowledge about the female pelvic floor. Materials and methods A human foetal pelvis of 20--21 weeks gestational age, formalin-fixed for 4 years, was immersed in Lugol solution and tomographically scanned periodically to document the staining process. The influence of the former fixation time was addressed by comparison with a short time fixed mouse pelvis. High-resolution imaging was performed using \textmu CT, with detailed anatomical analysis supported by segmentation and 3D reconstruction. Results Lugol staining of long-fixed tissue was effective and showed no disadvantages compared to short-fixed tissue. Lugol staining and high-resolution \textmu CT images provided a nicely stained image-stack with clearly identifiable tissue types. The anatomy of the foetal pelvis and its structures were resolved in detail. Interconnections between the external anal sphincter, the bulbospongiosus muscle and the superficial transverse perineal muscle could be shown within the perineal centre. There was no evidence for a skeletal muscle that corresponded to the formerly described deep transverse perineal muscle, instead there was cloudy-looking tissue, most likely smooth muscle fibres dispersed in connective tissue in a 3-D arrangement. Conclusions X-ray microtomography of Lugol-stained tissue is an excellent method to gain anatomical details in high resolution, in a non-invasive and non-destructive way, independently of the fixation time. Using this method, the topographical relationships of the pelvic floor muscles could be illustrated, showing their linkage within the perineal centre.}
+      \field{issn}{1932-6203}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{title}{Contrast-Enhanced {{Micro-CT}} Imaging of a Foetal Female Pelvic Floor Reveals Anatomical Details}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0314261
+      \endverb
+      \verb{file}
+      \verb /Users/habi/Zotero/storage/PVAIRDJ9/Aaldijk et al. - 2025 - Contrast-enhanced Micro-CT imaging of a foetal female pelvic floor reveals anatomical details.pdf
+      \endverb
+      \keyw{Connective tissue,Muscle differentiation,Muscle fibers,Muscle tissue,Pelvis,Rectum,Skeletal muscles,Smooth muscles}
     \endentry
     \entry{Haberthuer2021}{article}{}{}
       \name{author}{3}{}{%
@@ -920,7 +976,7 @@
       \verb gjpw2d
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/5B9UNST7/Haberthür et al. - 2021 - Automated segmentation and description of the inte.pdf;/home/habi/Zotero/storage/7IICXMLR/s12903-021-01551-x.html
+      \verb /Users/habi/Zotero/storage/5B9UNST7/Haberthür et al. - 2021 - Automated segmentation and description of the inte.pdf;/Users/habi/Zotero/storage/7IICXMLR/s12903-021-01551-x.html
       \endverb
       \keyw{Automated segmentation,Biomedical image analysis,Internal tooth morphology,Micro-CT,Physiological foramen geometry,Root canal configuration}
     \endentry
@@ -987,7 +1043,7 @@
       \verb gsst8t
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/KA9CXT3X/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
+      \verb /Users/habi/Zotero/storage/KA9CXT3X/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
       \endverb
       \keyw{Data acquisition,Data visualization,Fish biology,Image processing,Jaw,Otolith,Skull,X-ray radiography}
     \endentry
@@ -1081,7 +1137,7 @@
       \verb 10.1007/s10278-013-9622-7
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/ANDPECX9/full-text.pdf
+      \verb /Users/habi/Zotero/storage/ANDPECX9/full-text.pdf
       \endverb
     \endentry
     \entry{Cormack1963}{article}{}{}
@@ -1120,7 +1176,7 @@
       \verb 10.1063/1.1729798
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
+      \verb /Users/habi/Zotero/storage/WZ3Q64RT/Cormack - 1963 - Representation of a Function by Its Line Integrals, with Some Radiological Applications.pdf
       \endverb
     \endentry
     \entry{Hounsfield1976a}{article}{}{}
@@ -1179,13 +1235,13 @@
       \verb 10.1259/bjr/29444122
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/QCVD4992/Beckmann - 2006 - CT scanning the early days.pdf
+      \verb /Users/habi/Zotero/storage/QCVD4992/Beckmann - 2006 - CT scanning the early days.pdf
       \endverb
       \keyw{20th Century,Animals,Computer-Assisted,Equipment Design,History,Humans,Image Interpretation,Swine,Tomography,Tomography Scanners,X-Ray Computed,X-Ray Computed: history,X-Ray Computed: instrumentation}
     \endentry
     \entry{US3940625A}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{howpublished}{https://patents.google.com/patent/US3940625A/}
       \field{title}{{{US3940625A}} - {{Apparatus}} for Examining Objects by Means of Penetrating Radiation - {{Google Patents}}}
@@ -1194,7 +1250,7 @@
       \field{urlyear}{2024}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /home/habi/Zotero/storage/B2HW3ZWE/US3940625A.html
+      \verb /Users/habi/Zotero/storage/B2HW3ZWE/US3940625A.html
       \endverb
     \endentry
     \entry{Hsieh2003}{book}{}{}
@@ -1259,8 +1315,8 @@
       \strng{authornamehash}{21278b324aca409573e33503968f922f}
       \strng{authorfullhash}{861994b9aefe2311db06444ea842fda4}
       \strng{authorfullhashraw}{861994b9aefe2311db06444ea842fda4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Since Röntgen discovered x-rays at the end of the nineteenth century and established their usefulness for medical diagnostics imaging, many technological advances have allowed for x-rays to be employed in even more powerful ways. This includes utilizing x-rays for tomographic imaging and quantification.}
@@ -1305,8 +1361,8 @@
       \strng{authorfullhash}{f635c34fd0e821789bb7e8d8496b34dc}
       \strng{authorfullhashraw}{f635c34fd0e821789bb7e8d8496b34dc}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A convolution-backprojection formula is deduced for direct reconstruction of a three-dimensional density function from a set of two-dimensional projections. The formula is approximate but has useful properties, including errors that are relatively small in many practical instances and a form that leads to convenient computation. It reduces to the standard fan-beam formula in the plane that is perpendicular to the axis of rotation and contains the point source. The algorithm is applied to a mathematical phantom as an example of its performance.}
@@ -1368,8 +1424,8 @@
       \strng{authorfullhash}{1dfdfebea57e1009df80813781d1c3d4}
       \strng{authorfullhashraw}{1dfdfebea57e1009df80813781d1c3d4}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Calcified Tissue International}
@@ -1392,8 +1448,8 @@
       \strng{authornamehash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authorfullhash}{a01d42e39c3e0003eeafdabee986f41f}
       \strng{authorfullhashraw}{a01d42e39c3e0003eeafdabee986f41f}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{http://xrayphysics.com/attenuation.html}
@@ -1417,8 +1473,8 @@
       \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Beer--{{Lambert}} Law --- {{Wikipedia}}, {{The Free Encyclopedia}}}
@@ -1518,8 +1574,8 @@
       \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
       \strng{authorfullhash}{15eb877bfd5e9b93ab284d7309220074}
       \strng{authorfullhashraw}{15eb877bfd5e9b93ab284d7309220074}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Fiji is a distribution of the popular open-source software ImageJ focused on biological-image analysis. Fiji uses modern software engineering practices to combine powerful software libraries with a broad range of scripting languages to enable rapid prototyping of image-processing algorithms. Fiji facilitates the transformation of new algorithms into ImageJ plugins that can be shared with end users through an integrated update system. We propose Fiji as a platform for productive collaboration between computer science and biology research communities.}
@@ -1536,7 +1592,7 @@
       \verb 10.1038/nmeth.2019
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/B2RHUUNG/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf
+      \verb /Users/habi/Zotero/storage/B2RHUUNG/Schindelin et al. - 2012 - Fiji an open-source platform for biological-image analysis.pdf
       \endverb
       \keyw{Algorithms,Animals,Brain,Brain: ultrastructure,Computational Biology,Computational Biology: methods,Computer-Assisted,Computer-Assisted: methods,Drosophila melanogaster,Drosophila melanogaster: ultrastructure,Image Enhancement,Image Enhancement: methods,Image Processing,Imaging,Information Dissemination,Software,Software Design,Three-Dimensional,Three-Dimensional: methods}
     \endentry
@@ -1624,8 +1680,8 @@
       \strng{authornamehash}{48035973e2ebb91d3445f30ca56d312f}
       \strng{authorfullhash}{1588ee70032b792a3f649bc36fe0a6ca}
       \strng{authorfullhashraw}{1588ee70032b792a3f649bc36fe0a6ca}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Jupyter {{Notebooks}} -- a Publishing Format for Reproducible Computational Workflows}
@@ -1634,7 +1690,7 @@
       \verb 10.3233/978-1-61499-649-1-87
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/MA5JNYF8/Kluyver et al. - 2016 - Jupyter Notebooks -- a publishing format for reproducible computational workflows.pdf
+      \verb /Users/habi/Zotero/storage/MA5JNYF8/Kluyver et al. - 2016 - Jupyter Notebooks -- a publishing format for reproducible computational workflows.pdf
       \endverb
     \endentry
     \entry{Wolf2021}{article}{}{}
@@ -1688,11 +1744,11 @@
       \strng{authornamehash}{5af6331b2ccb7cdf421ff390877fcdfb}
       \strng{authorfullhash}{795d028f9f4534239332966341d28877}
       \strng{authorfullhashraw}{795d028f9f4534239332966341d28877}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The aim of this study was to investigate the root canal system morphology by means of a root canal configuration (RCC) classification described with a four-digit system, the physiological foramen geometry and accessory canal frequency and morphology, of 101 mandibular canines (MaCa) of a Swiss-German population by means of micro-computed tomography. Micro-CT examination of the MaCa was performed and the obtained images analyzed with a 3D imaging software. In single-rooted MaCas, the most frequently observed RCCs were 1-1-1/1 (74.5\%) and 1-1-1/2 (14.3\%). Seven other RCCs were less frequently observed with a frequency from 4.1 to 1.0\%. One physiological foramen was observed in 80.6\% of the MaCas, two in 16.3\%, three in 1.0\% and four in 2.0\%. Accessory and connecting canals were apparent only in the middle and apical root thirds. Two-rooted MaCas occurred less frequently (n = 3). When one physiological foramen was present, the mean size of the narrow and wide diameters were 0.28 mm ({\textpm} 0.07) and 0.40 mm ({\textpm} 0.11), while the distance between physiological and anatomical foramen was 0.45 mm ({\textpm} 0.17). MaCas are predominantly single-rooted teeth with a 1-1-1/1 or 1-1-1/2 RCC. Most MaCas had one physiological foramen with an oval shape.}
+      \field{abstract}{The aim of this study was to investigate the root canal system morphology by means of a root canal configuration (RCC) classification described with a four-digit system, the physiological foramen geometry and accessory canal frequency and morphology, of 101 mandibular canines (MaCa) of a Swiss-German population by means of micro-computed tomography. Micro-CT examination of the MaCa was performed and the obtained images analyzed with a 3D imaging software. In single-rooted MaCas, the most frequently observed RCCs were 1-1-1/1 (74.5\%) and 1-1-1/2 (14.3\%). Seven other RCCs were less frequently observed with a frequency from 4.1 to 1.0\%. One physiological foramen was observed in 80.6\% of the MaCas, two in 16.3\%, three in 1.0\% and four in 2.0\%. Accessory and connecting canals were apparent only in the middle and apical root thirds. Two-rooted MaCas occurred less frequently (n = 3). When one physiological foramen was present, the mean size of the narrow and wide diameters were 0.28 mm (\textpm{} 0.07) and 0.40 mm (\textpm{} 0.11), while the distance between physiological and anatomical foramen was 0.45 mm (\textpm{} 0.17). MaCas are predominantly single-rooted teeth with a 1-1-1/1 or 1-1-1/2 RCC. Most MaCas had one physiological foramen with an oval shape.}
       \field{issn}{2045-2322}
       \field{title}{Internal Morphology of 101 Mandibular Canines of a {{Swiss-German}} Population by Means of Micro-{{CT}}: {{An}} Ex Vivo Study}
       \field{year}{2021}
@@ -1700,7 +1756,7 @@
       \verb g7r8
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/AU948UHN/s41598-021-00758-w copy.pdf
+      \verb /Users/habi/Zotero/storage/AU948UHN/s41598-021-00758-w copy.pdf
       \endverb
     \endentry
     \entry{Briseno-Marroquin2015}{article}{}{}
@@ -1742,8 +1798,8 @@
       \strng{authornamehash}{09c4ee1f6a10347b20560e782ab5a3ce}
       \strng{authorfullhash}{cbec28ac1f2fccd6b9b619b97b15669a}
       \strng{authorfullhashraw}{cbec28ac1f2fccd6b9b619b97b15669a}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Introduction The objective of this study was to propose a root canal configuration description method and to investigate the root canal system morphology of the maxillary first molar by means of micro-computed tomographic imaging. Methods The root canal configuration, foramina, and accessory canal frequency of 179 maxillary first molars were investigated by means of micro-computed tomographic imaging and 3-dimensional software imaging. The root canal configuration and main foramina number are described from coronal to apical with a 4-digit system. Results The most frequent root canal configurations were 1-1-1/1 (45.8\%), 2-2-2/2 (25.1\%) and 2-2-1/1 (10.1\%) in mesiobuccal roots and 1-1-1/1 in distobuccal (97.2\%) and palatal (98.9\%) roots. The first mesiobuccal (MB1) root canal had 1 accessory canal in 26.3\% of the teeth, the distobuccal root canal had 12.3\%, and the palatal root canal had 9.5\%; in the second mesiobuccal root canal, there was rarely 1 accessory canal. There was 1 accessory canal in 26.3\%, 12.3\%, and 9.5\% in the MB1, distobuccal, and palatal root canals, respectively. The MB1, distobuccal, and palatal root canals had 1 main foramen. The MB2 had 1 main foramen in 39.0\% of the teeth and no main foramen in 61.0\%. Conclusions The root canal configuration of maxillary first molars is quite diversified. Contrary to our expectations in this research, the mesiobuccal root has predominantly 1 root canal entrance and only 1 main foramen. Anatomic variations including connecting and accessory canals occur in any third of root.}
@@ -1759,7 +1815,7 @@
       \verb 10.1016/j.joen.2015.09.007
       \endverb
       \verb{file}
-      \verb /home/habi/Zotero/storage/5FRE65F7/full-text.pdf
+      \verb /Users/habi/Zotero/storage/5FRE65F7/full-text.pdf
       \endverb
       \keyw{Foramina,maxillary first molar,micro-computed tomography,morphology,root canal configuration}
     \endentry
@@ -1779,8 +1835,8 @@
       \strng{authornamehash}{31208204cf1e706905070d03cc964a87}
       \strng{authorfullhash}{31208204cf1e706905070d03cc964a87}
       \strng{authorfullhashraw}{31208204cf1e706905070d03cc964a87}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
