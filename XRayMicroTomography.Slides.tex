@@ -42,11 +42,12 @@
       \step[fieldset=volume, null]%
       \step[fieldset=number, null]%
       \step[fieldset=pages, null]%
-      %\step[fieldset=year, null]% Do *not* remove year, otherwise the \citeyear on the history slide does not work :)
+      %\step[fieldset=year, null]%
     }%
   }%
 }%
-\addbibresource{../../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
+\renewbibmacro{in:}{}
+\addbibresource{../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
 \usetikzlibrary{shadows,spy}
@@ -388,8 +389,8 @@ per-symbol=/]{siunitx}
     \begin{column}{0.49\linewidth}
       \begin{itemize}
         \item 1895: Wilhelm Conrad Röntgen discovers X-rays
-        \item<2-|handout:2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
-        \item<2-|handout:2-> \citeyear{Hounsfield1976a}:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
+        \item<2-|handout:2-> 1963:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
+        \item<2-|handout:2-> 1976:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
         \item<3-|handout:3-> Nobel Prize in 1979, jointly for Allan Cormack and Godfrey Hounsfield
         \item<4-|handout:4-> CT scanner generations
           \begin{itemize}
