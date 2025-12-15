@@ -927,275 +927,122 @@ Laws of Physics for Microscopists}{Michael Jaeger}{5}%
 \end{frame}
 \renewcommand{\imageheight}{0.72\paperheight}%
 
-\section{Example: A study about teeth}
-\subsubsection{Overview}
+\section{Example: Looking at fish (teeth)}
 \begin{frame}
-  \frametitle{Internal morphology of human teeth}%
-  Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
-  \begin{itemize}%
-    \item<1-2> Pretty images are nice to have, but science is built on quantitative data% force to show this on frame 1 AND 2, so that we can first show the hovering tooth
-    \item Segmentation of teeth and root canal%
-    \item (Unbiased) Characterization%
-    \item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
-    \item Two publications:%
-      \begin{itemize}%
-        \item Methodolocial~\cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}%
-        \item Analytical~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}%
-      \end{itemize}%
-  \end{itemize}%
-  \only<1|handout:1>{%
-    \begin{tikzpicture}[remember picture,overlay]%
-      \node at (current page.center) [shift={(0,-2.9mm)}]{%
-        \mode<beamer>{\animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
-        \mode<handout>{\includegraphics[width=\paperwidth]{./movies/tooth045/full/image0237}}%
-      };%
-    \end{tikzpicture}%
-  }%
-\end{frame}
-
-\subsubsection{Materials \& Methods}
-\begin{frame}
-  \frametitle{How?}
-  \begin{columns}
-    \begin{column}{0.49\linewidth}
-      \begin{itemize}
-        \item<1-> 104 extracted human permanent mandibular canines
-        \item<2-> \uct{} imaging
-        \item<5-> Root canal configuration, according to~\citeauthor{Briseno-Marroquin2015}~\cite{Briseno-Marroquin2015}
-        \item<6-> \emph{Reproducible} analysis~\cite{Haberthuer2020a}\onslide<7>{, \eg{} you can \href{https://mybinder.org/v2/gh/habi/zmk-tooth-ohort/master?filepath=ToothAnalysis.ipynb}{click a button to double-check} or \href{https://nbviewer.jupyter.org/github/habi/zmk-tooth-cohort/blob/master/ToothAnalysis.ipynb}{recalculate the results yourself!}}
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.49\linewidth}
-      \only<1|handout:1>{%
-        \centering%
-        \pgfmathsetlength{\imagescale}{\imagewidth/2716}%
-        \def\x{1678}% scalebar-x starting at golden ratio of image width of 2716px = 1678
-        \def\y{2444}% scalebar-y at 90% of image height of 2716px = 2444
-        \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-          \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/bucketofteeth}};
-          % 2132.087px = 140.0mm -> 100px = 6566.337um -> 7.615px = 500um, 1.523px = 100um
-          %\draw[|-|,blue,thick] (299,1340) -- (2430,1406) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{140.0}{\milli\meter} (2132px) TEMPORARY!};
-          \draw[|-|,white,shadowed] (\x,\y) -- (\x+761.5,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
-        \end{tikzpicture}%
-      }%
-      \only<2|handout:2>{%
-        \centering%
-        \includegraphics[width=\imagewidth]{./images/1272}%
-        \source{bruker.com/skyscan1272}{}%
-      }%
-      \only<3|handout:3>{%
-        \lstinputlisting[linerange={2-4,15-15,17-19,28-30,36-37,40-40,44-44,53-54}]{./logfiles/Tooth045.log}%
-      }%
-      \only<4|handout:4>{%
-        \emph{Sample changer} on the SkyScan 1272\newline
-        In total:
-        \begin{itemize}
-          \item 13 days of \emph{continuous} \uct{} scanning
-          \item \qty{819}{\giga\byte} of raw data\newline\num{230648} TIFF projections
-          \item \qty{326}{\giga\byte} data as input for analysis\newline\num{282062} PNG reconstructions
-        \end{itemize}
-      }%
-      \only<5|handout:5>{%
-        \centering%
-        \includegraphics[width=\imagewidth]{./images/zmk/briseno}%
-        \sourcecite{Briseno-Marroquin2015}{Fig.~2}%
-      }%
-      \only<6|handout:6>{%
-        \centering%
-        \mode<beamer>{%
-          \animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
-          \source{gph.is/2nqkple}{}%
-        }%
-        \mode<handout>{%
-          \includegraphics[width=\linewidth]{./movies/coder/coder-65}%
-          \source{gph.is/2nqkple}{}%
-        }%
-      }%
-      \only<7|handout:7>{%
-        \centering%
-        \href{https://mybinder.org/v2/gh/habi/zmk-tooth-cohort/master?filepath=ToothAnalysis.ipynb}{\includegraphics[height=\imageheight]{./images/zmk/binder}}%
-      }%
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\subsubsection{Results}
-\begin{frame}
-  \frametitle{\uct{} imaging}
-  \centering%
-  \includegraphics<1|handout:0>[height=\imageheight]{./images/zmk/ScanOverviews.104.png}%
-  \includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
+	\frametitle{Cichlids study overview}
+	\begin{columns}
+		\begin{column}{0.5\linewidth}
+			Collaboration with the \href{https://www.aqua.iee.unibe.ch/}{Institute of Ecology and Evolution}
+			\begin{itemize}
+				\item 133 Cichlids from Lake Victoria, East Africa
+				\begin{itemize}
+					\item Functional anatomy of the skulls and jaws
+					\item \qtyrange{6}{18}{\centi\meter} in size
+				\end{itemize}
+				\item 375 scans in total
+				\begin{itemize}
+					\item Voxelsizes from \qtyrange{3.5}{50}{\micro\meter}
+					\item 46 days of scanning time
+					\item \qty{9.8}{\tera\byte} of raw (projection) data
+					\item \qty{1.5}{\tera\byte}/+\num{1000000} reconstructions
+					\item Reproducible and automated dataset wrangling, checking and image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\linewidth}
+			\centering%
+			\only<1|handout:1>{%
+				\includegraphics[width=\imagewidth]{./images/cichlids/journal.pone.0291003.g001.png}%
+				\sourcelink{https://doi.org/10.1371/journal.pone.0291003.g001}{DOI:gsst8t}{Fig.~1}%
+				}%
+			\only<2|handout:0>{%
+				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
+        \source{gph.is/2nqkple}{}%
+				}%
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Dataset cropping}
-  \begin{columns}
-    \begin{column}{0.4\linewidth}
-      \begin{itemize}
-        \item Full datasets: \qty{326}{\giga\byte}%
-        \item<2> Cropped datasets: \qty{115}{\giga\byte}%
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.6\linewidth}
-      \centering%
-      \includegraphics<1|handout:1>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Original.png}%
-      \includegraphics<2|handout:2>[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Cropper.Cropped.png}%
-    \end{column}
-  \end{columns}
+	\renewcommand{\imagewidth}{0.9\linewidth}%
+	\frametitle{Visualization}%
+	\centering%
+	% Generate animations in ImageJ with 3Dscript (files are in repository)
+	% Save out as .tif slices
+	% mogrify -format png -transparent "rgb(255,255,255)" -fuzz 4% *.tif
+	\only<1|handout:1>{%
+		\pgfmathsetlength{\imagescale}{\imagewidth/1280}%
+		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
+		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0000.png}};%
+			% 196.739px = 6.045mm -> 100px = 3072.594um -> 16.273px = 500um, 3.255px = 100um
+			\draw[|-|,white,shadowed] (652,353) -- (849,369) node [sloped,midway,above] {\shadowtext{\(\approx\)\SI{6}{\milli\meter}}};%
+		\end{tikzpicture}%
+	}%
+	\note[item]<1>{Fish 104016, Scan head\_rec; scanned on 2022-01-27T13:32:59 on the SkyScan2214, with a voxel size of \qty{13.0}{\micro\meter}.}%
+	\note[item]<1>{The eye has a diameter of approximately \qty{6}{\milli\meter}.}%
+	\note[item]<1>{DOI:10.1002/ece3.9669: The detritivorous Enterochromis cinctus Greenwood \& Gee, 1969 has a red dorsum and a bright yellow flank too but it has dark vertical bars and lacks any mid-lateral band.%
+		Before the near extinctions, it used to occur at depths between \qtyrange{13}{60}{\meter} (Greenwood \& Gee, 1969).}%
+	\only<2|handout:2>{%
+		% Show PJ
+		\mode<beamer>{\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.0}{000}{480}}%
+		\mode<handout>{\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0480}}%
+	}%
+	\only<3|handout:0>{%
+		% Show full head again
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0481}{0960}%
+	}%
+	\only<4|handout:0>{%
+		% Zoom to otolith
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0961}{1440}%
+	}%
+	\only<5|handout:0>{%
+		%Move to PJ
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{1441}{1920}%
+	}%
+	\only<6|handout:0>{%
+		%Animate from head-dataset to segmented pj
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head2pj/morphed.0}{000}{240}%
+		}%
+	\only<7|handout:3>{%
+		\pgfmathsetlength{\imagescale}{0.9\linewidth/1280}%
+		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
+		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.pj/104016.pj.animation.0000.png}};%
+			% 846.456px = 4.9mm -> 100px = 578.885um -> 86.373px = 500um, 17.275px = 100um
+			\draw[|-|,white,shadowed] (209,23) -- (1055,26) node [sloped,midway,below] {\shadowtext{\(\approx\)\SI{5}{\milli\meter}}};%
+		\end{tikzpicture}%
+	}%
+  \note[item]<6|handout:6>{Fish 104016, Scan pharynx\_rec; scanned on 2021-02-04T13:30:11 on the SkyScan1272, with a voxel size of \qty{5.0}{\micro\meter}.}%
+	\note[item]<6|handout:6>{The distance between the two ends at the top is approximately \qty{5}{\milli\meter}.}%
+		\only<8|handout:0>{%
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.0}{000}{700}%
+	}%
+	\only<9|handout:0>{%
+		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.}{0701}{1440}%
+	}%
+  \note[item]<9|handout:9>{A human hair typically has a thickness ranging from \qtyrange{17}{181}{\micro\meter}, depending on various factors like the individual's hair type, age, and ethnicity. On average, most human hair strands fall between \qtyrange{50}{100}{\micro\meter} in diameter.}%
 \end{frame}
 
 \begin{frame}
-  \frametitle{Tooth morphology}
-  \centering%
-  \only<1|handout:1>{%
-    \begin{tikzpicture}[remember picture,overlay]%
-      \node at (current page.center) [shift={(0,-2.9mm)}]{%
-        \mode<beamer>{%
-          \animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}%
-        }%
-        \mode<handout>{%
-          \includegraphics[width=\paperwidth]{./movies/tooth045/full/image0000}%
-        }%
-      };%
-    \end{tikzpicture}%
-  }%
-  \only<2|handout:2>{%
-    \includegraphics[height=\imageheight]{./images/zmk/briseno}%
-    \sourcecite{Briseno-Marroquin2015}{Fig.~2}%
-  }%
-  \only<3|handout:3>{%
-    \begin{tikzpicture}[remember picture,overlay]%
-      \node at (current page.center) [shift={(0,-2.9mm)}]{%
-        \mode<beamer>{%
-          \animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
-        }%
-        \mode<handout>{%
-          \includegraphics[width=\paperwidth]{./movies/tooth045/full-slices/image0000}%
-        }%
-      };%
-    \end{tikzpicture}%
-  }%
+	\frametitle{Automated extraction of object of interest}
+	\centering%
+	\includegraphics<1|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_01_Overview}%
+	\includegraphics<2|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
+	\includegraphics<3|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
+	\includegraphics<4|handout:1>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
+	\includegraphics<5|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_05_Peaks}%
+	\includegraphics<6|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
+	\includegraphics<7|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
+	\includegraphics<8|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
+	\includegraphics<9|handout:2>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
+	\only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
 \begin{frame}
-  \frametitle{Detection of enamel-dentin border}
-  \centering
-  \only<1|handout:1>{%
-    \includegraphics[height=\imageheight]{./images/zmk/tooth045/Tooth045.ExtractedSlices.png}%
-  }%
-  \only<2|handout:2>{%
-    \includegraphics[width=\imagewidth]{./images/zmk/tooth045/Tooth045.Briseno.png}%
-  }%
-\end{frame}
-
-\begin{frame}
-  \frametitle{Classification of root canal configurations}%
-  \centering%
-  \small{% Smaller text for fitting the table onto the slide
-    \only<1>{%
-      \begin{tabular}{llcSS}%
-        \toprule%
-        \multicolumn{2}{c}{Roots} & RCC & \# & \% \\%
-        \midrule%
-        \multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}}    & 1-1-1/1 & 73 & 74.5\\%
-        \multicolumn{2}{l}{} & 1-1-1/2 & 14 & 14.3\\%
-        \multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
-        \multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
-        \multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
-        \midrule%
-        \multirow{4}{*}{Double (N=3)}  & \multirow{2}{*}{Buccal}  & 1-1-1/1 & 2 & 66.6\\%
-        & & 1-2-1/1 & 1 & 33.3\\%
-        & \multirow{2}{*}{Lingual}  & 1-1-1/1 & 2 & 66.6\\%
-        & & 1-1-1/2 & 1 & 33.3\\%
-        \bottomrule%
-      \end{tabular}%
-    }%
-    \only<2|handout:0>{%
-      \begin{tabular}{llcSS}%
-        \toprule%
-        \multicolumn{2}{c}{Roots} & RCC & \# & \% \\%
-        \midrule%
-        \multicolumn{2}{c}{\multirow{9}{*}{Single (N=98)}} & 1-1-1/1 & 73 & \cellcolor{ubRed!61.8}74.5\\%
-        \multicolumn{2}{l}{} & 1-1-1/2 & 14 & \cellcolor{ubRed!61.8}14.3\\%
-        \multicolumn{2}{l}{} & 1-1-1/3 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 1-1-1/4 & 2 & 2.1\\%
-        \multicolumn{2}{l}{} & 1-1-2/1 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 1-2-1/1 & 4 & 4.1\\%
-        \multicolumn{2}{l}{} & 1-2-1/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 1-2-2/2 & 1 & 1.0\\%
-        \multicolumn{2}{l}{} & 2-3-1/1 & 1 & 1.0\\%
-        \midrule%
-        \multirow{4}{*}{Double (N=3)}  & \multirow{2}{*}{Buccal}    & 1-1-1/1 & 2 & 66.6\\%
-        & & 1-2-1/1 & 1 & 33.3\\%
-        & \multirow{2}{*}{Lingual} & 1-1-1/1 & 2 & 66.6\\%
-        & & 1-1-1/2 & 1 & 33.3\\%
-        \bottomrule%
-      \end{tabular}%
-    }%
-  }%
-\end{frame}%
-
-\begin{frame}
-  \frametitle{Extraction of root canal space}
-  \begin{tikzpicture}[remember picture,overlay]%
-    \node at (current page.center) [shift={(0,-2.9mm)}]{%
-      \only<1|handout:0>{%
-        \mode<beamer>{%
-          \animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices/image0}{000}{473}%
-        }%
-        \mode<handout>{%
-          \includegraphics[width=\paperwidth]{./movies/tooth045/transparent-slices/image0000}%
-        }%
-      }%
-      \only<2|handout:1>{%
-        \mode<beamer>{%
-          \animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices-rcs/image0}{000}{457}%
-        }%
-        \mode<handout>{%
-          \includegraphics[width=\paperwidth]{./movies/tooth045/transparent-slices-rcs/image0000}%
-        }%
-      }%
-      \only<3|handout:0>{%
-        \mode<beamer>{%
-          \animategraphics[autoplay,loop,width=\paperwidth,every=\everyframe]{24}{./movies/tooth045/rcs/image0}{000}{413}%
-        }%
-        \mode<handout>{%
-          \includegraphics[width=\paperwidth]{./movies/tooth045/rcs/image0000}%
-        }%
-      }%
-    };%
-  \end{tikzpicture}%
-\end{frame}
-
-\begin{frame}
-  \renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
-  \frametitle{Results of root canal space extraction}%
-  \centering%
-  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0452}\hfill%
-  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0278}\hfill%
-  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0353}\hfill%
-  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0419}\hfill%
-  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0642}\hfill%
-  \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0752}\hfill%
-  % Measuring the tooth length on Tooth093_rec_spr.bmp gives us 2092 pixels. We scanned at 10um.
-  % "python ~/P/Dev/latex/draw_a_scalebar.py -i Tooth0931.png -l 2092 -p 10" gives us a scale bar
-  \pgfmathsetlength{\imagescale}{\imagewidth/720}%
-  \def\x{72}% scalebar-x starting at golden ratio of image width of 720px = 445
-  \def\y{1807}% scalebar-y at 90% of image height of 2008px = 1807
-  \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-    \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0931}};
-    % 1760.469px = 20.92mm -> 100px = 1188.319um -> 42.076px = 500um, 8.415px = 100um
-    %\draw[|-|,blue,thick] (300,105) -- (327,1865) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{20.92}{\milli\meter} (1760px) TEMPORARY!};
-    \draw[|-|,white,shadowed] (\x,\y) -- (\x+420.76,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-  \end{tikzpicture}%
-\end{frame}
-
-\begin{frame}
-  \frametitle{Conclusion ZMK}
+  \frametitle{Conclusion}
   \begin{itemize}
     \item Efficient use of time, \eg{} more teeth does not mean more (human) work
     \item Reproducible analysis with \emph{free and open-source} software, usable by \emph{anyone}
