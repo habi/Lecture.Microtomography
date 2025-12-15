@@ -190,8 +190,8 @@ per-symbol=/]{siunitx}
         \draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
         % marked slide line - draw if marker frame number is known and > 0
         \ifnum\myframenumber>0
-        \pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
-        \draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
+        \pgfmathsetmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)}
+        \draw[ubRed,fill=white] (\progressx*\paperwidth,\halfheight) circle (\halfheight);
         \fi
       \fi
       \end{tikzpicture}
