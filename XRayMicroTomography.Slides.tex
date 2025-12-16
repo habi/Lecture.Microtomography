@@ -17,7 +17,7 @@
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\standardimagewidth}{\linewidth}% Save us a standard image width, so we can always \renewcommand{\imagewidth} to it
 \newcommand{\imageheight}{0.72\paperheight}% set global image height
-\newcommand{\standardimageheight}{0.72\paperheight}% Save us standard image height, so we can always \renewommand{\imageheight} to it
+\newcommand{\standardimageheight}{0.72\paperheight}% Save us standard image height, so we can always \renewcommand{\imageheight} to it
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
@@ -212,10 +212,9 @@ per-symbol=/]{siunitx}
 }%
 
 \begin{document}
-
 \begin{frame}
   \titlepage%
-  \mode<beamer>{%
+  \mode<beamer>{% QR code to handout PDF on title slide
     \begin{tikzpicture}[remember picture,overlay]
       \node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
         Handout PDF: git.io/JeQxO \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}%
@@ -304,7 +303,7 @@ per-symbol=/]{siunitx}
     % 61.8% vs. 38.2%
     \begin{column}{0.62\textwidth}%
       \begin{itemize}%
-        \item<1-|handout:1-> Allows for imaging dense and non‐transparent samples
+        \item<1-|handout:1-> Allows for imaging dense and non-transparent samples
         \item<1-|handout:1-> Non-destructive imaging\uncover<2-|handout:2>{, thus compatible with routine sample preparation}
         \item<1-|handout:1-> Results in three-dimensional images \uncover<2-|handout:2>{with \unit{\micro\meter} resolution}
         \only<1|handout:1>{\item Covers a large range of sample sizes}
