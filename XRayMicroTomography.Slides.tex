@@ -649,52 +649,6 @@ per-symbol=/]{siunitx}
 \end{frame}
 
 \begin{frame}
-  \frametitle{What is happening?}
-  \begin{columns}
-    \begin{column}{0.5\linewidth}%
-      No matter what kind of machine, the basic principle is always
-      \begin{itemize}
-        \item an x-ray source
-        \item a sample
-        \item a detector
-      \end{itemize}
-    \end{column}%
-    \begin{column}{0.5\linewidth}%
-      \centering%
-      \includegraphics[width=\imagewidth]{./images/3D_Computed_Tomography}%
-      \source{w.wiki/7g3}{\ccbysa}%
-    \end{column}%
-  \end{columns}%
-\end{frame}
-
-\begin{frame}
-  \frametitle{Machinery}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-    \centering
-    \input{animations/classicCT}
-    \pause
-    \end{column}
-    \begin{column}{0.5\textwidth}
-    \centering
-      % "List" the LR, normal and HR animations in a weird order here, to display them logically side-by-side in the handout
-      \only<3|handout:1>{\input{animations/microCT_lr}}%
-      \only<1-2|handout:1>{\input{animations/microCT}}%
-      \only<4|handout:1>{\input{animations/microCT_hr}}%
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Magnification}
-  \centering
-  % Download Michaels slides from https://ilias.unibe.ch/go/sess/3400754
-  % pdfseparate MiC\ physical\ basics.pdf MiC\ physical\ basics-%03d.pdf
-  \citeslide{./images/MiC physical basics-1-005}{https://ilias.unibe.ch/go/sess/3400754}{Magnification and Resolution –
-Laws of Physics for Microscopists}{Michael Jaeger}{5}%
-\end{frame}
-
-\begin{frame}
   \frametitle{Examples}
   \centering%
   \only<1|handout:1>{%
@@ -773,6 +727,112 @@ Laws of Physics for Microscopists}{Michael Jaeger}{5}%
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}% Reset imagewidth to standard
 
+\begin{frame}
+  \frametitle{What is happening?}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}%
+      No matter what kind of machine, the basic principle is always
+      \begin{itemize}
+        \item an x-ray source
+        \item a sample
+        \item a detector
+      \end{itemize}
+    \end{column}%
+    \begin{column}{0.5\linewidth}%
+      \centering%
+      \includegraphics[width=\imagewidth]{./images/3D_Computed_Tomography}%
+      \source{w.wiki/7g3}{\ccbysa}%
+    \end{column}%
+  \end{columns}%
+\end{frame}
+
+\begin{frame}
+  \frametitle{Machinery}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+    \centering
+    \input{animations/classicCT}
+    \pause
+    \end{column}
+    \begin{column}{0.5\textwidth}
+    \centering
+      % "List" the LR, normal and HR animations in a weird order here, to display them logically side-by-side in the handout
+      \only<3|handout:1>{\input{animations/microCT_lr}}%
+      \only<1-2|handout:1>{\input{animations/microCT}}%
+      \only<4|handout:1>{\input{animations/microCT_hr}}%
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Magnification}
+  \centering
+  % Download Michaels slides from https://ilias.unibe.ch/go/sess/3400754
+  % pdfseparate MiC\ physical\ basics.pdf MiC\ physical\ basics-%03d.pdf
+  \citeslide{./images/MiC physical basics-1-005}{https://ilias.unibe.ch/go/sess/3400754}{Magnification and Resolution –
+Laws of Physics for Microscopists}{Michael Jaeger}{5}%
+\end{frame}
+
+\section{A scan, from \emph{getting started} to \emph{nice image}}
+\begin{frame}
+  \frametitle{Preparation}
+  \begin{itemize}
+    \item Study design
+    \item Sample preparation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Acquisition}
+  \centering%
+  % Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
+  \mode<beamer>{\animategraphics[autoplay,loop,height=\imageheight,every=\everyframe]{24}{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_}{000}{313}}%
+  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_000}}%
+  % Movie downloaded from https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs, sligthly cropped in ImageJ, saved out and PNG images and piped through oxipng
+  \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{6}{./movies/scan/acquisition/TOMO_gif_CT_signed00}{00}{91}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/acquisition/TOMO_gif_CT_signed0020}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+  \framebreak
+  \begin{itemize}
+    \item A (micro-focus) x-ray source illuminates the object
+    \item The x-rays penetrate the sample and are attenuated
+    \item A scintillator converts the x-rays to visible light
+    \item A (planar) x-ray detector collects (magnified) projection images.
+    \item The projections are recorded on disk
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Reconstructions}
+  \centering%
+  % Movie downloaded from https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs, sligthly cropped in ImageJ, saved out and PNG images and piped through oxipng
+  \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{3}{./movies/scan/sinogram/TOMO_FBP_gif_CT_signed00}{00}{61}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/sinogram/TOMO_FBP_gif_CT_signed0055}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+  \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{277}}%
+  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_100}}%
+  \begin{itemize}
+    \item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
+    \item Radon Transformation
+    \item Filtered back projection
+    \item Cone beam reconstruction~\cite{Feldkamp1984}
+    \item Corrections (beam hardening, etc.)
+    \item Writing to stack
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Visualization}
+  \begin{tikzpicture}[remember picture,overlay]%
+  \node at (current page.center){%
+    \mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
+    \mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
+    };%
+  \end{tikzpicture}%
+  \pagebreak
+  \begin{itemize}
+    \item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
+  \end{itemize}
+\end{frame}
+
 \subsection{Interaction of x-rays with matter}
 \begin{frame}
   \frametitle{X-ray interaction}
@@ -840,66 +900,6 @@ Laws of Physics for Microscopists}{Michael Jaeger}{5}%
   \includegraphics<2|handout:2>[height=\dimexpr\imageheight/2\relax]{./images/contrast/Mouse01.238.MiddleSlices.Lineprofile}%
   \includegraphics<3|handout:0>[height=\dimexpr\imageheight/2\relax]{./images/contrast/Mouse01.000.MIPs}\vfill%
   \includegraphics<3|handout:0>[height=\dimexpr\imageheight/2\relax]{./images/contrast/Mouse01.238.MIPs}%
-\end{frame}
-
-\section{A scan, from \emph{getting started} to \emph{nice image}}
-\begin{frame}
-  \frametitle{Preparation}
-  \begin{itemize}
-    \item Study design
-    \item Sample preparation
-  \end{itemize}
-\end{frame}
-
-\begin{frame}[allowframebreaks]
-  \frametitle{Acquisition}
-  \centering%
-  % Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
-  \mode<beamer>{\animategraphics[autoplay,loop,height=\imageheight,every=\everyframe]{24}{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_}{000}{313}}%
-  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_000}}%
-  % Movie downloaded from https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs, sligthly cropped in ImageJ, saved out and PNG images and piped through oxipng
-  \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{6}{./movies/scan/acquisition/TOMO_gif_CT_signed00}{00}{91}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
-  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/acquisition/TOMO_gif_CT_signed0020}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
-  \framebreak
-  \begin{itemize}
-    \item A (micro-focus) x-ray source illuminates the object
-    \item The x-rays penetrate the sample and are attenuated
-    \item A scintillator converts the x-rays to visible light
-    \item A (planar) x-ray detector collects (magnified) projection images.
-    \item The projections are recorded on disk
-  \end{itemize}
-\end{frame}
-
-\begin{frame}[allowframebreaks]
-  \frametitle{Reconstructions}
-  \centering%
-  % Movie downloaded from https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs, sligthly cropped in ImageJ, saved out and PNG images and piped through oxipng
-  \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{3}{./movies/scan/sinogram/TOMO_FBP_gif_CT_signed00}{00}{61}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
-  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/sinogram/TOMO_FBP_gif_CT_signed0055}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
-  \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{277}}%
-  \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_100}}%
-  \begin{itemize}
-    \item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
-    \item Radon Transformation
-    \item Filtered back projection
-    \item Cone beam reconstruction~\cite{Feldkamp1984}
-    \item Corrections (beam hardening, etc.)
-    \item Writing to stack
-  \end{itemize}
-\end{frame}
-
-\begin{frame}[allowframebreaks]
-  \frametitle{Visualization}
-  \begin{tikzpicture}[remember picture,overlay]%
-  \node at (current page.center){%
-    \mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
-    \mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
-    };%
-  \end{tikzpicture}%
-  \pagebreak
-  \begin{itemize}
-    \item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
-  \end{itemize}
 \end{frame}
 
 \begin{frame}
