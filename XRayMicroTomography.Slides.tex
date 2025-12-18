@@ -151,58 +151,36 @@ per-symbol=/]{siunitx}
   \end{tcolorbox}%
 }%
 
-% Progress bar setup
-% At the beginning, we've set up custom footer with progress bar based on https://tex.stackexchange.com/a/59749/828
-% This lead to problems with 'dimension too large' errors which we've tried to fix with ChatGPT
-% Then we thought it would be nice to have a marker for the break at the correct position, which we've implemented with some back and forth between ChatGPT and Claude.ai
-% To achieve the desired result, we need to save the slide number (marked with \saveframenumber to the .aux file and read it bac
-\makeatletter
-% Read marker position from aux file
-\newcommand{\myframenumber}{-1}  % Use -1 to indicate "undefined"
-\AtBeginDocument{%
-\InputIfFileExists{\jobname.mkr}{}{}%
+% Progress bar marker
+% After fiddling with ChatGPT and Claude.ai for making a nice progress marker in the top red bar of the template, I asked Google Gemini.
+% It delivered...
+\usepackage{xfp} % For robust math calculations
+% Setup dimensions
+\newlength{\barstart}
+\setlength{\barstart}{15.2mm} % beamerouterthemeubbeamer2023.sty:\setbeamersize{text margin left=15.2mm}
+\newlength{\barend}
+\setlength{\barend}{\paperwidth - 6mm} % beamerouterthemeubbeamer2023.sty: \put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}
+\newlength{\barmaxwidth}
+\setlength{\barmaxwidth}{\barend - \barstart}
+% Initialize the end slide variable
+% This *needs* to be written to the .aux file after calling \appendix, see the three lines there
+\providecommand{\appendixframeno}{1}
+% The actual progress bar command
+\newcommand{\myprogressbar}{%
+  \ifnum\insertframenumber>2
+    \begin{tikzpicture}[remember picture, overlay]
+      % Calculate Ratio using xfp (Current - 3) / (End - 3)
+      % We want to start the marker at frame three, after UB logo and title frame
+      \edef\ratio{\fpeval{min(max((\insertframenumber - 3) / max(\appendixframeno - 3, 1), 0), 1)}}
+      % Draw a circle as marker in the red top bar
+      \fill[white] (\barstart + \ratio\barmaxwidth, -0.68mm) circle (0.68mm); % 0.68 is 1.36/2
+    \end{tikzpicture}
+  \fi
 }
-% Save marker position to aux file
-\newcommand{\saveframenumber}{%
-\immediate\write\@auxout{\gdef\string\myframenumber{\insertframenumber}}%
-\immediate\openout\@markerout=\jobname.mkr%
-\immediate\write\@markerout{\gdef\string\myframenumber{\insertframenumber}}%
-\immediate\closeout\@markerout%
-% Don't overwrite the current value - let the aux file handle it
-}
-\newwrite\@markerout
-\makeatother
-
-% Do this only in beamer mode :)
+% Set the progress bar as header in presentation mode
 \mode<beamer>{%
-	% Footline template
-	% The UniBe template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
-	\defbeamertemplate{footline}{progress bar}{
-		\leavevmode%
-		\hbox{%
-		\begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
-			\begin{tikzpicture}[overlay,remember picture]
-			\pgfmathsetlengthmacro{\pw}{\paperwidth}        % full width in pt
-			\pgfmathsetlengthmacro{\halfheight}{0.68mm}     % half bar height
-			\ifnum\inserttotalframenumber>0
-				% current slide circle
-				\pgfmathsetlengthmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)*\pw}
-				\draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
-
-				% marked slide line - draw if marker frame number is known and > 0
-				\ifnum\myframenumber>0
-				\pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
-				\draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
-				\fi
-			\fi
-			\end{tikzpicture}
-		\end{beamercolorbox}%
-		}%
-	}
-
-	% Use the new footline template
-	\setbeamertemplate{footline}[progress bar]
-}%
+  \setbeamertemplate{headline}{\myprogressbar}
+}
 
 % Show current section at begin of sections, only in presentation mode
 \mode<beamer>{%
@@ -1075,6 +1053,9 @@ Laws of Physics for Microscopists}{Michael Jaeger}{5}%
 \end{frame}
 
 \appendix
+\makeatletter
+\immediate\write\@auxout{\gdef\string\appendixframeno{\insertframenumber}}
+\makeatother
 
 \begin{frame}[allowframebreaks]
   \frametitle{References}
