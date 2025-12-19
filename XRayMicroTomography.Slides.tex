@@ -135,13 +135,13 @@ per-symbol=/]{siunitx}
   }%
 }%
 \newcommand{\sourceqr}[1]{%
-	% Cite (an image from) a (long) URL with a QR code
-	\raisebox{0.385cm}{%
-		\makebox[0pt][l]{%
-			\qrcode[height=1cm]{#1}%
-			}%
-		}%
-	}%
+  % Cite (an image from) a (long) URL with a QR code
+  \raisebox{0.385cm}{%
+    \makebox[0pt][l]{%
+      \qrcode[height=1cm]{#1}%
+      }%
+    }%
+  }%
 \newcommand{\citeslide}[5]{% slideimage,lecturelink,lecturetitle,author,page
   % Drop a slide of another lecture into our presentation, with attribution
   \begin{tcolorbox}[enhanced,colframe=ubRed,colback=white,drop shadow,hbox,size=tight]{%
@@ -658,10 +658,10 @@ per-symbol=/]{siunitx}
     % 2301.000px = 11.505mm -> 100px = 500.000um -> 100.000px = 500um, 20.000px = 100um
     %\draw[|-|,blue,thick] (0,953) -- (2301,953) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{11.505}{\milli\meter} (2301px) TEMPORARY!};
     \only<2-3|handout:2>{%
-	% 1688.000px = 13.504607680000001mm -> 100px = 800.036um -> 62.497px = 500um, 12.499px = 100um
-	    % \draw[|-|,blue,thick] (0,613) -- (1688,613) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{13.5}{\milli\meter} (1688px) TEMPORARY!};
-	    \draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+62.497+62.497+62.497+62.497+62.497,\y) node [midway,above] {\shadowtext{\SI{2.5}{\milli\meter}}};
-	    %\draw[color=red, anchor=south west] (0,1226) node [fill=white, semitransparent] {Legend} node {Legend};
+      % 1688.000px = 13.504607680000001mm -> 100px = 800.036um -> 62.497px = 500um, 12.499px = 100um
+      % \draw[|-|,blue,thick] (0,613) -- (1688,613) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{13.5}{\milli\meter} (1688px) TEMPORARY!};
+      \draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+62.497+62.497+62.497+62.497+62.497,\y) node [midway,above] {\shadowtext{\SI{2.5}{\milli\meter}}};
+      %\draw[color=red, anchor=south west] (0,1226) node [fill=white, semitransparent] {Legend} node {Legend};
     }%
   \end{tikzpicture}%
   \only<4|handout:3>{%
@@ -909,116 +909,116 @@ Laws of Physics for Microscopists}{Michael Jaeger}{5}%
 
 \section{Example: Looking at fish (teeth)}
 \begin{frame}
-	\frametitle{Cichlids study overview}
-	\begin{columns}
-		\begin{column}{0.5\linewidth}
-			Collaboration with the \href{https://www.aqua.iee.unibe.ch/}{Institute of Ecology and Evolution}
-			\begin{itemize}
-				\item 133 Cichlids from Lake Victoria, East Africa
-				\begin{itemize}
-					\item Functional anatomy of the skulls and jaws
-					\item \qtyrange{6}{18}{\centi\meter} in size
-				\end{itemize}
-				\item 375 scans in total
-				\begin{itemize}
-					\item Voxelsizes from \qtyrange{3.5}{50}{\micro\meter}
-					\item 46 days of scanning time
-					\item \qty{9.8}{\tera\byte} of raw (projection) data
-					\item \qty{1.5}{\tera\byte}/+\num{1000000} reconstructions
-					\item Reproducible and automated dataset wrangling, checking and image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.5\linewidth}
-			\centering%
-			\only<1|handout:1>{%
-				\includegraphics[width=\imagewidth]{./images/cichlids/journal.pone.0291003.g001.png}%
-				\sourcelink{https://doi.org/10.1371/journal.pone.0291003.g001}{DOI:gsst8t}{Fig.~1}%
-				}%
-			\only<2|handout:0>{%
-				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
+  \frametitle{Cichlids study overview}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      Collaboration with the \href{https://www.aqua.iee.unibe.ch/}{Institute of Ecology and Evolution}
+      \begin{itemize}
+        \item 133 Cichlids from Lake Victoria, East Africa
+        \begin{itemize}
+          \item Functional anatomy of the skulls and jaws
+          \item \qtyrange{6}{18}{\centi\meter} in size
+        \end{itemize}
+        \item 375 scans in total
+        \begin{itemize}
+          \item Voxelsizes from \qtyrange{3.5}{50}{\micro\meter}
+          \item 46 days of scanning time
+          \item \qty{9.8}{\tera\byte} of raw (projection) data
+          \item \qty{1.5}{\tera\byte}/+\num{1000000} reconstructions
+          \item Reproducible and automated dataset wrangling, checking and image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \centering%
+      \only<1|handout:1>{%
+        \includegraphics[width=\imagewidth]{./images/cichlids/journal.pone.0291003.g001.png}%
+        \sourcelink{https://doi.org/10.1371/journal.pone.0291003.g001}{DOI:gsst8t}{Fig.~1}%
+        }%
+      \only<2|handout:0>{%
+        \animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./movies/coder/coder-}{0}{133}%
         \source{gph.is/2nqkple}{}%
-				}%
-		\end{column}
-	\end{columns}
+        }%
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
-	\renewcommand{\imagewidth}{0.9\linewidth}%
-	\frametitle{Visualization}%
-	\centering%
-	% Generate animations in ImageJ with 3Dscript (files are in repository)
-	% Save out as .tif slices
-	% mogrify -format png -transparent "rgb(255,255,255)" -fuzz 4% *.tif
-	\only<1|handout:1>{%
-		\pgfmathsetlength{\imagescale}{\imagewidth/1280}%
-		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
-		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0000.png}};%
-			% 196.739px = 6.045mm -> 100px = 3072.594um -> 16.273px = 500um, 3.255px = 100um
-			\draw[|-|,white,shadowed] (652,353) -- (849,369) node [sloped,midway,above] {\shadowtext{\(\approx\)\SI{6}{\milli\meter}}};%
-		\end{tikzpicture}%
-	}%
-	\note[item]<1>{Fish 104016, Scan head\_rec; scanned on 2022-01-27T13:32:59 on the SkyScan2214, with a voxel size of \qty{13.0}{\micro\meter}.}%
-	\note[item]<1>{The eye has a diameter of approximately \qty{6}{\milli\meter}.}%
-	\note[item]<1>{DOI:10.1002/ece3.9669: The detritivorous Enterochromis cinctus Greenwood \& Gee, 1969 has a red dorsum and a bright yellow flank too but it has dark vertical bars and lacks any mid-lateral band.%
-		Before the near extinctions, it used to occur at depths between \qtyrange{13}{60}{\meter} (Greenwood \& Gee, 1969).}%
-	\only<2|handout:2>{%
-		% Show PJ
-		\mode<beamer>{\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.0}{000}{120}}%
-		\mode<handout>{\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0120}}%
-	}%
-	\only<3|handout:0>{%
-		% Show full head again
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0121}{0240}%
-	}%
-	\only<4|handout:0>{%
-		% Zoom to otolith
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0240}{0360}%
-	}%
-	\only<5|handout:0>{%
-		%Move to PJ
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0361}{480}%
-	}%
-	\only<6|handout:0>{%
-		%Animate from head-dataset to segmented pj
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head2pj/morphed.0}{000}{240}%
-		}%
-	\only<7|handout:3>{%
-		\pgfmathsetlength{\imagescale}{0.9\linewidth/1280}%
-		\def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
-		\def\y{648}% scalebar-y at 90% of image height of 720px = 648
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.pj/104016.pj.animation.0000.png}};%
-			% 846.456px = 4.9mm -> 100px = 578.885um -> 86.373px = 500um, 17.275px = 100um
-			\draw[|-|,white,shadowed] (209,23) -- (1055,26) node [sloped,midway,below] {\shadowtext{\(\approx\)\SI{5}{\milli\meter}}};%
-		\end{tikzpicture}%
-	}%
+  \renewcommand{\imagewidth}{0.9\linewidth}%
+  \frametitle{Visualization}%
+  \centering%
+  % Generate animations in ImageJ with 3Dscript (files are in repository)
+  % Save out as .tif slices
+  % mogrify -format png -transparent "rgb(255,255,255)" -fuzz 4% *.tif
+  \only<1|handout:1>{%
+    \pgfmathsetlength{\imagescale}{\imagewidth/1280}%
+    \def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
+    \def\y{648}% scalebar-y at 90% of image height of 720px = 648
+    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0000.png}};%
+      % 196.739px = 6.045mm -> 100px = 3072.594um -> 16.273px = 500um, 3.255px = 100um
+      \draw[|-|,white,shadowed] (652,353) -- (849,369) node [sloped,midway,above] {\shadowtext{\(\approx\)\SI{6}{\milli\meter}}};%
+    \end{tikzpicture}%
+  }%
+  \note[item]<1>{Fish 104016, Scan head\_rec; scanned on 2022-01-27T13:32:59 on the SkyScan2214, with a voxel size of \qty{13.0}{\micro\meter}.}%
+  \note[item]<1>{The eye has a diameter of approximately \qty{6}{\milli\meter}.}%
+  \note[item]<1>{DOI:10.1002/ece3.9669: The detritivorous Enterochromis cinctus Greenwood \& Gee, 1969 has a red dorsum and a bright yellow flank too but it has dark vertical bars and lacks any mid-lateral band.%
+    Before the near extinctions, it used to occur at depths between \qtyrange{13}{60}{\meter} (Greenwood \& Gee, 1969).}%
+  \only<2|handout:2>{%
+    % Show PJ
+    \mode<beamer>{\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.0}{000}{120}}%
+    \mode<handout>{\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0120}}%
+  }%
+  \only<3|handout:0>{%
+    % Show full head again
+    \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0121}{0240}%
+  }%
+  \only<4|handout:0>{%
+    % Zoom to otolith
+    \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0240}{0360}%
+  }%
+  \only<5|handout:0>{%
+    %Move to PJ
+    \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0361}{480}%
+  }%
+  \only<6|handout:0>{%
+    %Animate from head-dataset to segmented pj
+    \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head2pj/morphed.0}{000}{240}%
+    }%
+  \only<7|handout:3>{%
+    \pgfmathsetlength{\imagescale}{0.9\linewidth/1280}%
+    \def\x{791}% scalebar-x starting at golden ratio of image width of 1280px = 791
+    \def\y{648}% scalebar-y at 90% of image height of 720px = 648
+    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+      \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.pj/104016.pj.animation.0000.png}};%
+      % 846.456px = 4.9mm -> 100px = 578.885um -> 86.373px = 500um, 17.275px = 100um
+      \draw[|-|,white,shadowed] (209,23) -- (1055,26) node [sloped,midway,below] {\shadowtext{\(\approx\)\SI{5}{\milli\meter}}};%
+    \end{tikzpicture}%
+  }%
   \note[item]<6|handout:0>{Fish 104016, Scan pharynx\_rec; scanned on 2021-02-04T13:30:11 on the SkyScan1272, with a voxel size of \qty{5.0}{\micro\meter}.}%
-	\note[item]<6|handout:0>{The distance between the two ends at the top is approximately \qty{5}{\milli\meter}.}%
-		\only<8|handout:0>{%
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.0}{000}{180}%
-	}%
-	\only<9|handout:0>{%
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.}{0181}{0359}%
-	}%
+  \note[item]<6|handout:0>{The distance between the two ends at the top is approximately \qty{5}{\milli\meter}.}%
+    \only<8|handout:0>{%
+    \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.0}{000}{180}%
+  }%
+  \only<9|handout:0>{%
+    \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.}{0181}{0359}%
+  }%
   \note[item]<9|handout:0>{A human hair typically has a thickness ranging from \qtyrange{17}{181}{\micro\meter}, depending on various factors like the individual's hair type, age, and ethnicity. On average, most human hair strands fall between \qtyrange{50}{100}{\micro\meter} in diameter.}%
 \end{frame}
 
 \begin{frame}
-	\frametitle{Automated extraction of object of interest}
-	\centering%
-	\includegraphics<1|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_01_Overview}%
-	\includegraphics<2|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
-	\includegraphics<3|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
-	\includegraphics<4|handout:1>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
-	\includegraphics<5|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_05_Peaks}%
-	\includegraphics<6|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
-	\includegraphics<7|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
-	\includegraphics<8|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
-	\includegraphics<9|handout:2>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
-	\only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
+  \frametitle{Automated extraction of object of interest}
+  \centering%
+  \includegraphics<1|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_01_Overview}%
+  \includegraphics<2|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
+  \includegraphics<3|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_03_GrayValuesRegion}%
+  \includegraphics<4|handout:1>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_04_GrayValuesSmoothed}%
+  \includegraphics<5|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_05_Peaks}%
+  \includegraphics<6|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_06_Peaks_All}%
+  \includegraphics<7|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_07_ExtractedRegions}%
+  \includegraphics<8|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_08_ExtractedRegionsMIPs}%
+  \includegraphics<9|handout:2>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_09_ExtractedOtolithMasked}%
+  \only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
 \begin{frame}
