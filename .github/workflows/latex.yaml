@@ -1,32 +1,45 @@
 name: Build LaTeX & upload handout
+
 on:
   push:
     branches:
       - advanced_course_II_ultraprecision_engineering
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      TZ: Europe/Zurich
+
     steps:
-    - name: Set up Git repository
-      uses: actions/checkout@v4
+      - name: Set up Git repository
+        uses: actions/checkout@v4
 
-    - name: Compile handout
-      uses: xu-cheng/latex-action@v3
-      env:
-        TZ: "Europe/Zurich"
-      with:
-        root_file: |
-          XRayMicroTomography.Handout.tex
+      - name: Compile handout
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: XRayMicroTomography.Handout.tex
 
-    - name: Verify generated PDF
-      run: |
-        file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
+      - name: Verify generated PDF
+        run: |
+          file XRayMicroTomography.Handout.pdf
+          file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
 
-    - name: Deploy handout PDF to gh-pages branch
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
-        destination_dir: .
-        keep_files: true
-        commit_message: "Deploy new version of presentation handout to gh-pages"
+      - name: Prepare deployment
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp XRayMicroTomography.Handout.pdf _site/
+          echo "Files to deploy:"
+          find _site -maxdepth 1 -type f -ls
+
+      - name: Deploy handout PDF to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site
+          keep_files: false
+          force_orphan: true
+          commit_message: Deploy new version of presentation handout to gh-pages
