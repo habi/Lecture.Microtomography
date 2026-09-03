@@ -10,15 +10,17 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v4
 
-    - name: Compile handout, presentation and notes.
+    - name: Compile handout
       uses: xu-cheng/latex-action@v3
+      env:
+        TZ: "Europe/Zurich"
       with:
         root_file: |
           XRayMicroTomography.Handout.tex
 
     - name: Verify generated PDF
-        run: |
-          file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
+      run: |
+        file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
 
     - name: Deploy handout PDF to gh-pages branch
       uses: peaceiris/actions-gh-pages@v4
