@@ -4,3 +4,5 @@
 \usepackage{pgfpages}% several pages on one
 \pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=1mm]% 4 on 1 landscape is good enough to read on the reMarkable
 \input{XRayMicroTomography.Slides.tex}
+% Fix 'no citations found' by Registers citations without printing text on the slides/notes
+\AtBeginDocument{\note{\nocite{*}}}
