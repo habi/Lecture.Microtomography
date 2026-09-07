@@ -7,25 +7,57 @@
 \institute{Institute of Anatomy}
 \date{September 15, 2026}
 
+\newcommand{\everyframe}{123456}
+
 %\includeonlyframes{current}
 %then....
 %\begin{frame}[label=current]
 %\end{frame}
 
-% Some often used abbreviations/commands
-\newcommand{\everyframe}{1}% use only every nth frame for the animations
-\newcommand{\imagewidth}{\linewidth}% set global image width
-\newcommand{\standardimagewidth}{\linewidth}% Save us a standard image width, so we can always \renewcommand{\imagewidth} to it
-\newcommand{\imageheight}{0.72\paperheight}% set global image height
-\newcommand{\standardimageheight}{0.72\paperheight}% Save us standard image height, so we can always \renewommand{\imageheight} to it
-\newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
-\newcommand{\eg}{e.\,g.\xspace}%
-\newcommand{\ie}{i.\,e.\xspace}%
-
-% Helper stuff
-\newlength\imagescale% needed for scalebars
-
-% Packages and package setup
+\usepackage{microtype}
+\usepackage{csquotes}% load before biblatex
+\usepackage{xspace}
+\usepackage[defaultmathsizes,symbolgreek]{mathastext}
+\usepackage{siunitx}
+\sisetup{
+    mode=match,
+    range-phrase={--},
+    range-units=single,
+    per-mode=symbol,
+}
+\usepackage[version=4]{mhchem}
+\usepackage{standalone}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{shadows,spy,calc}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{shadowtext}
+\shadowoffset{1pt}
+\shadowcolor{ubRed}
+\usepackage{animate}
+\usepackage{qrcode}
+\usepackage{ccicons}
+\usepackage{fontawesome5}
+\usepackage[eulergreek]{sansmath}
+\pgfplotsset{
+    compat=1.18,
+    tick label style={font=\sansmath\sffamily},
+    every axis label={font=\sansmath\sffamily},
+    legend style={font=\sansmath\sffamily},
+    label style={font=\sansmath\sffamily},
+}
+\usepackage{booktabs}
+\usepackage{colortbl}% load before listings to prevent macro conflicts
+\usepackage{multirow}
+\usepackage{listings}
+\lstset{basicstyle=\scriptsize\ttfamily,breaklines=true}
+\usepackage{lstlinebgrd}
+% Compatibility fix for lstlinebgrd with LaTeX kernels >= 2021-11-15
+\makeatletter
+\let\old@lst@linebgrd\lst@linebgrd
+\def\lst@linebgrd{\lst@basicstyle\old@lst@linebgrd}
+\makeatother
 \usepackage[%
     backend=biber,%
     sorting=none,%
@@ -35,7 +67,7 @@
     isbn=false,%
     url=false,%
     maxnames=1,minnames=1,% Show only first author in references
-]{biblatex}%
+]{biblatex}
 % show "cited on slide(s) <numbers>" in bibliography
 \DefineBibliographyStrings{english}{%
     backrefpage={slide},%
@@ -43,183 +75,110 @@
 }
 \renewbibmacro*{pageref}{%
     \iflistundef{pageref}%
-    {}%
-    {\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}
+        {}%
+        {\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}%
 }
-% No "In" in bibliography
-\renewbibmacro{in:}{}
-% Globally remove stuff from bibliography
-% https://tex.stackexchange.com/a/25232
+\renewbibmacro{in:}{}% no "In" in bibliography
 \DeclareSourcemap{%
     \maps[datatype=bibtex]{%
         \map{%
-            \step[fieldset=journal, null]%
-            \step[fieldset=editor, null]%
-            \step[fieldset=publisher, null]%
-            \step[fieldset=series, null]%
-            \step[fieldset=volume, null]%
-            \step[fieldset=number, null]%
-            \step[fieldset=pages, null]%
-            %\step[fieldset=year, null]% Do *not* remove year, otherwise the \citeyear on the history slide does not work :)
+            \step[fieldset=journal,null]%
+            \step[fieldset=editor,null]%
+            \step[fieldset=publisher,null]%
+            \step[fieldset=series,null]%
+            \step[fieldset=volume,null]%
+            \step[fieldset=number,null]%
+            \step[fieldset=pages,null]%
         }%
     }%
-}%
-\addbibresource{../../../../Documents/library.bib} % FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
-\usepackage{standalone}
-\usepackage{tikz}
-\usetikzlibrary{shadows,spy,calc}
-\tikzset{%
-    shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},
-    draw=ubRed}},%
 }
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usepackage{pgfplotstable}
-\usepackage{shadowtext}
-\shadowoffset{1pt}
-\shadowcolor{ubRed}
-\usepackage{microtype}
-\usepackage[%
-    detect-all=true,
-    range-phrase=--,
-    range-units=single,
-    per-mode=symbol,
-    per-symbol=/,%
-]{siunitx}
+\addbibresource{../../../../Documents/library.bib}
 \usepackage[local]{gitinfo2}
-\usepackage{xspace}
-\usepackage{ccicons}
-\usepackage[version=4]{mhchem}
-\usepackage{animate}
-\usepackage{fontawesome5}
-\usepackage{csquotes}
-\usepackage{listings}
-\lstset{%
-    basicstyle=\scriptsize\ttfamily,
-    breaklines=true,
-    %breakatwhitespace=true,
-    %frame=shadowbox,
-}
-\usepackage{lstlinebgrd}
-\usepackage{booktabs}
-\renewcommand{\familydefault}{\rmdefault}
-\usepackage[defaultmathsizes,symbolgreek]{mathastext}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage{colortbl}
-\usepackage{multirow}
-\usepackage[english,showseconds=false,showzone=false]{datetime2}% nice compilation date in handout
+\usepackage[%
+    english,%
+    showseconds=false,%
+    showzone=false%
+]{datetime2}
 \DTMsettimestyle{iso}
-\usepackage{appendixnumberbeamer}% do now count appendix frames in total frame count
-\usepackage{qrcode}
+\usepackage{appendixnumberbeamer}% do not count appendix frames in total frame count
 
-% Define complementary colors to ubRed=e4003c, which is defined in the .sty file
-% https://duckduckgo.com/?t=lm&q=html+e4003c&ia=answer
+\newlength\imagescale% needed for scalebars
+\newcommand{\uct}{{\textmu}CT\xspace}
+\newcommand{\eg}{e.\,g.\xspace}
+\newcommand{\ie}{i.\,e.\xspace}
+% Image dimensions — use \renewcommand{\imagewidth}{...} on slides that need a different size
+\newcommand{\imagewidth}{\linewidth}
+\newcommand{\standardimagewidth}{\linewidth}
+\newcommand{\imageheight}{0.72\paperheight}
+\newcommand{\standardimageheight}{0.72\paperheight}
+
+% Image attributions: place immediately after \includegraphics, flush right
+\newcommand{\source}[2]{%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny\href{https://#1}{#1} #2}}%
+}
+\newcommand{\sourcecite}[2]{%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny From~\cite{#1}, #2}}%
+}
+\newcommand{\sourcelink}[3]{%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny\href{#1}{#2}, #3}}%
+}
+\newcommand{\citeslide}[5]{% slideimage, lecturelink, lecturetitle, author, page
+    \fboxsep=0pt%
+    \fcolorbox{ubRed!62}{white}{\includegraphics[%
+        width=\linewidth,height=\imageheight,keepaspectratio]{#1}}%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{%
+        \tiny\href{#2}{\emph{#3} by #4}, Slide #5}}%
+}
+
+% Complementary to ubRed (#e4003c), defined in the theme .sty
 \definecolor{ubRedComplementary}{HTML}{00E3A6}
 
-% change tikz font to slide font
-% https://tex.stackexchange.com/a/33329/828
-\usepackage[eulergreek]{sansmath}
-\pgfplotsset{%
-    tick label style = {font=\sansmath\sffamily},
-    every axis label = {font=\sansmath\sffamily},
-    legend style = {font=\sansmath\sffamily},
-    label style = {font=\sansmath\sffamily},%
-}
+\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
+\tikzset{every picture/.style={thick}}% globally thicker lines
 
-% Globally thicker lines in with tikz
-% https://tex.stackexchange.com/a/206769/828
-\tikzset{every picture/.style={thick}}
-
-% Acknowledge images just below them
-% Based on https://tex.stackexchange.com/a/282637/828
-\newcommand{\source}[2]{%
-    % Print out (short) link under image, with small text
-    \raisebox{-1.618ex}{%
-        \makebox[0pt][r]{%
-            \tiny\href{http://#1}{#1} #2%
-        }%
-    }%
-}%
-\newcommand{\sourcecite}[2]{%
-    % Cite (an image from) a reference
-    \raisebox{-1.618ex}{%
-        \makebox[0pt][r]{%
-            \tiny From~\cite{#1}, #2%
-        }%
-    }%
-}%
-\newcommand{\sourcelink}[3]{%
-    % Make the source command an \href{link}{text}
-    \raisebox{-1.618ex}{%
-        \makebox[0pt][r]{%
-            \tiny\href{#1}{#2}, #3%
-        }%
-    }%
-}%
-\newcommand{\citeslide}[5]{% slideimage,lecturelink,lecturetitle,author,page
-    \fboxsep=0pt%
-    \fcolorbox{ubRed!62}{white}{\includegraphics[width=\linewidth,height=\imageheight,keepaspectratio]{#1}}% https://tex.stackexchange.com/a/12041/828
-    \raisebox{-1.618ex}{%
-        \makebox[0pt][r]{%
-            \tiny\href{#2}{\emph{#3} by #4}, Slide #5%
-        }%
-    }%
-}%
-
-% Progress bar setup
-% At the beginning, we've set up custom footer with progress bar based on https://tex.stackexchange.com/a/59749/828
-% This lead to problems with 'dimension too large' errors which we've tried to fix with ChatGPT
-% Then we thought it would be nice to have a marker for the break at the correct position, which we've implemented with some back and forth between ChatGPT and Claude.ai
-% To achieve the desired result, we need to save the slide number (marked with \saveframenumber to the .aux file and read it bac
+% Break marker: place \saveframenumber on the last slide before the break.
+% Writes the current frame number to \jobname.mkr; on the *next* run that
+% value is read back and drawn as a tick on the progress bar.
+% (Two compilations needed: first run writes the file, second reads it.)
 \makeatletter
-% Read marker position from aux file
-\newcommand{\myframenumber}{-1}  % Use -1 to indicate "undefined"
-\AtBeginDocument{%
-    \InputIfFileExists{\jobname.mkr}{}{}%
-}
-% Save marker position to aux file
+\newwrite\@markerout
+\newcommand{\myframenumber}{-1}% -1 = no marker; overwritten by .mkr if present
+\AtBeginDocument{\InputIfFileExists{\jobname.mkr}{}{}}
 \newcommand{\saveframenumber}{%
-    \immediate\write\@auxout{\gdef\string\myframenumber{\insertframenumber}}%
     \immediate\openout\@markerout=\jobname.mkr%
     \immediate\write\@markerout{\gdef\string\myframenumber{\insertframenumber}}%
     \immediate\closeout\@markerout%
-    % Don't overwrite the current value - let the aux file handle it
 }
-\newwrite\@markerout
 \makeatother
 
-% Do this only in beamer mode :)
+% Footline: thin progress bar matching the UniBe header rule (1.36 mm tall)
 \mode<beamer>{%
-    % Footline template
-    % The UniBe template has "\put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}" for the header line, let's use this height as progressbar height
-    \defbeamertemplate{footline}{progress bar}{
+    \defbeamertemplate{footline}{progress bar}{%
         \leavevmode%
         \hbox{%
             \begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
                 \begin{tikzpicture}[overlay,remember picture]
-                    \pgfmathsetlengthmacro{\pw}{\paperwidth}        % full width in pt
-                    \pgfmathsetlengthmacro{\halfheight}{0.68mm}     % half bar height
+                    \pgfmathsetlengthmacro{\halfheight}{0.68mm}% circle radius = half bar height
                     \ifnum\inserttotalframenumber>0
-                    % current slide circle
-                    \pgfmathsetlengthmacro{\progressx}{(\insertframenumber/\inserttotalframenumber)*\pw}
-                    \draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
-
-                    % marked slide line - draw if marker frame number is known and > 0
-                    \ifnum\myframenumber>0
-                    \pgfmathsetlengthmacro{\markx}{(\myframenumber/\inserttotalframenumber)*\paperwidth}
-                    \draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
-                    \fi
+                        \pgfmathsetlengthmacro{\progressx}{%
+                            (\insertframenumber/\inserttotalframenumber)*\paperwidth}%
+                        % circle scrubbing along the bar at the current frame
+                        \draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
+                        % break marker tick — only present after \saveframenumber has been called
+                        \ifnum\myframenumber>0
+                            \pgfmathsetlengthmacro{\markx}{%
+                                (\myframenumber/\inserttotalframenumber)*\paperwidth}%
+                            \draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
+                        \fi
                     \fi
                 \end{tikzpicture}
             \end{beamercolorbox}%
         }%
-    }
-
-    % Use the new footline template
-    \setbeamertemplate{footline}[progress bar]
+    }%
+    \setbeamertemplate{footline}[progress bar]%
 }%
 
-% Show current section at begin of sections, only in presentation mode
+% Show section ToC at the start of each section (presentation mode only)
 \mode<beamer>{%
     \AtBeginSection[]{%
         \begin{frame}{Contents}%
@@ -234,7 +193,9 @@
     \titlepage%
     \mode<beamer>{%
         \begin{tikzpicture}[remember picture,overlay]
-            \node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |- current page.center) {%
+            \node[anchor=east,xshift=-5mm,yshift=-10mm] at (current page.east |-
+            current page.center)
+            {%
                 Handout PDF: git.io/JeQxO \(\rightarrow\) \qrcode[height=5cm]{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}%
             };
         \end{tikzpicture}
