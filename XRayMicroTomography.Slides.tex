@@ -17,7 +17,7 @@
 \usepackage{microtype}
 \usepackage{csquotes}% load before biblatex
 \usepackage{xspace}
-\usepackage[defaultmathsizes,symbolgreek]{mathastext}
+%\usepackage[defaultmathsizes,symbolgreek]{mathastext}
 \usepackage{siunitx}
 \sisetup{
     mode=match,
@@ -276,31 +276,30 @@
 
 \begin{frame}
     \frametitle{Biomedical Imaging}
-    \null % Tells Beamer to initialize the page layout correctly
     \begin{columns}
-        \begin{column}{0.6\linewidth}%
-            \begin{itemize}%
-                \item<1-|handout:1-> Medical research%
-                \item<1-|handout:1-> Non-destructive insights into the samples%
-                \item<2-|handout:1-> (Small) Biological samples%
-            \end{itemize}%
-        \end{column}%
-        \begin{column}{0.4\linewidth}%
-            \centering%
+        \begin{column}{0.6\linewidth}
+            \begin{itemize}
+                \item<1-|handout:1-> Medical research
+                \item<1-|handout:1-> Non-destructive insights into the samples
+                \item<2-|handout:1-> (Small) Biological samples
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.4\linewidth}
+            \centering
             \only<1-2|handout:1>{%
                 \includegraphics[width=\imagewidth]{./images/Sagittal_brain_MRI}%
                 \source{w.wiki/7g4}{\ccbysa}%
             }%
             \only<3|handout:2>{%
-                \begin{tikzpicture}[remember picture,overlay]%
-                    \node at (current page.center){%
-                        \mode<beamer>{\animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
+                \begin{tikzpicture}[remember picture,overlay]
+                    \node at (current page.center) {%
+                        \mode<beamer>{\animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}
                         \mode<handout>{\includegraphics[width=0.98\paperwidth]{./movies/mouse_skull/mouse_skull075}}
-                    };%
+                    };
                 \end{tikzpicture}%
             }%
-        \end{column}%
-    \end{columns}%
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -833,11 +832,11 @@
 
 \begin{frame}
     \frametitle{Visualization}
-    \begin{tikzpicture}[remember picture,overlay]%
-        \node at (current page.center){%
+    \begin{tikzpicture}[remember picture,overlay]
+        \node at (current page.center) {%
             \mode<beamer>{\animategraphics[autoplay,loop,height=0.98\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
             \mode<handout>{\includegraphics[height=0.98\paperheight]{./movies/scan/visualization/lung000}}%
-        };%
+        };
     \end{tikzpicture}%
 \end{frame}
 
@@ -855,23 +854,23 @@
 \begin{frame}
     \frametitle{Demo: Acquisition}
     \centering%
-    \includegraphics<1|handout:0>[height=\imageheight]{./images/2214}%
-    \includegraphics<2|handout:0>[height=\imageheight]{./images/2214/room}%
-    \includegraphics<3|handout:0>[height=\imageheight]{./images/2214/scanning_compartement}%
-    \includegraphics<4|handout:1>[height=\imageheight]{./images/2214/ControlSoftware01}%
+    \only<1|handout:0>{\includegraphics[height=\imageheight]{./images/2214}}%
+    \only<2|handout:0>{\includegraphics[height=\imageheight]{./images/2214/room}}%
+    \only<3|handout:0>{\includegraphics[height=\imageheight]{./images/2214/scanning_compartement}}%
+    \only<4|handout:1>{\includegraphics[height=\imageheight]{./images/2214/ControlSoftware01}}%
 \end{frame}
 
 \begin{frame}
     \frametitle{Demo: Reconstruction}
     \centering%
-    \includegraphics<1|handout:1>[height=\imageheight]{./images/2214/NRecon_proj}%
-    \includegraphics<2|handout:2>[height=\imageheight]{./images/2214/NRecon_rec}%
+    \only<1|handout:1>{\includegraphics[height=\imageheight]{./images/2214/NRecon_proj}}%
+    \only<2|handout:2>{\includegraphics[height=\imageheight]{./images/2214/NRecon_rec}}%
 \end{frame}
 
 \begin{frame}
     \frametitle{Demo: Visualization}
     \centering%
-    \includegraphics<1|handout:1>[height=\imageheight]{./images/2214/Dragonfly}%
+    \includegraphics[height=\imageheight]{./images/2214/Dragonfly}%
 \end{frame}
 
 \begin{frame}
@@ -903,26 +902,27 @@
 \end{frame}
 
 \subsubsection{Overview}
+
 \begin{frame}
-    \frametitle{Internal morphology of human teeth}%
+    \frametitle{Internal Morphology of Human Teeth}
     Collaboration with \href{https://www.zmk.unibe.ch/}{zmk bern – Zahnmedizinische Kliniken}%
-    \begin{itemize}%
+    \begin{itemize}
         \item<1-2> Numbers instead of just pretty images% force to show this on frame 1 AND 2, so that we can first show the hovering tooth
         \item Segmentation of teeth and root canal%
         \item (Unbiased) Characterization%
         \item Reproducible and automated image analysis (\href{https://www.python.org/}{\faPython} in \href{https://jupyter.org/}{Jupyter}~\cite{Kluyver2016})%
         \item Two publications:
         \begin{itemize}
-            \item Methodolocial~\cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}
+            \item Methodological~\cite{Haberthuer2021}, \href{https://bmcoralhealth.biomedcentral.com/articles/10.1186/s12903-021-01551-x}{BMC Oral Health, doi.org/gjpw2d}
             \item Analytical~\cite{Wolf2021}, \href{https://www.nature.com/articles/s41598-021-00758-w}{Scientific Reports, doi.org/g7r8}
         \end{itemize}
     \end{itemize}%
     \only<1|handout:1>{%
-        \begin{tikzpicture}[remember picture,overlay]%
-            \node at (current page.center) [shift={(0,-2.9mm)}]{%
+        \begin{tikzpicture}[remember picture,overlay]
+            \node at (current page.center) {%
                 \mode<beamer>{\animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
                 \mode<handout>{\includegraphics[width=0.98\paperwidth]{./movies/tooth045/full/image0237}}%
-            };%
+            };
         \end{tikzpicture}%
     }%
 \end{frame}
@@ -1028,18 +1028,13 @@
 
 \begin{frame}
     \frametitle{Tooth Morphology}
-    \null % Initializes Beamer page layout for overlay coordinates
     \centering%
     \only<1|handout:1>{%
-        \begin{tikzpicture}[remember picture,overlay]%
+        \begin{tikzpicture}[remember picture,overlay]
             \node at (current page.center) [shift={(0,-2.9mm)}]{%
-                \mode<beamer>{%
-                    \animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}%
-                }%
-                \mode<handout>{%
-                    \includegraphics[width=0.98\paperwidth]{./movies/tooth045/full/image0000}%
-                }%
-            };%
+                \mode<beamer>{\animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/full/image0}{000}{474}}%
+                \mode<handout>{\includegraphics[width=0.98\paperwidth]{./movies/tooth045/full/image0000}}%
+            };
         \end{tikzpicture}%
     }%
     \only<2|handout:2>{%
@@ -1047,15 +1042,11 @@
         \sourcecite{Briseno-Marroquin2015}{Fig.~2}%
     }%
     \only<3|handout:3>{%
-        \begin{tikzpicture}[remember picture,overlay]%
+        \begin{tikzpicture}[remember picture,overlay]
             \node at (current page.center) [shift={(0,-2.9mm)}]{%
-                \mode<beamer>{%
-                    \animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}%
-                }%
-                \mode<handout>{%
-                    \includegraphics[width=0.98\paperwidth]{./movies/tooth045/full-slices/image0000}%
-                }%
-            };%
+                \mode<beamer>{\animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/full-slices/image0}{000}{466}}%
+                \mode<handout>{\includegraphics[width=0.98\paperwidth]{./movies/tooth045/full-slices/image0000}}%
+            };
         \end{tikzpicture}%
     }%
 \end{frame}
@@ -1124,6 +1115,30 @@
 
 \begin{frame}
     \frametitle{Extraction of Root Canal Space}
+    \only<1|handout:0>{%
+        \begin{tikzpicture}[remember picture,overlay]
+            \node at (current page.center) [shift={(0,-2.9mm)}]{%
+                \mode<beamer>{\animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices/image0}{000}{473}}%
+                \mode<handout>{\includegraphics[width=0.98\paperwidth]{./movies/tooth045/transparent-slices/image0000}}%
+            };
+        \end{tikzpicture}%
+    }%
+    \only<2|handout:1>{%
+        \begin{tikzpicture}[remember picture,overlay]
+            \node at (current page.center) [shift={(0,-2.9mm)}]{%
+                \mode<beamer>{\animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices-rcs/image0}{000}{457}}%
+                \mode<handout>{\includegraphics[width=0.98\paperwidth]{./movies/tooth045/transparent-slices-rcs/image0000}}%
+            };
+        \end{tikzpicture}%
+    }%
+    \only<3|handout:0>{%
+        \begin{tikzpicture}[remember picture,overlay]
+            \node at (current page.center) [shift={(0,-2.9mm)}]{%
+                \mode<beamer>{\animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/rcs/image0}{000}{413}}%
+                \mode<handout>{\includegraphics[width=0.98\paperwidth]{./movies/tooth045/rcs/image0000}}%
+            };
+        \end{tikzpicture}%
+    }%
 \end{frame}
 
 \begin{frame}
@@ -1355,17 +1370,17 @@
     \only<10|handout:0>{\href{https://htmlpreview.github.io/?https://github.com/habi/EAWAG-manuscript/blob/main/content/data/104016_Enterochromis_I_cinctus_St_E.head.rec.Otolith.Region.3D.html}{Exported 3D view}}%
 \end{frame}
 
-\begin{frame}%
-    \frametitle{Thanks!}%
-    \begin{itemize}%
+\begin{frame}
+    \frametitle{Thanks!}
+    \begin{itemize}
         \item Thanks for listening to me!%
         \item<2-> \href{https://mannerofspeaking.org/2019/12/29/what-questions-do-you-have-for-me/}{What questions do you have for me?}%
     \end{itemize}%
     \only<3|handout:0>{%
-        \begin{tikzpicture}[remember picture,overlay]%
+        \begin{tikzpicture}[remember picture,overlay]
             \node at (current page.center) {%
                 \animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
-            };%
+            };
         \end{tikzpicture}%
     }%
 \end{frame}
@@ -1381,17 +1396,17 @@
     \frametitle[Colophon]{\href{https://en.wikipedia.org/wiki/Colophon_(publishing)}{Colophon}}
     \begin{itemize}
         \item This \textsc{beamer} presentation was crafted in \LaTeX\xspace with the (slightly adapted) \href{http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/}{template from \emph{Corporate Design und Vorlagen} of the University of Bern}.
-            \begin{itemize}
-                \item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
-                \item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub action} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
-            \end{itemize}
+        \begin{itemize}
+            \item \href{https://github.com/habi/lecture.microtomography/}{Complete source code: git.io/fjpP7}
+            \item The \LaTeX\xspace code is automatically compiled with a \href{https://github.com/actions}{GitHub Action} to a \href{https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf}{(handout) PDF which you can access here: git.io/JeQxO}
+        \end{itemize}
         \item Did you spot an error?
-            \begin{itemize}
-                \item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
-                \item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
-                \item \href{mailto:david.haberthuer@unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: david.haberthuer@unibe.ch}
-            \end{itemize}
+        \begin{itemize}
+            \item \href{https://github.com/habi/lecture.microtomography/issues}{File an issue: git.io/fjpPb}
+            \item \href{https://github.com/habi/lecture.microtomography/pulls}{Submit a pull request: git.io/fjpPN}
+            \item \href{mailto:david.haberthuer@unibe.ch?subject=Error\%20in\%20the\%20(micro)-tomography\%20lecture\&body=https://xkcd.com/386/}{Send me an email: david.haberthuer@unibe.ch}
+        \end{itemize}
     \end{itemize}
 \end{frame}
-
+    
 \end{document}
