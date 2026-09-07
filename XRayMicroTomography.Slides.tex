@@ -1,7 +1,7 @@
 % !TEX root = XRayMicroTomography.Presentation.tex
 \usetheme[language=english]{ubbeamer2023}
 
-\title{X-ray microtomography}
+\title{X-Ray Microtomography}
 \subtitle{\href{https://ilias.unibe.ch/go/sess/3728317}{485018-HS2026-0: Advanced Course II Ultraprecision Engineering}}
 \author{David Haberthür}
 \institute{Institute of Anatomy}
@@ -242,7 +242,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Grüessech mitenang!}
+    \frametitle{Grüessech Mitenang!}
     \begin{itemize}
         \item David Haberthür
             \begin{itemize}
@@ -255,7 +255,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Grüessech from the \uct group}
+    \frametitle{Grüessech from the \uct Group}
     \centering%
     \includegraphics[width=\imagewidth]{./images/team}
     \hfill%
@@ -299,7 +299,8 @@
     \tableofcontents
 \end{frame}
 
-\section{Overview \& Imaging methods}
+\section{Overview \& Imaging Methods}
+
 \begin{frame}
     \frametitle{\uct}
     \begin{itemize}
@@ -313,7 +314,8 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Biomedical imaging}%
+    \frametitle{Biomedical Imaging}
+    \null % Tells Beamer to initialize the page layout correctly
     \begin{columns}
         \begin{column}{0.6\linewidth}%
             \begin{itemize}%
@@ -353,7 +355,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Imaging methods}
+    \frametitle{Imaging Methods}
     \begin{itemize}
         \item Light (sheet) microscopy: see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2177945.html}{lecture of Nadia Mercader Huber}
         \item X-ray imaging
@@ -367,6 +369,7 @@
 \end{frame}
 
 \section{Tomography}
+
 \begin{frame}
     \frametitle{CT-Scanner}
     \centering%
@@ -462,9 +465,10 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Interaction of x-rays with matter}
+\subsection{Interaction of X-Rays with Matter}
+
 \begin{frame}
-    \frametitle{X-ray interaction}
+    \frametitle{X-Ray Interaction}
     \begin{itemize}
         \item \textquote[\cite{xrayphysics}]{X-rays interact with tissue in 2 main ways: photoelectric effect and Compton scatter.
                 To a first approximation, the photoelectric effect contributes to contrast while the Compton effect contributes to noise.
@@ -486,8 +490,8 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Composition of biological tissues}
-    Tissue: content by mass percentage
+    \frametitle{Composition of Biological Tissues}
+    \captionof*{table}{Tissue: content by mass percentage}
     \centering
     \begin{table}%
         \only<1|handout:0>{%
@@ -648,13 +652,14 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Maximum intensity projection}
+    \frametitle{Maximum Intensity Projection}
     \centering%
     % pdfseparate 220923_Fundamentals_image_processing_2022_Witz.pdf -f 23 -l 23 220923_Fundamentals_image_processing_2022_Witz-%d.pdf
     \citeslide{./images/220923_Fundamentals_image_processing_2022_Witz-23}{https://ilias.unibe.ch/go/sess/2466919}{Fundamentals of Digital Image Processing}{Guillaume Witz}{23}
 \end{frame}
 
-\subsection{Tomography today}
+\subsection{Tomography Today}
+
 \begin{frame}
     \frametitle{Machinery}
     \begin{columns}
@@ -697,7 +702,7 @@
 
 \renewcommand{\imagewidth}{\linewidth}
 \begin{frame}
-    \frametitle{What is happening?}
+    \frametitle{What Is Happening?}
     \begin{columns}
         \begin{column}{0.5\linewidth}%
             No matter what kind of machine, the basic principle is always
@@ -809,7 +814,8 @@
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}% Reset imagewidth to standard
 
-\section[A scan, from getting started to nice image]{A scan, from \emph{getting started} to \emph{nice image}}
+\section[A Scan, from Getting Started to Nice Image]{A Scan, from \emph{Getting Started} to \emph{Nice Image}}
+
 \begin{frame}
     \frametitle{Preparation}
     \begin{itemize}
@@ -908,7 +914,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{What to use?}
+    \frametitle{What to Use?}
     \begin{itemize}
         \item \href{http://fiji.sc/}{ImageJ/Fiji}~\cite{Schindelin2012}
         \item Also see \href{https://ilias.unibe.ch/goto_ilias3_unibe_sess_2774485.html}{\emph{Fundamentals of Digital Image Processing} by Guillaume Witz}
@@ -923,9 +929,11 @@
 \end{frame}
 
 \section{Examples}
-\subsection{A study about teeth}
+
+\subsection{A Study About Teeth}
+
 \begin{frame}
-    \frametitle{Quantitative data}
+    \frametitle{Quantitative Data}
     \begin{itemize}
         \item Pretty images are nice to have, but science is built on quantitative data.
         \item Segmentation
@@ -959,6 +967,7 @@
 \end{frame}
 
 \subsubsection{Materials \& Methods}
+
 \begin{frame}
     \frametitle{How?}
     \begin{columns}
@@ -1031,15 +1040,16 @@
 \end{frame}
 
 \subsubsection{Results}
+
 \begin{frame}
-    \frametitle{\uct imaging}
+    \frametitle{\uct Imaging}
     \centering%
     \includegraphics<1|handout:0>[height=\imageheight]{./images/zmk/ScanOverviews.104.png}%
     \includegraphics<2>[height=\imageheight]{./images/zmk/ScanOverviews.24.png}%
 \end{frame}
 
 \begin{frame}
-    \frametitle{Dataset cropping}
+    \frametitle{Dataset Cropping}
     \begin{columns}
         \begin{column}{0.4\linewidth}
             \begin{itemize}
@@ -1056,7 +1066,8 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tooth morphology}
+    \frametitle{Tooth Morphology}
+    \null % Initializes Beamer page layout for overlay coordinates
     \centering%
     \only<1|handout:1>{%
         \begin{tikzpicture}[remember picture,overlay]%
@@ -1089,7 +1100,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Detection of enamel-dentin border}
+    \frametitle{Detection of Enamel-Dentin Border}
     \centering%
     \only<1|handout:1>{%
         \includegraphics[height=\imageheight]{./images/zmk/tooth045/Tooth045.ExtractedSlices.png}%
@@ -1100,7 +1111,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Classification of root canal configurations}%
+    \frametitle{Classification of Root Canal Configurations}
     \centering%
     \small{% Smaller text for fitting the table onto the slide
         \only<1>{%
@@ -1151,40 +1162,12 @@
 \end{frame}%
 
 \begin{frame}
-    \frametitle{Extraction of root canal space}
-    \begin{tikzpicture}[remember picture,overlay]%
-        \node at (current page.center) [shift={(0,-2.9mm)}]{%
-            \only<1|handout:0>{%
-                \mode<beamer>{%
-                    \animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices/image0}{000}{473}%
-                }%
-                \mode<handout>{%
-                    \includegraphics[width=0.98\paperwidth]{./movies/tooth045/transparent-slices/image0000}%
-                }%
-            }%
-            \only<2|handout:1>{%
-                \mode<beamer>{%
-                    \animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/transparent-slices-rcs/image0}{000}{457}%
-                }%
-                \mode<handout>{%
-                    \includegraphics[width=0.98\paperwidth]{./movies/tooth045/transparent-slices-rcs/image0000}%
-                }%
-            }%
-            \only<3|handout:0>{%
-                \mode<beamer>{%
-                    \animategraphics[autoplay,loop,width=0.98\paperwidth,every=\everyframe]{24}{./movies/tooth045/rcs/image0}{000}{413}%
-                }%
-                \mode<handout>{%
-                    \includegraphics[width=0.98\paperwidth]{./movies/tooth045/rcs/image0000}%
-                }%
-            }%
-        };%
-    \end{tikzpicture}%
+    \frametitle{Extraction of Root Canal Space}
 \end{frame}
 
 \begin{frame}
     \renewcommand{\imagewidth}{0.14\linewidth}% 720/2008
-    \frametitle{Results of root canal space extraction}%
+    \frametitle{Results of Root Canal Space Extraction}
     \centering%
     \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0452}\hfill%
     \includegraphics[width=\imagewidth]{./images/zmk/rcs/Tooth0278}\hfill%
@@ -1206,7 +1189,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Physiological foramen geometry}
+    \frametitle{Physiological Foramen Geometry}
     \centering%
     \only<1|handout:1>{%
         \includegraphics[height=\imageheight]{./images/zmk/foramen}%
@@ -1239,10 +1222,11 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Metal foam analysis}
+\subsection{Metal Foam Analysis}
+
 \begin{frame}
     \renewcommand{\imagewidth}{\paperheight}%
-    \frametitle{Metal foam}
+    \frametitle{Metal Foam}
     \centering%
     \pgfmathsetlength{\imagescale}{\imagewidth/800}%
     \def\x{494}% scalebar-x starting at golden ratio of image width of 800px = 494
@@ -1268,8 +1252,9 @@
 \end{frame}
 
 \subsection{A study on fish}
+
 \begin{frame}
-    \frametitle{Data wrangling by example: Cichlids}
+    \frametitle{Data Wrangling by Example: Cichlids}
     \begin{columns}
         \begin{column}{0.5\linewidth}
             Collaboration with the \href{https://www.aqua.iee.unibe.ch/}{Institute of Ecology and Evolution}~\cite{Haberthuer2023}
@@ -1281,7 +1266,7 @@
                     \end{itemize}
                 \item 375 scans in total
                     \begin{itemize}
-                        \item Voxelsizes from \qtyrange{3.5}{50}{\micro\meter}
+                        \item Voxel sizes from \qtyrange{3.5}{50}{\micro\meter}
                         \item 46 days of scanning time
                         \item \qty{9.8}{\tera\byte} of raw data
                         \item \qty{1.5}{\tera\byte}/+\num{1000000} reconstructions
@@ -1325,7 +1310,7 @@
 
 \begin{frame}
     \renewcommand{\imagewidth}{0.9\linewidth}%
-    \frametitle{Visualization of cichlid head}%
+    \frametitle{Visualization of Cichlid Head}
     \centering%
     % Generate animations in ImageJ with 3Dscript (files are in repository)
     % Save out as .tif slices
@@ -1365,7 +1350,7 @@
 
 \begin{frame}
     \renewcommand{\imagewidth}{0.9\linewidth}%
-    \frametitle{Visualization of segmented pharyngeal jaw}%
+    \frametitle{Visualization of Segmented Pharyngeal Jaw}
     \centering%
     \only<1|handout:0>{%
         %Animate from head-dataset to segmented pj
@@ -1393,7 +1378,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Data wrangling by example: Cichlids}
+    \frametitle{Data Wrangling by Example: Cichlids}
     \centering%
     \includegraphics<1|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_01_Overview}%
     \includegraphics<2|handout:0>[width=\imagewidth]{./images/cichlids/Otolither_104016_head_02_GrayValues}%
@@ -1426,7 +1411,6 @@
 
 \begin{frame}[allowframebreaks]
     \frametitle{References}
-    %\renewcommand*{\bibfont}{\footnotesize}%
     \printbibliography%
 \end{frame}
 
