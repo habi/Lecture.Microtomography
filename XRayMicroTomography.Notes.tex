@@ -2,7 +2,9 @@
 \documentclass[handout]{beamer}% Compile handout version
 \setbeameroption{show only notes}% Show *only* the notes
 \usepackage{pgfpages}% several pages on one
-\pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=1mm]% 4 on 1 landscape is good enough to read on the reMarkable
+\pgfpagesuselayout{4 on 1}[a4paper,landscape]% 4 on 1 landscape is good enough to read on the reMarkable
+% backref and citetracker are meaningless in notes-only mode and prevent
+% latexmk from reaching a stable fixed point (page numbers shift every run).
+\PassOptionsToPackage{backref=false,citetracker=false}{biblatex}
+\setbeamercolor{note page}{bg=white}
 \input{XRayMicroTomography.Slides.tex}
-% Fix 'no citations found' by Registers citations without printing text on the slides/notes
-\AtBeginDocument{\note{\nocite{*}}}
