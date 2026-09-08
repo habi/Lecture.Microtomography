@@ -136,7 +136,7 @@
 \tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
 \tikzset{every picture/.style={thick}}% globally thicker lines
 
-% Break marker: place \saveframenumber on the last slide before the break.
+% Break marker: place \saveframenumber after the slide before the break.
 % Writes the current frame number to \jobname.mkr; on the *next* run that
 % value is read back and drawn as a tick on the progress bar.
 % (Two compilations needed: first run writes the file, second reads it.)
@@ -152,6 +152,11 @@
 \makeatother
 
 % Footline: thin progress bar matching the UniBe header rule (1.36 mm tall)
+% NOTE: beamer defaults \inserttotalframenumber to 1 (beamerbasemisc.sty), and the
+% real value only arrives via the .nav file. On a clean build the ratio therefore
+% grows without bound and \pgfmathsetlengthmacro overflows TeX's 16383.99pt limit
+% at frame 36 (16383.99/455.24pt). Requiring >1 skips the bar on the first pass,
+% and min(1,...) clamps it in case the count is ever stale.
 \mode<beamer>{%
     \defbeamertemplate{footline}{progress bar}{%
         \leavevmode%
@@ -159,15 +164,15 @@
             \begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
                 \begin{tikzpicture}[overlay,remember picture]
                     \pgfmathsetlengthmacro{\halfheight}{0.68mm}% circle radius = half bar height
-                    \ifnum\inserttotalframenumber>0
+                    \ifnum\inserttotalframenumber>1
                         \pgfmathsetlengthmacro{\progressx}{%
-                            (\insertframenumber/\inserttotalframenumber)*\paperwidth}%
+                            min(1,\insertframenumber/\inserttotalframenumber)*\paperwidth}%
                         % circle scrubbing along the bar at the current frame
                         \draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
                         % break marker tick — only present after \saveframenumber has been called
                         \ifnum\myframenumber>0
                             \pgfmathsetlengthmacro{\markx}{%
-                                (\myframenumber/\inserttotalframenumber)*\paperwidth}%
+                                min(1,\myframenumber/\inserttotalframenumber)*\paperwidth}%
                             \draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
                         \fi
                     \fi
@@ -840,14 +845,14 @@
     \end{tikzpicture}%
 \end{frame}
 
-% After this frame, it's a good time for a break in the UPE lecture, so save us the frame number
+% After this frame, it's a good time for a break in the UPE lecture, so save us the frame number after it
 \begin{frame}
     \frametitle{Visualization}
-    \saveframenumber
     \begin{itemize}
         \item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
     \end{itemize}
 \end{frame}
+\saveframenumber
 
 \subsection{Demo}
 
