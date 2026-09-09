@@ -7,7 +7,7 @@
 \institute{Institute of Anatomy}
 \date{September 15, 2026}
 
-\newcommand{\everyframe}{123456}
+\newcommand{\everyframe}{1}
 
 %\includeonlyframes{current}
 %then....
@@ -132,6 +132,10 @@
 
 % Complementary to ubRed (#e4003c), defined in the theme .sty
 \definecolor{ubRedComplementary}{HTML}{00E3A6}
+
+% Notes always on white, regardless of the notes mode
+\setbeamercolor{note page}{bg=white}
+\setbeamercolor{note date}{bg=white}
 
 \tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
 \tikzset{every picture/.style={thick}}% globally thicker lines
