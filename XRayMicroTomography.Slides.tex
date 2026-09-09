@@ -136,13 +136,36 @@
 \tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
 \tikzset{every picture/.style={thick}}% globally thicker lines
 
-% Break marker: place \saveframenumber after the slide before the break.
-% Writes the current frame number to \jobname.mkr; on the *next* run that
-% value is read back and drawn as a tick on the progress bar.
-% (Two compilations needed: first run writes the file, second reads it.)
+% Progress bar marker
+\usepackage{xfp} % For robust math calculations
+% Setup dimensions
+\newlength{\barstart}
+\setlength{\barstart}{15.2mm} % beamerouterthemeubbeamer2023.sty:\setbeamersize{text margin left=15.2mm}
+\newlength{\barend}
+\setlength{\barend}{\paperwidth - 6mm} % beamerouterthemeubbeamer2023.sty: \put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}
+\newlength{\barmaxwidth}
+\setlength{\barmaxwidth}{\barend - \barstart}
+
+% Total frame count for the bar.
+% \appendix is patched to record the frame number into the .aux
+% Read back on the next run; until then the bar simply isn't drawn.
+\providecommand{\appendixframeno}{1}
+\makeatletter
+\AtBeginDocument{%
+    \let\pb@origappendix\appendix
+    \renewcommand{\appendix}{%
+        \immediate\write\@auxout{\gdef\string\appendixframeno{\the\c@framenumber}}%
+        \pb@origappendix}%
+}
+\makeatother
+
+% Break marker: \saveframenumber writes the frame number to \jobname.mkr; on the
+% next run it is read back and drawn as a white tick on the bar.
+% Use \saveframenumber *after* the slide where you'd like to make a break.
+% This is marked with a white line in the top bar.
 \makeatletter
 \newwrite\@markerout
-\newcommand{\myframenumber}{-1}% -1 = no marker; overwritten by .mkr if present
+\providecommand{\myframenumber}{-1}% -1 = no marker
 \AtBeginDocument{\InputIfFileExists{\jobname.mkr}{}{}}
 \newcommand{\saveframenumber}{%
     \immediate\openout\@markerout=\jobname.mkr%
@@ -151,37 +174,33 @@
 }
 \makeatother
 
-% Footline: thin progress bar matching the UniBe header rule (1.36 mm tall)
-% NOTE: beamer defaults \inserttotalframenumber to 1 (beamerbasemisc.sty), and the
-% real value only arrives via the .nav file. On a clean build the ratio therefore
-% grows without bound and \pgfmathsetlengthmacro overflows TeX's 16383.99pt limit
-% at frame 36 (16383.99/455.24pt). Requiring >1 skips the bar on the first pass,
-% and min(1,...) clamps it in case the count is ever stale.
-\mode<beamer>{%
-    \defbeamertemplate{footline}{progress bar}{%
-        \leavevmode%
-        \hbox{%
-            \begin{beamercolorbox}[wd=\paperwidth,ht=1.36mm,dp=0pt]{}%
-                \begin{tikzpicture}[overlay,remember picture]
-                    \pgfmathsetlengthmacro{\halfheight}{0.68mm}% circle radius = half bar height
-                    \ifnum\inserttotalframenumber>1
-                        \pgfmathsetlengthmacro{\progressx}{%
-                            min(1,\insertframenumber/\inserttotalframenumber)*\paperwidth}%
-                        % circle scrubbing along the bar at the current frame
-                        \draw[ubRed,fill=white] (\progressx,\halfheight) circle (\halfheight);
-                        % break marker tick — only present after \saveframenumber has been called
-                        \ifnum\myframenumber>0
-                            \pgfmathsetlengthmacro{\markx}{%
-                                min(1,\myframenumber/\inserttotalframenumber)*\paperwidth}%
-                            \draw[ubRed] (\markx,0) -- (\markx,2*\halfheight);
-                        \fi
+% The actual progress bar command
+\makeatletter
+    \newcommand{\myprogressbar}{%
+        \ifnum\insertframenumber>2
+            % Prefer the frozen pre-appendix count; fall back to beamer's own total if there
+            % is no \appendix. Either way, don't draw until a plausible total is known.
+            \edef\pb@total{\appendixframeno}%
+            \ifnum\pb@total>3\else\edef\pb@total{\inserttotalframenumber}\fi
+            \ifnum\pb@total>3
+                \begin{tikzpicture}[remember picture, overlay]
+                    % Calculate Ratio using xfp (Current - 3) / (End - 3)
+                    % We want to start the marker at frame three, after UB logo and title frame
+                    \edef\ratio{\fpeval{min(max((\insertframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
+                    % Break marker first, so the position circle sits on top of it
+                    \ifnum\myframenumber>2
+                        \edef\markratio{\fpeval{min(max((\myframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
+                        \draw[white, line width=0.4mm] (\barstart + \markratio\barmaxwidth, 0) -- ++(0, -1.36mm);
                     \fi
+                    % Draw a circle as marker in the red top bar
+                    \fill[white] (\barstart + \ratio\barmaxwidth, -0.68mm) circle (0.68mm); % 0.68 is 1.36/2
                 \end{tikzpicture}
-            \end{beamercolorbox}%
-        }%
-    }%
-    \setbeamertemplate{footline}[progress bar]%
-}%
+            \fi
+        \fi
+    }
+\makeatother
+% Set the progress bar as header, only in presentation mode
+\mode<beamer>{\setbeamertemplate{headline}{\myprogressbar}}
 
 % Show section ToC at the start of each section (presentation mode only)
 \mode<beamer>{%
