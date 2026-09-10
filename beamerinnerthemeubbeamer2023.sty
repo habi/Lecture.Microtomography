@@ -1,0 +1,53 @@
+%%
+%% This is file `beamerinnerthemeubbeamer2023.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ubbeamer2023.dtx  (with options: `inner')
+%% This is a generated file.
+%% 
+%% Copyright 2023 Univeristy of Bern
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in:
+%% 
+%%     https://www.latex-project.org/lppl.txt
+%% 
+
+\mode<presentation>
+\RequirePackage{calc}
+
+\defbeamertemplate*{title page}{ubbeamer2023}{%
+    \vspace*{2.9mm}
+    {\usebeamerfont*{title}\usebeamercolor[fg]{title}\inserttitle\par}
+    \ifx\insertsubtitle\@empty\else{\usebeamerfont*{subtitle}\insertsubtitle\par}\fi
+    {\vspace{3.7mm}\usebeamerfont{author}\insertauthor\par}
+    {\usebeamerfont{institute}\insertinstitute, \insertdate\par}
+    \vspace*{\stretch{9999}}
+}
+
+\defbeamertemplate*{headline}{ubbeamer2023}{} % remove headline
+
+\defbeamertemplate*{frametitle}{ubbeamer2023}{
+    \begin{minipage}[b]{\textwidth}
+    \raggedright
+    \vspace{5.6mm}
+    {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\par}
+    {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}
+    \end{minipage}
+}
+\defbeamertemplate*{itemize item}{ubbeamer2023}{\rule[1mm]{2.5mm}{0.3mm}}
+\defbeamertemplate*{itemize subitem}{ubbeamer2023}{\rule[1mm]{2.5mm}{0.3mm}}
+\defbeamertemplate*{itemize subsubitem}{ubbeamer2023}{\rule[1mm]{2.5mm}{0.3mm}}
+\setlength{\leftmargini}{4.3mm}
+\setlength{\leftmarginii}{4.4mm}
+\setlength{\leftmarginiii}{4.4mm}
+\mode<all>
+
+
+\endinput
+%%
+%% End of file `beamerinnerthemeubbeamer2023.sty'.

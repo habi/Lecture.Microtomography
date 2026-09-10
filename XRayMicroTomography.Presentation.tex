@@ -1,6 +1,7 @@
-% Compile with:
-% latexmk -pdf -pvc -interaction=nonstopmode *Pres*.tex
-%\documentclass[aspectratio=169,draft]{beamer}
-\documentclass[aspectratio=169]{beamer}
-%\documentclass[aspectratio=169,draft]{beamer}
+\RequirePackage[l2tabu,orthodox]{nag}
+% Compile with the command below to get compilation-on-save-and-preview-in-zathura-on-linux-through-the-.latexmkrc
+% latexmk -pvc -interaction=nonstopmode *Pres*.tex
+\documentclass[aspectratio=169,10pt,onlytextwidth]{beamer}
+%\documentclass[aspectratio=169,10pt,onlytextwidth,draft]{beamer}
+\setbeameroption{show notes on second screen}
 \input{XRayMicroTomography.Slides.tex}

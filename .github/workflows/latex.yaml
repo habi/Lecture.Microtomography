@@ -1,4 +1,4 @@
-name: Build LaTeX & upload handout
+name: Build LaTeX & upload handout and presentation
 
 on:
   push:
@@ -21,20 +21,28 @@ jobs:
         with:
           root_file: XRayMicroTomography.Handout.tex
 
-      - name: Verify generated PDF
+      - name: Compile presentation
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: XRayMicroTomography.Presentation.tex
+
+      - name: Verify generated PDFs
         run: |
           file XRayMicroTomography.Handout.pdf
           file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
+          file XRayMicroTomography.Presentation.pdf
+          file XRayMicroTomography.Presentation.pdf | grep -q ' PDF '
 
       - name: Prepare deployment
         run: |
           rm -rf _site
           mkdir -p _site
           cp XRayMicroTomography.Handout.pdf _site/
+          cp XRayMicroTomography.Presentation.pdf _site/
           echo "Files to deploy:"
           find _site -maxdepth 1 -type f -ls
 
-      - name: Deploy handout PDF to gh-pages branch
+      - name: Deploy handout and presentation PDFs to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,4 +50,4 @@ jobs:
           publish_dir: ./_site
           keep_files: false
           force_orphan: true
-          commit_message: Deploy new version of presentation handout to gh-pages
+          commit_message: Deploy new versions of handout and presentation to gh-pages
