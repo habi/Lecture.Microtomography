@@ -1,0 +1,200 @@
+\usepackage{microtype}
+\usepackage{csquotes}% load before biblatex
+\usepackage{xspace}
+%\usepackage[defaultmathsizes,symbolgreek]{mathastext}
+\usepackage{siunitx}
+\sisetup{
+    mode=match,
+    range-phrase={--},
+    range-units=single,
+    per-mode=symbol,
+}
+\usepackage[version=4]{mhchem}
+\usepackage{standalone}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{shadows,spy,calc}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{shadowtext}
+\shadowoffset{1pt}
+\shadowcolor{ubRed}
+\usepackage{animate}
+\usepackage{qrcode}
+\usepackage{ccicons}
+\usepackage{fontawesome5}
+\usepackage[eulergreek]{sansmath}
+\pgfplotsset{
+    compat=1.18,
+    tick label style={font=\sansmath\sffamily},
+    every axis label={font=\sansmath\sffamily},
+    legend style={font=\sansmath\sffamily},
+    label style={font=\sansmath\sffamily},
+}
+\usepackage{booktabs}
+\usepackage{colortbl}% load before listings to prevent macro conflicts
+\usepackage{multirow}
+\usepackage{listings}
+\lstset{basicstyle=\scriptsize\ttfamily,breaklines=true}
+\usepackage{lstlinebgrd}
+% Compatibility fix for lstlinebgrd with LaTeX kernels >= 2021-11-15
+\makeatletter
+\let\old@lst@linebgrd\lst@linebgrd
+\def\lst@linebgrd{\lst@basicstyle\old@lst@linebgrd}
+\makeatother
+\usepackage[%
+    backend=biber,%
+    sorting=none,%
+    backref=true,%
+    backrefstyle=none,%
+    citetracker=true,%
+    isbn=false,%
+    url=false,%
+    maxnames=1,minnames=1,% Show only first author in references
+]{biblatex}
+% show "cited on slide(s) <numbers>" in bibliography
+\DefineBibliographyStrings{english}{%
+    backrefpage={slide},%
+    backrefpages={slide}%
+}
+\renewbibmacro*{pageref}{%
+    \iflistundef{pageref}%
+        {}%
+        {\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}%
+}
+\renewbibmacro{in:}{}% no "In" in bibliography
+\DeclareSourcemap{%
+    \maps[datatype=bibtex]{%
+        \map{%
+            \step[fieldset=journal,null]%
+            \step[fieldset=editor,null]%
+            \step[fieldset=publisher,null]%
+            \step[fieldset=series,null]%
+            \step[fieldset=volume,null]%
+            \step[fieldset=number,null]%
+            \step[fieldset=pages,null]%
+        }%
+    }%
+}
+\addbibresource{../../../../Documents/library.bib}
+\usepackage[local]{gitinfo2}
+\usepackage[%
+    english,%
+    showseconds=false,%
+    showzone=false%
+]{datetime2}
+\DTMsettimestyle{iso}
+\usepackage{appendixnumberbeamer}% do not count appendix frames in total frame count
+
+\newlength\imagescale% needed for scalebars
+\newcommand{\uct}{{\textmu}CT\xspace}
+\newcommand{\eg}{e.\,g.\xspace}
+\newcommand{\ie}{i.\,e.\xspace}
+% Image dimensions — use \renewcommand{\imagewidth}{...} on slides that need a different size
+\newcommand{\imagewidth}{\linewidth}
+\newcommand{\standardimagewidth}{\linewidth}
+\newcommand{\imageheight}{0.72\paperheight}
+\newcommand{\standardimageheight}{0.72\paperheight}
+
+% Image attributions: place immediately after \includegraphics, flush right
+\newcommand{\source}[2]{%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny\href{https://#1}{#1} #2}}%
+}
+\newcommand{\sourcecite}[2]{%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny From~\cite{#1}, #2}}%
+}
+\newcommand{\sourcelink}[3]{%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny\href{#1}{#2}, #3}}%
+}
+\newcommand{\citeslide}[5]{% slideimage, lecturelink, lecturetitle, author, page
+    \fboxsep=0pt%
+    \fcolorbox{ubRed!62}{white}{\includegraphics[%
+        width=\linewidth,height=\imageheight,keepaspectratio]{#1}}%
+    \raisebox{-1.618ex}{\makebox[0pt][r]{%
+        \tiny\href{#2}{\emph{#3} by #4}, Slide #5}}%
+}
+
+% Complementary to ubRed (#e4003c), defined in the theme .sty
+\definecolor{ubRedComplementary}{HTML}{00E3A6}
+
+% Notes always on white, regardless of the notes mode
+\setbeamercolor{note page}{bg=white}
+\setbeamercolor{note date}{bg=white}
+
+\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
+\tikzset{every picture/.style={thick}}% globally thicker lines
+
+% Progress bar marker
+\usepackage{xfp} % For robust math calculations
+% Setup dimensions
+\newlength{\barstart}
+\setlength{\barstart}{15.2mm} % beamerouterthemeubbeamer2023.sty:\setbeamersize{text margin left=15.2mm}
+\newlength{\barend}
+\setlength{\barend}{\paperwidth - 6mm} % beamerouterthemeubbeamer2023.sty: \put(15.2,-1.36){\usebeamercolor[fg]{ub page rule}\rule{\paperwidth-21.2mm}{1.36mm}}
+\newlength{\barmaxwidth}
+\setlength{\barmaxwidth}{\barend - \barstart}
+
+% Total frame count for the bar.
+% \appendix is patched to record the frame number into the .aux
+% Read back on the next run; until then the bar simply isn't drawn.
+\providecommand{\appendixframeno}{1}
+\makeatletter
+\AtBeginDocument{%
+    \let\pb@origappendix\appendix
+    \renewcommand{\appendix}{%
+        \immediate\write\@auxout{\gdef\string\appendixframeno{\the\c@framenumber}}%
+        \pb@origappendix}%
+}
+\makeatother
+
+% Break marker: \saveframenumber writes the frame number to \jobname.mkr; on the
+% next run it is read back and drawn as a white tick on the bar.
+% Use \saveframenumber *after* the slide where you'd like to make a break.
+% This is marked with a white line in the top bar.
+\makeatletter
+\newwrite\@markerout
+\providecommand{\myframenumber}{-1}% -1 = no marker
+\AtBeginDocument{\InputIfFileExists{\jobname.mkr}{}{}}
+\newcommand{\saveframenumber}{%
+    \immediate\openout\@markerout=\jobname.mkr%
+    \immediate\write\@markerout{\gdef\string\myframenumber{\insertframenumber}}%
+    \immediate\closeout\@markerout%
+}
+\makeatother
+
+% The actual progress bar command
+\makeatletter
+    \newcommand{\myprogressbar}{%
+        \ifnum\insertframenumber>2
+            % Prefer the frozen pre-appendix count; fall back to beamer's own total if there
+            % is no \appendix. Either way, don't draw until a plausible total is known.
+            \edef\pb@total{\appendixframeno}%
+            \ifnum\pb@total>3\else\edef\pb@total{\inserttotalframenumber}\fi
+            \ifnum\pb@total>3
+                \begin{tikzpicture}[remember picture, overlay]
+                    % Calculate Ratio using xfp (Current - 3) / (End - 3)
+                    % We want to start the marker at frame three, after UB logo and title frame
+                    \edef\ratio{\fpeval{min(max((\insertframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
+                    % Break marker first, so the position circle sits on top of it
+                    \ifnum\myframenumber>2
+                        \edef\markratio{\fpeval{min(max((\myframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
+                        \draw[white, line width=0.4mm] (\barstart + \markratio\barmaxwidth, 0) -- ++(0, -1.36mm);
+                    \fi
+                    % Draw a circle as marker in the red top bar
+                    \fill[white] (\barstart + \ratio\barmaxwidth, -0.68mm) circle (0.68mm); % 0.68 is 1.36/2
+                \end{tikzpicture}
+            \fi
+        \fi
+    }
+\makeatother
+% Set the progress bar as header, only in presentation mode
+\mode<beamer>{\setbeamertemplate{headline}{\myprogressbar}}
+
+% Show section ToC at the start of each section (presentation mode only)
+\mode<beamer>{%
+    \AtBeginSection[]{%
+        \begin{frame}{Contents}%
+            \tableofcontents[currentsection,currentsubsection,hideothersubsections]%
+        \end{frame}%
+    }%
+}%
