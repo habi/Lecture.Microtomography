@@ -9,7 +9,7 @@ Since These courses differ in the time allotted, I've made [Git branches](https:
 The slides are generated in [LaTeX](https://www.latex-project.org/)/[beamer](https://bitbucket.org/rivanvx/beamer/wiki/Home) with a slightly tweaked [official Beamer template of the University of Bern](http://intern.unibe.ch/dienstleistungen/corporate_design_und_vorlagen/praesentationen/index_ger.html) and are automatically compiled into a PDF with a [GitHub action](https://github.com/xu-cheng/latex-action).
 
 If all goes well, you should be able to access the [resulting *handout* PDF here](https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Handout.pdf).
-This PDF corresponds to the last (successfully compiled and committed version, and thus should be the one that I presented.
+This PDF corresponds to the last (successfully compiled and) committed version, and thus should be the one that I presented.
 
 ----
 
