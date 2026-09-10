@@ -20,6 +20,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: XRayMicroTomography.Handout.tex
+          latexmk_use_lualatex: true
 
       - name: Verify generated PDF
         run: |
