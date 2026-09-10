@@ -2,7 +2,8 @@
 require './perl/gitinfo2.pm';
 
 # Exclude the slides file from default build: https://tex.stackexchange.com/a/233796
-@default_excluded_files = ( '*Slides.tex' );
+@default_excluded_files = ( 'preamble.tex', '*Slides.tex' );
+
 
 # use `lualatex` by default, so we don't run into memory errors: https://tex.stackexchange.com/a/356432
 # And halt on errors if there are any

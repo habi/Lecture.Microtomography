@@ -59,8 +59,8 @@
 }
 \renewbibmacro*{pageref}{%
     \iflistundef{pageref}%
-        {}%
-        {\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}%
+    {}%
+    {\printtext[parens]{\bibstring{backrefpages}\addspace\printlist{pageref}}}%
 }
 \renewbibmacro{in:}{}% no "In" in bibliography
 \DeclareSourcemap{%
@@ -109,9 +109,9 @@
 \newcommand{\citeslide}[5]{% slideimage, lecturelink, lecturetitle, author, page
     \fboxsep=0pt%
     \fcolorbox{ubRed!62}{white}{\includegraphics[%
-        width=\linewidth,height=\imageheight,keepaspectratio]{#1}}%
+    width=\linewidth,height=\imageheight,keepaspectratio]{#1}}%
     \raisebox{-1.618ex}{\makebox[0pt][r]{%
-        \tiny\href{#2}{\emph{#3} by #4}, Slide #5}}%
+    \tiny\href{#2}{\emph{#3} by #4}, Slide #5}}%
 }
 
 % Complementary to ubRed (#e4003c), defined in the theme .sty
@@ -143,7 +143,7 @@
     \let\pb@origappendix\appendix
     \renewcommand{\appendix}{%
         \immediate\write\@auxout{\gdef\string\appendixframeno{\the\c@framenumber}}%
-        \pb@origappendix}%
+    \pb@origappendix}%
 }
 \makeatother
 
@@ -164,28 +164,28 @@
 
 % The actual progress bar command
 \makeatletter
-    \newcommand{\myprogressbar}{%
-        \ifnum\insertframenumber>2
-            % Prefer the frozen pre-appendix count; fall back to beamer's own total if there
-            % is no \appendix. Either way, don't draw until a plausible total is known.
-            \edef\pb@total{\appendixframeno}%
-            \ifnum\pb@total>3\else\edef\pb@total{\inserttotalframenumber}\fi
-            \ifnum\pb@total>3
-                \begin{tikzpicture}[remember picture, overlay]
-                    % Calculate Ratio using xfp (Current - 3) / (End - 3)
-                    % We want to start the marker at frame three, after UB logo and title frame
-                    \edef\ratio{\fpeval{min(max((\insertframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
-                    % Break marker first, so the position circle sits on top of it
-                    \ifnum\myframenumber>2
-                        \edef\markratio{\fpeval{min(max((\myframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
-                        \draw[white, line width=0.4mm] (\barstart + \markratio\barmaxwidth, 0) -- ++(0, -1.36mm);
-                    \fi
-                    % Draw a circle as marker in the red top bar
-                    \fill[white] (\barstart + \ratio\barmaxwidth, -0.68mm) circle (0.68mm); % 0.68 is 1.36/2
-                \end{tikzpicture}
-            \fi
+\newcommand{\myprogressbar}{%
+    \ifnum\insertframenumber>2
+    % Prefer the frozen pre-appendix count; fall back to beamer's own total if there
+    % is no \appendix. Either way, don't draw until a plausible total is known.
+    \edef\pb@total{\appendixframeno}%
+    \ifnum\pb@total>3\else\edef\pb@total{\inserttotalframenumber}\fi
+    \ifnum\pb@total>3
+    \begin{tikzpicture}[remember picture, overlay]
+        % Calculate Ratio using xfp (Current - 3) / (End - 3)
+        % We want to start the marker at frame three, after UB logo and title frame
+        \edef\ratio{\fpeval{min(max((\insertframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
+        % Break marker first, so the position circle sits on top of it
+        \ifnum\myframenumber>2
+        \edef\markratio{\fpeval{min(max((\myframenumber - 3) / max(\pb@total - 3, 1), 0), 1)}}
+        \draw[white, line width=0.4mm] (\barstart + \markratio\barmaxwidth, 0) -- ++(0, -1.36mm);
         \fi
-    }
+        % Draw a circle as marker in the red top bar
+        \fill[white] (\barstart + \ratio\barmaxwidth, -0.68mm) circle (0.68mm); % 0.68 is 1.36/2
+    \end{tikzpicture}
+    \fi
+    \fi
+}
 \makeatother
 % Set the progress bar as header, only in presentation mode
 \mode<beamer>{\setbeamertemplate{headline}{\myprogressbar}}
