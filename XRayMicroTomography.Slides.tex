@@ -693,23 +693,21 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}
+  % After this frame, it's a good time for a break in the UPE lecture, so save us the frame number after it
+  \begin{frame}[allowframebreaks]
     \frametitle{Visualization}
-    \begin{tikzpicture}[remember picture,overlay]
-        \node at (current page.center) {%
-            \mode<beamer>{\animategraphics[autoplay,loop,height=0.98\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
-            \mode<handout>{\includegraphics[height=0.98\paperheight]{./movies/scan/visualization/lung000}}%
-        };
+    \begin{tikzpicture}[remember picture,overlay]%
+    \node at (current page.center){%
+      \mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
+      \mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
+      };%
     \end{tikzpicture}%
-\end{frame}
-
-% After this frame, it's a good time for a break in the UPE lecture, so save us the frame number after it
-\begin{frame}
-    \frametitle{Visualization}
+    \pagebreak
     \begin{itemize}
-        \item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
+      \item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
     \end{itemize}
-\end{frame}
+  \end{frame}
+
 \saveframenumber
 
 \subsection{Demo}
