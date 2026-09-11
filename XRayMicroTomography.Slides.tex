@@ -654,42 +654,40 @@
     \sourcelink{ilias.unibe.ch/goto_ilias3_unibe_sess_2466922.html}{\emph{Contrast, Magnification and Resolution---Laws of Physics for Microscopists (1, 2022)} by Martin Frenz}{Slide 21}%
 \end{frame}
 
-\begin{frame}
-    \frametitle{Projections}
+\begin{frame}[allowframebreaks]
+    \frametitle{Acquisition}
     \centering%
     % Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
-    \mode<beamer>{\animategraphics[autoplay,loop,height=\imageheight,every=\everyframe]{24}{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_}{000}{359}}
-    \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_180}}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Projections}
+    \mode<beamer>{\animategraphics[autoplay,loop,height=\imageheight,every=\everyframe]{24}{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_}{000}{313}}%
+    \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/projections/KP-TNIKWT02_360_projections_of_940_800_px_000}}%
+    % Movie downloaded from https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs, sligthly cropped in ImageJ, saved out and PNG images and piped through oxipng
+    \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{6}{./movies/scan/acquisition/TOMO_gif_CT_signed00}{00}{91}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+    \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/acquisition/TOMO_gif_CT_signed0020}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+    \framebreak
     \begin{itemize}
-        \item A (micro-focus) x-ray source illuminates the object
-        \item The x-rays penetrate the sample and are attenuated
-        \item A scintillator converts the x-rays to visible light
-        \item A (planar) x-ray detector collects (magnified) projection images
-        \item The projections are recorded on disk
+      \item A (micro-focus) x-ray source illuminates the object
+      \item The x-rays penetrate the sample and are attenuated
+      \item A scintillator converts the x-rays to visible light
+      \item A (planar) x-ray detector collects (magnified) projection images.
+      \item The projections are recorded on disk
     \end{itemize}
-\end{frame}
+  \end{frame}
 
-\begin{frame}
+  \begin{frame}[allowframebreaks]
     \frametitle{Reconstructions}
     \centering%
-    % Movie frames generated with https://github.com/habi/Lecture.Microtomography/blob/master/Notebooks/FromProjectionsToReconstructions.ipynb
-    \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{359}}
-    \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_180}}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Reconstructions}
+    % Movie downloaded from https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs, sligthly cropped in ImageJ, saved out and PNG images and piped through oxipng
+    \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{3}{./movies/scan/sinogram/TOMO_FBP_gif_CT_signed00}{00}{61}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+    \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/sinogram/TOMO_FBP_gif_CT_signed0055}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
+    \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{277}}%
+    \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_100}}%
     \begin{itemize}
-        \item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
-        \item Radon Transformation
-        \item Filtered back projection
-        \item Cone beam reconstruction~\cite{Feldkamp1984}
-        \item Corrections (beam hardening, etc.)
-        \item Writing to stack
+      \item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
+      \item Radon Transformation
+      \item Filtered back projection
+      \item Cone beam reconstruction~\cite{Feldkamp1984}
+      \item Corrections (beam hardening, etc.)
+      \item Writing to stack
     \end{itemize}
 \end{frame}
 
