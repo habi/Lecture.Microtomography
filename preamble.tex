@@ -106,6 +106,14 @@
 \newcommand{\sourcelink}[3]{%
     \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny\href{#1}{#2}, #3}}%
 }
+\newcommand{\sourceqr}[1]{%
+  % Cite (an image from) a (long) URL with a QR code
+  \raisebox{0.385cm}{%
+    \makebox[0pt][l]{%
+      \qrcode[height=1cm]{#1}%
+      }%
+    }%
+  }%
 \newcommand{\citeslide}[5]{% slideimage, lecturelink, lecturetitle, author, page
     \fboxsep=0pt%
     \fcolorbox{ubRed!62}{white}{\includegraphics[%
