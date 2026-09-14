@@ -1164,20 +1164,24 @@
     }%
     \only<2|handout:2>{%
         % Show PJ
-        \mode<beamer>{\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.0}{000}{480}}%
+        % Since the animation is too slow, we specifically set it double speed here
+        \mode<beamer>{\animategraphics[autoplay,width=\imagewidth,every=\numexpr2*\everyframe\relax]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.0}{000}{480}}%
         \mode<handout>{\includegraphics[width=\imagewidth]{./movies/EAWAG/animation.head/104016.head.rec.animation.0480}}%
     }%
     \only<3|handout:0>{%
         % Show full head again
-        \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0481}{0960}%
+        % Since the animation is too slow, we specifically set it double speed here
+        \animategraphics[autoplay,width=\imagewidth,every=\numexpr2*\everyframe\relax]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0481}{0960}%
     }%
     \only<4|handout:0>{%
         % Zoom to otolith
-        \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0961}{1440}%
+        % Since the animation is too slow, we specifically set it double speed here
+        \animategraphics[autoplay,width=\imagewidth,every=\numexpr2*\everyframe\relax]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{0961}{1440}%
     }%
     \only<5|handout:0>{%
-        %Move to PJ
-        \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{1441}{1920}%
+        % Move to PJ
+        % Since the animation is too slow, we specifically set it double speed here
+        \animategraphics[autoplay,width=\imagewidth,every=\numexpr2*\everyframe\relax]{24}{./movies/EAWAG/animation.head/104016.head.rec.animation.}{1441}{1920}%
     }%
     \note[item]<1>{Fish 104016, Scan head\_rec; This fish was scanned on 2022-01-27T13:32:59 on the SkyScan2214, with a voxel size of \qty{13.0}{\micro\meter}.}%
     \note[item]<1>{The eye has a diameter of approximately \qty{6}{\milli\meter}.}%
@@ -1204,10 +1208,12 @@
         \end{tikzpicture}%
     }%
     \only<3|handout:0>{%
-        \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.0}{000}{700}%
+        % Since the animation is too slow, we specifically set it double speed here
+        \animategraphics[autoplay,width=\imagewidth,every=\numexpr2*\everyframe\relax]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.0}{000}{700}%
     }%
     \only<4|handout:0>{%
-        \animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.}{0701}{1440}%
+        % Since the animation is too slow, we specifically set it double speed here
+        \animategraphics[autoplay,width=\imagewidth,every=\numexpr2*\everyframe\relax]{24}{./movies/EAWAG/animation.pj/104016.pj.animation.}{0701}{1440}%
     }%
     \note[item]<1|handout:1>{Fish 104016, Scan pharynx\_rec; This fish was scanned on 2021-02-04T13:30:11 on the SkyScan1272, with a voxel size of \qty{5.0}{\micro\meter}.}%
     \note[item]<1|handout:1>{The distance between the two ends at the top is approximately \qty{5}{\milli\meter}.}%
