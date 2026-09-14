@@ -12,5 +12,4 @@ jobs:
       - uses: actions/checkout@v6
       - uses: jolars/badness-action@v1
         with:
-          path: *.tex
-          format: "false"
+          args: lint '*.tex'
