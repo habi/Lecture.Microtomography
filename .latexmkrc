@@ -11,7 +11,7 @@ require './perl/gitinfo2.pm';
 # use `lualatex` by default, so we don't run into memory errors: https://tex.stackexchange.com/a/356432
 # And halt on errors if there are any
 $pdf_mode = 4;  # LuaLaTeX
-$lualatex = 'lualatex -halt-on-error %O %S';
+$lualatex = 'lualatex -halt-on-error -file-line-error %O %S';
 
 # Clean more stuff in addition to our standard ~/.latexmkrc
 $clean_ext .= ' mkr nav snm';
