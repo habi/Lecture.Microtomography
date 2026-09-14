@@ -1,21 +1,56 @@
+% ==============================================================================
+% 1. FONTS & BEAMER MATH CONFIGURATION
+% ==============================================================================
+\usefonttheme{professionalfonts}
+\setbeamerfont{table}{family=\sffamily}
+\usepackage[defaultmathsizes]{mathastext}
 \usepackage{microtype}
+
+% ==============================================================================
+% 1. FONTS & BEAMER MATH CONFIGURATION
+% ==============================================================================
+\usefonttheme{professionalfonts}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[defaultmathsizes]{mathastext}
+\usepackage{microtype}
+
+% ==============================================================================
+% 2. UTILITIES & CONVENIENCE MACROS
+% ==============================================================================
 \usepackage{csquotes}% load before biblatex
 \usepackage{xspace}
-%\usepackage[defaultmathsizes,symbolgreek]{mathastext}
+\usepackage{standalone}
+\usepackage{appendixnumberbeamer}% do not count appendix frames in total frame count
+
+% ==============================================================================
+% 3. UNITS & CHEMISTRY
+% ==============================================================================
 \usepackage{siunitx}
 \sisetup{
-    mode=match,
+    mode=text,
+    reset-math-version = false,
     range-phrase={--},
     range-units=single,
     per-mode=symbol,
 }
 \usepackage[version=4]{mhchem}
-\usepackage{standalone}
+
+% ==============================================================================
+% 4. GRAPHICS, TIKZ & PGFPLOTS
+% ==============================================================================
 \usepackage{caption}
 \usepackage{tikz}
 \usetikzlibrary{shadows,spy,calc}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{pgfplotstable}
+\pgfplotstableset{
+    col sep=comma,
+    every column/.style={string type},
+    every head row/.style={before row={\toprule}},
+    every row no 0/.style={after row=\midrule},
+    every last row/.style={after row=\bottomrule}
+}
 \usepackage{shadowtext}
 \shadowoffset{1pt}
 \shadowcolor{ubRed}
@@ -23,14 +58,10 @@
 \usepackage{qrcode}
 \usepackage{ccicons}
 \usepackage{fontawesome5}
-\usepackage[eulergreek]{sansmath}
-\pgfplotsset{
-    compat=1.18,
-    tick label style={font=\sansmath\sffamily},
-    every axis label={font=\sansmath\sffamily},
-    legend style={font=\sansmath\sffamily},
-    label style={font=\sansmath\sffamily},
-}
+
+% ==============================================================================
+% 5. TABLES & CODE LISTINGS
+% ==============================================================================
 \usepackage{booktabs}
 \usepackage{colortbl}% load before listings to prevent macro conflicts
 \usepackage{multirow}
@@ -42,6 +73,10 @@
 \let\old@lst@linebgrd\lst@linebgrd
 \def\lst@linebgrd{\lst@basicstyle\old@lst@linebgrd}
 \makeatother
+
+% ==============================================================================
+% 6. BIBLIOGRAPHY & CITATIONS
+% ==============================================================================
 \usepackage[%
     backend=biber,%
     sorting=none,%
@@ -77,6 +112,10 @@
     }%
 }
 \addbibresource{../../../../Documents/library.bib}
+
+% ==============================================================================
+% 7. VERSION CONTROL & METADATA
+% ==============================================================================
 \usepackage[local]{gitinfo2}
 \usepackage[%
     english,%
@@ -84,8 +123,10 @@
     showzone=false%
 ]{datetime2}
 \DTMsettimestyle{iso}
-\usepackage{appendixnumberbeamer}% do not count appendix frames in total frame count
 
+% ==============================================================================
+% 8. CUSTOM MACROS & COLOR DEFINITIONS
+% ==============================================================================
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}
 \newcommand{\eg}{e.\,g.\xspace}
@@ -132,6 +173,9 @@
 \tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRed}}}
 \tikzset{every picture/.style={thick}}% globally thicker lines
 
+% ==============================================================================
+% 9. BEAMER PROGRESS BAR & NAVIGATION TEMPLATES
+% ==============================================================================
 % Progress bar marker
 \usepackage{xfp} % For robust math calculations
 % Setup dimensions
@@ -195,6 +239,7 @@
     \fi
 }
 \makeatother
+
 % Set the progress bar as header, only in presentation mode
 \mode<beamer>{\setbeamertemplate{headline}{\myprogressbar}}
 
