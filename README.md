@@ -63,4 +63,4 @@ If you set up the repository on a new machine:
 [^1]: On Linux, check out the repository in `/media/habi/Fast_SSD/Talks/Lectures/`, then run `ln -s /home/habi/P/Documents/library.bib /media/habi/Fast_SSD/Documents/library.bib`.
       On macOS, check out the repository in `~/Dev/Talks/` on macOS plus using Zotero to save `library.bib` into `~/Documents/library.bib`.
       Then all should just work if you follow the rest of the setup with `git worktree` on both machines, too.
-[^2]: And [the presentation PDF](https://habi.github.io/Lecture.Microtomography/XRayMicroTomography.Presentation.pdf) as a backup, but that is evident if you looked at the [GitHub Action](https://github.com/habi/Lecture.Microtomography/blob/main/.github/workflows/latex.yaml).
+[^2]: And [the presentation PDF](https://github.com/habi/Lecture.Microtomography/releases/download/presentation-backup/XRayMicroTomography.Presentation.pdf) as a backup, but that is evident if you looked at the [GitHub Action](https://github.com/habi/Lecture.Microtomography/blob/main/.github/workflows/latex.yaml).
