@@ -87,16 +87,16 @@
 
 \begin{frame}{Learning objectives}
     \begin{itemize}
-      \item How does (micro) computed tomography work?
-      \item How do you actually see things in your sample?
-      \begin{itemize}
-        \item How do you get contrast?
-        \item How do you scan your sample to be able to see what you want to see?
-        \item How do you need to prepare the sample to see what you want to see?
-      \end{itemize}
-      \item How do you get \only<1|handout:0>{nice images of your sample?}\only<2|handout:1>{quantitative data from your tomographic dataset}.
+        \item How does (micro) computed tomography work?
+        \item How do you actually see things in your sample?
+            \begin{itemize}
+                \item How do you get contrast?
+                \item How do you scan your sample to be able to see what you want to see?
+                \item How do you need to prepare the sample to see what you want to see?
+            \end{itemize}
+        \item How do you get \only<1|handout:0>{nice images of your sample?}\only<2|handout:1>{quantitative data from your tomographic dataset}.
     \end{itemize}
-  \end{frame}
+\end{frame}
 
 \begin{frame}{Contents}
     \tableofcontents
@@ -108,54 +108,56 @@
     \frametitle<1|handout:1>{Computed tomography}
     \frametitle<2-|handout:2>{micro-Computed tomography}
     \begin{columns}%
-      % https://de.wikipedia.org/wiki/Goldener_Schnitt#/media/Datei:Golden_ratio_line_percentages.svg
-      % 61.8% vs. 38.2%
-      \begin{column}{0.62\textwidth}%
-        \begin{itemize}%
-          \item<1-|handout:1-> Allows for imaging dense and non-transparent samples
-          \item<1-|handout:1-> Non-destructive imaging\uncover<2-|handout:2>{, thus compatible with routine sample preparation}
-          \item<1-|handout:1-> Results in three-dimensional images \uncover<2-|handout:2>{with calibrated and isotropic voxels at \unit{\micro\meter} resolution}
-          \only<1|handout:1>{\item Covers a large range of sample sizes}
-          \only<2-|handout:2>{\item Covers a \emph{very} large range of sample sizes}
-          \item<2-|handout:2> Small (biological) samples%
-          \item<2-|handout:2> Enables correlative imaging pipelines, scanning of precious biological samples, as well as museum \& collection material
-        \end{itemize}%
-      \end{column}%
-      \begin{column}{0.38\textwidth}%%
-        \centering%
-        \only<1|handout:1>{%
-          \pgfmathsetlength{\imagescale}{\imagewidth/512}%
-          \def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
-          \def\y{361}% scalebar-y at 90% of image height of 401px = 361
-          \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-            \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
-            % 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-            %\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{250.0096}{\milli\meter} (512px) TEMPORARY!};
-            \draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
-          \end{tikzpicture}%
-          \sourcecite{Clark2013}{Subject \emph{C3L-02465}}%
-        }%
-        \only<2-|handout:2>{%
-          \pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-          \def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-          \def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-          \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-            \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
-            % 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-            \draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
-          \end{tikzpicture}%
-        }%
-        \only<3|handout:0>{%
-          \begin{tikzpicture}[remember picture,overlay]%
-            \node at (current page.center){%
-              \mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
-              \mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull075}}
-            };%
-          \end{tikzpicture}%
-        }%
-      \end{column}%
+        % https://de.wikipedia.org/wiki/Goldener_Schnitt#/media/Datei:Golden_ratio_line_percentages.svg
+        % 61.8% vs. 38.2%
+        \begin{column}{0.62\textwidth}%
+            \begin{itemize}%
+                \item<1-|handout:1-> Allows for imaging dense and non-transparent samples
+                \item<1-|handout:1-> Non-destructive imaging\uncover<2-|handout:2>{, thus compatible with routine sample preparation}
+                \item<1-|handout:1-> Results in three-dimensional images \uncover<2-|handout:2>{with calibrated and isotropic voxels at \unit{\micro\meter} resolution}
+                    \only<1|handout:1>{
+                \item Covers a large range of sample sizes}
+                    \only<2-|handout:2>{
+                \item Covers a \emph{very} large range of sample sizes}
+                \item<2-|handout:2> Small (biological) samples%
+                \item<2-|handout:2> Enables correlative imaging pipelines, scanning of precious biological samples, as well as museum \& collection material
+            \end{itemize}%
+        \end{column}%
+        \begin{column}{0.38\textwidth}%%
+            \centering%
+            \only<1|handout:1>{%
+                \pgfmathsetlength{\imagescale}{\imagewidth/512}%
+                \def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
+                \def\y{361}% scalebar-y at 90% of image height of 401px = 361
+                \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+                    \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
+                    % 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+                    %\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\qty{250.0096}{\milli\meter} (512px) TEMPORARY!};
+                    \draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
+                \end{tikzpicture}%
+                \sourcecite{Clark2013}{Subject \emph{C3L-02465}}%
+            }%
+            \only<2-|handout:2>{%
+                \pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+                \def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+                \def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+                \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+                    \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+                    % 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+                    \draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\qty{5}{\milli\meter}}};
+                \end{tikzpicture}%
+            }%
+            \only<3|handout:0>{%
+                \begin{tikzpicture}[remember picture,overlay]%
+                    \node at (current page.center){%
+                        \mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
+                        \mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull075}}
+                    };%
+                \end{tikzpicture}%
+            }%
+        \end{column}%
     \end{columns}%
-  \end{frame}
+\end{frame}
 
 \begin{frame}
     \frametitle{Wavelengths \& Scales}
@@ -473,10 +475,10 @@
     % Then `pdfseparate Fundamentals_image_processing_2024.pdf Fundamentals_image_processing_2024-%03d.pdf` and copy relevant slide images to here
     % In 2025, the content of the relevant slides has not changes, it's just different page numbers :)
     \only<1|handout:0>{%
-      \citeslide{./images/Fundamentals_image_processing_2024-021}{https://ilias.unibe.ch/go/sess/3400760}{Fundamentals of Digital Image Processing}{Guillaume Witz}{22}%
+        \citeslide{./images/Fundamentals_image_processing_2024-021}{https://ilias.unibe.ch/go/sess/3400760}{Fundamentals of Digital Image Processing}{Guillaume Witz}{22}%
     }%
     \only<2|handout:1>{%
-      \citeslide{./images/Fundamentals_image_processing_2024-023}{https://ilias.unibe.ch/go/sess/3400760}{Fundamentals of Digital Image Processing}{Guillaume Witz}{24}%
+        \citeslide{./images/Fundamentals_image_processing_2024-023}{https://ilias.unibe.ch/go/sess/3400760}{Fundamentals of Digital Image Processing}{Guillaume Witz}{24}%
     }%
 \end{frame}
 
@@ -665,15 +667,15 @@
     \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/acquisition/TOMO_gif_CT_signed0020}\sourceqr{https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs}}%
     \framebreak
     \begin{itemize}
-      \item A (micro-focus) x-ray source illuminates the object
-      \item The x-rays penetrate the sample and are attenuated
-      \item A scintillator converts the x-rays to visible light
-      \item A (planar) x-ray detector collects (magnified) projection images.
-      \item The projections are recorded on disk
+        \item A (micro-focus) x-ray source illuminates the object
+        \item The x-rays penetrate the sample and are attenuated
+        \item A scintillator converts the x-rays to visible light
+        \item A (planar) x-ray detector collects (magnified) projection images.
+        \item The projections are recorded on disk
     \end{itemize}
-  \end{frame}
+\end{frame}
 
-  \begin{frame}[allowframebreaks]
+\begin{frame}[allowframebreaks]
     \frametitle{Reconstructions}
     \centering%
     % Movie downloaded from https://sites.google.com/a/fulbrightmail.org/kesnersmedicalphysics/home/education/3d-image-reconstruction-explained-with-animated-gifs, sligthly cropped in ImageJ, saved out and PNG images and piped through oxipng
@@ -682,29 +684,29 @@
     \mode<beamer>{\animategraphics[autoplay,palindrome,height=\imageheight,every=\everyframe]{24}{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_}{000}{277}}%
     \mode<handout>{\includegraphics[height=\imageheight]{./movies/scan/reconstructions/KP-TNIKWT02_360_reconstructions_of_552_800_px_100}}%
     \begin{itemize}
-      \item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
-      \item Radon Transformation
-      \item Filtered back projection
-      \item Cone beam reconstruction~\cite{Feldkamp1984}
-      \item Corrections (beam hardening, etc.)
-      \item Writing to stack
+        \item Based on hundreds of angular views acquired while the object rotates, a computer synthesizes a stack of virtual cross section slices through the object.
+        \item Radon Transformation
+        \item Filtered back projection
+        \item Cone beam reconstruction~\cite{Feldkamp1984}
+        \item Corrections (beam hardening, etc.)
+        \item Writing to stack
     \end{itemize}
 \end{frame}
 
-  % After this frame, it's a good time for a break in the UPE lecture, so save us the frame number after it
-  \begin{frame}[allowframebreaks]
+% After this frame, it's a good time for a break in the UPE lecture, so save us the frame number after it
+\begin{frame}[allowframebreaks]
     \frametitle{Visualization}
     \begin{tikzpicture}[remember picture,overlay]%
-    \node at (current page.center){%
-      \mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
-      \mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
-      };%
+        \node at (current page.center){%
+            \mode<beamer>{\animategraphics[autoplay,loop,height=\paperheight,every=\everyframe]{24}{./movies/scan/visualization/lung}{000}{240}}%
+            \mode<handout>{\includegraphics[height=\paperheight]{./movies/scan/visualization/lung000}}%
+        };%
     \end{tikzpicture}%
     \pagebreak
     \begin{itemize}
-      \item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
+        \item Based on the reconstructions, a computer synthesizes a three-dimensional view of the scanned sample
     \end{itemize}
-  \end{frame}
+\end{frame}
 
 \saveframenumber
 
