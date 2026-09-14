@@ -20,11 +20,13 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: XRayMicroTomography.Handout.tex
+          args: -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Compile presentation
         uses: xu-cheng/latex-action@v3
         with:
           root_file: XRayMicroTomography.Presentation.tex
+          args: -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Verify generated PDFs
         run: |
