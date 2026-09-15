@@ -303,7 +303,7 @@
                     \note{Where \(\lambda\) is the initial wavelength, \(\lambda'\) is the wavelength after scattering, \(h\) is the Planck constant, \(m_e\) is the electron rest mass, \(c\) is the speed of light, and \(\theta\) is the scattering angle.}
             \end{itemize}
         \item Low x-ray energy and high-\(Z\) materials tend to produce strong contrast
-        \item X-ray penetration decreases exponentially with sample thickness~\cite[\ie Beer-Lambert law]{wiki:beer-lambert}: \(I(t) = I_0 \, e^{-\alpha z}\)
+        \item X-ray penetration decreases exponentially with sample thickness (Beer--Lambert law,~\cite{wiki:beer-lambert}): \(I(t) = I_0 \, e^{-\alpha z}\)
     \end{itemize}
 \end{frame}
 
@@ -448,7 +448,7 @@
         \end{column}
     \end{columns}
     \note<1|handout:1>{The human head scan was downloaded from the \href{https://www.cancerimagingarchive.net}{Cancer Imaging Archive}.
-        We loaded the DICOM slices in Fiji, resliced it to show it from the side and then used to generate an MIP\@.
+        We loaded the DICOM slices in Fiji, resliced it to show it from the side and then used it to generate an MIP\@.
         According to the DICOM tags, the voxel size is \qtyproduct{0.4883 x 0.4883 x 0.625}{\milli\meter\cubed}, the image size is \numproduct{512 x 512} pixels.
         The mouse head is the same as shown in the early animation.
         The files from the early animation were resized 0.25 times; here we used the original dataset (Mouse1265\_Skull\_Gaby\_TKI\_7\_96um\_Al05\_2K) for a reslice and the generation of the MIP\@.
@@ -533,7 +533,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Machinery}
+    \frametitle{What Is Happening in a CT vs.\ a \uct?}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
@@ -1045,7 +1045,7 @@
 \begin{frame}
     \frametitle{Conclusion ZMK}
     \begin{itemize}
-        \item High efficiency: scaling the number of samples demands no extra manual work
+        \item Scales effortlessly: analysing \num{10} or \num{10000} teeth takes the same manual effort
         \item Reproducible analysis with \emph{free and open-source} software, usable by \emph{anyone}
         \item Objective analysis, \eg no operator bias
     \end{itemize}
@@ -1233,9 +1233,10 @@
     \frametitle{Thanks!}
     \begin{itemize}
         \item Thanks for listening to me!%
-        \item<2-> \href{https://mannerofspeaking.org/2019/12/29/what-questions-do-you-have-for-me/}{What questions do you have for me?}%
+        \item<2-> What would you like to look at with \uct?
+        \item<3-> \href{https://mannerofspeaking.org/2019/12/29/what-questions-do-you-have-for-me/}{What questions do you have for me?}%
     \end{itemize}%
-    \only<3|handout:0>{%
+    \only<4|handout:0>{%
         \begin{tikzpicture}[remember picture,overlay]
             \node at (current page.center) {%
                 \animategraphics[loop,autoplay,width=0.98\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
