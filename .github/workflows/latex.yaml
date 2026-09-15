@@ -1,54 +1,83 @@
-name: Build LaTeX & upload handout
+name: Build LaTeX & upload handout and presentation
+
 on:
   push:
     branches:
       - advanced_microscopy_series
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      TZ: Europe/Zurich
+
     steps:
-    - name: Set up Git repository
-      uses: actions/checkout@v1
-    - name: Setup perl for local gitinfo2
-      uses: shogo82148/actions-setup-perl@v1
-      id: set-matrix
-    - name: Run local perl script for gitinfo2
-      shell: perl {0}
-      run: |
-        do './perl/gitinfo2.pm';
-    - name: Compile handout
-      uses: xu-cheng/latex-action@v3
-      with:
-        root_file: |
-          XRayMicroTomography.Handout.tex
-    - name: Check handout PDF
-      run: |
-        file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
-    - name: Upload handout PDF to gh-pages branch, so students can download it easily
-      run: |
-        set -e
-        #
-        # Configure git
-        git config --global user.name "David Haberthür"
-        git config --global user.email "email@davidhaberthuer.ch"
-        # https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-494158599
-        # git config --local lfs.https://github.com/.locksverify false
-        #
-        # Setup SSH
-        # Don't forget to generate and upload the key first!
-        # See https://www.reddit.com/r/LaTeX/comments/cudaqz/github_actions_to_compile_latex_documents/f0hz61t/ for details
-        mkdir ~/.ssh
-        chmod 700 ~/.ssh
-        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
-        chmod 600 ~/.ssh/id_ed25519
-        git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        #
-        # Copy and commit the PDF file to the gh-pages branch
-        git clone --depth=1 --branch gh-pages git@github.com:habi/lecture.microtomography.git pages
-        cp -f XRayMicroTomography.Handout.pdf pages/XRayMicroTomography.Handout.pdf
-        cd pages
-        git add XRayMicroTomography.Handout.pdf
-        git commit -m "Deploy new version of presentation handout to gh-pages branch"
-        git push
-      env:
-        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile handout
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: XRayMicroTomography.Handout.tex
+          latexmk_use_lualatex: true
+
+      - name: Compile presentation
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: XRayMicroTomography.Presentation.tex
+          latexmk_use_lualatex: true
+
+      - name: Verify generated PDFs
+        run: |
+          file XRayMicroTomography.Handout.pdf
+          file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
+
+          file XRayMicroTomography.Presentation.pdf
+          file XRayMicroTomography.Presentation.pdf | grep -q ' PDF '
+
+          echo
+          echo "Generated PDF sizes:"
+          ls -lh XRayMicroTomography.Handout.pdf \
+                 XRayMicroTomography.Presentation.pdf
+
+      - name: Prepare GitHub Pages deployment
+        run: |
+          rm -rf _site
+          mkdir -p _site
+
+          cp XRayMicroTomography.Handout.pdf _site/
+
+          echo "Files to deploy to GitHub Pages:"
+          find _site -maxdepth 1 -type f -ls
+
+      - name: Deploy handout to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site
+          keep_files: false
+          force_orphan: true
+          commit_message: Deploy new handout to gh-pages
+
+      - name: Create presentation backup release if necessary
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! gh release view presentation-backup >/dev/null 2>&1; then
+            gh release create presentation-backup \
+              --title "Presentation backup" \
+              --notes "Automatically generated backup of XRayMicroTomography.Presentation.pdf."
+          fi
+
+      - name: Upload presentation backup to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload presentation-backup \
+            XRayMicroTomography.Presentation.pdf \
+            --clobber
