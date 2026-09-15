@@ -1,6 +1,5 @@
-% Compile with:
-% latexmk -pdf -pvc -interaction=nonstopmode *Pres*.tex
-% If you `latexmk *t*.tex`, then the Presen*t*ation, No*t*es, Handou*t* and SelfTestQues*t*ions are compiled (and not the included Slides file)
-\documentclass[aspectratio=169,10pt]{beamer}
-%\documentclass[aspectratio=169,10pt,draft]{beamer}
+% Compile with the command below to get compilation-on-save-and-preview-in-zathura-on-linux-through-the-.latexmkrc
+% latexmk -pvc -interaction=nonstopmode *Pres*.tex
+\documentclass[aspectratio=1610,onlytextwidth]{beamer}% The beamer in the Gertrud Woker lecture hall is 1920 x 1200 px, so 16:10
+%\documentclass[aspectratio=1610,onlytextwidth,draft]{beamer}
 \input{XRayMicroTomography.Slides.tex}
