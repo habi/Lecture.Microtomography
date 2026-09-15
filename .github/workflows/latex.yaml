@@ -5,6 +5,9 @@ on:
     branches:
       - advanced_course_II_ultraprecision_engineering
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,29 +23,38 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: XRayMicroTomography.Handout.tex
+          latexmk_use_lualatex: true
 
       - name: Compile presentation
         uses: xu-cheng/latex-action@v3
         with:
           root_file: XRayMicroTomography.Presentation.tex
+          latexmk_use_lualatex: true
 
       - name: Verify generated PDFs
         run: |
           file XRayMicroTomography.Handout.pdf
           file XRayMicroTomography.Handout.pdf | grep -q ' PDF '
+
           file XRayMicroTomography.Presentation.pdf
           file XRayMicroTomography.Presentation.pdf | grep -q ' PDF '
 
-      - name: Prepare deployment
+          echo
+          echo "Generated PDF sizes:"
+          ls -lh XRayMicroTomography.Handout.pdf \
+                 XRayMicroTomography.Presentation.pdf
+
+      - name: Prepare GitHub Pages deployment
         run: |
           rm -rf _site
           mkdir -p _site
+
           cp XRayMicroTomography.Handout.pdf _site/
-          cp XRayMicroTomography.Presentation.pdf _site/
-          echo "Files to deploy:"
+
+          echo "Files to deploy to GitHub Pages:"
           find _site -maxdepth 1 -type f -ls
 
-      - name: Deploy handout and presentation PDFs to gh-pages branch
+      - name: Deploy handout to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -50,4 +62,22 @@ jobs:
           publish_dir: ./_site
           keep_files: false
           force_orphan: true
-          commit_message: Deploy new versions of handout and presentation to gh-pages
+          commit_message: Deploy new handout to gh-pages
+
+      - name: Create presentation backup release if necessary
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! gh release view presentation-backup >/dev/null 2>&1; then
+            gh release create presentation-backup \
+              --title "Presentation backup" \
+              --notes "Automatically generated backup of XRayMicroTomography.Presentation.pdf."
+          fi
+
+      - name: Upload presentation backup to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload presentation-backup \
+            XRayMicroTomography.Presentation.pdf \
+            --clobber
