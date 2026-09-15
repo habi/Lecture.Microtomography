@@ -917,6 +917,96 @@
       \endverb
       \keyw{Data acquisition,Data visualization,Fish biology,Image processing,Jaw,Otolith,Skull,X-ray radiography}
     \endentry
+    \entry{Clark2013}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=fbbb974571847006fdd8ef15bd129e7d}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+        {{hash=35eb06af1a233f93dd4f54bde7025041}{%
+           family={Vendt},
+           familyi={V\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a3120d45eb0db75e7e62f245ac9bf11f}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Kirk},
+           giveni={K\bibinitperiod}}}%
+        {{hash=768032703bf13ee65a42f635e6ed63eb}{%
+           family={Freymann},
+           familyi={F\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=93d1bacd02ff5b479a51ed532bec1dc8}{%
+           family={Kirby},
+           familyi={K\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=38f97a89b35932e1c44923c7c44d3fb1}{%
+           family={Koppel},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b498bac98a3cc23502501af828a26577}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a3dcd1cd778a2e3a2331246feb19299e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47c9cb9722ec3b1b7aca24972103ba81}{%
+           family={Maffitt},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8320aec28286702f6073b037b9e39fb9}{%
+           family={Pringle},
+           familyi={P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=95f19d89fe3faaf38b505568ee46d0a8}{%
+           family={Tarbox},
+           familyi={T\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c6702fd6761bc177cf5c4641f7a93fba}{%
+           family={Prior},
+           familyi={P\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{fullhash}{2dc5a31c0ea0e0786861de75f6908266}
+      \strng{fullhashraw}{2dc5a31c0ea0e0786861de75f6908266}
+      \strng{bibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authorbibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authornamehash}{2ed2e64f00c4ed1070c31996864f39da}
+      \strng{authorfullhash}{2dc5a31c0ea0e0786861de75f6908266}
+      \strng{authorfullhashraw}{2dc5a31c0ea0e0786861de75f6908266}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0897-1889}
+      \field{month}{12}
+      \field{title}{The {{Cancer Imaging Archive}} ({{TCIA}}): {{Maintaining}} and {{Operating}} a {{Public Information Repository}}}
+      \field{urlday}{2}
+      \field{urlmonth}{12}
+      \field{urlyear}{2019}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/s10278-013-9622-7
+      \endverb
+      \verb{file}
+      \verb /home/habi/Zotero/storage/ANDPECX9/full-text.pdf
+      \endverb
+    \endentry
     \entry{Cormack1963}{article}{}{}
       \name{author}{1}{}{%
         {{hash=ed7cf735165a23ae53379b52a3248bf0}{%
@@ -1243,96 +1333,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Beer--{{Lambert}} Law --- {{Wikipedia}}, {{The Free Encyclopedia}}}
       \field{year}{2019}
-    \endentry
-    \entry{Clark2013}{article}{}{}
-      \name{author}{12}{}{%
-        {{hash=fbbb974571847006fdd8ef15bd129e7d}{%
-           family={Clark},
-           familyi={C\bibinitperiod},
-           given={Kenneth},
-           giveni={K\bibinitperiod}}}%
-        {{hash=35eb06af1a233f93dd4f54bde7025041}{%
-           family={Vendt},
-           familyi={V\bibinitperiod},
-           given={Bruce},
-           giveni={B\bibinitperiod}}}%
-        {{hash=a3120d45eb0db75e7e62f245ac9bf11f}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Kirk},
-           giveni={K\bibinitperiod}}}%
-        {{hash=768032703bf13ee65a42f635e6ed63eb}{%
-           family={Freymann},
-           familyi={F\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod}}}%
-        {{hash=93d1bacd02ff5b479a51ed532bec1dc8}{%
-           family={Kirby},
-           familyi={K\bibinitperiod},
-           given={Justin},
-           giveni={J\bibinitperiod}}}%
-        {{hash=38f97a89b35932e1c44923c7c44d3fb1}{%
-           family={Koppel},
-           familyi={K\bibinitperiod},
-           given={Paul},
-           giveni={P\bibinitperiod}}}%
-        {{hash=b498bac98a3cc23502501af828a26577}{%
-           family={Moore},
-           familyi={M\bibinitperiod},
-           given={Stephen},
-           giveni={S\bibinitperiod}}}%
-        {{hash=a3dcd1cd778a2e3a2331246feb19299e}{%
-           family={Phillips},
-           familyi={P\bibinitperiod},
-           given={Stanley},
-           giveni={S\bibinitperiod}}}%
-        {{hash=47c9cb9722ec3b1b7aca24972103ba81}{%
-           family={Maffitt},
-           familyi={M\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=8320aec28286702f6073b037b9e39fb9}{%
-           family={Pringle},
-           familyi={P\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=95f19d89fe3faaf38b505568ee46d0a8}{%
-           family={Tarbox},
-           familyi={T\bibinitperiod},
-           given={Lawrence},
-           giveni={L\bibinitperiod}}}%
-        {{hash=c6702fd6761bc177cf5c4641f7a93fba}{%
-           family={Prior},
-           familyi={P\bibinitperiod},
-           given={Fred},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{2ed2e64f00c4ed1070c31996864f39da}
-      \strng{fullhash}{2dc5a31c0ea0e0786861de75f6908266}
-      \strng{fullhashraw}{2dc5a31c0ea0e0786861de75f6908266}
-      \strng{bibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
-      \strng{authorbibnamehash}{2ed2e64f00c4ed1070c31996864f39da}
-      \strng{authornamehash}{2ed2e64f00c4ed1070c31996864f39da}
-      \strng{authorfullhash}{2dc5a31c0ea0e0786861de75f6908266}
-      \strng{authorfullhashraw}{2dc5a31c0ea0e0786861de75f6908266}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0897-1889}
-      \field{month}{12}
-      \field{title}{The {{Cancer Imaging Archive}} ({{TCIA}}): {{Maintaining}} and {{Operating}} a {{Public Information Repository}}}
-      \field{urlday}{2}
-      \field{urlmonth}{12}
-      \field{urlyear}{2019}
-      \field{year}{2013}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1007/s10278-013-9622-7
-      \endverb
-      \verb{file}
-      \verb /home/habi/Zotero/storage/ANDPECX9/full-text.pdf
-      \endverb
     \endentry
     \entry{Schindelin2012}{article}{}{}
       \name{author}{16}{}{%
