@@ -85,6 +85,7 @@
 ]{datetime2}
 \DTMsettimestyle{iso}
 \usepackage{appendixnumberbeamer}% do not count appendix frames in total frame count
+\usepackage{etoolbox}
 
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}
@@ -96,29 +97,48 @@
 \newcommand{\imageheight}{0.72\paperheight}
 \newcommand{\standardimageheight}{0.72\paperheight}
 
-% Image attributions: place immediately after \includegraphics, flush right
-\newcommand{\source}[2]{%
-    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny\href{https://#1}{#1} #2}}%
-}
-\newcommand{\sourcecite}[2]{%
-    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny From~\cite{#1}, #2}}%
-}
-\newcommand{\sourcelink}[3]{%
-    \raisebox{-1.618ex}{\makebox[0pt][r]{\tiny\href{#1}{#2}, #3}}%
-}
-\newcommand{\sourceqr}[1]{%
-  % Cite (an image from) a (long) URL with a QR code
-  \raisebox{0.385cm}{%
-    \makebox[0pt][l]{%
-      \qrcode[height=1cm]{#1}%
-      }%
+% Convenience functions to "cite" a source image.
+% Place the commands immediately after \includegraphics, flush right
+\newlength{\sourcegap}
+\setlength{\sourcegap}{0.25ex}
+\newcommand{\source}[2]{% \source{example.com/image}{CC BY 4.0}
+    % Cite a (short) link directly
+    \raisebox{-\height-\sourcegap}{%
+        \makebox[0pt][r]{%
+            \tiny
+            \href{https://#1}{#1}%
+            \ifblank{#2}{}{ #2}%
+        }%
     }%
-  }%
+}
+\newcommand{\sourcecite}[2]{% \sourcecite{BibTeX key}{Fig. 3}
+    % Cite a reference
+    \raisebox{-\height-\sourcegap}{\makebox[0pt][r]{%
+        \tiny
+        From~\cite{#1}
+        \ifblank{#2}{}{, #2}%
+        }%
+    }%
+}
+\newcommand{\sourcelink}[3]{% \sourcelink{https://example.com/very/long/url}{example.com}{CC BY-SA}
+    % Cite a link
+    \raisebox{-\height-\sourcegap}{%
+        \makebox[0pt][r]{%
+            \tiny
+            \href{#1}{#2}%
+            \ifblank{#3}{}{ #3}%
+        }%
+    }%
+}
+\newcommand{\sourceqr}[1]{% \sourceqr{https://example.com/some/very/long/source/url}
+    % Cite (an image from) a (long) URL with a QR code
+    \makebox[0pt][l]{\hspace{\sourcegap}\raisebox{\depth}{\qrcode[height=1cm]{#1}}}%
+}
 \newcommand{\citeslide}[5]{% slideimage, lecturelink, lecturetitle, author, page
     \fboxsep=0pt%
     \fcolorbox{ubRed!62}{white}{\includegraphics[%
         width=\linewidth,height=\imageheight,keepaspectratio]{#1}}%
-    \raisebox{-1.618ex}{\makebox[0pt][r]{%
+    \raisebox{-\height}{\makebox[0pt][r]{%
         \tiny\href{#2}{\emph{#3} by #4}, Slide #5}}%
 }
 
