@@ -213,23 +213,28 @@
         \begin{column}{0.49\linewidth}
             \begin{itemize}
                 \item 1895: Wilhelm Conrad Röntgen discovers X-rays
-                \item<2-|handout:2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
-                \item<2-|handout:2-> \citeyear{Hounsfield1976a}:~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
-                \item<3-|handout:3-> Nobel Prize in 1979, jointly for Allan Cormack and Godfrey Hounsfield
-                \item<4-|handout:4-> CT scanner generations
+                \item<2-> \citeyear{Cormack1963}:~\citeauthor{Cormack1963} used a collimated \ce{^{60}Co} source and a Geiger counter as a detector~\cite{Cormack1963}%
+                \item<3-> \citeyear{Hounsfield1976a}~\citeauthor{Hounsfield1976a} worked on first clinical scanner~\cite{Hounsfield1976a}%
+                \item<5-> Nobel Prize in 1979, jointly for Allan Cormack and Godfrey Hounsfield
+                \item<6-> CT scanner generations
                     \begin{itemize}
-                        \item<4-|handout:4-> First generation
-                        \item<5-|handout:5-> Second generation
-                        \item<6|handout:6> Third generation
+                        \item<6-> First generation
+                        \item<7-> Second generation
+                        \item<8> Third generation
                     \end{itemize}
             \end{itemize}
         \end{column}
         \begin{column}{0.49\linewidth}
             \centering%
-            \includegraphics<1|handout:1>[height=\imageheight]{./images/First_medical_X-ray_by_Wilhelm_Röntgen_of_his_wife_Anna_Bertha_Ludwig's_hand_-_18951222}%
-            \only<1|handout:1>{\source{w.wiki/BHAN}{\ccPublicDomain}}%
-            \only<2|handout:2>{%
-                \renewcommand{\imagewidth}{0.52\paperheight}% redefine imagewidth \only here so that we can use the simple way to draw a scale bar. 0.52 is a purely empirical value
+            %\begin{overlayarea}{\linewidth}{\imageareaheight}
+            \includegraphics<1>[height=\imageheight]{./images/First_medical_X-ray_by_Wilhelm_Röntgen_of_his_wife_Anna_Bertha_Ludwig's_hand_-_18951222}%
+            \only<1>{\source{w.wiki/BHAN}{\ccPublicDomain}}%
+            \includegraphics<2>[height=\imageheight]{./images/nbla_294282}%
+            \only<2>{\sourcelink{https://repository.aip.org/node/121569}{AIP Emilio Segrè Visual Archives, Physics Today Collection}{}}%
+            \includegraphics<3>[width=\imagewidth]{./images/large_b990545.jpg}%
+            \only<3>{\sourcelink{https://collection.sciencemuseumgroup.org.uk/objects/co134790/}{Science Museum Group Collection Online}{\ccbync}}%
+            \only<4>{%
+                \renewcommand{\imagewidth}{0.52\paperheight}% redefine imagewidth \only here so that we can use the simple way to draw a scale bar. 0.52 is an empirically found value
                 \pgfmathsetlength{\imagescale}{\imagewidth/1055}%
                 \def\x{652}% scalebar-x starting at golden ratio of image width of 1055px = 652
                 \def\y{1328}% scalebar-y at 90% of image height of 1476px = 1328
@@ -240,23 +245,24 @@
                     \draw[|-|,white,shadowed] (\x,\y) -- (\x+198.0,\y) node [midway,above] {\shadowtext{\qty{5}{\centi\meter}}};
                 \end{tikzpicture}%
             }%
-            \only<2|handout:2>{\sourcecite{Beckmann2006}{Figure 5}}%
-            \includegraphics<3|handout:3>[height=\imageheight]{./images/US3940625-drawings-page-2}%
-            \only<3|handout:3>{\sourcecite{US3940625A}{p.~2}}%
-            \includegraphics<4|handout:4>[width=\imagewidth]{./images/History_Generation1}%
-            \only<4|handout:4>{\sourcecite{Hsieh2003}{Figure 1.12}}%
-            \includegraphics<5|handout:5>[width=\imagewidth]{./images/History_Generation2}%
-            \only<5|handout:5>{\sourcecite{Hsieh2003}{Figure 1.13}}%
-            \includegraphics<6|handout:6>[width=\imagewidth]{./images/History_Generation3}%
-            \only<6|handout:6>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+            \only<4>{\sourcecite{Beckmann2006}{Figure 5}}%
+            \includegraphics<5>[height=\imageheight]{./images/US3940625-drawings-page-2}%
+            \only<5>{\sourcecite{US3940625A}{p.~2}}%
+            \includegraphics<6>[width=\imagewidth]{./images/History_Generation1}%
+            \only<6>{\sourcecite{Hsieh2003}{Figure 1.12}}%
+            \includegraphics<7>[width=\imagewidth]{./images/History_Generation2}%
+            \only<7>{\sourcecite{Hsieh2003}{Figure 1.13}}%
+            \includegraphics<8>[width=\imagewidth]{./images/History_Generation3}%
+            \only<8>{\sourcecite{Hsieh2003}{Figure 1.14}}%
+            %\end{overlayarea}
         \end{column}
     \end{columns}
     \note<1|handout:1>{I was unable to find conclusive information on the voxel size of the first CT image.
         My head is approximately \qty{16}{\centi\meter} wide.
         I counted 47 voxels across the head in the image.
     This gives a voxel size of \qty{3.4}{\milli\meter} per voxel.}
-    \note<4|handout:4>{Cone-beam \uct: A major development was the introduction of cone-beam \uct, which uses a cone-shaped X-ray beam and a flat-panel detector, allowing for faster image acquisition and higher resolution.
-        In the late 1990s, Dr Yoshinori Arai in Japan and Dr Piero Mozzo in Italy independently developed Cone Beam Computed Technology for oral and maxillofacial radiology.
+    \note<4|handout:4>{Cone-beam MicroCT: A major development was the introduction of cone-beam microCT, which uses a cone-shaped X-ray beam and a flat-panel detector, allowing for faster image acquisition and higher resolution.
+        In the late 1990s, Dr.\ Yoshinori Arai in Japan and Dr.\ Piero Mozzo in Italy independently developed Cone Beam Computed Technology for oral and maxillofacial radiology.
     The first commercial system (the NewTom 9000) was introduced in the European market in 1996 and into the US market in 2001, by Italian company Quantitative Radiology.}
 \end{frame}
 \renewcommand{\imagewidth}{\standardimagewidth}
